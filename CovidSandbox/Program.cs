@@ -47,23 +47,12 @@ namespace CovidSandbox
         private static void CreateCountryReports(IEnumerable<Entry> parsedData)
         {
             var countriesData = parsedData.GroupBy(_ => _.CountryRegion);
-            var countriesMetrics =
-                new List<(string Country, List<(DateTime Day, (int Confirmed, int Active, int Recovered, int Deaths)
-                    DayMetrics)>)>();
-
-            foreach (var countryData in countriesData)
-            {
-                var dayByDayMetrics =
-                    new List<(DateTime Day, (int Confirmed, int Active, int Recovered, int Deaths) DayMetrics)>();
-                var dayByDayData = countryData.GroupBy(_ => _.LastUpdate);
-                foreach (var dayData in dayByDayData)
-                {
-                    var dayMetrics = GetMetrics(dayData);
-                    dayByDayMetrics.Add((dayData.Key, dayMetrics));
-                }
-
-                countriesMetrics.Add((countryData.Key, dayByDayMetrics));
-            }
+            var countriesMetrics = (from countryData in countriesData
+                let dayByDayData = countryData.GroupBy(_ => _.LastUpdate)
+                let dayByDayMetrics =
+                    (from dayData in dayByDayData let dayMetrics = GetMetrics(dayData) select (dayData.Key, dayMetrics))
+                    .ToList()
+                select (countryData.Key, dayByDayMetrics)).ToList();
 
             Directory.CreateDirectory("output\\countries");
 
@@ -71,7 +60,8 @@ namespace CovidSandbox
             {
                 using var totalFile = File.OpenWrite($"output\\countries\\{country}.csv");
                 using var totalFileWriter = new StreamWriter(totalFile);
-                totalFileWriter.WriteLine("Date, Confirmed, Active, Recovered, Deaths, Confirmed_Change, Active_Change, Recovered_Change, Deaths_Changge");
+                totalFileWriter.WriteLine(
+                    "Date, Confirmed, Active, Recovered, Deaths, Confirmed_Change, Active_Change, Recovered_Change, Deaths_Changge");
 
                 for (var i = 0; i < metrics.Count; i++)
                 {
@@ -96,24 +86,13 @@ namespace CovidSandbox
         private static void CreateDayByDayReports(IEnumerable<Entry> parsedData)
         {
             var dayByDayData = parsedData.GroupBy(_ => _.LastUpdate);
-            var dayByDayMetrics =
-                new List<(DateTime day,
-                    List<(string CountryName, (int Confirmed, int Active, int Recovered, int Deaths) CountryMetrics)> dayMetrics
-                    )>();
-
-            foreach (var dayData in dayByDayData)
-            {
-                var dayMetrics =
-                    new List<(string countryName, (int Confirmed, int Active, int Recovered, int Deaths) CountryMetrics)>();
-                var countriesData = dayData.GroupBy(_ => _.CountryRegion);
-                foreach (var countryData in countriesData)
-                {
-                    var countryMetrics = GetMetrics(countryData);
-                    dayMetrics.Add((countryData.Key, countryMetrics));
-                }
-
-                dayByDayMetrics.Add((dayData.Key, dayMetrics));
-            }
+            var dayByDayMetrics = (from dayData in dayByDayData
+                let countriesData = dayData.GroupBy(_ => _.CountryRegion)
+                let dayMetrics =
+                    (from countryData in countriesData
+                        let countryMetrics = GetMetrics(countryData)
+                        select (CountryName: countryData.Key, countryMetrics)).ToList()
+                select (Date: dayData.Key, dayMetrics)).ToList();
 
             Directory.CreateDirectory("output\\total");
             Directory.CreateDirectory("output\\changes");
