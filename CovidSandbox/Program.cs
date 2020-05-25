@@ -13,7 +13,7 @@ namespace CovidSandbox
         private static void Main(string[] args)
         {
             var parsedData = new List<Entry>();
-            foreach (var filePath in Directory.EnumerateFiles("C:\\Src\\Github\\COVID-19\\csse_covid_19_data\\csse_covid_19_daily_reports", "*.csv"))
+            foreach (var filePath in Directory.EnumerateFiles("..\\..\\..\\Data\\JHopkins\\csse_covid_19_data\\csse_covid_19_daily_reports", "*.csv"))
             {
                 using var fs = File.OpenText(filePath);
                 var headersCount = Utils.SplitCsvRowString(fs.ReadLine()).Length;
