@@ -15,6 +15,7 @@ namespace CovidSandbox
             var parsedData = new List<Entry>();
             foreach (var filePath in Directory.EnumerateFiles("..\\..\\..\\Data\\JHopkins\\csse_covid_19_data\\csse_covid_19_daily_reports", "*.csv"))
             {
+                Console.WriteLine($"Processing file: {Path.GetFileName(filePath)}");
                 using var fs = File.OpenText(filePath);
                 var headersCount = Utils.SplitCsvRowString(fs.ReadLine()).Length;
                 var version = headersCount switch
@@ -40,7 +41,10 @@ namespace CovidSandbox
                 Thread.Sleep(100);
             }
 
+            Console.WriteLine("Create day by day reports...");
             CreateDayByDayReports(parsedData);
+
+            Console.WriteLine("Create country reports...");
             CreateCountryReports(parsedData);
         }
 
