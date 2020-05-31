@@ -31,6 +31,10 @@ namespace CovidSandbox.Data
                     InitializeDataV3(fields);
                     break;
 
+                case RowVersion.V4:
+                    InitializeDataV4(fields);
+                    break;
+
                 default:
                     throw new ArgumentException("Unsupported fields version", nameof(version));
             }
@@ -83,6 +87,26 @@ namespace CovidSandbox.Data
             }, fields);
         }
 
+        private void InitializeDataV4(IEnumerable<string> fields)
+        {
+            ReadData(new[]
+            {
+                Field.FIPS,
+                Field.Admin2,
+                Field.ProvinceState,
+                Field.CountryRegion,
+                Field.LastUpdate,
+                Field.Latitude,
+                Field.Longitude,
+                Field.Confirmed,
+                Field.Deaths,
+                Field.Recovered,
+                Field.Active,
+                Field.CombinedKey,
+                Field.IncidenceRate,
+                Field.CaseFatalityRatio
+            }, fields);
+        }
         private void ReadData(IEnumerable<Field> keys, IEnumerable<string> fields)
         {
             using var keyEnumerator = keys.GetEnumerator();

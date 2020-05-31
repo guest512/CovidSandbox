@@ -23,6 +23,7 @@ namespace CovidSandbox
                     6 => RowVersion.V1,
                     8 => RowVersion.V2,
                     12 => RowVersion.V3,
+                    14 => RowVersion.V4,
                     _ => throw new Exception($"File {filePath} has unknown format")
                 };
                 while (!fs.EndOfStream)

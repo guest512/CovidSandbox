@@ -13,6 +13,8 @@
         Deaths,
         Recovered,
         Active,
-        CombinedKey
+        CombinedKey,
+        IncidenceRate,
+        CaseFatalityRatio
     }
 }
