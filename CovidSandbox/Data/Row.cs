@@ -1,121 +1,17 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
+using System.Linq;
 
 namespace CovidSandbox.Data
 {
-    internal class Row
+    public class Row
     {
-        private readonly Dictionary<Field, string> _data = new Dictionary<Field, string>();
+        private readonly Dictionary<Field, string> _data;
 
-        public Row(string rawData, RowVersion version)
+        public Row(IEnumerable<CsvField> fields)
         {
-            var dataFields = Utils.SplitCsvRowString(rawData);
-            InitializeData(dataFields, version);
+            _data = fields.ToDictionary(_ => _.Name, _ => _.Value);
         }
 
         public string this[Field key] => _data.ContainsKey(key) ? _data[key] : string.Empty;
-
-        private void InitializeData(string[] fields, RowVersion version)
-        {
-            switch (version)
-            {
-                case RowVersion.V1:
-                    InitializeDataV1(fields);
-                    break;
-
-                case RowVersion.V2:
-                    InitializeDataV2(fields);
-                    break;
-
-                case RowVersion.V3:
-                    InitializeDataV3(fields);
-                    break;
-
-                case RowVersion.V4:
-                    InitializeDataV4(fields);
-                    break;
-
-                default:
-                    throw new ArgumentException("Unsupported fields version", nameof(version));
-            }
-        }
-
-        private void InitializeDataV1(IEnumerable<string> fields)
-        {
-            ReadData(new[]
-            {
-                Field.ProvinceState,
-                Field.CountryRegion,
-                Field.LastUpdate,
-                Field.Confirmed,
-                Field.Deaths,
-                Field.Recovered
-            }, fields);
-        }
-
-        private void InitializeDataV2(IEnumerable<string> fields)
-        {
-            ReadData(new[]
-            {
-                Field.ProvinceState,
-                Field.CountryRegion,
-                Field.LastUpdate,
-                Field.Confirmed,
-                Field.Deaths,
-                Field.Recovered,
-                Field.Latitude,
-                Field.Longitude
-            }, fields);
-        }
-
-        private void InitializeDataV3(IEnumerable<string> fields)
-        {
-            ReadData(new[]
-            {
-                Field.FIPS,
-                Field.Admin2,
-                Field.ProvinceState,
-                Field.CountryRegion,
-                Field.LastUpdate,
-                Field.Latitude,
-                Field.Longitude,
-                Field.Confirmed,
-                Field.Deaths,
-                Field.Recovered,
-                Field.Active,
-                Field.CombinedKey
-            }, fields);
-        }
-
-        private void InitializeDataV4(IEnumerable<string> fields)
-        {
-            ReadData(new[]
-            {
-                Field.FIPS,
-                Field.Admin2,
-                Field.ProvinceState,
-                Field.CountryRegion,
-                Field.LastUpdate,
-                Field.Latitude,
-                Field.Longitude,
-                Field.Confirmed,
-                Field.Deaths,
-                Field.Recovered,
-                Field.Active,
-                Field.CombinedKey,
-                Field.IncidenceRate,
-                Field.CaseFatalityRatio
-            }, fields);
-        }
-        private void ReadData(IEnumerable<Field> keys, IEnumerable<string> fields)
-        {
-            using var keyEnumerator = keys.GetEnumerator();
-            using var fieldsEnumerator = fields.GetEnumerator();
-
-            while (keyEnumerator.MoveNext() && fieldsEnumerator.MoveNext())
-            {
-                _data[keyEnumerator.Current] = fieldsEnumerator.Current;
-            }
-        }
     }
 }

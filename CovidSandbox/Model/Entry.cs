@@ -18,21 +18,21 @@ namespace CovidSandbox.Model
             Active = TryGetValue(rowData[Field.Active]);
         }
 
-        public int? Active { get; }
+        public uint? Active { get; }
         public string Admin2 { get; }
-        public int? Confirmed { get; }
+        public uint? Confirmed { get; }
         public string CountryRegion { get; }
-        public int? Deaths { get; }
-        public int? FIPS { get; }
+        public uint? Deaths { get; }
+        public uint? FIPS { get; }
         public DateTime LastUpdate { get; }
         public string ProvinceState { get; }
-        public int? Recovered { get; }
+        public uint? Recovered { get; }
 
         public override string ToString() => string.IsNullOrEmpty(ProvinceState)
             ? $"{CountryRegion}, {LastUpdate.ToShortDateString()}: {Confirmed}-{Active}-{Recovered}-{Deaths}"
             : $"{CountryRegion}({ProvinceState}), {LastUpdate.ToShortDateString()}: {Confirmed}-{Active}-{Recovered}-{Deaths}";
 
-        private static int? TryGetValue(string stringValue) => int.TryParse(stringValue, out var intValue) ? (int?)intValue : null;
+        private static uint? TryGetValue(string stringValue) => uint.TryParse(stringValue, out var intValue) ? (uint?)intValue : null;
 
         private static string ProcessCountryName(string countryName)
         {

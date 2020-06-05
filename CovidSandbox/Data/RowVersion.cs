@@ -2,9 +2,11 @@
 {
     public enum RowVersion
     {
-        V1,
-        V2,
-        V3,
-        V4
+        JHopkinsV1,
+        JHopkinsV2,
+        JHopkinsV3,
+        JHopkinsV4,
+
+        Unknown
     }
 }

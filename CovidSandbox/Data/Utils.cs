@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
 using System.Text.RegularExpressions;
@@ -7,15 +8,6 @@ namespace CovidSandbox.Data
 {
     internal static class Utils
     {
-        public static string[] SplitCsvRowString(string csvRow)
-        {
-            var csvRegex = new Regex("(\"(.+?)\",)|(\"(.+?)\")|(.*?,)|(.+)");
-            return csvRegex
-                .Matches(csvRow)
-                .Select(res => res.Groups.OfType<Group>().Last(grp => grp.Success).Value.Trim(','))
-                .ToArray();
-        }
-
         public static string ToCsvString(this string str) => str.Contains(',') ? $"\"{str}\"" : str;
 
         public static DateTime ParseDate(string dateString)
@@ -36,5 +28,7 @@ namespace CovidSandbox.Data
 
             throw new ArgumentException("Unsupported DateTime format", nameof(dateString));
         }
+
+        
     }
 }

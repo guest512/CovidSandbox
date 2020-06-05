@@ -1,10 +1,12 @@
 ﻿using CovidSandbox.Data;
 using CovidSandbox.Model;
 using System;
+using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Threading;
+using System.Threading.Tasks;
 
 namespace CovidSandbox
 {
@@ -12,26 +14,27 @@ namespace CovidSandbox
     {
         private static void Main(string[] args)
         {
-            var parsedData = new List<Entry>();
-            foreach (var filePath in Directory.EnumerateFiles("..\\..\\..\\Data\\JHopkins\\csse_covid_19_data\\csse_covid_19_daily_reports", "*.csv"))
+            var parsedData = new ConcurrentBag<Entry>();
+            var csvReader = new CsvReader();
+
+            void ReadFile(string filePath)
             {
                 Console.WriteLine($"Processing file: {Path.GetFileName(filePath)}");
                 using var fs = File.OpenText(filePath);
-                var headersCount = Utils.SplitCsvRowString(fs.ReadLine()).Length;
-                var version = headersCount switch
+
+                foreach (var entry in csvReader.Read(fs).Select(_ => new Entry(_)))
                 {
-                    6 => RowVersion.V1,
-                    8 => RowVersion.V2,
-                    12 => RowVersion.V3,
-                    14 => RowVersion.V4,
-                    _ => throw new Exception($"File {filePath} has unknown format")
-                };
-                while (!fs.EndOfStream)
-                {
-                    var line = fs.ReadLine();
-                    parsedData.Add(new Entry(new Row(line, version)));
+                    parsedData.Add(entry);
                 }
             }
+
+            foreach (var filePath in Directory.EnumerateFiles("..\\..\\..\\Data\\JHopkins\\csse_covid_19_data\\csse_covid_19_daily_reports", "*.csv"))
+            {
+                ReadFile(filePath);
+            }
+
+            //Parallel.ForEach(Directory.EnumerateFiles("..\\..\\..\\Data\\JHopkins\\csse_covid_19_data\\csse_covid_19_daily_reports", "*.csv"),
+            //ReadFile);
 
             if (!Directory.Exists("output"))
                 Directory.CreateDirectory("output");
@@ -53,16 +56,19 @@ namespace CovidSandbox
         {
             var countriesData = parsedData.GroupBy(_ => _.CountryRegion);
             var countriesMetrics = (from countryData in countriesData
-                let dayByDayData = countryData.GroupBy(_ => _.LastUpdate)
-                let dayByDayMetrics =
-                    (from dayData in dayByDayData let dayMetrics = GetMetrics(dayData) select (dayData.Key, dayMetrics))
-                    .ToList()
-                select (countryData.Key, dayByDayMetrics)).ToList();
+                                    let dayByDayData = countryData.GroupBy(_ => _.LastUpdate)
+                                    let dayByDayMetrics =
+                                        (from dayData in dayByDayData let dayMetrics = GetMetrics(dayData) select (dayData.Key, dayMetrics))
+                                        .ToList()
+                                    select (countryData.Key, dayByDayMetrics)).ToList();
 
             Directory.CreateDirectory("output\\countries");
 
-            foreach (var (country, metrics) in countriesMetrics)
+            Parallel.ForEach(countriesMetrics, (countryMetrics) =>
             {
+                var country = countryMetrics.Key;
+                var metrics = countryMetrics.dayByDayMetrics;
+
                 using var totalFile = File.OpenWrite($"output\\countries\\{country}.csv");
                 using var totalFileWriter = new StreamWriter(totalFile);
                 totalFileWriter.WriteLine(
@@ -72,7 +78,7 @@ namespace CovidSandbox
                 {
                     var (day, (confirmed, active, recovered, deaths)) = metrics[i];
                     var (_, (prevConfirmed, prevActive, prevRecovered, prevDeaths)) =
-                        i > 0 ? metrics[i - 1] : (DateTime.MinValue, (0, 0, 0, 0));
+                        i > 0 ? metrics[i - 1] : (DateTime.MinValue, Metrics.Empty);
 
                     totalFileWriter.WriteLine($"{day:dd-MM-yyyy}, " +
                                               $"{confirmed}, " +
@@ -84,20 +90,19 @@ namespace CovidSandbox
                                               $"{recovered - prevRecovered}, " +
                                               $"{deaths - prevDeaths}");
                 }
-            }
-
+            });
         }
 
         private static void CreateDayByDayReports(IEnumerable<Entry> parsedData)
         {
             var dayByDayData = parsedData.GroupBy(_ => _.LastUpdate);
             var dayByDayMetrics = (from dayData in dayByDayData
-                let countriesData = dayData.GroupBy(_ => _.CountryRegion)
-                let dayMetrics =
-                    (from countryData in countriesData
-                        let countryMetrics = GetMetrics(countryData)
-                        select (CountryName: countryData.Key, countryMetrics)).ToList()
-                select (Date: dayData.Key, dayMetrics)).ToList();
+                                   let countriesData = dayData.GroupBy(_ => _.CountryRegion)
+                                   let dayMetrics =
+                                       (from countryData in countriesData
+                                        let countryMetrics = GetMetrics(countryData)
+                                        select (CountryName: countryData.Key, countryMetrics)).ToList()
+                                   select (Date: dayData.Key, dayMetrics)).ToList();
 
             Directory.CreateDirectory("output\\total");
             Directory.CreateDirectory("output\\changes");
@@ -166,12 +171,13 @@ namespace CovidSandbox
             }
         }
 
-        private static (int Confirmed, int Active, int Recovered, int Deaths) GetMetrics(IEnumerable<Entry> grpByCountry)
+        private static Metrics GetMetrics(IEnumerable<Entry> grpByCountry)
         {
-            var confirmed = 0;
-            var active = 0;
-            var recovered = 0;
-            var deaths = 0;
+            uint confirmed = 0,
+                active = 0,
+                recovered = 0,
+                deaths = 0;
+
             foreach (var entry in grpByCountry)
             {
                 confirmed += entry.Confirmed.GetValueOrDefault();
@@ -180,7 +186,7 @@ namespace CovidSandbox
                 deaths += entry.Deaths.GetValueOrDefault();
             }
 
-            return (confirmed, active, recovered, deaths);
+            return new Metrics(confirmed, active, recovered, deaths);
         }
     }
 }

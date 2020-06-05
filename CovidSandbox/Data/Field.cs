@@ -1,6 +1,6 @@
 ﻿namespace CovidSandbox.Data
 {
-    internal enum Field
+    public enum Field
     {
         FIPS,
         Admin2,
