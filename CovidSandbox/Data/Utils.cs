@@ -6,7 +6,7 @@ using System.Text.RegularExpressions;
 
 namespace CovidSandbox.Data
 {
-    internal static class Utils
+    public static class Utils
     {
         public static string ToCsvString(this string str) => str.Contains(',') ? $"\"{str}\"" : str;
 
@@ -15,11 +15,13 @@ namespace CovidSandbox.Data
             var formats = new[]
             {
                 "M/dd/yyyy HH:mm",
-                "M/dd/yy HH:mm",
                 "M/d/yyyy HH:mm",
                 "M/d/yyyy H:mm",
-                "yyyy-MM-ddTHH:mm:ss",
+
+                "M/dd/yy HH:mm",
                 "M/d/yy H:mm",
+
+                "yyyy-MM-ddTHH:mm:ss",
                 "yyyy-MM-dd HH:mm:ss"
             };
 

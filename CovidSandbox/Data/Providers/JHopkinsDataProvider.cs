@@ -2,16 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace CovidSandbox.Data
+namespace CovidSandbox.Data.Providers
 {
-    public interface IDataProvider
-    {
-        IEnumerable<Field> GetFields(RowVersion version);
-
-        RowVersion GetVersion(string[] header);
-    }
-
-    internal class JHopkinsDataProvider : IDataProvider
+    public class JHopkinsDataProvider : IDataProvider
     {
         private readonly Dictionary<RowVersion, IEnumerable<Field>> _versionFieldsDictionary =
             new Dictionary<RowVersion, IEnumerable<Field>>()
@@ -80,9 +73,7 @@ namespace CovidSandbox.Data
 
         public IEnumerable<Field> GetFields(RowVersion version)
         {
-            if (_versionFieldsDictionary.ContainsKey(version))
-                return _versionFieldsDictionary[version];
-            throw new ArgumentOutOfRangeException(nameof(version), "Unsupported version by this data provider");
+            return _versionFieldsDictionary.ContainsKey(version) ? _versionFieldsDictionary[version] : null;
         }
 
         public RowVersion GetVersion(string[] header)
@@ -95,21 +86,7 @@ namespace CovidSandbox.Data
             return fields == null ? RowVersion.Unknown : rowVersion;
         }
 
-        private bool ValidateColumnsOrder(RowVersion version, IEnumerable<string> headerColumns)
-        {
-            using var headerEnumerator = headerColumns.GetEnumerator();
-            using var fieldsEnumerator = _versionFieldsDictionary[version].GetEnumerator();
-
-            while (headerEnumerator.MoveNext() && fieldsEnumerator.MoveNext())
-            {
-                if (headerEnumerator.Current != FieldToString(fieldsEnumerator.Current, version))
-                    return false;
-            }
-
-            return true;
-        }
-
-        private string FieldToString(Field field, RowVersion version)
+        private static string FieldToString(Field field, RowVersion version)
         {
             return field switch
             {
@@ -136,6 +113,20 @@ namespace CovidSandbox.Data
 
                 _ => field.ToString()
             };
+        }
+
+        private bool ValidateColumnsOrder(RowVersion version, IEnumerable<string> headerColumns)
+        {
+            using var headerEnumerator = headerColumns.GetEnumerator();
+            using var fieldsEnumerator = _versionFieldsDictionary[version].GetEnumerator();
+
+            while (headerEnumerator.MoveNext() && fieldsEnumerator.MoveNext())
+            {
+                if (headerEnumerator.Current != FieldToString(fieldsEnumerator.Current, version))
+                    return false;
+            }
+
+            return true;
         }
     }
 }

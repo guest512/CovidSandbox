@@ -28,13 +28,13 @@ namespace CovidSandbox
                 }
             }
 
-            foreach (var filePath in Directory.EnumerateFiles("..\\..\\..\\Data\\JHopkins\\csse_covid_19_data\\csse_covid_19_daily_reports", "*.csv"))
-            {
-                ReadFile(filePath);
-            }
+            //foreach (var filePath in Directory.EnumerateFiles("..\\..\\..\\Data\\JHopkins\\csse_covid_19_data\\csse_covid_19_daily_reports", "*.csv"))
+            //{
+            //    ReadFile(filePath);
+            //}
 
-            //Parallel.ForEach(Directory.EnumerateFiles("..\\..\\..\\Data\\JHopkins\\csse_covid_19_data\\csse_covid_19_daily_reports", "*.csv"),
-            //ReadFile);
+            Parallel.ForEach(Directory.EnumerateFiles("..\\..\\..\\Data\\JHopkins\\csse_covid_19_data\\csse_covid_19_daily_reports", "*.csv"),
+            ReadFile);
 
             if (!Directory.Exists("output"))
                 Directory.CreateDirectory("output");
@@ -46,10 +46,10 @@ namespace CovidSandbox
             }
 
             Console.WriteLine("Create day by day reports...");
-            CreateDayByDayReports(parsedData);
+            CreateDayByDayReports(parsedData.OrderBy(_=>_.LastUpdate));
 
             Console.WriteLine("Create country reports...");
-            CreateCountryReports(parsedData);
+            CreateCountryReports(parsedData.OrderBy(_ => _.LastUpdate));
         }
 
         private static void CreateCountryReports(IEnumerable<Entry> parsedData)
@@ -68,8 +68,10 @@ namespace CovidSandbox
             {
                 var country = countryMetrics.Key;
                 var metrics = countryMetrics.dayByDayMetrics;
+                Directory.CreateDirectory($"output\\countries\\{country}");
 
-                using var totalFile = File.OpenWrite($"output\\countries\\{country}.csv");
+
+                using var totalFile = File.OpenWrite($"output\\countries\\{country}\\{country}.csv");
                 using var totalFileWriter = new StreamWriter(totalFile);
                 totalFileWriter.WriteLine(
                     "Date, Confirmed, Active, Recovered, Deaths, Confirmed_Change, Active_Change, Recovered_Change, Deaths_Changge");
@@ -85,10 +87,10 @@ namespace CovidSandbox
                                               $"{active}, " +
                                               $"{recovered}, " +
                                               $"{deaths}, " +
-                                              $"{confirmed - prevConfirmed}, " +
-                                              $"{active - prevActive}, " +
-                                              $"{recovered - prevRecovered}, " +
-                                              $"{deaths - prevDeaths}");
+                                              $"{confirmed - (int)prevConfirmed}, " +
+                                              $"{active - (int)prevActive}, " +
+                                              $"{recovered - (int)prevRecovered}, " +
+                                              $"{deaths - (int)prevDeaths}");
                 }
             });
         }
@@ -152,10 +154,10 @@ namespace CovidSandbox
                     else
                     {
                         incrFileWriter.WriteLine($"{country.ToCsvString()}, " +
-                                                 $"{currentCountryMetrics.Confirmed - previousCountryMetrics.Confirmed}, " +
-                                                 $"{currentCountryMetrics.Active - previousCountryMetrics.Active}, " +
-                                                 $"{currentCountryMetrics.Recovered - previousCountryMetrics.Recovered}, " +
-                                                 $"{currentCountryMetrics.Deaths - previousCountryMetrics.Deaths}");
+                                                 $"{currentCountryMetrics.Confirmed - (int)previousCountryMetrics.Confirmed}, " +
+                                                 $"{currentCountryMetrics.Active - (int)previousCountryMetrics.Active}, " +
+                                                 $"{currentCountryMetrics.Recovered - (int)previousCountryMetrics.Recovered}, " +
+                                                 $"{currentCountryMetrics.Deaths - (int)previousCountryMetrics.Deaths}");
 
                         var idx = previousMetrics.IndexOf((country, previousCountryMetrics));
                         if (idx != -1)

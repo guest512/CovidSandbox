@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text.RegularExpressions;
+using CovidSandbox.Data.Providers;
 
 namespace CovidSandbox.Data
 {
@@ -34,7 +35,7 @@ namespace CovidSandbox.Data
             }
         }
 
-        private IEnumerable<CsvField> ReadData(IEnumerable<Field> keys, IEnumerable<string> fields)
+        private static IEnumerable<CsvField> ReadData(IEnumerable<Field> keys, IEnumerable<string> fields)
         {
             using var keyEnumerator = keys.GetEnumerator();
             using var fieldsEnumerator = fields.GetEnumerator();
@@ -45,7 +46,7 @@ namespace CovidSandbox.Data
             }
         }
 
-        private string[] SplitRowString(string row)
+        public static string[] SplitRowString(string row)
         {
             var csvRegex = new Regex("(\"(.+?)\",)|(\"(.+?)\")|(.*?,)|(.+)");
             return csvRegex
@@ -62,11 +63,11 @@ namespace CovidSandbox.Data
             foreach (var provider in _providers)
             {
                 version = provider.GetVersion(header);
-                if (version != RowVersion.Unknown)
-                {
-                    activeProvider = provider;
-                    break;
-                }
+                if (version == RowVersion.Unknown)
+                    continue;
+
+                activeProvider = provider;
+                break;
             }
 
             if (version == RowVersion.Unknown)
