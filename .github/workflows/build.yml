@@ -23,33 +23,27 @@ jobs:
     steps:
     - name: Checkout
       uses: actions/checkout@v2
-      with:
-        fetch-depth: 0
 
     # Install the .NET Core workload
     - name: Install .NET Core
       uses: actions/setup-dotnet@v1
       with:
-        dotnet-version: 3.1.101
-
-    # Add  MSBuild to the PATH: https://github.com/microsoft/setup-msbuild
-    - name: Setup MSBuild.exe
-      uses: microsoft/setup-msbuild@2008f912f56e61277eefaac6d1888b750582aa16
+        dotnet-version: 3.1.x
 
     # Restore the application to populate the obj folder with RuntimeIdentifiers
     - name: Restore packages
-      run: msbuild $env:Solution_Name "/t:Restore" /p:Configuration=$env:Configuration
+      run: dotnet restore -c $env:Configuration -v n
       env:
         Configuration: ${{ matrix.configuration }}
 
       # Build app and tests
     - name: Build app
-      run: dotnet build -c $env:Configuration
+      run: dotnet build --no-restore -c $env:Configuration -v n
       env:
         Configuration: ${{ matrix.configuration }}
 
       # Run tests
     - name: Run tests
-      run: dotnet test -c $env:Configuration
+      run: dotnet test --no-build -c $env:Configuration -v n
       env:
         Configuration: ${{ matrix.configuration }}
