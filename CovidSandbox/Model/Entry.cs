@@ -3,12 +3,10 @@ using System;
 
 namespace CovidSandbox.Model
 {
-    internal class Entry
+    public class Entry
     {
         public Entry(Row rowData)
         {
-            FIPS = TryGetValue(rowData[Field.FIPS]);
-            Admin2 = rowData[Field.Admin2];
             ProvinceState = rowData[Field.ProvinceState];
             CountryRegion = ProcessCountryName(rowData[Field.CountryRegion]);
             LastUpdate = Utils.ParseDate(rowData[Field.LastUpdate]);
@@ -19,11 +17,9 @@ namespace CovidSandbox.Model
         }
 
         public uint? Active { get; }
-        public string Admin2 { get; }
         public uint? Confirmed { get; }
         public string CountryRegion { get; }
         public uint? Deaths { get; }
-        public uint? FIPS { get; }
         public DateTime LastUpdate { get; }
         public string ProvinceState { get; }
         public uint? Recovered { get; }

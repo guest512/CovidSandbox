@@ -1,5 +1,6 @@
 ﻿using CovidSandbox.Data;
 using CovidSandbox.Model;
+using CovidSandbox.Model.Reports;
 using System;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
@@ -55,42 +56,56 @@ namespace CovidSandbox
         private static void CreateCountryReports(IEnumerable<Entry> parsedData)
         {
             var countriesData = parsedData.GroupBy(_ => _.CountryRegion);
-            var countriesMetrics = (from countryData in countriesData
-                                    let dayByDayData = countryData.GroupBy(_ => _.LastUpdate)
-                                    let dayByDayMetrics =
-                                        (from dayData in dayByDayData let dayMetrics = GetMetrics(dayData) select (dayData.Key, dayMetrics))
-                                        .ToList()
-                                    select (countryData.Key, dayByDayMetrics)).ToList();
+            var countriesMetrics = countriesData.Select(_ => new CountryReport(_.Key, _));
 
             Directory.CreateDirectory("output\\countries");
 
+            //foreach(var countryMetrics in countriesMetrics)
             Parallel.ForEach(countriesMetrics, (countryMetrics) =>
             {
-                var country = countryMetrics.Key;
-                var metrics = countryMetrics.dayByDayMetrics;
+                var country = countryMetrics.Name;
+                var dates = countryMetrics.GetAvailableDates().ToArray();
                 Directory.CreateDirectory($"output\\countries\\{country}");
+                if(countryMetrics.RegionReports.Any(_=> !string.IsNullOrEmpty(_.Name)))
+                    Directory.CreateDirectory($"output\\countries\\{country}\\regions");
 
+                foreach(var regionMetrics in countryMetrics.RegionReports.Where(_=> !string.IsNullOrEmpty(_.Name)))
+                {
+                    var region = regionMetrics.Name.Replace('*','_');
+                    using var totalRegionFile = File.OpenWrite($"output\\countries\\{country}\\regions\\{region}.csv");
+                    using var totalRegionFileWriter = new StreamWriter(totalRegionFile);
+
+                    totalRegionFileWriter.WriteLine(
+                    "Date, Confirmed, Active, Recovered, Deaths, Confirmed_Change, Active_Change, Recovered_Change, Deaths_Changge");
+
+                    foreach(var day in dates)
+                    {
+                        var (confirmed, active, recovered, deaths) = regionMetrics.GetTotalByDay(day);
+                        var (prevConfirmed, prevActive, prevRecovered, prevDeaths) = regionMetrics.GetTotalByDay(day.AddDays(-1).Date);
+
+                        totalRegionFileWriter.WriteLine($"{$"{day:dd-MM-yyyy}, "}{$"{confirmed}, "}{$"{active}, "}{$"{recovered}, "}{$"{deaths}, "}"
+                        + $"{confirmed - (int)prevConfirmed}, "
+                        + $"{active - (int)prevActive}, "
+                        + $"{recovered - (int)prevRecovered}, "
+                        + $"{deaths - (int)prevDeaths}");
+                    }
+                }
 
                 using var totalFile = File.OpenWrite($"output\\countries\\{country}\\{country}.csv");
                 using var totalFileWriter = new StreamWriter(totalFile);
                 totalFileWriter.WriteLine(
                     "Date, Confirmed, Active, Recovered, Deaths, Confirmed_Change, Active_Change, Recovered_Change, Deaths_Changge");
 
-                for (var i = 0; i < metrics.Count; i++)
+                foreach(var day in dates)
                 {
-                    var (day, (confirmed, active, recovered, deaths)) = metrics[i];
-                    var (_, (prevConfirmed, prevActive, prevRecovered, prevDeaths)) =
-                        i > 0 ? metrics[i - 1] : (DateTime.MinValue, Metrics.Empty);
+                    var (confirmed, active, recovered, deaths) = countryMetrics.GetTotalByDay(day);
+                    var (prevConfirmed, prevActive, prevRecovered, prevDeaths) = countryMetrics.GetTotalByDay(day.AddDays(-1).Date);
 
-                    totalFileWriter.WriteLine($"{day:dd-MM-yyyy}, " +
-                                              $"{confirmed}, " +
-                                              $"{active}, " +
-                                              $"{recovered}, " +
-                                              $"{deaths}, " +
-                                              $"{confirmed - (int)prevConfirmed}, " +
-                                              $"{active - (int)prevActive}, " +
-                                              $"{recovered - (int)prevRecovered}, " +
-                                              $"{deaths - (int)prevDeaths}");
+                    totalFileWriter.WriteLine($"{$"{day:dd-MM-yyyy}, "}{$"{confirmed}, "}{$"{active}, "}{$"{recovered}, "}{$"{deaths}, "}"
+                        + $"{confirmed - (int)prevConfirmed}, "
+                        + $"{active - (int)prevActive}, "
+                        + $"{recovered - (int)prevRecovered}, "
+                        + $"{deaths - (int)prevDeaths}");
                 }
             });
         }
