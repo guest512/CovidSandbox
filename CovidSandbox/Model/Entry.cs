@@ -3,7 +3,7 @@ using System;
 
 namespace CovidSandbox.Model
 {
-    public class Entry
+    public readonly struct Entry
     {
         public Entry(Row rowData)
         {
@@ -16,19 +16,39 @@ namespace CovidSandbox.Model
             Active = TryGetValue(rowData[Field.Active]);
         }
 
-        public uint? Active { get; }
-        public uint? Confirmed { get; }
+        public static Entry Empty { get; }
+
+        public uint Active { get; }
+
+        public uint Confirmed { get; }
+
         public string CountryRegion { get; }
-        public uint? Deaths { get; }
+
+        public uint Deaths { get; }
+
         public DateTime LastUpdate { get; }
+
         public string ProvinceState { get; }
-        public uint? Recovered { get; }
+
+        public uint Recovered { get; }
+
+        public static bool operator !=(Entry left, Entry right) => !(left == right);
+
+        public static bool operator ==(Entry left, Entry right) => left.Equals(right);
+
+        public override bool Equals(object? obj)
+        {
+            return obj is Entry other && Equals(other);
+        }
+
+        public override int GetHashCode()
+        {
+            return HashCode.Combine(Active, Confirmed, CountryRegion, Deaths, LastUpdate, ProvinceState, Recovered);
+        }
 
         public override string ToString() => string.IsNullOrEmpty(ProvinceState)
             ? $"{CountryRegion}, {LastUpdate.ToShortDateString()}: {Confirmed}-{Active}-{Recovered}-{Deaths}"
             : $"{CountryRegion}({ProvinceState}), {LastUpdate.ToShortDateString()}: {Confirmed}-{Active}-{Recovered}-{Deaths}";
-
-        private static uint? TryGetValue(string stringValue) => uint.TryParse(stringValue, out var intValue) ? (uint?)intValue : null;
 
         private static string ProcessCountryName(string countryName)
         {
@@ -55,6 +75,15 @@ namespace CovidSandbox.Model
                 "Republic of Ireland" => "Ireland",
                 _ => countryName
             };
+        }
+
+        private static uint TryGetValue(string stringValue) => uint.TryParse(stringValue, out var intValue) ? intValue : 0;
+
+        private bool Equals(Entry other)
+        {
+            return Active == other.Active && Confirmed == other.Confirmed && CountryRegion == other.CountryRegion &&
+                   Deaths == other.Deaths && LastUpdate.Equals(other.LastUpdate) &&
+                   ProvinceState == other.ProvinceState && Recovered == other.Recovered;
         }
     }
 }

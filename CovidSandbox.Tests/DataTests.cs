@@ -1,8 +1,8 @@
-using System;
-using System.Collections.Generic;
 using CovidSandbox.Data;
 using CovidSandbox.Data.Providers;
 using NUnit.Framework;
+using System;
+using System.Collections.Generic;
 
 namespace CovidSandbox.Tests
 {
@@ -31,10 +31,10 @@ namespace CovidSandbox.Tests
         public static KeyValuePair<string, DateTime>[] Dates = {
             new KeyValuePair<string, DateTime>("1/31/2020 23:59",new DateTime(2020,1,31)),
             new KeyValuePair<string, DateTime>("2/1/2020 13:33", new DateTime(2020,2,1)),
-            new KeyValuePair<string, DateTime>("2/1/2020 1:52", new DateTime(2020,2,1)), 
+            new KeyValuePair<string, DateTime>("2/1/2020 1:52", new DateTime(2020,2,1)),
 
             new KeyValuePair<string, DateTime>("3/22/20 23:45", new DateTime(2020,3,22)),
-            new KeyValuePair<string, DateTime>("4/4/20 23:34", new DateTime(2020,4,4)), 
+            new KeyValuePair<string, DateTime>("4/4/20 23:34", new DateTime(2020,4,4)),
 
             new KeyValuePair<string, DateTime>("2020-06-05 02:33:06", new DateTime(2020,6,5)),
             new KeyValuePair<string, DateTime>("2020-03-21T20:43:02", new DateTime(2020,3,21)),
@@ -42,7 +42,7 @@ namespace CovidSandbox.Tests
 
         [Test]
         [TestCaseSource(nameof(Dates))]
-        public void ValidateDateParser(KeyValuePair<string,DateTime> data)
+        public void ValidateDateParser(KeyValuePair<string, DateTime> data)
         {
             Assert.That(Utils.ParseDate(data.Key), Is.EqualTo(data.Value));
         }
@@ -55,7 +55,7 @@ namespace CovidSandbox.Tests
 
         [Test]
         [TestCase("Test", "Test")]
-        [TestCase(null, null)]
+        [TestCase(null, "")]
         [TestCase("", "")]
         [TestCase("Test, Test", "\"Test, Test\"")]
         public void ValidateToCsvString(string input, string expected)

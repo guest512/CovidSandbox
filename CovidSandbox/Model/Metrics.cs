@@ -25,10 +25,10 @@ namespace CovidSandbox.Model
 
         public static Metrics FromEntry(Entry entry)
         {
-            return entry != null ? new Metrics(entry.Confirmed.GetValueOrDefault(),
-                entry.Active.GetValueOrDefault(),
-                entry.Recovered.GetValueOrDefault(),
-                entry.Deaths.GetValueOrDefault()) : Metrics.Empty;
+            return entry != Entry.Empty ? new Metrics(entry.Confirmed,
+                entry.Active,
+                entry.Recovered,
+                entry.Deaths) : Metrics.Empty;
         }
 
         public static Metrics operator -(Metrics left, Metrics right)
@@ -61,7 +61,7 @@ namespace CovidSandbox.Model
             deaths = Deaths;
         }
 
-        public override bool Equals(object obj)
+        public override bool Equals(object? obj)
         {
             return obj is Metrics other && Equals(other);
         }
@@ -75,5 +75,7 @@ namespace CovidSandbox.Model
         {
             return Confirmed == other.Confirmed && Deaths == other.Deaths && Active == other.Active && Recovered == other.Recovered;
         }
+
+        public override string ToString() => $"{Confirmed} {Active} {Recovered} {Deaths}";
     }
 }

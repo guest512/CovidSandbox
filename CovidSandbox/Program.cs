@@ -4,6 +4,7 @@ using CovidSandbox.Model.Reports;
 using System;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Threading;
@@ -20,6 +21,10 @@ namespace CovidSandbox
 
             void ReadFile(string filePath)
             {
+                Debug.Assert(parsedData != null, nameof(parsedData) + " != null");
+                Debug.Assert(csvReader != null, nameof(csvReader) + " != null");
+
+
                 Console.WriteLine($"Processing file: {Path.GetFileName(filePath)}");
                 using var fs = File.OpenText(filePath);
 
@@ -197,10 +202,10 @@ namespace CovidSandbox
 
             foreach (var entry in grpByCountry)
             {
-                confirmed += entry.Confirmed.GetValueOrDefault();
-                active += entry.Active.GetValueOrDefault();
-                recovered += entry.Recovered.GetValueOrDefault();
-                deaths += entry.Deaths.GetValueOrDefault();
+                confirmed += entry.Confirmed;
+                active += entry.Active;
+                recovered += entry.Recovered;
+                deaths += entry.Deaths;
             }
 
             return new Metrics(confirmed, active, recovered, deaths);

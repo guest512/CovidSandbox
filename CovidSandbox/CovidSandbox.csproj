@@ -7,6 +7,7 @@
 
   <PropertyGroup>
     <OutputPath>..\bin\$(Configuration)</OutputPath>
+    <Nullable>enable</Nullable>
   </PropertyGroup>
 
 </Project>

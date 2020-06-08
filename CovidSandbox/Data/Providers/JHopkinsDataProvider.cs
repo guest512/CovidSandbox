@@ -73,7 +73,7 @@ namespace CovidSandbox.Data.Providers
 
         public IEnumerable<Field> GetFields(RowVersion version)
         {
-            return _versionFieldsDictionary.ContainsKey(version) ? _versionFieldsDictionary[version] : null;
+            return _versionFieldsDictionary.ContainsKey(version) ? _versionFieldsDictionary[version] : Enumerable.Empty<Field>();
         }
 
         public RowVersion GetVersion(string[] header)

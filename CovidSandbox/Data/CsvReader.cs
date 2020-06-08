@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Text.RegularExpressions;
@@ -22,7 +23,7 @@ namespace CovidSandbox.Data
 
             var header = SplitRowString(line);
             var version = GetVersionFromHeader(header, out var activeProvider);
-
+            Debug.Assert(activeProvider != null, nameof(activeProvider) + " != null");
             line = csvStream.ReadLine();
 
             while (line != null)
@@ -55,7 +56,7 @@ namespace CovidSandbox.Data
                 .ToArray();
         }
 
-        private RowVersion GetVersionFromHeader(string[] header, out IDataProvider activeProvider)
+        private RowVersion GetVersionFromHeader(string[] header, out IDataProvider? activeProvider)
         {
             var version = RowVersion.Unknown;
             activeProvider = null;

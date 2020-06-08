@@ -1,14 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Globalization;
-using System.Linq;
-using System.Text.RegularExpressions;
 
 namespace CovidSandbox.Data
 {
     public static class Utils
     {
-        public static string ToCsvString(this string str) => str !=null && str.Contains(',') ? $"\"{str}\"" : str;
+        public static string ToCsvString(this string str) => str != null && str.Contains(',') ? $"\"{str}\"" : str ?? string.Empty;
 
         public static DateTime ParseDate(string dateString)
         {
@@ -25,12 +22,13 @@ namespace CovidSandbox.Data
                 "yyyy-MM-dd HH:mm:ss"
             };
 
+            if (string.IsNullOrEmpty(dateString))
+                return DateTime.MinValue.Date;
+
             if (DateTime.TryParseExact(dateString, formats, CultureInfo.InvariantCulture, DateTimeStyles.None, out var date))
                 return date.Date;
 
             throw new ArgumentException("Unsupported DateTime format", nameof(dateString));
         }
-
-        
     }
 }
