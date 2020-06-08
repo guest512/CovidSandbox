@@ -46,5 +46,21 @@ namespace CovidSandbox.Tests
         {
             Assert.That(Utils.ParseDate(data.Key), Is.EqualTo(data.Value));
         }
+
+        [Test]
+        public void ValidateDateParserUnsupportedDate()
+        {
+            Assert.That(() => Utils.ParseDate(DateTime.Now.ToShortTimeString()), Throws.Exception);
+        }
+
+        [Test]
+        [TestCase("Test", "Test")]
+        [TestCase(null, null)]
+        [TestCase("", "")]
+        [TestCase("Test, Test", "\"Test, Test\"")]
+        public void ValidateToCsvString(string input, string expected)
+        {
+            Assert.That(input.ToCsvString(), Is.EqualTo(expected));
+        }
     }
 }

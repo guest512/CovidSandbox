@@ -6,30 +6,20 @@ namespace CovidSandbox.Model.Reports
 {
     public class RegionReport
     {
-        private static readonly DateTime PandemicStart = new DateTime(2020,1,1);
+        private static readonly DateTime PandemicStart = new DateTime(2020, 1, 1);
 
         private readonly IEnumerable<Entry> _entries;
+
         public RegionReport(string name, IEnumerable<Entry> entries)
         {
             Name = name;
             _entries = entries.ToArray();
         }
 
-        public string Name {get; }
+        public string Name { get; }
 
-        public Metrics GetTotalByDay(DateTime day){
-            Entry dayEntry = null;
-            var i =0;
-
-
-            while(dayEntry == null && day.AddDays(i).Date > PandemicStart)
-            {
-                dayEntry = _entries.FirstOrDefault(_ => _.LastUpdate == day.AddDays(i).Date);
-                i--;
-            }
-
-            return Metrics.FromEntry(dayEntry);
-        }
+        public IEnumerable<DateTime> GetAvailableDates() =>
+            _entries.Where(_ => !string.IsNullOrEmpty(_.ProvinceState)).Select(_ => _.LastUpdate).Distinct();
 
         public Metrics GetDiffByDay(DateTime day)
         {
@@ -39,8 +29,19 @@ namespace CovidSandbox.Model.Reports
             return currentEntry - prevEntry;
         }
 
-        public IEnumerable<DateTime> GetAvailableDates() =>
-            _entries.Select(_ => _.LastUpdate).Distinct();
+        public Metrics GetTotalByDay(DateTime day)
+        {
+            var dayEntries = Enumerable.Empty<Entry>().ToArray();
+            var i = 0;
 
+            while (!dayEntries.Any() && day.AddDays(i).Date > PandemicStart)
+            {
+                var testDay = i;
+                dayEntries = _entries.Where(_ => _.LastUpdate == day.AddDays(testDay).Date).ToArray();
+                i--;
+            }
+
+            return dayEntries.Select(Metrics.FromEntry).Aggregate(Metrics.Empty, (sum, elem) => sum + elem);
+        }
     }
 }

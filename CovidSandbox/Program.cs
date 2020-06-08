@@ -11,9 +11,9 @@ using System.Threading.Tasks;
 
 namespace CovidSandbox
 {
-    internal class Program
+    internal static class Program
     {
-        private static void Main(string[] args)
+        private static void Main()
         {
             var parsedData = new ConcurrentBag<Entry>();
             var csvReader = new CsvReader();
@@ -47,7 +47,7 @@ namespace CovidSandbox
             }
 
             Console.WriteLine("Create day by day reports...");
-            CreateDayByDayReports(parsedData.OrderBy(_=>_.LastUpdate));
+            CreateDayByDayReports(parsedData.OrderBy(_ => _.LastUpdate));
 
             Console.WriteLine("Create country reports...");
             CreateCountryReports(parsedData.OrderBy(_ => _.LastUpdate));
@@ -66,24 +66,24 @@ namespace CovidSandbox
                 var country = countryMetrics.Name;
                 var dates = countryMetrics.GetAvailableDates().ToArray();
                 Directory.CreateDirectory($"output\\countries\\{country}");
-                if(countryMetrics.RegionReports.Any(_=> !string.IsNullOrEmpty(_.Name)))
+                if (countryMetrics.RegionReports.Any(_ => !string.IsNullOrEmpty(_.Name)))
                     Directory.CreateDirectory($"output\\countries\\{country}\\regions");
 
-                foreach(var regionMetrics in countryMetrics.RegionReports.Where(_=> !string.IsNullOrEmpty(_.Name)))
+                foreach (var regionMetrics in countryMetrics.RegionReports.Where(_ => !string.IsNullOrEmpty(_.Name)))
                 {
-                    var region = regionMetrics.Name.Replace('*','_');
+                    var region = regionMetrics.Name.Replace('*', '_');
                     using var totalRegionFile = File.OpenWrite($"output\\countries\\{country}\\regions\\{region}.csv");
                     using var totalRegionFileWriter = new StreamWriter(totalRegionFile);
 
                     totalRegionFileWriter.WriteLine(
                     "Date, Confirmed, Active, Recovered, Deaths, Confirmed_Change, Active_Change, Recovered_Change, Deaths_Changge");
 
-                    foreach(var day in dates)
+                    foreach (var day in dates)
                     {
                         var (confirmed, active, recovered, deaths) = regionMetrics.GetTotalByDay(day);
                         var (prevConfirmed, prevActive, prevRecovered, prevDeaths) = regionMetrics.GetTotalByDay(day.AddDays(-1).Date);
 
-                        totalRegionFileWriter.WriteLine($"{$"{day:dd-MM-yyyy}, "}{$"{confirmed}, "}{$"{active}, "}{$"{recovered}, "}{$"{deaths}, "}"
+                        totalRegionFileWriter.WriteLine($"{day:dd-MM-yyyy}, {confirmed}, {active}, {recovered}, {deaths}, "
                         + $"{confirmed - (int)prevConfirmed}, "
                         + $"{active - (int)prevActive}, "
                         + $"{recovered - (int)prevRecovered}, "
@@ -96,12 +96,12 @@ namespace CovidSandbox
                 totalFileWriter.WriteLine(
                     "Date, Confirmed, Active, Recovered, Deaths, Confirmed_Change, Active_Change, Recovered_Change, Deaths_Changge");
 
-                foreach(var day in dates)
+                foreach (var day in dates)
                 {
                     var (confirmed, active, recovered, deaths) = countryMetrics.GetTotalByDay(day);
                     var (prevConfirmed, prevActive, prevRecovered, prevDeaths) = countryMetrics.GetTotalByDay(day.AddDays(-1).Date);
 
-                    totalFileWriter.WriteLine($"{$"{day:dd-MM-yyyy}, "}{$"{confirmed}, "}{$"{active}, "}{$"{recovered}, "}{$"{deaths}, "}"
+                    totalFileWriter.WriteLine($"{day:dd-MM-yyyy}, {confirmed}, {active}, {recovered}, {deaths}, "
                         + $"{confirmed - (int)prevConfirmed}, "
                         + $"{active - (int)prevActive}, "
                         + $"{recovered - (int)prevRecovered}, "

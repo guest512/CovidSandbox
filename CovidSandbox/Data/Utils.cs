@@ -8,7 +8,7 @@ namespace CovidSandbox.Data
 {
     public static class Utils
     {
-        public static string ToCsvString(this string str) => str.Contains(',') ? $"\"{str}\"" : str;
+        public static string ToCsvString(this string str) => str !=null && str.Contains(',') ? $"\"{str}\"" : str;
 
         public static DateTime ParseDate(string dateString)
         {
