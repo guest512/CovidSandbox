@@ -9,7 +9,7 @@ namespace CovidSandbox.Model
         {
             ProvinceState = rowData[Field.ProvinceState];
             CountryRegion = ProcessCountryName(rowData[Field.CountryRegion]);
-            LastUpdate = Utils.ParseDate(rowData[Field.LastUpdate]);
+            LastUpdate = Data.Utils.ParseDate(rowData[Field.LastUpdate]);
             Confirmed = TryGetValue(rowData[Field.Confirmed]);
             Deaths = TryGetValue(rowData[Field.Deaths]);
             Recovered = TryGetValue(rowData[Field.Recovered]);
