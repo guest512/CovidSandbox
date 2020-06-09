@@ -6,28 +6,87 @@ namespace CovidSandbox.Model.Reports
 {
     public class CountryReport
     {
-        public CountryReport(string name, IEnumerable<Entry> entries)
+        private readonly RegionReport? _wholeCountryReport;
+        private readonly Dictionary<DateTime, Metrics> _dayByDayMetrics = new Dictionary<DateTime, Metrics>();
+
+        public CountryReport(string name, IEnumerable<IntermidiateReport> reports)
         {
             Name = name;
-            RegionReports = entries.GroupBy(_ => _.ProvinceState).Select(_ => new RegionReport(_.Key, _)).ToArray();
+            reports = reports as IntermidiateReport[] ?? reports.ToArray();
+            RegionReports = reports
+                .OfType<CountryWithRegionsIntermidiateReport>()
+                .SelectMany(_ => _.RegionReports)
+                .GroupBy(_ => _.Name)
+                .Select(_ => new RegionReport(_.Key, _))
+                .ToArray();
+
+            if (reports.Any(_ => !(_ is CountryWithRegionsIntermidiateReport)))
+                _wholeCountryReport = new RegionReport(string.Empty, reports.Where(_ => !(_ is CountryWithRegionsIntermidiateReport)));
+
+            AvailableDates = Utils.GetContinuousDateRange((_wholeCountryReport?
+                    .AvailableDates ?? Enumerable.Empty<DateTime>())
+                    .Union(RegionReports.SelectMany(_ => _.AvailableDates)))
+                .ToArray();
         }
 
         public string Name { get; }
 
         public IEnumerable<RegionReport> RegionReports { get; }
 
-        public static CountryReport FromData(string name, IEnumerable<Entry> allEntries)
+        public IEnumerable<DateTime> AvailableDates { get; }
+
+        public Metrics GetDayChange(DateTime day)
         {
-            return new CountryReport(name, allEntries.GroupBy(_ => _.CountryRegion).First(_ => _.Key == name));
+            var currentEntry = GetDayTotal(day);
+            var prevEntry = GetDayTotal(day.AddDays(-1).Date);
+
+            return currentEntry - prevEntry;
         }
 
-        public IEnumerable<DateTime> GetAvailableDates() =>
-            RegionReports.SelectMany(_ => _.GetAvailableDates()).Distinct().OrderBy(_ => _);
+        public Metrics GetDayTotal(DateTime day)
+        {
+            day = day.Date;
+            var dayMetrics = Metrics.Empty;
+            if (_dayByDayMetrics.ContainsKey(day))
+            {
+                dayMetrics = _dayByDayMetrics[day];
+            }
+            else
+            {
+                var testDay = day.AddDays(0);
 
-        public Metrics GetDiffByDay(DateTime day) =>
-            RegionReports.Select(_ => _.GetDiffByDay(day)).Aggregate(Metrics.Empty, (sum, elem) => sum + elem);
+                while (dayMetrics == Metrics.Empty && testDay.Date > Utils.PandemicStart)
+                {
+                    var dayMetricsCountry = Metrics.Empty;
+                    if (_wholeCountryReport != null)
+                    {
+                        dayMetricsCountry = _wholeCountryReport.GetDayTotal(testDay);
+                    }
 
-        public Metrics GetTotalByDay(DateTime day) =>
-                            RegionReports.Select(_ => _.GetTotalByDay(day)).Aggregate(Metrics.Empty, (sum, elem) => sum + elem);
+                    var dayMetricsRegion = RegionReports
+                        .Select(_ => _.GetDayTotal(testDay))
+                        .Aggregate(Metrics.Empty, (sum, elem) => sum + elem);
+
+                    dayMetrics = dayMetricsCountry.Confirmed > dayMetricsRegion.Confirmed ? dayMetricsCountry : dayMetricsRegion;
+
+                    if (_dayByDayMetrics.ContainsKey(testDay))
+                    {
+                        dayMetrics = _dayByDayMetrics[testDay];
+                        break;
+                    }
+
+                    testDay = testDay.AddDays(-1);
+                }
+
+                testDay = testDay.AddDays(1);
+                while (testDay <= day)
+                {
+                    _dayByDayMetrics.Add(testDay, dayMetrics);
+                    testDay = testDay.AddDays(1);
+                }
+            }
+
+            return dayMetrics;
+        }
     }
 }
