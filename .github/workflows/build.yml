@@ -52,7 +52,7 @@ jobs:
 
     - uses: actions/upload-artifact@v2
       with:
-        name: CovidSandbox
+        name: CovidSandbox-$env:Configuration
         path: bin/$env:Configuration/netcoreapp3.1
       env:
         Configuration: ${{ matrix.configuration }}
