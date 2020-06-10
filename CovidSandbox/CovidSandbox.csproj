@@ -10,4 +10,8 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+    <Exec Command="xcopy $(ProjectDir)\..\Data\JHopkins\csse_covid_19_data\csse_covid_19_daily_reports $(OutDir)\Data\JHopkins\ /q /y" />
+  </Target>
+
 </Project>

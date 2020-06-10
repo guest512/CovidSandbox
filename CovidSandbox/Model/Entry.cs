@@ -104,6 +104,7 @@ namespace CovidSandbox.Model
                 "Republic of the Congo" => "Congo (Brazzaville)",
                 "Republic of Moldova" => "Moldova",
                 "Republic of Ireland" => "Ireland",
+                "Czech Republic" => "Czechia",
                 _ => countryName
             };
         }

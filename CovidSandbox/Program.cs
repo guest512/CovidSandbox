@@ -37,7 +37,7 @@ namespace CovidSandbox
             //    ReadFile(filePath);
             //}
 
-            Parallel.ForEach(Directory.EnumerateFiles("..\\..\\..\\Data\\JHopkins\\csse_covid_19_data\\csse_covid_19_daily_reports", "*.csv"),
+            Parallel.ForEach(Directory.EnumerateFiles("Data\\JHopkins", "*.csv"),
             //new[]
             //{
             //    "C:\\Src\\Github\\CovidSandbox\\Data\\JHopkins\\csse_covid_19_data\\csse_covid_19_daily_reports\\01-22-2020.csv",
@@ -47,12 +47,12 @@ namespace CovidSandbox
             //},
             ReadFile);
 
-            if (!Directory.Exists("output"))
-                Directory.CreateDirectory("output");
-            else if (Directory.EnumerateFileSystemEntries("output").Any())
+            if (!Directory.Exists("reports"))
+                Directory.CreateDirectory("reports");
+            else if (Directory.EnumerateFileSystemEntries("reports").Any())
             {
-                Directory.Delete("output", true);
-                Directory.CreateDirectory("output");
+                Directory.Delete("reports", true);
+                Directory.CreateDirectory("reports");
                 Thread.Sleep(100);
             }
 
@@ -71,21 +71,21 @@ namespace CovidSandbox
         {
             var countriesMetrics = reportsGenerator.AvailableCountries.Select(reportsGenerator.GetCountryReport);
 
-            Directory.CreateDirectory("output\\countries");
+            Directory.CreateDirectory("reports\\countries");
 
             //foreach(var countryMetrics in countriesMetrics)
             Parallel.ForEach(countriesMetrics, (countryMetrics) =>
             {
                 var country = countryMetrics.Name;
                 var dates = countryMetrics.AvailableDates.ToArray();
-                Directory.CreateDirectory($"output\\countries\\{country}");
+                Directory.CreateDirectory($"reports\\countries\\{country}");
                 if (countryMetrics.RegionReports.Any())
-                    Directory.CreateDirectory($"output\\countries\\{country}\\regions");
+                    Directory.CreateDirectory($"reports\\countries\\{country}\\regions");
 
                 foreach (var regionMetrics in countryMetrics.RegionReports)
                 {
                     var region = regionMetrics.Name.Replace('*', '_');
-                    using var totalRegionFile = File.OpenWrite($"output\\countries\\{country}\\regions\\{region}.csv");
+                    using var totalRegionFile = File.OpenWrite($"reports\\countries\\{country}\\regions\\{region}.csv");
                     using var totalRegionFileWriter = new StreamWriter(totalRegionFile);
 
                     totalRegionFileWriter.WriteLine(
@@ -103,7 +103,7 @@ namespace CovidSandbox
                     }
                 }
 
-                using var totalFile = File.OpenWrite($"output\\countries\\{country}\\{country}.csv");
+                using var totalFile = File.OpenWrite($"reports\\countries\\{country}\\{country}.csv");
                 using var totalFileWriter = new StreamWriter(totalFile);
                 totalFileWriter.WriteLine(
                     "Date, Confirmed, Active, Recovered, Deaths, Confirmed_Change, Active_Change, Recovered_Change, Deaths_Change");
@@ -125,14 +125,13 @@ namespace CovidSandbox
         {
             var dayByDayReports = reportsGenerator.AvailableDates.Select(reportsGenerator.GetDayReport);
 
-            Directory.CreateDirectory("output\\total");
-            Directory.CreateDirectory("output\\changes");
+            Directory.CreateDirectory("reports\\dayByDay");
 
             //foreach (var dayReport in dayByDayReports)
             Parallel.ForEach(dayByDayReports, dayReport =>
             {
                 var countries = dayReport.AvailableCountries.OrderBy(_=>_).ToArray();
-                using var totalFile = File.OpenWrite($"output\\total\\{dayReport.Day:yyyy-MM-dd}.csv");
+                using var totalFile = File.OpenWrite($"reports\\dayByDay\\{dayReport.Day:yyyy-MM-dd}.csv");
                 using var totalFileWriter = new StreamWriter(totalFile);
                 totalFileWriter.WriteLine(
                     "CountryRegion, Confirmed, Active, Recovered, Deaths, Confirmed_Change, Active_Change, Recovered_Change, Deaths_Change");
