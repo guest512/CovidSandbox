@@ -18,7 +18,8 @@ jobs:
                              # https://help.github.com/en/actions/reference/workflow-syntax-for-github-actions#jobsjob_idruns-on
 
     env:
-      Solution_Name: CovidSandbox.sln                         # Replace with your solution name, i.e. MyWpfApp.sln.
+      Solution_Name: CovidSandbox.sln
+      
 
     steps:
     - name: Checkout
@@ -35,8 +36,6 @@ jobs:
     # Restore the application to populate the obj folder with RuntimeIdentifiers
     - name: Restore packages
       run: dotnet restore -v n
-      env:
-        Configuration: ${{ matrix.configuration }}
 
       # Build app and tests
     - name: Build app
@@ -53,6 +52,4 @@ jobs:
     - uses: actions/upload-artifact@v2
       with:
         name: CovidSandbox
-        path: bin/$env:Configuration/netcoreapp3.1
-      env:
-        Configuration: ${{ matrix.configuration }}
+        path: bin/${{ matrix.configuration }}/netcoreapp3.1
