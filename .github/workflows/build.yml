@@ -23,6 +23,8 @@ jobs:
     steps:
     - name: Checkout
       uses: actions/checkout@v2
+      with:
+        submodules: true
 
     # Install the .NET Core workload
     - name: Install .NET Core
@@ -45,5 +47,12 @@ jobs:
       # Run tests
     - name: Run tests
       run: dotnet test --no-build -c $env:Configuration -v n
+      env:
+        Configuration: ${{ matrix.configuration }}
+
+    - uses: actions/upload-artifact@v2
+      with:
+        name: CovidSandbox
+        path: bin/$env:Configuration/netcoreapp3.1
       env:
         Configuration: ${{ matrix.configuration }}
