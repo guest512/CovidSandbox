@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CovidSandbox.Model.Reports.Intermediate;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -9,19 +10,19 @@ namespace CovidSandbox.Model.Reports
         private readonly RegionReport? _wholeCountryReport;
         private readonly Dictionary<DateTime, Metrics> _dayByDayMetrics = new Dictionary<DateTime, Metrics>();
 
-        public CountryReport(string name, IEnumerable<IntermidiateReport> reports)
+        public CountryReport(string name, IEnumerable<IntermediateReport> reports)
         {
             Name = name;
-            reports = reports as IntermidiateReport[] ?? reports.ToArray();
+            reports = reports as IntermediateReport[] ?? reports.ToArray();
             RegionReports = reports
-                .OfType<CountryWithRegionsIntermidiateReport>()
+                .OfType<CountryWithRegionsIntermediateReport>()
                 .SelectMany(_ => _.RegionReports)
                 .GroupBy(_ => _.Name)
                 .Select(_ => new RegionReport(_.Key, _))
                 .ToArray();
 
-            if (reports.Any(_ => !(_ is CountryWithRegionsIntermidiateReport)))
-                _wholeCountryReport = new RegionReport(string.Empty, reports.Where(_ => !(_ is CountryWithRegionsIntermidiateReport)));
+            if (reports.Any(_ => !(_ is CountryWithRegionsIntermediateReport)))
+                _wholeCountryReport = new RegionReport(string.Empty, reports.Where(_ => !(_ is CountryWithRegionsIntermediateReport)));
 
             AvailableDates = Utils.GetContinuousDateRange((_wholeCountryReport?
                     .AvailableDates ?? Enumerable.Empty<DateTime>())

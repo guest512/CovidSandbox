@@ -40,7 +40,9 @@ namespace CovidSandbox
             Parallel.ForEach(Directory.EnumerateFiles("..\\..\\..\\Data\\JHopkins\\csse_covid_19_data\\csse_covid_19_daily_reports", "*.csv"),
             //new[]
             //{
+            //    "C:\\Src\\Github\\CovidSandbox\\Data\\JHopkins\\csse_covid_19_data\\csse_covid_19_daily_reports\\01-22-2020.csv",
             //    "C:\\Src\\Github\\CovidSandbox\\Data\\JHopkins\\csse_covid_19_data\\csse_covid_19_daily_reports\\01-23-2020.csv",
+            //    "C:\\Src\\Github\\CovidSandbox\\Data\\JHopkins\\csse_covid_19_data\\csse_covid_19_daily_reports\\01-24-2020.csv",
             //    "C:\\Src\\Github\\CovidSandbox\\Data\\JHopkins\\csse_covid_19_data\\csse_covid_19_daily_reports\\02-06-2020.csv"
             //},
             ReadFile);

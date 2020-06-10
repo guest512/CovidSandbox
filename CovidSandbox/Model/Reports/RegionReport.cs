@@ -1,15 +1,16 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using CovidSandbox.Model.Reports.Intermediate;
 
 namespace CovidSandbox.Model.Reports
 {
     public class RegionReport
     {
-        private readonly IEnumerable<IntermidiateReport> _reports;
+        private readonly IEnumerable<IntermediateReport> _reports;
         private readonly Dictionary<DateTime, Metrics> _dayByDayMetrics = new Dictionary<DateTime, Metrics>();
 
-        public RegionReport(string name, IEnumerable<IntermidiateReport> reports)
+        public RegionReport(string name, IEnumerable<IntermediateReport> reports)
         {
             Name = name;
             _reports = reports.ToArray();
@@ -39,7 +40,7 @@ namespace CovidSandbox.Model.Reports
             else
             {
                 var testDay = day;
-                var dayReports = Enumerable.Empty<IntermidiateReport>().ToArray();
+                var dayReports = Enumerable.Empty<IntermediateReport>().ToArray();
 
                 while (!dayReports.Any() && testDay > Utils.PandemicStart && !_dayByDayMetrics.ContainsKey(testDay))
                 {
