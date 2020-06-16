@@ -56,7 +56,18 @@ namespace CovidSandbox.Tests
                 new CsvField(Field.LastUpdate, "2/22/2020 2:20"),
             }));
 
-            Assert.That(entry.GetHashCode(), Is.EqualTo(HashCode.Combine(0, 0, "Russia", 5, new DateTime(2020, 2, 22).Date, string.Empty, 0)));
+            var hashCode = new HashCode();
+            hashCode.Add("");                                               //County
+            hashCode.Add(0);                                                //FIPS
+            hashCode.Add(0);                                                //Active
+            hashCode.Add(0);                                                //Confirmed
+            hashCode.Add("Russia");                                         //CountryRegion
+            hashCode.Add(5);                                                //Deaths
+            hashCode.Add(new DateTime(2020, 2, 22).Date);     //LastUpdate
+            hashCode.Add("");                                               //ProvinceState
+            hashCode.Add(0);                                                //Recovered
+
+            Assert.That(entry.GetHashCode(), Is.EqualTo(hashCode.ToHashCode()));
         }
 
         [Test]

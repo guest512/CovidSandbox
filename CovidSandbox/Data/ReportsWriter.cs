@@ -1,7 +1,6 @@
 namespace CovidSandbox.Data
 {
-    public class ReportsWriter 
+    public class ReportsWriter
     {
-        
     }
 }

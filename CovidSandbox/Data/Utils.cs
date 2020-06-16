@@ -11,6 +11,7 @@ namespace CovidSandbox.Data
         {
             var formats = new[]
             {
+                "MM-dd-yyyy",
                 "M/dd/yyyy HH:mm",
                 "M/d/yyyy HH:mm",
                 "M/d/yyyy H:mm",

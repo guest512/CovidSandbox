@@ -56,7 +56,15 @@ namespace CovidSandbox.Model.Reports
                                 report = dayCountryReports.All(_ => string.IsNullOrEmpty(_.ProvinceState)) ||
                                          dayCountryReports.All(_ => _.ProvinceState == country)
                                     ? CreateCountryReport(lastReport, country, dayCountryReports[0], day)
-                                    : CreateCountryWithRegionsReport(lastReport, country, dayCountryReports.Where(_ => !(string.IsNullOrEmpty(_.ProvinceState) || _.ProvinceState == country)), day);
+                                    : (country == "US"
+                                        ? CreateUsCountryWithRegionsReport(lastReport, country,
+                                            dayCountryReports.Where(_ =>
+                                                !(string.IsNullOrEmpty(_.ProvinceState) || _.ProvinceState == country)),
+                                            day)
+                                        : CreateCountryWithRegionsReport(lastReport, country,
+                                            dayCountryReports.Where(_ =>
+                                                !(string.IsNullOrEmpty(_.ProvinceState) || _.ProvinceState == country)),
+                                            day));
 
                                 break;
                             }
@@ -69,7 +77,99 @@ namespace CovidSandbox.Model.Reports
             });
         }
 
-        private static IntermediateReport CreateCountryWithRegionsReport(ConcurrentDictionary<string, IntermediateReport> lastReport, string country,
+        private static CountryWithRegionsIntermediateReport CreateUsCountryWithRegionsReport(
+            ConcurrentDictionary<string, IntermediateReport> lastReport, string country, IEnumerable<Entry> dayCountryReports,
+            DateTime day)
+        {
+            dayCountryReports = dayCountryReports as Entry[] ?? dayCountryReports.ToArray();
+            if (dayCountryReports.All(_ => string.IsNullOrEmpty(_.County)) ||
+                dayCountryReports.All(_ => _.FIPS == 0))
+            {
+                return CreateCountryWithRegionsReport(lastReport, country, dayCountryReports, day);
+            }
+
+            var lastProvinceReports = lastReport.Values
+                .OfType<UsProvinceIntermediateReport>()
+                .Where(_ => _.Country == country)
+                .ToArray();
+
+            var todayProvinces = new List<string>();
+            var provinceReports =
+                new List<UsProvinceIntermediateReport>();
+            foreach (var dayProvinceReports in dayCountryReports.GroupBy(_ => _.ProvinceState))
+            {
+                string CountyKey(uint fips, string name, string provinceName) => $"{provinceName}-{name}({fips})";
+                var lastCountyReports = lastReport.Values
+                    .OfType<UsCountyIntermidiateReport>()
+                    .Where(_ => _.Name == dayProvinceReports.Key)
+                    .ToArray();
+                todayProvinces.Add(dayProvinceReports.Key);
+
+                var todayCounties = new List<uint>();
+                var countyReports = new List<UsCountyIntermidiateReport>();
+                foreach (var dayCountyReport in dayProvinceReports)
+                {
+                    todayCounties.Add(dayCountyReport.FIPS);
+                    var previousCountyMetrics = lastReport.TryRemove(
+                        CountyKey(dayCountyReport.FIPS, dayCountyReport.County, dayCountyReport.ProvinceState), out var previousCountyReport)
+                        ? previousCountyReport.Total
+                        : Metrics.Empty;
+                    var currentCountyMetrics = Metrics.FromEntry(dayCountyReport);
+                    countyReports.Add(new UsCountyIntermidiateReport(dayCountyReport.FIPS, dayCountyReport.County,
+                        dayProvinceReports.Key, country, day, currentCountyMetrics,
+                        currentCountyMetrics - previousCountyMetrics));
+                }
+
+                foreach (var countyReport in countyReports.Where(_ => !lastReport.TryAdd(CountyKey(_.FIPS, _.Name, _.Province), _)))
+                {
+                    Console.WriteLine($"!!!POSSIBLE DUPLICATE OR WRONG DATA!!! {countyReport}");
+                }
+
+                var additionalCountyReports = lastCountyReports.Where(_ =>
+                    todayCounties.All(__ => __ != _.FIPS));
+
+                countyReports.AddRange(additionalCountyReports.Select(_ =>
+                    new UsCountyIntermidiateReport(_.FIPS, _.Name, dayProvinceReports.Key, country, day, _.Total,
+                        Metrics.Empty)));
+
+                var provinceReport = lastReport.TryRemove(ProvinceKey(dayProvinceReports.Key,country), out var previousProvinceReport) &&
+                                     !(previousProvinceReport is UsProvinceIntermediateReport)
+                    ? new UsProvinceIntermediateReport(dayProvinceReports.Key, country, day, countyReports,
+                        previousProvinceReport.Total)
+                    : new UsProvinceIntermediateReport(dayProvinceReports.Key, country, day, countyReports);
+
+                provinceReports.Add(provinceReport);
+            }
+
+            foreach (var provinceReport in provinceReports.Where(provinceReport =>
+                !lastReport.TryAdd(ProvinceKey(provinceReport.Name,country), provinceReport)))
+            {
+                Console.WriteLine($"!!!POSSIBLE DUPLICATE OR WRONG DATA!!! {provinceReport}");
+            }
+
+            var additionalProvinceReports = lastProvinceReports.Where(_ =>
+                todayProvinces.All(__ => __ != _.Name));
+
+            provinceReports.AddRange(
+                additionalProvinceReports
+                    .Select(_ =>
+                        new UsProvinceIntermediateReport(
+                            _.Name,
+                            country,
+                            day,
+                            _.Total,
+                            Metrics.Empty)));
+
+            var report = lastReport.TryRemove(country, out var previousCountryReport) &&
+                     !(previousCountryReport is CountryWithRegionsIntermediateReport)
+                ? new CountryWithRegionsIntermediateReport(country, day, provinceReports,
+                    previousCountryReport.Total)
+                : new CountryWithRegionsIntermediateReport(country, day, provinceReports);
+
+            return report;
+        }
+
+        private static CountryWithRegionsIntermediateReport CreateCountryWithRegionsReport(ConcurrentDictionary<string, IntermediateReport> lastReport, string country,
             IEnumerable<Entry> dayCountryReports, DateTime day)
         {
             var lastProvinceReports = lastReport.Values
@@ -84,7 +184,7 @@ namespace CovidSandbox.Model.Reports
             {
                 todayProvinces.Add(dayProvinceReports.Key);
                 var previousMetrics =
-                    lastReport.TryRemove(dayProvinceReports.Key, out var previousReport)
+                    lastReport.TryRemove(ProvinceKey(dayProvinceReports.Key,country), out var previousReport)
                         ? previousReport.Total
                         : Metrics.Empty;
 
@@ -96,7 +196,7 @@ namespace CovidSandbox.Model.Reports
             }
 
             foreach (var provinceReport in provinceReports.Where(provinceReport =>
-                !lastReport.TryAdd(provinceReport.Name, provinceReport)))
+                !lastReport.TryAdd(ProvinceKey(provinceReport.Name, provinceReport.Country), provinceReport)))
             {
                 Console.WriteLine($"!!!POSSIBLE DUPLICATE OR WRONG DATA!!! {provinceReport}");
             }
@@ -114,13 +214,15 @@ namespace CovidSandbox.Model.Reports
                             _.Total,
                             Metrics.Empty)));
 
-            IntermediateReport report = lastReport.TryRemove(country, out var previousCountryReport) &&
+            var report = lastReport.TryRemove(country, out var previousCountryReport) &&
                                         !(previousCountryReport is CountryWithRegionsIntermediateReport)
                 ? new CountryWithRegionsIntermediateReport(country, day, provinceReports,
                     previousCountryReport.Total)
                 : new CountryWithRegionsIntermediateReport(country, day, provinceReports);
             return report;
         }
+
+        private static string ProvinceKey(string name, string countryName) => $"{countryName}-{name}";
 
         private static IntermediateReport CreateCountryReport(ConcurrentDictionary<string, IntermediateReport> lastReport, string country,
             Entry dayCountryReport, DateTime day)

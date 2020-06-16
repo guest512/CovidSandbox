@@ -1,10 +1,10 @@
-﻿using System;
+﻿using CovidSandbox.Data.Providers;
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Text.RegularExpressions;
-using CovidSandbox.Data.Providers;
 
 namespace CovidSandbox.Data
 {
@@ -15,7 +15,7 @@ namespace CovidSandbox.Data
             new JHopkinsDataProvider(),
         };
 
-        public IEnumerable<Row> Read(TextReader csvStream)
+        public IEnumerable<Row> Read(TextReader csvStream, string date = "")
         {
             var line = csvStream.ReadLine();
             if (line == null)
@@ -29,21 +29,24 @@ namespace CovidSandbox.Data
             while (line != null)
             {
                 var row = SplitRowString(line);
-                var fields = ReadData(activeProvider.GetFields(version), row);
+                var fields = ReadData(activeProvider.GetFields(version), row, date);
 
                 yield return new Row(fields);
                 line = csvStream.ReadLine();
             }
         }
 
-        private static IEnumerable<CsvField> ReadData(IEnumerable<Field> keys, IEnumerable<string> fields)
+        private static IEnumerable<CsvField> ReadData(IEnumerable<Field> keys, IEnumerable<string> fields, string date)
         {
             using var keyEnumerator = keys.GetEnumerator();
             using var fieldsEnumerator = fields.GetEnumerator();
 
             while (keyEnumerator.MoveNext() && fieldsEnumerator.MoveNext())
             {
-                yield return new CsvField(keyEnumerator.Current, fieldsEnumerator.Current);
+                if (keyEnumerator.Current == Field.LastUpdate && !string.IsNullOrEmpty(date))
+                    yield return new CsvField(keyEnumerator.Current, date);
+                else
+                    yield return new CsvField(keyEnumerator.Current, fieldsEnumerator.Current);
             }
         }
 

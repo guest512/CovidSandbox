@@ -26,13 +26,13 @@ namespace CovidSandbox
                 Console.WriteLine($"Processing file: {Path.GetFileName(filePath)}");
                 using var fs = File.OpenText(filePath);
 
-                foreach (var entry in csvReader.Read(fs).Select(_ => new Entry(_)))
+                foreach (var entry in csvReader.Read(fs, Path.GetFileNameWithoutExtension(filePath)).Select(_ => new Entry(_)))
                 {
                     parsedData.Add(entry);
                 }
             }
 
-            //foreach (var filePath in Directory.EnumerateFiles("..\\..\\..\\Data\\JHopkins\\csse_covid_19_data\\csse_covid_19_daily_reports", "*.csv"))
+            //foreach (var filePath in Directory.EnumerateFiles("Data\\JHopkins", "*.csv"))
             //{
             //    ReadFile(filePath);
             //}
@@ -40,12 +40,16 @@ namespace CovidSandbox
             Parallel.ForEach(Directory.EnumerateFiles("Data\\JHopkins", "*.csv"),
             //new[]
             //{
-            //    "C:\\Src\\Github\\CovidSandbox\\Data\\JHopkins\\csse_covid_19_data\\csse_covid_19_daily_reports\\01-22-2020.csv",
-            //    "C:\\Src\\Github\\CovidSandbox\\Data\\JHopkins\\csse_covid_19_data\\csse_covid_19_daily_reports\\01-23-2020.csv",
-            //    "C:\\Src\\Github\\CovidSandbox\\Data\\JHopkins\\csse_covid_19_data\\csse_covid_19_daily_reports\\01-24-2020.csv",
-            //    "C:\\Src\\Github\\CovidSandbox\\Data\\JHopkins\\csse_covid_19_data\\csse_covid_19_daily_reports\\02-06-2020.csv"
+            //    //"Data\\JHopkins\\04-22-2020.csv",
+            //    //"Data\\JHopkins\\04-23-2020.csv",
+            //    //"Data\\JHopkins\\04-24-2020.csv",
+            //    //"Data\\JHopkins\\04-25-2020.csv"
+
+            //    "Data\\JHopkins\\06-14-2020.csv",
+            //    "Data\\JHopkins\\06-15-2020.csv"
             //},
             ReadFile);
+
 
             if (!Directory.Exists("reports"))
                 Directory.CreateDirectory("reports");
@@ -55,6 +59,8 @@ namespace CovidSandbox
                 Directory.CreateDirectory("reports");
                 Thread.Sleep(100);
             }
+
+            
 
             Console.WriteLine("Initialize reports generator...");
             var reportsGen = new ReportsGenerator();
@@ -82,14 +88,14 @@ namespace CovidSandbox
                 if (countryMetrics.RegionReports.Any())
                     Directory.CreateDirectory($"reports\\countries\\{country}\\regions");
 
+                const string header = "Date,Confirmed,Active,Recovered,Deaths,Confirmed_Change,Active_Change,Recovered_Change,Deaths_Change";
                 foreach (var regionMetrics in countryMetrics.RegionReports)
                 {
                     var region = regionMetrics.Name.Replace('*', '_');
                     using var totalRegionFile = File.OpenWrite($"reports\\countries\\{country}\\regions\\{region}.csv");
                     using var totalRegionFileWriter = new StreamWriter(totalRegionFile);
 
-                    totalRegionFileWriter.WriteLine(
-                    "Date, Confirmed, Active, Recovered, Deaths, Confirmed_Change, Active_Change, Recovered_Change, Deaths_Changge");
+                    totalRegionFileWriter.WriteLine(header);
 
                     foreach (var day in dates)
                     {
@@ -98,15 +104,14 @@ namespace CovidSandbox
 
                         totalRegionFileWriter.WriteLine(
                             $"{day:dd-MM-yyyy}," +
-                            $" {confirmed}, {active}, {recovered}, {deaths}," +
-                            $" {confirmedChange}, {activeChange}, {recoveredChange}, {deathsChange}");
+                            $"{confirmed},{active},{recovered},{deaths}," +
+                            $"{confirmedChange},{activeChange},{recoveredChange},{deathsChange}");
                     }
                 }
 
                 using var totalFile = File.OpenWrite($"reports\\countries\\{country}\\{country}.csv");
                 using var totalFileWriter = new StreamWriter(totalFile);
-                totalFileWriter.WriteLine(
-                    "Date, Confirmed, Active, Recovered, Deaths, Confirmed_Change, Active_Change, Recovered_Change, Deaths_Change");
+                totalFileWriter.WriteLine(header);
 
                 foreach (var day in dates)
                 {
@@ -115,8 +120,8 @@ namespace CovidSandbox
 
                     totalFileWriter.WriteLine(
                         $"{day:dd-MM-yyyy}," +
-                        $" {confirmed}, {active}, {recovered}, {deaths}," +
-                        $" {confirmedChange}, {activeChange}, {recoveredChange}, {deathsChange}");
+                        $"{confirmed},{active},{recovered},{deaths}," +
+                        $"{confirmedChange},{activeChange},{recoveredChange},{deathsChange}");
                 }
             });
         }

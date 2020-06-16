@@ -14,6 +14,8 @@ namespace CovidSandbox.Model
             Deaths = TryGetValue(rowData[Field.Deaths]);
             Recovered = TryGetValue(rowData[Field.Recovered]);
             Active = TryGetValue(rowData[Field.Active]);
+            FIPS = TryGetValue(rowData[Field.FIPS]);
+            County = rowData[Field.Admin2];
         }
 
         public static Entry Empty { get; }
@@ -24,7 +26,11 @@ namespace CovidSandbox.Model
 
         public string CountryRegion { get; }
 
+        public string County { get; }
+
         public uint Deaths { get; }
+
+        public uint FIPS { get; }
 
         public DateTime LastUpdate { get; }
 
@@ -36,6 +42,14 @@ namespace CovidSandbox.Model
 
         public static bool operator ==(Entry left, Entry right) => left.Equals(right);
 
+        public bool Equals(Entry other)
+        {
+            return County == other.County && FIPS == other.FIPS && Active == other.Active &&
+                   Confirmed == other.Confirmed && CountryRegion == other.CountryRegion && Deaths == other.Deaths &&
+                   LastUpdate.Equals(other.LastUpdate) && ProvinceState == other.ProvinceState &&
+                   Recovered == other.Recovered;
+        }
+
         public override bool Equals(object? obj)
         {
             return obj is Entry other && Equals(other);
@@ -43,7 +57,17 @@ namespace CovidSandbox.Model
 
         public override int GetHashCode()
         {
-            return HashCode.Combine(Active, Confirmed, CountryRegion, Deaths, LastUpdate, ProvinceState, Recovered);
+            var hashCode = new HashCode();
+            hashCode.Add(County);
+            hashCode.Add(FIPS);
+            hashCode.Add(Active);
+            hashCode.Add(Confirmed);
+            hashCode.Add(CountryRegion);
+            hashCode.Add(Deaths);
+            hashCode.Add(LastUpdate);
+            hashCode.Add(ProvinceState);
+            hashCode.Add(Recovered);
+            return hashCode.ToHashCode();
         }
 
         public override string ToString() => string.IsNullOrEmpty(ProvinceState)
@@ -111,6 +135,7 @@ namespace CovidSandbox.Model
 
         private static string ProcessProvinceName(string countryName, string provinceName)
         {
+            const string mainCountryRegion = "Main territory";
             return provinceName switch
             {
                 _ when countryName == "French Guiana" => "French Guiana",
@@ -129,18 +154,21 @@ namespace CovidSandbox.Model
                 _ when countryName == "Faroe Islands" => "Faroe Islands",
                 _ when countryName == "Greenland" => "Greenland",
                 _ when countryName == "Puerto Rico" => "Puerto Rico",
+
+                "" when countryName == "United Kingdom" => mainCountryRegion,
+                "United Kingdom" when countryName == "United Kingdom" => mainCountryRegion,
+
+                "" when countryName == "France" => mainCountryRegion,
+
+                "Unknown" => mainCountryRegion,
+
                 "Diamond Princess cruise ship" => "Diamond Princess",
+
                 _ => provinceName
             };
         }
 
-        private static uint TryGetValue(string stringValue) => uint.TryParse(stringValue, out var intValue) ? intValue : 0;
-
-        private bool Equals(Entry other)
-        {
-            return Active == other.Active && Confirmed == other.Confirmed && CountryRegion == other.CountryRegion &&
-                   Deaths == other.Deaths && LastUpdate.Equals(other.LastUpdate) &&
-                   ProvinceState == other.ProvinceState && Recovered == other.Recovered;
-        }
+        private static uint TryGetValue(string stringValue) =>
+            uint.TryParse(stringValue, out var intValue) ? intValue : 0;
     }
 }

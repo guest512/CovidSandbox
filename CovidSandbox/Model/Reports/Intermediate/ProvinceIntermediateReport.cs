@@ -6,7 +6,13 @@ namespace CovidSandbox.Model.Reports.Intermediate
     {
         public string Country { get; }
 
-        public ProvinceIntermediateReport(string provinceName, string countryName, DateTime day, Metrics total, Metrics change) : base(provinceName, day, total, change)
+        protected ProvinceIntermediateReport(string name, string countryName, DateTime day) : base(name,
+            day)
+        {
+            Country = countryName;
+        }
+
+        public ProvinceIntermediateReport(string name, string countryName, DateTime day, Metrics total, Metrics change) : base(name, day, total, change)
         {
             Country = countryName;
         }
