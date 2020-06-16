@@ -132,7 +132,7 @@ namespace CovidSandbox.Model.Reports
                     new UsCountyIntermidiateReport(_.FIPS, _.Name, dayProvinceReports.Key, country, day, _.Total,
                         Metrics.Empty)));
 
-                var provinceReport = lastReport.TryRemove(ProvinceKey(dayProvinceReports.Key,country), out var previousProvinceReport) &&
+                var provinceReport = lastReport.TryRemove(ProvinceKey(dayProvinceReports.Key, country), out var previousProvinceReport) &&
                                      !(previousProvinceReport is UsProvinceIntermediateReport)
                     ? new UsProvinceIntermediateReport(dayProvinceReports.Key, country, day, countyReports,
                         previousProvinceReport.Total)
@@ -142,7 +142,7 @@ namespace CovidSandbox.Model.Reports
             }
 
             foreach (var provinceReport in provinceReports.Where(provinceReport =>
-                !lastReport.TryAdd(ProvinceKey(provinceReport.Name,country), provinceReport)))
+                !lastReport.TryAdd(ProvinceKey(provinceReport.Name, country), provinceReport)))
             {
                 Console.WriteLine($"!!!POSSIBLE DUPLICATE OR WRONG DATA!!! {provinceReport}");
             }
@@ -184,7 +184,7 @@ namespace CovidSandbox.Model.Reports
             {
                 todayProvinces.Add(dayProvinceReports.Key);
                 var previousMetrics =
-                    lastReport.TryRemove(ProvinceKey(dayProvinceReports.Key,country), out var previousReport)
+                    lastReport.TryRemove(ProvinceKey(dayProvinceReports.Key, country), out var previousReport)
                         ? previousReport.Total
                         : Metrics.Empty;
 

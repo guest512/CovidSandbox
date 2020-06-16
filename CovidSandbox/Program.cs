@@ -50,7 +50,6 @@ namespace CovidSandbox
             //},
             ReadFile);
 
-
             if (!Directory.Exists("reports"))
                 Directory.CreateDirectory("reports");
             else if (Directory.EnumerateFileSystemEntries("reports").Any())
@@ -59,8 +58,6 @@ namespace CovidSandbox
                 Directory.CreateDirectory("reports");
                 Thread.Sleep(100);
             }
-
-            
 
             Console.WriteLine("Initialize reports generator...");
             var reportsGen = new ReportsGenerator();
@@ -135,7 +132,7 @@ namespace CovidSandbox
             //foreach (var dayReport in dayByDayReports)
             Parallel.ForEach(dayByDayReports, dayReport =>
             {
-                var countries = dayReport.AvailableCountries.OrderBy(_=>_).ToArray();
+                var countries = dayReport.AvailableCountries.OrderBy(_ => _).ToArray();
                 using var totalFile = File.OpenWrite($"reports\\dayByDay\\{dayReport.Day:yyyy-MM-dd}.csv");
                 using var totalFileWriter = new StreamWriter(totalFile);
                 totalFileWriter.WriteLine(
