@@ -40,6 +40,7 @@ namespace CovidSandbox.Tests
             new KeyValuePair<string, DateTime>("2020-03-21T20:43:02", new DateTime(2020,3,21)),
 
             new KeyValuePair<string, DateTime>("03-21-2020", new DateTime(2020,3,21)),
+            new KeyValuePair<string, DateTime>("22.04.2020", new DateTime(2020,4,22)), 
         };
 
         [Test]

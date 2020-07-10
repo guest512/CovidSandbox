@@ -15,6 +15,9 @@
         Active,
         CombinedKey,
         IncidenceRate,
-        CaseFatalityRatio
+        CaseFatalityRatio,
+        DeathsByDay,
+        RecoveredByDay,
+        ConfirmedByDay
     }
 }

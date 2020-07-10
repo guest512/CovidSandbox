@@ -10,9 +10,10 @@ namespace CovidSandbox.Data
 {
     public class CsvReader
     {
-        private readonly IEnumerable<IDataProvider> _providers = new[]
+        private readonly IEnumerable<IDataProvider> _providers = new IDataProvider[]
         {
             new JHopkinsDataProvider(),
+            new YandexRussiaDataProvider()
         };
 
         public IEnumerable<Row> Read(TextReader csvStream, string date = "")
@@ -31,7 +32,7 @@ namespace CovidSandbox.Data
                 var row = SplitRowString(line);
                 var fields = ReadData(activeProvider.GetFields(version), row, date);
 
-                yield return new Row(fields);
+                yield return new Row(fields, version);
                 line = csvStream.ReadLine();
             }
         }

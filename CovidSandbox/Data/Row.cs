@@ -7,11 +7,14 @@ namespace CovidSandbox.Data
     {
         private readonly Dictionary<Field, string> _data;
 
-        public Row(IEnumerable<CsvField> fields)
+        public Row(IEnumerable<CsvField> fields, RowVersion version)
         {
+            Version = version;
             _data = fields.ToDictionary(_ => _.Name, _ => _.Value);
         }
 
         public string this[Field key] => _data.ContainsKey(key) ? _data[key] : string.Empty;
+
+        public RowVersion Version { get; }
     }
 }

@@ -3,7 +3,6 @@ using CovidSandbox.Model;
 using CovidSandbox.Model.Reports;
 using System;
 using System.Collections.Concurrent;
-using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Threading;
@@ -17,16 +16,16 @@ namespace CovidSandbox
         {
             var parsedData = new ConcurrentBag<Entry>();
             var csvReader = new CsvReader();
+            var entryFactory = new EntryFactory();
 
-            void ReadFile(string filePath)
+            void ReadFile(string filePath, bool fileNameIsDate)
             {
-                Debug.Assert(parsedData != null, nameof(parsedData) + " != null");
-                Debug.Assert(csvReader != null, nameof(csvReader) + " != null");
-
                 Console.WriteLine($"Processing file: {Path.GetFileName(filePath)}");
                 using var fs = File.OpenText(filePath);
 
-                foreach (var entry in csvReader.Read(fs, Path.GetFileNameWithoutExtension(filePath)).Select(_ => new Entry(_)))
+                foreach (var entry in csvReader
+                    .Read(fs, fileNameIsDate ? Path.GetFileNameWithoutExtension(filePath) : string.Empty)
+                    .Select(_ => entryFactory.CreateEntry(_)))
                 {
                     parsedData.Add(entry);
                 }
@@ -40,15 +39,18 @@ namespace CovidSandbox
             Parallel.ForEach(Directory.EnumerateFiles("Data\\JHopkins", "*.csv"),
             //new[]
             //{
-            //    //"Data\\JHopkins\\04-22-2020.csv",
-            //    //"Data\\JHopkins\\04-23-2020.csv",
-            //    //"Data\\JHopkins\\04-24-2020.csv",
-            //    //"Data\\JHopkins\\04-25-2020.csv"
+            //    "Data\\JHopkins\\04-22-2020.csv",
+            //    "Data\\JHopkins\\04-23-2020.csv",
+            //    "Data\\JHopkins\\04-24-2020.csv",
+            //    "Data\\JHopkins\\04-25-2020.csv"
 
             //    "Data\\JHopkins\\06-14-2020.csv",
-            //    "Data\\JHopkins\\06-15-2020.csv"
+            //    "Data\\JHopkins\\06-15-2020.csv",
+            //    "Data\\Yandex\\Russia.csv"
             //},
-            ReadFile);
+            file => ReadFile(file, true));
+
+            ReadFile("Data\\Yandex\\Russia.csv", false);
 
             if (!Directory.Exists("reports"))
                 Directory.CreateDirectory("reports");

@@ -1,34 +1,38 @@
 ﻿using CovidSandbox.Data;
+using CovidSandbox.Model.Processors;
 using System;
+using System.Collections.Generic;
 
 namespace CovidSandbox.Model
 {
     public readonly struct Entry
     {
-        public Entry(Row rowData)
+
+        public Entry(Row rowData, IRowProcessor rowProcessor)
         {
-            ProvinceState = ProcessProvinceName(rowData[Field.CountryRegion], rowData[Field.ProvinceState]);
-            CountryRegion = ProcessCountryName(rowData[Field.CountryRegion], rowData[Field.ProvinceState]);
+            ProvinceState = rowProcessor.GetProvinceName(rowData);
+            CountryRegion = rowProcessor.GetCountryName(rowData);
             LastUpdate = Data.Utils.ParseDate(rowData[Field.LastUpdate]);
-            Confirmed = TryGetValue(rowData[Field.Confirmed]);
-            Deaths = TryGetValue(rowData[Field.Deaths]);
-            Recovered = TryGetValue(rowData[Field.Recovered]);
-            Active = TryGetValue(rowData[Field.Active]);
-            FIPS = TryGetValue(rowData[Field.FIPS]);
-            County = rowData[Field.Admin2];
+            Confirmed = rowProcessor.GetConfirmed(rowData);
+            Deaths = rowProcessor.GetDeaths(rowData);
+            Recovered = rowProcessor.GetRecovered(rowData);
+            Active = rowProcessor.GetActive(rowData);
+            FIPS = rowProcessor.GetFips(rowData);
+            County = rowProcessor.GetCountyName(rowData);
+            Origin = rowProcessor.GetOrigin(rowData);
         }
 
         public static Entry Empty { get; }
 
-        public uint Active { get; }
+        public long Active { get; }
 
-        public uint Confirmed { get; }
+        public long Confirmed { get; }
 
         public string CountryRegion { get; }
 
         public string County { get; }
 
-        public uint Deaths { get; }
+        public long Deaths { get; }
 
         public uint FIPS { get; }
 
@@ -36,7 +40,9 @@ namespace CovidSandbox.Model
 
         public string ProvinceState { get; }
 
-        public uint Recovered { get; }
+        public long Recovered { get; }
+
+        public Origin Origin { get; }
 
         public static bool operator !=(Entry left, Entry right) => !(left == right);
 
@@ -47,7 +53,7 @@ namespace CovidSandbox.Model
             return County == other.County && FIPS == other.FIPS && Active == other.Active &&
                    Confirmed == other.Confirmed && CountryRegion == other.CountryRegion && Deaths == other.Deaths &&
                    LastUpdate.Equals(other.LastUpdate) && ProvinceState == other.ProvinceState &&
-                   Recovered == other.Recovered;
+                   Recovered == other.Recovered && Origin == other.Origin;
         }
 
         public override bool Equals(object? obj)
@@ -67,108 +73,12 @@ namespace CovidSandbox.Model
             hashCode.Add(LastUpdate);
             hashCode.Add(ProvinceState);
             hashCode.Add(Recovered);
+            hashCode.Add(Origin);
             return hashCode.ToHashCode();
         }
 
         public override string ToString() => string.IsNullOrEmpty(ProvinceState)
-            ? $"{CountryRegion}, {LastUpdate.ToShortDateString()}: {Confirmed}-{Active}-{Recovered}-{Deaths}"
-            : $"{CountryRegion}({ProvinceState}), {LastUpdate.ToShortDateString()}: {Confirmed}-{Active}-{Recovered}-{Deaths}";
-
-        private static string ProcessCountryName(string countryName, string provinceName)
-        {
-            return countryName switch
-            {
-                "Mainland China" when provinceName == "Hong Kong" => "Hong Kong",
-                "China" when provinceName == "Hong Kong" => "Hong Kong",
-
-                "Mainland China" when provinceName == "Macau" => "Macau",
-                "China" when provinceName == "Macau" => "Macau",
-                "Mainland China" when provinceName == "Macao SAR" => "Macau",
-                "China" when provinceName == "Macao SAR" => "Macau",
-
-                "US" when provinceName == "Diamond Princess" => "Others",
-                "Diamond Princess" => "Others",
-
-                "French Guiana" => "France",
-                "Martinique" => "France",
-                "Mayotte" => "France",
-                "Saint Barthelemy" => "France",
-                "Guadeloupe" => "France",
-                "Reunion" => "France",
-
-                "Gibraltar" => "UK",
-                "Channel Islands" => "UK",
-                "Cayman Islands" => "UK",
-
-                "Curacao" => "Netherlands",
-                "Aruba" => "Netherlands",
-
-                "Faroe Islands" => "Denmark",
-                "Greenland" => "Denmark",
-
-                "Guam" => "US",
-                "Puerto Rico" => "US",
-
-                " Azerbaijan" => "Azerbaijan",
-                "Russian Federation" => "Russia",
-                "Viet Nam" => "Vietnam",
-                "United Kingdom" => "UK",
-                "Taiwan*" => "Taiwan",
-                "Gambia, The" => "Gambia",
-                "The Gambia" => "Gambia",
-                "Korea, South" => "South Korea",
-                "Macao SAR" => "Macau",
-                "Iran (Islamic Republic of)" => "Iran",
-                "Hong Kong SAR" => "Hong Kong",
-                "Bahamas, The" => "Bahamas",
-                "The Bahamas" => "Bahamas",
-                "Mainland China" => "China",
-                "Taipei and environs" => "Taiwan",
-                "St. Martin" => "Saint Martin",
-                "Republic of the Congo" => "Congo (Brazzaville)",
-                "Republic of Moldova" => "Moldova",
-                "Republic of Ireland" => "Ireland",
-                "Czech Republic" => "Czechia",
-                _ => countryName
-            };
-        }
-
-        private static string ProcessProvinceName(string countryName, string provinceName)
-        {
-            const string mainCountryRegion = "Main territory";
-            return provinceName switch
-            {
-                _ when countryName == "French Guiana" => "French Guiana",
-                _ when countryName == "Martinique" => "Martinique",
-                _ when countryName == "Mayotte" => "Mayotte",
-                _ when countryName == "Guam" => "Guam",
-                _ when countryName == "Diamond Princess" => "Diamond Princess",
-                _ when countryName == "Gibraltar" => "Gibraltar",
-                _ when countryName == "Saint Barthelemy" => "Saint Barthelemy",
-                _ when countryName == "Guadeloupe" => "Guadeloupe",
-                _ when countryName == "Channel Islands" => "Channel Islands",
-                _ when countryName == "Curacao" => "Curacao",
-                _ when countryName == "Aruba" => "Aruba",
-                _ when countryName == "Cayman Islands" => "Cayman Islands",
-                _ when countryName == "Reunion" => "Reunion",
-                _ when countryName == "Faroe Islands" => "Faroe Islands",
-                _ when countryName == "Greenland" => "Greenland",
-                _ when countryName == "Puerto Rico" => "Puerto Rico",
-
-                "" when countryName == "United Kingdom" => mainCountryRegion,
-                "United Kingdom" when countryName == "United Kingdom" => mainCountryRegion,
-
-                "" when countryName == "France" => mainCountryRegion,
-
-                "Unknown" => mainCountryRegion,
-
-                "Diamond Princess cruise ship" => "Diamond Princess",
-
-                _ => provinceName
-            };
-        }
-
-        private static uint TryGetValue(string stringValue) =>
-            uint.TryParse(stringValue, out var intValue) ? intValue : 0;
+            ? $"{Origin}-{CountryRegion}, {LastUpdate.ToShortDateString()}: {Confirmed}-{Active}-{Recovered}-{Deaths}"
+            : $"{Origin}-{CountryRegion}({ProvinceState}), {LastUpdate.ToShortDateString()}: {Confirmed}-{Active}-{Recovered}-{Deaths}";
     }
 }

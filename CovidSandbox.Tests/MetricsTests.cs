@@ -1,5 +1,6 @@
 ﻿using CovidSandbox.Data;
 using CovidSandbox.Model;
+using CovidSandbox.Model.Processors;
 using NUnit.Framework;
 using System;
 
@@ -30,7 +31,9 @@ namespace CovidSandbox.Tests
         [Test]
         public void ValidateMetricsFromEntry()
         {
-            var entry = new Entry(new Row(new[] { new CsvField(Field.Active, "5"), new CsvField(Field.Deaths, "8"), }));
+            var entry = new Entry(
+                new Row(new[] {new CsvField(Field.Active, "5"), new CsvField(Field.Deaths, "8"),},
+                    RowVersion.JHopkinsV1), new JHopkinsRowProcessor());
             var metrics = Metrics.FromEntry(entry);
 
             Assert.That(metrics, Is.EqualTo(new Metrics(0, 5, 0, 8)));

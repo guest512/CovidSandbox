@@ -20,7 +20,9 @@ namespace CovidSandbox.Data
                 "M/d/yy H:mm",
 
                 "yyyy-MM-ddTHH:mm:ss",
-                "yyyy-MM-dd HH:mm:ss"
+                "yyyy-MM-dd HH:mm:ss",
+
+                "dd.MM.yyyy"
             };
 
             if (string.IsNullOrEmpty(dateString))

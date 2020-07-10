@@ -39,6 +39,11 @@ namespace CovidSandbox.Model.Reports
                     var dayCountryReports = uniqueEntries
                         .Where(_ => _.LastUpdate.Date == day && _.CountryRegion == country)
                         .ToArray();
+
+                    if (dayCountryReports.Any(x => x.Origin == Origin.JHopkins) &&
+                          dayCountryReports.Any(x => x.Origin == Origin.Yandex))
+                        dayCountryReports = dayCountryReports.Where(x => x.Origin == Origin.Yandex).ToArray();
+
                     IntermediateReport report;
 
                     switch (dayCountryReports.Length)

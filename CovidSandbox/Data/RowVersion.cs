@@ -7,6 +7,8 @@
         JHopkinsV3,
         JHopkinsV4,
 
+        YandexRussia,
+
         Unknown
     }
 }
