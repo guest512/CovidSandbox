@@ -108,5 +108,7 @@ namespace CovidSandbox.Model.Processors
                 _ => provinceRowValue
             };
         }
+
+        public override long GetActive(Row row) => GetConfirmed(row) - GetDeaths(row) - GetRecovered(row);
     }
 }
