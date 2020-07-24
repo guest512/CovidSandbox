@@ -12,7 +12,7 @@ namespace CovidSandbox.Model
         {
             ProvinceState = rowProcessor.GetProvinceName(rowData);
             CountryRegion = rowProcessor.GetCountryName(rowData);
-            LastUpdate = Data.Utils.ParseDate(rowData[Field.LastUpdate]);
+            LastUpdate = rowProcessor.GetLastUpdate(rowData);
             Confirmed = rowProcessor.GetConfirmed(rowData);
             Deaths = rowProcessor.GetDeaths(rowData);
             Recovered = rowProcessor.GetRecovered(rowData);

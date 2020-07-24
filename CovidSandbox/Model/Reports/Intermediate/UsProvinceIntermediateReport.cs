@@ -8,10 +8,6 @@ namespace CovidSandbox.Model.Reports.Intermediate
     {
         public IEnumerable<UsCountyIntermidiateReport> CountyReports { get; }
 
-        public override Metrics Total { get; }
-
-        public override Metrics Change { get; }
-
         public UsProvinceIntermediateReport(string provinceName, string countryName, DateTime day,
             IEnumerable<UsCountyIntermidiateReport> countyReports) :
             base(provinceName, countryName, day)

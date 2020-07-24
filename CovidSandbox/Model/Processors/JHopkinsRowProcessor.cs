@@ -1,9 +1,26 @@
 ﻿using CovidSandbox.Data;
+using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
 
 namespace CovidSandbox.Model.Processors
 {
     public sealed class JHopkinsRowProcessor : BaseRowProcessor
     {
+        private readonly Dictionary<string, string> _russianRegions;
+
+        public JHopkinsRowProcessor()
+        {
+            var lines = File.ReadAllLines("Data\\Misc\\Russian_Regions.csv");
+            _russianRegions = new Dictionary<string, string>(
+                lines.Skip(1).Select(x =>
+                {
+                    var values = x.Split(',');
+                    return new KeyValuePair<string, string>(values[0], values[1]);
+                }));
+        }
+
         public override string GetCountryName(Row row)
         {
             var countryRowValue = row[Field.CountryRegion];
@@ -70,6 +87,13 @@ namespace CovidSandbox.Model.Processors
 
         public override uint GetFips(Row row) => (uint)TryGetValue(row[Field.FIPS]);
 
+        public override DateTime GetLastUpdate(Row row)
+        {
+            var countryRowValue = row[Field.CountryRegion];
+
+            return countryRowValue == "Russia" ? base.GetLastUpdate(row).Subtract(TimeSpan.FromDays(1)) : base.GetLastUpdate(row);
+        }
+
         public override Origin GetOrigin(Row row) => Origin.JHopkins;
 
         public override string GetProvinceName(Row row)
@@ -79,6 +103,7 @@ namespace CovidSandbox.Model.Processors
 
             return provinceRowValue switch
             {
+                _ when countryRowValue == "Russia" => _russianRegions[provinceRowValue],
                 _ when countryRowValue == "French Guiana" => "French Guiana",
                 _ when countryRowValue == "Martinique" => "Martinique",
                 _ when countryRowValue == "Mayotte" => "Mayotte",
@@ -108,7 +133,5 @@ namespace CovidSandbox.Model.Processors
                 _ => provinceRowValue
             };
         }
-
-        public override long GetActive(Row row) => GetConfirmed(row) - GetDeaths(row) - GetRecovered(row);
     }
 }

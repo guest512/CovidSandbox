@@ -8,9 +8,9 @@ namespace CovidSandbox.Model.Reports.Intermediate
 
         public DateTime Day { get; }
 
-        public virtual Metrics Total { get; }
+        public Metrics Total { get; protected set; }
 
-        public virtual Metrics Change { get; }
+        public Metrics Change { get; protected set; }
 
         protected IntermediateReport(string countryProvinceName, DateTime day)
         {

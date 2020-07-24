@@ -20,10 +20,9 @@ namespace CovidSandbox.Model.Reports
         private void GenerateReports()
         {
             var uniqueEntries = _data.Distinct().ToArray();
-            var countriesList = uniqueEntries.Select(_ => _.CountryRegion).Distinct().ToArray();
-            var dates = uniqueEntries.Select(_ => _.LastUpdate.Date).Distinct().OrderBy(_ => _).ToArray();
-            ConcurrentDictionary<string, IntermediateReport> lastReport =
-                new ConcurrentDictionary<string, IntermediateReport>();
+            var countriesList = uniqueEntries.Select(x => x.CountryRegion).Distinct().ToArray();
+            var dates = uniqueEntries.Select(x => x.LastUpdate.Date).Distinct().OrderBy(_ => _).ToArray();
+            var lastReport = new ConcurrentDictionary<string, IntermediateReport>();
 
             Parallel.ForEach(countriesList, (country) =>
             //foreach (var country in countriesList)
@@ -31,18 +30,23 @@ namespace CovidSandbox.Model.Reports
                 if (_reports.Any(_ => _.Name == country))
                     return;
 
+                var countryReports = uniqueEntries.Where(x => x.CountryRegion == country).ToArray();
+
                 foreach (var day in dates)
                 {
-                    if (_reports.Any(_ => _.Day == day && _.Name == country))
+                    if (_reports.Any(x => x.Day == day && x.Name == country))
                         continue;
 
-                    var dayCountryReports = uniqueEntries
-                        .Where(_ => _.LastUpdate.Date == day && _.CountryRegion == country)
+                    var dayCountryReports = countryReports
+                        .Where(x => x.LastUpdate.Date == day)
                         .ToArray();
 
-                    if (dayCountryReports.Any(x => x.Origin == Origin.JHopkins) &&
-                          dayCountryReports.Any(x => x.Origin == Origin.Yandex))
+                    if (country == "Russia" &&
+                        dayCountryReports.Any(x => x.Origin == Origin.JHopkins) &&
+                        dayCountryReports.Any(x => x.Origin == Origin.Yandex))
+                    {
                         dayCountryReports = dayCountryReports.Where(x => x.Origin == Origin.Yandex).ToArray();
+                    }
 
                     IntermediateReport report;
 
@@ -51,7 +55,8 @@ namespace CovidSandbox.Model.Reports
                         case 0:
                             continue;
                         case 1 when string.IsNullOrEmpty(dayCountryReports[0].ProvinceState) ||
-                                    dayCountryReports[0].ProvinceState == dayCountryReports[0].CountryRegion:
+                                    dayCountryReports[0].ProvinceState == dayCountryReports[0].CountryRegion ||
+                                    dayCountryReports[0].ProvinceState == "Main territory":
                             {
                                 report = CreateCountryReport(lastReport, country, dayCountryReports[0], day);
                                 break;
@@ -80,6 +85,8 @@ namespace CovidSandbox.Model.Reports
                     _reports.Add(report);
                 }
             });
+
+            _data.Clear();
         }
 
         private static CountryWithRegionsIntermediateReport CreateUsCountryWithRegionsReport(

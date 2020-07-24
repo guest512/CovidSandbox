@@ -73,7 +73,8 @@ namespace CovidSandbox.Model
 
         private bool Equals(Metrics other)
         {
-            return Confirmed == other.Confirmed && Deaths == other.Deaths && Active == other.Active && Recovered == other.Recovered;
+            var (confirmed, active, recovered, deaths) = other;
+            return Confirmed == confirmed && Deaths == deaths && Active == active && Recovered == recovered;
         }
 
         public override string ToString() => $"{Confirmed} {Active} {Recovered} {Deaths}";

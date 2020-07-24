@@ -1,4 +1,5 @@
-﻿using CovidSandbox.Data;
+﻿using System;
+using CovidSandbox.Data;
 
 namespace CovidSandbox.Model.Processors
 {
@@ -21,5 +22,6 @@ namespace CovidSandbox.Model.Processors
         string GetProvinceName(Row row);
 
         long GetRecovered(Row row);
+        DateTime GetLastUpdate(Row row);
     }
 }

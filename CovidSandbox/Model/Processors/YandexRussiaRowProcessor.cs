@@ -4,8 +4,6 @@ namespace CovidSandbox.Model.Processors
 {
     public sealed class YandexRussiaRowProcessor : BaseRowProcessor
     {
-        public override long GetActive(Row row) => GetConfirmed(row) - GetDeaths(row) - GetRecovered(row);
-
         public override string GetCountryName(Row row) => "Russia";
 
         public override string GetCountyName(Row row) => string.Empty;

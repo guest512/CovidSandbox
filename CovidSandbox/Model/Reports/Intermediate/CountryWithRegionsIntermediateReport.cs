@@ -7,11 +7,7 @@ namespace CovidSandbox.Model.Reports.Intermediate
     public sealed class CountryWithRegionsIntermediateReport : IntermediateReport
     {
         public IEnumerable<ProvinceIntermediateReport> RegionReports { get; }
-
-        public override Metrics Total { get; }
-
-        public override Metrics Change { get; }
-
+        
         public CountryWithRegionsIntermediateReport(string countryName, DateTime day, IEnumerable<ProvinceIntermediateReport> regionReports) : base(countryName, day)
         {
             RegionReports = regionReports.ToArray();

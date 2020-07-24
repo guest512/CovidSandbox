@@ -1,4 +1,5 @@
-﻿using CovidSandbox.Data;
+﻿using System;
+using CovidSandbox.Data;
 
 namespace CovidSandbox.Model.Processors
 {
@@ -6,7 +7,11 @@ namespace CovidSandbox.Model.Processors
     {
         protected const string MainCountryRegion = "Main territory";
 
-        public virtual long GetActive(Row row) => TryGetValue(row[Field.Active]);
+        public virtual long GetActive(Row row)
+        {
+            var active = TryGetValue(row[Field.Active], long.MinValue);
+            return active == long.MinValue ? GetConfirmed(row) - GetDeaths(row) - GetRecovered(row) : active;
+        }
 
         public virtual long GetConfirmed(Row row) => TryGetValue(row[Field.Confirmed]);
 
@@ -24,7 +29,9 @@ namespace CovidSandbox.Model.Processors
 
         public virtual long GetRecovered(Row row) => TryGetValue(row[Field.Recovered]);
 
-        protected static long TryGetValue(string stringValue) =>
-            long.TryParse(stringValue, out var intValue) ? intValue : 0;
+        public virtual DateTime GetLastUpdate(Row row) => Data.Utils.ParseDate(row[Field.LastUpdate]);
+
+        protected static long TryGetValue(string stringValue, long defaultValue = 0) =>
+            long.TryParse(stringValue, out var intValue) ? intValue : defaultValue;
     }
 }
