@@ -86,14 +86,7 @@ namespace CovidSandbox.Model.Processors
         public override string GetCountyName(Row row) => row[Field.Admin2];
 
         public override uint GetFips(Row row) => (uint)TryGetValue(row[Field.FIPS]);
-
-        public override DateTime GetLastUpdate(Row row)
-        {
-            var countryRowValue = row[Field.CountryRegion];
-
-            return countryRowValue == "Russia" ? base.GetLastUpdate(row).Subtract(TimeSpan.FromDays(1)) : base.GetLastUpdate(row);
-        }
-
+        
         public override Origin GetOrigin(Row row) => Origin.JHopkins;
 
         public override string GetProvinceName(Row row)
@@ -103,6 +96,8 @@ namespace CovidSandbox.Model.Processors
 
             return provinceRowValue switch
             {
+                _ when string.IsNullOrEmpty(provinceRowValue) => Consts.MainCountryRegion,
+
                 _ when countryRowValue == "Russia" => _russianRegions[provinceRowValue],
                 _ when countryRowValue == "French Guiana" => "French Guiana",
                 _ when countryRowValue == "Martinique" => "Martinique",
@@ -121,12 +116,12 @@ namespace CovidSandbox.Model.Processors
                 _ when countryRowValue == "Greenland" => "Greenland",
                 _ when countryRowValue == "Puerto Rico" => "Puerto Rico",
 
-                "" when countryRowValue == "United Kingdom" => MainCountryRegion,
-                "United Kingdom" when countryRowValue == "United Kingdom" => MainCountryRegion,
+                "" when countryRowValue == "United Kingdom" => Consts.MainCountryRegion,
+                "United Kingdom" when countryRowValue == "United Kingdom" => Consts.MainCountryRegion,
 
-                "" when countryRowValue == "France" => MainCountryRegion,
+                "" when countryRowValue == "France" => Consts.MainCountryRegion,
 
-                "Unknown" => MainCountryRegion,
+                "Unknown" => Consts.MainCountryRegion,
 
                 "Diamond Princess cruise ship" => "Diamond Princess",
 

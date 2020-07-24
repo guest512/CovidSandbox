@@ -23,10 +23,12 @@ namespace CovidSandbox.Model.Reports
             var countriesList = uniqueEntries.Select(x => x.CountryRegion).Distinct().ToArray();
             var dates = uniqueEntries.Select(x => x.LastUpdate.Date).Distinct().OrderBy(_ => _).ToArray();
             var lastReport = new ConcurrentDictionary<string, IntermediateReport>();
+            
 
             Parallel.ForEach(countriesList, (country) =>
             //foreach (var country in countriesList)
             {
+                Console.WriteLine($"Processing {country}...");
                 if (_reports.Any(_ => _.Name == country))
                     return;
 
@@ -56,7 +58,7 @@ namespace CovidSandbox.Model.Reports
                             continue;
                         case 1 when string.IsNullOrEmpty(dayCountryReports[0].ProvinceState) ||
                                     dayCountryReports[0].ProvinceState == dayCountryReports[0].CountryRegion ||
-                                    dayCountryReports[0].ProvinceState == "Main territory":
+                                    dayCountryReports[0].ProvinceState == Consts.MainCountryRegion:
                             {
                                 report = CreateCountryReport(lastReport, country, dayCountryReports[0], day);
                                 break;

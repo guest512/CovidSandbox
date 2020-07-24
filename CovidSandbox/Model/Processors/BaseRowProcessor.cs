@@ -5,8 +5,6 @@ namespace CovidSandbox.Model.Processors
 {
     public abstract class BaseRowProcessor : IRowProcessor
     {
-        protected const string MainCountryRegion = "Main territory";
-
         public virtual long GetActive(Row row)
         {
             var active = TryGetValue(row[Field.Active], long.MinValue);
