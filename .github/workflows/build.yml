@@ -49,7 +49,7 @@ jobs:
       env:
         Configuration: ${{ matrix.configuration }}
 
-    - uses: actions/upload-artifact@v2
-      with:
-        name: CovidSandbox-${{ matrix.configuration }}
-        path: bin/${{ matrix.configuration }}/netcoreapp3.1
+    # - uses: actions/upload-artifact@v2
+    #   with:
+    #     name: CovidSandbox-${{ matrix.configuration }}
+    #     path: bin/${{ matrix.configuration }}/netcoreapp3.1
