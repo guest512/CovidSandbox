@@ -60,15 +60,15 @@ namespace CovidSandbox.Tests
             var hashCode = new HashCode();
             hashCode.Add(""); //County
             hashCode.Add(0); //FIPS
-            hashCode.Add(0); //Active
+            hashCode.Add((long)-5); //Active
             hashCode.Add(0); //Confirmed
             hashCode.Add("Russia"); //CountryRegion
             hashCode.Add(5); //Deaths
             hashCode.Add(new DateTime(2020, 2, 22).Date); //LastUpdate
-            hashCode.Add(""); //ProvinceState
+            hashCode.Add("Main territory"); //ProvinceState
             hashCode.Add(0); //Recovered
             hashCode.Add(Origin.JHopkins); //Origin
-
+            
             Assert.That(entry.GetHashCode(), Is.EqualTo(hashCode.ToHashCode()));
         }
 
@@ -85,7 +85,7 @@ namespace CovidSandbox.Tests
             var e2 = new Entry(new Row(new[]
             {
                 new CsvField(Field.CountryRegion, "Russia"),
-                new CsvField(Field.ProvinceState, "Kamchatka"),
+                new CsvField(Field.ProvinceState, "Kamchatka Krai"),
                 new CsvField(Field.Deaths, "5"),
                 new CsvField(Field.LastUpdate, "2/22/2020 2:20"),
             }, RowVersion.JHopkinsV1), new JHopkinsRowProcessor());
@@ -116,17 +116,17 @@ namespace CovidSandbox.Tests
                 new CsvField(Field.LastUpdate, "2/22/2020 2:20"),
             }, RowVersion.JHopkinsV1), new JHopkinsRowProcessor());
             Assert.That(entry.ToString(),
-                Is.EqualTo($"JHopkins-Russia, {new DateTime(2020, 2, 22).ToShortDateString()}: 0-0-0-5"));
+                Is.EqualTo($"JHopkins-Russia(Main territory), {new DateTime(2020, 2, 22).ToShortDateString()}: 0--5-0-5"));
 
             entry = new Entry(new Row(new[]
             {
                 new CsvField(Field.CountryRegion, "Russia"),
-                new CsvField(Field.ProvinceState, "Kamchatka"),
+                new CsvField(Field.ProvinceState, "Kamchatka Krai"),
                 new CsvField(Field.Deaths, "5"),
                 new CsvField(Field.LastUpdate, "2/22/2020 2:20"),
             }, RowVersion.JHopkinsV1), new JHopkinsRowProcessor());
             Assert.That(entry.ToString(),
-                Is.EqualTo($"JHopkins-Russia(Kamchatka), {new DateTime(2020, 2, 22).ToShortDateString()}: 0-0-0-5"));
+                Is.EqualTo($"JHopkins-Russia(Камчатский край), {new DateTime(2020, 2, 22).ToShortDateString()}: 0--5-0-5"));
         }
     }
 }
