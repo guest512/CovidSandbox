@@ -25,7 +25,7 @@ def get_country_report(country_name: str, parse_dates=True, date_is_index=True) 
     Args:
         country_name(str): The name of the country for which report should be retrieved.
         parse_dates(bool): A flag indicating whether or not dates in DataFrame should be parsed. Default is True.
-        date_is_index(bool): A flaga indicating whether or not date column should be used as index. This parameter is ignored when 'parse_dates' is False. Default is True.
+        date_is_index(bool): A flag indicating whether or not date column should be used as index. This parameter is ignored when 'parse_dates' is False. Default is True.
 
     Returns:
         DataFrame: a country report
@@ -111,7 +111,7 @@ def get_regions_report_by_column(country_name: str, column_name: str, include: _
         region_df = get_region_report(country_name, region)
 
         if(start_date is not None):
-            region_df = region_df[start_date:, column_name]
+            region_df = region_df.loc[start_date:, column_name]
         else:
             region_df = region_df[column_name]
 
