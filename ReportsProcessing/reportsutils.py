@@ -19,6 +19,11 @@ def get_country_regions(country_name: str) -> _List[str]:
     return map(lambda file_name: __os.path.splitext(file_name)[0], __os.listdir(__get_country_regions_folder(country_name)))
 
 
+def get_countries():
+    ''' Returns list of all availables countries to process. '''
+    return __os.listdir(__reports_path)
+
+
 def get_country_report(country_name: str, parse_dates=True, date_is_index=True) -> __pd.DataFrame:
     '''Returns a country report as pandas DataFrame.
 
@@ -55,7 +60,7 @@ def get_region_report(country_name: str, region_name: str, parse_dates=True, dat
         country_name(str): The name of the country for which report should be retrieved.
         region_name(str): The name of the country's region for which report should be retrieved.
         parse_dates(bool): A flag indicating whether or not dates in DataFrame should be parsed. Default is True.
-        date_is_index(bool): A flaga indicating whether or not date column should be used as index. This parameter is ignored when 'parse_dates' is False. Default is True.
+        date_is_index(bool): A flag indicating whether or not date column should be used as index. This parameter is ignored when 'parse_dates' is False. Default is True.
 
     Returns:
         DataFrame: a country's region report
@@ -98,10 +103,12 @@ def draw_key_russian_dates_on_plot(ax: _axes.Axes):
 
 
 def get_regions_report_by_column(country_name: str, column_name: str, include: _List[str] = None, exclude: _List[str] = None, start_date: __pd.datetime = None) -> __pd.DataFrame:
+    ''' TBD '''
+
     regions_df = __pd.DataFrame()
     regions = include
 
-    if(regions is None):
+    if(regions is None or len(regions) == 0):
         regions = get_country_regions(country_name)
 
     for region in regions:
