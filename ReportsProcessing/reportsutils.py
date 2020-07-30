@@ -16,12 +16,12 @@ def __get_country_regions_folder(country_name: str) -> str:
 def get_country_regions(country_name: str) -> _List[str]:
     '''Returns list of regions for the specified country. The result is based on available region reports.'''
 
-    return map(lambda file_name: __os.path.splitext(file_name)[0], __os.listdir(__get_country_regions_folder(country_name)))
+    return list(map(lambda file_name: __os.path.splitext(file_name)[0], __os.listdir(__get_country_regions_folder(country_name))))
 
 
 def get_countries():
     ''' Returns list of all availables countries to process. '''
-    return __os.listdir(__reports_path)
+    return list(__os.listdir(__reports_path))
 
 
 def get_country_report(country_name: str, parse_dates=True, date_is_index=True) -> __pd.DataFrame:
@@ -105,7 +105,8 @@ def draw_key_russian_dates_on_plot(ax: _axes.Axes):
 def get_regions_report_by_column(country_name: str, column_name: str, include: _List[str] = None, exclude: _List[str] = None, start_date: __pd.datetime = None) -> __pd.DataFrame:
     ''' TBD '''
 
-    regions_df = __pd.DataFrame()
+    #result_df = __pd.DataFrame()
+    regions_series = list()
     regions = include
 
     if(regions is None or len(regions) == 0):
@@ -116,12 +117,40 @@ def get_regions_report_by_column(country_name: str, column_name: str, include: _
             continue
 
         region_df = get_region_report(country_name, region)
+        column_series = None
 
         if(start_date is not None):
-            region_df = region_df.loc[start_date:, column_name]
+            column_series = region_df.loc[start_date:, column_name]
         else:
-            region_df = region_df[column_name]
+            column_series = region_df[column_name]
 
-        regions_df[region] = region_df
+        regions_series.append(column_series.rename(region))
+        #result_df[region] = region_df
 
-    return regions_df
+    return __pd.concat(regions_series, axis=1)
+
+
+def get_countries_report_by_column(column_name: str, include: _List[str] = None, exclude: _List[str] = None, start_date: __pd.datetime = None) -> __pd.DataFrame:
+    ''' TBD '''
+
+    countries_series = list()
+    countries = include
+
+    if(countries is None or len(countries) == 0):
+        countries = get_countries()
+
+    for country in countries:
+        if(exclude is not None and country in exclude):
+            continue
+
+        country_df = get_country_report(country)
+        column_series = None
+
+        if(start_date is not None):
+            column_series = country_df.loc[start_date:, column_name]
+        else:
+            column_series = country_df[column_name]
+
+        countries_series.append(column_series.rename(country))
+
+    return __pd.concat(countries_series, axis=1)
