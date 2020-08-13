@@ -1,7 +1,6 @@
 ﻿using CovidSandbox.Data;
 using CovidSandbox.Model.Processors;
 using System;
-using System.Collections.Generic;
 
 namespace CovidSandbox.Model
 {
@@ -20,6 +19,20 @@ namespace CovidSandbox.Model
             FIPS = rowProcessor.GetFips(rowData);
             County = rowProcessor.GetCountyName(rowData);
             Origin = rowProcessor.GetOrigin(rowData);
+        }
+
+        private Entry(Entry original, long confirmed, long active, long recovered, long deaths)
+        {
+            ProvinceState = original.ProvinceState;
+            CountryRegion = original.CountryRegion;
+            LastUpdate = original.LastUpdate;
+            FIPS = original.FIPS;
+            County = original.County;
+            Origin = original.Origin;
+            Confirmed = confirmed;
+            Active = active;
+            Recovered = recovered;
+            Deaths = deaths;
         }
 
         public static Entry Empty { get; }
@@ -75,6 +88,23 @@ namespace CovidSandbox.Model
             hashCode.Add(Recovered);
             hashCode.Add(Origin);
             return hashCode.ToHashCode();
+        }
+
+        public static Entry operator +(Entry left, Entry right)
+        {
+            if (left == Empty)
+                return right;
+
+            if (right == Empty)
+                return left;
+
+            if(left.Origin != right.Origin || left.CountryRegion != right.CountryRegion ||
+               left.County != right.County || left.LastUpdate != right.LastUpdate ||
+               left.FIPS != right.FIPS || left.ProvinceState != right.ProvinceState) 
+                throw new Exception("Can sum only similar entries");
+
+            return new Entry(left, left.Confirmed + right.Confirmed, left.Active + right.Active,
+                left.Recovered + right.Recovered, left.Deaths + right.Deaths);
         }
 
         public override string ToString() => string.IsNullOrEmpty(ProvinceState)

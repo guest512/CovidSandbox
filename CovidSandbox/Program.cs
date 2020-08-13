@@ -139,15 +139,15 @@ namespace CovidSandbox
 
             Folders.InitializeReportsFolders();
 
-            //Console.WriteLine("Initialize reports generator...");
-            //var reportsGen = new ReportsGenerator();
-            //reportsGen.AddEntries(parsedData);
+            Console.WriteLine("Initialize reports generator...");
+            var reportsGen = new ReportsGenerator();
+            reportsGen.AddEntries(parsedData);
 
-            //Console.WriteLine("Create day by day reports...");
-            //CreateDayByDayReports(reportsGen);
+            Console.WriteLine("Create day by day reports...");
+            CreateDayByDayReports(reportsGen);
 
-            //Console.WriteLine("Create country reports...");
-            //CreateCountryReports(reportsGen);
+            Console.WriteLine("Create country reports...");
+            CreateCountryReports(reportsGen);
 
             Console.WriteLine("Write countries and regions structure...");
             using (var statsFile = File.OpenWrite(Path.Combine(Folders.ReportsRoot, "row_stats.txt")))

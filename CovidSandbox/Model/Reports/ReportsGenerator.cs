@@ -23,7 +23,6 @@ namespace CovidSandbox.Model.Reports
             var countriesList = uniqueEntries.Select(x => x.CountryRegion).Distinct().ToArray();
             var dates = uniqueEntries.Select(x => x.LastUpdate.Date).Distinct().OrderBy(_ => _).ToArray();
             var lastReport = new ConcurrentDictionary<string, IntermediateReport>();
-            
 
             Parallel.ForEach(countriesList, (country) =>
             //foreach (var country in countriesList)
@@ -56,27 +55,29 @@ namespace CovidSandbox.Model.Reports
                     {
                         case 0:
                             continue;
-                        case 1 when string.IsNullOrEmpty(dayCountryReports[0].ProvinceState) ||
-                                    dayCountryReports[0].ProvinceState == dayCountryReports[0].CountryRegion ||
-                                    dayCountryReports[0].ProvinceState == Consts.MainCountryRegion:
+                        case 1 when dayCountryReports[0].ProvinceState == Consts.MainCountryRegion:
                             {
                                 report = CreateCountryReport(lastReport, country, dayCountryReports[0], day);
                                 break;
                             }
                         default:
                             {
-                                report = dayCountryReports.All(_ => string.IsNullOrEmpty(_.ProvinceState)) ||
-                                         dayCountryReports.All(_ => _.ProvinceState == country)
-                                    ? CreateCountryReport(lastReport, country, dayCountryReports[0], day)
-                                    : (country == "US"
-                                        ? CreateUsCountryWithRegionsReport(lastReport, country,
-                                            dayCountryReports.Where(_ =>
-                                                !(string.IsNullOrEmpty(_.ProvinceState) || _.ProvinceState == country)),
-                                            day)
-                                        : CreateCountryWithRegionsReport(lastReport, country,
-                                            dayCountryReports.Where(_ =>
-                                                !(string.IsNullOrEmpty(_.ProvinceState) || _.ProvinceState == country)),
-                                            day));
+                                if (dayCountryReports.All(_ => string.IsNullOrEmpty(_.ProvinceState)) ||
+                                    dayCountryReports.All(_ => _.ProvinceState == country))
+                                {
+                                    report = CreateCountryReport(lastReport, country,
+                                        dayCountryReports.Aggregate(Entry.Empty, (sum, elem) => sum + elem), day);
+                                }
+                                else if (country == "US")
+                                    report = CreateUsCountryWithRegionsReport(lastReport, country,
+                                        dayCountryReports.Where(_ =>
+                                            !(string.IsNullOrEmpty(_.ProvinceState) || _.ProvinceState == country)),
+                                        day);
+                                else
+                                    report = CreateCountryWithRegionsReport(lastReport, country,
+                                        dayCountryReports.Where(_ =>
+                                            !(string.IsNullOrEmpty(_.ProvinceState) || _.ProvinceState == country)),
+                                        day);
 
                                 break;
                             }
@@ -161,6 +162,17 @@ namespace CovidSandbox.Model.Reports
                 Console.WriteLine($"!!!POSSIBLE DUPLICATE OR WRONG DATA!!! {provinceReport}");
             }
 
+            if (!todayProvinces.Contains("Recovered"))
+            {
+                var previousMetrics =
+                    lastReport.TryRemove(ProvinceKey("Recovered", country), out var previousReport)
+                        ? previousReport.Total
+                        : Metrics.Empty;
+                provinceReports.Add(new UsProvinceIntermediateReport("Recovered", country, day, Metrics.Empty,
+                    Metrics.Empty - previousMetrics));
+                todayProvinces.Add("Recovered");
+            }
+
             var additionalProvinceReports = lastProvinceReports.Where(_ =>
                 todayProvinces.All(__ => __ != _.Name));
 
@@ -213,6 +225,17 @@ namespace CovidSandbox.Model.Reports
                 !lastReport.TryAdd(ProvinceKey(provinceReport.Name, provinceReport.Country), provinceReport)))
             {
                 Console.WriteLine($"!!!POSSIBLE DUPLICATE OR WRONG DATA!!! {provinceReport}");
+            }
+
+            if (country == "Canada" && !todayProvinces.Contains("Recovered"))
+            {
+                var previousMetrics =
+                    lastReport.TryRemove(ProvinceKey("Recovered", country), out var previousReport)
+                        ? previousReport.Total
+                        : Metrics.Empty;
+                provinceReports.Add(new ProvinceIntermediateReport("Recovered", country, day, Metrics.Empty,
+                    Metrics.Empty - previousMetrics));
+                todayProvinces.Add("Recovered");
             }
 
             var additionalProvinceReports = lastProvinceReports.Where(_ =>
