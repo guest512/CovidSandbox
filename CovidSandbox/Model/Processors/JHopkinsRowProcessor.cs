@@ -3,22 +3,37 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Text.RegularExpressions;
 
 namespace CovidSandbox.Model.Processors
 {
     public sealed class JHopkinsRowProcessor : BaseRowProcessor
     {
         private readonly Dictionary<string, string> _russianRegions;
+        private readonly Dictionary<string, string> _usStates;
+        private readonly Dictionary<string, string> _canadaStates;
+        private readonly Regex _stateCountyRegex = new Regex(@"^([\w\s]+?), (\w\w)$");
 
         public JHopkinsRowProcessor()
         {
-            var lines = File.ReadAllLines("Data\\Misc\\Russian_Regions.csv");
-            _russianRegions = new Dictionary<string, string>(
-                lines.Skip(1).Select(x =>
-                {
-                    var values = x.Split(',');
-                    return new KeyValuePair<string, string>(values[0], values[1]);
-                }));
+            _russianRegions = GetCountryStatesRegions("Russian_Regions.csv");
+            _usStates = GetCountryStatesRegions("Us_States.csv");
+            _canadaStates = GetCountryStatesRegions("Canada_States.csv");
+        }
+
+        private Dictionary<string, string> GetCountryStatesRegions(string filename)
+        {
+            const string filesPath = "Data\\Misc";
+
+            var lines = File.ReadAllLines(Path.Combine(filesPath, filename));
+
+            static KeyValuePair<string, string> Selector(string x)
+            {
+                var values = x.Split(',');
+                return new KeyValuePair<string, string>(values[0], values[1]);
+            }
+
+            return new Dictionary<string, string>(lines.Skip(1).Select(Selector));
         }
 
         public override string GetCountryName(Row row)
@@ -36,8 +51,9 @@ namespace CovidSandbox.Model.Processors
                 "Mainland China" when provinceRowValue == "Macao SAR" => "Macau",
                 "China" when provinceRowValue == "Macao SAR" => "Macau",
 
-                "US" when provinceRowValue == "Diamond Princess" => "Others",
+                _ when provinceRowValue.Contains("Diamond Princess") => "Others",
                 "Diamond Princess" => "Others",
+                "Cruise Ship" => "Others",
 
                 "French Guiana" => "France",
                 "Martinique" => "France",
@@ -79,11 +95,24 @@ namespace CovidSandbox.Model.Processors
                 "Republic of Moldova" => "Moldova",
                 "Republic of Ireland" => "Ireland",
                 "Czech Republic" => "Czechia",
+                "occupied Palestinian territory" => "Palestine",
                 _ => countryRowValue
             };
         }
 
-        public override string GetCountyName(Row row) => row[Field.Admin2];
+        public override string GetCountyName(Row row)
+        {
+            var countyRowValue = row[Field.Admin2];
+            var provinceRowValue = row[Field.ProvinceState];
+            var countryRowValue = row[Field.CountryRegion];
+
+            if (countryRowValue == "US")
+                return GetUsCountyName(provinceRowValue, countyRowValue);
+
+
+
+            return countyRowValue;
+        }
 
         public override uint GetFips(Row row) => (uint)TryGetValue(row[Field.FIPS]);
         
@@ -97,8 +126,19 @@ namespace CovidSandbox.Model.Processors
             return provinceRowValue switch
             {
                 _ when string.IsNullOrEmpty(provinceRowValue) => Consts.MainCountryRegion,
+                _ when countryRowValue == provinceRowValue => Consts.MainCountryRegion,
+                "Unknown" => Consts.MainCountryRegion,
+                "unassigned" => Consts.MainCountryRegion,
+                "Hong Kong" => Consts.MainCountryRegion,
+                "Macau" => Consts.MainCountryRegion,
+
+                _ when provinceRowValue.Contains("Diamond Princess") => "Diamond Princess",
 
                 _ when countryRowValue == "Russia" => _russianRegions[provinceRowValue],
+                _ when countryRowValue == "US" => GetUsProvinceName(provinceRowValue),
+                _ when countryRowValue == "Canada" => GetCanadaProvinceName(provinceRowValue),
+
+
                 _ when countryRowValue == "French Guiana" => "French Guiana",
                 _ when countryRowValue == "Martinique" => "Martinique",
                 _ when countryRowValue == "Mayotte" => "Mayotte",
@@ -116,17 +156,34 @@ namespace CovidSandbox.Model.Processors
                 _ when countryRowValue == "Greenland" => "Greenland",
                 _ when countryRowValue == "Puerto Rico" => "Puerto Rico",
 
-                "" when countryRowValue == "United Kingdom" => Consts.MainCountryRegion,
-                "United Kingdom" when countryRowValue == "United Kingdom" => Consts.MainCountryRegion,
-
-                "" when countryRowValue == "France" => Consts.MainCountryRegion,
-
-                "Unknown" => Consts.MainCountryRegion,
-
-                "Diamond Princess cruise ship" => "Diamond Princess",
-
                 _ => provinceRowValue
             };
+        }
+
+        private string GetUsProvinceName(string provinceRowValue)
+        {
+            var match = _stateCountyRegex.Match(provinceRowValue);
+            return match.Success ? _usStates[match.Groups[2].Value] : provinceRowValue;
+        }
+
+        private string GetCanadaProvinceName(string provinceRowValue)
+        {
+            var match = _stateCountyRegex.Match(provinceRowValue);
+            return match.Success ? _canadaStates[match.Groups[2].Value] : provinceRowValue;
+        }
+
+        private string GetUsCountyName(string provinceRowValue, string countyRowValue)
+        {
+            var match = _stateCountyRegex.Match(provinceRowValue);
+            if (!match.Success) 
+                return countyRowValue;
+
+            var countyFromProvince= match.Groups[1].Value.Trim();
+            if (countyFromProvince.EndsWith(" County"))
+                countyFromProvince = countyFromProvince.Substring(0, countyFromProvince.Length - 7);
+
+            return countyFromProvince;
+
         }
     }
 }
