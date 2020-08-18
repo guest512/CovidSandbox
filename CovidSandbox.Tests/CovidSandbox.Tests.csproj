@@ -1,8 +1,8 @@
 <Project Sdk="Microsoft.NET.Sdk">
+  <Import Project="$(ProjectDir)../build/CovidSandbox.project.props" />
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
-
     <IsPackable>false</IsPackable>
   </PropertyGroup>
 
@@ -16,12 +16,7 @@
     <ProjectReference Include="..\CovidSandbox\CovidSandbox.csproj" />
   </ItemGroup>
 
-  <PropertyGroup>
-    <OutputPath>..\bin\Tests\$(Configuration)</OutputPath>
+<PropertyGroup>
+    <OutputPath>$(BinaryTestsOutDir)</OutputPath>
   </PropertyGroup>
-
-  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
-    <Exec Command="xcopy $(ProjectDir)\..\Data\JHopkins\csse_covid_19_data\csse_covid_19_daily_reports $(OutDir)\Data\JHopkins\ /q /y&#xD;&#xA;xcopy $(ProjectDir)\..\Data\Misc $(OutDir)\Data\Misc\ /q /y&#xD;&#xA;echo F|xcopy $(ProjectDir)\..\Data\Russia_by_Yandex.csv $(OutDir)\Data\Yandex\Russia.csv /q /y" />
-  </Target>
-
 </Project>

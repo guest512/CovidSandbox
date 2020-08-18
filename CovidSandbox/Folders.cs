@@ -8,10 +8,16 @@ namespace CovidSandbox
 {
     public static class Folders
     {
-        public const string CountriesReportsRoot = "reports\\countries";
-        public const string DayByDayReportsRoot = "reports\\dayByDay";
-        public const string ReportsRoot = "reports";
+        public static string ReportsRoot {get; private set;} = string.Empty;
+        public static string CountriesReportsRoot {get; private set;} = string.Empty;
+        public static string DayByDayReportsRoot {get; private set;} = string.Empty;
         private const string DataRoot = "Data";
+
+        static Folders()
+        {
+            InitializeReportsFolders("reports");
+        }
+
 
         public static string GetCountryRegionsFolder(string countryName) =>
             Path.Combine(CountriesReportsRoot, countryName, "regions");
@@ -34,8 +40,18 @@ namespace CovidSandbox
             throw new ArgumentOutOfRangeException(nameof(T));
         }
 
-        public static void InitializeReportsFolders()
+        public static void InitializeReportsFolders(ArgsParser argsParser)
         {
+            if(!string.IsNullOrWhiteSpace(argsParser.ReportsDir))
+                InitializeReportsFolders(argsParser.ReportsDir);
+        }
+
+        private static void InitializeReportsFolders(string reportsRoot)
+        {
+            ReportsRoot= reportsRoot;
+            CountriesReportsRoot = Path.Combine(ReportsRoot, "countries");
+            DayByDayReportsRoot = Path.Combine(ReportsRoot, "dayByDay");
+
             if (!Directory.Exists(ReportsRoot))
                 Directory.CreateDirectory(ReportsRoot);
             else if (Directory.EnumerateFileSystemEntries(ReportsRoot).Any())

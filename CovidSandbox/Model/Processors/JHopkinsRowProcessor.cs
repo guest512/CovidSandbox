@@ -7,25 +7,31 @@ using System.Text.RegularExpressions;
 
 namespace CovidSandbox.Model.Processors
 {
-    public sealed class JHopkinsRowProcessor : BaseRowProcessor
+    public class JHopkinsRowProcessor : BaseRowProcessor
     {
         private readonly Dictionary<string, string> _russianRegions;
         private readonly Dictionary<string, string> _usStates;
         private readonly Dictionary<string, string> _canadaStates;
         private readonly Regex _stateCountyRegex = new Regex(@"^([\w\s]+?), (\w\w)$");
 
-        public JHopkinsRowProcessor()
+        private readonly string _filesPath; 
+
+        public JHopkinsRowProcessor():this("Data/Misc")
         {
+        }
+
+        protected JHopkinsRowProcessor(string filesPath)
+        {
+            _filesPath = filesPath;
             _russianRegions = GetCountryStatesRegions("Russian_Regions.csv");
             _usStates = GetCountryStatesRegions("Us_States.csv");
             _canadaStates = GetCountryStatesRegions("Canada_States.csv");
+
         }
 
         private Dictionary<string, string> GetCountryStatesRegions(string filename)
         {
-            const string filesPath = "Data\\Misc";
-
-            var lines = File.ReadAllLines(Path.Combine(filesPath, filename));
+            var lines = File.ReadAllLines(Path.Combine(_filesPath, filename));
 
             static KeyValuePair<string, string> Selector(string x)
             {

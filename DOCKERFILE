@@ -1,0 +1,22 @@
+FROM alpine
+
+ENV dotnet_install_dir=/usr/share/dotnet
+
+WORKDIR CovidSandbox
+
+RUN apk add --no-cache bash wget libstdc++ libintl icu
+
+RUN wget https://dot.net/v1/dotnet-install.sh && chmod +x ./dotnet-install.sh 
+RUN ./dotnet-install.sh -c Current -InstallDir $dotnet_install_dir
+ENV DOTNET_ROOT=$dotnet_install_dir
+ENV PATH=$PATH:$dotnet_install_dir
+
+COPY CovidSandbox CovidSandbox
+COPY CovidSandbox.Tests CovidSandbox.Tests
+COPY Data Data
+COPY build build
+COPY CovidSandbox.sln CovidSandbox.sln
+
+RUN dotnet msbuild build/build.proj -v:n /p:Configuration=Release
+RUN dotnet test -v:n -c:Release
+#RUN ls

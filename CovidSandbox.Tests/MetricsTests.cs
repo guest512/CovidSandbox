@@ -33,7 +33,7 @@ namespace CovidSandbox.Tests
         {
             var entry = new Entry(
                 new Row(new[] {new CsvField(Field.Active, "5"), new CsvField(Field.Deaths, "8"),},
-                    RowVersion.JHopkinsV1), new JHopkinsRowProcessor());
+                    RowVersion.JHopkinsV1), new JHopkinsTestRowProcessor());
             var metrics = Metrics.FromEntry(entry);
 
             Assert.That(metrics, Is.EqualTo(new Metrics(0, 5, 0, 8)));

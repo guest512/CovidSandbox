@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <Target Name="CopyJHopkinsFiles">
+        <PropertyGroup>
+            <JHFilesDir>$(DataRootFolder)/JHopkins/csse_covid_19_data/csse_covid_19_daily_reports</JHFilesDir>
+        </PropertyGroup>
+        <ItemGroup>
+            <JHFiles Include="$(JHFilesDir)/*.*" Exclude=".gitignore" />
+        </ItemGroup>        
+        <Copy SourceFiles="@(JHFiles)" DestinationFolder="$(BinaryDataOutDir)/JHopkins" />
+    </Target>
+
+    <Target Name="CopyYandexFiles">
+        <PropertyGroup>
+            <FileToCopy>$(DataRootFolder)/Russia_by_Yandex.csv</FileToCopy>
+        </PropertyGroup>
+        <Copy SourceFiles="$(FileToCopy)" DestinationFolder="$(BinaryDataOutDir)/Yandex" />
+    </Target>
+
+    <Target Name="CopyMiscFiles">
+        <PropertyGroup>
+            <MiscFilesDir>$(DataRootFolder)/Misc</MiscFilesDir>
+        </PropertyGroup>
+        <ItemGroup>
+            <MiscFiles Include="$(MiscFilesDir)/*.*" />
+        </ItemGroup>        
+        <Copy SourceFiles="@(MiscFiles)" DestinationFolder="$(BinaryDataOutDir)/Misc" />
+    </Target>
+</Project>

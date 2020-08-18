@@ -99,6 +99,7 @@ namespace CovidSandbox
 
         private static void Main()
         {
+            var argsParser = new ArgsParser(new []{""});
             var parsedData = new ConcurrentBag<Entry>();
             var csvReader = new CsvReader();
             var entryFactory = new EntryFactory();
@@ -137,7 +138,7 @@ namespace CovidSandbox
 
             ReadFile(Path.Combine(Folders.GetDataFolder<YandexRussiaDataProvider>(), "Russia.csv"), false);
 
-            Folders.InitializeReportsFolders();
+            Folders.InitializeReportsFolders(argsParser);
 
             Console.WriteLine("Initialize reports generator...");
             var reportsGen = new ReportsGenerator();

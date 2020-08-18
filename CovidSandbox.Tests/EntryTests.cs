@@ -43,7 +43,7 @@ namespace CovidSandbox.Tests
                     new CsvField(Field.CountryRegion, countryFromReport),
                 }, RowVersion.JHopkinsV1);
 
-                Assert.That(new Entry(row, new JHopkinsRowProcessor()).CountryRegion, Is.EqualTo(actualCountryName));
+                Assert.That(new Entry(row, new JHopkinsTestRowProcessor()).CountryRegion, Is.EqualTo(actualCountryName));
             }
         }
 
@@ -55,7 +55,7 @@ namespace CovidSandbox.Tests
                 new CsvField(Field.CountryRegion, "Russia"),
                 new CsvField(Field.Deaths, "5"),
                 new CsvField(Field.LastUpdate, "2/22/2020 2:20"),
-            }, RowVersion.JHopkinsV1), new JHopkinsRowProcessor());
+            }, RowVersion.JHopkinsV1), new JHopkinsTestRowProcessor());
 
             var hashCode = new HashCode();
             hashCode.Add(""); //County
@@ -80,7 +80,7 @@ namespace CovidSandbox.Tests
                 new CsvField(Field.CountryRegion, "Russia"),
                 new CsvField(Field.Deaths, "5"),
                 new CsvField(Field.LastUpdate, "2/22/2020 2:20"),
-            }, RowVersion.JHopkinsV1), new JHopkinsRowProcessor());
+            }, RowVersion.JHopkinsV1), new JHopkinsTestRowProcessor());
 
             var e2 = new Entry(new Row(new[]
             {
@@ -88,14 +88,14 @@ namespace CovidSandbox.Tests
                 new CsvField(Field.ProvinceState, "Kamchatka Krai"),
                 new CsvField(Field.Deaths, "5"),
                 new CsvField(Field.LastUpdate, "2/22/2020 2:20"),
-            }, RowVersion.JHopkinsV1), new JHopkinsRowProcessor());
+            }, RowVersion.JHopkinsV1), new JHopkinsTestRowProcessor());
 
             var e3 = new Entry(new Row(new[]
             {
                 new CsvField(Field.CountryRegion, "Russia"),
                 new CsvField(Field.Deaths, "5"),
                 new CsvField(Field.LastUpdate, "2/22/2020 2:20"),
-            }, RowVersion.JHopkinsV1), new JHopkinsRowProcessor());
+            }, RowVersion.JHopkinsV1), new JHopkinsTestRowProcessor());
 
             Assert.That(e2 != e1, Is.True);
             Assert.That(e2 == e1, Is.False);
@@ -114,7 +114,7 @@ namespace CovidSandbox.Tests
                 new CsvField(Field.CountryRegion, "Russia"),
                 new CsvField(Field.Deaths, "5"),
                 new CsvField(Field.LastUpdate, "2/22/2020 2:20"),
-            }, RowVersion.JHopkinsV1), new JHopkinsRowProcessor());
+            }, RowVersion.JHopkinsV1), new JHopkinsTestRowProcessor());
             Assert.That(entry.ToString(),
                 Is.EqualTo($"JHopkins-Russia(Main territory), {new DateTime(2020, 2, 22).ToShortDateString()}: 0--5-0-5"));
 
@@ -124,7 +124,7 @@ namespace CovidSandbox.Tests
                 new CsvField(Field.ProvinceState, "Kamchatka Krai"),
                 new CsvField(Field.Deaths, "5"),
                 new CsvField(Field.LastUpdate, "2/22/2020 2:20"),
-            }, RowVersion.JHopkinsV1), new JHopkinsRowProcessor());
+            }, RowVersion.JHopkinsV1), new JHopkinsTestRowProcessor());
             Assert.That(entry.ToString(),
                 Is.EqualTo($"JHopkins-Russia(Камчатский край), {new DateTime(2020, 2, 22).ToShortDateString()}: 0--5-0-5"));
         }
