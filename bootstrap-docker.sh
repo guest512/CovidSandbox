@@ -1,6 +1,6 @@
 #!/bin/bash
 
-today = $(date +"%y.%m.%d")
+today=$(date +"%y.%m.%d")
 
 echo 'Build docker image'
 docker build -t covid_sandbox:$today -t covid_sandbox:latest .
