@@ -1,9 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
     <Import Project="CovidSandbox.props" />
     <Import Project="CovidSandbox.targets" />
 
     <Target Name="PrepareData" DependsOnTargets="CopyJHopkinsFiles;CopyMiscFiles;CopyYandexFiles">
-        <Message Text="All data files are copied" />
+        <Message Text="All data files are copied" Importance="High"/>
+    </Target>
+
+    <Target Name="Build">
+        <MSBuild Projects="$(ProjectDir)../CovidSandbox.sln" Targets="Restore;Clean;Build" Properties="Configuration=$(Configuration)" />
     </Target>
 </Project>

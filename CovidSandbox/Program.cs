@@ -97,9 +97,9 @@ namespace CovidSandbox
             });
         }
 
-        private static void Main()
+        private static void Main(string[] args)
         {
-            var argsParser = new ArgsParser(new []{""});
+            var argsParser = new ArgsParser(args);
             var parsedData = new ConcurrentBag<Entry>();
             var csvReader = new CsvReader();
             var entryFactory = new EntryFactory();
