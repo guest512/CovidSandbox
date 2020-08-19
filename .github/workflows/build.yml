@@ -33,19 +33,15 @@ jobs:
       with:
         dotnet-version: 3.1.x
 
-    # Restore the application to populate the obj folder with RuntimeIdentifiers
-    - name: Restore packages
-      run: dotnet restore -v n
-
       # Build app and tests
     - name: Build app
-      run: dotnet build --no-restore -c $env:Configuration -v n
+      run: dotnet msbuild build/build.proj /t:"Build;PrepareData" /p:Configuration=$env:Configuration -v:n
       env:
         Configuration: ${{ matrix.configuration }}
 
       # Run tests
     - name: Run tests
-      run: dotnet test --no-build -c $env:Configuration -v n
+      run: dotnet test --no-build -c $env:Configuration -v:n
       env:
         Configuration: ${{ matrix.configuration }}
 
