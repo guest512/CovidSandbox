@@ -15,7 +15,7 @@ logstring 'Looking for existing containers from previous runs'
 existing_containers_count=$(docker ps -af "name=covid_sandbox_afd876" --format "{{.ID}} {{.Names}}" | grep -o 'covid_sandbox_afd876' | wc -l)
 
 if [[ "$existing_containers_count" -gt 0 ]]; then
-    echo 'Stopping and removing container'
+    logstring 'Stopping and removing container'
     docker stop covid_sandbox_afd876
     docker rm covid_sandbox_afd876
 fi
