@@ -24,10 +24,10 @@ function RunDocker {
     LogString("Build docker image")
     docker build -t covid_sandbox:$today -t covid_sandbox:latest .
     StopAndRemovePreviousContainer
-    LogString("Run new image")
+    LogString("Run new image ...")
     docker run -d -p 8888:8888 --name covid_sandbox_afd876 covid_sandbox
-    LogString("Image started")
     Start-Sleep 1
+    LogString("Image started")
     Write-Host (docker logs covid_sandbox_afd876)
 }
 
