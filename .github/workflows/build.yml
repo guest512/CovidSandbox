@@ -9,7 +9,7 @@ on:
 jobs:
 
   build:
-    runs-on: ${{ matrix.operating-systems }}
+    runs-on: ${{ matrix.operating-system }}
     strategy:
       matrix:
         configuration: [Debug, Release]
