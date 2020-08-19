@@ -2,8 +2,7 @@ import os as _os
 import pandas as _pd
 from typing import List as _List
 
-__reports_path = _os.path.abspath(
-    "..\\bin\\Debug\\netcoreapp3.1\\reports\\countries")
+__reports_path = _os.path.abspath("reports/countries")
 
 
 def __get_country_regions_folder(country_name: str) -> str:

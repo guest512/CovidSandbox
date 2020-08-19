@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="16.0" DefaultTargets="Run" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
     <Import Project="CovidSandbox.props" />
     <Import Project="CovidSandbox.targets" />
 
-    <Target Name="Run">
-        <CallTarget Targets="CopyJHopkinsFiles;CopyMiscFiles;CopyYandexFiles" />
+    <Target Name="PrepareData" DependsOnTargets="CopyJHopkinsFiles;CopyMiscFiles;CopyYandexFiles">
+        <Message Text="All data files are copied" />
     </Target>
 </Project>

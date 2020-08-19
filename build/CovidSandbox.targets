@@ -14,7 +14,7 @@
         <PropertyGroup>
             <FileToCopy>$(DataRootFolder)/Russia_by_Yandex.csv</FileToCopy>
         </PropertyGroup>
-        <Copy SourceFiles="$(FileToCopy)" DestinationFolder="$(BinaryDataOutDir)/Yandex" />
+        <Copy SourceFiles="$(FileToCopy)" DestinationFiles="$(BinaryDataOutDir)/Yandex/Russia.csv" />
     </Target>
 
     <Target Name="CopyMiscFiles">

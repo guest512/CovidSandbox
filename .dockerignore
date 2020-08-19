@@ -1,8 +1,13 @@
 *
+!build
+
 !CovidSandbox
 !CovidSandbox.Tests
 !CovidSandbox.sln
+
 !Data/JHopkins/csse_covid_19_data/csse_covid_19_daily_reports
 !Data/Misc
 !Data/Russia_by_Yandex.csv
-!build
+
+!ReportsProcessing
+ReportsProcessing/Maps
