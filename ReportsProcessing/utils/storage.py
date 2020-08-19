@@ -80,7 +80,7 @@ def get_region_report(country_name: str, region_name: str, parse_dates=True, dat
     return region_df
 
 
-def get_regions_report_by_column(country_name: str, column_name: str, include: _List[str] = None, exclude: _List[str] = None, start_date: _pd.datetime = None) -> _pd.DataFrame:
+def get_regions_report_by_column(country_name: str, column_name: str, include: _List[str] = None, exclude: _List[str] = None, start_date: _pd.Timestamp = None) -> _pd.DataFrame:
     ''' TBD '''
 
     #result_df = _pd.DataFrame()
@@ -108,7 +108,7 @@ def get_regions_report_by_column(country_name: str, column_name: str, include: _
     return _pd.concat(regions_series, axis=1)
 
 
-def get_countries_report_by_column(column_name: str, include: _List[str] = None, exclude: _List[str] = None, start_date: _pd.datetime = None) -> _pd.DataFrame:
+def get_countries_report_by_column(column_name: str, include: _List[str] = None, exclude: _List[str] = None, start_date: _pd.Timestamp = None) -> _pd.DataFrame:
     ''' TBD '''
 
     countries_series = list()
