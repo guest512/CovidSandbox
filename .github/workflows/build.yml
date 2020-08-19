@@ -40,6 +40,6 @@ jobs:
 
       # Run tests
     - name: Run tests
-      run: dotnet test --no-build -c $Build_Configuration -v:n
+      run: dotnet test --no-build -c ${{ env.Build_Configuration }} -v:n
       env:
         Build_Configuration: ${{ matrix.configuration }}
