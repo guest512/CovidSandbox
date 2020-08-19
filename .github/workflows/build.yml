@@ -34,17 +34,12 @@ jobs:
 
       # Build app and tests
     - name: Build app
-      run: dotnet msbuild build/build.proj /t:"Build;PrepareData" /p:Configuration=${{ env:Configuration }} -v:n
+      run: dotnet msbuild build/build.proj /t:"Build;PrepareData" /p:Configuration=$Build_Configuration -v:n
       env:
-        Configuration: ${{ matrix.configuration }}
+        Build_Configuration: ${{ matrix.configuration }}
 
       # Run tests
     - name: Run tests
-      run: dotnet test --no-build -c $env:Configuration -v:n
+      run: dotnet test --no-build -c $Build_Configuration -v:n
       env:
-        Configuration: ${{ matrix.configuration }}
-
-    # - uses: actions/upload-artifact@v2
-    #   with:
-    #     name: CovidSandbox-${{ matrix.configuration }}
-    #     path: bin/${{ matrix.configuration }}/netcoreapp3.1
+        Build_Configuration: ${{ matrix.configuration }}
