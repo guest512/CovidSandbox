@@ -34,7 +34,7 @@ jobs:
 
       # Build app and tests
     - name: Build app
-      run: dotnet msbuild build/build.proj /t:"Build;PrepareData" /p:Configuration=${{ Build_Configuration }} -v:n
+      run: dotnet msbuild build/build.proj /t:"Build;PrepareData" /p:Configuration=${{ env:Build_Configuration }} -v:n
       env:
         Build_Configuration: ${{ matrix.configuration }}
 
