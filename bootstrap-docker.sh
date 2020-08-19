@@ -1,7 +1,9 @@
 #!/bin/bash
 
 function logstring {
-    echo -e "\e94m$1\e0m"
+    color='\033[1;34m'
+    no_color='\033[0m' # No Color
+    echo -e "${color}${1}${no_color}"
 }
 
 today=$(date +"%y.%m.%d")
