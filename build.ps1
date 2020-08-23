@@ -6,14 +6,14 @@ function LogString ($stringToWrite) {
     Write-Host $stringToWrite -ForegroundColor DarkBlue
 }
 
-function StopAndRemovePreviousContainer {
+function StopAndRemovePreviousContainer ($container_name)  {
     LogString("Looking for existing containers from previous runs")
-    $containers = docker ps -af "name=covid_sandbox_afd876" --format "{{.ID}} {{.Names}}" | ConvertFrom-String -PropertyNames ID, Name
+    $containers = docker ps -af "name=$container_name" --format "{{.ID}} {{.Names}}" | ConvertFrom-String -PropertyNames ID, Name
 
-    if ($containers.Name -and $containers.Name.Contains("covid_sandbox_afd876")) {
+    if ($containers.Name -and $containers.Name.Contains($container_name)) {
         LogString("Stopping and removing container")
-        docker stop covid_sandbox_afd876
-        docker rm covid_sandbox_afd876
+        docker stop $container_name
+        docker rm $container_name
     }
 
 }
@@ -21,14 +21,30 @@ function StopAndRemovePreviousContainer {
 function RunDocker {
     $today = Get-Date -Format "yy.MM.dd"
 
-    LogString("Build docker image")
-    docker build -t covid_sandbox:$today -t covid_sandbox:latest .
-    StopAndRemovePreviousContainer
-    LogString("Run new image ...")
-    docker run -d -p 8888:8888 --name covid_sandbox_afd876 covid_sandbox
+    LogString("Build docker images...")
+
+    LogString("Data preparation image...")
+    docker build --target data_preparation -t covid_sandbox_prepare:$today -t covid_sandbox_prepare:latest .
+    LogString("Reports generator image...")
+    docker build --target reports_generator -t covid_sandbox_generator:$today -t covid_sandbox_generator:latest .
+    LogString("Reports processing image...")
+    docker build --target reports_processor -t covid_sandbox_processing:$today -t covid_sandbox_processing:latest .
+
+    LogString("Prepare data ...")
+    StopAndRemovePreviousContainer("covid_sandbox_prepare_afd876")
+    docker run -v ${pwd}/Data:/work/Data -v ${pwd}/Data/temp:/work/bin/Release/Data --name covid_sandbox_prepare_afd876 covid_sandbox_prepare
+
+    LogString("Generate reports...")
+    StopAndRemovePreviousContainer("covid_sandbox_generator_afd876")
+    docker run -v ${pwd}/Data/temp:/work/Data -v ${pwd}/ReportsProcessing/reports:/work/reports --name covid_sandbox_generator_afd876 covid_sandbox_generator
+
+    LogString("Run processing reports image ...")
+    StopAndRemovePreviousContainer("covid_sandbox_processing_afd876")
+    docker run -d -p 8888:8888 -v ${pwd}/ReportsProcessing:/work --name covid_sandbox_processing_afd876 covid_sandbox_processing
     Start-Sleep 1
     LogString("Image started")
-    Write-Host (docker logs covid_sandbox_afd876)
+    
+    Write-Host (docker logs covid_sandbox_processing_afd876)
 }
 
 function RunLocal {
