@@ -18,11 +18,13 @@ def draw_key_russian_dates(ax: _axes.Axes):
                _dt.strptime('01-07-2020', _dateFormat), label='Конституция', alpha=0.2, color='Green')
 
 
-def setup_axes_for_russian_regions_stat(ax: _axes.Axes, title: str):
+def setup_axes_for_russian_regions_stat(ax: _axes.Axes, title: str = None):
     ax.xaxis_date()
     draw_key_russian_dates(ax)
 
     ax.set_ylim(bottom=0)
     ax.legend(loc='upper left')
     ax.grid(axis='y', color='black', linestyle='dashed', alpha=0.4)
-    ax.set_title(title)
+
+    if title:
+        ax.set_title(title)

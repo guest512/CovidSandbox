@@ -21,6 +21,17 @@ def get_countries():
     ''' Returns list of all availables countries to process. '''
     return list(_os.listdir(__reports_path))
 
+def get_dates():
+    reports_path = _os.path.abspath("reports/dayByDay")
+    files = _os.listdir(reports_path)
+    start_date = _pd.Timestamp(files[0][:-4]).normalize()
+    finish_date = _pd.Timestamp(files[-1][:-4]).normalize()
+
+    if (len(_pd.read_csv(_os.path.join(reports_path, files[-1]))) == 1):
+        finish_date = finish_date - _pd.Timedelta('1 days')
+
+    return (start_date, finish_date)
+
 
 def get_country_report(country_name: str, parse_dates=True, date_is_index=True) -> _pd.DataFrame:
     '''Returns a country report as pandas DataFrame.
