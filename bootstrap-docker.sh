@@ -30,12 +30,10 @@ logstring 'Reports processing image...'
 docker build --target reports_processor -t covid_sandbox_processing:$today -t covid_sandbox_processing:latest .
 
 logstring 'Prepare data ...'
-stop_and_remove_previous_container 'covid_sandbox_prepare_afd876'
-docker run -v ${pwd}/Data:/work/Data -v ${pwd}/Data/temp:/work/bin/Release/Data --name covid_sandbox_prepare_afd876 covid_sandbox_prepare
+docker run -v ${pwd}/Data:/work/Data -v ${pwd}/Data/temp:/work/bin/Release/Data --name covid_sandbox_prepare_afd876 --rm covid_sandbox_prepare
 
 logstring 'Generate reports...'
-stop_and_remove_previous_container 'covid_sandbox_generator_afd876'
-docker run -v ${pwd}/Data/temp:/work/Data -v ${pwd}/ReportsProcessing/reports:/work/reports --name covid_sandbox_generator_afd876 covid_sandbox_generator
+docker run -v ${pwd}/Data/temp:/work/Data -v ${pwd}/ReportsProcessing/reports:/work/reports --name covid_sandbox_generator_afd876 --rm covid_sandbox_generator
 
 logstring 'Run processing reports image ...'
 stop_and_remove_previous_container 'covid_sandbox_processing_afd876'

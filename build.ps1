@@ -34,12 +34,10 @@ function Build-Docker {
 
 function Start-Docker {
     Log-String("Prepare data ...")
-    Stop-And-Remove-Previous-Container("covid_sandbox_prepare_afd876")
-    docker run -v ${pwd}/Data:/work/Data -v ${pwd}/Data/temp:/work/bin/Release/Data --name covid_sandbox_prepare_afd876 covid_sandbox_prepare
+    docker run -v ${pwd}/Data:/work/Data -v ${pwd}/Data/temp:/work/bin/Release/Data --name covid_sandbox_prepare_afd876 --rm covid_sandbox_prepare
 
     Log-String("Generate reports...")
-    Stop-And-Remove-Previous-Container("covid_sandbox_generator_afd876")
-    docker run -v ${pwd}/Data/temp:/work/Data -v ${pwd}/ReportsProcessing/reports:/work/reports --name covid_sandbox_generator_afd876 covid_sandbox_generator
+    docker run -v ${pwd}/Data/temp:/work/Data -v ${pwd}/ReportsProcessing/reports:/work/reports --name covid_sandbox_generator_afd876 --rm covid_sandbox_generator
 
     Log-String("Run processing reports image ...")
     Stop-And-Remove-Previous-Container("covid_sandbox_processing_afd876")
