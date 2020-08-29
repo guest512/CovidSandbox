@@ -18,5 +18,5 @@ docker build --target reports_generator -t covid_sandbox_generator:$today -t cov
 logstring 'Reports processing image...'
 docker build --target reports_processor -t covid_sandbox_processing:$today -t covid_sandbox_processing:latest .
 
-
+chmod +x ./update-reports.sh
 ./update-reports.sh
