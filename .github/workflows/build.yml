@@ -35,3 +35,27 @@ jobs:
     - name: Run local build script ubuntu
       if: contains(runner.os, 'Linux')
       run: ./bootstrap-local.sh
+      
+  
+  docker_build:
+    name: Docker build
+    runs-on: ${{ matrix.operating-system }}
+    strategy:
+      matrix:
+        operating-system: [ubuntu-latest, windows-latest] # For a list of available runner types, refer to 
+                                                          # https://help.github.com/en/actions/reference/workflow-syntax-for-github-actions#jobsjob_idruns-on
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+      with:
+        submodules: true
+
+    # Build app and tests
+    - name: Run local build script Windows
+      if: contains(runner.os, 'Windows')
+      run: .\bootstrap-docker.cmd
+
+    - name: Run local build script ubuntu
+      if: contains(runner.os, 'Linux')
+      run: ./bootstrap-docker.sh
