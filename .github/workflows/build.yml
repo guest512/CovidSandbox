@@ -7,39 +7,36 @@ on:
     branches: [ master ]
 
 jobs:
+  local_build:
+    name: Local build
+    build:
+      runs-on: ${{ matrix.operating-system }}
+      strategy:
+        matrix:
 
-  build:
-    runs-on: ${{ matrix.operating-system }}
-    strategy:
-      matrix:
-        configuration: [Debug, Release]
-        operating-system: [ubuntu-latest, windows-latest] # For a list of available runner types, refer to 
-                                                          # https://help.github.com/en/actions/reference/workflow-syntax-for-github-actions#jobsjob_idruns-on
+          operating-system: [ubuntu-latest, windows-latest] # For a list of available runner types, refer to 
+                                                            # https://help.github.com/en/actions/reference/workflow-syntax-for-github-actions#jobsjob_idruns-on
 
-    env:
-      Solution_Name: CovidSandbox.sln
-      
+      steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          submodules: true
 
-    steps:
-    - name: Checkout
-      uses: actions/checkout@v2
-      with:
-        submodules: true
-
-    # Install the .NET Core workload
-    - name: Install .NET Core
-      uses: actions/setup-dotnet@v1
-      with:
-        dotnet-version: 3.1.x
+      # Install the .NET Core workload
+      - name: Install .NET Core
+        uses: actions/setup-dotnet@v1
+        with:
+          dotnet-version: 3.1.x
 
       # Build app and tests
-    - name: Build app
-      run: dotnet msbuild build/build.proj /t:"Build;PrepareData" /p:Configuration=${{ env.Build_Configuration }} -v:n
-      env:
-        Build_Configuration: ${{ matrix.configuration }}
+      - name: Run local build script Windows
+        if: contains(runner.os, "windows")
+        run: .\bootstrap-local.cmd
 
-      # Run tests
-    - name: Run tests
-      run: dotnet test --no-build -c ${{ env.Build_Configuration }} -v:n
-      env:
-        Build_Configuration: ${{ matrix.configuration }}
+      - name: Run local build script ubuntu
+        if: !contains(runner.os, "windows")
+        run: ./bootstrap-local.sh
+
+  docker_build:
+
