@@ -19,8 +19,8 @@ jobs:
     steps:
     - name: Checkout
       uses: actions/checkout@v2
-        with:
-          submodules: true
+      with:
+        submodules: true
 
     # Install the .NET Core workload
     - name: Install .NET Core
