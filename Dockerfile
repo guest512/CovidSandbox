@@ -70,8 +70,7 @@ COPY CovidSandbox.Tests CovidSandbox.Tests/
 COPY CovidSandbox.sln ./
 COPY Data/Misc bin/Release/Data/Misc/
 
-RUN dotnet test -c:Release
-
+RUN dotnet test -c:Release && dotnet publish --self-contained true -c:Release -p:PublishTrimmed=true -r alpine.3.11-x64 CovidSandbox/ -v:n
 
 
 
@@ -81,9 +80,6 @@ FROM base_builder as reports_generator
 VOLUME [ "/work/Data" ]
 VOLUME [ "/work/reports" ]
 
-RUN ./dotnet-install.sh -c Current -InstallDir $dotnet_install_dir -Runtime dotnet
+COPY --from=builder work/bin/Release/alpine.3.11-x64/publish .
 
-COPY --from=builder work/bin/Release .
-RUN rm -rf ./Tests
-
-CMD ["dotnet", "CovidSandbox.dll"]
+CMD ["./CovidSandbox"]
