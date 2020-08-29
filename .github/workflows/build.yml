@@ -47,11 +47,5 @@ jobs:
       with:
         submodules: true
 
-    # Build app and tests
-    - name: Run local build script Windows
-      if: contains(runner.os, 'Windows')
-      run: .\bootstrap-docker.cmd
-
-    - name: Run local build script ubuntu
-      if: contains(runner.os, 'Linux')
+    - name: Run docker build scripts
       run: ./bootstrap-docker.sh
