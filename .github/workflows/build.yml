@@ -35,8 +35,5 @@ jobs:
         run: .\bootstrap-local.cmd
 
       - name: Run local build script ubuntu
-        if: !contains(runner.os, "windows")
+        if: contains(runner.os, "ubuntu")
         run: ./bootstrap-local.sh
-
-  docker_build:
-
