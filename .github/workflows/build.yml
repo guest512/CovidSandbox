@@ -29,9 +29,9 @@ jobs:
 
     # Build app and tests
     - name: Run local build script Windows
-      if: contains(runner.os, 'windows')
+      if: contains(runner.os, 'Windows')
       run: .\bootstrap-local.cmd
 
     - name: Run local build script ubuntu
-      if: contains(runner.os, 'ubuntu')
+      if: contains(runner.os, 'Linux')
       run: ./bootstrap-local.sh
