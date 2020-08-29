@@ -67,7 +67,11 @@ if ($Docker) {
     if(!$RunOnly) {
         Build-Docker
     }
+    Log-String("Remove previous reports...")
+    Remove-Item .\ReportsProcessing\reports -Recurse -Force
     Start-Docker
+    Log-String("Clean temp data...")
+    Remove-Item .\Data\temp -Recurse -Force
 }
 else {
     Build-Local
