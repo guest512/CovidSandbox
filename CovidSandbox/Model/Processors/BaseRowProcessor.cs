@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Globalization;
 using CovidSandbox.Data;
 
 namespace CovidSandbox.Model.Processors
@@ -29,7 +30,21 @@ namespace CovidSandbox.Model.Processors
 
         public virtual DateTime GetLastUpdate(Row row) => Data.Utils.ParseDate(row[Field.LastUpdate]);
 
-        protected static long TryGetValue(string stringValue, long defaultValue = 0) =>
-            long.TryParse(stringValue, out var intValue) ? intValue : defaultValue;
+        protected static long TryGetValue(string stringValue, long defaultValue = 0)
+        {
+            var value = long.TryParse(stringValue, out var intValue) ? intValue : defaultValue;
+
+            if(stringValue.Contains('.'))
+            {
+                var floatValue = float.Parse(stringValue, CultureInfo.InvariantCulture);
+                if(floatValue % 1 < float.Epsilon)
+                {
+                    value = (long)floatValue;
+                    Console.WriteLine($"!!!POSSIBLE WRONG DATA TYPE!!! Expected 'long' but get 'float' for '{stringValue}'. Parsed as '{value}'");
+                }
+            }
+
+            return value;
+        }
     }
 }
