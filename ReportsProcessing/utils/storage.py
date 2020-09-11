@@ -1,6 +1,6 @@
 import os as _os
 import pandas as _pd
-from typing import List as _List
+from typing import List as _List, Tuple as _Tuple
 
 __reports_path = _os.path.abspath("reports/countries")
 
@@ -17,20 +17,9 @@ def get_country_regions(country_name: str) -> _List[str]:
     return list(map(lambda file_name: _os.path.splitext(file_name)[0], _os.listdir(__get_country_regions_folder(country_name))))
 
 
-def get_countries():
+def get_countries() -> _List[str]:
     ''' Returns list of all availables countries to process. '''
     return list(_os.listdir(__reports_path))
-
-def get_dates():
-    reports_path = _os.path.abspath("reports/dayByDay")
-    files = _os.listdir(reports_path)
-    start_date = _pd.Timestamp(files[0][:-4]).normalize()
-    finish_date = _pd.Timestamp(files[-1][:-4]).normalize()
-
-    if (len(_pd.read_csv(_os.path.join(reports_path, files[-1]))) == 1):
-        finish_date = finish_date - _pd.Timedelta('1 days')
-
-    return (start_date, finish_date)
 
 
 def get_country_report(country_name: str, parse_dates=True, date_is_index=True) -> _pd.DataFrame:
@@ -116,7 +105,7 @@ def get_regions_report_by_column(country_name: str, column_name: str, include: _
         regions_series.append(column_series.rename(region))
         #result_df[region] = region_df
 
-    return _pd.concat(regions_series, axis=1)
+    return _pd.concat(regions_series, axis=1).fillna(0)
 
 
 def get_countries_report_by_column(column_name: str, include: _List[str] = None, exclude: _List[str] = None, start_date: _pd.Timestamp = None) -> _pd.DataFrame:
@@ -142,4 +131,4 @@ def get_countries_report_by_column(column_name: str, include: _List[str] = None,
 
         countries_series.append(column_series.rename(country))
 
-    return _pd.concat(countries_series, axis=1)
+    return _pd.concat(countries_series, axis=1).fillna(0)
