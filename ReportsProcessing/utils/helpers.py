@@ -9,8 +9,9 @@ def normalize(values: _pd.Series) -> _pd.Series:
 
     return values / values.max()
 
+
 @_ctxlib.contextmanager
-def setlocale_ctx(locale:str):
+def setlocale_ctx(locale: str):
     saved = _locale.setlocale(_locale.LC_ALL)
     yield _locale.setlocale(_locale.LC_ALL, locale)
     _locale.setlocale(_locale.LC_ALL, saved)

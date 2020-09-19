@@ -10,14 +10,20 @@ def key_russian_dates(ax: _figure.Axes):
     ''' Draws key dates from Russia on plot as vertical lines and spans. '''
 
     ax.axvline(_dt.strptime('01-04-2020', _dateFormat),
-               label='Путин: Начало нерабочих дней', color='Red')
+               label='Путин: Начало нерабочих дней',
+               color='Red')
     ax.axvline(_dt.strptime('12-05-2020', _dateFormat),
-               label='Путин: Пик пройден', color='Cyan')
+               label='Путин: Пик пройден',
+               color='Cyan')
     ax.axvline(_dt.strptime('15-06-2020', _dateFormat),
-               label='Путин: Выход из эпидемии', color='Green')
+               label='Путин: Выход из эпидемии',
+               color='Green')
     ax.axvline(_dt.strptime('24-06-2020', _dateFormat), label='Парад')
     ax.axvspan(_dt.strptime('25-06-2020', _dateFormat),
-               _dt.strptime('01-07-2020', _dateFormat), label='Конституция', alpha=0.2, color='Green')
+               _dt.strptime('01-07-2020', _dateFormat),
+               label='Конституция',
+               alpha=0.2,
+               color='Green')
 
 
 def _setup_axes_for_russian_regions_stat(ax: _figure.Axes, title: str = None):
@@ -32,10 +38,14 @@ def _setup_axes_for_russian_regions_stat(ax: _figure.Axes, title: str = None):
         ax.set_title(title)
 
 
-def bar_with_sma_line(ax: _figure.Axes, values: _pd.Series, sma_window: int = 7, label: str = None, bar_alpha: float = 0.3):
+def bar_with_sma_line(ax: _figure.Axes,
+                      values: _pd.Series,
+                      sma_window: int = 7,
+                      label: str = None,
+                      bar_alpha: float = 0.3):
     if label:
         ax.plot(values.rolling(window=sma_window).mean(),
-                label=label+"-SMA"+str(sma_window))
+                label=label + "-SMA" + str(sma_window))
     else:
         ax.plot(values.rolling(window=sma_window).mean())
 
@@ -71,10 +81,13 @@ def report(fig: _figure.Figure, df: _pd.DataFrame, name: str = None):
     bar_with_sma_line(ax, confirmed_daily, label="Заболевшие")
     bar_with_sma_line(ax, recovered_daily, label="Выздоровевшие")
 
-    ax.bar(index, deaths_daily, label='Смерти',
-           alpha=0.3, bottom=recovered_daily)
-    ax.plot(index, (recovered_daily +
-                    deaths_daily).rolling(window=7).mean(), label='Смерти-SMA7')
+    ax.bar(index,
+           deaths_daily,
+           label='Смерти',
+           alpha=0.3,
+           bottom=recovered_daily)
+    ax.plot(index, (recovered_daily + deaths_daily).rolling(window=7).mean(),
+            label='Смерти-SMA7')
 
     _setup_axes_for_russian_regions_stat(ax, "Статистика день ко дню")
 
@@ -86,10 +99,14 @@ def report(fig: _figure.Figure, df: _pd.DataFrame, name: str = None):
     ax = fig.add_subplot(2, 2, 3)
 
     ax.bar(index_weekly, confirmed_weekly, label='Заболевшие', width=2)
-    ax.bar(index_weekly + _dates.one_day, recovered_weekly,
-           label='Выздоровевшие', width=2)
+    ax.bar(index_weekly + _dates.one_day,
+           recovered_weekly,
+           label='Выздоровевшие',
+           width=2)
     ax.bar(index_weekly + _dates.one_day * 2,
-           deaths_weekly, label='Смерти', width=2)
+           deaths_weekly,
+           label='Смерти',
+           width=2)
 
     _setup_axes_for_russian_regions_stat(ax, "Статистика неделя к неделе")
 
@@ -97,9 +114,13 @@ def report(fig: _figure.Figure, df: _pd.DataFrame, name: str = None):
 
     ax.bar(index_monthly, confirmed_monthly, label='Заболевшие', width=2)
     ax.bar(index_monthly + _dates.one_day,
-           recovered_monthly, label='Выздоровевшие', width=2)
+           recovered_monthly,
+           label='Выздоровевшие',
+           width=2)
     ax.bar(index_monthly + _dates.one_day * 2,
-           deaths_monthly, label='Смерти', width=2)
+           deaths_monthly,
+           label='Смерти',
+           width=2)
 
     _setup_axes_for_russian_regions_stat(ax, "Статистика месяц к месяцу")
 
