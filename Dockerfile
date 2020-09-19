@@ -19,13 +19,13 @@ RUN wget https://dot.net/v1/dotnet-install.sh \
 FROM ubuntu:20.04 as base_runner
 WORKDIR /work
 RUN apt update -y && \
- apt install python3-pip locales -y && \
- apt-get clean && \
- locale-gen ru_RU && \
- locale-gen ru_RU.UTF-8 && \
- update-locale && \
- pip3 install pip --upgrade && \
- pip3 install jupyter numpy sympy pandas geopandas matplotlib
+    apt install python3-pip locales -y && \
+    apt-get clean && \
+    locale-gen ru_RU && \
+    locale-gen ru_RU.UTF-8 && \
+    update-locale && \
+    pip3 install pip --upgrade && \
+    pip3 install jupyter numpy sympy pandas geopandas matplotlib
 
 
 
