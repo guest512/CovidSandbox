@@ -1,20 +1,32 @@
 ﻿using CovidSandbox.Data.Providers;
 using System;
 using System.Collections.Generic;
-using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Text.RegularExpressions;
+using CovidSandbox.Utils;
 
 namespace CovidSandbox.Data
 {
     public class CsvReader
     {
-        private readonly IEnumerable<IDataProvider> _providers = new IDataProvider[]
+        private readonly IDictionary<RowVersion, IDataProvider> _providers;
+        private readonly ILogger _logger;
+
+        public CsvReader(IDictionary<RowVersion, IDataProvider> dataProviders, ILogger logger)
         {
-            new JHopkinsDataProvider(),
-            new YandexRussiaDataProvider()
-        };
+            _providers = dataProviders;
+            _logger = logger;
+        }
+
+        public static string[] SplitRowString(string row)
+        {
+            var csvRegex = new Regex("(\"(.+?)\",)|(\"(.+?)\")|(.*?,)|(.+)");
+            return csvRegex
+                .Matches(row)
+                .Select(res => res.Groups.OfType<Group>().Last(grp => grp.Success).Value.Trim(','))
+                .ToArray();
+        }
 
         public IEnumerable<Row> Read(TextReader csvStream, string date = "")
         {
@@ -23,14 +35,13 @@ namespace CovidSandbox.Data
                 yield break;
 
             var header = SplitRowString(line);
-            var version = GetVersionFromHeader(header, out var activeProvider);
-            Debug.Assert(activeProvider != null, nameof(activeProvider) + " != null");
+            var version = GetVersionFromHeader(header);
             line = csvStream.ReadLine();
 
             while (line != null)
             {
                 var row = SplitRowString(line);
-                var fields = ReadData(activeProvider.GetFields(version), row, date);
+                var fields = ReadData(_providers[version].GetFields(version), row, date);
 
                 yield return new Row(fields, version);
                 line = csvStream.ReadLine();
@@ -51,34 +62,20 @@ namespace CovidSandbox.Data
             }
         }
 
-        public static string[] SplitRowString(string row)
+        private RowVersion GetVersionFromHeader(string[] header)
         {
-            var csvRegex = new Regex("(\"(.+?)\",)|(\"(.+?)\")|(.*?,)|(.+)");
-            return csvRegex
-                .Matches(row)
-                .Select(res => res.Groups.OfType<Group>().Last(grp => grp.Success).Value.Trim(','))
-                .ToArray();
-        }
-
-        private RowVersion GetVersionFromHeader(string[] header, out IDataProvider? activeProvider)
-        {
-            var version = RowVersion.Unknown;
-            activeProvider = null;
-
-            foreach (var provider in _providers)
+            foreach (var (_, provider) in _providers)
             {
-                version = provider.GetVersion(header);
-                if (version == RowVersion.Unknown)
-                    continue;
+                var version = provider.GetVersion(header);
 
-                activeProvider = provider;
-                break;
+                if (version != RowVersion.Unknown)
+                    return version;
             }
 
-            if (version == RowVersion.Unknown)
-                throw new Exception("CsvStream has unknown format");
 
-            return version;
+            _logger.WriteError("CsvStream has unknown format");
+            throw new Exception("CsvStream has unknown format");
+
         }
     }
 }

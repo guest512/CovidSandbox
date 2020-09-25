@@ -1,7 +1,9 @@
-﻿using CovidSandbox.Data;
+﻿using System.Collections.Generic;
+using CovidSandbox.Data;
 using NUnit.Framework;
 using System.IO;
 using System.Linq;
+using CovidSandbox.Data.Providers;
 
 namespace CovidSandbox.Tests
 {
@@ -14,7 +16,7 @@ namespace CovidSandbox.Tests
             using var ms = new MemoryStream();
             using var sr = new StreamReader(ms);
 
-            var csvReader = new CsvReader();
+            var csvReader = new CsvReader(new Dictionary<RowVersion, IDataProvider>(), new NullLogger());
             Assert.That(csvReader.Read(sr).Count(), Is.EqualTo(0));
         }
 
@@ -34,7 +36,13 @@ namespace CovidSandbox.Tests
 
             using var sr = new StreamReader(ms);
 
-            var csvReader = new CsvReader();
+            var csvReader =
+                new CsvReader(
+                    new Dictionary<RowVersion, IDataProvider>
+                    {
+                        {RowVersion.JHopkinsV1, new JHopkinsDataProvider()}
+                    },
+                    new NullLogger());
 
             var rows = csvReader.Read(sr).ToList();
 
@@ -61,7 +69,13 @@ namespace CovidSandbox.Tests
 
             using var sr = new StreamReader(ms);
 
-            var csvReader = new CsvReader();
+            var csvReader =
+                new CsvReader(
+                    new Dictionary<RowVersion, IDataProvider>
+                    {
+                        {RowVersion.JHopkinsV2, new JHopkinsDataProvider()}
+                    },
+                    new NullLogger());
 
             var rows = csvReader.Read(sr).ToList();
 
@@ -88,7 +102,13 @@ namespace CovidSandbox.Tests
 
             using var sr = new StreamReader(ms);
 
-            var csvReader = new CsvReader();
+            var csvReader =
+                new CsvReader(
+                    new Dictionary<RowVersion, IDataProvider>
+                    {
+                        {RowVersion.JHopkinsV3, new JHopkinsDataProvider()}
+                    },
+                    new NullLogger());
 
             var rows = csvReader.Read(sr).ToList();
 
@@ -116,7 +136,13 @@ namespace CovidSandbox.Tests
 
             using var sr = new StreamReader(ms);
 
-            var csvReader = new CsvReader();
+            var csvReader =
+                new CsvReader(
+                    new Dictionary<RowVersion, IDataProvider>
+                    {
+                        {RowVersion.JHopkinsV4, new JHopkinsDataProvider()}
+                    },
+                    new NullLogger());
 
             var rows = csvReader.Read(sr).ToList();
 
@@ -144,7 +170,16 @@ namespace CovidSandbox.Tests
 
             using var sr = new StreamReader(ms);
 
-            var csvReader = new CsvReader();
+            var csvReader =
+                new CsvReader(
+                    new Dictionary<RowVersion, IDataProvider>
+                    {
+                        {RowVersion.JHopkinsV1, new JHopkinsDataProvider()},
+                        {RowVersion.JHopkinsV2, new JHopkinsDataProvider()},
+                        {RowVersion.JHopkinsV3, new JHopkinsDataProvider()},
+                        {RowVersion.JHopkinsV4, new JHopkinsDataProvider()}
+                    },
+                    new NullLogger());
 
             Assert.That(() => csvReader.Read(sr).ToList(), Throws.Exception);
         }

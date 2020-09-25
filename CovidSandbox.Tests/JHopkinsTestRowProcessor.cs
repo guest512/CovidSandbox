@@ -4,7 +4,7 @@ namespace CovidSandbox.Tests
 {
     public class JHopkinsTestRowProcessor : JHopkinsRowProcessor
     {
-        public JHopkinsTestRowProcessor():base("../Data/Misc")
+        public JHopkinsTestRowProcessor():base("../Data/Misc", new NullLogger())
         {
         }
 

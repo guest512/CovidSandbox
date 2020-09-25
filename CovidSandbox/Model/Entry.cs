@@ -19,6 +19,7 @@ namespace CovidSandbox.Model
             FIPS = rowProcessor.GetFips(rowData);
             County = rowProcessor.GetCountyName(rowData);
             Origin = rowProcessor.GetOrigin(rowData);
+            IsoLevel = rowProcessor.GetIsoLevel(rowData);
         }
 
         private Entry(Entry original, long confirmed, long active, long recovered, long deaths)
@@ -29,6 +30,8 @@ namespace CovidSandbox.Model
             FIPS = original.FIPS;
             County = original.County;
             Origin = original.Origin;
+            IsoLevel = original.IsoLevel;
+
             Confirmed = confirmed;
             Active = active;
             Recovered = recovered;
@@ -57,13 +60,15 @@ namespace CovidSandbox.Model
 
         public Origin Origin { get; }
 
+        public int IsoLevel { get; }
+
         public static bool operator !=(Entry left, Entry right) => !(left == right);
 
         public static bool operator ==(Entry left, Entry right) => left.Equals(right);
 
         public bool Equals(Entry other)
         {
-            return County == other.County && FIPS == other.FIPS && Active == other.Active &&
+            return IsoLevel == other.IsoLevel && County == other.County && FIPS == other.FIPS && Active == other.Active &&
                    Confirmed == other.Confirmed && CountryRegion == other.CountryRegion && Deaths == other.Deaths &&
                    LastUpdate.Equals(other.LastUpdate) && ProvinceState == other.ProvinceState &&
                    Recovered == other.Recovered && Origin == other.Origin;
@@ -87,6 +92,7 @@ namespace CovidSandbox.Model
             hashCode.Add(ProvinceState);
             hashCode.Add(Recovered);
             hashCode.Add(Origin);
+            hashCode.Add(IsoLevel);
             return hashCode.ToHashCode();
         }
 
@@ -100,7 +106,8 @@ namespace CovidSandbox.Model
 
             if(left.Origin != right.Origin || left.CountryRegion != right.CountryRegion ||
                left.County != right.County || left.LastUpdate != right.LastUpdate ||
-               left.FIPS != right.FIPS || left.ProvinceState != right.ProvinceState) 
+               left.FIPS != right.FIPS || left.ProvinceState != right.ProvinceState ||
+               left.IsoLevel != right.IsoLevel) 
                 throw new Exception("Can sum only similar entries");
 
             return new Entry(left, left.Confirmed + right.Confirmed, left.Active + right.Active,

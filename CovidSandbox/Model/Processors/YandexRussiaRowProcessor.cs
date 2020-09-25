@@ -1,4 +1,5 @@
 ﻿using CovidSandbox.Data;
+using CovidSandbox.Utils;
 
 namespace CovidSandbox.Model.Processors
 {
@@ -12,14 +13,10 @@ namespace CovidSandbox.Model.Processors
 
         public override Origin GetOrigin(Row row) => Origin.Yandex;
 
-        public override string GetProvinceName(Row row)
-        {
-            var province = row[Field.ProvinceState];
+        public override string GetProvinceName(Row row) => row[Field.ProvinceState];
 
-            return province switch
-            {
-                _ => province
-            };
+        public YandexRussiaRowProcessor(ILogger logger) : base(logger)
+        {
         }
     }
 }

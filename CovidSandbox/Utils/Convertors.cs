@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Globalization;
 
-namespace CovidSandbox.Data
+namespace CovidSandbox.Utils
 {
-    public static class Utils
+    public static class Convertors
     {
         public static string ToCsvString(this string str) => str.Contains(',') ? $"\"{str}\"" : str;
 

@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text.RegularExpressions;
+using CovidSandbox.Utils;
 
 namespace CovidSandbox.Model.Processors
 {
@@ -16,11 +17,11 @@ namespace CovidSandbox.Model.Processors
 
         private readonly string _filesPath; 
 
-        public JHopkinsRowProcessor():this("Data/Misc")
+        public JHopkinsRowProcessor(ILogger logger):this("Data/Misc", logger)
         {
         }
 
-        protected JHopkinsRowProcessor(string filesPath)
+        protected JHopkinsRowProcessor(string filesPath, ILogger logger) : base(logger)
         {
             _filesPath = filesPath;
             _russianRegions = GetCountryStatesRegions("Russian_Regions.csv");
@@ -112,12 +113,7 @@ namespace CovidSandbox.Model.Processors
             var provinceRowValue = row[Field.ProvinceState];
             var countryRowValue = row[Field.CountryRegion];
 
-            if (countryRowValue == "US")
-                return GetUsCountyName(provinceRowValue, countyRowValue);
-
-
-
-            return countyRowValue;
+            return countryRowValue == "US" ? GetUsCountyName(provinceRowValue, countyRowValue) : countyRowValue;
         }
 
         public override uint GetFips(Row row) => (uint)TryGetValue(row[Field.FIPS]);

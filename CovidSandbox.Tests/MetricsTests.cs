@@ -32,7 +32,12 @@ namespace CovidSandbox.Tests
         public void ValidateMetricsFromEntry()
         {
             var entry = new Entry(
-                new Row(new[] {new CsvField(Field.Active, "5"), new CsvField(Field.Deaths, "8"),},
+                new Row(new[]
+                    {
+                        new CsvField(Field.CountryRegion, "Test country"), 
+                        new CsvField(Field.Active, "5"), 
+                        new CsvField(Field.Deaths, "8"),
+                    },
                     RowVersion.JHopkinsV1), new JHopkinsTestRowProcessor());
             var metrics = Metrics.FromEntry(entry);
 

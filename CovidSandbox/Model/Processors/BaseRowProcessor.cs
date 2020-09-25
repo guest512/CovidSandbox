@@ -1,11 +1,20 @@
-﻿using System;
+﻿using CovidSandbox.Data;
+using CovidSandbox.Utils;
+using System;
+using System.Diagnostics;
 using System.Globalization;
-using CovidSandbox.Data;
 
 namespace CovidSandbox.Model.Processors
 {
     public abstract class BaseRowProcessor : IRowProcessor
     {
+        protected readonly ILogger Logger;
+
+        protected BaseRowProcessor(ILogger logger)
+        {
+            Logger = logger;
+        }
+
         public virtual long GetActive(Row row)
         {
             var active = TryGetValue(row[Field.Active], long.MinValue);
@@ -28,21 +37,55 @@ namespace CovidSandbox.Model.Processors
 
         public virtual long GetRecovered(Row row) => TryGetValue(row[Field.Recovered]);
 
-        public virtual DateTime GetLastUpdate(Row row) => Data.Utils.ParseDate(row[Field.LastUpdate]);
+        public virtual DateTime GetLastUpdate(Row row) => Convertors.ParseDate(row[Field.LastUpdate]);
 
-        protected static long TryGetValue(string stringValue, long defaultValue = 0)
+        public int GetIsoLevel(Row row)
+        {
+            var countyNameSet = !string.IsNullOrEmpty(GetCountyName(row));
+            var provinceNameSet = !string.IsNullOrEmpty(GetProvinceName(row));
+            var countryNameSet = !string.IsNullOrEmpty(GetCountryName(row));
+            int level;
+
+            if (countryNameSet)
+            {
+                if (provinceNameSet)
+                {
+                    level = countyNameSet ? 3 : 2;
+                }
+                else
+                {
+                    if (countyNameSet)
+                    {
+                        Logger.WriteWarning("The row has country and county names but doesn't have province name. Treat it as country level.");
+                        Debugger.Break();
+                    }
+
+                    level = 1;
+                }
+            }
+            else
+            {
+                Logger.WriteError("The row doesn't have a country name.");
+                Debugger.Break();
+                throw new InvalidOperationException("The row doesn't have a country name.");
+            }
+
+            return level;
+        }
+
+        protected long TryGetValue(string stringValue, long defaultValue = 0)
         {
             var value = long.TryParse(stringValue, out var intValue) ? intValue : defaultValue;
 
-            if (!stringValue.Contains('.')) 
+            if (!stringValue.Contains('.'))
                 return value;
 
             var floatValue = float.Parse(stringValue, CultureInfo.InvariantCulture);
-            if (!(floatValue % 1 < float.Epsilon)) 
+            if (!(floatValue % 1 < float.Epsilon))
                 return value;
 
             value = (long)floatValue;
-            Console.WriteLine($"!!!POSSIBLE WRONG DATA TYPE!!! Expected 'long' but get 'float' for '{stringValue}'. Parsed as '{value}'");
+            Logger.WriteWarning($"Expected 'long' but get 'float' for '{stringValue}'. Parsed as '{value}'");
 
             return value;
         }

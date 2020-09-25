@@ -68,6 +68,7 @@ namespace CovidSandbox.Tests
             hashCode.Add("Main territory"); //ProvinceState
             hashCode.Add(0); //Recovered
             hashCode.Add(Origin.JHopkins); //Origin
+            hashCode.Add(2); //IsoLevel
             
             Assert.That(entry.GetHashCode(), Is.EqualTo(hashCode.ToHashCode()));
         }

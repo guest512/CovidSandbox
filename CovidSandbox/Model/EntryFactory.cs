@@ -3,32 +3,27 @@ using System.Collections.Concurrent;
 using System.Collections.Generic;
 using CovidSandbox.Data;
 using CovidSandbox.Model.Processors;
+using CovidSandbox.Utils;
 
 namespace CovidSandbox.Model
 {
     public class EntryFactory
     {
-        private readonly IRowProcessor _yandexProcessor = new YandexRussiaRowProcessor();
-        private readonly IRowProcessor _jhopkinsProcessor = new JHopkinsRowProcessor();
-
-        public ConcurrentBag<Row> Rows { get; } = new ConcurrentBag<Row>();
+        private readonly IDictionary<RowVersion, IRowProcessor> _rowProcessors;
+        private readonly ILogger _logger;
+        public EntryFactory(IDictionary<RowVersion, IRowProcessor> rowProcessors, ILogger logger)
+        {
+            _rowProcessors = rowProcessors;
+            _logger = logger;
+        }
 
         public Entry CreateEntry(Row row)
         {
-            Rows.Add(row);
-            return row.Version switch
-            {
-                RowVersion.JHopkinsV1 => new Entry(row, _jhopkinsProcessor),
-                RowVersion.JHopkinsV2 => new Entry(row, _jhopkinsProcessor),
-                RowVersion.JHopkinsV3 => new Entry(row, _jhopkinsProcessor),
-                RowVersion.JHopkinsV4 => new Entry(row, _jhopkinsProcessor),
+            if(_rowProcessors.ContainsKey(row.Version))
+                return new Entry(row,_rowProcessors[row.Version]);
 
-                RowVersion.YandexRussia => new Entry(row, _yandexProcessor),
-
-                RowVersion.Unknown => throw new ArgumentOutOfRangeException(),
-
-                _ => throw new ArgumentOutOfRangeException()
-            };
+            _logger.WriteError($"row version '{row.Version}' is not supported");
+            throw new ArgumentOutOfRangeException(nameof(row.Version), "Unknown row version");
         }
     }
 }

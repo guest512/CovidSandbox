@@ -4,15 +4,23 @@ using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using CovidSandbox.Utils;
 
 namespace CovidSandbox.Model.Reports
 {
     public class ReportsGenerator
     {
+        private readonly ILogger _logger;
         private readonly List<Entry> _data = new List<Entry>();
         private readonly ConcurrentBag<IntermediateReport> _reports = new ConcurrentBag<IntermediateReport>();
         private readonly Dictionary<string, CountryReport> _countryReports = new Dictionary<string, CountryReport>();
         private readonly Dictionary<DateTime, DayReport> _dayReports = new Dictionary<DateTime, DayReport>();
+
+
+        public ReportsGenerator(ILogger logger)
+        {
+            _logger = logger;
+        }
 
         public IEnumerable<string> AvailableCountries => _reports.Select(_ => _.Name).Distinct();
         public IEnumerable<DateTime> AvailableDates => _reports.Select(_ => _.Day).Distinct();
@@ -31,7 +39,7 @@ namespace CovidSandbox.Model.Reports
 
         private void CreateReport(string country, IEnumerable<Entry> uniqueEntries, IEnumerable<DateTime> dates, ConcurrentDictionary<string,IntermediateReport> lastReport)
         {
-            Console.WriteLine($"Processing {country}...");
+            _logger.WriteInfo($"--Processing {country}...");
             if (_reports.Any(_ => _.Name == country)) return;
 
             var countryReports = uniqueEntries.Where(x => x.CountryRegion == country).ToArray();
@@ -74,12 +82,14 @@ namespace CovidSandbox.Model.Reports
                         }
                 }
 
-                if (!lastReport.TryAdd(country, report)) Console.WriteLine($"!!!POSSIBLE DUPLICATE OR WRONG DATA!!! {report}");
+                if (!lastReport.TryAdd(country, report))
+                    _logger.WriteWarning($"!!!POSSIBLE DUPLICATE OR WRONG DATA!!! {report}");
+
                 _reports.Add(report);
             }
         }
 
-        private static CountryWithRegionsIntermediateReport CreateUsCountryWithRegionsReport(
+        private CountryWithRegionsIntermediateReport CreateUsCountryWithRegionsReport(
             ConcurrentDictionary<string, IntermediateReport> lastReport, string country, IEnumerable<Entry> dayCountryReports,
             DateTime day)
         {
@@ -100,7 +110,7 @@ namespace CovidSandbox.Model.Reports
                 new List<UsProvinceIntermediateReport>();
             foreach (var dayProvinceReports in dayCountryReports.GroupBy(_ => _.ProvinceState))
             {
-                string CountyKey(uint fips, string name, string provinceName) => $"{provinceName}-{name}({fips})";
+                static string CountyKey(uint fips, string name, string provinceName) => $"{provinceName}-{name}({fips})";
                 var lastCountyReports = lastReport.Values
                     .OfType<UsCountyIntermidiateReport>()
                     .Where(_ => _.Name == dayProvinceReports.Key)
@@ -124,7 +134,7 @@ namespace CovidSandbox.Model.Reports
 
                 foreach (var countyReport in countyReports.Where(_ => !lastReport.TryAdd(CountyKey(_.FIPS, _.Name, _.Province), _)))
                 {
-                    Console.WriteLine($"!!!POSSIBLE DUPLICATE OR WRONG DATA!!! {countyReport}");
+                    _logger.WriteWarning($"!!!POSSIBLE DUPLICATE OR WRONG DATA!!! {countyReport}");
                 }
 
                 var additionalCountyReports = lastCountyReports.Where(_ =>
@@ -146,7 +156,7 @@ namespace CovidSandbox.Model.Reports
             foreach (var provinceReport in provinceReports.Where(provinceReport =>
                 !lastReport.TryAdd(ProvinceKey(provinceReport.Name, country), provinceReport)))
             {
-                Console.WriteLine($"!!!POSSIBLE DUPLICATE OR WRONG DATA!!! {provinceReport}");
+                _logger.WriteWarning($"!!!POSSIBLE DUPLICATE OR WRONG DATA!!! {provinceReport}");
             }
 
             if (!todayProvinces.Contains("Recovered"))
@@ -182,7 +192,7 @@ namespace CovidSandbox.Model.Reports
             return report;
         }
 
-        private static CountryWithRegionsIntermediateReport CreateCountryWithRegionsReport(ConcurrentDictionary<string, IntermediateReport> lastReport, string country,
+        private CountryWithRegionsIntermediateReport CreateCountryWithRegionsReport(ConcurrentDictionary<string, IntermediateReport> lastReport, string country,
             IEnumerable<Entry> dayCountryReports, DateTime day)
         {
             var lastProvinceReports = lastReport.Values
@@ -211,7 +221,7 @@ namespace CovidSandbox.Model.Reports
             foreach (var provinceReport in provinceReports.Where(provinceReport =>
                 !lastReport.TryAdd(ProvinceKey(provinceReport.Name, provinceReport.Country), provinceReport)))
             {
-                Console.WriteLine($"!!!POSSIBLE DUPLICATE OR WRONG DATA!!! {provinceReport}");
+                _logger.WriteWarning($"!!!POSSIBLE DUPLICATE OR WRONG DATA!!! {provinceReport}");
             }
 
             if (country == "Canada" && !todayProvinces.Contains("Recovered"))
@@ -248,7 +258,7 @@ namespace CovidSandbox.Model.Reports
 
         private static string ProvinceKey(string name, string countryName) => $"{countryName}-{name}";
 
-        private static IntermediateReport CreateCountryReport(ConcurrentDictionary<string, IntermediateReport> lastReport, string country,
+        private IntermediateReport CreateCountryReport(ConcurrentDictionary<string, IntermediateReport> lastReport, string country,
             Entry dayCountryReport, DateTime day)
         {
             var previousMetrics = lastReport.TryRemove(country, out var previousReport)
@@ -257,7 +267,7 @@ namespace CovidSandbox.Model.Reports
 
             if (previousReport is ProvinceIntermediateReport provinceReport)
             {
-                Console.WriteLine($"!!!COUNTRY IS ALSO A REGION!!! {country} part of {provinceReport.Country}");
+                _logger.WriteWarning($"!!!COUNTRY IS ALSO A REGION!!! {country} part of {provinceReport.Country}");
             }
 
             var currentMetrics = Metrics.FromEntry(dayCountryReport);

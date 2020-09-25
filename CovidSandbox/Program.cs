@@ -4,9 +4,12 @@ using CovidSandbox.Model;
 using CovidSandbox.Model.Reports;
 using System;
 using System.Collections.Concurrent;
+using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
+using CovidSandbox.Model.Processors;
+using CovidSandbox.Utils;
 
 namespace CovidSandbox
 {
@@ -18,7 +21,6 @@ namespace CovidSandbox
 
             Directory.CreateDirectory(Folders.CountriesReportsRoot);
 
-            //foreach(var countryMetrics in countriesMetrics)
             Parallel.ForEach(countriesMetrics, (countryMetrics) =>
             {
                 var country = countryMetrics.Name;
@@ -98,40 +100,100 @@ namespace CovidSandbox
 
         private static void Main(string[] args)
         {
-            var argsParser = new ArgsParser(args);
-            var parsedData = new ConcurrentBag<Entry>();
-            var csvReader = new CsvReader();
-            var entryFactory = new EntryFactory();
-
-            void ReadFile(string filePath, bool fileNameIsDate)
+            var logger = new ConsoleLogger();
+            try
             {
-                Console.WriteLine($"Processing file: {Path.GetFileName(filePath)}");
-                using var fs = File.OpenText(filePath);
+                logger.WriteInfo("Logger created");
 
-                foreach (var entry in csvReader
-                    .Read(fs, fileNameIsDate ? Path.GetFileNameWithoutExtension(filePath) : string.Empty)
-                    .Select(_ => entryFactory.CreateEntry(_)))
+                var argsParser = new ArgsParser(args, logger);
+
+                var dataProviders = GetDataProviders();
+                var rowProcessors = GetRowProcessors(logger);
+
+                var parsedData = new ConcurrentBag<Entry>();
+                var csvReader = new CsvReader(dataProviders, logger);
+                var entryFactory = new EntryFactory(rowProcessors, logger);
+
+                void ReadFile(string filePath, bool fileNameIsDate)
                 {
-                    parsedData.Add(entry);
+                    logger.WriteInfo($"--Processing file: {Path.GetFileName(filePath)}");
+                    using var fs = File.OpenText(filePath);
+
+                    foreach (var entry in csvReader
+                        .Read(fs, fileNameIsDate ? Path.GetFileNameWithoutExtension(filePath) : string.Empty)
+                        .Select(_ => entryFactory.CreateEntry(_)))
+                    {
+                        parsedData.Add(entry);
+                    }
                 }
+
+                logger.WriteInfo("Reading raw data...");
+                logger.IndentIncrease();
+                Parallel.ForEach(Directory.EnumerateFiles(Folders.GetDataFolder<JHopkinsDataProvider>(), "*.csv"),
+                    file => ReadFile(file, true));
+
+                ReadFile(Path.Combine(Folders.GetDataFolder<YandexRussiaDataProvider>(), "Russia.csv"), false);
+
+                logger.IndentDecrease();
+                Folders.InitializeReportsFolders(argsParser);
+
+                logger.WriteInfo("Initialize reports generator...");
+                logger.IndentIncrease();
+
+                var reportsGen = new ReportsGenerator(logger);
+                reportsGen.AddEntries(parsedData);
+
+                logger.IndentDecrease();
+
+                logger.WriteInfo("Create day by day reports...");
+                CreateDayByDayReports(reportsGen);
+
+                logger.WriteInfo("Create country reports...");
+                CreateCountryReports(reportsGen);
             }
+            catch (Exception ex)
+            {
+                while (logger.Indentation > 0)
+                {
+                    logger.IndentDecrease();
+                }
 
-            Parallel.ForEach(Directory.EnumerateFiles(Folders.GetDataFolder<JHopkinsDataProvider>(), "*.csv"),
-                file => ReadFile(file, true));
+                logger.WriteError(ex.ToString());
+            }
+            finally
+            {
+                logger.Dispose();
+            }
+        }
 
-            ReadFile(Path.Combine(Folders.GetDataFolder<YandexRussiaDataProvider>(), "Russia.csv"), false);
+        private static Dictionary<RowVersion, IRowProcessor> GetRowProcessors(ILogger logger)
+        {
+            var jHopkinsProcessor = new JHopkinsRowProcessor(logger);
 
-            Folders.InitializeReportsFolders(argsParser);
+            var rowProcessors = new Dictionary<RowVersion, IRowProcessor>
+            {
+                {RowVersion.JHopkinsV1, jHopkinsProcessor},
+                {RowVersion.JHopkinsV2, jHopkinsProcessor},
+                {RowVersion.JHopkinsV3, jHopkinsProcessor},
+                {RowVersion.JHopkinsV4, jHopkinsProcessor},
+                {RowVersion.YandexRussia, new YandexRussiaRowProcessor(logger)}
+            };
 
-            Console.WriteLine("Initialize reports generator...");
-            var reportsGen = new ReportsGenerator();
-            reportsGen.AddEntries(parsedData);
+            return rowProcessors;
+        }
 
-            Console.WriteLine("Create day by day reports...");
-            CreateDayByDayReports(reportsGen);
-
-            Console.WriteLine("Create country reports...");
-            CreateCountryReports(reportsGen);
+        private static Dictionary<RowVersion, IDataProvider> GetDataProviders()
+        {
+            var jHopkinsProvider = new JHopkinsDataProvider();
+            var dataProviders = new Dictionary<RowVersion, IDataProvider>
+            {
+                {RowVersion.JHopkinsV1, jHopkinsProvider},
+                {RowVersion.JHopkinsV2, jHopkinsProvider},
+                {RowVersion.JHopkinsV3, jHopkinsProvider},
+                {RowVersion.JHopkinsV4, jHopkinsProvider},
+                {RowVersion.YandexRussia, new YandexRussiaDataProvider()}
+            };
+            return dataProviders;
         }
     }
 }

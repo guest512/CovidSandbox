@@ -3,6 +3,7 @@ using CovidSandbox.Data.Providers;
 using NUnit.Framework;
 using System;
 using System.Collections.Generic;
+using CovidSandbox.Utils;
 
 namespace CovidSandbox.Tests
 {
@@ -47,13 +48,13 @@ namespace CovidSandbox.Tests
         [TestCaseSource(nameof(Dates))]
         public void ValidateDateParser(KeyValuePair<string, DateTime> data)
         {
-            Assert.That(Utils.ParseDate(data.Key), Is.EqualTo(data.Value));
+            Assert.That(Convertors.ParseDate(data.Key), Is.EqualTo(data.Value));
         }
 
         [Test]
         public void ValidateDateParserUnsupportedDate()
         {
-            Assert.That(() => Utils.ParseDate(DateTime.Now.ToShortTimeString()), Throws.Exception);
+            Assert.That(() => Convertors.ParseDate(DateTime.Now.ToShortTimeString()), Throws.Exception);
         }
 
         [Test]
