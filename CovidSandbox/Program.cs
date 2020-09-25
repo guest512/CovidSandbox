@@ -74,7 +74,6 @@ namespace CovidSandbox
 
             Directory.CreateDirectory(Folders.DayByDayReportsRoot);
 
-            //foreach (var dayReport in dayByDayReports)
             Parallel.ForEach(dayByDayReports, dayReport =>
             {
                 var countries = dayReport.AvailableCountries.OrderBy(_ => _).ToArray();
@@ -117,23 +116,7 @@ namespace CovidSandbox
                 }
             }
 
-            //foreach (var filePath in Directory.EnumerateFiles("Data\\JHopkins", "*.csv"))
-            //{
-            //    ReadFile(filePath);
-            //}
-
             Parallel.ForEach(Directory.EnumerateFiles(Folders.GetDataFolder<JHopkinsDataProvider>(), "*.csv"),
-                //new[]
-                //{
-                //    "Data\\JHopkins\\04-22-2020.csv",
-                //    "Data\\JHopkins\\04-23-2020.csv",
-                //    "Data\\JHopkins\\04-24-2020.csv",
-                //    "Data\\JHopkins\\04-25-2020.csv"
-
-                //    "Data\\JHopkins\\06-14-2020.csv",
-                //    "Data\\JHopkins\\06-15-2020.csv",
-                //    "Data\\Yandex\\Russia.csv"
-                //},
                 file => ReadFile(file, true));
 
             ReadFile(Path.Combine(Folders.GetDataFolder<YandexRussiaDataProvider>(), "Russia.csv"), false);
@@ -149,70 +132,6 @@ namespace CovidSandbox
 
             Console.WriteLine("Create country reports...");
             CreateCountryReports(reportsGen);
-
-            Console.WriteLine("Write countries and regions structure...");
-            using (var statsFile = File.OpenWrite(Path.Combine(Folders.ReportsRoot, "row_stats.txt")))
-            using (var statsFileWriter = new StreamWriter(statsFile))
-            {
-                var rawCountryWithRegions = entryFactory.Rows
-                    .Select(x => new
-                        { Country = x[Field.CountryRegion], Region = x[Field.ProvinceState], County = x[Field.Admin2] })
-                    .Distinct()
-                    .GroupBy(x => x.Country, x => new { Region = x.Region, County = x.County })
-                    .OrderBy(x => x.Key);
-
-                foreach (var countryWithRegion in rawCountryWithRegions)
-                {
-                    statsFileWriter.WriteLine($"\"{countryWithRegion.Key}\"");
-                    var rawRegionWithCounties =
-                        countryWithRegion.GroupBy(x => x.Region, x => x.County).OrderBy(x => x.Key);
-                    foreach (var region in rawRegionWithCounties)
-                    {
-                        if (string.IsNullOrEmpty(region.Key))
-                            continue;
-                        statsFileWriter.WriteLine($"\t-\"{region.Key}\"");
-                        foreach (var county in region)
-                        {
-                            if (string.IsNullOrEmpty(county))
-                                continue;
-                            statsFileWriter.WriteLine($"\t\t-\"{county}\"");
-                        }
-                    }
-                }
-            }
-
-
-            using (var statsFile = File.OpenWrite(Path.Combine(Folders.ReportsRoot, "entry_stats.txt")))
-            using (var statsFileWriter = new StreamWriter(statsFile))
-            {
-                var rawCountryWithRegions = parsedData
-                    .Select(x => new
-                        { Country = x.CountryRegion, Region = x.ProvinceState, County = x.County })
-                    .Distinct()
-                    .GroupBy(x => x.Country, x => new { Region = x.Region, County = x.County })
-                    .OrderBy(x => x.Key);
-
-                foreach (var countryWithRegion in rawCountryWithRegions)
-                {
-                    statsFileWriter.WriteLine($"\"{countryWithRegion.Key}\"");
-                    var rawRegionWithCounties =
-                        countryWithRegion.GroupBy(x => x.Region, x => x.County).OrderBy(x => x.Key);
-                    foreach (var region in rawRegionWithCounties)
-                    {
-                        if (string.IsNullOrEmpty(region.Key))
-                            continue;
-                        statsFileWriter.WriteLine($"\t-\"{region.Key}\"");
-                        foreach (var county in region)
-                        {
-                            if (string.IsNullOrEmpty(county))
-                                continue;
-                            statsFileWriter.WriteLine($"\t\t-\"{county}\"");
-                        }
-                    }
-                }
-            }
-
-
         }
     }
 }

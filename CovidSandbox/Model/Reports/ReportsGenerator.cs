@@ -24,72 +24,59 @@ namespace CovidSandbox.Model.Reports
             var dates = uniqueEntries.Select(x => x.LastUpdate.Date).Distinct().OrderBy(_ => _).ToArray();
             var lastReport = new ConcurrentDictionary<string, IntermediateReport>();
 
-            Parallel.ForEach(countriesList, (country) =>
-            //foreach (var country in countriesList)
-            {
-                Console.WriteLine($"Processing {country}...");
-                if (_reports.Any(_ => _.Name == country))
-                    return;
-
-                var countryReports = uniqueEntries.Where(x => x.CountryRegion == country).ToArray();
-
-                foreach (var day in dates)
-                {
-                    if (_reports.Any(x => x.Day == day && x.Name == country))
-                        continue;
-
-                    var dayCountryReports = countryReports
-                        .Where(x => x.LastUpdate.Date == day)
-                        .ToArray();
-
-                    if (country == "Russia" &&
-                        dayCountryReports.Any(x => x.Origin == Origin.JHopkins) &&
-                        dayCountryReports.Any(x => x.Origin == Origin.Yandex))
-                    {
-                        dayCountryReports = dayCountryReports.Where(x => x.Origin == Origin.Yandex).ToArray();
-                    }
-
-                    IntermediateReport report;
-
-                    switch (dayCountryReports.Length)
-                    {
-                        case 0:
-                            continue;
-                        case 1 when dayCountryReports[0].ProvinceState == Consts.MainCountryRegion:
-                            {
-                                report = CreateCountryReport(lastReport, country, dayCountryReports[0], day);
-                                break;
-                            }
-                        default:
-                            {
-                                if (dayCountryReports.All(_ => string.IsNullOrEmpty(_.ProvinceState)) ||
-                                    dayCountryReports.All(_ => _.ProvinceState == country))
-                                {
-                                    report = CreateCountryReport(lastReport, country,
-                                        dayCountryReports.Aggregate(Entry.Empty, (sum, elem) => sum + elem), day);
-                                }
-                                else if (country == "US")
-                                    report = CreateUsCountryWithRegionsReport(lastReport, country,
-                                        dayCountryReports.Where(_ =>
-                                            !(string.IsNullOrEmpty(_.ProvinceState) || _.ProvinceState == country)),
-                                        day);
-                                else
-                                    report = CreateCountryWithRegionsReport(lastReport, country,
-                                        dayCountryReports.Where(_ =>
-                                            !(string.IsNullOrEmpty(_.ProvinceState) || _.ProvinceState == country)),
-                                        day);
-
-                                break;
-                            }
-                    }
-
-                    if (!lastReport.TryAdd(country, report))
-                        Console.WriteLine($"!!!POSSIBLE DUPLICATE OR WRONG DATA!!! {report}");
-                    _reports.Add(report);
-                }
-            });
+            Parallel.ForEach(countriesList,country => CreateReport(country, uniqueEntries,dates,lastReport));
 
             _data.Clear();
+        }
+
+        private void CreateReport(string country, IEnumerable<Entry> uniqueEntries, IEnumerable<DateTime> dates, ConcurrentDictionary<string,IntermediateReport> lastReport)
+        {
+            Console.WriteLine($"Processing {country}...");
+            if (_reports.Any(_ => _.Name == country)) return;
+
+            var countryReports = uniqueEntries.Where(x => x.CountryRegion == country).ToArray();
+
+            foreach (var day in dates)
+            {
+                if (_reports.Any(x => x.Day == day && x.Name == country)) continue;
+
+                var dayCountryReports = countryReports.Where(x => x.LastUpdate.Date == day)
+                    .ToArray();
+
+                if (country == "Russia" && dayCountryReports.Any(x => x.Origin == Origin.JHopkins) && dayCountryReports.Any(x => x.Origin == Origin.Yandex))
+                {
+                    dayCountryReports = dayCountryReports.Where(x => x.Origin == Origin.Yandex).ToArray();
+                }
+
+                IntermediateReport report;
+
+                switch (dayCountryReports.Length)
+                {
+                    case 0:
+                        continue;
+                    case 1 when dayCountryReports[0].ProvinceState == Consts.MainCountryRegion:
+                        {
+                            report = CreateCountryReport(lastReport, country, dayCountryReports[0], day);
+                            break;
+                        }
+                    default:
+                        {
+                            if (dayCountryReports.All(_ => string.IsNullOrEmpty(_.ProvinceState)) || dayCountryReports.All(_ => _.ProvinceState == country))
+                            {
+                                report = CreateCountryReport(lastReport, country, dayCountryReports.Aggregate(Entry.Empty, (sum, elem) => sum + elem), day);
+                            }
+                            else if (country == "US")
+                                report = CreateUsCountryWithRegionsReport(lastReport, country, dayCountryReports.Where(_ => !(string.IsNullOrEmpty(_.ProvinceState) || _.ProvinceState == country)), day);
+                            else
+                                report = CreateCountryWithRegionsReport(lastReport, country, dayCountryReports.Where(_ => !(string.IsNullOrEmpty(_.ProvinceState) || _.ProvinceState == country)), day);
+
+                            break;
+                        }
+                }
+
+                if (!lastReport.TryAdd(country, report)) Console.WriteLine($"!!!POSSIBLE DUPLICATE OR WRONG DATA!!! {report}");
+                _reports.Add(report);
+            }
         }
 
         private static CountryWithRegionsIntermediateReport CreateUsCountryWithRegionsReport(

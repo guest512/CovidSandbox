@@ -34,15 +34,15 @@ namespace CovidSandbox.Model.Processors
         {
             var value = long.TryParse(stringValue, out var intValue) ? intValue : defaultValue;
 
-            if(stringValue.Contains('.'))
-            {
-                var floatValue = float.Parse(stringValue, CultureInfo.InvariantCulture);
-                if(floatValue % 1 < float.Epsilon)
-                {
-                    value = (long)floatValue;
-                    Console.WriteLine($"!!!POSSIBLE WRONG DATA TYPE!!! Expected 'long' but get 'float' for '{stringValue}'. Parsed as '{value}'");
-                }
-            }
+            if (!stringValue.Contains('.')) 
+                return value;
+
+            var floatValue = float.Parse(stringValue, CultureInfo.InvariantCulture);
+            if (!(floatValue % 1 < float.Epsilon)) 
+                return value;
+
+            value = (long)floatValue;
+            Console.WriteLine($"!!!POSSIBLE WRONG DATA TYPE!!! Expected 'long' but get 'float' for '{stringValue}'. Parsed as '{value}'");
 
             return value;
         }
