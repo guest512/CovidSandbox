@@ -60,7 +60,7 @@ namespace CovidSandbox.Model
 
         public Origin Origin { get; }
 
-        public int IsoLevel { get; }
+        public IsoLevel IsoLevel { get; }
 
         public static bool operator !=(Entry left, Entry right) => !(left == right);
 

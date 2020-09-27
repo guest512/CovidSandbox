@@ -23,6 +23,6 @@ namespace CovidSandbox.Model.Processors
 
         long GetRecovered(Row row);
         DateTime GetLastUpdate(Row row);
-        int GetIsoLevel(Row row);
+        IsoLevel GetIsoLevel(Row row);
     }
 }

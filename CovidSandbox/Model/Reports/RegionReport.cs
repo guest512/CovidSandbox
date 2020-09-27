@@ -7,14 +7,13 @@ namespace CovidSandbox.Model.Reports
 {
     public class RegionReport
     {
-        private readonly IEnumerable<IntermediateReport> _reports;
-        private readonly Dictionary<DateTime, Metrics> _dayByDayMetrics = new Dictionary<DateTime, Metrics>();
+        private readonly LinkedReport _head;
 
-        public RegionReport(string name, IEnumerable<IntermediateReport> reports)
+        public RegionReport(string name, LinkedReport head)
         {
             Name = name;
-            _reports = reports.ToArray();
-            AvailableDates = Utils.GetContinuousDateRange(_reports.Select(_ => _.Day)).ToArray();
+            _head = head;
+            AvailableDates = Utils.GetContinuousDateRange(_head.GetAvailableDates()).ToArray();
         }
 
         public IEnumerable<DateTime> AvailableDates { get; }
@@ -31,37 +30,14 @@ namespace CovidSandbox.Model.Reports
 
         public Metrics GetDayTotal(DateTime day)
         {
-            day = day.Date;
-            Metrics dayMetrics;
-            if (_dayByDayMetrics.ContainsKey(day))
+            var position = _head;
+
+            while (position.Next.Day <= day && position.Next != LinkedReport.Empty)
             {
-                dayMetrics = _dayByDayMetrics[day];
-            }
-            else
-            {
-                var testDay = day;
-                var dayReports = Enumerable.Empty<IntermediateReport>().ToArray();
-
-                while (!dayReports.Any() && testDay > Utils.PandemicStart && !_dayByDayMetrics.ContainsKey(testDay))
-                {
-                    dayReports = _reports.Where(_ => _.Day == testDay).ToArray();
-                    testDay = testDay.AddDays(-1);
-                }
-
-                dayMetrics = !dayReports.Any() && _dayByDayMetrics.ContainsKey(testDay)
-                    ? _dayByDayMetrics[testDay]
-                    : dayReports.Select(_ => _.Total).Aggregate(Metrics.Empty, (sum, elem) => sum + elem);
-
-                testDay = testDay.AddDays(1);
-
-                while (testDay <= day)
-                {
-                    _dayByDayMetrics.Add(testDay, dayMetrics);
-                    testDay = testDay.AddDays(1);
-                }
+                position = position.Next;
             }
 
-            return dayMetrics;
+            return position.Total;
         }
     }
 }

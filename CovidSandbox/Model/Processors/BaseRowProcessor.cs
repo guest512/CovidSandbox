@@ -39,18 +39,18 @@ namespace CovidSandbox.Model.Processors
 
         public virtual DateTime GetLastUpdate(Row row) => Convertors.ParseDate(row[Field.LastUpdate]);
 
-        public int GetIsoLevel(Row row)
+        public IsoLevel GetIsoLevel(Row row)
         {
             var countyNameSet = !string.IsNullOrEmpty(GetCountyName(row));
             var provinceNameSet = !string.IsNullOrEmpty(GetProvinceName(row));
             var countryNameSet = !string.IsNullOrEmpty(GetCountryName(row));
-            int level;
+            IsoLevel level;
 
             if (countryNameSet)
             {
                 if (provinceNameSet)
                 {
-                    level = countyNameSet ? 3 : 2;
+                    level = countyNameSet ? IsoLevel.County : IsoLevel.ProvinceState;
                 }
                 else
                 {
@@ -60,7 +60,7 @@ namespace CovidSandbox.Model.Processors
                         Debugger.Break();
                     }
 
-                    level = 1;
+                    level = IsoLevel.CountryRegion;
                 }
             }
             else

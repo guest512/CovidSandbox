@@ -7,26 +7,24 @@ namespace CovidSandbox.Model.Reports
 {
     public class CountryReport
     {
+        private readonly LinkedReport _head;
         private readonly RegionReport? _wholeCountryReport;
         private readonly Dictionary<DateTime, Metrics> _dayByDayMetrics = new Dictionary<DateTime, Metrics>();
 
-        public CountryReport(string name, IEnumerable<IntermediateReport> reports)
+        public CountryReport(string name, LinkedReport head)
         {
             Name = name;
-            reports = reports as IntermediateReport[] ?? reports.ToArray();
-            RegionReports = reports
-                .OfType<CountryWithRegionsIntermediateReport>()
-                .SelectMany(_ => _.RegionReports)
-                .GroupBy(_ => _.Name)
-                .Select(_ => new RegionReport(_.Key, _))
+            _head = head;
+
+            RegionReports = head.Children
+                .Where(child => child.Name != Consts.MainCountryRegion)
+                .Select(child => new RegionReport(child.Name, child))
                 .ToArray();
 
-            if (reports.Any(_ => !(_ is CountryWithRegionsIntermediateReport)))
-                _wholeCountryReport = new RegionReport(string.Empty, reports.Where(_ => !(_ is CountryWithRegionsIntermediateReport)));
+            if (head.Children.Any(child => child.Name == Consts.MainCountryRegion))
+                _wholeCountryReport = new RegionReport(string.Empty, head.Children.First(child => child.Name == Consts.MainCountryRegion));
 
-            AvailableDates = Utils.GetContinuousDateRange((_wholeCountryReport?
-                    .AvailableDates ?? Enumerable.Empty<DateTime>())
-                    .Union(RegionReports.SelectMany(_ => _.AvailableDates)))
+            AvailableDates = Utils.GetContinuousDateRange(head.GetAvailableDates())
                 .ToArray();
         }
 
@@ -38,56 +36,26 @@ namespace CovidSandbox.Model.Reports
 
         public Metrics GetDayChange(DateTime day)
         {
-            var currentEntry = GetDayTotal(day);
-            var prevEntry = GetDayTotal(day.AddDays(-1).Date);
+            var position = _head;
 
-            return currentEntry - prevEntry;
+            while (position.Next.Day <= day && position.Next != LinkedReport.Empty)
+            {
+                position = position.Next;
+            }
+
+            return position.Change;
         }
 
         public Metrics GetDayTotal(DateTime day)
         {
-            day = day.Date;
-            var dayMetrics = Metrics.Empty;
-            if (_dayByDayMetrics.ContainsKey(day))
+            var position = _head;
+
+            while (position.Next.Day <= day && position.Next != LinkedReport.Empty)
             {
-                dayMetrics = _dayByDayMetrics[day];
-            }
-            else
-            {
-                var testDay = day.AddDays(0);
-
-                while (dayMetrics == Metrics.Empty && testDay.Date > Utils.PandemicStart)
-                {
-                    var dayMetricsCountry = Metrics.Empty;
-                    if (_wholeCountryReport != null)
-                    {
-                        dayMetricsCountry = _wholeCountryReport.GetDayTotal(testDay);
-                    }
-
-                    var dayMetricsRegion = RegionReports
-                        .Select(_ => _.GetDayTotal(testDay))
-                        .Aggregate(Metrics.Empty, (sum, elem) => sum + elem);
-
-                    dayMetrics = dayMetricsCountry.Confirmed > dayMetricsRegion.Confirmed ? dayMetricsCountry : dayMetricsRegion;
-
-                    if (_dayByDayMetrics.ContainsKey(testDay))
-                    {
-                        dayMetrics = _dayByDayMetrics[testDay];
-                        break;
-                    }
-
-                    testDay = testDay.AddDays(-1);
-                }
-
-                testDay = testDay.AddDays(1);
-                while (testDay <= day)
-                {
-                    _dayByDayMetrics.Add(testDay, dayMetrics);
-                    testDay = testDay.AddDays(1);
-                }
+                position = position.Next;
             }
 
-            return dayMetrics;
+            return position.Total;
         }
     }
 }

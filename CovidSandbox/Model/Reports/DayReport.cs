@@ -10,17 +10,31 @@ namespace CovidSandbox.Model.Reports
         public DateTime Day { get; }
         public IEnumerable<string> AvailableCountries { get; }
 
-        private readonly IEnumerable<IntermediateReport> _reports;
+        private readonly IDictionary<string, LinkedReport> _reports;
 
-        public DayReport(in DateTime day, IEnumerable<IntermediateReport> reports)
+        public DayReport(in DateTime day, IDictionary<string,LinkedReport> reports)
         {
             Day = day;
-            _reports = reports.ToArray();
-            AvailableCountries = _reports.Select(_ => _.Name).Distinct().ToArray();
+            _reports = reports;
+            AvailableCountries = _reports.Select(rep => rep.Value.Name).Distinct().ToArray();
         }
 
-        public Metrics GetCountryTotal(string countryName) => _reports.FirstOrDefault(_ => _.Name == countryName).Total;
+        public Metrics GetCountryTotal(string countryName)
+        {
+            var country = _reports[countryName];
+            while (country.Next.Day <= Day && country.Next != LinkedReport.Empty)
+                country = country.Next;
 
-        public Metrics GetCountryChange(string countryName) => _reports.FirstOrDefault(_ => _.Name == countryName).Change;
+            return country.Total;
+        }
+
+        public Metrics GetCountryChange(string countryName)
+        {
+            var country = _reports[countryName];
+            while (country.Next.Day <= Day && country.Next != LinkedReport.Empty)
+                country = country.Next;
+
+            return country.Change;
+        }
     }
 }
