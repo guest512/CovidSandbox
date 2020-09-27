@@ -25,7 +25,7 @@ RUN apt update -y && \
     locale-gen ru_RU.UTF-8 && \
     update-locale && \
     pip3 install pip --upgrade && \
-    pip3 install jupyter numpy sympy pandas geopandas matplotlib
+    pip3 install jupyter numpy sympy pandas geopandas matplotlib seaborn
 
 
 
