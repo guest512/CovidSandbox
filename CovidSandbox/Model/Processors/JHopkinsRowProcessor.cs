@@ -182,7 +182,7 @@ namespace CovidSandbox.Model.Processors
 
             var countyFromProvince= match.Groups[1].Value.Trim();
             if (countyFromProvince.EndsWith(" County"))
-                countyFromProvince = countyFromProvince.Substring(0, countyFromProvince.Length - 7);
+                countyFromProvince = countyFromProvince[..^7];
 
             return countyFromProvince;
 
