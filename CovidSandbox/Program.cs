@@ -5,6 +5,7 @@ using CovidSandbox.Model.Reports;
 using System;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
+using System.Globalization;
 using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
@@ -43,11 +44,13 @@ namespace CovidSandbox
                         var (confirmed, active, recovered, deaths) = regionMetrics.GetDayTotal(day);
                         var (confirmedChange, activeChange, recoveredChange, deathsChange) =
                             regionMetrics.GetDayChange(day);
+                        var rt = regionMetrics.GetRt(day);
 
                         totalRegionFileWriter.WriteLine(
                             $"{day:dd-MM-yyyy}," +
                             $"{confirmed},{active},{recovered},{deaths}," +
-                            $"{confirmedChange},{activeChange},{recoveredChange},{deathsChange}");
+                            $"{confirmedChange},{activeChange},{recoveredChange},{deathsChange}," +
+                            $"{rt.ToString("00.00000000", CultureInfo.InvariantCulture)}");
                     }
                 }
 
@@ -61,11 +64,13 @@ namespace CovidSandbox
                     var (confirmed, active, recovered, deaths) = countryMetrics.GetDayTotal(day);
                     var (confirmedChange, activeChange, recoveredChange, deathsChange) =
                         countryMetrics.GetDayChange(day);
+                    var rt = countryMetrics.GetRt(day);
 
                     totalFileWriter.WriteLine(
                         $"{day:dd-MM-yyyy}," +
                         $"{confirmed},{active},{recovered},{deaths}," +
-                        $"{confirmedChange},{activeChange},{recoveredChange},{deathsChange}");
+                        $"{confirmedChange},{activeChange},{recoveredChange},{deathsChange}," +
+                        $"{rt.ToString("00.00000000", CultureInfo.InvariantCulture)}");
                 }
             });
         }

@@ -4,7 +4,7 @@
     {
         public const string MainCountryRegion = "Main territory";
         public const string CountryReportHeader =
-            "Date,Confirmed,Active,Recovered,Deaths,Confirmed_Change,Active_Change,Recovered_Change,Deaths_Change";
+            "Date,Confirmed,Active,Recovered,Deaths,Confirmed_Change,Active_Change,Recovered_Change,Deaths_Change,Rt";
 
         public const string DayByDayReportHeader =
             "CountryRegion,Confirmed,Active,Recovered,Deaths,Confirmed_Change,Active_Change,Recovered_Change,Deaths_Change";

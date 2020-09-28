@@ -7,12 +7,10 @@ namespace CovidSandbox.Model.Reports.Intermediate
     public class ReportsGraphBuilder
     {
         private readonly string _countryName;
-        private readonly ReportsGraphStructure _graphStructure;
 
         public ReportsGraphBuilder(string countryName)
         {
             _countryName = countryName;
-            _graphStructure = new ReportsGraphStructure("test");
             Reports = new List<BasicReport>();
         }
 
@@ -23,15 +21,16 @@ namespace CovidSandbox.Model.Reports.Intermediate
             var allReports =
                 Reports.Select(br => new LinkedReportWithParent(br.Parent, CreateLinkedReport(br))).ToList();
 
-            ProcessReportsLevel(allReports, IsoLevel.County, _countryName);
-            ProcessReportsLevel(allReports, IsoLevel.ProvinceState, string.Empty);
+            PopulateMissedParentReports(allReports, IsoLevel.County, _countryName);
+            PopulateMissedParentReports(allReports, IsoLevel.ProvinceState, string.Empty);
+
 
             FillNextPrevReports(allReports, IsoLevel.CountryRegion);
+            PopulateMissedChildReports(allReports, IsoLevel.CountryRegion, name => structure.GetProvinces());
 
-            PopulateMissedReports(allReports, IsoLevel.ProvinceState, name => structure.GetProvinces());
             FillNextPrevReports(allReports, IsoLevel.ProvinceState);
+            PopulateMissedChildReports(allReports, IsoLevel.ProvinceState, structure.GetCounties);
 
-            PopulateMissedReports(allReports, IsoLevel.County, structure.GetCounties);
             FillNextPrevReports(allReports, IsoLevel.County);
 
             return allReports.Where(rep => rep.Report.Level == IsoLevel.CountryRegion).OrderBy(rep => rep.Report.Day).First().Report;
@@ -52,18 +51,33 @@ namespace CovidSandbox.Model.Reports.Intermediate
             });
         }
 
-        private static void FillNextPrevReports(IEnumerable<LinkedReportWithParent> reports, IsoLevel level)
+        private static void FillNextPrevReports(ICollection<LinkedReportWithParent> reports, IsoLevel level)
         {
             foreach (var reportsGroup in reports
                 .Where(lr => lr.Report.Level == level)
-                .GroupBy(lr => lr.Parent))
+                .GroupBy(lr => lr.Parent).ToArray())
             {
                 foreach (var reportsGrouppedByDay in reportsGroup.Select(rg => rg.Report).GroupBy(pcr => pcr.Name))
                 {
-                    var orderedReportsGroups = reportsGrouppedByDay.OrderBy(adcr => adcr.Day).ToArray();
+                    var orderedReportsGroups = reportsGrouppedByDay.OrderBy(adcr => adcr.Day).ToList();
 
-                    for (var i = 0; i < orderedReportsGroups.Length - 1; i++)
+                    for (var i = 0; i < orderedReportsGroups.Count - 1; i++)
                     {
+                        if (orderedReportsGroups[i + 1].Day > orderedReportsGroups[i].Day.AddDays(1))
+                        {
+                            var missedReport = new LinkedReport(
+                                reportsGrouppedByDay.Key,
+                                orderedReportsGroups[i].Day.AddDays(1),
+                                level,
+                                orderedReportsGroups[i].Total)
+                            {
+                                Parent = orderedReportsGroups[i].Parent
+                            };
+
+                            orderedReportsGroups.Insert(i + 1, missedReport);
+                            reports.Add(new LinkedReportWithParent(reportsGroup.Key, missedReport));
+                        }
+
                         orderedReportsGroups[i].Next = orderedReportsGroups[i + 1];
                         orderedReportsGroups[i + 1].Previous = orderedReportsGroups[i];
                     }
@@ -71,7 +85,53 @@ namespace CovidSandbox.Model.Reports.Intermediate
             }
         }
 
-        private static void ProcessReportsLevel(List<LinkedReportWithParent> allReports, IsoLevel level, string parentParentName)
+        private static void PopulateMissedChildReports(ICollection<LinkedReportWithParent> allreports, IsoLevel level, Func<string, IEnumerable<string>> childrenToCreateFunc)
+        {
+            foreach (var grouppedReports in allreports
+                .Where(lr => lr.Report.Level == level)
+                .GroupBy(r => r.Report.Name))
+
+            {
+                foreach (var report in grouppedReports.Select(r => r.Report)
+                    .OrderBy(r => r.Day))
+                {
+                    var childrenToCreate = childrenToCreateFunc(grouppedReports.Key).ToList();
+                    var missedReports = new List<LinkedReport>();
+
+                    foreach (var child in report.Children)
+                    {
+                        childrenToCreate.Remove(child.Name);
+                    }
+
+                    if (report.Previous != LinkedReport.Empty)
+                    {
+                        var previousRep = report.Previous;
+
+                        foreach (var child in previousRep.Children)
+                        {
+                            if (childrenToCreate.Remove(child.Name))
+                            {
+                                missedReports.Add(child.Copy(report.Day, LinkedReport.Empty));
+                            }
+                        }
+                    }
+
+                    missedReports.AddRange(
+                        childrenToCreate.Select(pr =>
+                            new LinkedReport(pr, report.Day, level + 1, Metrics.Empty)));
+
+                    foreach (var missedReport in missedReports)
+                    {
+                        allreports.Add(new LinkedReportWithParent(grouppedReports.Key, missedReport));
+
+                        missedReport.Parent = report;
+                        report.Children.Add(missedReport);
+                    }
+                }
+            }
+        }
+
+        private static void PopulateMissedParentReports(List<LinkedReportWithParent> allReports, IsoLevel level, string parentParentName)
         {
             foreach (var childReports in allReports
                 .Where(lr => lr.Report.Level == level)
@@ -103,52 +163,6 @@ namespace CovidSandbox.Model.Reports.Intermediate
             }
 
             return newReport;
-        }
-
-        private static void PopulateMissedReports(ICollection<LinkedReportWithParent> allreports, IsoLevel level,Func<string,IEnumerable<string>> childrenToCreateFunc)
-        {
-            foreach (var grouppedReports in allreports
-                .Where(lr => lr.Report.Level == level-1)
-                .GroupBy(r => r.Report.Name))
-
-            {
-                foreach (var report in grouppedReports.Select(r => r.Report)
-                    .OrderBy(r => r.Day))
-                {
-                    var childrenToCreate = childrenToCreateFunc(grouppedReports.Key).ToList();
-                    var missedReports = new List<LinkedReport>();
-
-                    foreach (var child in report.Children)
-                    {
-                        childrenToCreate.Remove(child.Name);
-                    }
-
-                    if (report.Previous != LinkedReport.Empty)
-                    {
-                        var previousRep = report.Previous;
-
-                        foreach (var child in previousRep.Children)
-                        {
-                            if (childrenToCreate.Remove(child.Name))
-                            {
-                                missedReports.Add(child.Copy(report.Day, LinkedReport.Empty));
-                            }
-                        }
-                    }
-
-                    missedReports.AddRange(
-                        childrenToCreate.Select(pr =>
-                            new LinkedReport(pr, report.Day, level, Metrics.Empty)));
-
-                    foreach (var missedReport in missedReports)
-                    {
-                        allreports.Add(new LinkedReportWithParent(grouppedReports.Key, missedReport));
-
-                        missedReport.Parent = report;
-                        report.Children.Add(missedReport);
-                    }
-                }
-            }
         }
 
         private readonly struct LinkedReportWithParent

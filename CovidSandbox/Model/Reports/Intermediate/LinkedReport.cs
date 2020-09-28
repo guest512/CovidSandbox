@@ -46,8 +46,6 @@ namespace CovidSandbox.Model.Reports.Intermediate
             }
         }
 
-        public Metrics Change => Total - Previous.Total;
-
         public IEnumerable<DateTime> GetAvailableDates()
         {
             LinkedReport position = this;

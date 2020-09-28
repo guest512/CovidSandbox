@@ -5,39 +5,14 @@ using System.Linq;
 
 namespace CovidSandbox.Model.Reports
 {
-    public class RegionReport
-    {
-        private readonly LinkedReport _head;
+    public class RegionReport : BaseReport
 
-        public RegionReport(string name, LinkedReport head)
+    {
+        public RegionReport(string name, LinkedReport head) : base(head, name)
         {
-            Name = name;
-            _head = head;
-            AvailableDates = Utils.GetContinuousDateRange(_head.GetAvailableDates()).ToArray();
+            AvailableDates = Utils.GetContinuousDateRange(Head.GetAvailableDates()).ToArray();
         }
 
         public IEnumerable<DateTime> AvailableDates { get; }
-
-        public string Name { get; }
-
-        public Metrics GetDayChange(DateTime day)
-        {
-            var currentEntry = GetDayTotal(day);
-            var prevEntry = GetDayTotal(day.AddDays(-1).Date);
-
-            return currentEntry - prevEntry;
-        }
-
-        public Metrics GetDayTotal(DateTime day)
-        {
-            var position = _head;
-
-            while (position.Next.Day <= day && position.Next != LinkedReport.Empty)
-            {
-                position = position.Next;
-            }
-
-            return position.Total;
-        }
     }
 }
