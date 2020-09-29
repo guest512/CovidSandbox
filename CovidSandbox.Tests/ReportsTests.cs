@@ -22,10 +22,10 @@ namespace CovidSandbox.Tests
 
             var data = new long[]
             {
-                163,159,157,162,160,181,183,180,182,179,181,184,187,189,186
+                34009,163,159,157,162,160,181,183,180,182,179,181,184,187,189,186
             };
 
-            var startDate = new DateTime(2020, 8, 16);
+            var startDate = new DateTime(2020, 8, 15);
 
             _head = CreateReport(startDate, 34009+
                                             data[0]);
@@ -42,6 +42,7 @@ namespace CovidSandbox.Tests
                 day = position.Day;
             }
 
+            _head = _head.Next;
 
         }
 
