@@ -71,12 +71,12 @@ namespace CovidSandbox.Model
             return HashCode.Combine(Confirmed, Deaths, Active, Recovered);
         }
 
+        public override string ToString() => $"{Confirmed} {Active} {Recovered} {Deaths}";
+
         private bool Equals(Metrics other)
         {
             var (confirmed, active, recovered, deaths) = other;
             return Confirmed == confirmed && Deaths == deaths && Active == active && Recovered == recovered;
         }
-
-        public override string ToString() => $"{Confirmed} {Active} {Recovered} {Deaths}";
     }
 }

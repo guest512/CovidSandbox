@@ -13,8 +13,7 @@ namespace CovidSandbox.Data
             _data = fields.ToDictionary(_ => _.Name, _ => _.Value);
         }
 
-        public string this[Field key] => _data.ContainsKey(key) ? _data[key] : string.Empty;
-
         public RowVersion Version { get; }
+        public string this[Field key] => _data.ContainsKey(key) ? _data[key] : string.Empty;
     }
 }

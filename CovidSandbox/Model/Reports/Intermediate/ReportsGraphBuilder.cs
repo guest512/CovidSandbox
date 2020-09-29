@@ -22,33 +22,6 @@ namespace CovidSandbox.Model.Reports.Intermediate
 
         public ICollection<BasicReport> Reports { get; }
 
-        private bool AssertReports(IEnumerable<LinkedReportWithParent> allReports)
-        {
-            return true;
-
-            //var res = 1;
-            //var reports = allReports.ToArray();
-
-            //Parallel.ForEach(reports, rep =>
-            //{
-            //    var (parent, report) = rep;
-
-            //    var count = reports.Count(ir =>
-            //        ir.Report.Day == report.Day &&
-            //        ir.Report.Level == report.Level &&
-            //        ir.Report.Name == report.Name &&
-            //        ir.Parent == parent);
-
-            //    if (count <= 1)
-            //        return;
-
-            //    _logger.WriteError($"{_countryName}: {report.Day:d}-{report.Level}-{report.Name} - duplicates {count}");
-            //    Interlocked.Decrement(ref res);
-            //});
-
-            //return res == 1;
-        }
-
         public LinkedReport Build(ReportsGraphStructure structure)
         {
             var allReports =
@@ -191,6 +164,33 @@ namespace CovidSandbox.Model.Reports.Intermediate
                 allReports.AddRange(
                     parentsFromChildrenReports.Select(rep => new LinkedReportWithParent(parentParentName, rep)));
             }
+        }
+
+        private bool AssertReports(IEnumerable<LinkedReportWithParent> allReports)
+        {
+            return true;
+
+            var res = 1;
+            var reports = allReports.ToArray();
+
+            Parallel.ForEach(reports, rep =>
+            {
+                var (parent, report) = rep;
+
+                var count = reports.Count(ir =>
+                    ir.Report.Day == report.Day &&
+                    ir.Report.Level == report.Level &&
+                    ir.Report.Name == report.Name &&
+                    ir.Parent == parent);
+
+                if (count <= 1)
+                    return;
+
+                _logger.WriteError($"{_countryName}: {report.Day:d}-{report.Level}-{report.Name} - duplicates {count}");
+                Interlocked.Decrement(ref res);
+            });
+
+            return res == 1;
         }
 
         private LinkedReport CreateLinkedReport(BasicReport report)

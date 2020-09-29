@@ -5,6 +5,10 @@ namespace CovidSandbox.Model.Processors
 {
     public sealed class YandexRussiaRowProcessor : BaseRowProcessor
     {
+        public YandexRussiaRowProcessor(ILogger logger) : base(logger)
+        {
+        }
+
         public override string GetCountryName(Row row) => "Russia";
 
         public override string GetCountyName(Row row) => string.Empty;
@@ -14,9 +18,5 @@ namespace CovidSandbox.Model.Processors
         public override Origin GetOrigin(Row row) => Origin.Yandex;
 
         public override string GetProvinceName(Row row) => row[Field.ProvinceState];
-
-        public YandexRussiaRowProcessor(ILogger logger) : base(logger)
-        {
-        }
     }
 }

@@ -1,5 +1,5 @@
-﻿using System;
-using CovidSandbox.Data;
+﻿using CovidSandbox.Data;
+using System;
 
 namespace CovidSandbox.Model.Processors
 {
@@ -17,12 +17,14 @@ namespace CovidSandbox.Model.Processors
 
         uint GetFips(Row row);
 
+        IsoLevel GetIsoLevel(Row row);
+
+        DateTime GetLastUpdate(Row row);
+
         Origin GetOrigin(Row row);
 
         string GetProvinceName(Row row);
 
         long GetRecovered(Row row);
-        DateTime GetLastUpdate(Row row);
-        IsoLevel GetIsoLevel(Row row);
     }
 }

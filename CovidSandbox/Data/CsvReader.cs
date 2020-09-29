@@ -1,17 +1,17 @@
 ﻿using CovidSandbox.Data.Providers;
+using CovidSandbox.Utils;
 using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text.RegularExpressions;
-using CovidSandbox.Utils;
 
 namespace CovidSandbox.Data
 {
     public class CsvReader
     {
-        private readonly IDictionary<RowVersion, IDataProvider> _providers;
         private readonly ILogger _logger;
+        private readonly IDictionary<RowVersion, IDataProvider> _providers;
 
         public CsvReader(IDictionary<RowVersion, IDataProvider> dataProviders, ILogger logger)
         {
@@ -72,10 +72,8 @@ namespace CovidSandbox.Data
                     return version;
             }
 
-
             _logger.WriteError("CsvStream has unknown format");
             throw new Exception("CsvStream has unknown format");
-
         }
     }
 }

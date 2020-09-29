@@ -5,8 +5,6 @@ namespace CovidSandbox.Utils
 {
     public static class Convertors
     {
-        public static string ToCsvString(this string str) => str.Contains(',') ? $"\"{str}\"" : str;
-
         public static DateTime ParseDate(string dateString)
         {
             var formats = new[]
@@ -33,5 +31,7 @@ namespace CovidSandbox.Utils
 
             throw new ArgumentException("Unsupported DateTime format", nameof(dateString));
         }
+
+        public static string ToCsvString(this string str) => str.Contains(',') ? $"\"{str}\"" : str;
     }
 }

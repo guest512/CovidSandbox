@@ -31,14 +31,6 @@ namespace CovidSandbox.Model.Processors
 
         public abstract uint GetFips(Row row);
 
-        public abstract Origin GetOrigin(Row row);
-
-        public abstract string GetProvinceName(Row row);
-
-        public virtual long GetRecovered(Row row) => TryGetValue(row[Field.Recovered]);
-
-        public virtual DateTime GetLastUpdate(Row row) => Convertors.ParseDate(row[Field.LastUpdate]);
-
         public IsoLevel GetIsoLevel(Row row)
         {
             var countyNameSet = !string.IsNullOrEmpty(GetCountyName(row));
@@ -72,6 +64,14 @@ namespace CovidSandbox.Model.Processors
 
             return level;
         }
+
+        public virtual DateTime GetLastUpdate(Row row) => Convertors.ParseDate(row[Field.LastUpdate]);
+
+        public abstract Origin GetOrigin(Row row);
+
+        public abstract string GetProvinceName(Row row);
+
+        public virtual long GetRecovered(Row row) => TryGetValue(row[Field.Recovered]);
 
         protected long TryGetValue(string stringValue, long defaultValue = 0)
         {

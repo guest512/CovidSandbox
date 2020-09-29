@@ -27,36 +27,20 @@ namespace CovidSandbox.Model.Reports.Intermediate
         }
 
         public static LinkedReport Empty { get; } = new LinkedReport(string.Empty, DateTime.MinValue, IsoLevel.CountryRegion, Metrics.Empty);
+
         public ICollection<LinkedReport> Children { get; }
         public DateTime Day { get; }
-
+        public IsoLevel Level { get; }
         public string Name { get; }
-
         public LinkedReport Next { get; set; }
         public LinkedReport Parent { get; set; }
         public LinkedReport Previous { get; set; }
-
-        public IsoLevel Level { get; }
 
         public Metrics Total
         {
             get
             {
                 return _total == Metrics.Empty ? Children.Aggregate(Metrics.Empty, (sum, child) => sum + child.Total) : _total;
-            }
-        }
-
-        public IEnumerable<DateTime> GetAvailableDates()
-        {
-            LinkedReport position = this;
-
-            while (position.Previous != Empty)
-                position = position.Previous;
-
-            while (position != Empty)
-            {
-                yield return position.Day;
-                position = position.Next;
             }
         }
 
@@ -73,6 +57,20 @@ namespace CovidSandbox.Model.Reports.Intermediate
             }
 
             return copyReport;
+        }
+
+        public IEnumerable<DateTime> GetAvailableDates()
+        {
+            LinkedReport position = this;
+
+            while (position.Previous != Empty)
+                position = position.Previous;
+
+            while (position != Empty)
+            {
+                yield return position.Day;
+                position = position.Next;
+            }
         }
     }
 }

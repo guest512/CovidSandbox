@@ -8,9 +8,6 @@ namespace CovidSandbox
 {
     public static class Folders
     {
-        public static string ReportsRoot {get; private set;} = string.Empty;
-        public static string CountriesReportsRoot {get; private set;} = string.Empty;
-        public static string DayByDayReportsRoot {get; private set;} = string.Empty;
         private const string DataRoot = "Data";
 
         static Folders()
@@ -18,6 +15,9 @@ namespace CovidSandbox
             InitializeReportsFolders("reports");
         }
 
+        public static string CountriesReportsRoot { get; private set; } = string.Empty;
+        public static string DayByDayReportsRoot { get; private set; } = string.Empty;
+        public static string ReportsRoot { get; private set; } = string.Empty;
 
         public static string GetCountryRegionsFolder(string countryName) =>
             Path.Combine(CountriesReportsRoot, countryName, "regions");
@@ -42,13 +42,13 @@ namespace CovidSandbox
 
         public static void InitializeReportsFolders(ArgsParser argsParser)
         {
-            if(!string.IsNullOrWhiteSpace(argsParser.ReportsDir))
+            if (!string.IsNullOrWhiteSpace(argsParser.ReportsDir))
                 InitializeReportsFolders(argsParser.ReportsDir);
         }
 
         private static void InitializeReportsFolders(string reportsRoot)
         {
-            ReportsRoot= reportsRoot;
+            ReportsRoot = reportsRoot;
             CountriesReportsRoot = Path.Combine(ReportsRoot, "countries");
             DayByDayReportsRoot = Path.Combine(ReportsRoot, "dayByDay");
 

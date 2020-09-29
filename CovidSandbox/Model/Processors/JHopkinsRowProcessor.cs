@@ -1,23 +1,21 @@
 ﻿using CovidSandbox.Data;
-using System;
+using CovidSandbox.Utils;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text.RegularExpressions;
-using CovidSandbox.Utils;
 
 namespace CovidSandbox.Model.Processors
 {
     public class JHopkinsRowProcessor : BaseRowProcessor
     {
-        private readonly Dictionary<string, string> _russianRegions;
-        private readonly Dictionary<string, string> _usStates;
         private readonly Dictionary<string, string> _canadaStates;
+        private readonly string _filesPath;
+        private readonly Dictionary<string, string> _russianRegions;
         private readonly Regex _stateCountyRegex = new Regex(@"^([\w\s]+?), (\w\w)$");
+        private readonly Dictionary<string, string> _usStates;
 
-        private readonly string _filesPath; 
-
-        public JHopkinsRowProcessor(ILogger logger):this("Data/Misc", logger)
+        public JHopkinsRowProcessor(ILogger logger) : this("Data/Misc", logger)
         {
         }
 
@@ -27,20 +25,6 @@ namespace CovidSandbox.Model.Processors
             _russianRegions = GetCountryStatesRegions("Russian_Regions.csv");
             _usStates = GetCountryStatesRegions("Us_States.csv");
             _canadaStates = GetCountryStatesRegions("Canada_States.csv");
-
-        }
-
-        private Dictionary<string, string> GetCountryStatesRegions(string filename)
-        {
-            var lines = File.ReadAllLines(Path.Combine(_filesPath, filename));
-
-            static KeyValuePair<string, string> Selector(string x)
-            {
-                var values = x.Split(',');
-                return new KeyValuePair<string, string>(values[0], values[1]);
-            }
-
-            return new Dictionary<string, string>(lines.Skip(1).Select(Selector));
         }
 
         public override string GetCountryName(Row row)
@@ -122,7 +106,7 @@ namespace CovidSandbox.Model.Processors
         }
 
         public override uint GetFips(Row row) => (uint)TryGetValue(row[Field.FIPS]);
-        
+
         public override Origin GetOrigin(Row row) => Origin.JHopkins;
 
         public override string GetProvinceName(Row row)
@@ -170,30 +154,42 @@ namespace CovidSandbox.Model.Processors
             };
         }
 
-        private string GetUsProvinceName(string provinceRowValue)
-        {
-            var match = _stateCountyRegex.Match(provinceRowValue);
-            return match.Success ? _usStates[match.Groups[2].Value] : provinceRowValue;
-        }
-
         private string GetCanadaProvinceName(string provinceRowValue)
         {
             var match = _stateCountyRegex.Match(provinceRowValue);
             return match.Success ? _canadaStates[match.Groups[2].Value] : provinceRowValue;
         }
 
+        private Dictionary<string, string> GetCountryStatesRegions(string filename)
+        {
+            var lines = File.ReadAllLines(Path.Combine(_filesPath, filename));
+
+            static KeyValuePair<string, string> Selector(string x)
+            {
+                var values = x.Split(',');
+                return new KeyValuePair<string, string>(values[0], values[1]);
+            }
+
+            return new Dictionary<string, string>(lines.Skip(1).Select(Selector));
+        }
+
         private string GetCountyName(string provinceRowValue, string countyRowValue)
         {
             var match = _stateCountyRegex.Match(provinceRowValue);
-            if (!match.Success) 
+            if (!match.Success)
                 return countyRowValue;
 
-            var countyFromProvince= match.Groups[1].Value.Trim();
+            var countyFromProvince = match.Groups[1].Value.Trim();
             if (countyFromProvince.EndsWith(" County"))
                 countyFromProvince = countyFromProvince[..^7];
 
             return countyFromProvince;
+        }
 
+        private string GetUsProvinceName(string provinceRowValue)
+        {
+            var match = _stateCountyRegex.Match(provinceRowValue);
+            return match.Success ? _usStates[match.Groups[2].Value] : provinceRowValue;
         }
     }
 }

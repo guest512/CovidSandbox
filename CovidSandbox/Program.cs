@@ -107,6 +107,68 @@ namespace CovidSandbox
             });
         }
 
+        private static Dictionary<RowVersion, IDataProvider> GetDataProviders()
+        {
+            var jHopkinsProvider = new JHopkinsDataProvider();
+            var dataProviders = new Dictionary<RowVersion, IDataProvider>
+            {
+                {RowVersion.JHopkinsV1, jHopkinsProvider},
+                {RowVersion.JHopkinsV2, jHopkinsProvider},
+                {RowVersion.JHopkinsV3, jHopkinsProvider},
+                {RowVersion.JHopkinsV4, jHopkinsProvider},
+                {RowVersion.YandexRussia, new YandexRussiaDataProvider()}
+            };
+            return dataProviders;
+        }
+
+        private static Dictionary<RowVersion, IRowProcessor> GetRowProcessors(ILogger logger)
+        {
+            var jHopkinsProcessor = new JHopkinsRowProcessor(logger);
+
+            var rowProcessors = new Dictionary<RowVersion, IRowProcessor>
+            {
+                {RowVersion.JHopkinsV1, jHopkinsProcessor},
+                {RowVersion.JHopkinsV2, jHopkinsProcessor},
+                {RowVersion.JHopkinsV3, jHopkinsProcessor},
+                {RowVersion.JHopkinsV4, jHopkinsProcessor},
+                {RowVersion.YandexRussia, new YandexRussiaRowProcessor(logger)}
+            };
+
+            return rowProcessors;
+        }
+
+        private static bool IsInvalidData(Row row)
+        {
+            static bool IsInvalidDate(Row row, IEnumerable<string> badDates) =>
+                badDates.Any(d => d == row[Field.LastUpdate]);
+
+            return row[Field.CountryRegion] switch
+            {
+                "Ireland" when row[Field.LastUpdate] == "03-08-2020" => true,
+                "The Gambia" => true,
+                "The Bahamas" => true,
+                "Republic of the Congo" => IsInvalidDate(row, Enumerable.Range(17, 5).Select(n => $"03-{n}-2020")),
+                "Guam" => IsInvalidDate(row, Enumerable.Range(16, 6).Select(n => $"03-{n}-2020")),
+                "Puerto Rico" => IsInvalidDate(row, Enumerable.Range(16, 6).Select(n => $"03-{n}-2020")),
+
+                "Denmark" when row[Field.ProvinceState] == "Greenland" =>
+                    IsInvalidDate(row, new[] { "03-19-2020", "03-20-2020", "03-21-2020" }),
+                "Netherlands" when row[Field.ProvinceState] == "Aruba" =>
+                    IsInvalidDate(row, new[] { "03-18-2020", "03-19-2020" }),
+
+                "France" when row[Field.ProvinceState] == "Mayotte" => IsInvalidDate(row, Enumerable.Range(16, 6).Select(n => $"03-{n}-2020")),
+                "France" when row[Field.ProvinceState] == "Guadeloupe" => IsInvalidDate(row, Enumerable.Range(16, 6).Select(n => $"03-{n}-2020")),
+                "France" when row[Field.ProvinceState] == "Reunion" => IsInvalidDate(row, Enumerable.Range(16, 6).Select(n => $"03-{n}-2020")),
+                "France" when row[Field.ProvinceState] == "French Guiana" => IsInvalidDate(row, Enumerable.Range(16, 6).Select(n => $"03-{n}-2020")),
+
+                "Mainland China" => IsInvalidDate(row, new[] { "03-11-2020", "03-12-2020" }),
+
+                "US" when row[Field.LastUpdate] == "03-22-2020" && row[Field.FIPS] == "11001" && row[Field.Deaths] == "0" => true,
+
+                _ => false
+            };
+        }
+
         private static void Main(string[] args)
         {
             var logger = new ConsoleLogger();
@@ -174,68 +236,6 @@ namespace CovidSandbox
             {
                 logger.Dispose();
             }
-        }
-
-        private static bool IsInvalidData(Row row)
-        {
-            static bool IsInvalidDate(Row row, IEnumerable<string> badDates) =>
-                badDates.Any(d => d == row[Field.LastUpdate]);
-
-            return row[Field.CountryRegion] switch
-            {
-                "Ireland" when row[Field.LastUpdate] == "03-08-2020" => true,
-                "The Gambia" => true,
-                "The Bahamas" => true,
-                "Republic of the Congo" => IsInvalidDate(row, Enumerable.Range(17, 5).Select(n => $"03-{n}-2020")),
-                "Guam" => IsInvalidDate(row, Enumerable.Range(16, 6).Select(n => $"03-{n}-2020")),
-                "Puerto Rico" => IsInvalidDate(row, Enumerable.Range(16, 6).Select(n => $"03-{n}-2020")),
-
-                "Denmark" when row[Field.ProvinceState] == "Greenland" =>
-                    IsInvalidDate(row, new[] { "03-19-2020", "03-20-2020", "03-21-2020" }),
-                "Netherlands" when row[Field.ProvinceState] == "Aruba" =>
-                    IsInvalidDate(row, new[] { "03-18-2020", "03-19-2020" }),
-
-                "France" when row[Field.ProvinceState] == "Mayotte" => IsInvalidDate(row, Enumerable.Range(16, 6).Select(n => $"03-{n}-2020")),
-                "France" when row[Field.ProvinceState] == "Guadeloupe" => IsInvalidDate(row, Enumerable.Range(16, 6).Select(n => $"03-{n}-2020")),
-                "France" when row[Field.ProvinceState] == "Reunion" => IsInvalidDate(row, Enumerable.Range(16, 6).Select(n => $"03-{n}-2020")),
-                "France" when row[Field.ProvinceState] == "French Guiana" => IsInvalidDate(row, Enumerable.Range(16, 6).Select(n => $"03-{n}-2020")),
-
-                "Mainland China" => IsInvalidDate(row, new [] {"03-11-2020", "03-12-2020"}),
-
-                "US" when row[Field.LastUpdate] == "03-22-2020" && row[Field.FIPS] == "11001" && row[Field.Deaths] == "0" => true,
-
-                _ => false
-            };
-        }
-
-        private static Dictionary<RowVersion, IRowProcessor> GetRowProcessors(ILogger logger)
-        {
-            var jHopkinsProcessor = new JHopkinsRowProcessor(logger);
-
-            var rowProcessors = new Dictionary<RowVersion, IRowProcessor>
-            {
-                {RowVersion.JHopkinsV1, jHopkinsProcessor},
-                {RowVersion.JHopkinsV2, jHopkinsProcessor},
-                {RowVersion.JHopkinsV3, jHopkinsProcessor},
-                {RowVersion.JHopkinsV4, jHopkinsProcessor},
-                {RowVersion.YandexRussia, new YandexRussiaRowProcessor(logger)}
-            };
-
-            return rowProcessors;
-        }
-
-        private static Dictionary<RowVersion, IDataProvider> GetDataProviders()
-        {
-            var jHopkinsProvider = new JHopkinsDataProvider();
-            var dataProviders = new Dictionary<RowVersion, IDataProvider>
-            {
-                {RowVersion.JHopkinsV1, jHopkinsProvider},
-                {RowVersion.JHopkinsV2, jHopkinsProvider},
-                {RowVersion.JHopkinsV3, jHopkinsProvider},
-                {RowVersion.JHopkinsV4, jHopkinsProvider},
-                {RowVersion.YandexRussia, new YandexRussiaDataProvider()}
-            };
-            return dataProviders;
         }
     }
 }

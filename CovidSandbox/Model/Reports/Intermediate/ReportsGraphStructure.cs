@@ -13,6 +13,8 @@ namespace CovidSandbox.Model.Reports.Intermediate
             _root = new ReportGraphStructureNode(name);
         }
 
+        public string Name { get; }
+
         public void AddCounty(string name, string province)
         {
             AddProvince(province);
@@ -20,7 +22,7 @@ namespace CovidSandbox.Model.Reports.Intermediate
             var provinceNode = _root.Children.First(node => node.Name == province);
             var countyNode = new ReportGraphStructureNode(name, provinceNode);
 
-            if(provinceNode.Children.All(child => child.Name != name))
+            if (provinceNode.Children.All(child => child.Name != name))
                 provinceNode.Children.Add(countyNode);
         }
 
@@ -30,8 +32,6 @@ namespace CovidSandbox.Model.Reports.Intermediate
             if (_root.Children.All(child => child.Name != name))
                 _root.Children.Add(provinceNode);
         }
-
-        public string Name { get; }
 
         public IEnumerable<string> GetAllCounties() => _root.Children.SelectMany(c => c.Children.Select(cc => cc.Name));
 

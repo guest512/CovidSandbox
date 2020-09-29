@@ -6,7 +6,6 @@ namespace CovidSandbox.Model
 {
     public readonly struct Entry
     {
-
         public Entry(Row rowData, IRowProcessor rowProcessor)
         {
             ProvinceState = rowProcessor.GetProvinceName(rowData);
@@ -52,17 +51,33 @@ namespace CovidSandbox.Model
 
         public uint FIPS { get; }
 
+        public IsoLevel IsoLevel { get; }
         public DateTime LastUpdate { get; }
 
+        public Origin Origin { get; }
         public string ProvinceState { get; }
 
         public long Recovered { get; }
 
-        public Origin Origin { get; }
-
-        public IsoLevel IsoLevel { get; }
-
         public static bool operator !=(Entry left, Entry right) => !(left == right);
+
+        public static Entry operator +(Entry left, Entry right)
+        {
+            if (left == Empty)
+                return right;
+
+            if (right == Empty)
+                return left;
+
+            if (left.Origin != right.Origin || left.CountryRegion != right.CountryRegion ||
+               left.County != right.County || left.LastUpdate != right.LastUpdate ||
+               left.FIPS != right.FIPS || left.ProvinceState != right.ProvinceState ||
+               left.IsoLevel != right.IsoLevel)
+                throw new Exception("Can sum only similar entries");
+
+            return new Entry(left, left.Confirmed + right.Confirmed, left.Active + right.Active,
+                left.Recovered + right.Recovered, left.Deaths + right.Deaths);
+        }
 
         public static bool operator ==(Entry left, Entry right) => left.Equals(right);
 
@@ -94,24 +109,6 @@ namespace CovidSandbox.Model
             hashCode.Add(Origin);
             hashCode.Add(IsoLevel);
             return hashCode.ToHashCode();
-        }
-
-        public static Entry operator +(Entry left, Entry right)
-        {
-            if (left == Empty)
-                return right;
-
-            if (right == Empty)
-                return left;
-
-            if(left.Origin != right.Origin || left.CountryRegion != right.CountryRegion ||
-               left.County != right.County || left.LastUpdate != right.LastUpdate ||
-               left.FIPS != right.FIPS || left.ProvinceState != right.ProvinceState ||
-               left.IsoLevel != right.IsoLevel) 
-                throw new Exception("Can sum only similar entries");
-
-            return new Entry(left, left.Confirmed + right.Confirmed, left.Active + right.Active,
-                left.Recovered + right.Recovered, left.Deaths + right.Deaths);
         }
 
         public override string ToString() => string.IsNullOrEmpty(ProvinceState)
