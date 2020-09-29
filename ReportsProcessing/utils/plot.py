@@ -26,13 +26,16 @@ def key_russian_dates(ax: _figure.Axes):
                color='Green')
 
 
-def _setup_axes_for_russian_regions_stat(ax: _figure.Axes, title: str = None):
+def _setup_axes_for_russian_regions_stat(ax: _figure.Axes,
+                                         title: str = None,
+                                         grid: bool = True):
     ax.xaxis_date()
     key_russian_dates(ax)
 
     ax.set_ylim(bottom=0)
     ax.legend(loc='upper left')
-    ax.grid(axis='y', color='black', linestyle='dashed', alpha=0.4)
+    if grid:
+        ax.grid(axis='y', color='black', linestyle='dashed', alpha=0.4)
 
     if title:
         ax.set_title(title)
@@ -52,31 +55,11 @@ def bar_with_sma_line(ax: _figure.Axes,
     ax.bar(values.index, values, alpha=bar_alpha)
 
 
-def report(fig: _figure.Figure, df: _pd.DataFrame, name: str = None):
-    dfdf = df
-    dfdf_weekly = dfdf.resample("1W").sum()
-    dfdf_monthly = dfdf.resample("1M").sum()
-
-    index = dfdf.index
-    index_weekly = dfdf_weekly.index
-    index_monthly = dfdf_monthly.index
-
-    confirmed_daily = dfdf.Confirmed_Change
-    recovered_daily = dfdf.Recovered_Change
-    deaths_daily = dfdf.Deaths_Change
-
-    confirmed_weekly = dfdf_weekly.Confirmed_Change
-    confirmed_monthly = dfdf_monthly.Confirmed_Change
-
-    recovered_weekly = dfdf_weekly.Recovered_Change
-    recovered_monthly = dfdf_monthly.Recovered_Change
-
-    deaths_weekly = dfdf_weekly.Deaths_Change
-    deaths_monthly = dfdf_monthly.Deaths_Change
-
-    active = dfdf.Active
-
-    ax = fig.add_subplot(2, 2, 1)
+def _draw_daily_stats(ax: _figure.Axes, df: _pd.DataFrame):
+    index = df.index
+    confirmed_daily = df.Confirmed_Change
+    recovered_daily = df.Recovered_Change
+    deaths_daily = df.Deaths_Change
 
     bar_with_sma_line(ax, confirmed_daily, label="Заболевшие")
     bar_with_sma_line(ax, recovered_daily, label="Выздоровевшие")
@@ -91,38 +74,66 @@ def report(fig: _figure.Figure, df: _pd.DataFrame, name: str = None):
 
     _setup_axes_for_russian_regions_stat(ax, "Статистика день ко дню")
 
-    ax = fig.add_subplot(2, 2, 2)
+
+def _draw_active_stats(ax: _figure.Axes, df: _pd.DataFrame):
+    active = df.Active
 
     bar_with_sma_line(ax, active, label="Больные")
     _setup_axes_for_russian_regions_stat(ax, "Количество больных")
 
-    ax = fig.add_subplot(2, 2, 3)
 
-    ax.bar(index_weekly, confirmed_weekly, label='Заболевшие', width=2)
-    ax.bar(index_weekly + _dates.one_day,
-           recovered_weekly,
-           label='Выздоровевшие',
-           width=2)
-    ax.bar(index_weekly + _dates.one_day * 2,
-           deaths_weekly,
-           label='Смерти',
-           width=2)
-
+def _draw_weekly_stats(ax: _figure.Axes, df: _pd.DataFrame):
+    _draw_stats_bar(ax, df.resample("1W").sum())
     _setup_axes_for_russian_regions_stat(ax, "Статистика неделя к неделе")
 
-    ax = fig.add_subplot(2, 2, 4)
 
-    ax.bar(index_monthly, confirmed_monthly, label='Заболевшие', width=2)
-    ax.bar(index_monthly + _dates.one_day,
-           recovered_monthly,
-           label='Выздоровевшие',
-           width=2)
-    ax.bar(index_monthly + _dates.one_day * 2,
-           deaths_monthly,
-           label='Смерти',
-           width=2)
-
+def _draw_monthly_stats(ax: _figure.Axes, df: _pd.DataFrame):
+    _draw_stats_bar(ax, df.resample("1M").sum())
     _setup_axes_for_russian_regions_stat(ax, "Статистика месяц к месяцу")
+
+
+def _draw_stats_bar(ax: _figure.Axes, df: _pd.DataFrame):
+    index = df.index
+    confirmed = df.Confirmed_Change
+    recovered = df.Recovered_Change
+    deaths = df.Deaths_Change
+
+    ax.bar(index, confirmed, label='Заболевшие', width=2)
+    ax.bar(index + _dates.one_day, recovered, label='Выздоровевшие', width=2)
+    ax.bar(index + _dates.one_day * 2, deaths, label='Смерти', width=2)
+
+
+def _draw_rt(ax: _figure.Axes, df: _pd.DataFrame):
+    rt = df.Rt
+    bar_with_sma_line(ax, rt)
+    _setup_axes_for_russian_regions_stat(
+        ax, r"Коэффициент распространения ($R_t$)", False)
+    ax.set_ylim(0.6, 2)
+    ax.axhline(1, color='Red', linestyle='dashed', alpha=0.6)
+
+
+def _draw_ttr(ax: _figure.Axes, df: _pd.DataFrame):
+    ttr = df.Time_To_Resolve
+    bar_with_sma_line(ax, ttr)
+    _setup_axes_for_russian_regions_stat(ax, "Дней до исхода заражения")
+
+
+def report(fig: _figure.Figure,
+           df: _pd.DataFrame,
+           name: str = None,
+           start_date: _pd.Timestamp = None):
+
+    report_funcs = [
+        _draw_daily_stats, _draw_active_stats, _draw_weekly_stats,
+        _draw_monthly_stats, _draw_rt, _draw_ttr
+    ]
+
+    for i in range(1, 7):
+        ax = fig.add_subplot(3, 2, i)
+        report_funcs[i - 1](ax, df)
+
+        if start_date:
+            ax.set_xlim(start_date)
 
     if name:
         fig.suptitle(name)
