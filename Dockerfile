@@ -4,6 +4,7 @@ FROM alpine:3.11 as base_builder
 ENV dotnet_install_dir=/usr/share/dotnet
 ENV DOTNET_ROOT=$dotnet_install_dir
 ENV PATH=$PATH:$dotnet_install_dir
+ENV DOTNET_CLI_TELEMETRY_OPTOUT=1
 
 WORKDIR /work
 
