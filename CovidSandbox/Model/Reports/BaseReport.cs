@@ -9,6 +9,8 @@ namespace CovidSandbox.Model.Reports
     {
         protected readonly LinkedReport Head;
 
+        private Dictionary<DateTime, double>? _timeToResolve;
+
         protected BaseReport(LinkedReport head, string name)
         {
             Head = head;
@@ -17,11 +19,13 @@ namespace CovidSandbox.Model.Reports
 
         public string Name { get; }
 
+        private Dictionary<DateTime, double> TimeToResolve => _timeToResolve ??= new Dictionary<DateTime, double>(GetTimeToResolveCollection());
+
         public Metrics GetDayChange(DateTime day)
         {
             var position = GetDayReport(day);
 
-            return position.Total - position.Previous.Total;
+            return GetDayChange(position);
         }
 
         public Metrics GetDayTotal(DateTime day)
@@ -44,8 +48,15 @@ namespace CovidSandbox.Model.Reports
             var lastDays = GetCumulativeConfirmedChange(GetReports(position, 4, false));
             var previousDays = GetCumulativeConfirmedChange(GetReports(GetDayReport(day.AddDays(-4)), 4, false));
 
-            return previousDays > 0 ? lastDays / (double)previousDays  : 0;
+            return previousDays > 0 ? lastDays / (double)previousDays : 0;
         }
+
+        public double GetTimeToResolve(DateTime day)
+        {
+            return TimeToResolve[day];
+        }
+
+        private static Metrics GetDayChange(LinkedReport report) => report.Total - report.Previous.Total;
 
         private static IEnumerable<LinkedReport> GetReports(LinkedReport start, int count, bool lookForward = true)
         {
@@ -67,6 +78,82 @@ namespace CovidSandbox.Model.Reports
             }
 
             return position;
+        }
+
+        private IEnumerable<KeyValuePair<DateTime, double>> GetTimeToResolveCollection()
+        {
+            static Metrics CalcResolution(long confirmed, Metrics resolved)
+            {
+                var (_, _, recovered, deaths) = resolved;
+
+                if (deaths > confirmed)
+                {
+                    deaths -= confirmed;
+                    return new Metrics(0, 0, recovered, deaths);
+                }
+
+                confirmed -= deaths;
+
+                if (recovered > confirmed)
+                {
+                    recovered -= confirmed;
+                    return new Metrics(0, 0, recovered, 0);
+                }
+
+                confirmed -= recovered;
+
+                return new Metrics(confirmed, 0, 0, 0);
+            }
+
+            var positionConfirmed = Head;
+            var positionResolved = Head;
+            var remainigs = Metrics.Empty;
+
+            while (positionConfirmed != LinkedReport.Empty)
+            {
+                var day = positionConfirmed.Day;
+                var dayChange = GetDayChange(positionConfirmed);
+                var confirmed = dayChange.Confirmed;
+                var days = 0D;
+
+                while (confirmed > 0)
+                {
+                    long recovered;
+                    long deaths;
+
+                    if (remainigs != Metrics.Empty)
+                    {
+                        (confirmed, _, recovered, deaths) = CalcResolution(confirmed, remainigs);
+
+                        if (confirmed == 0)
+                        {
+                            remainigs = new Metrics(0, 0, recovered, deaths);
+                            days = (positionResolved.Day - positionConfirmed.Day).Days - 1;
+                            break;
+                        }
+
+                        remainigs = Metrics.Empty;
+                    }
+
+                    if (positionResolved == LinkedReport.Empty)
+                    {
+                        days = double.PositiveInfinity;
+                        break;
+                    }
+
+                    (confirmed, _, recovered, deaths) = CalcResolution(confirmed, GetDayChange(positionResolved));
+
+                    remainigs = new Metrics(0, 0, recovered, deaths);
+                    days = (positionResolved.Day - positionConfirmed.Day).Days;
+                    positionResolved = positionResolved.Next;
+                }
+
+                if (days < 0)
+                    days = 0;
+
+                yield return new KeyValuePair<DateTime, double>(day, days);
+                positionConfirmed = positionConfirmed.Next;
+            }
         }
     }
 }

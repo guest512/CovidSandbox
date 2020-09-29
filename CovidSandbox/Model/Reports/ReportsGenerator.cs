@@ -4,6 +4,7 @@ using System;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection.Metadata.Ecma335;
 using System.Threading.Tasks;
 
 namespace CovidSandbox.Model.Reports
@@ -33,10 +34,13 @@ namespace CovidSandbox.Model.Reports
 
             Parallel.ForEach(countriesList, country =>
             {
+                if (country == "Others")
+                    return;
+
                 _logger.WriteInfo($"--Processing {country}...");
 
                 var countryEntries = uniqueEntries.Where(x => x.CountryRegion == country).ToArray();
-                var graphBuilder = new ReportsGraphBuilder(country);
+                var graphBuilder = new ReportsGraphBuilder(country, _logger);
                 var graphStructure = new ReportsGraphStructure(country);
 
                 if (country == "Russia")

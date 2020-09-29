@@ -1,7 +1,9 @@
 ﻿using CovidSandbox.Data;
 using CovidSandbox.Data.Providers;
 using CovidSandbox.Model;
+using CovidSandbox.Model.Processors;
 using CovidSandbox.Model.Reports;
+using CovidSandbox.Utils;
 using System;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
@@ -9,8 +11,6 @@ using System.Globalization;
 using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
-using CovidSandbox.Model.Processors;
-using CovidSandbox.Utils;
 
 namespace CovidSandbox
 {
@@ -45,12 +45,14 @@ namespace CovidSandbox
                         var (confirmedChange, activeChange, recoveredChange, deathsChange) =
                             regionMetrics.GetDayChange(day);
                         var rt = regionMetrics.GetRt(day);
+                        var ttr = regionMetrics.GetTimeToResolve(day);
 
                         totalRegionFileWriter.WriteLine(
                             $"{day:dd-MM-yyyy}," +
                             $"{confirmed},{active},{recovered},{deaths}," +
                             $"{confirmedChange},{activeChange},{recoveredChange},{deathsChange}," +
-                            $"{rt.ToString("00.00000000", CultureInfo.InvariantCulture)}");
+                            $"{rt.ToString("00.00000000", CultureInfo.InvariantCulture)}," +
+                            $"{ttr:###########0}");
                     }
                 }
 
@@ -65,12 +67,14 @@ namespace CovidSandbox
                     var (confirmedChange, activeChange, recoveredChange, deathsChange) =
                         countryMetrics.GetDayChange(day);
                     var rt = countryMetrics.GetRt(day);
+                    var ttr = countryMetrics.GetTimeToResolve(day);
 
                     totalFileWriter.WriteLine(
                         $"{day:dd-MM-yyyy}," +
                         $"{confirmed},{active},{recovered},{deaths}," +
                         $"{confirmedChange},{activeChange},{recoveredChange},{deathsChange}," +
-                        $"{rt.ToString("00.00000000", CultureInfo.InvariantCulture)}");
+                        $"{rt.ToString("00.00000000", CultureInfo.InvariantCulture)}," +
+                        $"{ttr:###########0}");
                 }
             });
         }
@@ -124,11 +128,12 @@ namespace CovidSandbox
                     logger.WriteInfo($"--Processing file: {Path.GetFileName(filePath)}");
                     using var fs = File.OpenText(filePath);
 
-                    foreach (var entry in csvReader
-                        .Read(fs, fileNameIsDate ? Path.GetFileNameWithoutExtension(filePath) : string.Empty)
-                        .Select(_ => entryFactory.CreateEntry(_)))
+                    foreach (var row in csvReader
+                        .Read(fs, fileNameIsDate ? Path.GetFileNameWithoutExtension(filePath) : string.Empty))
                     {
-                        parsedData.Add(entry);
+                        if (IsInvalidData(row)) continue;
+
+                        parsedData.Add(entryFactory.CreateEntry(row));
                     }
                 }
 
@@ -169,6 +174,38 @@ namespace CovidSandbox
             {
                 logger.Dispose();
             }
+        }
+
+        private static bool IsInvalidData(Row row)
+        {
+            static bool IsInvalidDate(Row row, IEnumerable<string> badDates) =>
+                badDates.Any(d => d == row[Field.LastUpdate]);
+
+            return row[Field.CountryRegion] switch
+            {
+                "Ireland" when row[Field.LastUpdate] == "03-08-2020" => true,
+                "The Gambia" => true,
+                "The Bahamas" => true,
+                "Republic of the Congo" => IsInvalidDate(row, Enumerable.Range(17, 5).Select(n => $"03-{n}-2020")),
+                "Guam" => IsInvalidDate(row, Enumerable.Range(16, 6).Select(n => $"03-{n}-2020")),
+                "Puerto Rico" => IsInvalidDate(row, Enumerable.Range(16, 6).Select(n => $"03-{n}-2020")),
+
+                "Denmark" when row[Field.ProvinceState] == "Greenland" =>
+                    IsInvalidDate(row, new[] { "03-19-2020", "03-20-2020", "03-21-2020" }),
+                "Netherlands" when row[Field.ProvinceState] == "Aruba" =>
+                    IsInvalidDate(row, new[] { "03-18-2020", "03-19-2020" }),
+
+                "France" when row[Field.ProvinceState] == "Mayotte" => IsInvalidDate(row, Enumerable.Range(16, 6).Select(n => $"03-{n}-2020")),
+                "France" when row[Field.ProvinceState] == "Guadeloupe" => IsInvalidDate(row, Enumerable.Range(16, 6).Select(n => $"03-{n}-2020")),
+                "France" when row[Field.ProvinceState] == "Reunion" => IsInvalidDate(row, Enumerable.Range(16, 6).Select(n => $"03-{n}-2020")),
+                "France" when row[Field.ProvinceState] == "French Guiana" => IsInvalidDate(row, Enumerable.Range(16, 6).Select(n => $"03-{n}-2020")),
+
+                "Mainland China" => IsInvalidDate(row, new [] {"03-11-2020", "03-12-2020"}),
+
+                "US" when row[Field.LastUpdate] == "03-22-2020" && row[Field.FIPS] == "11001" && row[Field.Deaths] == "0" => true,
+
+                _ => false
+            };
         }
 
         private static Dictionary<RowVersion, IRowProcessor> GetRowProcessors(ILogger logger)

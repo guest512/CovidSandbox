@@ -113,7 +113,12 @@ namespace CovidSandbox.Model.Processors
             var provinceRowValue = row[Field.ProvinceState];
             var countryRowValue = row[Field.CountryRegion];
 
-            return countryRowValue == "US" ? GetUsCountyName(provinceRowValue, countyRowValue) : countyRowValue;
+            return countryRowValue switch
+            {
+                "US" => GetCountyName(provinceRowValue, countyRowValue),
+                "Canada" => GetCountyName(provinceRowValue, countyRowValue),
+                _ => countyRowValue
+            };
         }
 
         public override uint GetFips(Row row) => (uint)TryGetValue(row[Field.FIPS]);
@@ -127,19 +132,15 @@ namespace CovidSandbox.Model.Processors
 
             return provinceRowValue switch
             {
-                _ when string.IsNullOrEmpty(provinceRowValue) => Consts.MainCountryRegion,
-                _ when countryRowValue == provinceRowValue => Consts.MainCountryRegion,
                 "Unknown" => Consts.MainCountryRegion,
                 "unassigned" => Consts.MainCountryRegion,
                 "Hong Kong" => Consts.MainCountryRegion,
                 "Macau" => Consts.MainCountryRegion,
+                "Taiwan" => Consts.MainCountryRegion,
+                "UK" => Consts.MainCountryRegion,
+                "US" => Consts.MainCountryRegion,
 
                 _ when provinceRowValue.Contains("Diamond Princess") => "Diamond Princess",
-
-                _ when countryRowValue == "Russia" => _russianRegions[provinceRowValue],
-                _ when countryRowValue == "US" => GetUsProvinceName(provinceRowValue),
-                _ when countryRowValue == "Canada" => GetCanadaProvinceName(provinceRowValue),
-
 
                 _ when countryRowValue == "French Guiana" => "French Guiana",
                 _ when countryRowValue == "Martinique" => "Martinique",
@@ -158,6 +159,13 @@ namespace CovidSandbox.Model.Processors
                 _ when countryRowValue == "Greenland" => "Greenland",
                 _ when countryRowValue == "Puerto Rico" => "Puerto Rico",
 
+                _ when string.IsNullOrEmpty(provinceRowValue) => Consts.MainCountryRegion,
+                _ when countryRowValue == provinceRowValue => Consts.MainCountryRegion,
+
+                _ when countryRowValue == "Russia" => _russianRegions[provinceRowValue],
+                _ when countryRowValue == "US" => GetUsProvinceName(provinceRowValue),
+                _ when countryRowValue == "Canada" => GetCanadaProvinceName(provinceRowValue),
+
                 _ => provinceRowValue
             };
         }
@@ -174,7 +182,7 @@ namespace CovidSandbox.Model.Processors
             return match.Success ? _canadaStates[match.Groups[2].Value] : provinceRowValue;
         }
 
-        private string GetUsCountyName(string provinceRowValue, string countyRowValue)
+        private string GetCountyName(string provinceRowValue, string countyRowValue)
         {
             var match = _stateCountyRegex.Match(provinceRowValue);
             if (!match.Success) 

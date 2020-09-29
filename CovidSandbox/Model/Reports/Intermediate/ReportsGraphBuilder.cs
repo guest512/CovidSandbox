@@ -1,37 +1,85 @@
-﻿using System;
+﻿using CovidSandbox.Utils;
+using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
+using System.Threading;
+using System.Threading.Tasks;
 
 namespace CovidSandbox.Model.Reports.Intermediate
 {
     public class ReportsGraphBuilder
     {
         private readonly string _countryName;
+        private readonly ILogger _logger;
 
-        public ReportsGraphBuilder(string countryName)
+        public ReportsGraphBuilder(string countryName, ILogger logger)
         {
             _countryName = countryName;
+            _logger = logger;
             Reports = new List<BasicReport>();
         }
 
         public ICollection<BasicReport> Reports { get; }
+
+        private bool AssertReports(IEnumerable<LinkedReportWithParent> allReports)
+        {
+            return true;
+
+            //var res = 1;
+            //var reports = allReports.ToArray();
+
+            //Parallel.ForEach(reports, rep =>
+            //{
+            //    var (parent, report) = rep;
+
+            //    var count = reports.Count(ir =>
+            //        ir.Report.Day == report.Day &&
+            //        ir.Report.Level == report.Level &&
+            //        ir.Report.Name == report.Name &&
+            //        ir.Parent == parent);
+
+            //    if (count <= 1)
+            //        return;
+
+            //    _logger.WriteError($"{_countryName}: {report.Day:d}-{report.Level}-{report.Name} - duplicates {count}");
+            //    Interlocked.Decrement(ref res);
+            //});
+
+            //return res == 1;
+        }
 
         public LinkedReport Build(ReportsGraphStructure structure)
         {
             var allReports =
                 Reports.Select(br => new LinkedReportWithParent(br.Parent, CreateLinkedReport(br))).ToList();
 
-            PopulateMissedParentReports(allReports, IsoLevel.County, _countryName);
-            PopulateMissedParentReports(allReports, IsoLevel.ProvinceState, string.Empty);
+            //Day: { 04.02.2020 0:00:00}
+            //Level: ProvinceState
+            //Name: "Ontario"
 
+            Debug.Assert(AssertReports(allReports));
+
+            PopulateMissedParentReports(allReports, IsoLevel.County, _countryName);
+            Debug.Assert(AssertReports(allReports));
+
+            PopulateMissedParentReports(allReports, IsoLevel.ProvinceState, string.Empty);
+            Debug.Assert(AssertReports(allReports));
 
             FillNextPrevReports(allReports, IsoLevel.CountryRegion);
+            Debug.Assert(AssertReports(allReports));
+
             PopulateMissedChildReports(allReports, IsoLevel.CountryRegion, name => structure.GetProvinces());
+            Debug.Assert(AssertReports(allReports));
 
             FillNextPrevReports(allReports, IsoLevel.ProvinceState);
+            Debug.Assert(AssertReports(allReports));
+
             PopulateMissedChildReports(allReports, IsoLevel.ProvinceState, structure.GetCounties);
+            Debug.Assert(AssertReports(allReports));
 
             FillNextPrevReports(allReports, IsoLevel.County);
+            Debug.Assert(AssertReports(allReports));
 
             return allReports.Where(rep => rep.Report.Level == IsoLevel.CountryRegion).OrderBy(rep => rep.Report.Day).First().Report;
         }
