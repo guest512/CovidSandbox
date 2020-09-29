@@ -65,7 +65,7 @@ function Start-Docker {
     Start-Sleep 1
     Write-Log-String("Image started")
     
-    Write-Log-String (docker logs covid_sandbox_processing_afd876)
+    Write-Host Server is available on the following address: http://127.0.0.1:8888?token=my_secure_token
 }
 
 function Build-Local {
