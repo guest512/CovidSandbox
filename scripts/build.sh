@@ -73,8 +73,8 @@ function start_docker() {
     check_result $?
 
     log_message 'Clean temp data...'
-    chattr -R -i $PWD/temp
-    chmod -R +w $PWD/temp
+    ls -l  $PWD/temp
+    chown -R root $PWD/temp
     rm -rf $PWD/temp
     check_result $?
 
