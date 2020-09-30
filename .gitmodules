@@ -1,6 +1,6 @@
 [submodule "JHopkins_Covid_Data"]
-	path = Data/JHopkins
+	path = 3rdparty/DataSources/JHopkins
 	url = https://github.com/CSSEGISandData/COVID-19.git
 [submodule "Natural_Earth_Vector"]
-	path = ReportsProcessing/Maps/NaturalEarth
+	path = 3rdparty/Maps/NaturalEarth
 	url = https://github.com/nvkelso/natural-earth-vector.git
