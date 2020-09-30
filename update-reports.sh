@@ -27,7 +27,7 @@ docker run -v $PWD/Data/temp:/work/Data -v $PWD/ReportsProcessing/reports:/work/
 logstring 'Run processing reports image ...'
 stop_and_remove_previous_container 'covid_sandbox_processing_afd876'
 docker run -d -p 8888:8888 -v $PWD/ReportsProcessing:/work --name covid_sandbox_processing_afd876 covid_sandbox_processing
-sleep 5
+sleep 1
 logstring 'Image started'
 
-docker logs covid_sandbox_processing_afd876
+logstring 'Server is available on the following address: http://127.0.0.1:8888?token=my_secure_token'
