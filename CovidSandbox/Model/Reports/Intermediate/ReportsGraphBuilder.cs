@@ -168,8 +168,6 @@ namespace CovidSandbox.Model.Reports.Intermediate
 
         private bool AssertReports(IEnumerable<LinkedReportWithParent> allReports)
         {
-            return true;
-
             var res = 1;
             var reports = allReports.ToArray();
 
