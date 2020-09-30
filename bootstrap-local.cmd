@@ -1,3 +1,3 @@
 @echo off
 
-powershell -ExecutionPolicy ByPass -File .\build.ps1
+powershell -ExecutionPolicy ByPass -File .\scripts\build.ps1
