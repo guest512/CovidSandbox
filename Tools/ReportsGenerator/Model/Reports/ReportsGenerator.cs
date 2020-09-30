@@ -1,12 +1,12 @@
-﻿using CovidSandbox.Model.Reports.Intermediate;
-using CovidSandbox.Utils;
-using System;
+﻿using System;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using ReportsGenerator.Model.Reports.Intermediate;
+using ReportsGenerator.Utils;
 
-namespace CovidSandbox.Model.Reports
+namespace ReportsGenerator.Model.Reports
 {
     public class ReportsGenerator
     {

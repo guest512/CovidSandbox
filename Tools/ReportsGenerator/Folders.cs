@@ -1,10 +1,10 @@
-﻿using CovidSandbox.Data.Providers;
-using System;
+﻿using System;
 using System.IO;
 using System.Linq;
 using System.Threading;
+using ReportsGenerator.Data.Providers;
 
-namespace CovidSandbox
+namespace ReportsGenerator
 {
     public static class Folders
     {

@@ -1,4 +1,4 @@
-﻿namespace CovidSandbox.Data
+﻿namespace ReportsGenerator.Data
 {
     public enum Field
     {

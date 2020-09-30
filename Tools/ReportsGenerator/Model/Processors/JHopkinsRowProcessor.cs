@@ -1,11 +1,11 @@
-﻿using CovidSandbox.Data;
-using CovidSandbox.Utils;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text.RegularExpressions;
+using ReportsGenerator.Data;
+using ReportsGenerator.Utils;
 
-namespace CovidSandbox.Model.Processors
+namespace ReportsGenerator.Model.Processors
 {
     public class JHopkinsRowProcessor : BaseRowProcessor
     {

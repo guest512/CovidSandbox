@@ -1,9 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using CovidSandbox.Utils;
+﻿using ReportsGenerator.Utils;
 
-namespace CovidSandbox.Tests
+namespace ReportsGenerator.Tests
 {
     class NullLogger : ILogger
     {

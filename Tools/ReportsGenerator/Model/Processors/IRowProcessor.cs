@@ -1,7 +1,7 @@
-﻿using CovidSandbox.Data;
-using System;
+﻿using System;
+using ReportsGenerator.Data;
 
-namespace CovidSandbox.Model.Processors
+namespace ReportsGenerator.Model.Processors
 {
     public interface IRowProcessor
     {

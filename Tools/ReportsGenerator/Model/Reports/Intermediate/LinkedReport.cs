@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace CovidSandbox.Model.Reports.Intermediate
+namespace ReportsGenerator.Model.Reports.Intermediate
 {
     public class LinkedReport
     {

@@ -2,7 +2,7 @@
 using System.Linq;
 using System.Threading;
 
-namespace CovidSandbox.Utils
+namespace ReportsGenerator.Utils
 {
     public class ConsoleLogger : ILogger, IDisposable
     {

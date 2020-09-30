@@ -1,6 +1,6 @@
-using CovidSandbox.Model.Processors;
+using ReportsGenerator.Model.Processors;
 
-namespace CovidSandbox.Tests
+namespace ReportsGenerator.Tests
 {
     public class JHopkinsTestRowProcessor : JHopkinsRowProcessor
     {

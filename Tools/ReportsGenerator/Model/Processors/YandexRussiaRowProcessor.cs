@@ -1,7 +1,7 @@
-﻿using CovidSandbox.Data;
-using CovidSandbox.Utils;
+﻿using ReportsGenerator.Data;
+using ReportsGenerator.Utils;
 
-namespace CovidSandbox.Model.Processors
+namespace ReportsGenerator.Model.Processors
 {
     public sealed class YandexRussiaRowProcessor : BaseRowProcessor
     {

@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 
-namespace CovidSandbox.Data.Providers
+namespace ReportsGenerator.Data.Providers
 {
     public class YandexRussiaDataProvider : IDataProvider
     {

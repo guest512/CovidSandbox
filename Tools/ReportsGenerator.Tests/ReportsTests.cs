@@ -1,12 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using CovidSandbox.Model;
-using CovidSandbox.Model.Reports;
-using CovidSandbox.Model.Reports.Intermediate;
 using NUnit.Framework;
+using ReportsGenerator.Model;
+using ReportsGenerator.Model.Reports;
+using ReportsGenerator.Model.Reports.Intermediate;
 
-namespace CovidSandbox.Tests
+namespace ReportsGenerator.Tests
 {
     [TestFixture]
     public class ReportsTests

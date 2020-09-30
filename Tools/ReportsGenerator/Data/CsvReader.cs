@@ -1,12 +1,12 @@
-﻿using CovidSandbox.Data.Providers;
-using CovidSandbox.Utils;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text.RegularExpressions;
+using ReportsGenerator.Data.Providers;
+using ReportsGenerator.Utils;
 
-namespace CovidSandbox.Data
+namespace ReportsGenerator.Data
 {
     public class CsvReader
     {

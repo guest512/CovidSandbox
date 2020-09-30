@@ -1,10 +1,9 @@
-﻿using CovidSandbox.Data;
-using CovidSandbox.Model;
-using CovidSandbox.Model.Processors;
+﻿using System;
 using NUnit.Framework;
-using System;
+using ReportsGenerator.Data;
+using ReportsGenerator.Model;
 
-namespace CovidSandbox.Tests
+namespace ReportsGenerator.Tests
 {
     [TestFixture]
     public class MetricsTests

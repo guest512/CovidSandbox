@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace CovidSandbox.Model.Reports.Intermediate
+namespace ReportsGenerator.Model.Reports.Intermediate
 {
     public class ReportGraphStructureNode
     {

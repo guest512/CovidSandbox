@@ -1,9 +1,9 @@
-using CovidSandbox.Model.Reports.Intermediate;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using ReportsGenerator.Model.Reports.Intermediate;
 
-namespace CovidSandbox.Model.Reports
+namespace ReportsGenerator.Model.Reports
 {
     public class RegionReport : BaseReport
 

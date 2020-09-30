@@ -1,4 +1,4 @@
-﻿namespace CovidSandbox.Model
+﻿namespace ReportsGenerator.Model
 {
     public enum Origin
     {

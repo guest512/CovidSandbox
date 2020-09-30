@@ -1,8 +1,8 @@
-﻿using CovidSandbox.Data;
-using CovidSandbox.Model.Processors;
-using System;
+﻿using System;
+using ReportsGenerator.Data;
+using ReportsGenerator.Model.Processors;
 
-namespace CovidSandbox.Model
+namespace ReportsGenerator.Model
 {
     public readonly struct Entry
     {

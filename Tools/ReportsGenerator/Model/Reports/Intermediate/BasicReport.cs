@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace CovidSandbox.Model.Reports.Intermediate
+namespace ReportsGenerator.Model.Reports.Intermediate
 {
     public readonly struct BasicReport
     {

@@ -1,10 +1,10 @@
-﻿using CovidSandbox.Data;
-using CovidSandbox.Model.Processors;
-using CovidSandbox.Utils;
-using System;
+﻿using System;
 using System.Collections.Generic;
+using ReportsGenerator.Data;
+using ReportsGenerator.Model.Processors;
+using ReportsGenerator.Utils;
 
-namespace CovidSandbox.Model
+namespace ReportsGenerator.Model
 {
     public class EntryFactory
     {

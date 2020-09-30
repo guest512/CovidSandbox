@@ -1,10 +1,10 @@
-﻿using CovidSandbox.Data;
-using CovidSandbox.Utils;
-using System;
+﻿using System;
 using System.Diagnostics;
 using System.Globalization;
+using ReportsGenerator.Data;
+using ReportsGenerator.Utils;
 
-namespace CovidSandbox.Model.Processors
+namespace ReportsGenerator.Model.Processors
 {
     public abstract class BaseRowProcessor : IRowProcessor
     {

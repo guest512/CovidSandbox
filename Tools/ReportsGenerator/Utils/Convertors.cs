@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Globalization;
 
-namespace CovidSandbox.Utils
+namespace ReportsGenerator.Utils
 {
     public static class Convertors
     {

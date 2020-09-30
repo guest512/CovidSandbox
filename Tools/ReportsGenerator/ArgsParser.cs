@@ -1,7 +1,7 @@
-using CovidSandbox.Utils;
 using System.Collections.Generic;
+using ReportsGenerator.Utils;
 
-namespace CovidSandbox
+namespace ReportsGenerator
 {
     public class ArgsParser
     {

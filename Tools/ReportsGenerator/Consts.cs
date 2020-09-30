@@ -1,4 +1,4 @@
-﻿namespace CovidSandbox
+﻿namespace ReportsGenerator
 {
     public static class Consts
     {

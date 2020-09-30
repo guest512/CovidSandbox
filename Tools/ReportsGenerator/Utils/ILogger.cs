@@ -1,4 +1,4 @@
-﻿namespace CovidSandbox.Utils
+﻿namespace ReportsGenerator.Utils
 {
     public interface ILogger
     {

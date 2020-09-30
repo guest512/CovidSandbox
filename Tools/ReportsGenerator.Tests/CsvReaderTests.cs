@@ -1,11 +1,11 @@
 ﻿using System.Collections.Generic;
-using CovidSandbox.Data;
-using NUnit.Framework;
 using System.IO;
 using System.Linq;
-using CovidSandbox.Data.Providers;
+using NUnit.Framework;
+using ReportsGenerator.Data;
+using ReportsGenerator.Data.Providers;
 
-namespace CovidSandbox.Tests
+namespace ReportsGenerator.Tests
 {
     [TestFixture]
     public class CsvReaderTests

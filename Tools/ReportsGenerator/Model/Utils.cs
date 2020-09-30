@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace CovidSandbox.Model
+namespace ReportsGenerator.Model
 {
     public static class Utils
     {

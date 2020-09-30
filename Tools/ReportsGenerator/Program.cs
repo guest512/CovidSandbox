@@ -1,22 +1,21 @@
-﻿using CovidSandbox.Data;
-using CovidSandbox.Data.Providers;
-using CovidSandbox.Model;
-using CovidSandbox.Model.Processors;
-using CovidSandbox.Model.Reports;
-using CovidSandbox.Utils;
-using System;
+﻿using System;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Globalization;
 using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
+using ReportsGenerator.Data;
+using ReportsGenerator.Data.Providers;
+using ReportsGenerator.Model;
+using ReportsGenerator.Model.Processors;
+using ReportsGenerator.Utils;
 
-namespace CovidSandbox
+namespace ReportsGenerator
 {
     internal static class Program
     {
-        private static void CreateCountryReports(ReportsGenerator reportsGenerator)
+        private static void CreateCountryReports(Model.Reports.ReportsGenerator reportsGenerator)
         {
             var countriesMetrics = reportsGenerator.AvailableCountries.Select(reportsGenerator.GetCountryReport);
 
@@ -79,7 +78,7 @@ namespace CovidSandbox
             });
         }
 
-        private static void CreateDayByDayReports(ReportsGenerator reportsGenerator)
+        private static void CreateDayByDayReports(Model.Reports.ReportsGenerator reportsGenerator)
         {
             var dayByDayReports = reportsGenerator.AvailableDates.Select(reportsGenerator.GetDayReport);
 
@@ -212,7 +211,7 @@ namespace CovidSandbox
                 logger.WriteInfo("Initialize reports generator...");
                 logger.IndentIncrease();
 
-                var reportsGen = new ReportsGenerator(logger);
+                var reportsGen = new Model.Reports.ReportsGenerator(logger);
                 reportsGen.AddEntries(parsedData);
 
                 logger.IndentDecrease();

@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 
-namespace CovidSandbox.Data
+namespace ReportsGenerator.Data
 {
     public class Row
     {

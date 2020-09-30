@@ -1,11 +1,11 @@
-using CovidSandbox.Data;
-using CovidSandbox.Data.Providers;
-using NUnit.Framework;
 using System;
 using System.Collections.Generic;
-using CovidSandbox.Utils;
+using NUnit.Framework;
+using ReportsGenerator.Data;
+using ReportsGenerator.Data.Providers;
+using ReportsGenerator.Utils;
 
-namespace CovidSandbox.Tests
+namespace ReportsGenerator.Tests
 {
     public class DataTests
     {

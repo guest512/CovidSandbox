@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace CovidSandbox.Model
+namespace ReportsGenerator.Model
 {
     public readonly struct Metrics
     {
