@@ -5,13 +5,13 @@
     </PropertyGroup>
 
     <PropertyGroup>
-        <DataRootFolder>$(MSBuildThisFileDirectory)../Data</DataRootFolder>
+        <DataRootFolder>$(MSBuildThisFileDirectory)../../3rdparty/DataSources</DataRootFolder>
 
-        <BinaryOutDir>$(MSBuildThisFileDirectory)../bin/$(Configuration)</BinaryOutDir>
+        <BinaryOutDir>$(MSBuildThisFileDirectory)../../bin/$(Configuration)</BinaryOutDir>
         <BinaryTestsOutDir>$(BinaryOutDir)/Tests</BinaryTestsOutDir>
         <BinaryDataOutDir>$(BinaryOutDir)/Data</BinaryDataOutDir>
         <BinaryReportsOutDir>$(BinaryOutDir)/reports</BinaryReportsOutDir>
 
-        <ReportsDir>$(MSBuildThisFileDirectory)../ReportsProcessing/reports</ReportsDir>
+        <ReportsDir>$(MSBuildThisFileDirectory)../../ReportsProcessing/reports</ReportsDir>
     </PropertyGroup>
 </Project>

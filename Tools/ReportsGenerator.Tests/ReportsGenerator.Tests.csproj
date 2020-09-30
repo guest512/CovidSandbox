@@ -1,5 +1,5 @@
 <Project Sdk="Microsoft.NET.Sdk">
-  <Import Project="$(ProjectDir)../build/CovidSandbox.project.props" />
+  <Import Project="$(ProjectDir)../build/ReportsGenerator.project.props" />
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
@@ -13,7 +13,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\CovidSandbox\CovidSandbox.csproj" />
+    <ProjectReference Include="..\ReportsGenerator\ReportsGenerator.csproj" />
   </ItemGroup>
 
 <PropertyGroup>
