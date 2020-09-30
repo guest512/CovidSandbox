@@ -9,11 +9,11 @@ on:
 jobs:
   local_build:
     name: Local build
-    runs-on: ${{ matrix.operating-system }}
+    runs-on: ${{ matrix.os }}
     strategy:
       matrix:
-        operating-system: [ubuntu-latest, windows-latest] # For a list of available runner types, refer to 
-                                                          # https://help.github.com/en/actions/reference/workflow-syntax-for-github-actions#jobsjob_idruns-on
+        os: [ubuntu-latest, windows-latest] # For a list of available runner types, refer to 
+                                            # https://help.github.com/en/actions/reference/workflow-syntax-for-github-actions#jobsjob_idruns-on
 
     steps:
     - name: Checkout
@@ -30,11 +30,11 @@ jobs:
     # Build app and tests
     - name: Run local build script Windows
       if: contains(runner.os, 'Windows')
-      run: .\bootstrap-local.cmd
+      run: .\build-and-run-local.cmd
 
     - name: Run local build script ubuntu
       if: contains(runner.os, 'Linux')
-      run: ./bootstrap-local.sh
+      run: ./build-and-run-local.sh
       
   
   docker_build:
@@ -48,4 +48,4 @@ jobs:
         submodules: true
 
     - name: Run docker build scripts
-      run: ./bootstrap-docker.sh
+      run: ./build-and-run-docker.sh
