@@ -8,6 +8,6 @@
     </Target>
 
     <Target Name="Build">
-        <MSBuild Projects="$(ProjectDir)../Tools.sln" Targets="Restore;Clean;Build" Properties="Configuration=$(Configuration)" />
+        <MSBuild Projects="$(ProjectDir)../src/Tools.sln" Targets="Restore;Clean;Build" Properties="Configuration=$(Configuration)" />
     </Target>
 </Project>

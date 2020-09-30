@@ -79,8 +79,8 @@ FROM base_builder_dotnet as builder
 COPY Tools ./
 COPY Data bin/Data/Misc/
 
-RUN dotnet test -c:Release -p:BinaryOutDir=$PWD/bin && \
-    dotnet publish --self-contained true -c:Release -p:BinaryOutDir=$PWD/bin -p:PublishTrimmed=true -r alpine.3.11-x64 ReportsGenerator/ -v:n
+RUN dotnet test src/ -c:Release -p:BinaryOutDir=$PWD/bin && \
+    dotnet publish src/ReportsGenerator/ --self-contained true -c:Release -p:BinaryOutDir=$PWD/bin -p:PublishTrimmed=true -r alpine.3.11-x64 -v:n
 
 
 

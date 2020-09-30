@@ -63,6 +63,10 @@ function Start-Docker {
     docker run -v ${pwd}/temp:/work/Data -v ${pwd}/ReportsProcessing/reports:/work/reports --name covid_sandbox_generator_afd876 --rm covid_sandbox_generator
     Confirm-Last-Result $?
 
+    Write-Log-String("Clean temp data...")
+    Remove-Item temp -Recurse -Force
+    Confirm-Last-Result $?
+
     Write-Log-String("Run processing reports image ...")
     Stop-And-Remove-Previous-Container("covid_sandbox_processing_afd876")
     docker run -d -p 8888:8888 -v ${pwd}/ReportsProcessing:/work --name covid_sandbox_processing_afd876 covid_sandbox_processing
@@ -77,9 +81,11 @@ function Build-Local {
     dotnet.exe msbuild Tools/build/build.proj /t:"Build;PrepareData" /p:Configuration=Release
     Confirm-Last-Result $?
 
-    dotnet.exe test Tools --no-build -c:Release
+    dotnet.exe test Tools/src --no-build -c:Release
     Confirm-Last-Result $?
+}
 
+function Start-Local {
     Write-Log-String("Run util to convert reports")
     Set-Location ./bin/Release
     dotnet.exe .\ReportsGenerator.dll
@@ -92,23 +98,24 @@ function Build-Local {
     Copy-Item .\bin\Release\reports .\ReportsProcessing -Recurse -Force
 }
 
-if ($Docker) {
-    if (!$RunOnly) {
+if(!$RunOnly){
+    if($Docker){
         Build-Docker
     }
-
-    if (Test-Path ${PSScriptRoot}/../ReportsProcessing/reports) {
-        Write-Log-String("Remove previous reports...")
-        Remove-Item ${PSScriptRoot}/../ReportsProcessing/reports -Recurse -Force
-        Confirm-Last-Result $?
+    else {
+        Build-Local
     }
+}
 
-    Start-Docker
-
-    Write-Log-String("Clean temp data...")
-    Remove-Item temp -Recurse -Force
+if (Test-Path ${PSScriptRoot}/../ReportsProcessing/reports) {
+    Write-Log-String("Remove previous reports...")
+    Remove-Item ${PSScriptRoot}/../ReportsProcessing/reports -Recurse -Force
     Confirm-Last-Result $?
 }
+
+if ($Docker) {
+    Start-Docker
+}
 else {
-    Build-Local
+    Start-Local
 }
