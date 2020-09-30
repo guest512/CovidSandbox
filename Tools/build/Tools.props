@@ -5,13 +5,14 @@
     </PropertyGroup>
 
     <PropertyGroup>
-        <DataRootFolder>$(MSBuildThisFileDirectory)../../3rdparty/DataSources</DataRootFolder>
+        <DataSourcesRootFolder Condition="'$(DataSourcesRootFolder)' == ''">$(MSBuildThisFileDirectory)../../3rdparty/DataSources</DataSourcesRootFolder>
+        <DataRootFolder Condition="'$(DataRootFolder)' == ''">$(MSBuildThisFileDirectory)../../Data</DataRootFolder>
 
-        <BinaryOutDir>$(MSBuildThisFileDirectory)../../bin/$(Configuration)</BinaryOutDir>
-        <BinaryTestsOutDir>$(BinaryOutDir)/Tests</BinaryTestsOutDir>
-        <BinaryDataOutDir>$(BinaryOutDir)/Data</BinaryDataOutDir>
-        <BinaryReportsOutDir>$(BinaryOutDir)/reports</BinaryReportsOutDir>
+        <BinaryOutDir Condition="'$(BinaryOutDir)' == ''">$(MSBuildThisFileDirectory)../../bin/$(Configuration)</BinaryOutDir>
+        <BinaryTestsOutDir Condition="'$(BinaryTestsOutDir)' == ''">$(BinaryOutDir)/Tests</BinaryTestsOutDir>
+        <BinaryDataOutDir Condition="'$(BinaryDataOutDir)' == ''">$(BinaryOutDir)/Data</BinaryDataOutDir>
+        <BinaryReportsOutDir Condition="'$(BinaryReportsOutDir)' == ''">$(BinaryOutDir)/reports</BinaryReportsOutDir>
 
-        <ReportsDir>$(MSBuildThisFileDirectory)../../ReportsProcessing/reports</ReportsDir>
+        <ReportsDir Condition="'$(ReportsDir)' == ''">$(MSBuildThisFileDirectory)../../ReportsProcessing/reports</ReportsDir>
     </PropertyGroup>
 </Project>

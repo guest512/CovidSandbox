@@ -3,6 +3,8 @@ param (
     [switch] $RunOnly
 )
 
+Set-Location ${PSScriptRoot}/..
+
 function Write-Log-String ($stringToWrite) {
     Write-Host $stringToWrite -ForegroundColor DarkBlue
 }
@@ -54,10 +56,12 @@ function Build-Docker {
 
 function Start-Docker {
     Write-Log-String("Prepare data ...")
-    docker run -v ${pwd}/Data:/work/Data -v ${pwd}/Data/temp:/work/bin/Release/Data --name covid_sandbox_prepare_afd876 --rm covid_sandbox_prepare
+    docker run -v ${pwd}/3rdparty/DataSources:/work/dataSources -v ${pwd}/Data:/work/data -v ${pwd}/temp:/work/out --name covid_sandbox_prepare_afd876 --rm covid_sandbox_prepare
+    Confirm-Last-Result $?
 
     Write-Log-String("Generate reports...")
-    docker run -v ${pwd}/Data/temp:/work/Data -v ${pwd}/ReportsProcessing/reports:/work/reports --name covid_sandbox_generator_afd876 --rm covid_sandbox_generator
+    docker run -v ${pwd}/temp:/work/Data -v ${pwd}/ReportsProcessing/reports:/work/reports --name covid_sandbox_generator_afd876 --rm covid_sandbox_generator
+    Confirm-Last-Result $?
 
     Write-Log-String("Run processing reports image ...")
     Stop-And-Remove-Previous-Container("covid_sandbox_processing_afd876")
@@ -70,18 +74,18 @@ function Start-Docker {
 
 function Build-Local {
     Write-Log-String("Build util for reports conversion")
-    dotnet.exe msbuild .\build\build.proj /t:"Build;PrepareData" /p:Configuration=Release
+    dotnet.exe msbuild Tools/build/build.proj /t:"Build;PrepareData" /p:Configuration=Release
     Confirm-Last-Result $?
 
-    dotnet.exe test --no-build -c:Release
+    dotnet.exe test Tools --no-build -c:Release
     Confirm-Last-Result $?
 
     Write-Log-String("Run util to convert reports")
-    Set-Location .\bin\Release
-    dotnet.exe .\CovidSandbox.dll
+    Set-Location ./bin/Release
+    dotnet.exe .\ReportsGenerator.dll
     Confirm-Last-Result $?
 
-    Set-Location ..\..
+    Set-Location ${PSScriptRoot}/..
 
     Write-Log-String("Copy reports to reports processing folder")
     New-Item .\ReportsProcessing\ -Name "reports" -ItemType "directory" -Force
@@ -93,11 +97,17 @@ if ($Docker) {
         Build-Docker
     }
 
-    Write-Log-String("Remove previous reports...")
-    Remove-Item .\ReportsProcessing\reports -Recurse -Force
+    if (Test-Path ${PSScriptRoot}/../ReportsProcessing/reports) {
+        Write-Log-String("Remove previous reports...")
+        Remove-Item ${PSScriptRoot}/../ReportsProcessing/reports -Recurse -Force
+        Confirm-Last-Result $?
+    }
+
     Start-Docker
+
     Write-Log-String("Clean temp data...")
-    Remove-Item .\Data\temp -Recurse -Force
+    Remove-Item temp -Recurse -Force
+    Confirm-Last-Result $?
 }
 else {
     Build-Local

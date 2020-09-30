@@ -42,7 +42,11 @@ ADD https://github.com/krallin/tini/releases/download/${TINI_VERSION}/tini /usr/
 RUN chmod +x /usr/bin/tini
 ENTRYPOINT ["/usr/bin/tini", "--"]
 
-CMD ["jupyter", "notebook", "--port=8888", "--no-browser", "--ip=0.0.0.0", "--allow-root", "--NotebookApp.token='my_secure_token'", "--NotebookApp.password=''"]
+CMD [ \
+    "jupyter", "notebook", "--port=8888", "--ip=0.0.0.0", \
+    "--no-browser", "--allow-root", \
+    "--NotebookApp.token='my_secure_token'", "--NotebookApp.password=''" \
+    ]
 
 
 
@@ -58,12 +62,13 @@ RUN ./dotnet-install.sh -c Current -InstallDir $dotnet_install_dir
 
 FROM base_builder_dotnet as data_preparation
 
-VOLUME [ "/work/Data" ]
-VOLUME [ "/work/bin/Release/Data" ]
+VOLUME [ "/work/dataSources", "/work/data", "/work/out" ]
+COPY Tools/build ./
 
-COPY build build/
-
-CMD [ "dotnet", "msbuild", "./build/build.proj", "/t:PrepareData", "/p:Configuration=Release" ]
+CMD dotnet msbuild build.proj /t:PrepareData \
+    /p:DataSourcesRootFolder=$PWD/dataSources \
+    /p:DataRootFolder=$PWD/data \
+    /p:BinaryDataOutDir=$PWD/out
 
 
 
@@ -71,22 +76,19 @@ CMD [ "dotnet", "msbuild", "./build/build.proj", "/t:PrepareData", "/p:Configura
 
 FROM base_builder_dotnet as builder
 
-COPY build build/
-COPY CovidSandbox CovidSandbox/
-COPY CovidSandbox.Tests CovidSandbox.Tests/
-COPY CovidSandbox.sln ./
-COPY Data/Misc bin/Release/Data/Misc/
+COPY Tools ./
+COPY Data bin/Data/Misc/
 
-RUN dotnet test -c:Release && dotnet publish --self-contained true -c:Release -p:PublishTrimmed=true -r alpine.3.11-x64 CovidSandbox/ -v:n
+RUN dotnet test -c:Release -p:BinaryOutDir=$PWD/bin && \
+    dotnet publish --self-contained true -c:Release -p:BinaryOutDir=$PWD/bin -p:PublishTrimmed=true -r alpine.3.11-x64 ReportsGenerator/ -v:n
 
 
 
 
 FROM base_builder as reports_generator
 
-VOLUME [ "/work/Data" ]
-VOLUME [ "/work/reports" ]
+VOLUME [ "/work/Data" , "/work/reports" ]
 
-COPY --from=builder work/bin/Release/alpine.3.11-x64/publish .
+COPY --from=builder work/bin/alpine.3.11-x64/publish .
 
-CMD ["./CovidSandbox"]
+CMD ["./ReportsGenerator"]
