@@ -30,10 +30,10 @@ git clone --recursive --jobs 8 [URL to Git repo]
 ```
 
 There are four scripts for each platform:
-- build-and-run-local - builds all necessary tools and runs them. After the script finish, go to the ReportsProcessing folder and open (create new) a jupyter workbook to process the results.
-- build-and-run-docker - creates all necessary containers and runs them. After the script finish, open a link from the script output and open (create new) a jupyter workbook to process the results.
-- run-local - same as `build-and-run-local` but don't build anything. Useful when you update data source and want to regenerate/update reports.
-- run-docker - same as previous but for docker containers.
+- `build-and-run-local` - builds all necessary tools and runs them. After the script finish, go to the ReportsProcessing folder and open (create new) a jupyter workbook to process the results.
+- `build-and-run-docker` - creates all necessary containers and runs them. After the script finish, open a link from the script output and open (create new) a jupyter workbook to process the results.
+- `run-local` - same as `build-and-run-local` but don't build anything. Useful when you update data source and want to regenerate/update reports.
+- `run-docker` - same as previous but for docker containers.
 
 
 There are two data sources for the moment:
