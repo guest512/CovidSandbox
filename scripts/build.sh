@@ -54,7 +54,7 @@ function build_docker() {
     docker build --target data_preparation -t covid_sandbox_prepare:$today -t covid_sandbox_prepare:latest .
     check_result $?
 
-    logmessage 'Reports generator image...'
+    log_message 'Reports generator image...'
     docker build --target reports_generator -t covid_sandbox_generator:$today -t covid_sandbox_generator:latest .
     check_result $?
 
@@ -73,8 +73,6 @@ function start_docker() {
     check_result $?
 
     log_message 'Clean temp data...'
-    ls -l  $PWD/temp
-    chown -R root $PWD/temp
     rm -rf $PWD/temp
     check_result $?
 
@@ -84,7 +82,14 @@ function start_docker() {
     sleep 1
     log_message 'Image started'
 
+    printf '\n'
+    log_message '========================================================================================='
+    printf '\n'
     log_message 'Server is available on the following address: http://127.0.0.1:8888?token=my_secure_token'
+    printf '\n'
+    log_message '========================================================================================='
+    printf '\n'
+    printf '\n'
 }
 
 function build_local() {
