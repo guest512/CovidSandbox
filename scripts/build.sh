@@ -65,8 +65,11 @@ function build_docker() {
 
 function start_docker() {
     log_message 'Prepare data ...'
-    docker run -v $PWD/3rdparty/DataSources:/work/dataSources -v $PWD/Data:/work/data -v $PWD/temp:/work/out --name covid_sandbox_prepare_afd876 --rm covid_sandbox_prepare
-    check_result $?
+    docker run -v $PWD/3rdparty/DataSources:/work/dataSources -v $PWD/Data:/work/data  --name covid_sandbox_prepare_afd876 covid_sandbox_prepare
+    res=$?
+    docker cp covid_sandbox_prepare_afd876:/work/out $PWD/temp
+    docker rm covid_sandbox_prepare_afd876
+    check_result res
 
     log_message 'Generate reports...'
     docker run -v $PWD/temp:/work/Data -v $PWD/ReportsProcessing/reports:/work/reports --name covid_sandbox_generator_afd876 --rm covid_sandbox_generator

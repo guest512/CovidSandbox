@@ -62,7 +62,7 @@ RUN ./dotnet-install.sh -c Current -InstallDir $dotnet_install_dir
 
 FROM base_builder_dotnet as data_preparation
 
-VOLUME [ "/work/dataSources", "/work/data", "/work/out" ]
+VOLUME [ "/work/dataSources", "/work/data" ]
 COPY Tools/build ./
 
 CMD dotnet msbuild build.proj /t:PrepareData \

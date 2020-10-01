@@ -56,7 +56,10 @@ function Build-Docker {
 
 function Start-Docker {
     Write-Log-String("Prepare data ...")
-    docker run -v ${pwd}/3rdparty/DataSources:/work/dataSources -v ${pwd}/Data:/work/data -v ${pwd}/temp:/work/out --name covid_sandbox_prepare_afd876 --rm covid_sandbox_prepare
+    docker run -v ${pwd}/3rdparty/DataSources:/work/dataSources -v ${pwd}/Data:/work/data --name covid_sandbox_prepare_afd876 covid_sandbox_prepare
+    $res=$?
+    docker cp covid_sandbox_prepare_afd876:/work/out ${pwd}/temp
+    docker rm covid_sandbox_prepare_afd876
     Confirm-Last-Result $?
 
     Write-Log-String("Generate reports...")
