@@ -7,7 +7,7 @@ ENV PATH=$PATH:$dotnet_install_dir
 ENV DOTNET_CLI_TELEMETRY_OPTOUT=1
 
 WORKDIR /work
-# Dependencies list can be found here https://docs.microsoft.com/ru-ru/dotnet/core/install/linux-alpine#dependencies
+# Dependencies list for .NET SDK can be found here https://docs.microsoft.com/ru-ru/dotnet/core/install/linux-alpine#dependencies
 RUN apk add --no-cache bash wget icu-libs krb5-libs libgcc libintl openssl-dev libstdc++ zlib
 
 RUN wget https://dot.net/v1/dotnet-install.sh \
@@ -54,7 +54,7 @@ CMD [ \
 
 FROM base_builder as base_builder_dotnet
 
-RUN ./dotnet-install.sh -c Current -InstallDir $dotnet_install_dir
+RUN ./dotnet-install.sh -c LTS -InstallDir $dotnet_install_dir
 
 
 

@@ -51,7 +51,7 @@ namespace ReportsGenerator
                             $"{confirmed},{active},{recovered},{deaths}," +
                             $"{confirmedChange},{activeChange},{recoveredChange},{deathsChange}," +
                             $"{rt.ToString("00.00000000", CultureInfo.InvariantCulture)}," +
-                            $"{ttr:###########0}");
+                            $"{ttr.ToString("###########0", CultureInfo.InvariantCulture)}");
                     }
                 }
 
@@ -73,7 +73,7 @@ namespace ReportsGenerator
                         $"{confirmed},{active},{recovered},{deaths}," +
                         $"{confirmedChange},{activeChange},{recoveredChange},{deathsChange}," +
                         $"{rt.ToString("00.00000000", CultureInfo.InvariantCulture)}," +
-                        $"{ttr:###########0}");
+                        $"{ttr.ToString("###########0", CultureInfo.InvariantCulture)}");
                 }
             });
         }
