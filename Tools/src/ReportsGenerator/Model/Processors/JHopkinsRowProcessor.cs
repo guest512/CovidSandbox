@@ -2,7 +2,7 @@
 using System.IO;
 using System.Linq;
 using System.Text.RegularExpressions;
-using ReportsGenerator.Data;
+using ReportsGenerator.Data.DataSources;
 using ReportsGenerator.Utils;
 
 namespace ReportsGenerator.Model.Processors

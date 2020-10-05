@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 
-namespace ReportsGenerator.Data
+namespace ReportsGenerator.Data.DataSources
 {
     public class Row
     {

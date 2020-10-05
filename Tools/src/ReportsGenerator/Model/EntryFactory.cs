@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using ReportsGenerator.Data;
+using ReportsGenerator.Data.DataSources;
 using ReportsGenerator.Model.Processors;
 using ReportsGenerator.Utils;
 

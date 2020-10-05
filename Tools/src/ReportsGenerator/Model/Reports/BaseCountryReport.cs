@@ -5,19 +5,23 @@ using ReportsGenerator.Model.Reports.Intermediate;
 
 namespace ReportsGenerator.Model.Reports
 {
-    public abstract class BaseReport
+    public abstract class BaseCountryReport
     {
         protected readonly LinkedReport Head;
 
         private Dictionary<DateTime, double>? _timeToResolve;
 
-        protected BaseReport(LinkedReport head, string name)
+        protected BaseCountryReport(LinkedReport head, string name)
         {
             Head = head;
             Name = name;
+            AvailableDates = Head.GetAvailableDates().GetContinuousDateRange()
+                .ToArray();
         }
 
         public string Name { get; }
+
+        public IEnumerable<DateTime> AvailableDates { get; }
 
         private Dictionary<DateTime, double> TimeToResolve => _timeToResolve ??= new Dictionary<DateTime, double>(GetTimeToResolveCollection());
 

@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Diagnostics;
 using System.Globalization;
-using ReportsGenerator.Data;
+using ReportsGenerator.Data.DataSources;
 using ReportsGenerator.Utils;
 
 namespace ReportsGenerator.Model.Processors

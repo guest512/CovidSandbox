@@ -6,7 +6,7 @@ namespace ReportsGenerator.Model
 {
     public static class Utils
     {
-        public static IEnumerable<DateTime> GetContinuousDateRange(IEnumerable<DateTime> dates)
+        public static IEnumerable<DateTime> GetContinuousDateRange(this IEnumerable<DateTime> dates)
         {
             dates = dates.ToArray();
             var minDate = dates.Min();

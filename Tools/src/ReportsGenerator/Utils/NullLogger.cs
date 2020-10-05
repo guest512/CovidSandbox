@@ -1,13 +1,11 @@
-﻿using ReportsGenerator.Utils;
-
-namespace ReportsGenerator.Tests
+﻿namespace ReportsGenerator.Utils
 {
-    class NullLogger : ILogger
+    public class NullLogger : ILogger
     {
         public int Indentation { get; } = 0;
+
         public void IndentDecrease()
         {
-            
         }
 
         public void IndentIncrease()

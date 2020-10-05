@@ -5,14 +5,11 @@ using ReportsGenerator.Model.Reports.Intermediate;
 
 namespace ReportsGenerator.Model.Reports
 {
-    public class RegionReport : BaseReport
+    public class RegionReport : BaseCountryReport
 
     {
         public RegionReport(string name, LinkedReport head) : base(head, name)
         {
-            AvailableDates = Utils.GetContinuousDateRange(Head.GetAvailableDates()).ToArray();
         }
-
-        public IEnumerable<DateTime> AvailableDates { get; }
     }
 }

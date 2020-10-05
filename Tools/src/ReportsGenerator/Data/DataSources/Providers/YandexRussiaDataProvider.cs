@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 
-namespace ReportsGenerator.Data.Providers
+namespace ReportsGenerator.Data.DataSources.Providers
 {
     public class YandexRussiaDataProvider : IDataProvider
     {

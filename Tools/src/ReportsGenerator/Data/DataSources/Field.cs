@@ -1,4 +1,4 @@
-﻿namespace ReportsGenerator.Data
+﻿namespace ReportsGenerator.Data.DataSources
 {
     public enum Field
     {

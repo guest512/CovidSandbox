@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace ReportsGenerator.Data.Providers
+namespace ReportsGenerator.Data.DataSources.Providers
 {
     public interface IDataProvider
     {

@@ -2,7 +2,8 @@ using System;
 using System.Collections.Generic;
 using NUnit.Framework;
 using ReportsGenerator.Data;
-using ReportsGenerator.Data.Providers;
+using ReportsGenerator.Data.DataSources;
+using ReportsGenerator.Data.DataSources.Providers;
 using ReportsGenerator.Utils;
 
 namespace ReportsGenerator.Tests

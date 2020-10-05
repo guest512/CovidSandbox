@@ -1,5 +1,5 @@
 ﻿using System;
-using ReportsGenerator.Data;
+using ReportsGenerator.Data.DataSources;
 
 namespace ReportsGenerator.Model.Processors
 {

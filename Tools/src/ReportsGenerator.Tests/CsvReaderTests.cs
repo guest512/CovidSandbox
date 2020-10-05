@@ -1,9 +1,11 @@
-﻿using System.Collections.Generic;
+﻿using NUnit.Framework;
+using ReportsGenerator.Utils;
+using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using NUnit.Framework;
 using ReportsGenerator.Data;
-using ReportsGenerator.Data.Providers;
+using ReportsGenerator.Data.DataSources;
+using ReportsGenerator.Data.DataSources.Providers;
 
 namespace ReportsGenerator.Tests
 {
