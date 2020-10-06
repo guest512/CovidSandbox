@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using NUnit.Framework;
 using ReportsGenerator.Data;
 using ReportsGenerator.Data.DataSources;
@@ -20,7 +21,80 @@ namespace ReportsGenerator.Tests
         public void ValidateJHopkinsVersionStrings(string header, RowVersion version)
         {
             var provider = new JHopkinsDataProvider();
-            Assert.That(provider.GetVersion(CsvReader.SplitRowString(header)), Is.EqualTo(version));
+            Assert.That(provider.GetVersion(header.SplitRowString()), Is.EqualTo(version));
+        }
+
+        [Test]
+        [TestCaseSource(nameof(SpliRowStringSource))]
+        public void ValidateSplitRowStrings(KeyValuePair<string, string[]> row)
+        {
+            var splittedRow = row.Key.SplitRowString().ToArray();
+
+            CollectionAssert.AreEqual(row.Value,splittedRow);
+        }
+
+        public static IEnumerable<KeyValuePair<string, string[]>> SpliRowStringSource()
+        {
+            yield return new KeyValuePair<string, string[]>
+            (
+                "Province,Last Update,Confirmed,Deaths,Recovered",
+                new[] {"Province", "Last Update", "Confirmed", "Deaths", "Recovered"}
+            );
+
+            yield return new KeyValuePair<string, string[]>
+            (
+                "FIPS,Admin2,Province_State,Country_Region,Last_Update,Lat,Long_,Confirmed,Deaths,Recovered,Active,Combined_Key,Incidence_Rate,Case-Fatality_Ratio",
+                new[]
+                {
+                    "FIPS", "Admin2", "Province_State", "Country_Region", "Last_Update", "Lat", "Long_", "Confirmed",
+                    "Deaths", "Recovered", "Active", "Combined_Key", "Incidence_Rate", "Case-Fatality_Ratio"
+                }
+            );
+
+            yield return new KeyValuePair<string, string[]>
+            (
+                "09.03.2020,Калининградская обл.,1,0,0,0,0,0",
+                new[]
+                {
+                    "09.03.2020", "Калининградская обл.", "1", "0", "0", "0", "0", "0"
+                }
+            );
+
+            yield return new KeyValuePair<string, string[]>
+            (
+                "Anhui,Mainland China,1/23/20 17:00,9,,",
+                new[]
+                {
+                    "Anhui", "Mainland China", "1/23/20 17:00", "9", string.Empty, string.Empty
+                }
+            );
+
+            yield return new KeyValuePair<string, string[]>
+            (
+                ",Japan,1/23/20 17:00,1,,",
+                new[]
+                {
+                    string.Empty, "Japan", "1/23/20 17:00", "1", string.Empty, string.Empty
+                }
+            );
+
+            yield return new KeyValuePair<string, string[]>
+            (
+                "\"Washington, D.C.\",US,2020-03-08T13:53:03,2,0,0,38.9072,-77.0369",
+                new[]
+                {
+                    "Washington, D.C.", "US", "2020-03-08T13:53:03", "2", "0", "0", "38.9072", "-77.0369",
+                }
+            );
+
+            yield return new KeyValuePair<string, string[]>
+            (
+                "\"Travis, CA (From Diamond Princess)\",US,2020-02-24T23:33:02,0,0,0,38.2721,-121.9399",
+                new[]
+                {
+                    "Travis, CA (From Diamond Princess)", "US", "2020-02-24T23:33:02", "0", "0", "0", "38.2721", "-121.9399",
+                }
+            );
         }
 
         [Test]
@@ -56,16 +130,6 @@ namespace ReportsGenerator.Tests
         public void ValidateDateParserUnsupportedDate()
         {
             Assert.That(() => Convertors.ParseDate(DateTime.Now.ToShortTimeString()), Throws.Exception);
-        }
-
-        [Test]
-        [TestCase("Test", "Test")]
-        //[TestCase(null, "")] // Seems like an invalid test case
-        [TestCase("", "")]
-        [TestCase("Test, Test", "\"Test, Test\"")]
-        public void ValidateToCsvString(string input, string expected)
-        {
-            Assert.That(input.ToCsvString(), Is.EqualTo(expected));
         }
     }
 }

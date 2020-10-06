@@ -4,7 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Globalization;
 
-namespace ReportsGenerator.Data.IO
+namespace ReportsGenerator.Data
 {
     public class StringReportFormatter : IReportFormatter
     {

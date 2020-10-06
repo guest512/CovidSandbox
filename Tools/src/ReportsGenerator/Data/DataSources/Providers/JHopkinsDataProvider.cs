@@ -75,9 +75,9 @@ namespace ReportsGenerator.Data.DataSources.Providers
             return _versionFieldsDictionary.ContainsKey(version) ? _versionFieldsDictionary[version] : Enumerable.Empty<Field>();
         }
 
-        public RowVersion GetVersion(string[] header)
+        public RowVersion GetVersion(IEnumerable<string> header)
         {
-            var headersCount = header.Length;
+            var headersCount = header.Count();
 
             var (rowVersion, fields) = _versionFieldsDictionary
                 .FirstOrDefault(_ => headersCount == _.Value.Count() && ValidateColumnsOrder(_.Key, header));

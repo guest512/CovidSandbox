@@ -1,8 +1,8 @@
-﻿using ReportsGenerator.Model.Reports;
-using System;
+﻿using System;
 using System.Collections.Generic;
+using ReportsGenerator.Model.Reports;
 
-namespace ReportsGenerator.Data.IO
+namespace ReportsGenerator.Data
 {
     public interface IReportFormatter
     {

@@ -1,9 +1,8 @@
-﻿using System.Collections.Generic;
+﻿using ReportsGenerator.Data.DataSources;
+using ReportsGenerator.Utils;
+using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Text.RegularExpressions;
-using ReportsGenerator.Data.DataSources;
-using ReportsGenerator.Utils;
 
 namespace ReportsGenerator.Model.Processors
 {
@@ -12,7 +11,7 @@ namespace ReportsGenerator.Model.Processors
         private readonly Dictionary<string, string> _canadaStates;
         private readonly string _filesPath;
         private readonly Dictionary<string, string> _russianRegions;
-        private readonly Regex _stateCountyRegex = new Regex(@"^([\w\s]+?), (\w\w)$");
+
         private readonly Dictionary<string, string> _usStates;
 
         public JHopkinsRowProcessor(ILogger logger) : this("Data/Misc", logger)
@@ -147,18 +146,35 @@ namespace ReportsGenerator.Model.Processors
                 _ when countryRowValue == provinceRowValue => Consts.MainCountryRegion,
 
                 _ when countryRowValue == "Russia" => _russianRegions[provinceRowValue],
+
+                "Virgin Islands, U.S." => "Virgin Islands",
                 _ when countryRowValue == "US" => GetUsProvinceName(provinceRowValue),
+
                 _ when countryRowValue == "Canada" => GetCanadaProvinceName(provinceRowValue),
 
                 _ => provinceRowValue
             };
         }
 
-        private string GetCanadaProvinceName(string provinceRowValue)
+        private static bool TrySplitStateToStateCounty(string provinceRow, out string county, out string state)
         {
-            var match = _stateCountyRegex.Match(provinceRowValue);
-            return match.Success ? _canadaStates[match.Groups[2].Value] : provinceRowValue;
+            var values = provinceRow.Split(',');
+
+            if (values.Length == 2)
+            {
+                county = values[0].Trim();
+                state = values[1].Trim();
+                return true;
+            }
+
+            county = state = string.Empty;
+            return false;
         }
+
+        private string GetCanadaProvinceName(string provinceRowValue) =>
+                    TrySplitStateToStateCounty(provinceRowValue, out _, out var state)
+                ? state.Length == 2 ? _canadaStates[state] : state
+                : provinceRowValue;
 
         private Dictionary<string, string> GetCountryStatesRegions(string filename)
         {
@@ -175,21 +191,18 @@ namespace ReportsGenerator.Model.Processors
 
         private string GetCountyName(string provinceRowValue, string countyRowValue)
         {
-            var match = _stateCountyRegex.Match(provinceRowValue);
-            if (!match.Success)
+            if (!TrySplitStateToStateCounty(provinceRowValue, out var county, out _))
                 return countyRowValue;
 
-            var countyFromProvince = match.Groups[1].Value.Trim();
-            if (countyFromProvince.EndsWith(" County"))
-                countyFromProvince = countyFromProvince[..^7];
+            if (county.EndsWith(" County"))
+                county = county[..^7];
 
-            return countyFromProvince;
+            return county;
         }
 
-        private string GetUsProvinceName(string provinceRowValue)
-        {
-            var match = _stateCountyRegex.Match(provinceRowValue);
-            return match.Success ? _usStates[match.Groups[2].Value] : provinceRowValue;
-        }
+        private string GetUsProvinceName(string provinceRowValue) =>
+            TrySplitStateToStateCounty(provinceRowValue, out _, out var state)
+                ? _usStates[state]
+                : provinceRowValue;
     }
 }

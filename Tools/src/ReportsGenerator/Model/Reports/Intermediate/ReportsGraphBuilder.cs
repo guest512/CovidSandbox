@@ -168,7 +168,9 @@ namespace ReportsGenerator.Model.Reports.Intermediate
 
         private bool AssertReports(IEnumerable<LinkedReportWithParent> allReports)
         {
-            return true;
+            if (Consts.DisableExtensiveAssertMethods)
+                return true;
+
             var res = 1;
             var reports = allReports.ToArray();
 

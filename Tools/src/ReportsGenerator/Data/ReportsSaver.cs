@@ -31,7 +31,7 @@ namespace ReportsGenerator.Data
 
         public void WriteReport(DayReport report)
         {
-            _logger.WriteInfo($"Write day: {report.Day:dd-mm-yyyy}");
+            _logger.WriteInfo($"Write day: {report.Day:dd-MM-yyyy}");
             IReportDataWriter writer = _storage.GetWriter(_formatter.GetName(report), WriterType.Day);
 
             try
@@ -39,7 +39,7 @@ namespace ReportsGenerator.Data
                 writer.WriteHeader(_formatter.GetHeader(report));
                 foreach (var country in report.AvailableCountries)
                 {
-                    _logger.WriteInfo($"Write day: {report.Day:dd-mm-yyyy} - {country}");
+                    _logger.WriteInfo($"Write day: {report.Day:dd-MM-yyyy} - {country}");
                     writer.WriteDataLine(_formatter.GetData(report, country));
                 }
             }
@@ -51,21 +51,14 @@ namespace ReportsGenerator.Data
 
         private void WriteReport(BaseCountryReport report, string? parent)
         {
-            IReportDataWriter writer = _storage.GetWriter(
+            using var writer = _storage.GetWriter(
                 _formatter.GetName(report, parent),
                 string.IsNullOrEmpty(parent) ? WriterType.Country : WriterType.Province);
 
-            try
+            writer.WriteHeader(_formatter.GetHeader(report));
+            foreach (var day in report.AvailableDates)
             {
-                writer.WriteHeader(_formatter.GetHeader(report));
-                foreach (var day in report.AvailableDates)
-                {
-                    writer.WriteDataLine(_formatter.GetData(report, day));
-                }
-            }
-            finally
-            {
-                writer.Close();
+                writer.WriteDataLine(_formatter.GetData(report, day));
             }
         }
     }

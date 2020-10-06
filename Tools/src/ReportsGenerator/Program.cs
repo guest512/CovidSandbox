@@ -1,12 +1,10 @@
 ﻿using ReportsGenerator.Data;
 using ReportsGenerator.Data.DataSources;
-using ReportsGenerator.Data.DataSources.Providers;
 using ReportsGenerator.Data.IO;
 using ReportsGenerator.Model;
 using ReportsGenerator.Model.Processors;
 using ReportsGenerator.Utils;
 using System;
-using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -16,18 +14,21 @@ namespace ReportsGenerator
 {
     internal static class Program
     {
-        private static Dictionary<RowVersion, IDataProvider> GetDataProviders()
+        private static string GetDataFolder<T>() where T : IDataSource
         {
-            var jHopkinsProvider = new JHopkinsDataProvider();
-            var dataProviders = new Dictionary<RowVersion, IDataProvider>
+            const string dataRoot = "Data";
+
+            if (typeof(T) == typeof(JHopkinsDataSource))
             {
-                {RowVersion.JHopkinsV1, jHopkinsProvider},
-                {RowVersion.JHopkinsV2, jHopkinsProvider},
-                {RowVersion.JHopkinsV3, jHopkinsProvider},
-                {RowVersion.JHopkinsV4, jHopkinsProvider},
-                {RowVersion.YandexRussia, new YandexRussiaDataProvider()}
-            };
-            return dataProviders;
+                return Path.Combine(dataRoot, "JHopkins");
+            }
+
+            if (typeof(T) == typeof(YandexRussiaDataSource))
+            {
+                return Path.Combine(dataRoot, "Yandex");
+            }
+
+            throw new ArgumentOutOfRangeException(nameof(T));
         }
 
         private static Dictionary<RowVersion, IRowProcessor> GetRowProcessors(ILogger logger)
@@ -46,7 +47,7 @@ namespace ReportsGenerator
             return rowProcessors;
         }
 
-        private static void Main(string[] args)
+        private static async Task Main(string[] args)
         {
             var logger = new ConsoleLogger();
             try
@@ -55,28 +56,34 @@ namespace ReportsGenerator
 
                 var argsParser = new ArgsParser(args, logger);
 
-                var dataProviders = GetDataProviders();
-                var rowProcessors = GetRowProcessors(logger);
+                var parsedData = new List<Entry>();
 
-                var parsedData = new ConcurrentBag<Entry>();
-                var csvReader = new CsvReader(dataProviders, logger);
-                var entryFactory = new EntryFactory(rowProcessors, logger);
-
+                var entryFactory = new EntryFactory(GetRowProcessors(logger), logger);
                 var reportsSaver = new ReportsSaver(new StringReportFormatter(), new CsvFileReportStorage(argsParser.ReportsDir, true), new NullLogger());
+                var reportsGen = new Model.Reports.ReportsGenerator(logger);
+
+                var dataSources = new IDataSource[]
+                {
+                    new JHopkinsDataSource(GetDataFolder<JHopkinsDataSource>(), logger),
+                    new YandexRussiaDataSource(GetDataFolder<YandexRussiaDataSource>(), logger)
+                };
 
                 logger.WriteInfo("Reading raw data...");
                 logger.IndentIncrease();
-                Parallel.ForEach(Directory.EnumerateFiles(Folders.GetDataFolder<JHopkinsDataProvider>(), "*.csv"),
-                    file => ReadFile(file, true, logger, csvReader, parsedData, entryFactory));
 
-                ReadFile(Path.Combine(Folders.GetDataFolder<YandexRussiaDataProvider>(), "Russia.csv"), false, logger, csvReader, parsedData, entryFactory);
+                foreach (var ds in dataSources)
+                {
+                    await foreach (var row in ds.GetReader().GetRowsAsync(entryFactory.CreateEntry))
+                    {
+                        parsedData.Add(row);
+                    }
+                }
 
                 logger.IndentDecrease();
 
                 logger.WriteInfo("Initialize reports generator...");
                 logger.IndentIncrease();
 
-                var reportsGen = new Model.Reports.ReportsGenerator(logger);
                 reportsGen.AddEntries(parsedData);
 
                 logger.IndentDecrease();
@@ -101,17 +108,6 @@ namespace ReportsGenerator
             finally
             {
                 logger.Dispose();
-            }
-        }
-
-        private static void ReadFile(string filePath, bool fileNameIsDate, ILogger logger, CsvReader csvReader, ConcurrentBag<Entry> parsedData, EntryFactory entryFactory)
-        {
-            logger.WriteInfo($"--Processing file: {Path.GetFileName(filePath)}");
-            using var fs = File.OpenText(filePath);
-
-            foreach (var row in csvReader.Read(fs, fileNameIsDate ? Path.GetFileNameWithoutExtension(filePath) : string.Empty))
-            {
-                parsedData.Add(entryFactory.CreateEntry(row));
             }
         }
     }

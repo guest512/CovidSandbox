@@ -6,6 +6,6 @@ namespace ReportsGenerator.Data.DataSources.Providers
     {
         IEnumerable<Field> GetFields(RowVersion version);
 
-        RowVersion GetVersion(string[] header);
+        RowVersion GetVersion(IEnumerable<string> header);
     }
 }

@@ -22,14 +22,14 @@ namespace ReportsGenerator.Data.DataSources.Providers
                 ? _headerFields
                 : Enumerable.Empty<Field>();
 
-        public RowVersion GetVersion(string[] header)
+        public RowVersion GetVersion(IEnumerable<string> header)
         {
             var headerEnumerator = header.GetEnumerator();
             using var fieldsEnumerator = _headerFields.GetEnumerator();
 
             while (headerEnumerator.MoveNext() && fieldsEnumerator.MoveNext())
             {
-                if ((string)headerEnumerator.Current! != FieldToString(fieldsEnumerator.Current))
+                if (headerEnumerator.Current! != FieldToString(fieldsEnumerator.Current))
                     return RowVersion.Unknown;
             }
 
