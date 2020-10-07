@@ -13,16 +13,19 @@ namespace ReportsGenerator.Data.IO
         public CsvFileReader(string path)
         {
             _path = path;
+            Name = Path.GetFileNameWithoutExtension(_path);
         }
+
+        public string Name { get; }
 
         private string[] FileContents
         {
             get { return _fileContents ??= ReadFile(); }
         }
 
-        public IEnumerable<string> GetHeader() => FileContents[0].SplitRowString();
+        public IEnumerable<string> GetHeader() => !string.IsNullOrEmpty(FileContents[0]) ? FileContents[0].SplitCsvRowString() : Enumerable.Empty<string>();
 
-        public IEnumerable<IEnumerable<string>> GetRows() => FileContents.Skip(1).Where(s => !string.IsNullOrWhiteSpace(s)).Select(Utils.SplitRowString);
+        public IEnumerable<IEnumerable<string>> GetRows() => FileContents.Skip(1).Where(s => !string.IsNullOrWhiteSpace(s)).Select(Utils.SplitCsvRowString);
 
         private string[] ReadFile()
         {

@@ -21,22 +21,6 @@ namespace ReportsGenerator.Model
             IsoLevel = rowProcessor.GetIsoLevel(rowData);
         }
 
-        private Entry(Entry original, long confirmed, long active, long recovered, long deaths)
-        {
-            ProvinceState = original.ProvinceState;
-            CountryRegion = original.CountryRegion;
-            LastUpdate = original.LastUpdate;
-            FIPS = original.FIPS;
-            County = original.County;
-            Origin = original.Origin;
-            IsoLevel = original.IsoLevel;
-
-            Confirmed = confirmed;
-            Active = active;
-            Recovered = recovered;
-            Deaths = deaths;
-        }
-
         public static Entry Empty { get; }
 
         public long Active { get; }
@@ -60,24 +44,6 @@ namespace ReportsGenerator.Model
         public long Recovered { get; }
 
         public static bool operator !=(Entry left, Entry right) => !(left == right);
-
-        public static Entry operator +(Entry left, Entry right)
-        {
-            if (left == Empty)
-                return right;
-
-            if (right == Empty)
-                return left;
-
-            if (left.Origin != right.Origin || left.CountryRegion != right.CountryRegion ||
-               left.County != right.County || left.LastUpdate != right.LastUpdate ||
-               left.FIPS != right.FIPS || left.ProvinceState != right.ProvinceState ||
-               left.IsoLevel != right.IsoLevel)
-                throw new Exception("Can sum only similar entries");
-
-            return new Entry(left, left.Confirmed + right.Confirmed, left.Active + right.Active,
-                left.Recovered + right.Recovered, left.Deaths + right.Deaths);
-        }
 
         public static bool operator ==(Entry left, Entry right) => left.Equals(right);
 

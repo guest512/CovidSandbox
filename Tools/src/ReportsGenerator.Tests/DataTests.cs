@@ -21,14 +21,14 @@ namespace ReportsGenerator.Tests
         public void ValidateJHopkinsVersionStrings(string header, RowVersion version)
         {
             var provider = new JHopkinsDataProvider();
-            Assert.That(provider.GetVersion(header.SplitRowString()), Is.EqualTo(version));
+            Assert.That(provider.GetVersion(header.SplitCsvRowString()), Is.EqualTo(version));
         }
 
         [Test]
         [TestCaseSource(nameof(SpliRowStringSource))]
         public void ValidateSplitRowStrings(KeyValuePair<string, string[]> row)
         {
-            var splittedRow = row.Key.SplitRowString().ToArray();
+            var splittedRow = row.Key.SplitCsvRowString().ToArray();
 
             CollectionAssert.AreEqual(row.Value,splittedRow);
         }

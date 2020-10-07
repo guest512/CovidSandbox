@@ -3,12 +3,29 @@ using System.Collections.Generic;
 using NUnit.Framework;
 using ReportsGenerator.Data.DataSources;
 using ReportsGenerator.Model;
+using ReportsGenerator.Model.Processors;
+using ReportsGenerator.Utils;
 
 namespace ReportsGenerator.Tests
 {
     [TestFixture]
     public class EntryTests
     {
+        private EntryFactory _factory = null!;
+
+        [OneTimeSetUp]
+        public void Setup()
+        {
+            _factory  = new EntryFactory(new Dictionary<RowVersion, IRowProcessor>
+            {
+                {RowVersion.JHopkinsV1, new JHopkinsTestRowProcessor()},
+                {RowVersion.JHopkinsV2, new JHopkinsTestRowProcessor()},
+                {RowVersion.JHopkinsV3, new JHopkinsTestRowProcessor()},
+                {RowVersion.JHopkinsV4, new JHopkinsTestRowProcessor()},
+                {RowVersion.YandexRussia, new YandexRussiaRowProcessor(new NullLogger())},
+            }, new NullLogger());
+        }
+
         [Test]
         public void EntryProcessesCountiresNamesOnCreation()
         {
@@ -42,19 +59,20 @@ namespace ReportsGenerator.Tests
                     new CsvField(Field.CountryRegion, countryFromReport),
                 }, RowVersion.JHopkinsV1);
 
-                Assert.That(new Entry(row, new JHopkinsTestRowProcessor()).CountryRegion, Is.EqualTo(actualCountryName));
+                
+                Assert.That(_factory.CreateEntry(row).CountryRegion, Is.EqualTo(actualCountryName));
             }
         }
 
         [Test]
         public void ValidateEntryGetHashCodeOverload()
         {
-            var entry = new Entry(new Row(new[]
+            var entry = _factory.CreateEntry(new Row(new[]
             {
                 new CsvField(Field.CountryRegion, "Russia"),
                 new CsvField(Field.Deaths, "5"),
                 new CsvField(Field.LastUpdate, "2/22/2020 2:20"),
-            }, RowVersion.JHopkinsV1), new JHopkinsTestRowProcessor());
+            }, RowVersion.JHopkinsV1));
 
             var hashCode = new HashCode();
             hashCode.Add(""); //County
@@ -75,27 +93,26 @@ namespace ReportsGenerator.Tests
         [Test]
         public void ValidateEntryOperatorsOverload()
         {
-            var e1 = new Entry(new Row(new[]
+            var e1 = _factory.CreateEntry(new Row(new[]
             {
                 new CsvField(Field.CountryRegion, "Russia"),
                 new CsvField(Field.Deaths, "5"),
                 new CsvField(Field.LastUpdate, "2/22/2020 2:20"),
-            }, RowVersion.JHopkinsV1), new JHopkinsTestRowProcessor());
+            }, RowVersion.JHopkinsV1));
 
-            var e2 = new Entry(new Row(new[]
+            var e2 = _factory.CreateEntry(new Row(new[]
             {
                 new CsvField(Field.CountryRegion, "Russia"),
                 new CsvField(Field.ProvinceState, "Kamchatka Krai"),
                 new CsvField(Field.Deaths, "5"),
                 new CsvField(Field.LastUpdate, "2/22/2020 2:20"),
-            }, RowVersion.JHopkinsV1), new JHopkinsTestRowProcessor());
-
-            var e3 = new Entry(new Row(new[]
+            }, RowVersion.JHopkinsV1));
+            var e3 = _factory.CreateEntry(new Row(new[]
             {
                 new CsvField(Field.CountryRegion, "Russia"),
                 new CsvField(Field.Deaths, "5"),
                 new CsvField(Field.LastUpdate, "2/22/2020 2:20"),
-            }, RowVersion.JHopkinsV1), new JHopkinsTestRowProcessor());
+            }, RowVersion.JHopkinsV1));
 
             Assert.That(e2 != e1, Is.True);
             Assert.That(e2 == e1, Is.False);
@@ -109,22 +126,22 @@ namespace ReportsGenerator.Tests
         [Test]
         public void ValidateEntryToStringOverload()
         {
-            var entry = new Entry(new Row(new[]
+            var entry = _factory.CreateEntry(new Row(new[]
             {
                 new CsvField(Field.CountryRegion, "Russia"),
                 new CsvField(Field.Deaths, "5"),
                 new CsvField(Field.LastUpdate, "2/22/2020 2:20"),
-            }, RowVersion.JHopkinsV1), new JHopkinsTestRowProcessor());
+            }, RowVersion.JHopkinsV1));
             Assert.That(entry.ToString(),
                 Is.EqualTo($"JHopkins-Russia(Main territory), {new DateTime(2020, 2, 22).ToShortDateString()}: 0--5-0-5"));
 
-            entry = new Entry(new Row(new[]
+            entry = _factory.CreateEntry(new Row(new[]
             {
                 new CsvField(Field.CountryRegion, "Russia"),
                 new CsvField(Field.ProvinceState, "Kamchatka Krai"),
                 new CsvField(Field.Deaths, "5"),
                 new CsvField(Field.LastUpdate, "2/22/2020 2:20"),
-            }, RowVersion.JHopkinsV1), new JHopkinsTestRowProcessor());
+            }, RowVersion.JHopkinsV1));
             Assert.That(entry.ToString(),
                 Is.EqualTo($"JHopkins-Russia(Камчатский край), {new DateTime(2020, 2, 22).ToShortDateString()}: 0--5-0-5"));
         }

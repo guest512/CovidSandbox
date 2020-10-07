@@ -11,14 +11,14 @@ namespace ReportsGenerator.Data.DataSources
 {
     public class CsvFilesDataSourceReader : IDataSourceReader
     {
-        private readonly IDictionary<RowVersion, IDataProvider> _dataProviders;
+        private readonly IDataProvider _dataProvider;
         private readonly IEnumerable<string> _files;
         private readonly ILogger _logger;
 
-        protected CsvFilesDataSourceReader(IEnumerable<string> files, IDictionary<RowVersion, IDataProvider> dataProviders, ILogger logger)
+        protected CsvFilesDataSourceReader(IEnumerable<string> files, IDataProvider dataProvider, ILogger logger)
         {
             _files = files;
-            _dataProviders = dataProviders;
+            _dataProvider = dataProvider;
             _logger = logger;
         }
 
@@ -75,37 +75,7 @@ namespace ReportsGenerator.Data.DataSources
 
         protected virtual CsvField CsvFieldCreator(Field key, string value, string fileName) => new CsvField(key, value);
 
-        private static bool IsInvalidData(Row row)
-        {
-            static bool IsInvalidDate(Row row, IEnumerable<string> badDates) =>
-                badDates.Any(d => d == row[Field.LastUpdate]);
-
-            return row[Field.CountryRegion] switch
-            {
-                "Ireland" when row[Field.LastUpdate] == "03-08-2020" => true,
-                "The Gambia" => true,
-                "The Bahamas" => true,
-                "Republic of the Congo" => IsInvalidDate(row, Enumerable.Range(17, 5).Select(n => $"03-{n}-2020")),
-                "Guam" => IsInvalidDate(row, Enumerable.Range(16, 6).Select(n => $"03-{n}-2020")),
-                "Puerto Rico" => IsInvalidDate(row, Enumerable.Range(16, 6).Select(n => $"03-{n}-2020")),
-
-                "Denmark" when row[Field.ProvinceState] == "Greenland" =>
-                    IsInvalidDate(row, new[] { "03-19-2020", "03-20-2020", "03-21-2020" }),
-                "Netherlands" when row[Field.ProvinceState] == "Aruba" =>
-                    IsInvalidDate(row, new[] { "03-18-2020", "03-19-2020" }),
-
-                "France" when row[Field.ProvinceState] == "Mayotte" => IsInvalidDate(row, Enumerable.Range(16, 6).Select(n => $"03-{n}-2020")),
-                "France" when row[Field.ProvinceState] == "Guadeloupe" => IsInvalidDate(row, Enumerable.Range(16, 6).Select(n => $"03-{n}-2020")),
-                "France" when row[Field.ProvinceState] == "Reunion" => IsInvalidDate(row, Enumerable.Range(16, 6).Select(n => $"03-{n}-2020")),
-                "France" when row[Field.ProvinceState] == "French Guiana" => IsInvalidDate(row, Enumerable.Range(16, 6).Select(n => $"03-{n}-2020")),
-
-                "Mainland China" => IsInvalidDate(row, new[] { "03-11-2020", "03-12-2020" }),
-
-                "US" when row[Field.LastUpdate] == "03-22-2020" && row[Field.FIPS] == "11001" && row[Field.Deaths] == "0" => true,
-
-                _ => false
-            };
-        }
+        protected virtual bool IsInvalidData(Row row) => true;
 
         private IEnumerable<CsvField> GetCsvFields(IEnumerable<Field> keys, IEnumerable<string> fields, string fileName)
         {
@@ -118,27 +88,27 @@ namespace ReportsGenerator.Data.DataSources
             }
         }
 
-        private IEnumerable<Row> GetRows(string fileName)
+        private IEnumerable<Row> GetRows(string filePath)
         {
-            var csvFile = new CsvFile(fileName);
+            var csvFile = new CsvFileReader(filePath);
 
-            var version = GetVersionFromHeader(csvFile.GetHeader(), fileName);
+            if (!csvFile.GetHeader().Any() && !csvFile.GetRows().Any())
+                return Enumerable.Empty<Row>();
+
+            var version = GetVersionFromHeader(csvFile.GetHeader(), csvFile.Name);
 
             return csvFile
                 .GetRows()
-                .Select(r => new Row(GetCsvFields(_dataProviders[version].GetFields(version), r, fileName), version))
+                .Select(r => new Row(GetCsvFields(_dataProvider.GetFields(version), r, csvFile.Name), version))
                 .Where(r => !IsInvalidData(r));
         }
 
         private RowVersion GetVersionFromHeader(IEnumerable<string> header, string fileName)
         {
-            foreach (var (_, provider) in _dataProviders)
-            {
-                var version = provider.GetVersion(header);
+            var version = _dataProvider.GetVersion(header);
 
-                if (version != RowVersion.Unknown)
-                    return version;
-            }
+            if (version != RowVersion.Unknown)
+                return version;
 
             _logger.WriteError($"CsvFile '{fileName}' has unknown format");
             throw new Exception("CsvFile has unknown format");
