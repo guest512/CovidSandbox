@@ -63,7 +63,7 @@ function Start-Docker {
     Confirm-Last-Result $?
 
     Write-Log-String("Generate reports...")
-    docker run -v ${pwd}/temp:/work/Data -v ${pwd}/ReportsProcessing/reports:/work/reports --name covid_sandbox_generator_afd876 --rm covid_sandbox_generator
+    docker run -v ${pwd}/temp:/work/Data -v ${pwd}/ReportsProcessing/data:/work/out --name covid_sandbox_generator_afd876 --rm covid_sandbox_generator
     Confirm-Last-Result $?
 
     Write-Log-String("Clean temp data...")
@@ -97,8 +97,8 @@ function Start-Local {
     Set-Location ${PSScriptRoot}/..
 
     Write-Log-String("Copy reports to reports processing folder")
-    New-Item .\ReportsProcessing\ -Name "reports" -ItemType "directory" -Force
-    Copy-Item .\bin\Release\reports .\ReportsProcessing -Recurse -Force
+    New-Item .\ReportsProcessing\ -Name "data" -ItemType "directory" -Force
+    Copy-Item .\bin\Release\out\* .\ReportsProcessing\data -Recurse -Force
 }
 
 if(!$RunOnly){

@@ -87,7 +87,7 @@ RUN dotnet test src/ -c:Release -p:BinaryOutDir=$PWD/bin && \
 
 FROM base_builder as reports_generator
 
-VOLUME [ "/work/Data" , "/work/reports" ]
+VOLUME [ "/work/Data" , "/work/out" ]
 
 COPY --from=builder work/bin/alpine.3.11-x64/publish .
 

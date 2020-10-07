@@ -32,7 +32,9 @@ namespace ReportsGenerator.Data.IO
             using var file = File.OpenRead(_path);
             using var reader = new StreamReader(file);
 
-            return reader.ReadToEnd().Split(Environment.NewLine);
+            var contents = reader.ReadToEnd();
+
+            return contents.Split(contents.Contains("\r\n") ? "\r\n" : "\n");
         }
     }
 }

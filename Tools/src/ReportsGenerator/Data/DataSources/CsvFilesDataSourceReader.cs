@@ -5,6 +5,7 @@ using System;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace ReportsGenerator.Data.DataSources
@@ -42,15 +43,28 @@ namespace ReportsGenerator.Data.DataSources
         public async IAsyncEnumerable<T> GetRowsAsync<T>(Func<Row, T> callback)
         {
             ConcurrentStack<T> rows = new ConcurrentStack<T>();
+            var source = new CancellationTokenSource();
+            var token = source.Token;
+
 
             void ProcessFile(string file)
             {
+                token.ThrowIfCancellationRequested();
                 _logger.WriteInfo($"--Processing file: {file}");
-                rows.PushRange(GetRows(file).Select(callback).ToArray());
+                var items = new List<T>();
+
+                foreach (var row in GetRows(file))
+                {
+                    token.ThrowIfCancellationRequested();
+                    items.Add(callback(row));
+                }
+
+                token.ThrowIfCancellationRequested();
+                rows.PushRange(items.ToArray());
             }
 
             var tasks = _files
-                .Select(file => Task.Run(() => ProcessFile(file)))
+                .Select(file => Task.Run(() => ProcessFile(file), token))
                 .ToArray();
 
             T[] buffer = new T[10240];
@@ -59,6 +73,13 @@ namespace ReportsGenerator.Data.DataSources
             {
                 while (rows.Any())
                 {
+                    if (tasks.Any(t => t.IsFaulted))
+                    {
+                        source.Cancel();
+                        throw new InvalidOperationException("Files reading has failed.",
+                            tasks.First(t => t.IsFaulted).Exception);
+                    }
+
                     var bufferLength = rows.TryPopRange(buffer);
                     for (var i = 0; i < bufferLength; i++)
                         yield return buffer[i];
@@ -66,6 +87,8 @@ namespace ReportsGenerator.Data.DataSources
 
                 await Task.Delay(100);
             }
+
+
 
             foreach (var task in tasks)
             {
@@ -75,7 +98,7 @@ namespace ReportsGenerator.Data.DataSources
 
         protected virtual CsvField CsvFieldCreator(Field key, string value, string fileName) => new CsvField(key, value);
 
-        protected virtual bool IsInvalidData(Row row) => true;
+        protected virtual bool IsInvalidData(Row row) => false;
 
         private IEnumerable<CsvField> GetCsvFields(IEnumerable<Field> keys, IEnumerable<string> fields, string fileName)
         {

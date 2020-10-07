@@ -72,7 +72,7 @@ function start_docker() {
     check_result res
 
     log_message 'Generate reports...'
-    docker run -v $PWD/temp:/work/Data -v $PWD/ReportsProcessing/reports:/work/reports --name covid_sandbox_generator_afd876 --rm covid_sandbox_generator
+    docker run -v $PWD/temp:/work/Data -v $PWD/ReportsProcessing/data:/work/out --name covid_sandbox_generator_afd876 --rm covid_sandbox_generator
     check_result $?
 
     log_message 'Clean temp data...'
@@ -111,7 +111,7 @@ function start_local() {
     cd $__source_dir/..
 
     log_message 'Copy reports to reports processing folder'
-    cp bin/Release/reports ReportsProcessing/reports -r
+    cp bin/Release/out ReportsProcessing/data -r
 }
 
 run_only=false
