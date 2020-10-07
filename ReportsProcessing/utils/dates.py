@@ -12,7 +12,7 @@ from datetime import datetime as _datetime
 
 
 def _get_dates() -> _types.Tuple[_pd.Timestamp, _pd.Timestamp]:
-    reports_path = _os.path.abspath("reports/dayByDay")
+    reports_path = _os.path.abspath("data/reports/dayByDay")
     files = _os.listdir(reports_path)
     start_date = _pd.Timestamp(files[0][:-4]).normalize()
     finish_date = _pd.Timestamp(files[-1][:-4]).normalize()
