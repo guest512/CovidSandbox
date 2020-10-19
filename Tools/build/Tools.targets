@@ -23,6 +23,7 @@
         </PropertyGroup>
         <ItemGroup>
             <MiscFiles Include="$(MiscFilesDir)/*.*" />
+            <MiscFiles Include="$(DataSourcesRootFolder)/JHopkins/csse_covid_19_data/UID_ISO_FIPS_LookUp_Table.csv" />
         </ItemGroup>        
         <Copy SourceFiles="@(MiscFiles)" DestinationFolder="$(BinaryDataOutDir)/Misc" />
     </Target>
