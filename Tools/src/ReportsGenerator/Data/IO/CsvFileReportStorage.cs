@@ -35,7 +35,6 @@ namespace ReportsGenerator.Data.IO
             {
                 case WriterType.Day:
                     parts.Add(_daysFolder);
-                    parts.Add(names[0]);
                     break;
 
                 case WriterType.Country:
