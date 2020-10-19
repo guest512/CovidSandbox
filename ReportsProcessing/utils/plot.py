@@ -1,6 +1,7 @@
 from datetime import datetime as _dt
-from matplotlib import figure as _figure
+from matplotlib import figure as _figure, colors as _colors
 import pandas as _pd
+import numpy as _np
 from . import dates as _dates
 
 _dateFormat = '%d-%m-%Y'
@@ -8,7 +9,6 @@ _dateFormat = '%d-%m-%Y'
 
 def key_russian_dates(ax: _figure.Axes):
     ''' Draws key dates from Russia on plot as vertical lines and spans. '''
-
     ax.axvline(_dt.strptime('01-04-2020', _dateFormat),
                label='Путин: Начало нерабочих дней',
                color='Red')
@@ -103,9 +103,24 @@ def _draw_stats_bar(ax: _figure.Axes, df: _pd.DataFrame):
     ax.bar(index + _dates.one_day * 2, deaths, label='Смерти', width=2)
 
 
-def _draw_rt(ax: _figure.Axes, df: _pd.DataFrame):
+def _draw_rt(ax, df):
     rt = df.Rt
-    bar_with_sma_line(ax, rt)
+
+    cmap = _colors.LinearSegmentedColormap.from_list('test',
+                                                     [(0, 'darkGreen'),
+                                                      (0.2, 'forestgreen'),
+                                                      (0.4, 'yellowgreen'),
+                                                      (0.5, 'gold'),
+                                                      (0.7, 'orange'),
+                                                      (0.9, 'orangered'),
+                                                      (1, 'crimson')])
+    norm = _colors.TwoSlopeNorm(1, 0.6, 1.4)
+    colors = cmap(norm(rt))
+    line_color = _np.array(cmap(norm(df.Rt[-7:].mean())))
+
+    ax.bar(rt.index, rt.values, color=colors, alpha=0.3)
+    ax.plot(rt.index, rt.rolling(window=3).mean(), color=line_color)
+
     _setup_axes_for_russian_regions_stat(
         ax, r"Коэффициент распространения ($R_t$)", False)
     ax.set_ylim(0.6, 2)
