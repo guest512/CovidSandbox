@@ -2,7 +2,7 @@
 
 # CovidSandbox
 
-This is a small project to visualize changes and trends for the COVID-19 pandemic and improve my various technologies skills.
+This is a small project to visualize changes and trends for the COVID-19 pandemic and improve my technologies skills.
 
 ## Prerequsites
 
