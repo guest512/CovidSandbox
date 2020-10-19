@@ -10,12 +10,14 @@ namespace ReportsGenerator.Data.IO
     {
         private readonly string _countriesFolder;
         private readonly string _daysFolder;
+        private readonly string _statsFolder;
 
         public CsvFileReportStorage(string rootDir, bool rewrite)
         {
             Root = string.IsNullOrEmpty(rootDir) ? "./out" : rootDir;
             _countriesFolder = Path.Combine(Root, "reports", "countries");
             _daysFolder = Path.Combine(Root, "reports", "dayByDay");
+            _statsFolder = Path.Combine(Root, "stats");
 
             Initialize(rewrite);
         }
@@ -25,24 +27,52 @@ namespace ReportsGenerator.Data.IO
         public IReportDataWriter GetWriter(IEnumerable<string> name, WriterType reportType)
         {
             var names = name.Select(n => n.Replace('*', '_')).ToArray();
+            var fileName = names.Last();
+            var append = false;
+            List<string> parts = new List<string>();
+
             switch (reportType)
             {
                 case WriterType.Day:
-                    return new CsvFileWriter(_daysFolder, names[0]);
+                    parts.Add(_daysFolder);
+                    parts.Add(names[0]);
+                    break;
 
                 case WriterType.Country:
-                    var countryFolder = Path.Combine(_countriesFolder, names[0]);
-                    Directory.CreateDirectory(countryFolder);
-                    return new CsvFileWriter(countryFolder, names[0]);
+                    parts.Add(_countriesFolder);
+                    parts.Add(names[0]);
+                    if (names.Length == 2)
+                        parts.Add("regions");
 
-                case WriterType.Province:
-                    var provinceFolder = Path.Combine(_countriesFolder, names[0], "regions");
-                    Directory.CreateDirectory(provinceFolder);
-                    return new CsvFileWriter(provinceFolder, names[1]);
+                    break;
+
+                case WriterType.Stats:
+                    append = true;
+                    parts.Add(_statsFolder);
+                    fileName = "countries";
+                    if (names.Length > 1)
+                    {
+                        parts.Add(names[0]);
+                        fileName = "regions";
+                    }
+
+                    if (names.Length > 2)
+                    {
+                        parts.Add(names[1]);
+                        fileName = "counties";
+                    }
+
+                    break;
 
                 default:
                     throw new ArgumentOutOfRangeException(nameof(reportType), reportType, null);
             }
+
+            var folder = Path.Combine(parts.ToArray());
+            Directory.CreateDirectory(folder);
+
+
+            return new CsvFileWriter(folder, fileName, append);
         }
 
         private void Initialize(bool rewrite)

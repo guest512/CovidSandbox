@@ -1,4 +1,4 @@
-﻿namespace ReportsGenerator.Data.DataSources
+﻿namespace ReportsGenerator.Data
 {
     public enum RowVersion
     {
@@ -8,6 +8,12 @@
         JHopkinsV4,
 
         YandexRussia,
+
+        StatsBase,
+        StatsEx,
+
+        Translation,
+        State,
 
         Unknown
     }

@@ -1,22 +1,23 @@
-﻿using System;
+﻿using ReportsGenerator.Model.Reports.Intermediate;
+using ReportsGenerator.Utils;
+using System;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using ReportsGenerator.Model.Reports.Intermediate;
-using ReportsGenerator.Utils;
 
 namespace ReportsGenerator.Model.Reports
 {
-    public class ReportsGenerator
+    public class ReportsBuilder
     {
         private readonly Dictionary<string, CountryReport> _countryReports = new Dictionary<string, CountryReport>();
-        private readonly List<Entry> _data = new List<Entry>();
         private readonly Dictionary<DateTime, DayReport> _dayReports = new Dictionary<DateTime, DayReport>();
+        private readonly ConcurrentDictionary<string, StatsReport> _graphStructures = new ConcurrentDictionary<string, StatsReport>();
         private readonly ConcurrentDictionary<string, LinkedReport> _linkedReports = new ConcurrentDictionary<string, LinkedReport>();
         private readonly ILogger _logger;
+        private readonly List<Entry> entries = new List<Entry>();
 
-        public ReportsGenerator(ILogger logger)
+        public ReportsBuilder(ILogger logger)
         {
             _logger = logger;
         }
@@ -27,21 +28,92 @@ namespace ReportsGenerator.Model.Reports
         public void AddEntries(IEnumerable<Entry> rows)
         {
             var newRows = rows as Entry[] ?? rows.ToArray();
-            _data.AddRange(newRows);
 
             foreach (var country in newRows.Select(_ => _.CountryRegion))
             {
                 _countryReports.Remove(country);
-                //_reports.RemoveAll(_ => _.Name == country);
+                _linkedReports.TryRemove(country, out _);
             }
 
             foreach (var day in newRows.Select(_ => _.LastUpdate.Date))
             {
                 _dayReports.Remove(day);
-                //_reports.RemoveAll(_ => _.Day == day);
+                _linkedReports.Clear();
             }
 
-            GenerateReports();
+            entries.AddRange(newRows);
+        }
+
+        public void Build(IStatsProvider statsProvider)
+        {
+            var uniqueEntries = entries.Distinct().ToArray();
+
+            var countriesList = uniqueEntries.Select(x => x.CountryRegion).Distinct().ToArray();
+            var dates = uniqueEntries.Select(x => x.LastUpdate.Date).Distinct().OrderBy(_ => _).ToArray();
+
+            Parallel.ForEach(countriesList, country =>
+            {
+                if (country == "Others")
+                    return;
+
+                _logger.WriteInfo($"--Processing {country}...");
+
+                var countryEntries = uniqueEntries.Where(x => x.CountryRegion == country).ToArray();
+                var graphBuilder = new ReportsGraphBuilder(country, _logger);
+                var graphStructure = new StatsReport(country, statsProvider.GetCountryStatsName(country), statsProvider);
+
+                if (country == "Russia")
+                {
+                    foreach (var day in dates)
+                    {
+                        var dayCountryEntries = countryEntries.Where(x => x.LastUpdate.Date == day).ToArray();
+
+                        if (dayCountryEntries.Any(x => x.Origin == Origin.JHopkins) &&
+                            dayCountryEntries.Any(x => x.Origin == Origin.Yandex))
+                        {
+                            dayCountryEntries = dayCountryEntries.Where(x => x.Origin == Origin.Yandex).ToArray();
+                        }
+
+                        foreach (var dayCountryEntry in dayCountryEntries)
+                        {
+                            switch (dayCountryEntry.IsoLevel)
+                            {
+                                case IsoLevel.ProvinceState:
+                                    graphStructure.AddProvince(dayCountryEntry.ProvinceState, dayCountryEntry.StatsName);
+                                    break;
+
+                                case IsoLevel.County:
+                                    graphStructure.AddCounty(dayCountryEntry.County, dayCountryEntry.StatsName,
+                                        dayCountryEntry.ProvinceState);
+                                    break;
+                            }
+
+                            graphBuilder.Reports.Add(CreateBasicReport(dayCountryEntry));
+                        }
+                    }
+                }
+                else
+                {
+                    foreach (var countryEntry in countryEntries)
+                    {
+                        switch (countryEntry.IsoLevel)
+                        {
+                            case IsoLevel.ProvinceState:
+                                graphStructure.AddProvince(countryEntry.ProvinceState, countryEntry.StatsName);
+                                break;
+
+                            case IsoLevel.County:
+                                graphStructure.AddCounty(countryEntry.County, countryEntry.StatsName, countryEntry.ProvinceState);
+                                break;
+                        }
+
+                        graphBuilder.Reports.Add(CreateBasicReport(countryEntry));
+                    }
+                }
+
+                _linkedReports.TryAdd(country, graphBuilder.Build(graphStructure));
+                _graphStructures.TryAdd(country, graphStructure);
+            });
         }
 
         public CountryReport GetCountryReport(string countryName)
@@ -54,6 +126,8 @@ namespace ReportsGenerator.Model.Reports
 
             return _countryReports[countryName];
         }
+
+        public StatsReport GetCountryStats(string countryName) => _graphStructures[countryName];
 
         public DayReport GetDayReport(DateTime day)
         {
@@ -86,78 +160,6 @@ namespace ReportsGenerator.Model.Reports
 
                 _ => throw new ArgumentOutOfRangeException(nameof(entry.IsoLevel), $"Unknown ISO level of {entry}")
             };
-        }
-
-        private void GenerateReports()
-        {
-            var uniqueEntries = _data.Distinct().ToArray();
-
-            var countriesList = uniqueEntries.Select(x => x.CountryRegion).Distinct().ToArray();
-            var dates = uniqueEntries.Select(x => x.LastUpdate.Date).Distinct().OrderBy(_ => _).ToArray();
-
-            Parallel.ForEach(countriesList, country =>
-            {
-                if (country == "Others")
-                    return;
-
-                _logger.WriteInfo($"--Processing {country}...");
-
-                var countryEntries = uniqueEntries.Where(x => x.CountryRegion == country).ToArray();
-                var graphBuilder = new ReportsGraphBuilder(country, _logger);
-                var graphStructure = new ReportsGraphStructure(country);
-
-                if (country == "Russia")
-                {
-                    foreach (var day in dates)
-                    {
-                        var dayCountryEntries = countryEntries.Where(x => x.LastUpdate.Date == day).ToArray();
-
-                        if (dayCountryEntries.Any(x => x.Origin == Origin.JHopkins) &&
-                            dayCountryEntries.Any(x => x.Origin == Origin.Yandex))
-                        {
-                            dayCountryEntries = dayCountryEntries.Where(x => x.Origin == Origin.Yandex).ToArray();
-                        }
-
-                        foreach (var dayCountryEntry in dayCountryEntries)
-                        {
-                            switch (dayCountryEntry.IsoLevel)
-                            {
-                                case IsoLevel.ProvinceState:
-                                    graphStructure.AddProvince(dayCountryEntry.ProvinceState);
-                                    break;
-
-                                case IsoLevel.County:
-                                    graphStructure.AddCounty(dayCountryEntry.County, dayCountryEntry.ProvinceState);
-                                    break;
-                            }
-
-                            graphBuilder.Reports.Add(CreateBasicReport(dayCountryEntry));
-                        }
-                    }
-                }
-                else
-                {
-                    foreach (var countryEntry in countryEntries)
-                    {
-                        switch (countryEntry.IsoLevel)
-                        {
-                            case IsoLevel.ProvinceState:
-                                graphStructure.AddProvince(countryEntry.ProvinceState);
-                                break;
-
-                            case IsoLevel.County:
-                                graphStructure.AddCounty(countryEntry.County, countryEntry.ProvinceState);
-                                break;
-                        }
-
-                        graphBuilder.Reports.Add(CreateBasicReport(countryEntry));
-                    }
-                }
-
-                _linkedReports.TryAdd(country, graphBuilder.Build(graphStructure));
-            });
-
-            _data.Clear();
         }
     }
 }

@@ -1,5 +1,5 @@
-﻿using System;
-using ReportsGenerator.Data.DataSources;
+﻿using ReportsGenerator.Data;
+using System;
 
 namespace ReportsGenerator.Model.Processors
 {
@@ -15,8 +15,6 @@ namespace ReportsGenerator.Model.Processors
 
         long GetDeaths(Row row);
 
-        uint GetFips(Row row);
-
         IsoLevel GetIsoLevel(Row row);
 
         DateTime GetLastUpdate(Row row);
@@ -26,5 +24,7 @@ namespace ReportsGenerator.Model.Processors
         string GetProvinceName(Row row);
 
         long GetRecovered(Row row);
+
+        string GetStatsName(Row row);
     }
 }

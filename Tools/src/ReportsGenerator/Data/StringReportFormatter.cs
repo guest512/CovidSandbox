@@ -25,7 +25,7 @@ namespace ReportsGenerator.Data
 
         private readonly string[] _dayByDayReportHeader =
         {
-            "CountryRegion",
+            "Country",
             "Confirmed",
             "Active",
             "Recovered",
@@ -34,6 +34,13 @@ namespace ReportsGenerator.Data
             "Active_Change",
             "Recovered_Change",
             "Deaths_Change"
+        };
+
+        private readonly string[] _statsReportHeader =
+        {
+            "Name",
+            "Continent",
+            "Population"
         };
 
         public IEnumerable<string> GetData(DayReport report, string country)
@@ -62,6 +69,13 @@ namespace ReportsGenerator.Data
             yield return ttr.ToString("###########0", CultureInfo.InvariantCulture);
         }
 
+        public IEnumerable<string> GetData(StatsReportNode report)
+        {
+            yield return report.Name;
+            yield return report.Continent;
+            yield return report.Population.ToString("D");
+        }
+
         public IEnumerable<string> GetHeader(DayReport report)
         {
             return _dayByDayReportHeader;
@@ -72,6 +86,11 @@ namespace ReportsGenerator.Data
             return _countryReportHeader;
         }
 
+        public IEnumerable<string> GetHeader(StatsReportNode report)
+        {
+            return _statsReportHeader;
+        }
+
         public IEnumerable<string> GetName(DayReport report)
         {
             return new[] { report.Day.ToString("yyyy-MM-dd") };
@@ -80,6 +99,20 @@ namespace ReportsGenerator.Data
         public IEnumerable<string> GetName(BaseCountryReport report, string? parent)
         {
             return string.IsNullOrEmpty(parent) ? new[] { report.Name } : new[] { parent, report.Name };
+        }
+
+        public IEnumerable<string> GetName(StatsReportNode report)
+        {
+            var name = new List<string>();
+            while (report != StatsReportNode.Empty)
+            {
+                name.Add(report.Name);
+                report = report.Parent;
+            }
+
+            name.Reverse();
+
+            return name;
         }
 
         private static IEnumerable<string> GetMetricsData(params Metrics[] metrics)

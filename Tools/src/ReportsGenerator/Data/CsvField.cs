@@ -1,4 +1,4 @@
-﻿namespace ReportsGenerator.Data.DataSources
+﻿namespace ReportsGenerator.Data
 {
     public readonly struct CsvField
     {

@@ -9,6 +9,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
+using ReportsGenerator.Model.Reports;
 
 namespace ReportsGenerator
 {
@@ -28,12 +29,17 @@ namespace ReportsGenerator
                 return Path.Combine(dataRoot, "Yandex");
             }
 
+            if (typeof(T) == typeof(MiscDataSource))
+            {
+                return Path.Combine(dataRoot, "Misc");
+            }
+
             throw new ArgumentOutOfRangeException(nameof(T));
         }
 
-        private static Dictionary<RowVersion, IRowProcessor> GetRowProcessors(ILogger logger)
+        private static Dictionary<RowVersion, IRowProcessor> GetRowProcessors(INames namesService, IStatsProvider statsProvider, ILogger logger)
         {
-            var jHopkinsProcessor = new JHopkinsRowProcessor(logger);
+            var jHopkinsProcessor = new JHopkinsRowProcessor(namesService, statsProvider, logger);
 
             var rowProcessors = new Dictionary<RowVersion, IRowProcessor>
             {
@@ -41,7 +47,7 @@ namespace ReportsGenerator
                 {RowVersion.JHopkinsV2, jHopkinsProcessor},
                 {RowVersion.JHopkinsV3, jHopkinsProcessor},
                 {RowVersion.JHopkinsV4, jHopkinsProcessor},
-                {RowVersion.YandexRussia, new YandexRussiaRowProcessor(logger)}
+                {RowVersion.YandexRussia, new YandexRussiaRowProcessor(statsProvider, logger)}
             };
 
             return rowProcessors;
@@ -53,14 +59,11 @@ namespace ReportsGenerator
             try
             {
                 logger.WriteInfo("Logger created");
+                Convertors.SetLogger(logger);
 
                 var argsParser = new ArgsParser(args, logger);
 
                 var parsedData = new List<Entry>();
-
-                var entryFactory = new EntryFactory(GetRowProcessors(logger), logger);
-                var reportsSaver = new ReportsSaver(new StringReportFormatter(), new CsvFileReportStorage(argsParser.ReportsDir, true), new NullLogger());
-                var reportsGen = new Model.Reports.ReportsGenerator(logger);
 
                 var dataSources = new IDataSource[]
                 {
@@ -68,9 +71,15 @@ namespace ReportsGenerator
                     new YandexRussiaDataSource(GetDataFolder<YandexRussiaDataSource>(), logger)
                 };
 
+                var miscStorage = new MiscStorage(new MiscDataSource(GetDataFolder<MiscDataSource>(), logger), logger);
+                var entryFactory = new EntryFactory(GetRowProcessors(miscStorage, miscStorage, logger), logger);
+                var reportsSaver = new ReportsSaver(new StringReportFormatter(), new CsvFileReportStorage(argsParser.ReportsDir, true), new NullLogger());
+                var reportsBuilder = new ReportsBuilder(logger);
+
                 logger.WriteInfo("Reading raw data...");
                 logger.IndentIncrease();
 
+                miscStorage.Init();
                 foreach (var ds in dataSources)
                 {
                     await foreach (var row in ds.GetReader().GetRowsAsync(entryFactory.CreateEntry))
@@ -84,17 +93,22 @@ namespace ReportsGenerator
                 logger.WriteInfo("Initialize reports generator...");
                 logger.IndentIncrease();
 
-                reportsGen.AddEntries(parsedData);
+                reportsBuilder.AddEntries(parsedData);
+                reportsBuilder.Build(miscStorage);
 
                 logger.IndentDecrease();
 
                 logger.WriteInfo("Create day by day reports...");
-                Parallel.ForEach(reportsGen.AvailableDates.Select(reportsGen.GetDayReport),
+                Parallel.ForEach(reportsBuilder.AvailableDates.Select(reportsBuilder.GetDayReport),
                     reportsSaver.WriteReport);
 
                 logger.WriteInfo("Create country reports...");
-                Parallel.ForEach(reportsGen.AvailableCountries.Select(reportsGen.GetCountryReport),
+                Parallel.ForEach(reportsBuilder.AvailableCountries.Select(reportsBuilder.GetCountryReport),
                     reportsSaver.WriteReport);
+
+                logger.WriteInfo("Create country stats...");
+                Parallel.ForEach(reportsBuilder.AvailableCountries.Select(reportsBuilder.GetCountryStats),
+                    reportsSaver.WriteStats);
             }
             catch (Exception ex)
             {
@@ -107,6 +121,7 @@ namespace ReportsGenerator
             }
             finally
             {
+                Convertors.SetLogger(new NullLogger());
                 logger.Dispose();
             }
         }

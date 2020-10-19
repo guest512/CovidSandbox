@@ -1,33 +1,35 @@
 ﻿using System;
 using System.Diagnostics;
 using System.Globalization;
-using ReportsGenerator.Data.DataSources;
+using ReportsGenerator.Data;
 using ReportsGenerator.Utils;
 
 namespace ReportsGenerator.Model.Processors
 {
     public abstract class BaseRowProcessor : IRowProcessor
     {
+        private readonly IStatsProvider _statsProvider;
         protected readonly ILogger Logger;
 
-        protected BaseRowProcessor(ILogger logger)
+        protected BaseRowProcessor(IStatsProvider statsProvider, ILogger logger)
         {
+            _statsProvider = statsProvider;
             Logger = logger;
         }
 
         public virtual long GetActive(Row row)
         {
-            var active = TryGetValue(row[Field.Active], long.MinValue);
+            var active = row[Field.Active].AsLong(long.MinValue);
             return active == long.MinValue ? GetConfirmed(row) - GetDeaths(row) - GetRecovered(row) : active;
         }
 
-        public virtual long GetConfirmed(Row row) => TryGetValue(row[Field.Confirmed]);
+        public virtual long GetConfirmed(Row row) => row[Field.Confirmed].AsLong();
 
         public abstract string GetCountryName(Row row);
 
         public abstract string GetCountyName(Row row);
 
-        public virtual long GetDeaths(Row row) => TryGetValue(row[Field.Deaths]);
+        public virtual long GetDeaths(Row row) => row[Field.Deaths].AsLong();
 
         public abstract uint GetFips(Row row);
 
@@ -65,29 +67,13 @@ namespace ReportsGenerator.Model.Processors
             return level;
         }
 
-        public virtual DateTime GetLastUpdate(Row row) => Convertors.ParseDate(row[Field.LastUpdate]);
+        public virtual DateTime GetLastUpdate(Row row) => row[Field.LastUpdate].AsDate();
 
         public abstract Origin GetOrigin(Row row);
 
         public abstract string GetProvinceName(Row row);
 
-        public virtual long GetRecovered(Row row) => TryGetValue(row[Field.Recovered]);
-
-        protected long TryGetValue(string stringValue, long defaultValue = 0)
-        {
-            var value = long.TryParse(stringValue, out var intValue) ? intValue : defaultValue;
-
-            if (!stringValue.Contains('.'))
-                return value;
-
-            var floatValue = float.Parse(stringValue, CultureInfo.InvariantCulture);
-            if (!(floatValue % 1 < float.Epsilon))
-                return value;
-
-            value = (long)floatValue;
-            Logger.WriteWarning($"Expected 'long' but get 'float' for '{stringValue}'. Parsed as '{value}'");
-
-            return value;
-        }
+        public virtual long GetRecovered(Row row) => row[Field.Recovered].AsLong();
+        public string GetStatsName(Row row) => _statsProvider.GetStatsName(row);
     }
 }

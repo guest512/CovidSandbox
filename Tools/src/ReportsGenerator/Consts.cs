@@ -1,6 +1,4 @@
-﻿using System.Threading.Tasks.Sources;
-
-namespace ReportsGenerator
+﻿namespace ReportsGenerator
 {
     public static class Consts
     {

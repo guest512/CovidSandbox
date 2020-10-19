@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 
 namespace ReportsGenerator.Model
@@ -18,6 +19,21 @@ namespace ReportsGenerator.Model
                 yield return curDate;
                 curDate = curDate.AddDays(1);
             }
+        }
+
+        public static bool TrySplitStateToStateCounty(string provinceRow, out string county, out string state)
+        {
+            var values = provinceRow.Split(',');
+
+            if (values.Length == 2)
+            {
+                county = values[0].Trim();
+                state = values[1].Trim();
+                return true;
+            }
+
+            county = state = string.Empty;
+            return false;
         }
     }
 }

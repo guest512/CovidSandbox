@@ -1,5 +1,4 @@
-﻿using ReportsGenerator.Data.DataSources.Providers;
-using ReportsGenerator.Data.IO;
+﻿using ReportsGenerator.Data.IO;
 using ReportsGenerator.Utils;
 using System;
 using System.Collections.Concurrent;
@@ -7,6 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
+using ReportsGenerator.Data.Providers;
 
 namespace ReportsGenerator.Data.DataSources
 {
@@ -114,19 +114,20 @@ namespace ReportsGenerator.Data.DataSources
         private IEnumerable<Row> GetRows(string filePath)
         {
             var csvFile = new CsvFileReader(filePath);
+            var header = csvFile.GetHeader().ToArray();
+            var contents = csvFile.GetRows().ToArray();
 
-            if (!csvFile.GetHeader().Any() && !csvFile.GetRows().Any())
+            if (header.Length == 0 && contents.Length == 0)
                 return Enumerable.Empty<Row>();
 
-            var version = GetVersionFromHeader(csvFile.GetHeader(), csvFile.Name);
+            var version = GetVersionFromHeader(header, csvFile.Name);
 
-            return csvFile
-                .GetRows()
+            return contents
                 .Select(r => new Row(GetCsvFields(_dataProvider.GetFields(version), r, csvFile.Name), version))
                 .Where(r => !IsInvalidData(r));
         }
 
-        private RowVersion GetVersionFromHeader(IEnumerable<string> header, string fileName)
+        private RowVersion GetVersionFromHeader(ICollection<string> header, string fileName)
         {
             var version = _dataProvider.GetVersion(header);
 

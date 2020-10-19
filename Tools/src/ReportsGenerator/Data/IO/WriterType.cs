@@ -4,6 +4,6 @@ namespace ReportsGenerator.Data.IO
     {
         Day,
         Country,
-        Province
+        Stats
     }
 }

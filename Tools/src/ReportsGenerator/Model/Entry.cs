@@ -1,6 +1,6 @@
-﻿using System;
-using ReportsGenerator.Data.DataSources;
+﻿using ReportsGenerator.Data;
 using ReportsGenerator.Model.Processors;
+using System;
 
 namespace ReportsGenerator.Model
 {
@@ -15,11 +15,13 @@ namespace ReportsGenerator.Model
             Deaths = rowProcessor.GetDeaths(rowData);
             Recovered = rowProcessor.GetRecovered(rowData);
             Active = rowProcessor.GetActive(rowData);
-            FIPS = rowProcessor.GetFips(rowData);
             County = rowProcessor.GetCountyName(rowData);
             Origin = rowProcessor.GetOrigin(rowData);
             IsoLevel = rowProcessor.GetIsoLevel(rowData);
+            StatsName = rowProcessor.GetStatsName(rowData);
         }
+
+        public string StatsName { get; }
 
         public static Entry Empty { get; }
 
@@ -33,12 +35,12 @@ namespace ReportsGenerator.Model
 
         public long Deaths { get; }
 
-        public uint FIPS { get; }
-
         public IsoLevel IsoLevel { get; }
+
         public DateTime LastUpdate { get; }
 
         public Origin Origin { get; }
+
         public string ProvinceState { get; }
 
         public long Recovered { get; }
@@ -49,7 +51,7 @@ namespace ReportsGenerator.Model
 
         public bool Equals(Entry other)
         {
-            return IsoLevel == other.IsoLevel && County == other.County && FIPS == other.FIPS && Active == other.Active &&
+            return IsoLevel == other.IsoLevel && County == other.County && StatsName == other.StatsName && Active == other.Active &&
                    Confirmed == other.Confirmed && CountryRegion == other.CountryRegion && Deaths == other.Deaths &&
                    LastUpdate.Equals(other.LastUpdate) && ProvinceState == other.ProvinceState &&
                    Recovered == other.Recovered && Origin == other.Origin;
@@ -64,7 +66,6 @@ namespace ReportsGenerator.Model
         {
             var hashCode = new HashCode();
             hashCode.Add(County);
-            hashCode.Add(FIPS);
             hashCode.Add(Active);
             hashCode.Add(Confirmed);
             hashCode.Add(CountryRegion);
@@ -74,6 +75,7 @@ namespace ReportsGenerator.Model
             hashCode.Add(Recovered);
             hashCode.Add(Origin);
             hashCode.Add(IsoLevel);
+            hashCode.Add(StatsName);
             return hashCode.ToHashCode();
         }
 

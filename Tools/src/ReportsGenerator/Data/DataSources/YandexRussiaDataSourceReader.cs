@@ -1,4 +1,4 @@
-﻿using ReportsGenerator.Data.DataSources.Providers;
+﻿using ReportsGenerator.Data.Providers;
 using ReportsGenerator.Utils;
 
 namespace ReportsGenerator.Data.DataSources

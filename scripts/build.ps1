@@ -110,9 +110,9 @@ if(!$RunOnly){
     }
 }
 
-if (Test-Path ${PSScriptRoot}/../ReportsProcessing/reports) {
+if (Test-Path ${PSScriptRoot}/../ReportsProcessing/data) {
     Write-Log-String("Remove previous reports...")
-    Remove-Item ${PSScriptRoot}/../ReportsProcessing/reports -Recurse -Force
+    Remove-Item ${PSScriptRoot}/../ReportsProcessing/data -Recurse -Force
     Confirm-Last-Result $?
 }
 

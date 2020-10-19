@@ -1,7 +1,7 @@
-﻿using ReportsGenerator.Data.DataSources.Providers;
-using ReportsGenerator.Utils;
+﻿using ReportsGenerator.Utils;
 using System.Collections.Generic;
 using System.Linq;
+using ReportsGenerator.Data.Providers;
 
 namespace ReportsGenerator.Data.DataSources
 {
@@ -45,6 +45,9 @@ namespace ReportsGenerator.Data.DataSources
                 "Mainland China" => IsInvalidDate(row, new[] { "03-11-2020", "03-12-2020" }),
 
                 "US" when row[Field.LastUpdate] == "03-22-2020" && row[Field.FIPS] == "11001" && row[Field.Deaths] == "0" => true,
+                "US" when row[Field.ProvinceState] == "Wuhan Evacuee" => true,
+
+                "Australia" when row[Field.ProvinceState] == "External territories" => true,
 
                 _ => false
             };

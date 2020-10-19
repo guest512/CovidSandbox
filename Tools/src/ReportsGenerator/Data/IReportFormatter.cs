@@ -8,14 +8,20 @@ namespace ReportsGenerator.Data
     {
         IEnumerable<string> GetData(DayReport report, string country);
 
-        IEnumerable<string> GetData(BaseCountryReport report, DateTime country);
+        IEnumerable<string> GetData(BaseCountryReport report, DateTime day);
+
+        IEnumerable<string> GetData(StatsReportNode report);
 
         IEnumerable<string> GetHeader(DayReport report);
 
         IEnumerable<string> GetHeader(BaseCountryReport report);
 
+        IEnumerable<string> GetHeader(StatsReportNode report);
+
         IEnumerable<string> GetName(DayReport report);
 
         public IEnumerable<string> GetName(BaseCountryReport report, string? parent = null);
+
+        IEnumerable<string> GetName(StatsReportNode report);
     }
 }

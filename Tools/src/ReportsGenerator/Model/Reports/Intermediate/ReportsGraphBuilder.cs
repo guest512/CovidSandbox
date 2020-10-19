@@ -22,7 +22,7 @@ namespace ReportsGenerator.Model.Reports.Intermediate
 
         public ICollection<BasicReport> Reports { get; }
 
-        public LinkedReport Build(ReportsGraphStructure structure)
+        public LinkedReport Build(StatsReport structure)
         {
             var allReports =
                 Reports.Select(br => new LinkedReportWithParent(br.Parent, CreateLinkedReport(br))).ToList();
@@ -171,6 +171,8 @@ namespace ReportsGenerator.Model.Reports.Intermediate
             if (Consts.DisableExtensiveAssertMethods)
                 return true;
 
+#pragma warning disable 162
+            // ReSharper disable once HeuristicUnreachableCode
             var res = 1;
             var reports = allReports.ToArray();
 
@@ -192,6 +194,7 @@ namespace ReportsGenerator.Model.Reports.Intermediate
             });
 
             return res == 1;
+#pragma warning restore 162
         }
 
         private LinkedReport CreateLinkedReport(BasicReport report)

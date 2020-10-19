@@ -1,11 +1,11 @@
-﻿using ReportsGenerator.Data.DataSources;
+﻿using ReportsGenerator.Data;
 using ReportsGenerator.Utils;
 
 namespace ReportsGenerator.Model.Processors
 {
     public sealed class YandexRussiaRowProcessor : BaseRowProcessor
     {
-        public YandexRussiaRowProcessor(ILogger logger) : base(logger)
+        public YandexRussiaRowProcessor(IStatsProvider statsProvider, ILogger logger) : base(statsProvider, logger)
         {
         }
 

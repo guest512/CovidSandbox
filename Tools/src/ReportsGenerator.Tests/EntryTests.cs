@@ -1,10 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using NUnit.Framework;
-using ReportsGenerator.Data.DataSources;
+﻿using NUnit.Framework;
+using ReportsGenerator.Data;
 using ReportsGenerator.Model;
 using ReportsGenerator.Model.Processors;
 using ReportsGenerator.Utils;
+using System;
+using System.Collections.Generic;
 
 namespace ReportsGenerator.Tests
 {
@@ -16,13 +16,13 @@ namespace ReportsGenerator.Tests
         [OneTimeSetUp]
         public void Setup()
         {
-            _factory  = new EntryFactory(new Dictionary<RowVersion, IRowProcessor>
+            _factory = new EntryFactory(new Dictionary<RowVersion, IRowProcessor>
             {
                 {RowVersion.JHopkinsV1, new JHopkinsTestRowProcessor()},
                 {RowVersion.JHopkinsV2, new JHopkinsTestRowProcessor()},
                 {RowVersion.JHopkinsV3, new JHopkinsTestRowProcessor()},
                 {RowVersion.JHopkinsV4, new JHopkinsTestRowProcessor()},
-                {RowVersion.YandexRussia, new YandexRussiaRowProcessor(new NullLogger())},
+                {RowVersion.YandexRussia, new YandexRussiaRowProcessor(new TestStatsProvider(),new  NullLogger())},
             }, new NullLogger());
         }
 
@@ -59,7 +59,6 @@ namespace ReportsGenerator.Tests
                     new CsvField(Field.CountryRegion, countryFromReport),
                 }, RowVersion.JHopkinsV1);
 
-                
                 Assert.That(_factory.CreateEntry(row).CountryRegion, Is.EqualTo(actualCountryName));
             }
         }
@@ -76,7 +75,6 @@ namespace ReportsGenerator.Tests
 
             var hashCode = new HashCode();
             hashCode.Add(""); //County
-            hashCode.Add(0); //FIPS
             hashCode.Add((long)-5); //Active
             hashCode.Add(0); //Confirmed
             hashCode.Add("Russia"); //CountryRegion
@@ -86,7 +84,8 @@ namespace ReportsGenerator.Tests
             hashCode.Add(0); //Recovered
             hashCode.Add(Origin.JHopkins); //Origin
             hashCode.Add(2); //IsoLevel
-            
+            hashCode.Add("TEST NAME"); //StatsName
+
             Assert.That(entry.GetHashCode(), Is.EqualTo(hashCode.ToHashCode()));
         }
 
@@ -143,7 +142,7 @@ namespace ReportsGenerator.Tests
                 new CsvField(Field.LastUpdate, "2/22/2020 2:20"),
             }, RowVersion.JHopkinsV1));
             Assert.That(entry.ToString(),
-                Is.EqualTo($"JHopkins-Russia(Камчатский край), {new DateTime(2020, 2, 22).ToShortDateString()}: 0--5-0-5"));
+                Is.EqualTo($"JHopkins-Russia(TEST CYRILLIC NAME), {new DateTime(2020, 2, 22).ToShortDateString()}: 0--5-0-5"));
         }
     }
 }

@@ -1,6 +1,6 @@
-﻿using ReportsGenerator.Data.DataSources.Providers;
-using ReportsGenerator.Utils;
+﻿using ReportsGenerator.Utils;
 using System.IO;
+using ReportsGenerator.Data.Providers;
 
 namespace ReportsGenerator.Data.DataSources
 {

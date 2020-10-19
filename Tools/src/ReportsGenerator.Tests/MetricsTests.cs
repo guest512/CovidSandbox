@@ -1,6 +1,6 @@
 ﻿using System;
 using NUnit.Framework;
-using ReportsGenerator.Data.DataSources;
+using ReportsGenerator.Data;
 using ReportsGenerator.Model;
 
 namespace ReportsGenerator.Tests

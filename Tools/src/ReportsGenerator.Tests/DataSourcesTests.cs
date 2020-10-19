@@ -3,6 +3,7 @@ using ReportsGenerator.Data.DataSources;
 using ReportsGenerator.Utils;
 using System.IO;
 using System.Linq;
+using ReportsGenerator.Data;
 
 namespace ReportsGenerator.Tests
 {

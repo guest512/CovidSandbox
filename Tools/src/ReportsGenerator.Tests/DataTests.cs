@@ -3,8 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using NUnit.Framework;
 using ReportsGenerator.Data;
-using ReportsGenerator.Data.DataSources;
-using ReportsGenerator.Data.DataSources.Providers;
+using ReportsGenerator.Data.Providers;
 using ReportsGenerator.Utils;
 
 namespace ReportsGenerator.Tests
@@ -21,7 +20,7 @@ namespace ReportsGenerator.Tests
         public void ValidateJHopkinsVersionStrings(string header, RowVersion version)
         {
             var provider = new JHopkinsDataProvider();
-            Assert.That(provider.GetVersion(header.SplitCsvRowString()), Is.EqualTo(version));
+            Assert.That(provider.GetVersion(header.SplitCsvRowString().ToArray()), Is.EqualTo(version));
         }
 
         [Test]
@@ -123,13 +122,13 @@ namespace ReportsGenerator.Tests
         [TestCaseSource(nameof(Dates))]
         public void ValidateDateParser(KeyValuePair<string, DateTime> data)
         {
-            Assert.That(Convertors.ParseDate(data.Key), Is.EqualTo(data.Value));
+            Assert.That(data.Key.AsDate(), Is.EqualTo(data.Value));
         }
 
         [Test]
         public void ValidateDateParserUnsupportedDate()
         {
-            Assert.That(() => Convertors.ParseDate(DateTime.Now.ToShortTimeString()), Throws.Exception);
+            Assert.That(() => DateTime.Now.ToShortTimeString().AsDate(), Throws.Exception);
         }
     }
 }

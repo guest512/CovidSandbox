@@ -1,4 +1,4 @@
-﻿namespace ReportsGenerator.Data.DataSources
+﻿namespace ReportsGenerator.Data
 {
     public enum Field
     {
@@ -18,6 +18,17 @@
         CaseFatalityRatio,
         DeathsByDay,
         RecoveredByDay,
-        ConfirmedByDay
+        ConfirmedByDay,
+        UID,
+        Iso2,
+        Iso3,
+        Code3,
+        Population,
+        ContinentName,
+        ContinentCode,
+        English,
+        Russian,
+        Abbreviation,
+        Name
     }
 }

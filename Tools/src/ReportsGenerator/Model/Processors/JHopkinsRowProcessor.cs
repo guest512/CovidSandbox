@@ -1,92 +1,78 @@
-﻿using ReportsGenerator.Data.DataSources;
+﻿using ReportsGenerator.Data;
 using ReportsGenerator.Utils;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
 
 namespace ReportsGenerator.Model.Processors
 {
     public class JHopkinsRowProcessor : BaseRowProcessor
     {
-        private readonly Dictionary<string, string> _canadaStates;
-        private readonly string _filesPath;
-        private readonly Dictionary<string, string> _russianRegions;
+        private readonly INames _namesService;
 
-        private readonly Dictionary<string, string> _usStates;
-
-        public JHopkinsRowProcessor(ILogger logger) : this("Data/Misc", logger)
+        public JHopkinsRowProcessor(INames namesService, IStatsProvider statsProvider, ILogger logger) : base(statsProvider, logger)
         {
-        }
-
-        protected JHopkinsRowProcessor(string filesPath, ILogger logger) : base(logger)
-        {
-            _filesPath = filesPath;
-            _russianRegions = GetCountryStatesRegions("Russian_Regions.csv");
-            _usStates = GetCountryStatesRegions("Us_States.csv");
-            _canadaStates = GetCountryStatesRegions("Canada_States.csv");
+            _namesService = namesService;
         }
 
         public override string GetCountryName(Row row)
         {
-            var countryRowValue = row[Field.CountryRegion];
-            var provinceRowValue = row[Field.ProvinceState];
+            var country = row[Field.CountryRegion];
+            var province = row[Field.ProvinceState];
 
-            return countryRowValue switch
+            return (country, province) switch
             {
-                "Mainland China" when provinceRowValue == "Hong Kong" => "Hong Kong",
-                "China" when provinceRowValue == "Hong Kong" => "Hong Kong",
+                ("Mainland China", "Hong Kong") => "Hong Kong",
+                ("China", "Hong Kong") => "Hong Kong",
 
-                "Mainland China" when provinceRowValue == "Macau" => "Macau",
-                "China" when provinceRowValue == "Macau" => "Macau",
-                "Mainland China" when provinceRowValue == "Macao SAR" => "Macau",
-                "China" when provinceRowValue == "Macao SAR" => "Macau",
+                ("Mainland China", "Macau") => "Macau",
+                ("China", "Macau") => "Macau",
+                ("Mainland China", "Macao SAR") => "Macau",
+                ("China", "Macao SAR") => "Macau",
 
-                _ when provinceRowValue.Contains("Diamond Princess") => "Others",
-                "Diamond Princess" => "Others",
-                "Cruise Ship" => "Others",
+                var x when x.province.Contains("Diamond Princess") => "Others",
+                ("Diamond Princess", _) => "Others",
+                ("Cruise Ship", _) => "Others",
 
-                "French Guiana" => "France",
-                "Martinique" => "France",
-                "Mayotte" => "France",
-                "Saint Barthelemy" => "France",
-                "Guadeloupe" => "France",
-                "Reunion" => "France",
+                ("French Guiana", _) => "France",
+                ("Martinique", _) => "France",
+                ("Mayotte", _) => "France",
+                ("Saint Barthelemy", _) => "France",
+                ("Guadeloupe", _) => "France",
+                ("Reunion", _) => "France",
 
-                "Gibraltar" => "UK",
-                "Channel Islands" => "UK",
-                "Cayman Islands" => "UK",
+                ("Gibraltar", _) => "UK",
+                ("Channel Islands", _) => "UK",
+                ("Cayman Islands", _) => "UK",
 
-                "Curacao" => "Netherlands",
-                "Aruba" => "Netherlands",
+                ("Curacao", _) => "Netherlands",
+                ("Aruba", _) => "Netherlands",
 
-                "Faroe Islands" => "Denmark",
-                "Greenland" => "Denmark",
+                ("Faroe Islands", _) => "Denmark",
+                ("Greenland", _) => "Denmark",
 
-                "Guam" => "US",
-                "Puerto Rico" => "US",
+                ("Guam", _) => "US",
+                ("Puerto Rico", _) => "US",
 
-                " Azerbaijan" => "Azerbaijan",
-                "Russian Federation" => "Russia",
-                "Viet Nam" => "Vietnam",
-                "United Kingdom" => "UK",
-                "Taiwan*" => "Taiwan",
-                "Gambia, The" => "Gambia",
-                "The Gambia" => "Gambia",
-                "Korea, South" => "South Korea",
-                "Macao SAR" => "Macau",
-                "Iran (Islamic Republic of)" => "Iran",
-                "Hong Kong SAR" => "Hong Kong",
-                "Bahamas, The" => "Bahamas",
-                "The Bahamas" => "Bahamas",
-                "Mainland China" => "China",
-                "Taipei and environs" => "Taiwan",
-                "St. Martin" => "Saint Martin",
-                "Republic of the Congo" => "Congo (Brazzaville)",
-                "Republic of Moldova" => "Moldova",
-                "Republic of Ireland" => "Ireland",
-                "Czech Republic" => "Czechia",
-                "occupied Palestinian territory" => "Palestine",
-                _ => countryRowValue
+                (" Azerbaijan", _) => "Azerbaijan",
+                ("Russian Federation", _) => "Russia",
+                ("Viet Nam", _) => "Vietnam",
+                ("United Kingdom", _) => "UK",
+                ("Taiwan*", _) => "Taiwan",
+                ("Gambia, The", _) => "Gambia",
+                ("The Gambia", _) => "Gambia",
+                ("Korea, South", _) => "South Korea",
+                ("Macao SAR", _) => "Macau",
+                ("Iran (Islamic Republic of)", _) => "Iran",
+                ("Hong Kong SAR", _) => "Hong Kong",
+                ("Bahamas, The", _) => "Bahamas",
+                ("The Bahamas", _) => "Bahamas",
+                ("Mainland China", _) => "China",
+                ("Taipei and environs", _) => "Taiwan",
+                ("St. Martin", _) => "Saint Martin",
+                ("Republic of the Congo", _) => "Congo (Brazzaville)",
+                ("Republic of Moldova", _) => "Moldova",
+                ("Republic of Ireland", _) => "Ireland",
+                ("Czech Republic", _) => "Czechia",
+                ("occupied Palestinian territory", _) => "Palestine",
+                _ => country
             };
         }
 
@@ -104,94 +90,65 @@ namespace ReportsGenerator.Model.Processors
             };
         }
 
-        public override uint GetFips(Row row) => (uint)TryGetValue(row[Field.FIPS]);
+        public override uint GetFips(Row row) => (uint)row[Field.FIPS].AsLong();
 
         public override Origin GetOrigin(Row row) => Origin.JHopkins;
 
         public override string GetProvinceName(Row row)
         {
-            var countryRowValue = row[Field.CountryRegion];
-            var provinceRowValue = row[Field.ProvinceState];
+            var country = row[Field.CountryRegion];
+            var province = row[Field.ProvinceState];
 
-            return provinceRowValue switch
+            return (province, country) switch
             {
-                "Unknown" => Consts.MainCountryRegion,
-                "unassigned" => Consts.MainCountryRegion,
-                "Hong Kong" => Consts.MainCountryRegion,
-                "Macau" => Consts.MainCountryRegion,
-                "Taiwan" => Consts.MainCountryRegion,
-                "UK" => Consts.MainCountryRegion,
-                "US" => Consts.MainCountryRegion,
+                ("Unknown", _) => Consts.MainCountryRegion,
+                ("unassigned", _) => Consts.MainCountryRegion,
+                ("Hong Kong", _) => Consts.MainCountryRegion,
+                ("Macau", _) => Consts.MainCountryRegion,
+                ("Taiwan", _) => Consts.MainCountryRegion,
+                ("UK", _) => Consts.MainCountryRegion,
+                ("US", _) => Consts.MainCountryRegion,
 
-                _ when provinceRowValue.Contains("Diamond Princess") => "Diamond Princess",
+                var x when x.province.Contains("Diamond Princess") => "Diamond Princess",
 
-                _ when countryRowValue == "French Guiana" => "French Guiana",
-                _ when countryRowValue == "Martinique" => "Martinique",
-                _ when countryRowValue == "Mayotte" => "Mayotte",
-                _ when countryRowValue == "Guam" => "Guam",
-                _ when countryRowValue == "Diamond Princess" => "Diamond Princess",
-                _ when countryRowValue == "Gibraltar" => "Gibraltar",
-                _ when countryRowValue == "Saint Barthelemy" => "Saint Barthelemy",
-                _ when countryRowValue == "Guadeloupe" => "Guadeloupe",
-                _ when countryRowValue == "Channel Islands" => "Channel Islands",
-                _ when countryRowValue == "Curacao" => "Curacao",
-                _ when countryRowValue == "Aruba" => "Aruba",
-                _ when countryRowValue == "Cayman Islands" => "Cayman Islands",
-                _ when countryRowValue == "Reunion" => "Reunion",
-                _ when countryRowValue == "Faroe Islands" => "Faroe Islands",
-                _ when countryRowValue == "Greenland" => "Greenland",
-                _ when countryRowValue == "Puerto Rico" => "Puerto Rico",
+                (_, "French Guiana") => "French Guiana",
+                (_, "Martinique") => "Martinique",
+                (_, "Mayotte") => "Mayotte",
+                (_, "Guam") => "Guam",
+                (_, "Diamond Princess") => "Diamond Princess",
+                (_, "Gibraltar") => "Gibraltar",
+                (_, "Saint Barthelemy") => "Saint Barthelemy",
+                (_, "Guadeloupe") => "Guadeloupe",
+                (_, "Channel Islands") => "Channel Islands",
+                (_, "Curacao") => "Curacao",
+                (_, "Aruba") => "Aruba",
+                (_, "Cayman Islands") => "Cayman Islands",
+                (_, "Reunion") => "Reunion",
+                (_, "Faroe Islands") => "Faroe Islands",
+                (_, "Greenland") => "Greenland",
+                (_, "Puerto Rico") => "Puerto Rico",
 
-                _ when string.IsNullOrEmpty(provinceRowValue) => Consts.MainCountryRegion,
-                _ when countryRowValue == provinceRowValue => Consts.MainCountryRegion,
+                var x when string.IsNullOrEmpty(x.province) || x.province == x.country => Consts.MainCountryRegion,
 
-                _ when countryRowValue == "Russia" => _russianRegions[provinceRowValue],
+                (_, "Russia") => _namesService.GetCyrillicName(province),
 
-                "Virgin Islands, U.S." => "Virgin Islands",
-                _ when countryRowValue == "US" => GetUsProvinceName(provinceRowValue),
+                ("Virgin Islands, U.S.", _) => "Virgin Islands",
+                (_, "US") => GetProvinceName(province),
 
-                _ when countryRowValue == "Canada" => GetCanadaProvinceName(provinceRowValue),
+                (_, "Canada") => GetProvinceName(province),
 
-                _ => provinceRowValue
+                _ => province
             };
         }
 
-        private static bool TrySplitStateToStateCounty(string provinceRow, out string county, out string state)
-        {
-            var values = provinceRow.Split(',');
-
-            if (values.Length == 2)
-            {
-                county = values[0].Trim();
-                state = values[1].Trim();
-                return true;
-            }
-
-            county = state = string.Empty;
-            return false;
-        }
-
-        private string GetCanadaProvinceName(string provinceRowValue) =>
-                    TrySplitStateToStateCounty(provinceRowValue, out _, out var state)
-                ? state.Length == 2 ? _canadaStates[state] : state
+        private string GetProvinceName(string provinceRowValue) =>
+            Utils.TrySplitStateToStateCounty(provinceRowValue, out _, out var state)
+                ? state.Length == 2 ? _namesService.GetStateFullName(state) : state
                 : provinceRowValue;
-
-        private Dictionary<string, string> GetCountryStatesRegions(string filename)
-        {
-            var lines = File.ReadAllLines(Path.Combine(_filesPath, filename));
-
-            static KeyValuePair<string, string> Selector(string x)
-            {
-                var values = x.Split(',');
-                return new KeyValuePair<string, string>(values[0], values[1]);
-            }
-
-            return new Dictionary<string, string>(lines.Skip(1).Select(Selector));
-        }
 
         private string GetCountyName(string provinceRowValue, string countyRowValue)
         {
-            if (!TrySplitStateToStateCounty(provinceRowValue, out var county, out _))
+            if (!Utils.TrySplitStateToStateCounty(provinceRowValue, out var county, out _))
                 return countyRowValue;
 
             if (county.EndsWith(" County"))
@@ -199,10 +156,5 @@ namespace ReportsGenerator.Model.Processors
 
             return county;
         }
-
-        private string GetUsProvinceName(string provinceRowValue) =>
-            TrySplitStateToStateCounty(provinceRowValue, out _, out var state)
-                ? _usStates[state]
-                : provinceRowValue;
     }
 }

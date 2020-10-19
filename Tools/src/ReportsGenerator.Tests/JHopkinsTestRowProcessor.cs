@@ -5,7 +5,7 @@ namespace ReportsGenerator.Tests
 {
     public class JHopkinsTestRowProcessor : JHopkinsRowProcessor
     {
-        public JHopkinsTestRowProcessor() : base("../Data/Misc", new NullLogger())
+        public JHopkinsTestRowProcessor() : base(new TestNamesService(), new TestStatsProvider(),  new NullLogger())
         {
         }
     }
