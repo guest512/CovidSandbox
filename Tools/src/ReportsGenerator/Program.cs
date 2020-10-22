@@ -53,7 +53,7 @@ namespace ReportsGenerator
             return rowProcessors;
         }
 
-        private static async Task Main(string[] args)
+        private static async Task<int> Main(string[] args)
         {
             var logger = new ConsoleLogger();
             try
@@ -118,12 +118,15 @@ namespace ReportsGenerator
                 }
 
                 logger.WriteError(ex.ToString());
+                return 1;
             }
             finally
             {
                 Convertors.SetLogger(new NullLogger());
                 logger.Dispose();
             }
+
+            return 0;
         }
     }
 }
