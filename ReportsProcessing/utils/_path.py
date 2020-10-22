@@ -1,24 +1,40 @@
+import typing as _types
 import os as _os
 
 
 class __PathHelper():
-    def __get_data_path(self) -> str:
-        return _os.path.abspath(_os.path.join(_os.path.dirname(__file__), "..", "data"))
+    def __init__(self):
+        root = _os.path.abspath(
+            _os.path.join(_os.path.dirname(__file__), "..", "data"))
+        self._countries_root = _os.path.join(root, "reports", "countries")
+        self._daily_root = _os.path.join(root, "reports", "dayByDay")
+        self._stats_root = _os.path.join(root, "stats")
 
-    def __get_reports_path(self) -> str:
-        return _os.path.join(self.__get_data_path(), "reports")
+    def get_country_report_path(self, country: str) -> str:
+        return _os.path.join(self._countries_root, country, country + ".csv")
 
-    def get_stats_path(self) -> str:
-        return _os.path.join(self.__get_data_path(), "stats")
+    def get_region_report_path(self, country: str, province: str) -> str:
+        return _os.path.join(self._countries_root, country, "regions",
+                             province + ".csv")
 
-    def get_countries_reports_path(self) -> str:
-        return _os.path.join(self.__get_reports_path(), "countries")
+    def get_countries_reports_paths(self) -> _types.List[str]:
+        return _os.listdir(self._countries_root)
 
-    def get_daily_reports_path(self) -> str:
-        return _os.path.join(self.__get_reports_path(), "dayByDay")
+    def get_daily_reports_paths(self) -> _types.List[str]:
+        return _os.listdir(self._daily_root)
 
-    def get_country_reports_path(self, country: str) -> str:
-        return _os.path.join(self.get_countries_reports_path(), country)
+    def get_country_regions_reports_paths(
+            self, country: str) -> _types.List[str]:
+        return _os.listdir(
+            _os.path.join(self._countries_root, country, "regions"))
 
-    def get_country_regions_reports_path(self, country: str) -> str:
-        return _os.path.join(self.get_country_reports_path(country), "regions")
+    def get_countries_stats_path(self) -> str:
+        return _os.path.join(self._stats_root, "countries.csv")
+
+    def get_country_regions_stats_path(self, country: str) -> str:
+        return _os.path.join(self._stats_root, country, "regions.csv")
+
+    def get_country_counties_stats_path(self, country: str,
+                                        province: str) -> str:
+        return _os.path.join(self._stats_root, country, province,
+                             "counties.csv")

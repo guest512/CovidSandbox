@@ -12,15 +12,9 @@ class _Dates():
     def get_available_dates(
             self) -> _types.Tuple[_pd.Timestamp, _pd.Timestamp]:
 
-        files = _os.listdir(self.__paths.get_daily_reports_path())
+        files = self.__paths.get_daily_reports_paths()
         start_date = _pd.Timestamp(files[0][:-4]).normalize()
         finish_date = _pd.Timestamp(files[-1][:-4]).normalize()
-
-        if (len(
-                _pd.read_csv(
-                    _os.path.join(self.__paths.get_daily_reports_path(),
-                                  files[-1]))) == 1):
-            finish_date = finish_date - _pd.Timedelta('1 days')
 
         return (start_date, finish_date)
 

@@ -18,15 +18,12 @@ class _Storage():
         '''Returns list of regions for the specified country. The result is based on available region reports.'''
 
         return list(
-            map(
-                lambda file_name: _os.path.splitext(file_name)[0],
-                _os.listdir(
-                    self.__paths.get_country_regions_reports_path(
-                        country_name))))
+            map(lambda file_name: _os.path.splitext(file_name)[0],
+                self.__paths.get_country_regions_reports_paths(country_name)))
 
     def get_countries(self) -> _List[str]:
         ''' Returns list of all availables countries to process. '''
-        return list(_os.listdir(self.__paths.get_countries_reports_path()))
+        return list(self.__paths.get_countries_reports_paths())
 
     def get_country_report(self,
                            country_name: str,
@@ -43,9 +40,7 @@ class _Storage():
             DataFrame: a country report
         '''
 
-        report_file = _os.path.join(
-            self.__paths.get_country_reports_path(country_name),
-            country_name + ".csv")
+        report_file = self.__paths.get_country_report_path(country_name)
         country_df = None
 
         if (parse_dates):
@@ -79,9 +74,8 @@ class _Storage():
         Returns:
             DataFrame: a country's region report
         '''
-        report_file = _os.path.join(
-            self.__paths.get_country_regions_reports_path(country_name),
-            region_name + ".csv")
+        report_file = self.__paths.get_region_report_path(
+            country_name, region_name)
         region_df = None
 
         if (parse_dates):
@@ -159,3 +153,26 @@ class _Storage():
             countries_series.append(column_series.rename(country))
 
         return _pd.concat(countries_series, axis=1).fillna(0)
+
+    def get_countries_stats(self) -> _pd.DataFrame:
+        """
+        docstring
+        """
+
+        report_file = self.__paths.get_countries_stats_path()
+        stats_df = _pd.read_csv(report_file, index_col=["Name"])
+        return stats_df.sort_index()
+
+    def get_provinces_stats(self, country_name: str) -> _pd.DataFrame:
+
+        report_file = self.__paths.get_country_regions_stats_path(country_name)
+        stats_df = _pd.read_csv(report_file, index_col=["Name"])
+        return stats_df.sort_index()
+
+    def get_counties_stats(self, country_name: str,
+                           region_name: str) -> _pd.DataFrame:
+
+        report_file = self.__paths.get_country_counties_stats_path(
+            country_name, region_name)
+        stats_df = _pd.read_csv(report_file, index_col=["Name"])
+        return stats_df.sort_index()
