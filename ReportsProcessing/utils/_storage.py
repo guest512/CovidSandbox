@@ -93,13 +93,38 @@ class _Storage():
 
         return region_df
 
-    def get_regions_report_by_column(
-            self,
-            country_name: str,
-            column_name: str,
-            include: _List[str] = None,
-            exclude: _List[str] = None,
-            start_date: _pd.Timestamp = None) -> _pd.DataFrame:
+    @staticmethod
+    def __get_series_or_dataframe(df: _pd.DataFrame,
+                                  name: str,
+                                  column_name: str,
+                                  start_date: _pd.Timestamp = None,
+                                  wide_form: bool = True):
+        if start_date:
+            if wide_form:
+                column_series = df.loc[start_date:, column_name]
+            else:
+                column_series = df.loc[df.Date >= start_date,
+                                        ['Date', column_name]]
+        else:
+            if wide_form:
+                column_series = df[column_name]
+            else:
+                column_series = df[['Date', column_name]]
+
+        if wide_form:
+            column_series = column_series.rename(name)
+        else:
+            column_series['Name'] = name
+
+        return column_series
+
+    def get_regions_report_by_column(self,
+                                    country_name: str,
+                                    column_name: str,
+                                    include: _List[str] = None,
+                                    exclude: _List[str] = None,
+                                    start_date: _pd.Timestamp = None,
+                                    wide_form: bool = True) -> _pd.DataFrame:
         ''' TBD '''
 
         regions_series = list()
@@ -109,27 +134,27 @@ class _Storage():
             regions = self.get_country_regions(country_name)
 
         for region in regions:
-            if (exclude is not None and region in exclude):
+            if (exclude and region in exclude):
                 continue
 
-            region_df = self.get_region_report(country_name, region)
-            column_series = None
+            region_df = self.get_region_report(country_name,
+                                                region,
+                                                date_is_index=wide_form)
 
-            if (start_date is not None):
-                column_series = region_df.loc[start_date:, column_name]
-            else:
-                column_series = region_df[column_name]
+            regions_series.append(
+                _Storage.__get_series_or_dataframe(region_df, region,
+                                                    column_name, start_date,
+                                                    wide_form))
 
-            regions_series.append(column_series.rename(region))
-
-        return _pd.concat(regions_series, axis=1).fillna(0)
+        return _pd.concat(regions_series, axis=1 if wide_form else 0).fillna(0)
 
     def get_countries_report_by_column(
             self,
             column_name: str,
             include: _List[str] = None,
             exclude: _List[str] = None,
-            start_date: _pd.Timestamp = None) -> _pd.DataFrame:
+            start_date: _pd.Timestamp = None,
+            wide_form: bool = True) -> _pd.DataFrame:
         ''' TBD '''
 
         countries_series = list()
@@ -139,20 +164,18 @@ class _Storage():
             countries = self.get_countries()
 
         for country in countries:
-            if (exclude is not None and country in exclude):
+            if (exclude and country in exclude):
                 continue
 
-            country_df = self.get_country_report(country)
-            column_series = None
+            country_df = self.get_country_report(country,
+                                                 date_is_index=wide_form)
 
-            if (start_date is not None):
-                column_series = country_df.loc[start_date:, column_name]
-            else:
-                column_series = country_df[column_name]
+            countries_series.append(
+                _Storage.__get_series_or_dataframe(country_df, country,
+                                                   column_name, start_date,
+                                                   wide_form))
 
-            countries_series.append(column_series.rename(country))
-
-        return _pd.concat(countries_series, axis=1).fillna(0)
+        return _pd.concat(countries_series, axis=1 if wide_form else 0).fillna(0)
 
     def get_countries_stats(self) -> _pd.DataFrame:
         """

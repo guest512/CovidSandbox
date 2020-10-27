@@ -9,6 +9,8 @@ _dates_service = _dates._Dates(_path.__PathHelper())
 data = _data._DataHelper(storage)
 
 (first_day, last_day) = _dates_service.get_available_dates()
+first_week = first_day - _dates._Dates.to_Timedelta(first_day.weekday())
+last_week = last_day - _dates._Dates.to_Timedelta(last_day.weekday())
 one_day = _dates_service.to_Timedelta(1)
 one_week = _dates_service.to_Timedelta(7)
 

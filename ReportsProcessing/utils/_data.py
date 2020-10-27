@@ -1,7 +1,9 @@
 import typing as _types
 import pandas as _pd
 
-Baseline =  _types.Tuple[_types.Union[_pd.Timestamp,_types.Tuple[str,_pd.Timestamp]], int]
+Baseline = _types.Tuple[_types.Union[_pd.Timestamp,
+                                     _types.Tuple[str, _pd.Timestamp]], int]
+
 
 class _DataHelper:
     def __init__(self, storage):
@@ -36,23 +38,29 @@ class _DataHelper:
         return values / population
 
     def per_value(self,
-                   values: _types.Union[_pd.DataFrame, _pd.Series],
-                   country: str,
-                   province: _types.Optional[str] = None,
-                   county: _types.Optional[str] = None,
-                   per: int = 1000):
+                  values: _types.Union[_pd.DataFrame, _pd.Series],
+                  country: str,
+                  province: _types.Optional[str] = None,
+                  county: _types.Optional[str] = None,
+                  per: int = 1000):
         return self.per_capita(values, country, province, county) * per
 
     @staticmethod
-    def set_baseline(values: _types.Union[_pd.DataFrame, _pd.Series], baseline: Baseline) -> _types.Union[_pd.DataFrame, _pd.Series]:
+    def set_baseline(
+            values: _types.Union[_pd.DataFrame, _pd.Series],
+            baseline: Baseline) -> _types.Union[_pd.DataFrame, _pd.Series]:
         baseline_value = baseline[1]
         actual_value = 0
-        
-        if isinstance(values,_pd.DataFrame):
+
+        if isinstance(values, _pd.DataFrame):
             actual_value = values.loc[baseline[0][1], baseline[0][0]]
         else:
             actual_value = values.loc[baseline[0]]
 
         return values * baseline_value / actual_value
 
-
+    @staticmethod
+    def per_week(
+        values: _types.Union[_pd.DataFrame, _pd.Series]
+    ) -> _types.Union[_pd.DataFrame, _pd.Series]:
+        return values.resample('W-MON', label='left', closed='left').sum()
