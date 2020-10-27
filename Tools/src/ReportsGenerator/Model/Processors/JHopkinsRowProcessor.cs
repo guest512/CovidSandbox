@@ -27,7 +27,8 @@ namespace ReportsGenerator.Model.Processors
                 ("Mainland China", "Macao SAR") => "Macau",
                 ("China", "Macao SAR") => "Macau",
 
-                var x when x.province.Contains("Diamond Princess") => "Others",
+                var x when x.province.Contains("Diamond Princess") || x.province.Contains("Grand Princess") => "Others",
+                ("MS Zaandam", _) => "Others",
                 ("Diamond Princess", _) => "Others",
                 ("Cruise Ship", _) => "Others",
 
@@ -40,6 +41,8 @@ namespace ReportsGenerator.Model.Processors
 
                 ("Gibraltar", _) => "UK",
                 ("Channel Islands", _) => "UK",
+                ("Guernsey", _) => "UK",
+                ("Jersey", _) => "UK",
                 ("Cayman Islands", _) => "UK",
 
                 ("Curacao", _) => "Netherlands",
@@ -51,6 +54,9 @@ namespace ReportsGenerator.Model.Processors
                 ("Guam", _) => "US",
                 ("Puerto Rico", _) => "US",
 
+                ("Vatican City", _) => "Holy See",
+                ("Ivory Coast", _) => "Cote d'Ivoire",
+                ("Cape Verde", _) => "Cabo Verde",
                 (" Azerbaijan", _) => "Azerbaijan",
                 ("Russian Federation", _) => "Russia",
                 ("Viet Nam", _) => "Vietnam",
@@ -71,7 +77,8 @@ namespace ReportsGenerator.Model.Processors
                 ("Republic of Moldova", _) => "Moldova",
                 ("Republic of Ireland", _) => "Ireland",
                 ("Czech Republic", _) => "Czechia",
-                ("occupied Palestinian territory", _) => "Palestine",
+                ("occupied Palestinian territory", _) => "West Bank and Gaza",
+                ("Palestine", _) => "West Bank and Gaza",
                 _ => country
             };
         }
@@ -84,6 +91,8 @@ namespace ReportsGenerator.Model.Processors
 
             return countryRowValue switch
             {
+                "Guernsey" => "Guernsey",
+                "Jersey" => "Jersey",
                 "US" => GetCountyName(provinceRowValue, countyRowValue),
                 "Canada" => GetCountyName(provinceRowValue, countyRowValue),
                 _ => countyRowValue
@@ -108,18 +117,23 @@ namespace ReportsGenerator.Model.Processors
                 ("Taiwan", _) => Consts.MainCountryRegion,
                 ("UK", _) => Consts.MainCountryRegion,
                 ("US", _) => Consts.MainCountryRegion,
+                ("None", _) => Consts.MainCountryRegion,
 
+                var x when x.province.Contains("Grand Princess") => "Grand Princess",
                 var x when x.province.Contains("Diamond Princess") => "Diamond Princess",
 
                 (_, "French Guiana") => "French Guiana",
                 (_, "Martinique") => "Martinique",
                 (_, "Mayotte") => "Mayotte",
                 (_, "Guam") => "Guam",
+                (_, "MS Zaandam") => "MS Zaandam",
                 (_, "Diamond Princess") => "Diamond Princess",
                 (_, "Gibraltar") => "Gibraltar",
                 (_, "Saint Barthelemy") => "Saint Barthelemy",
                 (_, "Guadeloupe") => "Guadeloupe",
                 (_, "Channel Islands") => "Channel Islands",
+                (_, "Guernsey") => "Channel Islands",
+                (_, "Jersey") => "Channel Islands",
                 (_, "Curacao") => "Curacao",
                 (_, "Aruba") => "Aruba",
                 (_, "Cayman Islands") => "Cayman Islands",
@@ -132,6 +146,7 @@ namespace ReportsGenerator.Model.Processors
 
                 (_, "Russia") => _namesService.GetCyrillicName(province),
 
+                ("United States Virgin Islands", _) => "Virgin Islands",
                 ("Virgin Islands, U.S.", _) => "Virgin Islands",
                 (_, "US") => GetProvinceName(province),
 
@@ -143,7 +158,7 @@ namespace ReportsGenerator.Model.Processors
 
         private string GetProvinceName(string provinceRowValue) =>
             Utils.TrySplitStateToStateCounty(provinceRowValue, out _, out var state)
-                ? state.Length == 2 ? _namesService.GetStateFullName(state) : state
+                ? state.Length == 2 || state == "D.C." ? _namesService.GetStateFullName(state) : state
                 : provinceRowValue;
 
         private string GetCountyName(string provinceRowValue, string countyRowValue)

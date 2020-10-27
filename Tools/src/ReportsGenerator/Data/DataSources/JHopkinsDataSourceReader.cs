@@ -46,8 +46,16 @@ namespace ReportsGenerator.Data.DataSources
 
                 "US" when row[Field.LastUpdate] == "03-22-2020" && row[Field.FIPS] == "11001" && row[Field.Deaths] == "0" => true,
                 "US" when row[Field.ProvinceState] == "Wuhan Evacuee" => true,
+                "US" when row[Field.ProvinceState] == "United States Virgin Islands" => IsInvalidDate(row, new[] { "03-18-2020", "03-19-2020" }),
 
                 "Australia" when row[Field.ProvinceState] == "External territories" => true,
+
+
+                "United Kingdom" when row[Field.ProvinceState] == "Channel Islands" => IsInvalidDate(row, Enumerable.Range(14,2).Select(n=>$"03-{n}-2020")),
+                "Guernsey" => IsInvalidDate(row, Enumerable.Range(16, 6).Select(n => $"03-{n}-2020")),
+                "Jersey" => IsInvalidDate(row, Enumerable.Range(16, 6).Select(n => $"03-{n}-2020")),
+
+                "Cape Verde" when row[Field.LastUpdate] == "03-21-2020" => true,
 
                 _ => false
             };
