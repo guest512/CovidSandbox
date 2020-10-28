@@ -33,7 +33,7 @@ namespace ReportsGenerator.Data.IO
 
             var contents = reader.ReadToEnd();
 
-            return contents.Split(contents.Contains("\r\n") ? "\r\n" : "\n");
+            return contents.Split("\r\n").SelectMany(l => l.Split("\n")).ToArray();
         }
     }
 }
