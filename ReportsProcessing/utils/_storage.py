@@ -40,23 +40,9 @@ class _Storage():
             DataFrame: a country report
         '''
 
-        report_file = self.__paths.get_country_report_path(country_name)
-        country_df = None
-
-        if (parse_dates):
-            if (date_is_index):
-                country_df = _pd.read_csv(report_file,
-                                          parse_dates=["Date"],
-                                          index_col="Date",
-                                          dayfirst=True)
-            else:
-                country_df = _pd.read_csv(report_file,
-                                          parse_dates=["Date"],
-                                          dayfirst=True)
-        else:
-            country_df = _pd.read_csv(report_file)
-
-        return country_df
+        return _Storage.__read_csv_file(
+            self.__paths.get_country_report_path(country_name), parse_dates,
+            date_is_index)
 
     def get_region_report(self,
                           country_name: str,
@@ -74,42 +60,65 @@ class _Storage():
         Returns:
             DataFrame: a country's region report
         '''
-        report_file = self.__paths.get_region_report_path(
-            country_name, region_name)
-        region_df = None
+
+        return _Storage.__read_csv_file(
+            self.__paths.get_region_report_path(country_name, region_name),
+            parse_dates, date_is_index)
+
+    @staticmethod
+    def __read_csv_file(filepath: str, parse_dates,
+                        date_is_index) -> _pd.DataFrame:
+        columns_types = {
+            'Confirmed': int,
+            'Deaths': int,
+            'Recovered': int,
+            'Confirmed_Change': int,
+            'Deaths_Change': int,
+            'Recovered_Change': int,
+            'Rt': float,
+            'Time_To_Resolve': float
+        }
 
         if (parse_dates):
             if (date_is_index):
-                region_df = _pd.read_csv(report_file,
-                                         parse_dates=["Date"],
-                                         index_col="Date",
-                                         dayfirst=True)
+                return _pd.read_csv(filepath,
+                                    parse_dates=["Date"],
+                                    index_col="Date",
+                                    dayfirst=True,
+                                    dtype=columns_types)
             else:
-                region_df = _pd.read_csv(report_file,
-                                         parse_dates=["Date"],
-                                         dayfirst=True)
+                return _pd.read_csv(filepath,
+                                    parse_dates=["Date"],
+                                    dayfirst=True,
+                                    dtype=columns_types)
         else:
-            region_df = _pd.read_csv(report_file)
-
-        return region_df
+            return _pd.read_csv(filepath, dtype=columns_types)
 
     @staticmethod
     def __get_series_or_dataframe(df: _pd.DataFrame,
                                   name: str,
-                                  column_name: str,
+                                  column_name: str = None,
                                   start_date: _pd.Timestamp = None,
                                   wide_form: bool = True):
-        if start_date:
-            if wide_form:
-                column_series = df.loc[start_date:, column_name]
-            else:
-                column_series = df.loc[df.Date >= start_date,
-                                        ['Date', column_name]]
-        else:
-            if wide_form:
-                column_series = df[column_name]
-            else:
-                column_series = df[['Date', column_name]]
+
+        column_series = {
+            column_name and start_date and wide_form:
+            lambda x: df.loc[start_date:, column_name],
+            column_name and start_date and not wide_form:
+            lambda x: df.loc[df.Date >= start_date, ['Date', column_name]],
+            column_name and not start_date and wide_form:
+            lambda x: df[column_name],
+            column_name and not start_date and not wide_form:
+            lambda x: df[['Date', column_name]],
+            not column_name and start_date and wide_form:
+            lambda x: df.loc[start_date:],
+            not column_name and start_date and not wide_form:
+            lambda x: df.loc[df.Date >= start_date],
+            not column_name and not start_date and wide_form:
+            lambda x: df,
+            not column_name and not start_date and not wide_form:
+            lambda x: df
+        }[True](None)
 
         if wide_form:
             column_series = column_series.rename(name)
@@ -119,12 +128,12 @@ class _Storage():
         return column_series
 
     def get_regions_report_by_column(self,
-                                    country_name: str,
-                                    column_name: str,
-                                    include: _List[str] = None,
-                                    exclude: _List[str] = None,
-                                    start_date: _pd.Timestamp = None,
-                                    wide_form: bool = True) -> _pd.DataFrame:
+                                     country_name: str,
+                                     column_name: str,
+                                     include: _List[str] = None,
+                                     exclude: _List[str] = None,
+                                     start_date: _pd.Timestamp = None,
+                                     wide_form: bool = True) -> _pd.DataFrame:
         ''' TBD '''
 
         regions_series = list()
@@ -138,15 +147,42 @@ class _Storage():
                 continue
 
             region_df = self.get_region_report(country_name,
-                                                region,
-                                                date_is_index=wide_form)
+                                               region,
+                                               date_is_index=wide_form)
 
             regions_series.append(
                 _Storage.__get_series_or_dataframe(region_df, region,
-                                                    column_name, start_date,
-                                                    wide_form))
+                                                   column_name, start_date,
+                                                   wide_form))
 
         return _pd.concat(regions_series, axis=1 if wide_form else 0).fillna(0)
+
+    def get_countries_report(
+            self,
+            include: _List[str] = None,
+            exclude: _List[str] = None,
+            start_date: _pd.Timestamp = None) -> _pd.DataFrame:
+        ''' TBD '''
+
+        countries_series = list()
+        countries = include
+
+        if (countries is None or len(countries) == 0):
+            countries = self.get_countries()
+
+        for country in countries:
+            if (exclude and country in exclude):
+                continue
+
+            country_df = self.get_country_report(country, date_is_index=False)
+
+            countries_series.append(
+                _Storage.__get_series_or_dataframe(country_df,
+                                                   country,
+                                                   start_date=start_date,
+                                                   wide_form=False))
+
+        return _pd.concat(countries_series).fillna(0)
 
     def get_countries_report_by_column(
             self,
@@ -175,7 +211,8 @@ class _Storage():
                                                    column_name, start_date,
                                                    wide_form))
 
-        return _pd.concat(countries_series, axis=1 if wide_form else 0).fillna(0)
+        return _pd.concat(countries_series,
+                          axis=1 if wide_form else 0).fillna(0)
 
     def get_countries_stats(self) -> _pd.DataFrame:
         """

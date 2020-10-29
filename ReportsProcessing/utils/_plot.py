@@ -59,14 +59,16 @@ class _PlotHelper():
                           values: _pd.Series,
                           sma_window: int = 7,
                           label: str = None,
-                          bar_alpha: float = 0.3):
+                          bar_alpha: float = 0.3,
+                          color: str = None):
         if label:
             ax.plot(values.rolling(window=sma_window).mean(),
-                    label=label + "-SMA" + str(sma_window))
+                    label=label + "-SMA" + str(sma_window),
+                    color=color)
         else:
-            ax.plot(values.rolling(window=sma_window).mean())
+            ax.plot(values.rolling(window=sma_window).mean(),color=color)
 
-        ax.bar(values.index, values, alpha=bar_alpha)
+        ax.bar(values.index, values, alpha=bar_alpha,color=color)
 
     def _draw_daily_stats(self, ax: _figure.Axes, df: _pd.DataFrame,
                           draw_key_dates: bool):
