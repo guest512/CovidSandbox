@@ -358,6 +358,10 @@ namespace ReportsGenerator.Model
                     county = "DeSoto";
                     break;
 
+                case "Yakutat":
+                    county = "Yakutat plus Hoonah-Angoon";
+                    break;
+
                 case "Lake and Peninsula":
                 case "Bristol Bay":
                     county = "Bristol Bay plus Lake Peninsula";
