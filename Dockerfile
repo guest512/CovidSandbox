@@ -37,7 +37,7 @@ FROM base_runner as reports_processor
 VOLUME [ "/work" ]
 
 # Add Tini. Tini operates as a process subreaper for jupyter. This prevents kernel crashes.
-ENV TINI_VERSION v0.6.0
+ENV TINI_VERSION v0.19.0
 ADD https://github.com/krallin/tini/releases/download/${TINI_VERSION}/tini /usr/bin/tini
 RUN chmod +x /usr/bin/tini
 ENTRYPOINT ["/usr/bin/tini", "--"]
@@ -54,7 +54,7 @@ CMD [ \
 
 FROM base_builder as base_builder_dotnet
 
-RUN ./dotnet-install.sh -c LTS -InstallDir $dotnet_install_dir
+RUN ./dotnet-install.sh -c 3.1 -InstallDir $dotnet_install_dir
 
 
 
@@ -78,7 +78,7 @@ FROM base_builder_dotnet as builder
 
 COPY Tools ./
 
-RUN dotnet test src/ -c:Release -p:BinaryOutDir=$PWD/bin && \
+RUN dotnet test src/ -c:Release -p:BinaryOutDir=$PWD/bin -v:n && \
     dotnet publish src/ReportsGenerator/ --self-contained true -c:Release -p:BinaryOutDir=$PWD/bin -p:PublishTrimmed=true -r alpine.3.11-x64 -v:n
 
 
