@@ -1,0 +1,35 @@
+FROM ubuntu:20.04 as base_runner
+WORKDIR /work
+RUN apt update -y && \
+    apt install python3-pip locales -y && \
+    apt-get clean && \
+    locale-gen ru_RU && \
+    locale-gen ru_RU.UTF-8 && \
+    update-locale && \
+    pip3 install pip --upgrade && \
+    pip3 install \
+        jupyter==1.0.0 \
+        numpy==1.19.2 \
+        pandas==1.1.4 \
+        matplotlib==3.3.2 \
+        seaborn==0.11.0
+
+
+
+
+
+FROM base_runner as reports_processor
+
+VOLUME [ "/work" ]
+
+# Add Tini. Tini operates as a process subreaper for jupyter. This prevents kernel crashes.
+ENV TINI_VERSION v0.19.0
+ADD https://github.com/krallin/tini/releases/download/${TINI_VERSION}/tini /usr/bin/tini
+RUN chmod +x /usr/bin/tini
+ENTRYPOINT ["/usr/bin/tini", "--"]
+
+CMD [ \
+    "jupyter", "notebook", "--port=8888", "--ip=0.0.0.0", \
+    "--no-browser", "--allow-root", \
+    "--NotebookApp.token='my_secure_token'", "--NotebookApp.password=''" \
+    ]

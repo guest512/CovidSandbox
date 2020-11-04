@@ -42,15 +42,15 @@ function Build-Docker {
     Write-Log-String("Build docker images...")
 
     Write-Log-String("Data preparation image...")
-    docker build --target data_preparation -t covid_sandbox_prepare:$today -t covid_sandbox_prepare:latest -f .\scripts\docker\Dockerfile .
+    docker build --target data_preparation -t covid_sandbox_prepare:$today -t covid_sandbox_prepare:latest -f .\scripts\docker\Dockerfile.tools .
     Confirm-Last-Result $?
     
     Write-Log-String("Reports generator image...")
-    docker build --target reports_generator -t covid_sandbox_generator:$today -t covid_sandbox_generator:latest -f .\scripts\docker\Dockerfile .
+    docker build --target reports_generator -t covid_sandbox_generator:$today -t covid_sandbox_generator:latest -f .\scripts\docker\Dockerfile.tools .
     Confirm-Last-Result $?
 
     Write-Log-String("Reports processing image...")
-    docker build --target reports_processor -t covid_sandbox_processing:$today -t covid_sandbox_processing:latest -f .\scripts\docker\Dockerfile .
+    docker build --target reports_processor -t covid_sandbox_processing:$today -t covid_sandbox_processing:latest -f .\scripts\docker\Dockerfile.processor .
     Confirm-Last-Result $?
 }
 

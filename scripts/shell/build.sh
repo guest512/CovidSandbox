@@ -51,15 +51,15 @@ function build_docker() {
     log_message 'Build docker images...'
 
     log_message 'Data preparation image...'
-    docker build --target data_preparation -t covid_sandbox_prepare:$today -t covid_sandbox_prepare:latest -f ./scripts/docker/Dockerfile .
+    docker build --target data_preparation -t covid_sandbox_prepare:$today -t covid_sandbox_prepare:latest -f ./scripts/docker/Dockerfile.tools .
     check_result $?
 
     log_message 'Reports generator image...'
-    docker build --target reports_generator -t covid_sandbox_generator:$today -t covid_sandbox_generator:latest -f ./scripts/docker/Dockerfile .
+    docker build --target reports_generator -t covid_sandbox_generator:$today -t covid_sandbox_generator:latest -f ./scripts/docker/Dockerfile.tools .
     check_result $?
 
     log_message 'Reports processing image...'
-    docker build --target reports_processor -t covid_sandbox_processing:$today -t covid_sandbox_processing:latest -f ./scripts/docker/Dockerfile .
+    docker build --target reports_processor -t covid_sandbox_processing:$today -t covid_sandbox_processing:latest -f ./scripts/docker/Dockerfile.processor .
     check_result $?
 }
 
