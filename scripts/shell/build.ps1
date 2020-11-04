@@ -94,7 +94,7 @@ function Start-Local {
     dotnet.exe .\ReportsGenerator.dll
     Confirm-Last-Result $?
 
-    Set-Location ${PSScriptRoot}/..
+    Set-Location ${PSScriptRoot}/../..
 
     Write-Log-String("Copy reports to reports processing folder")
     New-Item .\ReportsProcessing\ -Name "data" -ItemType "directory" -Force

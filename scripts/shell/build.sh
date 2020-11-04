@@ -108,7 +108,7 @@ function start_local() {
     log_message 'Run util to convert reports'
     cd bin/Release
     dotnet ./ReportsGenerator.dll
-    cd $__source_dir/..
+    cd $__source_dir/../..
 
     log_message 'Copy reports to reports processing folder'
     cp bin/Release/out ReportsProcessing/data -r
