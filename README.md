@@ -26,7 +26,7 @@ To build and run a project with a docker, you need an installed [Docker Desktop]
 
 This repo contains submodules, so it's highly recommended to clone it with the following command:
 ```bash
-git clone --recursive --jobs 8 [URL to Git repo] 
+git clone --recursive --jobs 8 https://github.com/guest512/CovidSandbox.git 
 ```
 
 There are four scripts for each platform:
