@@ -3,7 +3,7 @@ param (
     [switch] $RunOnly
 )
 
-Set-Location ${PSScriptRoot}/..
+Set-Location ${PSScriptRoot}/../..
 
 function Write-Log-String ($stringToWrite) {
     Write-Host $stringToWrite -ForegroundColor DarkBlue
@@ -42,15 +42,15 @@ function Build-Docker {
     Write-Log-String("Build docker images...")
 
     Write-Log-String("Data preparation image...")
-    docker build --target data_preparation -t covid_sandbox_prepare:$today -t covid_sandbox_prepare:latest .
+    docker build --target data_preparation -t covid_sandbox_prepare:$today -t covid_sandbox_prepare:latest -f .\scripts\docker\Dockerfile .
     Confirm-Last-Result $?
     
     Write-Log-String("Reports generator image...")
-    docker build --target reports_generator -t covid_sandbox_generator:$today -t covid_sandbox_generator:latest .
+    docker build --target reports_generator -t covid_sandbox_generator:$today -t covid_sandbox_generator:latest -f .\scripts\docker\Dockerfile .
     Confirm-Last-Result $?
 
     Write-Log-String("Reports processing image...")
-    docker build --target reports_processor -t covid_sandbox_processing:$today -t covid_sandbox_processing:latest .
+    docker build --target reports_processor -t covid_sandbox_processing:$today -t covid_sandbox_processing:latest -f .\scripts\docker\Dockerfile .
     Confirm-Last-Result $?
 }
 

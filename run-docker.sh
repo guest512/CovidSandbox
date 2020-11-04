@@ -1,4 +1,4 @@
 #!/bin/bash
 
-chmod +x ./scripts/build.sh
-./scripts/build.sh --docker --run-only
+chmod +x ./scripts/shell/build.sh
+./scripts/shell/build.sh --docker --run-only

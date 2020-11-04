@@ -1,3 +1,3 @@
 @echo off
 
-powershell -ExecutionPolicy ByPass -File .\scripts\build.ps1 -Docker
+powershell -ExecutionPolicy ByPass -File .\scripts\shell\build.ps1 -Docker
