@@ -1,4 +1,5 @@
 ﻿using ReportsGenerator.Data.IO;
+using ReportsGenerator.Data.Providers;
 using ReportsGenerator.Utils;
 using System;
 using System.Collections.Concurrent;
@@ -6,7 +7,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
-using ReportsGenerator.Data.Providers;
 
 namespace ReportsGenerator.Data.DataSources
 {
@@ -46,7 +46,6 @@ namespace ReportsGenerator.Data.DataSources
             var source = new CancellationTokenSource();
             var token = source.Token;
 
-
             void ProcessFile(string file)
             {
                 token.ThrowIfCancellationRequested();
@@ -68,31 +67,40 @@ namespace ReportsGenerator.Data.DataSources
                 .ToArray();
 
             T[] buffer = new T[10240];
-
-            while (rows.Any() || !tasks.All(t => t.IsCompleted))
+            try
             {
-                while (rows.Any())
+                while (rows.Any() || !tasks.All(t => t.IsCompleted))
                 {
-                    if (tasks.Any(t => t.IsFaulted))
+                    while (rows.Any())
                     {
-                        source.Cancel();
-                        throw new InvalidOperationException("Files reading has failed.",
-                            tasks.First(t => t.IsFaulted).Exception);
+                        if (tasks.Any(t => t.IsFaulted))
+                        {
+                            source.Cancel();
+                            throw new InvalidOperationException("Files reading has failed.",
+                                tasks.First(t => t.IsFaulted).Exception);
+                        }
+
+                        var bufferLength = rows.TryPopRange(buffer);
+                        for (var i = 0; i < bufferLength; i++)
+                            yield return buffer[i];
                     }
 
-                    var bufferLength = rows.TryPopRange(buffer);
-                    for (var i = 0; i < bufferLength; i++)
-                        yield return buffer[i];
+                    await Task.Delay(100, token);
                 }
 
-                await Task.Delay(100);
+                if (tasks.Any(t => t.IsFaulted))
+                {
+                    source.Cancel();
+                    throw new InvalidOperationException("Files reading has failed.",
+                        tasks.First(t => t.IsFaulted).Exception);
+                }
             }
-
-
-
-            foreach (var task in tasks)
+            finally
             {
-                task.Dispose();
+                foreach (var task in tasks)
+                {
+                    task.Dispose();
+                }
             }
         }
 

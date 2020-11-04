@@ -57,6 +57,8 @@ namespace ReportsGenerator.Data.DataSources
 
                 "Cape Verde" when row[Field.LastUpdate] == "03-21-2020" => true,
 
+                "" => true,
+
                 _ => false
             };
         }
