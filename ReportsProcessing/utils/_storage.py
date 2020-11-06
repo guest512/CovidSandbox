@@ -127,6 +127,35 @@ class _Storage():
 
         return column_series
 
+    def get_regions_report(self,
+                           country_name: str,
+                           include: _List[str] = None,
+                           exclude: _List[str] = None,
+                           start_date: _pd.Timestamp = None) -> _pd.DataFrame:
+        ''' TBD '''
+
+        regions_series = list()
+        regions = include
+
+        if (regions is None or len(regions) == 0):
+            regions = self.get_country_regions(country_name)
+
+        for region in regions:
+            if (exclude and region in exclude):
+                continue
+
+            region_df = self.get_region_report(country_name,
+                                               region,
+                                               date_is_index=False)
+
+            regions_series.append(
+                _Storage.__get_series_or_dataframe(region_df,
+                                                   region,
+                                                   start_date=start_date,
+                                                   wide_form=False))
+
+        return _pd.concat(regions_series, axis=0).fillna(0)
+
     def get_regions_report_by_column(self,
                                      country_name: str,
                                      column_name: str,
@@ -223,7 +252,7 @@ class _Storage():
         stats_df = _pd.read_csv(report_file, index_col=["Name"])
         return stats_df.sort_index()
 
-    def get_provinces_stats(self, country_name: str) -> _pd.DataFrame:
+    def get_regions_stats(self, country_name: str) -> _pd.DataFrame:
 
         report_file = self.__paths.get_country_regions_stats_path(country_name)
         stats_df = _pd.read_csv(report_file, index_col=["Name"])

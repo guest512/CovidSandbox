@@ -30,7 +30,7 @@ class _DataHelper:
             stats = self._storage.get_counties_stats(country,
                                                      province).loc[county]
         elif province:
-            stats = self._storage.get_provinces_stats(country).loc[province]
+            stats = self._storage.get_regions_stats(country).loc[province]
         else:
             stats = self._storage.get_countries_stats().loc[country]
 
