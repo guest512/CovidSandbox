@@ -38,12 +38,15 @@ namespace ReportsGenerator.Model.Processors
                 ("Saint Barthelemy", _) => "France",
                 ("Guadeloupe", _) => "France",
                 ("Reunion", _) => "France",
+                ("St. Martin", _) => "France",
+                ("Saint Martin", _) => "France",
 
                 ("Gibraltar", _) => "UK",
                 ("Channel Islands", _) => "UK",
                 ("Guernsey", _) => "UK",
                 ("Jersey", _) => "UK",
                 ("Cayman Islands", _) => "UK",
+                ("North Ireland", _) => "UK",
 
                 ("Curacao", _) => "Netherlands",
                 ("Aruba", _) => "Netherlands",
@@ -64,6 +67,7 @@ namespace ReportsGenerator.Model.Processors
                 ("Taiwan*", _) => "Taiwan",
                 ("Gambia, The", _) => "Gambia",
                 ("The Gambia", _) => "Gambia",
+                ("Republic of Korea", _) => "South Korea",
                 ("Korea, South", _) => "South Korea",
                 ("Macao SAR", _) => "Macau",
                 ("Iran (Islamic Republic of)", _) => "Iran",
@@ -72,13 +76,14 @@ namespace ReportsGenerator.Model.Processors
                 ("The Bahamas", _) => "Bahamas",
                 ("Mainland China", _) => "China",
                 ("Taipei and environs", _) => "Taiwan",
-                ("St. Martin", _) => "Saint Martin",
                 ("Republic of the Congo", _) => "Congo (Brazzaville)",
                 ("Republic of Moldova", _) => "Moldova",
                 ("Republic of Ireland", _) => "Ireland",
                 ("Czech Republic", _) => "Czechia",
                 ("occupied Palestinian territory", _) => "West Bank and Gaza",
                 ("Palestine", _) => "West Bank and Gaza",
+                ("Burma", _) => "Myanmar",
+                
                 _ => country
             };
         }
@@ -122,6 +127,8 @@ namespace ReportsGenerator.Model.Processors
                 var x when x.province.Contains("Grand Princess") => "Grand Princess",
                 var x when x.province.Contains("Diamond Princess") => "Diamond Princess",
 
+                (_, "North Ireland") => "Northern Ireland",
+                (_, "Saint Martin") => "Saint Martin",
                 (_, "French Guiana") => "French Guiana",
                 (_, "Martinique") => "Martinique",
                 (_, "Mayotte") => "Mayotte",

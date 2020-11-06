@@ -46,7 +46,7 @@ namespace ReportsGenerator.Tests
                 {"The Bahamas", "Bahamas"},
                 {"Mainland China", "China"},
                 {"Taipei and environs", "Taiwan"},
-                {"St. Martin", "Saint Martin"},
+                {"St. Martin", "France"},
                 {"Republic of the Congo", "Congo (Brazzaville)"},
                 {"Republic of Moldova", "Moldova"},
                 {"Republic of Ireland", "Ireland"},

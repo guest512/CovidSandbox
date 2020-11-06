@@ -51,6 +51,7 @@ namespace ReportsGenerator.Model
         {
             return countryName switch
             {
+                "Myanmar" => "Burma",
                 "Curacao" => "Netherlands",
                 "Aruba" => "Netherlands",
                 "Guernsey" => "United Kingdom",
