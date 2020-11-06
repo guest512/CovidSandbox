@@ -13,10 +13,16 @@ General prerequisites for all scenarios is an installed command processor. Power
 To build a project locally, you need the preinstalled .NET Core SDK 3.1. You can find information about how to install it [here](https://docs.microsoft.com/dotnet/core/install/).
 
 To run workbooks, you need a Jupyter server with additional python modules:
-- [numpy](https://pypi.org/project/numpy/)
-- [pandas](https://pypi.org/project/pandas/)
-- [matplotlib](https://pypi.org/project/matplotlib/)
-- [seaborn](https://pypi.org/project/seaborn/)
+- [numpy](https://pypi.org/project/numpy/1.19.2)
+- [pandas](https://pypi.org/project/pandas/1.1.4)
+- [matplotlib](https://pypi.org/project/matplotlib/3.3.2)
+- [seaborn](https://pypi.org/project/seaborn/0.11.0)
+- [geopandas](https://pypi.org/project/geopandas/0.8.1)
+- [descartes](https://pypi.org/project/descartes/1.1.0)
+- [imageio](https://pypi.org/project/imageio/2.9.0)
+- [imageio-ffmpeg](https://pypi.org/project/imageio-ffmpeg/0.4.2)
+- [multiprocess](https://pypi.org/project/multiprocess/0.70.11.1)
+- [tqdm ](https://pypi.org/project/tqdm/4.51.0)
 
 ### Docker build
 
