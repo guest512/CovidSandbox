@@ -148,6 +148,23 @@ if [ -d $__source_dir/../ReportsProcessing/reports ]; then
     check_result $?
 fi
 
+if [ -d $__source_dir/../ReportsProcessing/temp ]; then
+    log_message 'Clean temp...'
+    rm -rf $__source_dir/../ReportsProcessing/temp
+    check_result $?
+fi
+
+if [ -d $__source_dir/../ReportsProcessing/assets ]; then
+    log_message 'Remove generated assets...'
+    rm -rf $__source_dir/../ReportsProcessing/assets
+    check_result $?
+fi
+
+if [ ! -d $__source_dir/../ReportsProcessing/maps ]; then
+    log_message 'Prepare maps...'
+    cp $__source_dir/../3rdparty/Maps/NaturalEarth/10m_cultural $__source_dir/../ReportsProcessing/maps -r
+fi
+
 if [ "$docker" = true ]; then
     start_docker
 else 

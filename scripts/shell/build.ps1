@@ -60,7 +60,7 @@ function Start-Docker {
     $res=$?
     docker cp covid_sandbox_prepare_afd876:/work/out ${pwd}/temp
     docker rm covid_sandbox_prepare_afd876
-    Confirm-Last-Result $?
+    Confirm-Last-Result $res
 
     Write-Log-String("Generate reports...")
     docker run -v ${pwd}/temp:/work/Data -v ${pwd}/ReportsProcessing/data:/work/out --name covid_sandbox_generator_afd876 --rm covid_sandbox_generator
@@ -101,8 +101,8 @@ function Start-Local {
     Copy-Item .\bin\Release\out\* .\ReportsProcessing\data -Recurse -Force
 }
 
-if(!$RunOnly){
-    if($Docker){
+if (!$RunOnly) {
+    if ($Docker) {
         Build-Docker
     }
     else {
@@ -110,10 +110,27 @@ if(!$RunOnly){
     }
 }
 
-if (Test-Path ${PSScriptRoot}/../ReportsProcessing/data) {
+if (Test-Path .\ReportsProcessing\data) {
     Write-Log-String("Remove previous reports...")
-    Remove-Item ${PSScriptRoot}/../ReportsProcessing/data -Recurse -Force
+    Remove-Item .\ReportsProcessing\data -Recurse -Force
     Confirm-Last-Result $?
+}
+
+if (Test-Path .\ReportsProcessing\assets) {
+    Write-Log-String("Remove generated assets...")
+    Remove-Item .\ReportsProcessing\assets -Recurse -Force
+    Confirm-Last-Result $?
+}
+
+if (Test-Path .\ReportsProcessing\temp) {
+    Write-Log-String("Clean temp...")
+    Remove-Item .\ReportsProcessing\temp -Recurse -Force
+    Confirm-Last-Result $?
+}
+
+if (!(Test-Path .\ReportsProcessing\maps)) {
+    Write-Log-String("Prepare maps...")
+    Copy-Item .\3rdparty\Maps\NaturalEarth\10m_cultural .\ReportsProcessing\maps -Recurse
 }
 
 if ($Docker) {
