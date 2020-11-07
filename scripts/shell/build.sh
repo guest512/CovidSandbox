@@ -145,6 +145,7 @@ while :; do
                 log_warning "run_only and build_only options sets simultaneously. run_only is ignored."
                 run_only=false
             fi
+            ;;
         --docker)
             docker=true
             ;;
