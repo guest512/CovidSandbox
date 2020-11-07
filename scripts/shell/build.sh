@@ -82,8 +82,20 @@ function start_docker() {
     log_message 'Run processing reports image ...'
     stop_and_remove_previous_container 'covid_sandbox_processing_afd876'
     docker run -d -p 8888:8888 -v $PWD/ReportsProcessing:/work --name covid_sandbox_processing_afd876 covid_sandbox_processing
-    sleep 1
+    check_result $?
     log_message 'Image started'
+
+    log_message 'Create script for video assets generation...'
+    docker exec covid_sandbox_processing_afd876 jupyter nbconvert --to script --output temp_maps_generator AnimatedMapsGenerator.ipynb
+    check_result $?
+
+    log_message 'Generate video assets...'
+    docker exec covid_sandbox_processing_afd876 python3 ./temp_maps_generator.py --min
+    check_result $?
+
+    log_message 'Remove temporary file...'
+    docker exec covid_sandbox_processing_afd876 rm ./temp_maps_generator.py
+    check_result $?
 
     printf '\n'
     log_message '========================================================================================='

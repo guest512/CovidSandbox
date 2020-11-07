@@ -73,8 +73,20 @@ function Start-Docker {
     Write-Log-String("Run processing reports image ...")
     Stop-And-Remove-Previous-Container("covid_sandbox_processing_afd876")
     docker run -d -p 8888:8888 -v ${pwd}/ReportsProcessing:/work --name covid_sandbox_processing_afd876 covid_sandbox_processing
-    Start-Sleep 1
+    Confirm-Last-Result $?
     Write-Log-String("Image started")
+
+    Write-Log-String("Create script for video assets generation...")
+    docker exec covid_sandbox_processing_afd876 jupyter nbconvert --to script --output temp_maps_generator AnimatedMapsGenerator.ipynb
+    Confirm-Last-Result $?
+
+    Write-Log-String("Generate video assets...")
+    docker exec covid_sandbox_processing_afd876 python3 ./temp_maps_generator.py --min
+    Confirm-Last-Result $?
+
+    Write-Log-String("Remove temporary file...")
+    docker exec covid_sandbox_processing_afd876 rm ./temp_maps_generator.py
+    Confirm-Last-Result $?
     
     Write-Host Server is available on the following address: http://127.0.0.1:8888?token=my_secure_token
 }

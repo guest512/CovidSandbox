@@ -37,5 +37,5 @@ ENTRYPOINT ["/usr/bin/tini", "--"]
 CMD [ \
     "jupyter", "notebook", "--port=8888", "--ip=0.0.0.0", \
     "--no-browser", "--allow-root", \
-    "--NotebookApp.token='my_secure_token'", "--NotebookApp.password=''" \
+    "--NotebookApp.token=my_secure_token", "--NotebookApp.password=" \
     ]
