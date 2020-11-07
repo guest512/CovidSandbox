@@ -33,7 +33,8 @@ COPY Tools/build ./
 CMD dotnet msbuild build.proj /t:PrepareData \
     /p:DataSourcesRootFolder=$PWD/dataSources \
     /p:DataRootFolder=$PWD/data \
-    /p:BinaryDataOutDir=$PWD/out
+    /p:BinaryDataOutDir=$PWD/out \
+    -v:n
 
 
 

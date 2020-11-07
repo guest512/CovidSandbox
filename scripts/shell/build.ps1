@@ -60,7 +60,7 @@ function Build-Docker {
 }
 
 function Start-Docker {
-    Write-Log-String("Prepare data ...")
+    Write-Log-String("Prepare data...")
     docker run -v ${pwd}/3rdparty/DataSources:/work/dataSources -v ${pwd}/Data:/work/data --name covid_sandbox_prepare_afd876 covid_sandbox_prepare
     $res=$?
     docker cp covid_sandbox_prepare_afd876:/work/out ${pwd}/temp
@@ -98,7 +98,7 @@ function Start-Docker {
 
 function Build-Local {
     Write-Log-String("Build util for reports conversion")
-    dotnet.exe msbuild Tools/build/build.proj /t:"Build;PrepareData" /p:Configuration=Release
+    dotnet.exe msbuild Tools/build/build.proj /t:Build /p:Configuration=Release -v:n
     Confirm-Last-Result $?
 
     dotnet.exe test Tools/src --no-build -c:Release
@@ -106,6 +106,10 @@ function Build-Local {
 }
 
 function Start-Local {
+    Write-Log-String("Prepare data...")
+    dotnet msbuild Tools/build/build.proj /t:PrepareData /p:Configuration=Release -v:n
+    Confirm-Last-Result $?
+
     Write-Log-String("Run util to convert reports")
     Set-Location ./bin/Release
     dotnet.exe .\ReportsGenerator.dll

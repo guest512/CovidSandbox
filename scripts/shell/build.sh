@@ -109,7 +109,7 @@ function start_docker() {
 
 function build_local() {
     log_message 'Build util for reports conversion'
-    dotnet msbuild ./Tools/build/build.proj /t:"Build;PrepareData" /p:Configuration=Release
+    dotnet msbuild ./Tools/build/build.proj /t:Build /p:Configuration=Release -v:n
     check_result $?
 
     dotnet test ./Tools/src --no-build -c:Release
@@ -117,6 +117,10 @@ function build_local() {
 }
 
 function start_local() {
+    log_message 'Prepare data...'
+    dotnet msbuild ./Tools/build/build.proj /t:PrepareData /p:Configuration=Release -v:n
+    check_result $?
+
     log_message 'Run util to convert reports'
     cd bin/Release
     dotnet ./ReportsGenerator.dll
