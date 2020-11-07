@@ -1,12 +1,17 @@
 param (
     [switch] $Docker,
-    [switch] $RunOnly
+    [switch] $RunOnly,
+    [switch] $BuildOnly
 )
 
 Set-Location ${PSScriptRoot}/../..
 
 function Write-Log-String ($stringToWrite) {
     Write-Host $stringToWrite -ForegroundColor DarkBlue
+}
+
+function Write-Log-Warning ($stringToWrite) {
+    Write-Host $stringToWrite -ForegroundColor DarkYellow
 }
 
 function Write-Log-Error ($stringToWrite) {
@@ -113,6 +118,11 @@ function Start-Local {
     Copy-Item .\bin\Release\out\* .\ReportsProcessing\data -Recurse -Force
 }
 
+if ($BuildOnly -And $RunOnly) {
+    Write-Log-Warning("RunOnly and BuildOnly switches used simultaneously. RunOnly is ignored.")
+    $RunOnly = $False
+}
+
 if (!$RunOnly) {
     if ($Docker) {
         Build-Docker
@@ -121,6 +131,11 @@ if (!$RunOnly) {
         Build-Local
     }
 }
+
+if ($BuildOnly) {
+    exit 0
+}
+
 
 if (Test-Path .\ReportsProcessing\data) {
     Write-Log-String("Remove previous reports...")

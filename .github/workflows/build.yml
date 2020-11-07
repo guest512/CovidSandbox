@@ -30,11 +30,11 @@ jobs:
     # Build app and tests
     - name: Run local build script Windows
       if: contains(runner.os, 'Windows')
-      run: .\build-and-run-local.cmd
+      run: powershell -ExecutionPolicy ByPass -File .\scripts\shell\build.ps1 -BuildOnly
 
     - name: Run local build script ubuntu
       if: contains(runner.os, 'Linux')
-      run: ./build-and-run-local.sh
+      run: chmod +x ./scripts/shell/build.sh && ./scripts/shell/build.sh --build-only
       
   
   docker_build:
@@ -48,4 +48,4 @@ jobs:
         submodules: true
 
     - name: Run docker build scripts
-      run: ./build-and-run-docker.sh
+      run: chmod +x ./scripts/shell/build.sh && ./scripts/shell/build.sh --docker --build-only

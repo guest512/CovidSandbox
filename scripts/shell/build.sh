@@ -127,13 +127,24 @@ function start_local() {
 }
 
 run_only=false
+build_only=false
 docker=false
 
 while :; do
     case $1 in
         --run-only)
-            run_only=true
+            if [ "$build_only" = false]; then
+                run_only=true
+            else
+                log_warning "run_only and build_only options sets simultaneously. run_only is ignored."
+            fi
             ;;
+        --build-only)
+            build_only=true
+            if [ "$run_only" = true]; then
+                log_warning "run_only and build_only options sets simultaneously. run_only is ignored."
+                run_only=false
+            fi
         --docker)
             docker=true
             ;;
@@ -152,6 +163,10 @@ if [ "$run_only" = false ]; then
     else
         build_local
     fi
+fi
+
+if [ "$build_only" = true]; then
+    exit 0
 fi
 
 if [ -d $__source_dir/../ReportsProcessing/reports ]; then
