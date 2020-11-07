@@ -170,7 +170,7 @@ if [ "$run_only" = false ]; then
     fi
 fi
 
-if [ "$build_only" = true]; then
+if [ "$build_only" = true ]; then
     exit 0
 fi
 

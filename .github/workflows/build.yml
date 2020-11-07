@@ -34,7 +34,7 @@ jobs:
 
     - name: Run local build script ubuntu
       if: contains(runner.os, 'Linux')
-      run: ./build-and-run-local.sh
+      run: chmod +x ./scripts/shell/build.sh && ./scripts/shell/build.sh --build-only
       
   
   docker_build:
