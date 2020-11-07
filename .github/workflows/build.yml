@@ -45,7 +45,7 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v2
       with:
-        submodules: true
+        submodules: false
 
     - name: Run docker build scripts
       run: chmod +x ./scripts/shell/build.sh && ./scripts/shell/build.sh --docker --build-only
