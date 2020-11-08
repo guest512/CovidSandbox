@@ -6,11 +6,17 @@ __pycache__
 **/bin
 **/obj
 
+temp
+
+ReportsProcessing/.ipynb_checkpoints
 ReportsProcessing/assets
 ReportsProcessing/data
 ReportsProcessing/maps
-ReportsProcessing/.ipynb_checkpoints
-temp
+ReportsProcessing/out
+ReportsProcessing/temp*
+ReportsProcessing/Test.ipynb
+
 
 *.DotSettings.user
-ReportsProcessing/Test.ipynb
+
+
