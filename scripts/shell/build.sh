@@ -97,12 +97,26 @@ function start_docker() {
     docker exec covid_sandbox_processing_afd876 rm ./temp_maps_generator.py
     check_result $?
 
+    log_message 'Generate final report...'
+    New-Item .\ReportsProcessing\ -Name "out" -ItemType "directory" -Force
+    docker exec covid_sandbox_processing_afd876 jupyter nbconvert --to html --no-input --execute --output ./out/index.html ReportsProcessing.ipynb
+    check_result $?
+
+    log_message 'Move results to wwwroot directory...'
+    log_message '  Move assets...'
+    cp $__source_dir/../ReportsProcessing/assets/* cp $__source_dir/../wwwroot/assets -r
+    check_result $?
+    log_message '  Move pages...'
+    cp $__source_dir/../ReportsProcessing/out/* cp $__source_dir/../wwwroot -r
+    check_result $?
+
     printf '\n'
-    log_message '========================================================================================='
+    log_message '================================================================================'
     printf '\n'
-    log_message 'Server is available on the following address: http://127.0.0.1:8888?token=my_secure_token'
+    log_message 'You can continue to work with reports on the following address:'
+    log_message 'http://127.0.0.1:8888?token=my_secure_token'
     printf '\n'
-    log_message '========================================================================================='
+    log_message '================================================================================'
     printf '\n'
     printf '\n'
 }

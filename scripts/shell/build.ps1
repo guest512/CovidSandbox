@@ -92,8 +92,24 @@ function Start-Docker {
     Write-Log-String("Remove temporary file...")
     docker exec covid_sandbox_processing_afd876 rm ./temp_maps_generator.py
     Confirm-Last-Result $?
+
+    Write-Log-String("Generate final report...")
+    New-Item .\ReportsProcessing\ -Name "out" -ItemType "directory" -Force
+    docker exec covid_sandbox_processing_afd876 jupyter nbconvert --to html --no-input --execute --output ./out/index.html ReportsProcessing.ipynb
+    Confirm-Last-Result $?
+
+    Write-Log-String("Move results to 'wwwroot' directory...")
+    Write-Log-String("  Move assets...")
+    If (!(Test-Path .\wwwroot\assets)) {
+        New-Item .\wwwroot -Name "assets" -ItemType "directory"
+    }
+    Copy-Item .\ReportsProcessing\assets\* .\wwwroot\assets -Recurse -Force
+    Confirm-Last-Result $?
+    Write-Log-String("  Move pages...")
+    Copy-Item .\ReportsProcessing\out\* .\wwwroot\ -Recurse -Force
+    Confirm-Last-Result $?
     
-    Write-Host Server is available on the following address: http://127.0.0.1:8888?token=my_secure_token
+    Write-Host You can continue to work with reports on the following address: http://127.0.0.1:8888?token=my_secure_token
 }
 
 function Build-Local {
