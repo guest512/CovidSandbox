@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Diagnostics;
-using System.Globalization;
 using ReportsGenerator.Data;
 using ReportsGenerator.Utils;
 
@@ -8,8 +7,8 @@ namespace ReportsGenerator.Model.Processors
 {
     public abstract class BaseRowProcessor : IRowProcessor
     {
-        private readonly IStatsProvider _statsProvider;
         protected readonly ILogger Logger;
+        private readonly IStatsProvider _statsProvider;
 
         protected BaseRowProcessor(IStatsProvider statsProvider, ILogger logger)
         {
@@ -74,6 +73,7 @@ namespace ReportsGenerator.Model.Processors
         public abstract string GetProvinceName(Row row);
 
         public virtual long GetRecovered(Row row) => row[Field.Recovered].AsLong();
+
         public string GetStatsName(Row row) => _statsProvider.GetStatsName(row);
     }
 }

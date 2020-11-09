@@ -19,13 +19,10 @@ namespace ReportsGenerator.Model.Processors
 
             return (country, province) switch
             {
-                ("Mainland China", "Hong Kong") => "Hong Kong",
-                ("China", "Hong Kong") => "Hong Kong",
-
-                ("Mainland China", "Macau") => "Macau",
-                ("China", "Macau") => "Macau",
-                ("Mainland China", "Macao SAR") => "Macau",
-                ("China", "Macao SAR") => "Macau",
+                ("Macau", _) => "China",
+                ("Macao SAR", _) => "China",
+                ("Hong Kong", _) => "China",
+                ("Hong Kong SAR", _) => "China",
 
                 var x when x.province.Contains("Diamond Princess") || x.province.Contains("Grand Princess") => "Others",
                 ("MS Zaandam", _) => "Others",
@@ -69,9 +66,7 @@ namespace ReportsGenerator.Model.Processors
                 ("The Gambia", _) => "Gambia",
                 ("Republic of Korea", _) => "South Korea",
                 ("Korea, South", _) => "South Korea",
-                ("Macao SAR", _) => "Macau",
                 ("Iran (Islamic Republic of)", _) => "Iran",
-                ("Hong Kong SAR", _) => "Hong Kong",
                 ("Bahamas, The", _) => "Bahamas",
                 ("The Bahamas", _) => "Bahamas",
                 ("Mainland China", _) => "China",
@@ -84,6 +79,9 @@ namespace ReportsGenerator.Model.Processors
                 ("Palestine", _) => "West Bank and Gaza",
                 ("Burma", _) => "Myanmar",
                 ("East Timor", _) => "Timor-Leste",
+
+                (_, "Crimea Republic*") => "Russia",
+                (_, "Sevastopol*") => "Russia",
 
                 _ => country
             };
@@ -118,8 +116,6 @@ namespace ReportsGenerator.Model.Processors
             {
                 ("Unknown", _) => Consts.MainCountryRegion,
                 ("unassigned", _) => Consts.MainCountryRegion,
-                ("Hong Kong", _) => Consts.MainCountryRegion,
-                ("Macau", _) => Consts.MainCountryRegion,
                 ("Taiwan", _) => Consts.MainCountryRegion,
                 ("UK", _) => Consts.MainCountryRegion,
                 ("US", _) => Consts.MainCountryRegion,
@@ -149,10 +145,16 @@ namespace ReportsGenerator.Model.Processors
                 (_, "Faroe Islands") => "Faroe Islands",
                 (_, "Greenland") => "Greenland",
                 (_, "Puerto Rico") => "Puerto Rico",
+                (_, "Macao SAR") => "Macau",
+                (_, "Macau") => "Macau",
+                (_, "Hong Kong SAR") => "Hong Kong",
+                (_, "Hong Kong") => "Hong Kong",
 
                 var x when string.IsNullOrEmpty(x.province) || x.province == x.country => Consts.MainCountryRegion,
 
                 (_, "Russia") => _namesService.GetCyrillicName(province),
+                ("Crimea Republic*", _) => _namesService.GetCyrillicName("Crimea Republic"),
+                ("Sevastopol*", _) => _namesService.GetCyrillicName("Sevastopol"),
 
                 ("United States Virgin Islands", _) => "Virgin Islands",
                 ("Virgin Islands, U.S.", _) => "Virgin Islands",

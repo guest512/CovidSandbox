@@ -89,8 +89,6 @@ namespace ReportsGenerator.Model
                 "Czech Republic" => "Czechia",
                 "Cape Verde" => "Cabo Verde",
                 "Taiwan" => "Taiwan*",
-                "Macau" => "China",
-                "Hong Kong" => "China",
                 _ => countryName
             };
         }
@@ -216,6 +214,10 @@ namespace ReportsGenerator.Model
                     break;
 
                 case "Mainland China":
+                case "Macau":
+                case "Macao SAR":
+                case "Hong Kong":
+                case "Hong Kong SAR":
                     country = "China";
                     break;
 
@@ -255,11 +257,6 @@ namespace ReportsGenerator.Model
                 case "France":
                 case "None":
                     province = string.Empty;
-                    break;
-
-                case "Macau":
-                case "Hong Kong":
-                    country = "China";
                     break;
 
                 case "Taiwan":
