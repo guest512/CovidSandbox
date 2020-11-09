@@ -83,7 +83,8 @@ namespace ReportsGenerator.Model.Processors
                 ("occupied Palestinian territory", _) => "West Bank and Gaza",
                 ("Palestine", _) => "West Bank and Gaza",
                 ("Burma", _) => "Myanmar",
-                
+                ("East Timor", _) => "Timor-Leste",
+
                 _ => country
             };
         }

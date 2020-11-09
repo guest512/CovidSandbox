@@ -88,7 +88,6 @@ namespace ReportsGenerator.Model
                 "Ivory Coast" => "Cote d'Ivoire",
                 "Czech Republic" => "Czechia",
                 "Cape Verde" => "Cabo Verde",
-                "East Timor" => "Timor-Leste",
                 "Taiwan" => "Taiwan*",
                 "Macau" => "China",
                 "Hong Kong" => "China",
