@@ -19,10 +19,8 @@ namespace ReportsGenerator.Model.Reports
                 .ToArray();
         }
 
-        public string Name { get; }
-
         public IEnumerable<DateTime> AvailableDates { get; }
-
+        public string Name { get; }
         private Dictionary<DateTime, double> TimeToResolve => _timeToResolve ??= new Dictionary<DateTime, double>(GetTimeToResolveCollection());
 
         public Metrics GetDayChange(DateTime day)
@@ -60,6 +58,18 @@ namespace ReportsGenerator.Model.Reports
             return TimeToResolve[day];
         }
 
+        private static (long, long) CalcResolution(long confirmed, long resolved)
+        {
+            if (resolved <= confirmed)
+                return (confirmed - resolved, 0);
+
+            resolved -= confirmed;
+            return (0, resolved);
+        }
+
+        private static (long, long) CalcResolution(long confirmed, Metrics resolved) =>
+            CalcResolution(confirmed, resolved.Recovered + resolved.Deaths);
+
         private static Metrics GetDayChange(LinkedReport report) => report.Total - report.Previous.Total;
 
         private static IEnumerable<LinkedReport> GetReports(LinkedReport start, int count, bool lookForward = true)
@@ -86,32 +96,9 @@ namespace ReportsGenerator.Model.Reports
 
         private IEnumerable<KeyValuePair<DateTime, double>> GetTimeToResolveCollection()
         {
-            static Metrics CalcResolution(long confirmed, Metrics resolved)
-            {
-                var (_, _, recovered, deaths) = resolved;
-
-                if (deaths > confirmed)
-                {
-                    deaths -= confirmed;
-                    return new Metrics(0, 0, recovered, deaths);
-                }
-
-                confirmed -= deaths;
-
-                if (recovered > confirmed)
-                {
-                    recovered -= confirmed;
-                    return new Metrics(0, 0, recovered, 0);
-                }
-
-                confirmed -= recovered;
-
-                return new Metrics(confirmed, 0, 0, 0);
-            }
-
             var positionConfirmed = Head;
             var positionResolved = Head;
-            var remainigs = Metrics.Empty;
+            var resolved = 0L;
             var prevDays = 0D;
 
             while (positionConfirmed != LinkedReport.Empty)
@@ -123,21 +110,15 @@ namespace ReportsGenerator.Model.Reports
 
                 while (confirmed > 0)
                 {
-                    long recovered;
-                    long deaths;
-
-                    if (remainigs != Metrics.Empty)
+                    if (resolved > 0)
                     {
-                        (confirmed, _, recovered, deaths) = CalcResolution(confirmed, remainigs);
+                        (confirmed, resolved) = CalcResolution(confirmed, resolved);
 
                         if (confirmed == 0)
                         {
-                            remainigs = new Metrics(0, 0, recovered, deaths);
                             days = (positionResolved.Day - positionConfirmed.Day).Days - 1;
                             break;
                         }
-
-                        remainigs = Metrics.Empty;
                     }
 
                     if (positionResolved == LinkedReport.Empty)
@@ -146,9 +127,8 @@ namespace ReportsGenerator.Model.Reports
                         break;
                     }
 
-                    (confirmed, _, recovered, deaths) = CalcResolution(confirmed, GetDayChange(positionResolved));
+                    (confirmed, resolved) = CalcResolution(confirmed, GetDayChange(positionResolved));
 
-                    remainigs = new Metrics(0, 0, recovered, deaths);
                     days = (positionResolved.Day - positionConfirmed.Day).Days;
                     positionResolved = positionResolved.Next;
                 }
