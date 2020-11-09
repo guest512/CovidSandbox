@@ -112,6 +112,7 @@ namespace ReportsGenerator.Model.Reports
             var positionConfirmed = Head;
             var positionResolved = Head;
             var remainigs = Metrics.Empty;
+            var prevDays = 0D;
 
             while (positionConfirmed != LinkedReport.Empty)
             {
@@ -155,6 +156,10 @@ namespace ReportsGenerator.Model.Reports
                 if (days < 0)
                     days = 0;
 
+                if (double.IsPositiveInfinity(prevDays))
+                    days = double.PositiveInfinity;
+
+                prevDays = days;
                 yield return new KeyValuePair<DateTime, double>(day, days);
                 positionConfirmed = positionConfirmed.Next;
             }
