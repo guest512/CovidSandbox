@@ -59,6 +59,24 @@
                 Field.IncidenceRate,
                 Field.CaseFatalityRatio
             });
+
+            VersionFieldsDictionary.Add(RowVersion.JHopkinsV5, new[]
+            {
+                Field.FIPS,
+                Field.Admin2,
+                Field.ProvinceState,
+                Field.CountryRegion,
+                Field.LastUpdate,
+                Field.Latitude,
+                Field.Longitude,
+                Field.Confirmed,
+                Field.Deaths,
+                Field.Recovered,
+                Field.Active,
+                Field.CombinedKey,
+                Field.IncidentRate,
+                Field.CaseFatalityRatio
+            });
         }
 
         protected override string FieldToString(Field field, RowVersion version)
@@ -85,6 +103,8 @@
                 Field.IncidenceRate => "Incidence_Rate",
 
                 Field.CaseFatalityRatio => "Case-Fatality_Ratio",
+
+                Field.IncidentRate => "Incident_Rate",
 
                 _ => field.ToString()
             };

@@ -29,6 +29,7 @@
         English,
         Russian,
         Abbreviation,
-        Name
+        Name,
+        IncidentRate
     }
 }

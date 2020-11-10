@@ -6,6 +6,7 @@
         JHopkinsV2,
         JHopkinsV3,
         JHopkinsV4,
+        JHopkinsV5,
 
         YandexRussia,
 

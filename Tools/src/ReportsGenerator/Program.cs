@@ -47,6 +47,7 @@ namespace ReportsGenerator
                 {RowVersion.JHopkinsV2, jHopkinsProcessor},
                 {RowVersion.JHopkinsV3, jHopkinsProcessor},
                 {RowVersion.JHopkinsV4, jHopkinsProcessor},
+                {RowVersion.JHopkinsV5, jHopkinsProcessor},
                 {RowVersion.YandexRussia, new YandexRussiaRowProcessor(statsProvider, logger)}
             };
 
