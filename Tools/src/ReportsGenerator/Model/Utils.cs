@@ -29,13 +29,13 @@ namespace ReportsGenerator.Model
         }
 
         /// <summary>
-        /// A function that helps to process "province" from data file, when it contains county and province strings separated by colon.
+        /// A function that helps to process "province" from data file, when it contains county and province strings separated by comma.
         /// </summary>
         /// <param name="provinceRow">String to process.</param>
         /// <param name="county">Out parameter that contains a county string, if operation was successful.</param>
         /// <param name="state">Out parameter that contains a province (state) string, if operation was successful.</param>
         /// <returns>
-        /// <see langword="true" /> if input row contains two rows separated by colon, otherwise returns <see langword="false" />.
+        /// <see langword="true" /> if input row contains two rows separated by comma, otherwise returns <see langword="false" />.
         /// </returns>
         public static bool TrySplitStateToStateCounty(string provinceRow, out string county, out string state)
         {

@@ -81,7 +81,7 @@ namespace ReportsGenerator.Model
         /// </summary>
         /// <param name="left">First <see cref="Metrics"/> instance to compare.</param>
         /// <param name="right">Second <see cref="Metrics"/> instance to compare.</param>
-        /// <returns><langword>True</langword> if instances has the different property values, otherwise returns <langword>False</langword>.</returns>
+        /// <returns><see langword="true" /> if instances has the different property values, otherwise returns <see langword="false" />.</returns>
         public static bool operator !=(Metrics left, Metrics right) => !left.Equals(right);
 
         /// <summary>
@@ -104,7 +104,7 @@ namespace ReportsGenerator.Model
         /// </summary>
         /// <param name="left">First <see cref="Metrics"/> instance to compare.</param>
         /// <param name="right">Second <see cref="Metrics"/> instance to compare.</param>
-        /// <returns><langword>True</langword> if instances has the same property values, otherwise returns <langword>False</langword>.</returns>
+        /// <returns><see langword="true" /> if instances has the same property values, otherwise returns <see langword="false" />.</returns>
         public static bool operator ==(Metrics left, Metrics right) => left.Equals(right);
 
         /// <summary>
