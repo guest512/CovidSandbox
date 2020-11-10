@@ -15,6 +15,11 @@ namespace ReportsGenerator
 {
     internal static class Program
     {
+        /// <summary>
+        /// Returns data folder for the specified data source type.
+        /// </summary>
+        /// <typeparam name="T">Data source type.</typeparam>
+        /// <returns>A relative path to data source folder.</returns>
         private static string GetDataFolder<T>() where T : IDataSource
         {
             const string dataRoot = "Data";
@@ -62,6 +67,8 @@ namespace ReportsGenerator
                 logger.WriteInfo("Logger created");
                 Convertors.SetLogger(logger);
 
+                // Initialize variables
+
                 var argsParser = new ArgsParser(args, logger);
 
                 var parsedData = new List<Entry>();
@@ -80,7 +87,10 @@ namespace ReportsGenerator
                 logger.WriteInfo("Reading raw data...");
                 logger.IndentIncrease();
 
+                // Initialize misc storage
                 miscStorage.Init();
+
+                // Read all files from available data sources.
                 foreach (var ds in dataSources)
                 {
                     await foreach (var row in ds.GetReader().GetRowsAsync(entryFactory.CreateEntry))
@@ -94,19 +104,24 @@ namespace ReportsGenerator
                 logger.WriteInfo("Initialize reports generator...");
                 logger.IndentIncrease();
 
+                // Build intermediate reports...
                 reportsBuilder.AddEntries(parsedData);
                 reportsBuilder.Build(miscStorage);
 
                 logger.IndentDecrease();
 
+                // Select reports from builder grouped by day and save them with reports saver.
                 logger.WriteInfo("Create day by day reports...");
                 Parallel.ForEach(reportsBuilder.AvailableDates.Select(reportsBuilder.GetDayReport),
                     reportsSaver.WriteReport);
 
+                // Select reports from builder grouped by country and save them with reports saver.
                 logger.WriteInfo("Create country reports...");
                 Parallel.ForEach(reportsBuilder.AvailableCountries.Select(reportsBuilder.GetCountryReport),
                     reportsSaver.WriteReport);
 
+
+                // Select statistical information from builder grouped by country and save them with reports saver.
                 logger.WriteInfo("Create country stats...");
                 Parallel.ForEach(reportsBuilder.AvailableCountries.Select(reportsBuilder.GetCountryStats),
                     reportsSaver.WriteStats);
