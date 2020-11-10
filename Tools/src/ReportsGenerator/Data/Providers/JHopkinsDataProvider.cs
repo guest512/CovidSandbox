@@ -74,7 +74,7 @@
                 Field.Recovered,
                 Field.Active,
                 Field.CombinedKey,
-                Field.IncidentRate,
+                Field.IncidenceRate,
                 Field.CaseFatalityRatio
             });
         }
@@ -100,11 +100,12 @@
 
                 Field.CombinedKey => "Combined_Key",
 
-                Field.IncidenceRate => "Incidence_Rate",
+                Field.IncidenceRate when version == RowVersion.JHopkinsV4 => "Incidence_Rate",
+                Field.IncidenceRate when version == RowVersion.JHopkinsV5 => "Incident_Rate",
 
-                Field.CaseFatalityRatio => "Case-Fatality_Ratio",
+                Field.CaseFatalityRatio when version == RowVersion.JHopkinsV4 => "Case-Fatality_Ratio",
+                Field.CaseFatalityRatio when version == RowVersion.JHopkinsV5 => "Case_Fatality_Ratio",
 
-                Field.IncidentRate => "Incident_Rate",
 
                 _ => field.ToString()
             };
