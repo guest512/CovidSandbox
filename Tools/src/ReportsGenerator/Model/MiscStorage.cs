@@ -1,8 +1,8 @@
-﻿using ReportsGenerator.Data;
+﻿using System.Collections.Generic;
+using System.Linq;
+using ReportsGenerator.Data;
 using ReportsGenerator.Data.DataSources;
 using ReportsGenerator.Utils;
-using System.Collections.Generic;
-using System.Linq;
 
 namespace ReportsGenerator.Model
 {
@@ -13,7 +13,7 @@ namespace ReportsGenerator.Model
 
         private Dictionary<string, string>? _russianRegions;
         private Dictionary<string, string>? _states;
-        private IEnumerable<StatEntry>? _stats;
+        private Dictionary<string, StatEntry>? _stats;
 
         public MiscStorage(MiscDataSource dataSource, ILogger logger)
         {
@@ -21,30 +21,11 @@ namespace ReportsGenerator.Model
             _logger = logger;
         }
 
-        public void Init() => ProcessRows();
-
-        public string GetCyrillicName(string latinName)
+        public static string GenerateName(string county = "", string province = "", string country = "")
         {
-            if (_russianRegions == null)
-                ProcessRows();
-
-            return _russianRegions![latinName];
-        }
-
-        public string GetLatinName(string cyrillicName)
-        {
-            if (_russianRegions == null)
-                ProcessRows();
-
-            return _russianRegions!.First(kvp => kvp.Value == cyrillicName).Key;
-        }
-
-        public string GetStateFullName(string stateAbbrev)
-        {
-            if (_states == null)
-                ProcessRows();
-
-            return _states![stateAbbrev];
+            return string.IsNullOrEmpty(county)
+                ? string.IsNullOrEmpty(province) ? country : string.Join(", ", province, country)
+                : string.Join(", ", county, province, country);
         }
 
         public string GetCountryStatsName(string countryName)
@@ -93,20 +74,28 @@ namespace ReportsGenerator.Model
             };
         }
 
-        public string LookupContinentName(string name)
+        public string GetCyrillicName(string latinName)
         {
-            if (_stats == null)
+            if (_russianRegions == null)
                 ProcessRows();
 
-            return _stats!.First(s => s.Name == name).Continent;
+            return _russianRegions![latinName];
         }
 
-        public long LookupPopulation(string name)
+        public string GetLatinName(string cyrillicName)
         {
-            if (_stats == null)
+            if (_russianRegions == null)
                 ProcessRows();
 
-            return _stats!.First(s => s.Name == name).Population;
+            return _russianRegions!.First(kvp => kvp.Value == cyrillicName).Key;
+        }
+
+        public string GetStateFullName(string stateAbbrev)
+        {
+            if (_states == null)
+                ProcessRows();
+
+            return _states![stateAbbrev];
         }
 
         public string GetStatsName(Row row)
@@ -377,20 +366,53 @@ namespace ReportsGenerator.Model
             return GenerateName(county, province, country);
         }
 
-        public static string GenerateName(string county = "", string province = "", string country = "")
+        public void Init() => ProcessRows();
+
+        public string LookupContinentName(string name)
         {
-            return string.IsNullOrEmpty(county)
-                ? string.IsNullOrEmpty(province) ? country : string.Join(", ", province, country)
-                : string.Join(", ", county, province, country);
+            if (_stats == null)
+                ProcessRows();
+
+            return _stats![name].Continent;
         }
 
-        private IEnumerable<StatEntry> CreateStats(IEnumerable<Row> mainStats, ICollection<Row> continentInfo) =>
-            mainStats.Select(row => new StatEntry(
-                continentInfo.First(ci => ci[Field.Iso3] == row[Field.Iso3])[Field.ContinentName],
-                row[Field.Code3],
-                row[Field.Iso3],
-                row[Field.Population],
-                GetStatsName(row)));
+        public long LookupPopulation(string name)
+        {
+            if (_stats == null)
+                ProcessRows();
+
+            return _stats![name].Population;
+        }
+
+        private Dictionary<string, StatEntry> CreateStats(IEnumerable<Row> mainStats,
+            ICollection<Row> continentInfo)
+        {
+            var res = new Dictionary<string, StatEntry>();
+            foreach (var row in mainStats)
+            {
+                var name = GetStatsName(row);
+                var entry = new StatEntry(
+                    continentInfo.First(ci => ci[Field.Iso3] == row[Field.Iso3])[Field.ContinentName],
+                    row[Field.Code3],
+                    row[Field.Iso3],
+                    row[Field.Population],
+                    name);
+                if (res.ContainsKey(name))
+                {
+                    var old = res[name];
+                    _logger.WriteWarning(
+                        $"Stats duplication for '{name}'." +
+                        $" Old: {old.Iso3} - {old.Continent} - {old.Population}." +
+                        $" New: Old: {entry.Iso3} - {entry.Continent} - {entry.Population}");
+                }
+                else
+                {
+                    res.Add(name, entry);
+                }
+            }
+
+            return res;
+        }
 
         private void ProcessRows()
         {
@@ -403,7 +425,7 @@ namespace ReportsGenerator.Model
             _logger.WriteInfo("Initialize US & Canada states abbreviations info...");
             _states = rows[RowVersion.State].ToDictionary(r => r[Field.Abbreviation], r => r[Field.Name]);
             _logger.WriteInfo("Initialize statistics..");
-            _stats = CreateStats(rows[RowVersion.StatsBase], rows[RowVersion.StatsEx].ToArray()).ToArray();
+            _stats = CreateStats(rows[RowVersion.StatsBase], rows[RowVersion.StatsEx].ToArray());
         }
 
         private readonly struct StatEntry
