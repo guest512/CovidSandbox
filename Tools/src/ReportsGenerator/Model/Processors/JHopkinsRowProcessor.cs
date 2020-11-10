@@ -103,8 +103,6 @@ namespace ReportsGenerator.Model.Processors
             };
         }
 
-        public override uint GetFips(Row row) => (uint)row[Field.FIPS].AsLong();
-
         public override Origin GetOrigin(Row row) => Origin.JHopkins;
 
         public override string GetProvinceName(Row row)

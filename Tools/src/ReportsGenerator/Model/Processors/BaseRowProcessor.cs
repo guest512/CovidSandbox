@@ -16,11 +16,7 @@ namespace ReportsGenerator.Model.Processors
             Logger = logger;
         }
 
-        public virtual long GetActive(Row row)
-        {
-            var active = row[Field.Active].AsLong(long.MinValue);
-            return active == long.MinValue ? GetConfirmed(row) - GetDeaths(row) - GetRecovered(row) : active;
-        }
+        public virtual long GetActive(Row row) => GetConfirmed(row) - GetDeaths(row) - GetRecovered(row);
 
         public virtual long GetConfirmed(Row row) => row[Field.Confirmed].AsLong();
 
@@ -29,8 +25,6 @@ namespace ReportsGenerator.Model.Processors
         public abstract string GetCountyName(Row row);
 
         public virtual long GetDeaths(Row row) => row[Field.Deaths].AsLong();
-
-        public abstract uint GetFips(Row row);
 
         public IsoLevel GetIsoLevel(Row row)
         {
