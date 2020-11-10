@@ -6,6 +6,9 @@ using ReportsGenerator.Utils;
 
 namespace ReportsGenerator.Model
 {
+    /// <summary>
+    /// Represents an implementation of <see cref="INames"/> and <see cref="IStatsProvider"/> interfaces.
+    /// </summary>
     public class MiscStorage : INames, IStatsProvider
     {
         private readonly MiscDataSource _dataSource;
@@ -15,19 +18,25 @@ namespace ReportsGenerator.Model
         private Dictionary<string, string>? _states;
         private Dictionary<string, StatEntry>? _stats;
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="MiscStorage"/> class.
+        /// </summary>
+        /// <param name="dataSource">Data sources for the storage. It should contain files with information about abbreviations, files with Cyrillic and Latin names, etc.</param>
+        /// <param name="logger">A <see cref="ILogger"/> instance.</param>
         public MiscStorage(MiscDataSource dataSource, ILogger logger)
         {
             _dataSource = dataSource;
             _logger = logger;
         }
 
-        public static string GenerateName(string county = "", string province = "", string country = "")
+        private static string GenerateName(string county = "", string province = "", string country = "")
         {
             return string.IsNullOrEmpty(county)
                 ? string.IsNullOrEmpty(province) ? country : string.Join(", ", province, country)
                 : string.Join(", ", county, province, country);
         }
 
+        /// <inheritdoc />
         public string GetCountryStatsName(string countryName)
         {
             return countryName switch
@@ -74,6 +83,7 @@ namespace ReportsGenerator.Model
             };
         }
 
+        /// <inheritdoc />
         public string GetCyrillicName(string latinName)
         {
             if (_russianRegions == null)
@@ -82,6 +92,7 @@ namespace ReportsGenerator.Model
             return _russianRegions![latinName];
         }
 
+        /// <inheritdoc />
         public string GetLatinName(string cyrillicName)
         {
             if (_russianRegions == null)
@@ -90,6 +101,7 @@ namespace ReportsGenerator.Model
             return _russianRegions!.First(kvp => kvp.Value == cyrillicName).Key;
         }
 
+        /// <inheritdoc />
         public string GetStateFullName(string stateAbbrev)
         {
             if (_states == null)
@@ -98,6 +110,7 @@ namespace ReportsGenerator.Model
             return _states![stateAbbrev];
         }
 
+        /// <inheritdoc />
         public string GetStatsName(Row row)
         {
             if (_russianRegions == null)
@@ -112,6 +125,14 @@ namespace ReportsGenerator.Model
                 province = _russianRegions.First(kvp => kvp.Value == province).Key;
                 country = "Russia";
             }
+
+            // The difference between data files and statistics files is huge.
+            // To build a key, we need to translates strings from data files
+            // to values that used by statistical files.
+            //
+            // For instance:
+            // Data file: country='US', state='Chicago', county=''
+            // Stats file: country='US', state='Illinois', county='Chicago'
 
             switch (country)
             {
@@ -366,8 +387,12 @@ namespace ReportsGenerator.Model
             return GenerateName(county, province, country);
         }
 
+        /// <summary>
+        /// Forces storage initialization to ensure that it will be ready before its usage.
+        /// </summary>
         public void Init() => ProcessRows();
 
+        /// <inheritdoc />
         public string LookupContinentName(string name)
         {
             if (_stats == null)
@@ -376,6 +401,7 @@ namespace ReportsGenerator.Model
             return _stats![name].Continent;
         }
 
+        /// <inheritdoc />
         public long LookupPopulation(string name)
         {
             if (_stats == null)
@@ -397,7 +423,8 @@ namespace ReportsGenerator.Model
                     row[Field.Iso3],
                     row[Field.Population],
                     name);
-                if (res.ContainsKey(name))
+
+                if (res.ContainsKey(name)) // Ignore duplicates
                 {
                     var old = res[name];
                     _logger.WriteWarning(

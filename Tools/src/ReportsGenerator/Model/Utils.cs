@@ -4,8 +4,16 @@ using System.Linq;
 
 namespace ReportsGenerator.Model
 {
+    /// <summary>
+    /// Represents a collection of helper functions.
+    /// </summary>
     public static class Utils
     {
+        /// <summary>
+        /// Converts dates collection into the ordered continuous date range.
+        /// </summary>
+        /// <param name="dates">Dates collection to convert.</param>
+        /// <returns>Continuous date range ordered from min to max values.</returns>
         public static IEnumerable<DateTime> GetContinuousDateRange(this IEnumerable<DateTime> dates)
         {
             dates = dates.ToArray();
@@ -20,6 +28,15 @@ namespace ReportsGenerator.Model
             }
         }
 
+        /// <summary>
+        /// A function that helps to process "province" from data file, when it contains county and province strings separated by colon.
+        /// </summary>
+        /// <param name="provinceRow">String to process.</param>
+        /// <param name="county">Out parameter that contains a county string, if operation was successful.</param>
+        /// <param name="state">Out parameter that contains a province (state) string, if operation was successful.</param>
+        /// <returns>
+        /// <see langword="true" /> if input row contains two rows separated by colon, otherwise returns <see langword="false" />.
+        /// </returns>
         public static bool TrySplitStateToStateCounty(string provinceRow, out string county, out string state)
         {
             var values = provinceRow.Split(',');
