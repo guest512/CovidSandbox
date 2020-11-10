@@ -40,7 +40,7 @@ namespace ReportsGenerator.Tests
                     RowVersion.JHopkinsV1), new JHopkinsTestRowProcessor());
             var metrics = Metrics.FromEntry(entry);
 
-            Assert.That(metrics, Is.EqualTo(new Metrics(0, 5, 0, 8)));
+            Assert.That(metrics, Is.EqualTo(new Metrics(0, -8, 0, 8)));
         }
 
         [Test]
