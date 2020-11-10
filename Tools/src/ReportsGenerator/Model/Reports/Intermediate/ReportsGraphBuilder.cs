@@ -78,19 +78,25 @@ namespace ReportsGenerator.Model.Reports.Intermediate
                 .Where(lr => lr.Report.Level == level)
                 .GroupBy(lr => lr.Parent).ToArray())
             {
-                foreach (var reportsGrouppedByDay in reportsGroup.Select(rg => rg.Report).GroupBy(pcr => pcr.Name))
+                var reportsGroupsGrouppedByName = reportsGroup.Select(rg => rg.Report).GroupBy(pcr => pcr.Name).ToArray();
+                foreach (var reportsGrouppedByName in reportsGroupsGrouppedByName)
                 {
-                    var orderedReportsGroups = reportsGrouppedByDay.OrderBy(adcr => adcr.Day).ToList();
+                    var orderedReportsGroups = reportsGrouppedByName.OrderBy(adcr => adcr.Day).ToList();
 
                     for (var i = 0; i < orderedReportsGroups.Count - 1; i++)
                     {
                         if (orderedReportsGroups[i + 1].Day > orderedReportsGroups[i].Day.AddDays(1))
                         {
+                            var total = reportsGrouppedByName.Key == Consts.MainCountryRegion &&
+                                        reportsGroupsGrouppedByName.Length > 1
+                                ? Metrics.Empty
+                                : orderedReportsGroups[i].Total;
+
                             var missedReport = new LinkedReport(
-                                reportsGrouppedByDay.Key,
+                                reportsGrouppedByName.Key,
                                 orderedReportsGroups[i].Day.AddDays(1),
                                 level,
-                                orderedReportsGroups[i].Total)
+                                total)
                             {
                                 Parent = orderedReportsGroups[i].Parent
                             };
@@ -130,10 +136,17 @@ namespace ReportsGenerator.Model.Reports.Intermediate
 
                         foreach (var child in previousRep.Children)
                         {
-                            if (childrenToCreate.Remove(child.Name))
+                            if (!childrenToCreate.Remove(child.Name))
                             {
-                                missedReports.Add(child.Copy(report.Day, LinkedReport.Empty));
+                                continue;
                             }
+
+                            if (previousRep.Children.Count > 1 && child.Name == Consts.MainCountryRegion)
+                            {
+                                continue;
+                            }
+
+                            missedReports.Add(child.Copy(report.Day, LinkedReport.Empty));
                         }
                     }
 
