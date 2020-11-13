@@ -8,7 +8,7 @@ namespace ReportsGenerator.Data
     public static class Utils
     {
         /// <summary>
-        /// Extension method to treat string as csv file row and split it by csv rules.
+        /// Extension method to treat string as CSV file row and split it by CSV rules.
         /// </summary>
         /// <param name="row">String to process.</param>
         /// <returns>Collection of split strings, with trimmed quotation marks.</returns>

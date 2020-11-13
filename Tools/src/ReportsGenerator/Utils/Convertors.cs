@@ -71,7 +71,7 @@ namespace ReportsGenerator.Utils
         /// <summary>
         /// Allows to change logger implementation.
         /// </summary>
-        /// <param name="logger">A logger instance.</param>
+        /// <param name="logger">A <see cref="ILogger"/> instance.</param>
         public static void SetLogger(ILogger logger)
         {
             _logger = logger;

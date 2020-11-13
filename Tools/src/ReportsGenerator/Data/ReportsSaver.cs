@@ -21,7 +21,7 @@ namespace ReportsGenerator.Data
         /// </summary>
         /// <param name="formatter">Desired report formatter to read reports.</param>
         /// <param name="storage">Desired storage to save reports data.</param>
-        /// <param name="logger">A logger instance.</param>
+        /// <param name="logger">A <see cref="ILogger"/> instance.</param>
         public ReportsSaver(IReportFormatter formatter, IReportStorage storage, ILogger logger)
         {
             _formatter = formatter;

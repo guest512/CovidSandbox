@@ -1,7 +1,13 @@
 ﻿namespace ReportsGenerator.Data.Providers
 {
+    /// <summary>
+    /// Represents an implementation of <see cref="IDataProvider"/> for data from the John Hopkins University.
+    /// </summary>
     public class JHopkinsDataProvider : MultiVersionDataProvider
     {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="JHopkinsDataProvider"/> class.
+        /// </summary>
         public JHopkinsDataProvider()
         {
             VersionFieldsDictionary.Add(RowVersion.JHopkinsV1, new[]
@@ -79,6 +85,7 @@
             });
         }
 
+        /// <inheritdoc />
         protected override string FieldToString(Field field, RowVersion version)
         {
             return field switch

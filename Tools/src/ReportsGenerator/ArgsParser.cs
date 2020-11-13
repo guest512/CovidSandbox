@@ -14,7 +14,7 @@ namespace ReportsGenerator
         /// Initializes a new instance of the <see cref="ArgsParser"/> class.
         /// </summary>
         /// <param name="args">Command line arguments collection.</param>
-        /// <param name="logger">Logger instance.</param>
+        /// <param name="logger">A <see cref="ILogger"/> instance.</param>
         public ArgsParser(IEnumerable<string> args, ILogger logger)
         {
             _logger = logger;
