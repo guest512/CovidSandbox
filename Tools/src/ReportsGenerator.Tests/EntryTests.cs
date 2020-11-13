@@ -1,10 +1,10 @@
-﻿using NUnit.Framework;
+﻿using System;
+using System.Collections.Generic;
+using NUnit.Framework;
 using ReportsGenerator.Data;
 using ReportsGenerator.Model;
 using ReportsGenerator.Model.Processors;
 using ReportsGenerator.Utils;
-using System;
-using System.Collections.Generic;
 
 namespace ReportsGenerator.Tests
 {
@@ -61,32 +61,6 @@ namespace ReportsGenerator.Tests
 
                 Assert.That(_factory.CreateEntry(row).CountryRegion, Is.EqualTo(actualCountryName));
             }
-        }
-
-        [Test]
-        public void ValidateEntryGetHashCodeOverload()
-        {
-            var entry = _factory.CreateEntry(new Row(new[]
-            {
-                new CsvField(Field.CountryRegion, "Russia"),
-                new CsvField(Field.Deaths, "5"),
-                new CsvField(Field.LastUpdate, "2/22/2020 2:20"),
-            }, RowVersion.JHopkinsV1));
-
-            var hashCode = new HashCode();
-            hashCode.Add(""); //County
-            hashCode.Add((long)-5); //Active
-            hashCode.Add(0); //Confirmed
-            hashCode.Add("Russia"); //CountryRegion
-            hashCode.Add(5); //Deaths
-            hashCode.Add(new DateTime(2020, 2, 22).Date); //LastUpdate
-            hashCode.Add("Main territory"); //ProvinceState
-            hashCode.Add(0); //Recovered
-            hashCode.Add(Origin.JHopkins); //Origin
-            hashCode.Add(2); //IsoLevel
-            hashCode.Add("TEST NAME"); //StatsName
-
-            Assert.That(entry.GetHashCode(), Is.EqualTo(hashCode.ToHashCode()));
         }
 
         [Test]

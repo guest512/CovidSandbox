@@ -1,10 +1,10 @@
-﻿using ReportsGenerator.Model.Reports.Intermediate;
-using ReportsGenerator.Utils;
-using System;
+﻿using System;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using ReportsGenerator.Model.Reports.Intermediate;
+using ReportsGenerator.Utils;
 
 namespace ReportsGenerator.Model.Reports
 {
@@ -141,25 +141,32 @@ namespace ReportsGenerator.Model.Reports
             return _dayReports[day];
         }
 
-        private static BasicReport CreateBasicReport(Entry entry)
+        private static BasicReport CreateBasicReport(Entry entry) => entry.IsoLevel switch
         {
-            return entry.IsoLevel switch
+            IsoLevel.CountryRegion => new BasicReport
             {
-                IsoLevel.CountryRegion => new BasicReport(entry.CountryRegion,
-                    entry.LastUpdate,
-                    Metrics.FromEntry(entry)),
+                Name = entry.CountryRegion,
+                Day = entry.LastUpdate,
+                Total = Metrics.FromEntry(entry)
+            },
 
-                IsoLevel.ProvinceState => new BasicReport(entry.ProvinceState,
-                    entry.CountryRegion,
-                    entry.LastUpdate,
-                    Metrics.FromEntry(entry)),
+            IsoLevel.ProvinceState => new BasicReport
+            {
+                Name = entry.ProvinceState,
+                Parent = entry.CountryRegion,
+                Day = entry.LastUpdate,
+                Total = Metrics.FromEntry(entry)
+            },
 
-                IsoLevel.County => new BasicReport(entry.County,
-                    entry.ProvinceState, entry.LastUpdate,
-                    Metrics.FromEntry(entry)),
+            IsoLevel.County => new BasicReport
+            {
+                Name = entry.County,
+                Parent = entry.ProvinceState,
+                Day = entry.LastUpdate,
+                Total = Metrics.FromEntry(entry)
+            },
 
-                _ => throw new ArgumentOutOfRangeException(nameof(entry.IsoLevel), $"Unknown ISO level of {entry}")
-            };
-        }
+            _ => throw new ArgumentOutOfRangeException(nameof(entry.IsoLevel), $"Unknown ISO level of {entry}")
+        };
     }
 }
