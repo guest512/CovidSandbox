@@ -3,9 +3,6 @@
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
-    <TargetFramework>netcoreapp3.1</TargetFramework>
-    <RuntimeIdentifiers>alpine.3.11-x64;win10-x64</RuntimeIdentifiers>
-    <TargetLatestRuntimePatch>true</TargetLatestRuntimePatch> 
   </PropertyGroup>
 
   <PropertyGroup>
