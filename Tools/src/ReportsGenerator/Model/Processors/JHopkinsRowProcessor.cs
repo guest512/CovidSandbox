@@ -145,11 +145,18 @@ namespace ReportsGenerator.Model.Processors
                 ("US", _) => Consts.MainCountryRegion,
                 ("None", _) => Consts.MainCountryRegion,
 
+                ("Falkland Islands (Islas Malvinas)", _) => "Falkland Islands (Malvinas)",
+                ("Dadar Nagar Haveli", _) => "Dadra and Nagar Haveli and Daman and Diu",
+                ("Bayern", _) => "Bavaria",
+                ("Fench Guiana", _) => "French Guiana",
+
+
                 var x when x.province.Contains("Grand Princess") => "Grand Princess",
                 var x when x.province.Contains("Diamond Princess") => "Diamond Princess",
 
                 (_, "North Ireland") => "Northern Ireland",
                 (_, "Saint Martin") => "Saint Martin",
+                (_, "St. Martin") => "Saint Martin",
                 (_, "French Guiana") => "French Guiana",
                 (_, "Martinique") => "Martinique",
                 (_, "Mayotte") => "Mayotte",

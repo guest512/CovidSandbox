@@ -6,6 +6,7 @@ namespace ReportsGenerator.Model.Reports
     public class StatsReport
     {
         private readonly IStatsProvider _statsProvider;
+        private readonly Dictionary<string, List<string>> _namesCache = new Dictionary<string, List<string>>();
         public StatsReportNode Root { get; }
 
         public StatsReport(string name, string statsName, IStatsProvider statsProvider)
@@ -18,26 +19,32 @@ namespace ReportsGenerator.Model.Reports
         public void AddCounty(string name, string statsName, string province)
         {
             AddProvince(province, statsName[(statsName.IndexOf(',') + 2)..]);
-            var provinceNode = Root.Children.First(node => node.Name == province);
 
-            if (provinceNode.Children.Any(child => child.Name == name))
+            if (_namesCache[province].Contains(name))
                 return;
 
+            var provinceNode = Root.Children.First(node => node.Name == province);
+            
             var countyNode = new StatsReportNode(name,
                 _statsProvider.LookupContinentName(statsName),
                 _statsProvider.LookupPopulation(statsName),
                 provinceNode);
 
             provinceNode.Children.Add(countyNode);
+            _namesCache[province].Add(name);
         }
 
         public void AddProvince(string name, string statsName)
         {
-            if (Root!.Children.All(child => child.Name != name))
-                Root.Children.Add(new StatsReportNode(name,
-                    _statsProvider.LookupContinentName(statsName),
-                    _statsProvider.LookupPopulation(statsName),
-                    Root));
+            if(_namesCache.ContainsKey(name))
+                return;
+
+            Root.Children.Add(new StatsReportNode(name,
+                _statsProvider.LookupContinentName(statsName),
+                _statsProvider.LookupPopulation(statsName),
+                Root));
+
+            _namesCache.Add(name, new List<string>());
         }
 
         public IEnumerable<string> GetAllCounties() =>

@@ -6,7 +6,7 @@ namespace ReportsGenerator.Model.Reports.Intermediate
 {
     public class LinkedReport
     {
-        private readonly Metrics _total;
+        private Metrics _total;
 
         public LinkedReport(string name, DateTime day, IsoLevel level) : this(name, day, level, Metrics.Empty)
         {
@@ -40,7 +40,10 @@ namespace ReportsGenerator.Model.Reports.Intermediate
         {
             get
             {
-                return _total == Metrics.Empty ? Children.Aggregate(Metrics.Empty, (sum, child) => sum + child.Total) : _total;
+                if (_total == Metrics.Empty)
+                    _total = Children.Aggregate(Metrics.Empty, (sum, child) => sum + child.Total);
+
+                return _total;
             }
         }
 

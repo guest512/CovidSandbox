@@ -37,7 +37,7 @@ namespace ReportsGenerator.Data.DataSources
         {
             foreach (string file in _files)
             {
-                _logger.WriteInfo($"--Processing file: {file}");
+                _logger.WriteInfo($"--Reading file: {file}");
 
                 foreach (var row in GetRows(file))
                     yield return row;
@@ -61,7 +61,7 @@ namespace ReportsGenerator.Data.DataSources
             void ProcessFile(string file)
             {
                 token.ThrowIfCancellationRequested();
-                _logger.WriteInfo($"--Processing file: {file}");
+                _logger.WriteInfo($"--Reading file: {file}");
                 var items = new List<T>();
 
                 foreach (var row in GetRows(file))
