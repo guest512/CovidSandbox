@@ -1,10 +1,10 @@
-﻿using ReportsGenerator.Model.Reports.Intermediate;
-using ReportsGenerator.Utils;
-using System;
+﻿using System;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using ReportsGenerator.Model.Reports.Intermediate;
+using ReportsGenerator.Utils;
 
 namespace ReportsGenerator.Model.Reports
 {
@@ -46,10 +46,8 @@ namespace ReportsGenerator.Model.Reports
 
         public void Build(IStatsProvider statsProvider)
         {
-            var uniqueEntries = entries.Distinct().ToArray();
-
-            var countriesList = uniqueEntries.Select(x => x.CountryRegion).Distinct().ToArray();
-            var dates = uniqueEntries.Select(x => x.LastUpdate.Date).Distinct().OrderBy(_ => _).ToArray();
+            var uniqueEntries = entries.ToArray();
+            var countriesList = uniqueEntries.Select(x => x.CountryRegion).Distinct();
 
             Parallel.ForEach(countriesList, country =>
             {
@@ -58,18 +56,19 @@ namespace ReportsGenerator.Model.Reports
 
                 _logger.WriteInfo($"--Processing {country}...");
 
-                var countryEntries = uniqueEntries.Where(x => x.CountryRegion == country).ToArray();
+                var countryEntries = uniqueEntries.Where(x => x.CountryRegion == country);
                 var graphBuilder = new ReportsGraphBuilder(country, _logger);
                 var graphStructure = new StatsReport(country, statsProvider.GetCountryStatsName(country), statsProvider);
 
                 if (country == "Russia")
                 {
+                    countryEntries = countryEntries.ToArray();
+                    var dates = uniqueEntries.Select(x => x.LastUpdate.Date).Distinct().OrderBy(_ => _);
                     foreach (var day in dates)
                     {
                         var dayCountryEntries = countryEntries.Where(x => x.LastUpdate.Date == day).ToArray();
 
-                        if (dayCountryEntries.Any(x => x.Origin == Origin.JHopkins) &&
-                            dayCountryEntries.Any(x => x.Origin == Origin.Yandex))
+                        if (dayCountryEntries.Any(x => x.Origin == Origin.Yandex))
                         {
                             dayCountryEntries = dayCountryEntries.Where(x => x.Origin == Origin.Yandex).ToArray();
                         }

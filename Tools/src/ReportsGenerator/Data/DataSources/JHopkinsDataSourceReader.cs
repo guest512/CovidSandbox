@@ -28,7 +28,7 @@ namespace ReportsGenerator.Data.DataSources
                 "Ireland" when row[Field.LastUpdate] == "03-08-2020" => true,
                 "The Gambia" => true,
                 "The Bahamas" => true,
-                "Republic of the Congo" => IsInvalidDate(row, Enumerable.Range(17, 5).Select(n => $"03-{n}-2020")),
+                "Republic of the Congo" => IsInvalidDate(row, Enumerable.Range(16, 6).Select(n => $"03-{n}-2020")),
                 "Guam" => IsInvalidDate(row, Enumerable.Range(16, 6).Select(n => $"03-{n}-2020")),
                 "Puerto Rico" => IsInvalidDate(row, Enumerable.Range(16, 6).Select(n => $"03-{n}-2020")),
 
@@ -41,6 +41,7 @@ namespace ReportsGenerator.Data.DataSources
                 "France" when row[Field.ProvinceState] == "Guadeloupe" => IsInvalidDate(row, Enumerable.Range(16, 6).Select(n => $"03-{n}-2020")),
                 "France" when row[Field.ProvinceState] == "Reunion" => IsInvalidDate(row, Enumerable.Range(16, 6).Select(n => $"03-{n}-2020")),
                 "France" when row[Field.ProvinceState] == "French Guiana" => IsInvalidDate(row, Enumerable.Range(16, 6).Select(n => $"03-{n}-2020")),
+                "France" when row[Field.ProvinceState] == "Fench Guiana" => true,
 
                 "Mainland China" => IsInvalidDate(row, new[] { "03-11-2020", "03-12-2020" }),
 
