@@ -2,6 +2,7 @@ from matplotlib import figure as _figure, colors as _colors
 import pandas as _pd
 import numpy as _np
 
+# TODO: REWORK IT COMPLETELY
 
 class _PlotHelper():
     def __init__(self, dates):
