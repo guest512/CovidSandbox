@@ -139,7 +139,11 @@ namespace ReportsGenerator.Model
             return hashCode.ToHashCode();
         }
 
-        /// <inheritdoc />
+
+        /// <summary>
+        /// Returns the string representation of the <see cref="Entry"/> instance.
+        /// </summary>
+        /// <returns>The string representation of the instance.</returns>
         public override string ToString() => string.IsNullOrEmpty(ProvinceState)
             ? $"{Origin}-{CountryRegion}, {LastUpdate.ToShortDateString()}: {Confirmed}-{Active}-{Recovered}-{Deaths}"
             : $"{Origin}-{CountryRegion}({ProvinceState}), {LastUpdate.ToShortDateString()}: {Confirmed}-{Active}-{Recovered}-{Deaths}";
