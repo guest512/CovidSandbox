@@ -27,9 +27,9 @@ namespace ReportsGenerator.Tests
         [TestCaseSource(nameof(SpliRowStringSource))]
         public void ValidateSplitRowStrings(KeyValuePair<string, string[]> row)
         {
-            var splittedRow = row.Key.SplitCsvRowString().ToArray();
+            var splitRow = row.Key.SplitCsvRowString().ToArray();
 
-            CollectionAssert.AreEqual(row.Value,splittedRow);
+            CollectionAssert.AreEqual(row.Value,splitRow);
         }
 
         public static IEnumerable<KeyValuePair<string, string[]>> SpliRowStringSource()

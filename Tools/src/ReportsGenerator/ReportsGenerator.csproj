@@ -10,5 +10,6 @@
 
   <PropertyGroup>
     <OutputPath>$(BinaryOutDir)</OutputPath>
+    <DocumentationFile>$(BinaryOutDir)\ReportsGenerator.xml</DocumentationFile>
   </PropertyGroup>
 </Project>

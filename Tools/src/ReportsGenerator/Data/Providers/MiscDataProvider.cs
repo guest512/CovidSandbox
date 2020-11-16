@@ -1,7 +1,13 @@
 ﻿namespace ReportsGenerator.Data.Providers
 {
+    /// <summary>
+    /// Represents an implementation of <see cref="IDataProvider"/> for helper and statistical data.
+    /// </summary>
     public class MiscDataProvider : MultiVersionDataProvider
     {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="MiscDataProvider"/> class.
+        /// </summary>
         public MiscDataProvider()
         {
             VersionFieldsDictionary.Add(RowVersion.StatsBase, new[]
@@ -43,6 +49,7 @@
             });
         }
 
+        /// <inheritdoc />
         protected override string FieldToString(Field field, RowVersion version)
         {
             return field switch

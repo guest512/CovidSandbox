@@ -5,12 +5,20 @@ using ReportsGenerator.Data.Providers;
 
 namespace ReportsGenerator.Data.DataSources
 {
+    /// <summary>
+    /// Represents a <see cref="CsvFilesDataSourceReader"/> for files from the John Hopkins University.
+    /// </summary>
     public class JHopkinsDataSourceReader : CsvFilesDataSourceReader
     {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="JHopkinsDataSourceReader"/> class.
+        /// </summary>
+        /// <inheritdoc/> 
         public JHopkinsDataSourceReader(IEnumerable<string> files, IDataProvider dataProvider, ILogger logger) : base(files, dataProvider, logger)
         {
         }
 
+        /// <inheritdoc/> 
         protected override CsvField CsvFieldCreator(Field key, string value, string fileName)
         {
             return key == Field.LastUpdate
@@ -18,6 +26,7 @@ namespace ReportsGenerator.Data.DataSources
                 : new CsvField(key, value);
         }
 
+        /// <inheritdoc/> 
         protected override bool IsInvalidData(Row row)
         {
             static bool IsInvalidDate(Row row, IEnumerable<string> badDates) =>
