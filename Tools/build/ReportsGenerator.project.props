@@ -2,6 +2,9 @@
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
     <Import Project="Tools.props" />
     <PropertyGroup>
+        <TargetFramework>net5.0</TargetFramework>
+        <RuntimeIdentifiers>alpine.3.11-x64;win10-x64</RuntimeIdentifiers>
+        <TargetLatestRuntimePatch>true</TargetLatestRuntimePatch> 
         <Nullable>enable</Nullable>
         <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
     </PropertyGroup>

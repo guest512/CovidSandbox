@@ -11,7 +11,7 @@ namespace ReportsGenerator.Model.Reports.Intermediate
     /// <summary>
     /// Builds a graph from the bunch of <see cref="LinkedReport"/> for the particular country
     /// (reports with <see cref="LinkedReport.Level"/> == <see cref="IsoLevel.CountryRegion"/>),
-    /// using the infromation stored in the <see cref="StatsReport"/> instance for the country.
+    /// using the information stored in the <see cref="StatsReport"/> instance for the country.
     /// </summary>
     public class ReportsGraphBuilder
     {
@@ -60,7 +60,7 @@ namespace ReportsGenerator.Model.Reports.Intermediate
             // The general assumption here is that when we have county reports for the particular day,
             // it means that we don't have a region/province or country report.
             // So the algorithm to build the graph is following:
-            // 
+            //
             // 1. Starting from the county report level, build parent reports for each day
             //   until you reach the country report level
             //
@@ -74,7 +74,7 @@ namespace ReportsGenerator.Model.Reports.Intermediate
             //
 
             // Walk through every county report and create province reports, link
-            // county report with new parent. 
+            // county report with new parent.
             PopulateMissedParentReports(allReports, IsoLevel.County, _countryName);
             Debug.Assert(AssertReports(allReports));
 
@@ -288,22 +288,6 @@ namespace ReportsGenerator.Model.Reports.Intermediate
             return newReport;
         }
 
-        private readonly struct LinkedReportWithParent
-        {
-            public LinkedReportWithParent(string parent, LinkedReport report)
-            {
-                Parent = parent;
-                Report = report;
-            }
-
-            public string Parent { get; }
-            public LinkedReport Report { get; }
-
-            public void Deconstruct(out string parent, out LinkedReport report)
-            {
-                parent = Parent;
-                report = Report;
-            }
-        }
+        private record LinkedReportWithParent(string Parent, LinkedReport Report);
     }
 }

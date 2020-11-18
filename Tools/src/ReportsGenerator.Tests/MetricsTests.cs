@@ -1,7 +1,9 @@
-﻿using System;
+﻿using System.Collections.Generic;
 using NUnit.Framework;
 using ReportsGenerator.Data;
 using ReportsGenerator.Model;
+using ReportsGenerator.Model.Processors;
+using ReportsGenerator.Utils;
 
 namespace ReportsGenerator.Tests
 {
@@ -30,25 +32,18 @@ namespace ReportsGenerator.Tests
         [Test]
         public void ValidateMetricsFromEntry()
         {
-            var entry = new Entry(
-                new Row(new[]
-                    {
-                        new CsvField(Field.CountryRegion, "Test country"), 
-                        new CsvField(Field.Active, "5"), 
-                        new CsvField(Field.Deaths, "8"),
-                    },
-                    RowVersion.JHopkinsV1), new JHopkinsTestRowProcessor());
+            var row = new Row(new[]
+            {
+                new CsvField(Field.CountryRegion, "Test country"),
+                new CsvField(Field.Active, "5"),
+                new CsvField(Field.Deaths, "8"),
+            }, RowVersion.JHopkinsV1);
+            var entryFactory = new EntryFactory(new Dictionary<RowVersion, IRowProcessor>
+                {{RowVersion.JHopkinsV1, new JHopkinsTestRowProcessor()}}, new NullLogger());
+            var entry = entryFactory.CreateEntry(row);
             var metrics = Metrics.FromEntry(entry);
 
             Assert.That(metrics, Is.EqualTo(new Metrics(0, -8, 0, 8)));
-        }
-
-        [Test]
-        public void ValidateMetricsGetHashCodeOverload()
-        {
-            var metrics = new Metrics(1, 2, 3, 4);
-
-            Assert.That(metrics.GetHashCode(), Is.EqualTo(HashCode.Combine(1, 4, 2, 3)));
         }
 
         [Test]

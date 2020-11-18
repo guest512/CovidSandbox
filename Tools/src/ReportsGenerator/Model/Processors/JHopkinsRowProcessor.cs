@@ -202,7 +202,7 @@ namespace ReportsGenerator.Model.Processors
                 ? state.Length == 2 || state == "D.C." ? _namesService.GetStateFullName(state) : state
                 : provinceRowValue;
 
-        private string GetCountyName(string provinceRowValue, string countyRowValue)
+        private static string GetCountyName(string provinceRowValue, string countyRowValue)
         {
             if (!Utils.TrySplitStateToStateCounty(provinceRowValue, out var county, out _))
                 return countyRowValue;
