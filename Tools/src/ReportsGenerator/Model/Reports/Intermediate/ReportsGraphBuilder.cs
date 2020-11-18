@@ -8,11 +8,21 @@ using ReportsGenerator.Utils;
 
 namespace ReportsGenerator.Model.Reports.Intermediate
 {
+    /// <summary>
+    /// Builds a graph from the bunch of <see cref="LinkedReport"/> for the particular country
+    /// (reports with <see cref="LinkedReport.Level"/> == <see cref="IsoLevel.CountryRegion"/>),
+    /// using the infromation stored in the <see cref="StatsReport"/> instance for the country.
+    /// </summary>
     public class ReportsGraphBuilder
     {
         private readonly string _countryName;
         private readonly ILogger _logger;
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="ReportsGraphBuilder"/> class.
+        /// </summary>
+        /// <param name="countryName">Country for which report will be built.</param>
+        /// <param name="logger">A <see cref="ILogger"/> instance.</param>
         public ReportsGraphBuilder(string countryName, ILogger logger)
         {
             _countryName = countryName;
@@ -20,40 +30,85 @@ namespace ReportsGenerator.Model.Reports.Intermediate
             Reports = new List<BasicReport>();
         }
 
+        /// <summary>
+        /// Gets a reports collection from which graph should be build.
+        /// </summary>
         public ICollection<BasicReport> Reports { get; }
 
+        /// <summary>
+        /// Builds a report graph from the <see cref="Reports"/>.
+        /// </summary>
+        /// <remarks>
+        /// This method build connections
+        /// (fills properties <see cref="LinkedReport.Children"/>, <see cref="LinkedReport.Parent"/>,
+        /// <see cref="LinkedReport.Next"/>, <see cref="LinkedReport.Previous"/>) for all reports in
+        /// <see cref="Reports"/> properties. It fills all gap days in the graph with <see cref="LinkedReport.Empty"/>
+        /// or copies from the days when data was represented, and create necessary parent and children <see cref="LinkedReport"/>
+        /// objects to make this graph structure the same as "structure" parameter.
+        /// </remarks>
+        /// <param name="structure">A geographical objects structure and relations for the country.</param>
+        /// <returns>The first day available for the country.</returns>
         public LinkedReport Build(StatsReport structure)
         {
+            // Converts BasicReport to LinkedReport and preserve Parent id for each report.
             var allReports =
                 Reports.Select(br => new LinkedReportWithParent(br.Parent, CreateLinkedReport(br))).ToList();
 
-            //Day: { 04.02.2020 0:00:00}
-            //Level: ProvinceState
-            //Name: "Ontario"
-
             Debug.Assert(AssertReports(allReports));
 
+            //
+            // The general assumption here is that when we have county reports for the particular day,
+            // it means that we don't have a region/province or country report.
+            // So the algorithm to build the graph is following:
+            // 
+            // 1. Starting from the county report level, build parent reports for each day
+            //   until you reach the country report level
+            //
+            // 2.Link all country level reports between each other day-by-day
+            //   if any day is missed, then fill the gap with LinkedReport.Empty, or
+            //   with copies from previous days
+            //
+            // 3. Populate missed province reports for each country report for each day
+            //
+            // 4. Repeat steps 2 and 3 for province and county report levels.
+            //
+
+            // Walk through every county report and create province reports, link
+            // county report with new parent. 
             PopulateMissedParentReports(allReports, IsoLevel.County, _countryName);
             Debug.Assert(AssertReports(allReports));
 
+            // Walk through every province report and create country reports, link
+            // province report with new parent.
             PopulateMissedParentReports(allReports, IsoLevel.ProvinceState, string.Empty);
             Debug.Assert(AssertReports(allReports));
 
+            // Walk through every country report and connect it with each other.
+            // Fill gaps with empty reports or with copies from available dates.
             FillNextPrevReports(allReports, IsoLevel.CountryRegion);
             Debug.Assert(AssertReports(allReports));
 
+            // Walk through every country report and validate that it has full
+            // children reports collection (province level), using a "structure" as the reference.
             PopulateMissedChildReports(allReports, IsoLevel.CountryRegion, name => structure.GetProvinces());
             Debug.Assert(AssertReports(allReports));
 
+            // Walk through every province report and connect it with each other.
+            // Fill gaps with empty reports or with copies from available dates. <-- there should not be any new object created on this step
             FillNextPrevReports(allReports, IsoLevel.ProvinceState);
             Debug.Assert(AssertReports(allReports));
 
+            // Walk through every province report and validate that it has full
+            // children reports collection (county level), using a "structure" as the reference.
             PopulateMissedChildReports(allReports, IsoLevel.ProvinceState, structure.GetCounties);
             Debug.Assert(AssertReports(allReports));
 
+            // Walk through every county report and connect it with each other.
+            // Fill gaps with empty reports or with copies from available dates. <-- there should not be any new object created on this step
             FillNextPrevReports(allReports, IsoLevel.County);
             Debug.Assert(AssertReports(allReports));
 
+            // Find the most earlier country report and return it.
             return allReports.Where(rep => rep.Report.Level == IsoLevel.CountryRegion).OrderBy(rep => rep.Report.Day).First().Report;
         }
 
@@ -179,6 +234,9 @@ namespace ReportsGenerator.Model.Reports.Intermediate
             }
         }
 
+        /// <summary>
+        /// Thoroughly checks reports collection for duplicates. Writes all found duplicates to the logger.
+        /// </summary>
         private bool AssertReports(IEnumerable<LinkedReportWithParent> allReports)
         {
             if (Consts.DisableExtensiveAssertMethods)

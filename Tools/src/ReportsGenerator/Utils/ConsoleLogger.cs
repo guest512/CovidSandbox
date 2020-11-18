@@ -4,20 +4,28 @@ using System.Threading;
 
 namespace ReportsGenerator.Utils
 {
+    /// <summary>
+    /// Represents a console logger implementation of the <see cref="ILogger"/> interface.
+    /// </summary>
     public class ConsoleLogger : ILogger, IDisposable
     {
         private const int IndentationLength = 2;
         private const char IndentationSymbol = ' ';
         private const int MaxIndentation = 20;
+
+        // Locker is needed for thread-safety.
         private readonly SemaphoreSlim _locker = new SemaphoreSlim(1, 1);
 
+        /// <inheritdoc />
         public int Indentation { get; private set; }
 
+        /// <inheritdoc cref="IDisposable.Dispose"/>
         public void Dispose()
         {
             _locker.Dispose();
         }
 
+        /// <inheritdoc />
         public void IndentDecrease()
         {
             RunUnderWaitEvent(() =>
@@ -27,6 +35,7 @@ namespace ReportsGenerator.Utils
                 });
         }
 
+        /// <inheritdoc />
         public void IndentIncrease()
         {
             RunUnderWaitEvent(() =>
@@ -36,39 +45,33 @@ namespace ReportsGenerator.Utils
             });
         }
 
+        /// <inheritdoc />
         public void WriteError(string msg)
         {
-            RunUnderWaitEvent(() =>
-            {
-                WriteIndentation();
-                WriteMessage(msg, ConsoleColor.DarkRed);
-            });
+            WriteMessage(msg, ConsoleColor.DarkRed);
         }
 
+        /// <inheritdoc />
         public void WriteInfo(string msg)
         {
-            RunUnderWaitEvent(() =>
-            {
-                WriteIndentation();
-                WriteMessage(msg, ConsoleColor.DarkGray);
-            });
+            WriteMessage(msg, ConsoleColor.DarkGray);
         }
 
+        /// <inheritdoc />
         public void WriteWarning(string msg)
         {
-            RunUnderWaitEvent(() =>
-            {
-                WriteIndentation();
-                WriteMessage(msg, ConsoleColor.DarkYellow);
-            });
+            WriteMessage(msg, ConsoleColor.DarkYellow);
         }
 
-        private static void WriteMessage(string msg, ConsoleColor foregroundColor)
+        private void WriteMessage(string msg, ConsoleColor foregroundColor)
         {
             var origColor = Console.ForegroundColor;
             Console.ForegroundColor = foregroundColor;
 
-            Console.WriteLine(msg);
+            var messageText =
+                $"{new string(Enumerable.Repeat(IndentationSymbol, IndentationLength * Indentation).ToArray())}{msg}";
+
+            Console.WriteLine(messageText);
 
             Console.ForegroundColor = origColor;
         }
@@ -78,11 +81,6 @@ namespace ReportsGenerator.Utils
             _locker.Wait();
             action();
             _locker.Release();
-        }
-
-        private void WriteIndentation()
-        {
-            Console.Write(new string(Enumerable.Repeat(IndentationSymbol, IndentationLength * Indentation).ToArray()));
         }
     }
 }

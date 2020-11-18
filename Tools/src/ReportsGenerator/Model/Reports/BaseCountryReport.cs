@@ -5,24 +5,45 @@ using ReportsGenerator.Model.Reports.Intermediate;
 
 namespace ReportsGenerator.Model.Reports
 {
+    /// <summary>
+    /// Represents a base abstraction fro the country and region report.
+    /// Implements the logic to retrieve different metrics and data.
+    /// </summary>
     public abstract class BaseCountryReport
     {
-        protected readonly LinkedReport Head;
-
+        private readonly LinkedReport _head;
         private Dictionary<DateTime, double>? _timeToResolve;
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="BaseCountryReport"/> class.
+        /// </summary>
+        /// <param name="name">Report name.</param>
+        /// <param name="head">Pointer to the earliest <see cref="LinkedReport"/> for the geographical object.</param>
         protected BaseCountryReport(LinkedReport head, string name)
         {
-            Head = head;
+            _head = head;
             Name = name;
-            AvailableDates = Head.GetAvailableDates().GetContinuousDateRange()
+            AvailableDates = _head.GetAvailableDates().GetContinuousDateRange()
                 .ToArray();
         }
 
+        /// <summary>
+        /// Gets a collection of known dates included in this report.
+        /// </summary>
         public IEnumerable<DateTime> AvailableDates { get; }
+
+        /// <summary>
+        /// Gets a geographical object name for which report was built.
+        /// </summary>
         public string Name { get; }
+
         private Dictionary<DateTime, double> TimeToResolve => _timeToResolve ??= new Dictionary<DateTime, double>(GetTimeToResolveCollection());
 
+        /// <summary>
+        /// Calculates a day-change <see cref="Metrics"/> for this country.
+        /// </summary>
+        /// <param name="day">A day for which metrics should be calculated.</param>
+        /// <returns>A <see cref="Metrics"/> for the day for the country.</returns>
         public Metrics GetDayChange(DateTime day)
         {
             var position = GetDayReport(day);
@@ -30,6 +51,11 @@ namespace ReportsGenerator.Model.Reports
             return GetDayChange(position);
         }
 
+        /// <summary>
+        /// Calculates a total <see cref="Metrics"/> for the day for this country.
+        /// </summary>
+        /// <param name="day">A day for which metrics should be calculated.</param>
+        /// <returns>A <see cref="Metrics"/> for the day for the country.</returns>
         public Metrics GetDayTotal(DateTime day)
         {
             var position = GetDayReport(day);
@@ -37,9 +63,22 @@ namespace ReportsGenerator.Model.Reports
             return position.Total;
         }
 
+        /// <summary>
+        /// Calculates the R(t) coefficient for the day for this country
+        /// </summary>
+        /// <remarks>
+        /// The R(t) coefficient is calulcated with the following formula:
+        /// 
+        /// R(i) = (cc[i] + cc[i-1] + cc[i-2] + cc[i-3]) / (cc[i-4] + cc[i-5] + cc[i-6] + cc[i-7]) ,
+        ///
+        /// where cc[i] is a 'Confirmed' change for the i-day.
+        /// 
+        /// </remarks>
+        /// <param name="day">A day for which metrics should be calculated.</param>
+        /// <returns>A R(t) coefficient value for the day for the country.</returns>
         public double GetRt(DateTime day)
         {
-            if (Head.Day.AddDays(7) > day)
+            if (_head.Day.AddDays(7) > day)
                 return 0;
 
             var position = GetDayReport(day);
@@ -53,6 +92,17 @@ namespace ReportsGenerator.Model.Reports
             return previousDays > 0 ? lastDays / (double)previousDays : 0;
         }
 
+        /// <summary>
+        /// Calculates a time-to-resolve(TTR) metrics for the day for this country.
+        /// </summary>
+        /// <remarks>
+        /// TTR - represents a number of days needed to resolve all new confirmed cases for the requested day.
+        /// Resolution includes both recovering and death. NOTE: this coefficient is very sensitive to the
+        /// provided data about cases, and could be very misleading for some countries. For instance, Spain,
+        /// doesn't provide accurate information about recovered cases at all, and makes this coefficient useless.
+        /// </remarks>
+        /// <param name="day">A day for which metrics should be calculated.</param>
+        /// <returns>A TTR coefficient value for the day for the country.</returns>
         public double GetTimeToResolve(DateTime day)
         {
             return TimeToResolve[day];
@@ -84,7 +134,7 @@ namespace ReportsGenerator.Model.Reports
 
         private LinkedReport GetDayReport(DateTime day)
         {
-            var position = Head;
+            var position = _head;
 
             while (position.Next.Day <= day && position.Next != LinkedReport.Empty)
             {
@@ -96,8 +146,8 @@ namespace ReportsGenerator.Model.Reports
 
         private IEnumerable<KeyValuePair<DateTime, double>> GetTimeToResolveCollection()
         {
-            var positionConfirmed = Head;
-            var positionResolved = Head;
+            var positionConfirmed = _head;
+            var positionResolved = _head;
             var resolved = 0L;
             var prevDays = 0D;
 

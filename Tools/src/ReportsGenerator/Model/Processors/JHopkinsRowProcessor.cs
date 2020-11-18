@@ -3,19 +3,36 @@ using ReportsGenerator.Utils;
 
 namespace ReportsGenerator.Model.Processors
 {
+    /// <summary>
+    /// Represents a <see cref="IRowProcessor"/> implementation for JHopkins data.
+    /// Based on <see cref="BaseRowProcessor"/> implementation.
+    /// </summary>
     public class JHopkinsRowProcessor : BaseRowProcessor
     {
         private readonly INames _namesService;
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="JHopkinsRowProcessor"/> class.
+        /// </summary>
+        /// <param name="namesService">Names service to translate name and abbreviations.</param>
+        /// <param name="statsProvider">Statistical provider to generate key.</param>
+        /// <param name="logger">A <see cref="ILogger"/> instance.</param>
         public JHopkinsRowProcessor(INames namesService, IStatsProvider statsProvider, ILogger logger) : base(statsProvider, logger)
         {
             _namesService = namesService;
         }
 
+        /// <inheritdoc />
         public override string GetCountryName(Row row)
         {
             var country = row[Field.CountryRegion];
             var province = row[Field.ProvinceState];
+
+            // Many rows from this data source have messed relation between country and province.
+            // The format for this data source has changed several times. For instance,
+            // in earlier versions data files don't have 'county' field.
+            // The other frequent issue is that some provincies were represented as
+            // independent countries, like Greenland, or Guadeloupe.
 
             return (country, province) switch
             {
@@ -87,6 +104,7 @@ namespace ReportsGenerator.Model.Processors
             };
         }
 
+        /// <inheritdoc />
         public override string GetCountyName(Row row)
         {
             var countyRowValue = row[Field.Admin2];
@@ -103,12 +121,20 @@ namespace ReportsGenerator.Model.Processors
             };
         }
 
+        /// <inheritdoc />
         public override Origin GetOrigin(Row row) => Origin.JHopkins;
 
+        /// <inheritdoc />
         public override string GetProvinceName(Row row)
         {
             var country = row[Field.CountryRegion];
             var province = row[Field.ProvinceState];
+
+            // Many rows from this data source have messed relation between country and province.
+            // The format for this data source has changed several times. For instance,
+            // in earlier versions data files don't have 'county' field.
+            // The other frequent issue is that some provincies were represented as
+            // independent countries, like Greenland, or Guadeloupe.
 
             return (province, country) switch
             {
@@ -119,11 +145,18 @@ namespace ReportsGenerator.Model.Processors
                 ("US", _) => Consts.MainCountryRegion,
                 ("None", _) => Consts.MainCountryRegion,
 
+                ("Falkland Islands (Islas Malvinas)", _) => "Falkland Islands (Malvinas)",
+                ("Dadar Nagar Haveli", _) => "Dadra and Nagar Haveli and Daman and Diu",
+                ("Bayern", _) => "Bavaria",
+                ("Fench Guiana", _) => "French Guiana",
+
+
                 var x when x.province.Contains("Grand Princess") => "Grand Princess",
                 var x when x.province.Contains("Diamond Princess") => "Diamond Princess",
 
                 (_, "North Ireland") => "Northern Ireland",
                 (_, "Saint Martin") => "Saint Martin",
+                (_, "St. Martin") => "Saint Martin",
                 (_, "French Guiana") => "French Guiana",
                 (_, "Martinique") => "Martinique",
                 (_, "Mayotte") => "Mayotte",

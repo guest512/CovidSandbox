@@ -1,11 +1,14 @@
-﻿using ReportsGenerator.Model;
-using ReportsGenerator.Model.Reports;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Globalization;
+using ReportsGenerator.Model;
+using ReportsGenerator.Model.Reports;
 
 namespace ReportsGenerator.Data
 {
+    /// <summary>
+    /// Represents a trivial implementation of <see cref="IReportFormatter"/> interface.
+    /// </summary>
     public class StringReportFormatter : IReportFormatter
     {
         private readonly string[] _countryReportHeader =
@@ -43,6 +46,7 @@ namespace ReportsGenerator.Data
             "Population"
         };
 
+        /// <inheritdoc />
         public IEnumerable<string> GetData(DayReport report, string country)
         {
             yield return country;
@@ -53,6 +57,7 @@ namespace ReportsGenerator.Data
             }
         }
 
+        /// <inheritdoc />
         public IEnumerable<string> GetData(BaseCountryReport report, DateTime day)
         {
             yield return day.ToString("dd-MM-yyyy");
@@ -69,6 +74,7 @@ namespace ReportsGenerator.Data
             yield return ttr.ToString("###########0", CultureInfo.InvariantCulture);
         }
 
+        /// <inheritdoc />
         public IEnumerable<string> GetData(StatsReportNode report)
         {
             yield return report.Name;
@@ -76,31 +82,34 @@ namespace ReportsGenerator.Data
             yield return report.Population.ToString("D");
         }
 
-        public IEnumerable<string> GetHeader(DayReport report)
+        /// <inheritdoc />
+        public IEnumerable<string> GetHeader<T>()
         {
-            return _dayByDayReportHeader;
+            if (typeof(T) == typeof(DayReport))
+                return _dayByDayReportHeader;
+
+            if (typeof(T) == typeof(BaseCountryReport))
+                return _countryReportHeader;
+
+            if (typeof(T) == typeof(StatsReportNode))
+                return _statsReportHeader;
+
+            throw new InvalidOperationException("Unknown report type.");
         }
 
-        public IEnumerable<string> GetHeader(BaseCountryReport report)
-        {
-            return _countryReportHeader;
-        }
-
-        public IEnumerable<string> GetHeader(StatsReportNode report)
-        {
-            return _statsReportHeader;
-        }
-
+        /// <inheritdoc />
         public IEnumerable<string> GetName(DayReport report)
         {
             return new[] { report.Day.ToString("yyyy-MM-dd") };
         }
 
+        /// <inheritdoc />
         public IEnumerable<string> GetName(BaseCountryReport report, string? parent)
         {
             return string.IsNullOrEmpty(parent) ? new[] { report.Name } : new[] { parent, report.Name };
         }
 
+        /// <inheritdoc />
         public IEnumerable<string> GetName(StatsReportNode report)
         {
             var name = new List<string>();

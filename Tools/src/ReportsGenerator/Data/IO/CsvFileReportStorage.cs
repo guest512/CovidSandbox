@@ -6,12 +6,19 @@ using System.Threading;
 
 namespace ReportsGenerator.Data.IO
 {
+    /// <summary>
+    /// Represents an implementation of <see cref="IReportStorage"/> for predefined folders structure with CSV files.
+    /// </summary>
     public class CsvFileReportStorage : IReportStorage
     {
         private readonly string _countriesFolder;
         private readonly string _daysFolder;
         private readonly string _statsFolder;
-
+        /// <summary>
+        /// Initializes a new instance of the <see cref="CsvFileReportStorage"/> class.
+        /// </summary>
+        /// <param name="rootDir">A root directory path where all reports should be stored.</param>
+        /// <param name="rewrite">A flag indicating whether or not previous results should be removed.</param>
         public CsvFileReportStorage(string rootDir, bool rewrite)
         {
             Root = string.IsNullOrEmpty(rootDir) ? "./out" : rootDir;
@@ -22,8 +29,12 @@ namespace ReportsGenerator.Data.IO
             Initialize(rewrite);
         }
 
+        /// <summary>
+        /// Gets a path to the root directory.
+        /// </summary>
         public string Root { get; }
 
+        /// <inheritdoc />
         public IReportDataWriter GetWriter(IEnumerable<string> name, WriterType reportType)
         {
             var names = name.Select(n => n.Replace('*', '_')).ToArray();

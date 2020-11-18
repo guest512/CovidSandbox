@@ -10,12 +10,21 @@ using System.Threading.Tasks;
 
 namespace ReportsGenerator.Data.DataSources
 {
+    /// <summary>
+    /// An implementation of <see cref="IDataSourceReader"/> that allows to read and parse CSV files.
+    /// </summary>
     public class CsvFilesDataSourceReader : IDataSourceReader
     {
         private readonly IDataProvider _dataProvider;
         private readonly IEnumerable<string> _files;
         private readonly ILogger _logger;
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="CsvFilesDataSourceReader"/> class.
+        /// </summary>
+        /// <param name="files">Collection of strings - paths to files.</param>
+        /// <param name="dataProvider">An <see cref="IDataProvider"/> object to convert CSV line to <see cref="Row"/>.</param>
+        /// <param name="logger">A <see cref="ILogger"/> instance.</param>
         protected CsvFilesDataSourceReader(IEnumerable<string> files, IDataProvider dataProvider, ILogger logger)
         {
             _files = files;
@@ -23,24 +32,27 @@ namespace ReportsGenerator.Data.DataSources
             _logger = logger;
         }
 
+        /// <inheritdoc />
         public IEnumerable<Row> GetRows()
         {
             foreach (string file in _files)
             {
-                _logger.WriteInfo($"--Processing file: {file}");
+                _logger.WriteInfo($"--Reading file: {file}");
 
                 foreach (var row in GetRows(file))
                     yield return row;
             }
         }
 
+        /// <inheritdoc />
         public async IAsyncEnumerable<Row> GetRowsAsync()
         {
             await foreach (var row in GetRowsAsync(row => row))
                 yield return row;
         }
 
-        public async IAsyncEnumerable<T> GetRowsAsync<T>(Func<Row, T> callback)
+        /// <inheritdoc />
+        public async IAsyncEnumerable<T> GetRowsAsync<T>(GetRowsCallback<T> callback)
         {
             ConcurrentStack<T> rows = new ConcurrentStack<T>();
             var source = new CancellationTokenSource();
@@ -49,7 +61,7 @@ namespace ReportsGenerator.Data.DataSources
             void ProcessFile(string file)
             {
                 token.ThrowIfCancellationRequested();
-                _logger.WriteInfo($"--Processing file: {file}");
+                _logger.WriteInfo($"--Reading file: {file}");
                 var items = new List<T>();
 
                 foreach (var row in GetRows(file))
@@ -104,8 +116,20 @@ namespace ReportsGenerator.Data.DataSources
             }
         }
 
+        /// <summary>
+        /// Factory function to create <see cref="CsvField"/> object.
+        /// </summary>
+        /// <param name="key">Column name.</param>
+        /// <param name="value">Cell value.</param>
+        /// <param name="fileName">File from where it comes.</param>
+        /// <returns></returns>
         protected virtual CsvField CsvFieldCreator(Field key, string value, string fileName) => new CsvField(key, value);
 
+        /// <summary>
+        /// Detects whether or not <see cref="Row"/> is invalid and shouldn't be returned.
+        /// </summary>
+        /// <param name="row">CSV row to test.</param>
+        /// <returns><langword>True</langword> if by some reason <see cref="Row"/> should be ignored, otherwise returns <langword>False</langword>.</returns>
         protected virtual bool IsInvalidData(Row row) => false;
 
         private IEnumerable<CsvField> GetCsvFields(IEnumerable<Field> keys, IEnumerable<string> fields, string fileName)

@@ -2,8 +2,16 @@
 
 namespace ReportsGenerator.Data
 {
+    /// <summary>
+    /// Represents a collection of helper functions.
+    /// </summary>
     public static class Utils
     {
+        /// <summary>
+        /// Extension method to treat string as CSV file row and split it by CSV rules.
+        /// </summary>
+        /// <param name="row">String to process.</param>
+        /// <returns>Collection of split strings, with trimmed quotation marks.</returns>
         public static IEnumerable<string> SplitCsvRowString(this string row)
         {
             var lastSeparatorIndex = -1;

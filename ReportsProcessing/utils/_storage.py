@@ -4,13 +4,10 @@ from typing import List as _List, Tuple as _Tuple
 
 
 class _Storage():
-    """
-    docstring
-    """
+    '''
+    Helper class to acess data stored in reports.
+    '''
     def __init__(self, path):
-        """
-        docstring
-        """
         self.__paths = path
         pass
 
@@ -29,7 +26,8 @@ class _Storage():
                            country_name: str,
                            parse_dates=True,
                            date_is_index=True) -> _pd.DataFrame:
-        '''Returns a country report as pandas DataFrame.
+        '''
+        Returns a country report as pandas DataFrame.
 
         Args:
             country_name(str): The name of the country for which report should be retrieved.
@@ -132,7 +130,18 @@ class _Storage():
                            include: _List[str] = None,
                            exclude: _List[str] = None,
                            start_date: _pd.Timestamp = None) -> _pd.DataFrame:
-        ''' TBD '''
+        '''
+        Returns reports for country regions as a long-form DataFrame.
+
+        Args:
+            country_name(str): The name of the country for which report should be retrieved.
+            include(list(str)): The whitelist of regions to include in dataframe. If not specified, then all are included.
+            exlude(list(str)): The blacklist of regions to exlucde from dataframe. If not specified, then None are excluded.
+            start_date(Timestamp): The date from which dataframe should be started.
+
+        Returns:
+            Dataframe with regions report in long-form. Index is not specified, NaN values replaced with '0'.
+        '''
 
         regions_series = list()
         regions = include
@@ -163,7 +172,21 @@ class _Storage():
                                      exclude: _List[str] = None,
                                      start_date: _pd.Timestamp = None,
                                      wide_form: bool = True) -> _pd.DataFrame:
-        ''' TBD '''
+        '''
+        Returns reports for country regions for the particular metrics(column) as a DataFrame.
+
+        Args:
+            country_name(str): The name of the country for which report should be retrieved.
+            column_name(str): The name of the column for which report should be retrieved.
+            include(list(str)): The whitelist of regions to include in dataframe. If not specified, then all are included.
+            exlude(list(str)): The blacklist of regions to exlucde from dataframe. If not specified, then None are excluded.
+            start_date(Timestamp): The date from which dataframe should be started.
+            wide_form(bool): A flag indicating whether or not, result should be in the wide-form. By default it's True.
+
+        Returns:
+            Dataframe with regions report for the specified column.
+            NaN values replaced with '0'. If wide_form is True, then index is date, otherwise index not set.
+        '''
 
         regions_series = list()
         regions = include
@@ -191,7 +214,17 @@ class _Storage():
             include: _List[str] = None,
             exclude: _List[str] = None,
             start_date: _pd.Timestamp = None) -> _pd.DataFrame:
-        ''' TBD '''
+        '''
+        Returns reports for countries as a long-form DataFrame.
+
+        Args:
+            include(list(str)): The whitelist of countries to include in dataframe. If not specified, then all are included.
+            exlude(list(str)): The blacklist of countries to exlucde from dataframe. If not specified, then None are excluded.
+            start_date(Timestamp): The date from which dataframe should be started.
+
+        Returns:
+            Dataframe with countries report in long-form. Index is not specified, NaN values replaced with '0'.
+        '''
 
         countries_series = list()
         countries = include
@@ -220,7 +253,20 @@ class _Storage():
             exclude: _List[str] = None,
             start_date: _pd.Timestamp = None,
             wide_form: bool = True) -> _pd.DataFrame:
-        ''' TBD '''
+        '''
+        Returns reports for countries for the particular metrics(column) as a DataFrame.
+
+        Args:
+            column_name(str): The name of the column for which report should be retrieved.
+            include(list(str)): The whitelist of countries to include in dataframe. If not specified, then all are included.
+            exlude(list(str)): The blacklist of countries to exlucde from dataframe. If not specified, then None are excluded.
+            start_date(Timestamp): The date from which dataframe should be started.
+            wide_form(bool): A flag indicating whether or not, result should be in the wide-form. By default it's True.
+
+        Returns:
+            Dataframe with countries report for the specified column.
+            NaN values replaced with '0'. If wide_form is True, then index is date, otherwise index not set.
+        '''
 
         countries_series = list()
         countries = include
@@ -244,15 +290,27 @@ class _Storage():
                           axis=1 if wide_form else 0).fillna(0)
 
     def get_countries_stats(self) -> _pd.DataFrame:
-        """
-        docstring
-        """
+        '''
+        Returns countries statistical information as DataFrame.
+
+        Returns:
+            Dataframe with countries statistical information. Country name is index.
+        '''
 
         report_file = self.__paths.get_countries_stats_path()
         stats_df = _pd.read_csv(report_file, index_col=["Name"])
         return stats_df.sort_index()
 
     def get_regions_stats(self, country_name: str) -> _pd.DataFrame:
+        '''
+        Returns country regions statistical information as DataFrame.
+
+        Args:
+            country_name(str): The name of the country for information should be retrieved.
+
+        Returns:
+            Dataframe with country regions statistical information. Region name is index.
+        '''
 
         report_file = self.__paths.get_country_regions_stats_path(country_name)
         stats_df = _pd.read_csv(report_file, index_col=["Name"])
@@ -260,6 +318,16 @@ class _Storage():
 
     def get_counties_stats(self, country_name: str,
                            region_name: str) -> _pd.DataFrame:
+        '''
+        Returns country region counties statistical information as DataFrame.
+
+        Args:
+            country_name(str): The name of the country for which information should be retrieved.
+            region_name(str): The name of the region for which information should be retrieved.
+
+        Returns:
+            Dataframe with counties statistical information. County name is index.
+        '''
 
         report_file = self.__paths.get_country_counties_stats_path(
             country_name, region_name)
