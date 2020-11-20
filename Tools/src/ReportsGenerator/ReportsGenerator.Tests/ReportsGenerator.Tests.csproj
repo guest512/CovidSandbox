@@ -1,5 +1,5 @@
 <Project Sdk="Microsoft.NET.Sdk">
-  <Import Project="$(ProjectDir)../../build/ReportsGenerator.project.props" />
+  <Import Project="$(ProjectDir)../../../build/ReportsGenerator.project.props" />
 
   <PropertyGroup>
     <IsPackable>false</IsPackable>
