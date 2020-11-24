@@ -1,3 +1,4 @@
+using System;
 using ReportsGenerator.Model.Reports.Intermediate;
 
 namespace ReportsGenerator.Model.Reports
@@ -15,8 +16,10 @@ namespace ReportsGenerator.Model.Reports
         /// </summary>
         /// <param name="name">Region/province name.</param>
         /// <param name="head">Pointer to the earliest <see cref="LinkedReport"/> for the region/province.</param>
-        public RegionReport(string name, LinkedReport head) : base(head, name)
+        public RegionReport(string name, BasicReportsWalker walker) : base(walker, name)
         {
         }
+
+        protected override Metrics GetDaysMetrics(DateTime startDay, int days) => Walker.GetProvinceMetricsForPeriod(Name, startDay, days);
     }
 }

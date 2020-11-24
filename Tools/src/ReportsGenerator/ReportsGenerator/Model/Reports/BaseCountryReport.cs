@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using ReportsGenerator.Model.Reports.Intermediate;
 
 namespace ReportsGenerator.Model.Reports
@@ -11,7 +10,7 @@ namespace ReportsGenerator.Model.Reports
     /// </summary>
     public abstract class BaseCountryReport
     {
-        private readonly LinkedReport _head;
+        protected readonly BasicReportsWalker Walker;
         private Dictionary<DateTime, double>? _timeToResolve;
 
         /// <summary>
@@ -19,12 +18,11 @@ namespace ReportsGenerator.Model.Reports
         /// </summary>
         /// <param name="name">Report name.</param>
         /// <param name="head">Pointer to the earliest <see cref="LinkedReport"/> for the geographical object.</param>
-        protected BaseCountryReport(LinkedReport head, string name)
+        protected BaseCountryReport(BasicReportsWalker head, string name)
         {
-            _head = head;
+            Walker = head;
             Name = name;
-            AvailableDates = _head.GetAvailableDates().GetContinuousDateRange()
-                .ToArray();
+            AvailableDates = new[] { Walker.StartDay, Walker.LastDay }.GetContinuousDateRange();
         }
 
         /// <summary>
@@ -46,9 +44,10 @@ namespace ReportsGenerator.Model.Reports
         /// <returns>A <see cref="Metrics"/> for the day for the country.</returns>
         public Metrics GetDayChange(DateTime day)
         {
-            var position = GetDayReport(day);
+            var today = GetDayTotal(day);
+            var prevDay = GetDayTotal(day.AddDays(-1));
 
-            return GetDayChange(position);
+            return today - prevDay;
         }
 
         /// <summary>
@@ -56,38 +55,25 @@ namespace ReportsGenerator.Model.Reports
         /// </summary>
         /// <param name="day">A day for which metrics should be calculated.</param>
         /// <returns>A <see cref="Metrics"/> for the day for the country.</returns>
-        public Metrics GetDayTotal(DateTime day)
-        {
-            var position = GetDayReport(day);
-
-            return position.Total;
-        }
+        public Metrics GetDayTotal(DateTime day) => GetDayMetrics(day);
 
         /// <summary>
         /// Calculates the R(t) coefficient for the day for this country
         /// </summary>
         /// <remarks>
-        /// The R(t) coefficient is calulcated with the following formula:
-        /// 
+        /// The R(t) coefficient is calculated with the following formula:
+        ///
         /// R(i) = (cc[i] + cc[i-1] + cc[i-2] + cc[i-3]) / (cc[i-4] + cc[i-5] + cc[i-6] + cc[i-7]) ,
         ///
         /// where cc[i] is a 'Confirmed' change for the i-day.
-        /// 
+        ///
         /// </remarks>
         /// <param name="day">A day for which metrics should be calculated.</param>
         /// <returns>A R(t) coefficient value for the day for the country.</returns>
         public double GetRt(DateTime day)
         {
-            if (_head.Day.AddDays(7) > day)
-                return 0;
-
-            var position = GetDayReport(day);
-
-            static long GetCumulativeConfirmedChange(IEnumerable<LinkedReport> reports) =>
-                reports.Aggregate(0L, (sum, rep) => sum + (rep.Total - rep.Previous.Total).Confirmed);
-
-            var lastDays = GetCumulativeConfirmedChange(GetReports(position, 4, false));
-            var previousDays = GetCumulativeConfirmedChange(GetReports(GetDayReport(day.AddDays(-4)), 4, false));
+            var lastDays = GetDaysMetrics(day.AddDays(-3), 4).Confirmed;
+            var previousDays = GetDaysMetrics(day.AddDays(-7), 4).Confirmed;
 
             return previousDays > 0 ? lastDays / (double)previousDays : 0;
         }
@@ -120,40 +106,19 @@ namespace ReportsGenerator.Model.Reports
         private static (long, long) CalcResolution(long confirmed, Metrics resolved) =>
             CalcResolution(confirmed, resolved.Recovered + resolved.Deaths);
 
-        private static Metrics GetDayChange(LinkedReport report) => report.Total - report.Previous.Total;
+        private Metrics GetDayMetrics(DateTime day) => GetDaysMetrics(day, 1);
 
-        private static IEnumerable<LinkedReport> GetReports(LinkedReport start, int count, bool lookForward = true)
-        {
-            var position = start;
-            for (var i = 0; i < count; i++)
-            {
-                yield return position;
-                position = lookForward ? position.Next : position.Previous;
-            }
-        }
-
-        private LinkedReport GetDayReport(DateTime day)
-        {
-            var position = _head;
-
-            while (position.Next.Day <= day && position.Next != LinkedReport.Empty)
-            {
-                position = position.Next;
-            }
-
-            return position;
-        }
+        protected abstract Metrics GetDaysMetrics(DateTime startDay, int days);
 
         private IEnumerable<KeyValuePair<DateTime, double>> GetTimeToResolveCollection()
         {
-            var positionConfirmed = _head;
-            var positionResolved = _head;
+            var positionConfirmed = Walker.StartDay;
+            var positionResolved = Walker.StartDay;
             var resolved = 0L;
             var prevDays = 0D;
 
-            while (positionConfirmed != LinkedReport.Empty)
+            while (positionConfirmed <= Walker.LastDay)
             {
-                var day = positionConfirmed.Day;
                 var dayChange = GetDayChange(positionConfirmed);
                 var confirmed = dayChange.Confirmed;
                 var days = 0D;
@@ -166,12 +131,12 @@ namespace ReportsGenerator.Model.Reports
 
                         if (confirmed == 0)
                         {
-                            days = (positionResolved.Day - positionConfirmed.Day).Days - 1;
+                            days = (positionResolved - positionConfirmed).Days - 1;
                             break;
                         }
                     }
 
-                    if (positionResolved == LinkedReport.Empty)
+                    if (positionResolved == Walker.LastDay)
                     {
                         days = double.PositiveInfinity;
                         break;
@@ -179,8 +144,8 @@ namespace ReportsGenerator.Model.Reports
 
                     (confirmed, resolved) = CalcResolution(confirmed, GetDayChange(positionResolved));
 
-                    days = (positionResolved.Day - positionConfirmed.Day).Days;
-                    positionResolved = positionResolved.Next;
+                    days = (positionResolved - positionConfirmed).Days;
+                    positionResolved = positionResolved.AddDays(1);
                 }
 
                 if (days < 0)
@@ -190,8 +155,8 @@ namespace ReportsGenerator.Model.Reports
                     days = double.PositiveInfinity;
 
                 prevDays = days;
-                yield return new KeyValuePair<DateTime, double>(day, days);
-                positionConfirmed = positionConfirmed.Next;
+                yield return new KeyValuePair<DateTime, double>(positionConfirmed, days);
+                positionConfirmed = positionConfirmed.AddDays(1);
             }
         }
     }

@@ -16,7 +16,7 @@ namespace ReportsGenerator.Model.Reports
         private readonly Dictionary<string, CountryReport> _countryReports = new Dictionary<string, CountryReport>();
         private readonly Dictionary<DateTime, DayReport> _dayReports = new Dictionary<DateTime, DayReport>();
         private readonly ConcurrentDictionary<string, StatsReport> _graphStructures = new ConcurrentDictionary<string, StatsReport>();
-        private readonly ConcurrentDictionary<string, LinkedReport> _linkedReports = new ConcurrentDictionary<string, LinkedReport>();
+        private readonly ConcurrentDictionary<string, BasicReportsWalker> _linkedReports = new ConcurrentDictionary<string, BasicReportsWalker>();
         private readonly ILogger _logger;
         private readonly List<Entry> _entries = new List<Entry>();
 
@@ -32,7 +32,7 @@ namespace ReportsGenerator.Model.Reports
         /// <summary>
         /// Gets a <see cref="IEnumerable{T}"/> of countries for which reports could be build.
         /// </summary>
-        public IEnumerable<string> AvailableCountries => _linkedReports.Select(lr => lr.Value.Name).Distinct();
+        public IEnumerable<string> AvailableCountries => _linkedReports.Keys;
 
         /// <summary>
         /// Gets a <see cref="IEnumerable{T}"/> of dates for which reports could be build.
@@ -84,7 +84,7 @@ namespace ReportsGenerator.Model.Reports
                 _logger.WriteInfo($"--Processing {country}...");
 
                 var countryEntries = uniqueEntries.Where(x => x.CountryRegion == country);
-                var graphBuilder = new ReportsGraphBuilder(country, _logger);
+                var basicReports = new List<BasicReport>();
                 var graphStructure = new StatsReport(country, statsProvider.GetCountryStatsName(country), statsProvider);
 
                 if (country == "Russia")
@@ -114,7 +114,7 @@ namespace ReportsGenerator.Model.Reports
                                     break;
                             }
 
-                            graphBuilder.Reports.Add(CreateBasicReport(dayCountryEntry));
+                            basicReports.Add(CreateBasicReport(dayCountryEntry));
                         }
                     }
                 }
@@ -133,11 +133,11 @@ namespace ReportsGenerator.Model.Reports
                                 break;
                         }
 
-                        graphBuilder.Reports.Add(CreateBasicReport(countryEntry));
+                        basicReports.Add(CreateBasicReport(countryEntry));
                     }
                 }
 
-                _linkedReports.TryAdd(country, graphBuilder.Build(graphStructure));
+                _linkedReports.TryAdd(country, new BasicReportsWalker(basicReports, graphStructure));
                 _graphStructures.TryAdd(country, graphStructure);
             });
         }
@@ -152,7 +152,7 @@ namespace ReportsGenerator.Model.Reports
             if (_countryReports.ContainsKey(countryName))
                 return _countryReports[countryName];
 
-            var countyrReport = new CountryReport(countryName, _linkedReports[countryName]);
+            var countyrReport = new CountryReport(countryName, _linkedReports[countryName], GetCountryStats(countryName));
             _countryReports.Add(countryName, countyrReport);
 
             return _countryReports[countryName];

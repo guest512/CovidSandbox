@@ -1,4 +1,6 @@
-﻿namespace ReportsGenerator
+﻿using System;
+
+namespace ReportsGenerator
 {
     /// <summary>
     /// Application constants.
@@ -12,5 +14,7 @@
 
         // DEBUG ONLY
         internal const bool DisableExtensiveAssertMethods = true;
+
+        public static readonly DateTime StartDate = new DateTime(2020, 01, 22);
     }
 }

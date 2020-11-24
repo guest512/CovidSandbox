@@ -10,7 +10,7 @@ namespace ReportsGenerator.Model.Reports.Intermediate
         /// <summary>
         /// Gets a day for which report contains data.
         /// </summary>
-        public DateTime Day { get; init; }
+        public DateTime Day { get; init; } = DateTime.MinValue;
 
         /// <summary>
         /// Gets an id. Name of geographical object.
@@ -26,6 +26,8 @@ namespace ReportsGenerator.Model.Reports.Intermediate
         /// Gets a report data.
         /// </summary>
         public Metrics Total { get; init; } = Metrics.Empty;
+
+        public static BasicReport Empty { get; } = new BasicReport();
 
         /// <summary>
         /// Returns the string representation of the report.

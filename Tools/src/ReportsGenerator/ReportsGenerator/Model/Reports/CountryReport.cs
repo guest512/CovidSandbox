@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using ReportsGenerator.Model.Reports.Intermediate;
 
@@ -16,19 +17,16 @@ namespace ReportsGenerator.Model.Reports
         /// </summary>
         /// <param name="name">Country name.</param>
         /// <param name="head">Pointer to the earliest <see cref="LinkedReport"/> for the country.</param>
-        public CountryReport(string name, LinkedReport head) : base(head, name)
+        public CountryReport(string name, BasicReportsWalker walker, StatsReport structure) : base(walker, name)
         {
-            RegionReports =
-                (head.Children.Any(child => child.Name != Consts.MainCountryRegion)
-                    ? head.Children.Where(child => child.Name != Consts.MainCountryRegion)
-                    : head.Children)
-                .Select(child => new RegionReport(child.Name, child))
-                .ToArray();
+            RegionReports = structure.GetProvinces().Select(province => new RegionReport(province, walker));
         }
 
         /// <summary>
         /// Gets a collection of the country's regions reports.
         /// </summary>
         public IEnumerable<RegionReport> RegionReports { get; }
+
+        protected override Metrics GetDaysMetrics(DateTime startDay, int days) => Walker.GetCountryMetricsForPeriod(startDay, days);
     }
 }

@@ -11,18 +11,18 @@ namespace ReportsGenerator.Model.Reports
     /// </summary>
     public class DayReport
     {
-        private readonly IDictionary<string, LinkedReport> _reports;
+        private readonly IDictionary<string, BasicReportsWalker> _reports;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="DayReport"/> class.
         /// </summary>
         /// <param name="day">Day for which report creates.</param>
-        /// <param name="reports">A <see cref="IDictionary{TKey,TValue}"/> of <see cref="LinkedReport"/> and its names, to create the report. </param>
-        public DayReport(in DateTime day, IDictionary<string, LinkedReport> reports)
+        /// <param name="reportWalkers">A <see cref="IDictionary{TKey,TValue}"/> of <see cref="LinkedReport"/> and its names, to create the report. </param>
+        public DayReport(in DateTime day, IDictionary<string, BasicReportsWalker> reportWalkers)
         {
             Day = day;
-            _reports = reports;
-            AvailableCountries = _reports.Select(rep => rep.Value.Name).Distinct().ToArray();
+            _reports = reportWalkers;
+            AvailableCountries = _reports.Keys;
         }
 
         /// <summary>
@@ -42,11 +42,10 @@ namespace ReportsGenerator.Model.Reports
         /// <returns>A <see cref="Metrics"/> for the day for the country.</returns>
         public Metrics GetCountryChange(string countryName)
         {
-            var country = _reports[countryName];
-            while (country.Next.Day <= Day && country.Next != LinkedReport.Empty)
-                country = country.Next;
+            var prev = _reports[countryName].GetCountryMetricsForDay(Day.AddDays(-1));
+            var current = _reports[countryName].GetCountryMetricsForDay(Day);
 
-            return country.Total - country.Previous.Total;
+            return current - prev;
         }
 
         /// <summary>
@@ -54,13 +53,6 @@ namespace ReportsGenerator.Model.Reports
         /// </summary>
         /// <param name="countryName">Country to search for.</param>
         /// <returns>A <see cref="Metrics"/> for the day for the country.</returns>
-        public Metrics GetCountryTotal(string countryName)
-        {
-            var country = _reports[countryName];
-            while (country.Next.Day <= Day && country.Next != LinkedReport.Empty)
-                country = country.Next;
-
-            return country.Total;
-        }
+        public Metrics GetCountryTotal(string countryName) => _reports[countryName].GetCountryMetricsForDay(Day);
     }
 }
