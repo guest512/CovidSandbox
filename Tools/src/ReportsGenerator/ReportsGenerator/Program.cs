@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using ReportsGenerator;
 using ReportsGenerator.Data;
 using ReportsGenerator.Data.DataSources;
-using ReportsGenerator.Data.IO;
+using ReportsGenerator.Data.IO.Csv;
 using ReportsGenerator.Model;
 using ReportsGenerator.Model.Processors;
 using ReportsGenerator.Model.Reports;
@@ -52,6 +52,7 @@ static Dictionary<RowVersion, IRowProcessor> GetRowProcessors(INames namesServic
 }
 
 var logger = new ConsoleLogger();
+ReportsSaver<string>? reportsSaver = null;
 
 try
 {
@@ -70,7 +71,7 @@ try
 
     var miscStorage = new MiscStorage(new MiscDataSource(GetDataFolder<MiscDataSource>(), logger), logger);
     var entryFactory = new EntryFactory(GetRowProcessors(miscStorage, miscStorage, logger), logger);
-    var reportsSaver = new ReportsSaver(new StringReportFormatter(), new CsvFileReportStorage(argsParser.ReportsDir, true), new NullLogger());
+    reportsSaver = new ReportsSaver<string>(new CsvReportFormatter(), new CsvFileReportStorage(argsParser.ReportsDir, true), new NullLogger());
     var reportsBuilder = new ReportsBuilder(logger);
 
     logger.WriteInfo("Reading raw data...");
@@ -100,12 +101,23 @@ try
         reportsSaver.WriteReport);
 
     logger.WriteInfo("Create country reports...");
-    Parallel.ForEach(reportsBuilder.AvailableCountries.Select(reportsBuilder.GetCountryReport),
-        reportsSaver.WriteReport);
+    var countryReports = reportsBuilder.AvailableCountries.Select(reportsBuilder.GetCountryReport).ToArray();
+
+    Parallel.ForEach(countryReports, reportsSaver.WriteReport);
+    Parallel.ForEach(countryReports.SelectMany(cr => cr.RegionReports), reportsSaver.WriteReport);
 
     logger.WriteInfo("Create country stats...");
-    Parallel.ForEach(reportsBuilder.AvailableCountries.Select(reportsBuilder.GetCountryStats),
-        reportsSaver.WriteStats);
+    var countryStats = reportsBuilder.AvailableCountries.Select(reportsBuilder.GetCountryStats).ToArray();
+
+    Parallel.ForEach(countryStats.Select(cs => cs.Root), reportsSaver.WriteReport); //Country
+    Parallel.ForEach(
+        countryStats.SelectMany(cs => cs.Root.Children)
+            .Where(r => r.Name != Consts.MainCountryRegion && r.Name != Consts.OtherCountryRegion),
+        reportsSaver.WriteReport); //Region
+    Parallel.ForEach(
+        countryStats.SelectMany(cs =>
+            cs.Root.Children.Where(r => r.Name != Consts.MainCountryRegion && r.Name != Consts.OtherCountryRegion)
+                .SelectMany(csc => csc.Children)), reportsSaver.WriteReport); // County
 }
 catch (Exception ex)
 {
@@ -121,6 +133,7 @@ finally
 {
     Convertors.SetLogger(new NullLogger());
     logger.Dispose();
+    reportsSaver?.Dispose();
 }
 
 return 0;

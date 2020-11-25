@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
+using ReportsGenerator.Data;
 using ReportsGenerator.Model.Reports.Intermediate;
 
 namespace ReportsGenerator.Model.Reports
@@ -9,8 +9,14 @@ namespace ReportsGenerator.Model.Reports
     /// Represents an abstraction for day report.
     /// Allows you to look Total and DayChange <see cref="Metrics"/> for each known country.
     /// </summary>
-    public class DayReport
+    public class DayReport : IFormattableReport<string, DateTime>
     {
+        private static readonly string[] FormattableReportProperties = {
+            "Country",
+            "Total",
+            "Change",
+        };
+
         private readonly IDictionary<string, BasicReportsWalker> _reports;
 
         /// <summary>
@@ -48,5 +54,25 @@ namespace ReportsGenerator.Model.Reports
         /// <param name="countryName">Country to search for.</param>
         /// <returns>A <see cref="Metrics"/> for the day for the country.</returns>
         public Metrics GetCountryTotal(string countryName) => _reports[countryName].GetCountryTotalByDay(Day);
+
+        #region IFormattableReport
+
+        IEnumerable<DateTime> IFormattableReport<string, DateTime>.Name => new[] { Day };
+
+        IEnumerable<string> IFormattableReport<string, DateTime>.Properties => FormattableReportProperties;
+
+        ReportType IFormattableReport<string, DateTime>.ReportType => ReportType.Day;
+
+        IEnumerable<string> IFormattableReport<string, DateTime>.RowIds => AvailableCountries;
+
+        object IFormattableReport<string, DateTime>.GetValue(string property, string key) => property switch
+        {
+            "Country" => key,
+            "Total" => GetCountryTotal(key),
+            "Change" => GetCountryChange(key),
+            _ => throw new ArgumentOutOfRangeException(nameof(property), property, null)
+        };
+
+        #endregion IFormattableReport
     }
 }

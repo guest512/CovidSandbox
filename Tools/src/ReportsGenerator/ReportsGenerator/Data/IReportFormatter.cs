@@ -1,65 +1,40 @@
-﻿using System;
-using System.Collections.Generic;
-using ReportsGenerator.Model.Reports;
+﻿using System.Collections.Generic;
 
 namespace ReportsGenerator.Data
 {
     /// <summary>
     /// Represents an output report formatter interface.
-    /// Allows to get representation of report's data serialized to string, its header, and name parts.
+    /// Allows to get representation of report's data serialized to <typeparamref name="TResult"/>, its header, and name parts.
     /// </summary>
-    public interface IReportFormatter
+    /// <typeparam name="TResult">Report data type.</typeparam>
+    public interface IReportFormatter<out TResult>
     {
         /// <summary>
-        /// Gets data for the particular country in <see cref="DayReport"/>.
+        /// Gets data for the particular country in <see cref="IFormattableReport{TRow,TName}"/>.
         /// </summary>
+        /// <typeparam name="TRow">Report row id type parameter.</typeparam>
+        /// <typeparam name="TName">Report names type parameter.</typeparam>
         /// <param name="report">Report to read from.</param>
-        /// <param name="country">Country to looking for.</param>
-        /// <returns>A collection of data fields in the same order as in <see cref="GetHeader{T}"/> collection, formatted and converted to string.</returns>
-        IEnumerable<string> GetData(DayReport report, string country);
-
-        /// <summary>
-        /// Gets data for the particular day in <see cref="BaseCountryReport"/>.
-        /// </summary>
-        /// <param name="report">Report to read from.</param>
-        /// <param name="day">Day to looking for.</param>
-        /// <returns>A collection of data fields in the same order as in <see cref="GetHeader{T}"/> collection, formatted and converted to string.</returns>
-        IEnumerable<string> GetData(BaseCountryReport report, DateTime day);
-
-        /// <summary>
-        /// Gets data for the <see cref="StatsReport"/>.
-        /// </summary>
-        /// <param name="report">Report to read from.</param>
-        /// <returns>A collection of data fields in the same order as in <see cref="GetHeader{T}"/> collection, formatted and converted to string.</returns>
-        IEnumerable<string> GetData(StatsReportNode report);
+        /// <param name="row">Row to looking for.</param>
+        /// <returns>A collection of data fields in the same order as in <see cref="GetHeader{TRow,TName}"/> collection, formatted and converted to <typeparamref name="TResult"/>.</returns>
+        IEnumerable<TResult> GetData<TRow, TName>(IFormattableReport<TRow, TName> report, TRow row);
 
         /// <summary>
         /// Gets header for the particular report type.
         /// </summary>
-        /// <typeparam name="TReportType">Report type. Could be one of the following: <see cref="DayReport"/>, <see cref="BaseCountryReport"/>, <see cref="StatsReport"/>.</typeparam>
-        /// <returns></returns>
-        IEnumerable<string> GetHeader<TReportType>();
+        /// <typeparam name="TRow">Report row id type parameter.</typeparam>
+        /// <typeparam name="TName">Report names type parameter.</typeparam>
+        /// <param name="report">Report to read from.</param>
+        /// <returns>A collection of properties converted to string.</returns>
+        IEnumerable<string> GetHeader<TRow, TName>(IFormattableReport<TRow, TName> report);
 
         /// <summary>
         /// Get name parts, considering parent child relation, if applicable.
         /// </summary>
+        /// <typeparam name="TRow">Report row id type parameter.</typeparam>
+        /// <typeparam name="TName">Report names type parameter.</typeparam>
         /// <param name="report">Report to read from.</param>
         /// <returns>Name parts, that should be processed accordingly - joined together, ignored, replaced, etc.</returns>
-        IEnumerable<string> GetName(DayReport report);
-
-        /// <summary>
-        /// Get name parts, considering parent child relation, if applicable.
-        /// </summary>
-        /// <param name="report">Report to read from.</param>
-        /// <param name="parent">Parent for the report if exists. </param>
-        /// <returns>Name parts, that should be processed accordingly - joined together, ignored, replaced, etc.</returns>
-        public IEnumerable<string> GetName(BaseCountryReport report, string? parent = null);
-
-        /// <summary>
-        /// Get name parts, considering parent child relation, if applicable.
-        /// </summary>
-        /// <param name="report">Report to read from.</param>
-        /// <returns>Name parts, that should be processed accordingly - joined together, ignored, replaced, etc.</returns>
-        IEnumerable<string> GetName(StatsReportNode report);
+        IEnumerable<string> GetName<TRow, TName>(IFormattableReport<TRow, TName> report);
     }
 }

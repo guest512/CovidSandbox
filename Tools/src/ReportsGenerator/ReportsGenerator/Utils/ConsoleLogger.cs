@@ -65,15 +65,18 @@ namespace ReportsGenerator.Utils
 
         private void WriteMessage(string msg, ConsoleColor foregroundColor)
         {
-            var origColor = Console.ForegroundColor;
-            Console.ForegroundColor = foregroundColor;
-
             var messageText =
                 $"{new string(Enumerable.Repeat(IndentationSymbol, IndentationLength * Indentation).ToArray())}{msg}";
 
-            Console.WriteLine(messageText);
+            RunUnderWaitEvent(() =>
+            {
+                var origColor = Console.ForegroundColor;
+                Console.ForegroundColor = foregroundColor;
 
-            Console.ForegroundColor = origColor;
+                Console.WriteLine(messageText);
+
+                Console.ForegroundColor = origColor;
+            });
         }
 
         private void RunUnderWaitEvent(Action action)

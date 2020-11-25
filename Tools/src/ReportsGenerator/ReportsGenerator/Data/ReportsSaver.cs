@@ -1,28 +1,26 @@
-using System.Linq;
-using System.Threading;
+using System;
 using ReportsGenerator.Data.IO;
-using ReportsGenerator.Model.Reports;
 using ReportsGenerator.Utils;
 
 namespace ReportsGenerator.Data
 {
     /// <summary>
-    /// Represents a helper class to save reports using particular <see cref="IReportFormatter"/> and <see cref="IReportStorage"/>.
+    /// Represents a helper class to save reports using particular <see cref="IReportFormatter{TResult}"/> and <see cref="IReportStorage{TFormat}"/>.
     /// </summary>
-    public class ReportsSaver
+    /// <typeparam name="TFormat">Formatter and storage data type.</typeparam>
+    public class ReportsSaver<TFormat> : IDisposable
     {
-        private readonly IReportFormatter _formatter;
+        private readonly IReportFormatter<TFormat> _formatter;
         private readonly ILogger _logger;
-        private readonly IReportStorage _storage;
-        private readonly SemaphoreSlim _statsLocker = new SemaphoreSlim(1,1);
+        private readonly IReportStorage<TFormat> _storage;
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="ReportsSaver"/> class.
+        /// Initializes a new instance of the <see cref="ReportsSaver{TFormat}"/> class.
         /// </summary>
         /// <param name="formatter">Desired report formatter to read reports.</param>
         /// <param name="storage">Desired storage to save reports data.</param>
         /// <param name="logger">A <see cref="ILogger"/> instance.</param>
-        public ReportsSaver(IReportFormatter formatter, IReportStorage storage, ILogger logger)
+        public ReportsSaver(IReportFormatter<TFormat> formatter, IReportStorage<TFormat> storage, ILogger logger)
         {
             _formatter = formatter;
             _storage = storage;
@@ -30,81 +28,27 @@ namespace ReportsGenerator.Data
         }
 
         /// <summary>
-        /// Writes <see cref="CountryReport"/>.
+        /// Writes <see cref="IFormattableReport{TRow,TName}"/>.
         /// </summary>
+        /// <typeparam name="TRow">Report row id type parameter.</typeparam>
+        /// <typeparam name="TName">Report names type parameter.</typeparam>
         /// <param name="report">Report to write.</param>
-        public void WriteReport(CountryReport report)
+        public void WriteReport<TRow, TName>(IFormattableReport<TRow, TName> report)
         {
-            _logger.WriteInfo($"Write country: {report.Name}");
-            WriteReport(report, null);
+            using var writer = _storage.GetWriter(_formatter.GetName(report), report.ReportType);
 
-            foreach (var regionReport in report.RegionReports)
+            writer.WriteHeader(_formatter.GetHeader(report));
+            foreach (var rowId in report.RowIds)
             {
-                _logger.WriteInfo($"Write region: {report.Name} - {regionReport.Name}");
-                WriteReport(regionReport, report.Name);
+                writer.WriteDataLine(_formatter.GetData(report, rowId));
             }
         }
 
-        /// <summary>
-        /// Writes <see cref="DayReport"/>.
-        /// </summary>
-        /// <param name="report">Report to write.</param>
-        public void WriteReport(DayReport report)
+        /// <inheritdoc />
+        public void Dispose()
         {
-            _logger.WriteInfo($"Write day: {report.Day:dd-MM-yyyy}");
-            using var writer = _storage.GetWriter(_formatter.GetName(report), WriterType.Day);
-
-            writer.WriteHeader(_formatter.GetHeader<DayReport>());
-            foreach (var country in report.AvailableCountries)
-            {
-                _logger.WriteInfo($"Write day: {report.Day:dd-MM-yyyy} - {country}");
-                writer.WriteDataLine(_formatter.GetData(report, country));
-            }
-        }
-
-        /// <summary>
-        /// Writes <see cref="StatsReport"/>.
-        /// </summary>
-        /// <param name="report">Report to write.</param>
-        public void WriteStats(StatsReport report)
-        {
-            var root = report.Root;
-            _logger.WriteInfo($"Write {root.Name} stats ...");
-
-            _statsLocker.Wait();
-            WriteStatReportNode(root);
-            _statsLocker.Release();
-
-            foreach (var province in root.Children.Where(child => child.Name != Consts.MainCountryRegion))
-            {
-                _logger.WriteInfo($"Write {root.Name}, {province.Name} stats ...");
-                WriteStatReportNode(province);
-
-                foreach (var county in province.Children)
-                {
-                    _logger.WriteInfo($"Write {root.Name}, {province.Name}, {county.Name} stats ...");
-                    WriteStatReportNode(county);
-                }
-            }
-        }
-
-        private void WriteStatReportNode(StatsReportNode report)
-        {
-            using var writer = _storage.GetWriter(_formatter.GetName(report), WriterType.Stats);
-
-            writer.WriteHeader(_formatter.GetHeader<StatsReportNode>());
-            writer.WriteDataLine(_formatter.GetData(report));
-        }
-
-        private void WriteReport(BaseCountryReport report, string? parent)
-        {
-            using var writer = _storage.GetWriter(_formatter.GetName(report, parent), WriterType.Country);
-
-            writer.WriteHeader(_formatter.GetHeader<BaseCountryReport>());
-            foreach (var day in report.AvailableDates)
-            {
-                writer.WriteDataLine(_formatter.GetData(report, day));
-            }
+            _storage.Dispose();
+            GC.SuppressFinalize(this);
         }
     }
 }

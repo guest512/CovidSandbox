@@ -2,12 +2,12 @@
 using System.IO;
 using System.Text;
 
-namespace ReportsGenerator.Data.IO
+namespace ReportsGenerator.Data.IO.Csv
 {
     /// <summary>
-    /// An implementation of <see cref="IReportDataWriter"/> interface to write reports in CSV files.
+    /// An implementation of <see cref="IReportDataWriter{TFormat}"/> interface to write reports in CSV files.
     /// </summary>
-    public class CsvFileWriter : IReportDataWriter
+    public class CsvFileWriter : IReportDataWriter<string>
     {
         private readonly bool _append;
         private readonly FileStream _file;
@@ -23,7 +23,7 @@ namespace ReportsGenerator.Data.IO
         {
             _append = append;
             _file = File.Open(Path.Combine(folder, $"{fileName}.csv"), append ? FileMode.Append : FileMode.Create);
-            _fileWriter = new StreamWriter(_file, Encoding.UTF8, 1024, true);
+            _fileWriter = new StreamWriter(_file, new UTF8Encoding(false), 1024, true);
         }
 
         /// <inheritdoc />
@@ -37,15 +37,17 @@ namespace ReportsGenerator.Data.IO
         public void WriteDataLine(IEnumerable<string> data)
         {
             _fileWriter.WriteLine(string.Join(',', data));
+            _fileWriter.Flush();
         }
 
         /// <inheritdoc />
         public void WriteHeader(IEnumerable<string> header)
         {
+            _fileWriter.Flush();
+
             if (_append && _file.Position > 0)
                 return;
 
-            _fileWriter.Flush();
             _file.Position = 0;
             _fileWriter.WriteLine(string.Join(',', header));
         }

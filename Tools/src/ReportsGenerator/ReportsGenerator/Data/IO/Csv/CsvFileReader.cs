@@ -2,7 +2,7 @@
 using System.IO;
 using System.Linq;
 
-namespace ReportsGenerator.Data.IO
+namespace ReportsGenerator.Data.IO.Csv
 {
     /// <summary>
     /// Represents a CSV file reader.

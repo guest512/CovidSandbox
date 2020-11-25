@@ -2,7 +2,6 @@
 using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Linq;
-using System.Runtime.CompilerServices;
 using System.Threading.Tasks;
 using ReportsGenerator.Model.Reports.Intermediate;
 using ReportsGenerator.Utils;
@@ -14,12 +13,12 @@ namespace ReportsGenerator.Model.Reports
     /// </summary>
     public class ReportsBuilder
     {
-        private readonly Dictionary<string, CountryReport> _countryReports = new Dictionary<string, CountryReport>();
-        private readonly Dictionary<DateTime, DayReport> _dayReports = new Dictionary<DateTime, DayReport>();
-        private readonly ConcurrentDictionary<string, StatsReport> _graphStructures = new ConcurrentDictionary<string, StatsReport>();
-        private readonly ConcurrentDictionary<string, BasicReportsWalker> _linkedReports = new ConcurrentDictionary<string, BasicReportsWalker>();
+        private readonly Dictionary<string, CountryReport> _countryReports = new();
+        private readonly Dictionary<DateTime, DayReport> _dayReports = new();
+        private readonly ConcurrentDictionary<string, StatsReport> _graphStructures = new();
+        private readonly ConcurrentDictionary<string, BasicReportsWalker> _linkedReports = new();
         private readonly ILogger _logger;
-        private readonly List<Entry> _entries = new List<Entry>();
+        private readonly List<Entry> _entries = new();
 
         /// <summary>
         /// Initializes a new instance of the <see cref="ReportsBuilder"/> class.

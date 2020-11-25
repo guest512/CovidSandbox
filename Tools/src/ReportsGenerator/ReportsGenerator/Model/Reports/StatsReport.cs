@@ -9,7 +9,7 @@ namespace ReportsGenerator.Model.Reports
     /// </summary>
     public class StatsReport
     {
-        private readonly Dictionary<string, List<string>> _namesCache = new Dictionary<string, List<string>>();
+        private readonly Dictionary<string, List<string>> _namesCache = new();
         private readonly IStatsProvider _statsProvider;
 
         /// <summary>

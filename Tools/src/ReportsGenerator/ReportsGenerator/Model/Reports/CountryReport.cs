@@ -20,7 +20,7 @@ namespace ReportsGenerator.Model.Reports
         /// <param name="structure">A geographical objects structure and relations for the country.</param>
         public CountryReport(string name, BasicReportsWalker walker, StatsReport structure) : base(walker, name)
         {
-            RegionReports = structure.GetProvinces().Select(province => new RegionReport(province, walker));
+            RegionReports = structure.GetProvinces().Select(province => new RegionReport(Name,province, walker));
         }
 
         /// <summary>
@@ -30,6 +30,9 @@ namespace ReportsGenerator.Model.Reports
 
         /// <inheritdoc />
         protected override Metrics GetDayTotalMetrics(DateTime day) => Walker.GetCountryTotalByDay(day);
+
+        /// <inheritdoc />
+        protected override IEnumerable<string> GetNames() => new[] { Name};
 
         /// <inheritdoc />
         protected override Metrics GetDaysChangeMetrics(DateTime startDay, int days) => Walker.GetCountryChangeForPeriod(startDay, days);

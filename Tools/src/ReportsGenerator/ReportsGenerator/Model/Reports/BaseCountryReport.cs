@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using ReportsGenerator.Data;
 using ReportsGenerator.Model.Reports.Intermediate;
 
 namespace ReportsGenerator.Model.Reports
@@ -8,12 +9,21 @@ namespace ReportsGenerator.Model.Reports
     /// Represents a base abstraction fro the country and region report.
     /// Implements the logic to retrieve different metrics and data.
     /// </summary>
-    public abstract class BaseCountryReport
+    public abstract class BaseCountryReport : IFormattableReport<DateTime, string>
     {
         /// <summary>
         /// A <see cref="BasicReportsWalker"/> instance for retrieving the data for the geographical object.
         /// </summary>
         protected readonly BasicReportsWalker Walker;
+
+        private static readonly string[] FormattableReportProperties = {
+            "Date",
+            "Total",
+            "Change",
+            "Rt",
+            "TTR"
+        };
+
         private Dictionary<DateTime, double>? _timeToResolve;
 
         /// <summary>
@@ -91,6 +101,27 @@ namespace ReportsGenerator.Model.Reports
             return TimeToResolve[day];
         }
 
+        /// <summary>
+        /// Returns a change metrics for the specified period.
+        /// </summary>
+        /// <param name="startDay">Start day of the period to lookup.</param>
+        /// <param name="days">Period length in days.</param>
+        /// <returns>A <see cref="Metrics"/> that contains change values for the specified period.</returns>
+        protected abstract Metrics GetDaysChangeMetrics(DateTime startDay, int days);
+
+        /// <summary>
+        /// Returns a total metrics for the specified day.
+        /// </summary>
+        /// <param name="day">Day to lookup total metrics.</param>
+        /// <returns>A <see cref="Metrics"/> that contains total values for the specified day.</returns>
+        protected abstract Metrics GetDayTotalMetrics(DateTime day);
+
+        /// <summary>
+        /// Helper method to implement <see cref="IFormattableReport{TRow,TName}"/> interface.
+        /// </summary>
+        /// <returns>See results of <see cref="IFormattableReport{TRow,TName}.Name"/> property.</returns>
+        protected abstract IEnumerable<string> GetNames();
+
         private static (long, long) CalcResolution(long confirmed, long resolved)
         {
             if (resolved <= confirmed)
@@ -102,21 +133,6 @@ namespace ReportsGenerator.Model.Reports
 
         private static (long, long) CalcResolution(long confirmed, Metrics resolved) =>
             CalcResolution(confirmed, resolved.Recovered + resolved.Deaths);
-
-        /// <summary>
-        /// Returns a total metrics for the specified day.
-        /// </summary>
-        /// <param name="day">Day to lookup total metrics.</param>
-        /// <returns>A <see cref="Metrics"/> that contains total values for the specified day.</returns>
-        protected abstract Metrics GetDayTotalMetrics(DateTime day);
-
-        /// <summary>
-        /// Returns a change metrics for the specified period.
-        /// </summary>
-        /// <param name="startDay">Start day of the period to lookup.</param>
-        /// <param name="days">Period length in days.</param>
-        /// <returns>A <see cref="Metrics"/> that contains change values for the specified period.</returns>
-        protected abstract Metrics GetDaysChangeMetrics(DateTime startDay, int days);
 
         private IEnumerable<KeyValuePair<DateTime, double>> GetTimeToResolveCollection()
         {
@@ -167,5 +183,25 @@ namespace ReportsGenerator.Model.Reports
                 positionConfirmed = positionConfirmed.AddDays(1);
             }
         }
+
+        #region IFormattableReport
+
+        IEnumerable<string> IFormattableReport<DateTime, string>.Name => GetNames();
+        IEnumerable<string> IFormattableReport<DateTime, string>.Properties => FormattableReportProperties;
+
+        ReportType IFormattableReport<DateTime, string>.ReportType => ReportType.Country;
+        IEnumerable<DateTime> IFormattableReport<DateTime, string>.RowIds => AvailableDates;
+
+        object IFormattableReport<DateTime, string>.GetValue(string property, DateTime key) => property switch
+        {
+            "Date" => key,
+            "Total" => GetDayTotal(key),
+            "Change" => GetDayChange(key),
+            "Rt" => GetRt(key),
+            "TTR" => GetTimeToResolve(key),
+            _ => throw new ArgumentOutOfRangeException(nameof(property), property, null)
+        };
+
+        #endregion IFormattableReport
     }
 }
