@@ -21,6 +21,11 @@ namespace ReportsGenerator.Data
         /// <summary>
         /// Statistical information report type.
         /// </summary>
-        Stats
+        Stats,
+
+        /// <summary>
+        /// Internal model dump
+        /// </summary>
+        Model
     }
 }

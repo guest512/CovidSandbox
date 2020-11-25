@@ -118,6 +118,10 @@ try
         countryStats.SelectMany(cs =>
             cs.Root.Children.Where(r => r.Name != Consts.MainCountryRegion && r.Name != Consts.OtherCountryRegion)
                 .SelectMany(csc => csc.Children)), reportsSaver.WriteReport); // County
+
+    logger.WriteInfo("Create model cache...");
+    Parallel.ForEach(reportsBuilder.DumpModelData(), reportsSaver.WriteReport);
+    Parallel.ForEach(reportsBuilder.DumpModelMetadata(), reportsSaver.WriteReport);
 }
 catch (Exception ex)
 {

@@ -16,6 +16,7 @@ namespace ReportsGenerator.Data.IO.Csv
         private readonly string _countriesFolder;
         private readonly string _daysFolder;
         private readonly string _statsFolder;
+        private readonly string _modelCacheFolder;
         private readonly List<CsvFileWriterProxy> _writersCache = new();
         private readonly SemaphoreSlim _writersLocker = new(1, 1);
 
@@ -30,6 +31,7 @@ namespace ReportsGenerator.Data.IO.Csv
             _countriesFolder = Path.Combine(Root, "reports", "countries");
             _daysFolder = Path.Combine(Root, "reports", "dayByDay");
             _statsFolder = Path.Combine(Root, "stats");
+            _modelCacheFolder = Path.Combine(Root, ".cache");
 
             Initialize(rewrite);
         }
@@ -85,6 +87,13 @@ namespace ReportsGenerator.Data.IO.Csv
                         parts.Add(names[1]);
                         fileName = "counties";
                     }
+
+                    break;
+
+                case ReportType.Model:
+                    append = true;
+                    parts.Add(_modelCacheFolder);
+                    fileName = names[0] == "data" ? "model" : "metadata";
 
                     break;
 

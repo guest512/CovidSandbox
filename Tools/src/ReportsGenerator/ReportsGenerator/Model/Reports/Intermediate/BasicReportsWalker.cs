@@ -18,6 +18,23 @@ namespace ReportsGenerator.Model.Reports.Intermediate
         private DateTime _startDay;
 
         /// <summary>
+        /// Returns collection of <see cref="BasicReport"/> used by this <see cref="BasicReportsWalker"/>.
+        /// </summary>
+        /// <returns>An <see cref="IEnumerable{T}"/> of <see cref="BasicReport"/>.</returns>
+        public IEnumerable<BasicReport> DumpReports()
+        {
+            foreach (var report in _reports)
+            {
+                yield return report.Value;
+            }
+
+            foreach (var report in _childrenWalkers.SelectMany(cw => cw.Value.DumpReports()))
+            {
+                yield return report;
+            }
+        }
+
+        /// <summary>
         /// Initializes a new instance of the <see cref="BasicReportsWalker"/> class.
         /// </summary>
         /// <param name="reports"><see cref="BasicReport"/> collection to use for data extraction.</param>
