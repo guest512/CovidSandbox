@@ -27,6 +27,9 @@ namespace ReportsGenerator.Model.Reports.Intermediate
         /// </summary>
         public Metrics Total { get; init; } = Metrics.Empty;
 
+        /// <summary>
+        /// Gets an empty (with default values) instance of <see cref="BasicReport"/>.
+        /// </summary>
         public static BasicReport Empty { get; } = new BasicReport();
 
         /// <summary>

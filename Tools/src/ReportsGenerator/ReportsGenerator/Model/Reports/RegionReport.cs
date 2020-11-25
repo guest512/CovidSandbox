@@ -15,13 +15,16 @@ namespace ReportsGenerator.Model.Reports
         /// Initializes a new instance of the <see cref="RegionReport"/> class.
         /// </summary>
         /// <param name="name">Region/province name.</param>
-        /// <param name="head">Pointer to the earliest <see cref="LinkedReport"/> for the region/province.</param>
+        /// <param name="walker">A <see cref="BasicReportsWalker"/> instance for retrieving the data for the region/province.</param>
         public RegionReport(string name, BasicReportsWalker walker) : base(walker, name)
         {
         }
 
+        /// <inheritdoc />
         protected override Metrics GetDayTotalMetrics(DateTime day) => Walker.GetProvinceTotalByDay(Name, day);
 
+
+        /// <inheritdoc />
         protected override Metrics GetDaysChangeMetrics(DateTime startDay, int days) => Walker.GetProvinceChangeForPeriod(Name, startDay, days);
     }
 }

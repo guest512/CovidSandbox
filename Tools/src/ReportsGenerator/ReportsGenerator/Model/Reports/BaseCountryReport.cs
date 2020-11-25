@@ -10,6 +10,9 @@ namespace ReportsGenerator.Model.Reports
     /// </summary>
     public abstract class BaseCountryReport
     {
+        /// <summary>
+        /// A <see cref="BasicReportsWalker"/> instance for retrieving the data for the geographical object.
+        /// </summary>
         protected readonly BasicReportsWalker Walker;
         private Dictionary<DateTime, double>? _timeToResolve;
 
@@ -17,10 +20,10 @@ namespace ReportsGenerator.Model.Reports
         /// Initializes a new instance of the <see cref="BaseCountryReport"/> class.
         /// </summary>
         /// <param name="name">Report name.</param>
-        /// <param name="head">Pointer to the earliest <see cref="LinkedReport"/> for the geographical object.</param>
-        protected BaseCountryReport(BasicReportsWalker head, string name)
+        /// <param name="walker">A <see cref="BasicReportsWalker"/> instance for retrieving the data for the geographical object.</param>
+        protected BaseCountryReport(BasicReportsWalker walker, string name)
         {
-            Walker = head;
+            Walker = walker;
             Name = name;
             AvailableDates = new[] { Walker.StartDay, Walker.LastDay }.GetContinuousDateRange();
         }
@@ -100,8 +103,19 @@ namespace ReportsGenerator.Model.Reports
         private static (long, long) CalcResolution(long confirmed, Metrics resolved) =>
             CalcResolution(confirmed, resolved.Recovered + resolved.Deaths);
 
+        /// <summary>
+        /// Returns a total metrics for the specified day.
+        /// </summary>
+        /// <param name="day">Day to lookup total metrics.</param>
+        /// <returns>A <see cref="Metrics"/> that contains total values for the specified day.</returns>
         protected abstract Metrics GetDayTotalMetrics(DateTime day);
 
+        /// <summary>
+        /// Returns a change metrics for the specified period.
+        /// </summary>
+        /// <param name="startDay">Start day of the period to lookup.</param>
+        /// <param name="days">Period length in days.</param>
+        /// <returns>A <see cref="Metrics"/> that contains change values for the specified period.</returns>
         protected abstract Metrics GetDaysChangeMetrics(DateTime startDay, int days);
 
         private IEnumerable<KeyValuePair<DateTime, double>> GetTimeToResolveCollection()

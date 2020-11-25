@@ -16,7 +16,8 @@ namespace ReportsGenerator.Model.Reports
         /// Initializes a new instance of the <see cref="RegionReport"/> class.
         /// </summary>
         /// <param name="name">Country name.</param>
-        /// <param name="head">Pointer to the earliest <see cref="LinkedReport"/> for the country.</param>
+        /// <param name="walker">A <see cref="BasicReportsWalker"/> instance for retrieving the data for the country.</param>
+        /// <param name="structure">A geographical objects structure and relations for the country.</param>
         public CountryReport(string name, BasicReportsWalker walker, StatsReport structure) : base(walker, name)
         {
             RegionReports = structure.GetProvinces().Select(province => new RegionReport(province, walker));
@@ -27,8 +28,10 @@ namespace ReportsGenerator.Model.Reports
         /// </summary>
         public IEnumerable<RegionReport> RegionReports { get; }
 
+        /// <inheritdoc />
         protected override Metrics GetDayTotalMetrics(DateTime day) => Walker.GetCountryTotalByDay(day);
 
+        /// <inheritdoc />
         protected override Metrics GetDaysChangeMetrics(DateTime startDay, int days) => Walker.GetCountryChangeForPeriod(startDay, days);
     }
 }

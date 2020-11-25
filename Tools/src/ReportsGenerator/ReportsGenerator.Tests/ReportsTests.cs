@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using NUnit.Framework;
@@ -71,37 +70,11 @@ namespace ReportsGenerator.Tests
             };
             const double eps = 1e-5;
             var countryReport = new CountryReport("test", walker!, structure!);
-            var i = 0;
-
 
             var actual = new[] {walker!.StartDay, walker.LastDay}.GetContinuousDateRange()
                 .Select(day => countryReport.GetRt(day)).ToArray();
 
             CollectionAssert.AreEqual(result,actual,new DoubleComparer(eps));
-        }
-
-        private class DoubleComparer : IComparer
-        {
-            private readonly double _epsilon;
-
-            public DoubleComparer(double epsilon)
-            {
-                _epsilon = epsilon;
-            }
-
-            public int Compare(object? x, object? y)
-            {
-                var x_num = (double) x;
-                var y_num = (double) y;
-
-                if (Math.Abs(x_num - y_num) < _epsilon)
-                    return 0;
-
-                if (x_num > y_num)
-                    return 1;
-
-                return -1;
-            }
         }
     }
 }

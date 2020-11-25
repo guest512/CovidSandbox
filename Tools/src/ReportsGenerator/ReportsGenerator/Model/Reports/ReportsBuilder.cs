@@ -2,6 +2,7 @@
 using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Threading.Tasks;
 using ReportsGenerator.Model.Reports.Intermediate;
 using ReportsGenerator.Utils;
@@ -37,7 +38,8 @@ namespace ReportsGenerator.Model.Reports
         /// <summary>
         /// Gets a <see cref="IEnumerable{T}"/> of dates for which reports could be build.
         /// </summary>
-        public IEnumerable<DateTime> AvailableDates => _linkedReports.SelectMany(lr => lr.Value.GetAvailableDates()).Distinct();
+        public IEnumerable<DateTime> AvailableDates => _linkedReports
+            .SelectMany(lr => new[] {lr.Value.StartDay, lr.Value.LastDay}).GetContinuousDateRange();
 
         /// <summary>
         /// Adds <see cref="Entry"/> objects to the build that should be processed during the <see cref="Build"/> function call.

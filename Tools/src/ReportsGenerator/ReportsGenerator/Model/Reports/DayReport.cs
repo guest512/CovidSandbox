@@ -17,7 +17,7 @@ namespace ReportsGenerator.Model.Reports
         /// Initializes a new instance of the <see cref="DayReport"/> class.
         /// </summary>
         /// <param name="day">Day for which report creates.</param>
-        /// <param name="reportWalkers">A <see cref="IDictionary{TKey,TValue}"/> of <see cref="LinkedReport"/> and its names, to create the report. </param>
+        /// <param name="reportWalkers">A <see cref="IDictionary{TKey,TValue}"/> of <see cref="BasicReportsWalker"/> and its names, to create the report. </param>
         public DayReport(in DateTime day, IDictionary<string, BasicReportsWalker> reportWalkers)
         {
             Day = day;
