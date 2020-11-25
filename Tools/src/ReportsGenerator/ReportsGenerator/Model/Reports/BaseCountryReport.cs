@@ -42,20 +42,14 @@ namespace ReportsGenerator.Model.Reports
         /// </summary>
         /// <param name="day">A day for which metrics should be calculated.</param>
         /// <returns>A <see cref="Metrics"/> for the day for the country.</returns>
-        public Metrics GetDayChange(DateTime day)
-        {
-            var today = GetDayTotal(day);
-            var prevDay = GetDayTotal(day.AddDays(-1));
-
-            return today - prevDay;
-        }
+        public Metrics GetDayChange(DateTime day) => GetDaysChangeMetrics(day, 1);
 
         /// <summary>
         /// Calculates a total <see cref="Metrics"/> for the day for this country.
         /// </summary>
         /// <param name="day">A day for which metrics should be calculated.</param>
         /// <returns>A <see cref="Metrics"/> for the day for the country.</returns>
-        public Metrics GetDayTotal(DateTime day) => GetDayMetrics(day);
+        public Metrics GetDayTotal(DateTime day) => GetDayTotalMetrics(day);
 
         /// <summary>
         /// Calculates the R(t) coefficient for the day for this country
@@ -72,8 +66,8 @@ namespace ReportsGenerator.Model.Reports
         /// <returns>A R(t) coefficient value for the day for the country.</returns>
         public double GetRt(DateTime day)
         {
-            var lastDays = GetDaysMetrics(day.AddDays(-3), 4).Confirmed;
-            var previousDays = GetDaysMetrics(day.AddDays(-7), 4).Confirmed;
+            var lastDays = GetDaysChangeMetrics(day.AddDays(-3), 4).Confirmed;
+            var previousDays = GetDaysChangeMetrics(day.AddDays(-7), 4).Confirmed;
 
             return previousDays > 0 ? lastDays / (double)previousDays : 0;
         }
@@ -106,9 +100,9 @@ namespace ReportsGenerator.Model.Reports
         private static (long, long) CalcResolution(long confirmed, Metrics resolved) =>
             CalcResolution(confirmed, resolved.Recovered + resolved.Deaths);
 
-        private Metrics GetDayMetrics(DateTime day) => GetDaysMetrics(day, 1);
+        protected abstract Metrics GetDayTotalMetrics(DateTime day);
 
-        protected abstract Metrics GetDaysMetrics(DateTime startDay, int days);
+        protected abstract Metrics GetDaysChangeMetrics(DateTime startDay, int days);
 
         private IEnumerable<KeyValuePair<DateTime, double>> GetTimeToResolveCollection()
         {

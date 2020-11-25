@@ -40,19 +40,13 @@ namespace ReportsGenerator.Model.Reports
         /// </summary>
         /// <param name="countryName">Country to search for.</param>
         /// <returns>A <see cref="Metrics"/> for the day for the country.</returns>
-        public Metrics GetCountryChange(string countryName)
-        {
-            var prev = _reports[countryName].GetCountryMetricsForDay(Day.AddDays(-1));
-            var current = _reports[countryName].GetCountryMetricsForDay(Day);
-
-            return current - prev;
-        }
+        public Metrics GetCountryChange(string countryName) => _reports[countryName].GetCountryChangeForPeriod(Day, 1);
 
         /// <summary>
         /// Returns a total for this day for the country.
         /// </summary>
         /// <param name="countryName">Country to search for.</param>
         /// <returns>A <see cref="Metrics"/> for the day for the country.</returns>
-        public Metrics GetCountryTotal(string countryName) => _reports[countryName].GetCountryMetricsForDay(Day);
+        public Metrics GetCountryTotal(string countryName) => _reports[countryName].GetCountryTotalByDay(Day);
     }
 }

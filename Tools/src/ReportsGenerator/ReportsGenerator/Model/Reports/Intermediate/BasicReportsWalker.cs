@@ -7,15 +7,17 @@ namespace ReportsGenerator.Model.Reports.Intermediate
     public class BasicReportsWalker
     {
         private readonly IDictionary<string, BasicReportsWalker> _childrenWalkers;
-        private readonly IDictionary<DateTime, BasicReport> _reports;
         private readonly IDictionary<DateTime, Metrics> _metrics;
+        private readonly IDictionary<DateTime, BasicReport> _reports;
+        private DateTime _lastDay;
+        private DateTime _startDay;
 
         public BasicReportsWalker(IEnumerable<BasicReport> reports, StatsReport reportsStructure)
         {
-            reports = reports as BasicReport[] ?? reports.ToArray();
+            var grouppedReports = reports.GroupBy(r => r.Parent).ToArray();
 
-            _reports = reports.Where(br => br.Name == reportsStructure.Root.Name)
-                .ToDictionary(br => br.Day);
+            _reports = grouppedReports.FirstOrDefault(grp => grp.Key == string.Empty)?
+                .ToDictionary(br => br.Day) ?? new Dictionary<DateTime, BasicReport>();
             _metrics = new Dictionary<DateTime, Metrics>();
 
             _childrenWalkers = new Dictionary<string, BasicReportsWalker>();
@@ -28,12 +30,12 @@ namespace ReportsGenerator.Model.Reports.Intermediate
                     {
                         Name = county,
                         Walker = new BasicReportsWalker(
-                            reports.Where(br => br.Name == county && br.Parent == province),
+                            grouppedReports.First(grp => grp.Key == province).Where(br => br.Name == county),
                             countyChildren)
                     }).ToDictionary(nw => nw.Name, nw => nw.Walker);
 
                 _childrenWalkers.Add(province, new BasicReportsWalker(
-                    reports.Where(br => br.Name == province),
+                    grouppedReports.First(grp => grp.Key == reportsStructure.Root.Name).Where(br => br.Name == province),
                     countyWalkers));
             }
         }
@@ -45,66 +47,114 @@ namespace ReportsGenerator.Model.Reports.Intermediate
             _childrenWalkers = childrenWalkers;
         }
 
-        public DateTime LastDay => _reports.Keys.Last();
+        public DateTime LastDay
+        {
+            get
+            {
+                if (_lastDay == DateTime.MinValue)
+                    _lastDay = _reports.Keys.Concat(_childrenWalkers.Select(cw => cw.Value.LastDay)).Max();
 
-        public DateTime StartDay => _reports.Keys.First();
+                return _lastDay;
+            }
+        }
+
+        public DateTime StartDay
+        {
+            get
+            {
+                if (_startDay == DateTime.MinValue)
+                    _startDay = _reports.Keys.Concat(_childrenWalkers.Select(cw => cw.Value.StartDay)).Min();
+
+                return _startDay;
+            }
+        }
 
         public IEnumerable<DateTime> GetAvailableDates() => _reports.Values.Select(r => r.Day);
 
-        public Metrics GetCountryMetricsForDay(DateTime day) => GetCountryMetricsForPeriod(day, 1);
+        public Metrics GetCountryChangeForPeriod(DateTime startDay, int days) => GetChangeForPeriod(startDay, days, this);
 
-        public Metrics GetCountryMetricsForPeriod(DateTime startDay, int days) =>
-            GetTotalForPeriod(startDay, days, this);
+        public Metrics GetCountryTotalByDay(DateTime day) => GetTotalByDay(day, this);
 
-        public Metrics GetCountyMetricsForDay(string province, string county, DateTime day) =>
-            GetCountyMetricsForPeriod(province, county, day, 1);
-
-        public Metrics GetCountyMetricsForPeriod(string province, string county, DateTime startDay, int days) =>
-            _childrenWalkers.TryGetValue(province, out var provinceWalker) &&
-            provinceWalker._childrenWalkers.TryGetValue(county, out var countyWalker)
-                ? GetTotalForPeriod(startDay, days, countyWalker)
+        public Metrics GetCountyChangeForPeriod(string province, string county, DateTime startDay, int days) =>
+            GetCountyWalker(province, county, out var countyWalker)
+                ? GetChangeForPeriod(startDay, days, countyWalker!)
                 : Metrics.Empty;
 
-        public Metrics GetProvinceMetricsForDay(string province, DateTime day) =>
-            GetProvinceMetricsForPeriod(province, day, 1);
-
-        public Metrics GetProvinceMetricsForPeriod(string province, DateTime startDay, int days) =>
-            _childrenWalkers.TryGetValue(province, out var provinceWalker)
-                ? GetTotalForPeriod(startDay, days, provinceWalker,
-                    province == Consts.MainCountryRegion && _childrenWalkers.Count > 1)
+        public Metrics GetCountyTotalByDay(string province, string county, DateTime day) =>
+                    GetCountyWalker(province, county, out var countyWalker)
+                ? GetTotalByDay(day, countyWalker!)
                 : Metrics.Empty;
 
-        private static Metrics GetTotalForDay(DateTime day, BasicReportsWalker walker, bool emptyIfNotExist)
-        {
-            if (walker._metrics.ContainsKey(day))
-                return walker._metrics[day];
+        public Metrics GetProvinceChangeForPeriod(string province, DateTime startDay, int days) =>
+            GetProvinceWalker(province, out var provinceWalker)
+                ? GetChangeForPeriod(startDay, days, provinceWalker!, FilterTerritory(province, this))
+                : Metrics.Empty;
 
-            if (walker._reports.ContainsKey(day))
-                walker._metrics.Add(day, walker._reports[day].Total);
-            else if (emptyIfNotExist)
-                walker._metrics.Add(day, Metrics.Empty);
-            else
-            {
-                walker._metrics.Add(
-                    day,
-                    walker._childrenWalkers.Values
-                        .Select(cw => GetTotalForDay(day, cw, false))
-                        .Aggregate(Metrics.Empty, (sum, dayM) => sum + dayM));
-            }
+        public Metrics GetProvinceTotalByDay(string province, DateTime day) =>
+                    GetProvinceWalker(province, out var provinceWalker)
+                ? GetTotalByDay(day, provinceWalker!, FilterTerritory(province, this))
+                : Metrics.Empty;
 
-            return walker._metrics[day];
-        }
+        private static bool FilterTerritory(string name, BasicReportsWalker walker) =>
+            name == Consts.MainCountryRegion && walker._childrenWalkers.Count > 1 ||
+            name == Consts.OtherCountryRegion;
 
-        private static Metrics GetTotalForPeriod(
+        private static Metrics GetChangeForPeriod(
             DateTime startDay,
             int days,
             BasicReportsWalker walker,
             bool emptyIfNotExist = false) =>
             days < 1
                 ? throw new ArgumentOutOfRangeException(nameof(days), days, "Days must be greater than 0 (zero).")
-                : new[] { startDay, startDay.AddDays(days - 1) }
-                    .GetContinuousDateRange()
-                    .Select(day => GetTotalForDay(day, walker, emptyIfNotExist))
-                    .Aggregate(Metrics.Empty, (total, day) => total + day);
+                : GetTotalByDay(startDay.AddDays(days - 1), walker, emptyIfNotExist) -
+                  GetTotalByDay(startDay.AddDays(-1), walker, emptyIfNotExist);
+
+        private static Metrics GetTotalByDay(DateTime day, BasicReportsWalker walker, bool emptyIfNotExist = false)
+        {
+            if (walker._metrics.ContainsKey(day)) // Check metrics cache
+                return walker._metrics[day];
+
+            Metrics? metrics = null;
+
+            if (walker._reports.ContainsKey(day)) // Check reports data
+                metrics = walker._reports[day].Total;
+
+            if (emptyIfNotExist)
+            {
+                if (metrics == null)
+                {
+                    metrics = walker.StartDay <= day && day <= walker.LastDay
+                        ? GetTotalByDay(day.AddDays(-1), walker, true)
+                        : Metrics.Empty;
+                }
+            }
+            else
+            {
+                //Didn't found anything, let's try to look deeper...
+                if (metrics == Metrics.Empty || metrics == null)
+                {
+                    metrics = walker._childrenWalkers
+                        .Select(cwKvp =>
+                            GetTotalByDay(day, cwKvp.Value, FilterTerritory(cwKvp.Key, walker)))
+                        .Aggregate(Metrics.Empty, (sum, dayM) => sum + dayM);
+                }
+
+                // Still no results, let's reuse previous day data...
+                if (metrics == Metrics.Empty && day > walker.StartDay)
+                    metrics = GetTotalByDay(day.AddDays(-1), walker);
+            }
+
+            walker._metrics.Add(day, metrics);
+            return metrics;
+        }
+
+        private bool GetCountyWalker(string province, string county, out BasicReportsWalker? countyWalker)
+        {
+            countyWalker = null;
+            return GetProvinceWalker(province, out var provinceWalker) && provinceWalker!._childrenWalkers.TryGetValue(county, out countyWalker);
+        }
+
+        private bool GetProvinceWalker(string province, out BasicReportsWalker? provinceWalker) =>
+                                            _childrenWalkers.TryGetValue(province, out provinceWalker);
     }
 }

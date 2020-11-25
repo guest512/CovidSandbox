@@ -12,9 +12,9 @@ namespace ReportsGenerator
         /// </summary>
         public const string MainCountryRegion = "Main territory";
 
+        public const string OtherCountryRegion = "Other";
+
         // DEBUG ONLY
         internal const bool DisableExtensiveAssertMethods = true;
-
-        public static readonly DateTime StartDate = new DateTime(2020, 01, 22);
     }
 }

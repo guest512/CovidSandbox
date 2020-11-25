@@ -20,6 +20,8 @@ namespace ReportsGenerator.Model.Reports
         {
         }
 
-        protected override Metrics GetDaysMetrics(DateTime startDay, int days) => Walker.GetProvinceMetricsForPeriod(Name, startDay, days);
+        protected override Metrics GetDayTotalMetrics(DateTime day) => Walker.GetProvinceTotalByDay(Name, day);
+
+        protected override Metrics GetDaysChangeMetrics(DateTime startDay, int days) => Walker.GetProvinceChangeForPeriod(Name, startDay, days);
     }
 }

@@ -8,7 +8,7 @@
         /// <summary>
         /// Gets an empty <see cref="Metrics"/>.
         /// </summary>
-        public static Metrics Empty { get; } = new Metrics(0, 0, 0, 0);
+        public static Metrics Empty { get; } = new(0, 0, 0, 0);
 
         /// <summary>
         /// A helper function that converts <see cref="Entry"/> to <see cref="Metrics"/>.

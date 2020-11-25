@@ -27,6 +27,8 @@ namespace ReportsGenerator.Model.Reports
         /// </summary>
         public IEnumerable<RegionReport> RegionReports { get; }
 
-        protected override Metrics GetDaysMetrics(DateTime startDay, int days) => Walker.GetCountryMetricsForPeriod(startDay, days);
+        protected override Metrics GetDayTotalMetrics(DateTime day) => Walker.GetCountryTotalByDay(day);
+
+        protected override Metrics GetDaysChangeMetrics(DateTime startDay, int days) => Walker.GetCountryChangeForPeriod(startDay, days);
     }
 }

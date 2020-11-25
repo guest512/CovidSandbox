@@ -135,11 +135,11 @@ namespace ReportsGenerator.Model.Processors
             // in earlier versions data files don't have 'county' field.
             // The other frequent issue is that some provincies were represented as
             // independent countries, like Greenland, or Guadeloupe.
-
+            
             return (province, country) switch
             {
-                ("Unknown", _) => Consts.MainCountryRegion,
-                ("unassigned", _) => Consts.MainCountryRegion,
+                ("Unknown", _) => Consts.OtherCountryRegion,
+                ("unassigned", _) => Consts.OtherCountryRegion,
                 ("Taiwan", _) => Consts.MainCountryRegion,
                 ("UK", _) => Consts.MainCountryRegion,
                 ("US", _) => Consts.MainCountryRegion,
