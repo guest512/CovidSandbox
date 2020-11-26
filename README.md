@@ -41,6 +41,7 @@ There are four scripts for each platform:
 - `run-local` - same as `build-and-run-local` but don't build anything. Useful when you update data source and want to regenerate/update reports.
 - `run-docker` - same as previous but for docker containers.
 
+**NOTE:** At the moment `build-and-run-docker` and `run-docker` scripts not only build tools and prepare data, but also builds web-site and move results to `wwwroot` folder in the project root.
 
 There are two data sources for the moment:
 - JHopkins - a submodule from the [COVID-19 repository for CSSE at Johns Hopkins University](https://github.com/CSSEGISandData/COVID-19) repository. Can be updated with the following command:
