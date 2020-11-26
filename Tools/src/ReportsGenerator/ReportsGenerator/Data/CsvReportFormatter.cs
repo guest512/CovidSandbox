@@ -41,7 +41,7 @@ namespace ReportsGenerator.Data
                         break;
 
                     case string stringValue:
-                        yield return stringValue;
+                        yield return stringValue.ToCsvString();
                         break;
 
                     case long longValue:

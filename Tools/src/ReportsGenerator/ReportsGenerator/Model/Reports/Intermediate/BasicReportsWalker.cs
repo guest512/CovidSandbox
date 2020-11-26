@@ -39,7 +39,7 @@ namespace ReportsGenerator.Model.Reports.Intermediate
         /// </summary>
         /// <param name="reports"><see cref="BasicReport"/> collection to use for data extraction.</param>
         /// <param name="reportsStructure"><see cref="StatsReport"/> for the country to know how to walk across reports.</param>
-        public BasicReportsWalker(IEnumerable<BasicReport> reports, StatsReport reportsStructure) : this()
+        public BasicReportsWalker(IEnumerable<BasicReport> reports, StatsInfoReportWalker reportsStructure) : this()
         {
             var grouppedReports = reports.GroupBy(r => r.Parent).ToArray();
 
@@ -49,19 +49,19 @@ namespace ReportsGenerator.Model.Reports.Intermediate
             _childrenWalkers = new Dictionary<string, BasicReportsWalker>();
             var countyChildren = new Dictionary<string, BasicReportsWalker>();
 
-            foreach (var province in reportsStructure.GetProvinces())
+            foreach (var province in reportsStructure.Provinces.Select(pr => pr.Name))
             {
                 var countyWalkers =
                     reportsStructure.GetCounties(province).Select(county => new
                     {
-                        Name = county,
+                        Name = county.Name,
                         Walker = new BasicReportsWalker(
-                            grouppedReports.First(grp => grp.Key == province).Where(br => br.Name == county),
+                            grouppedReports.First(grp => grp.Key == province).Where(br => br.Name == county.Name),
                             countyChildren)
                     }).ToDictionary(nw => nw.Name, nw => nw.Walker);
 
                 _childrenWalkers.Add(province, new BasicReportsWalker(
-                    grouppedReports.First(grp => grp.Key == reportsStructure.Root.Name).Where(br => br.Name == province),
+                    grouppedReports.First(grp => grp.Key == reportsStructure.Country.Name).Where(br => br.Name == province),
                     countyWalkers));
             }
         }

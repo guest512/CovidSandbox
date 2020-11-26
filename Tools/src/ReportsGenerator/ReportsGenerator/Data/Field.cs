@@ -86,7 +86,8 @@
         Active,
 
         /// <summary>
-        /// Information string. Ignored.
+        /// Information string.
+        /// In cached model means string to access to data in <see cref="Model.IStatsProvider"/>.
         /// </summary>
         CombinedKey,
 

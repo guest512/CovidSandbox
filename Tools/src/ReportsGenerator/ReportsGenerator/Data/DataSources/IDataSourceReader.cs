@@ -10,6 +10,8 @@ namespace ReportsGenerator.Data.DataSources
     /// <returns>An instance of the result type.</returns>
     public delegate TResult GetRowsCallback<out TResult>(Row row);
 
+    public delegate bool FilterRows(CsvField field);
+
     /// <summary>
     /// An interface to read <see cref="IDataSource"/>.
     /// </summary>
@@ -34,5 +36,29 @@ namespace ReportsGenerator.Data.DataSources
         /// <param name="callback">A function to call to convert <see cref="Row"/> to instance of TResult.</param>
         /// <returns>TResult objects collection.</returns>
         IAsyncEnumerable<TResult> GetRowsAsync<TResult>(GetRowsCallback<TResult> callback);
+
+        IEnumerable<Field> SupportedFilters { get; }
+
+        /// <summary>
+        /// Reads <see cref="IDataSource"/> and returns its content as an <see cref="IEnumerable{T}"/> of <see cref="Row"/>.
+        /// </summary>
+        /// <returns>Rows collection.</returns>
+        IEnumerable<Row> GetRows(FilterRows filter);
+
+        /// <summary>
+        /// Reads <see cref="IDataSource"/> and returns its content as an <see cref="IAsyncEnumerable{T}"/> of <see cref="Row"/>.
+        /// </summary>
+        /// <returns>Rows collection.</returns>
+        IAsyncEnumerable<Row> GetRowsAsync(FilterRows filter);
+
+        /// <summary>
+        /// Reads <see cref="IDataSource"/> and returns its content as an <see cref="IAsyncEnumerable{TResult}"/> of TResult.
+        /// </summary>
+        /// <typeparam name="TResult">Returned result type.</typeparam>
+        /// <param name="callback">A function to call to convert <see cref="Row"/> to instance of TResult.</param>
+        /// <returns>TResult objects collection.</returns>
+        IAsyncEnumerable<TResult> GetRowsAsync<TResult>(FilterRows filter, GetRowsCallback<TResult> callback);
+
+
     }
 }

@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Globalization;
+using ReportsGenerator.Data;
+using ReportsGenerator.Model;
 
 namespace ReportsGenerator.Utils
 {
@@ -30,13 +32,18 @@ namespace ReportsGenerator.Utils
         /// </summary>
         /// <param name="dateString">Date string representation.</param>
         /// <returns>Date <see cref="DateTime"/> representation.</returns>
-        public static DateTime AsDate(this string dateString)
+        public static DateTime AsDate(this string dateString, string format = "")
         {
             if (string.IsNullOrEmpty(dateString))
                 return DateTime.MinValue.Date;
 
-            if (DateTime.TryParseExact(dateString, Formats, CultureInfo.InvariantCulture, DateTimeStyles.None,
+            if (!string.IsNullOrEmpty(format) && DateTime.TryParseExact(dateString, format,
+                CultureInfo.InvariantCulture, DateTimeStyles.None,
                 out var date))
+                return date.Date;
+
+            if (DateTime.TryParseExact(dateString, Formats, CultureInfo.InvariantCulture, DateTimeStyles.None,
+                out date))
                 return date.Date;
 
             _logger.WriteError($"Unable to parse '{dateString}' as date.");

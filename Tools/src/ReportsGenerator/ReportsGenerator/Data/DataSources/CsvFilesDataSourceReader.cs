@@ -1,13 +1,12 @@
-﻿using ReportsGenerator.Data.IO;
-using ReportsGenerator.Data.Providers;
-using ReportsGenerator.Utils;
-using System;
+﻿using System;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 using ReportsGenerator.Data.IO.Csv;
+using ReportsGenerator.Data.Providers;
+using ReportsGenerator.Utils;
 
 namespace ReportsGenerator.Data.DataSources
 {
@@ -33,29 +32,36 @@ namespace ReportsGenerator.Data.DataSources
             _logger = logger;
         }
 
+        public IEnumerable<Field> SupportedFilters { get; protected set; } = Enumerable.Empty<Field>();
+
         /// <inheritdoc />
-        public IEnumerable<Row> GetRows()
+        public IEnumerable<Row> GetRows() => GetRows(_ => true);
+
+        /// <inheritdoc />
+        public IEnumerable<Row> GetRows(FilterRows filter)
         {
-            foreach (string file in _files)
+            foreach (string file in _files.Where(f => FilterFile(f, filter)))
             {
                 _logger.WriteInfo($"--Reading file: {file}");
 
-                foreach (var row in GetRows(file))
+                foreach (var row in GetRows(file, filter))
                     yield return row;
             }
         }
 
         /// <inheritdoc />
-        public async IAsyncEnumerable<Row> GetRowsAsync()
-        {
-            await foreach (var row in GetRowsAsync(row => row))
-                yield return row;
-        }
+        public IAsyncEnumerable<Row> GetRowsAsync() => GetRowsAsync((CsvField _) => true);
 
         /// <inheritdoc />
-        public async IAsyncEnumerable<T> GetRowsAsync<T>(GetRowsCallback<T> callback)
+        public IAsyncEnumerable<TResult> GetRowsAsync<TResult>(GetRowsCallback<TResult> callback) => GetRowsAsync(_ => true, callback);
+
+        /// <inheritdoc />
+        public IAsyncEnumerable<Row> GetRowsAsync(FilterRows filter) => GetRowsAsync(filter, row => row);
+
+        /// <inheritdoc />
+        public async IAsyncEnumerable<TResult> GetRowsAsync<TResult>(FilterRows filter, GetRowsCallback<TResult> callback)
         {
-            ConcurrentStack<T> rows = new ConcurrentStack<T>();
+            ConcurrentStack<TResult> rows = new();
             var source = new CancellationTokenSource();
             var token = source.Token;
 
@@ -63,23 +69,27 @@ namespace ReportsGenerator.Data.DataSources
             {
                 token.ThrowIfCancellationRequested();
                 _logger.WriteInfo($"--Reading file: {file}");
-                var items = new List<T>();
+                var items = new List<TResult>();
 
-                foreach (var row in GetRows(file))
+                foreach (var row in GetRows(file, filter))
                 {
                     token.ThrowIfCancellationRequested();
                     items.Add(callback(row));
                 }
 
                 token.ThrowIfCancellationRequested();
-                rows.PushRange(items.ToArray());
+                if (items.Count > 0)
+                {
+                    rows.PushRange(items.ToArray());
+                }
             }
 
             var tasks = _files
+                .Where(f => FilterFile(f, filter))
                 .Select(file => Task.Run(() => ProcessFile(file), token))
                 .ToArray();
 
-            T[] buffer = new T[10240];
+            TResult[] buffer = new TResult[10240];
             try
             {
                 while (rows.Any() || !tasks.All(t => t.IsCompleted))
@@ -125,6 +135,10 @@ namespace ReportsGenerator.Data.DataSources
         /// <param name="fileName">File from where it comes.</param>
         /// <returns></returns>
         protected virtual CsvField CsvFieldCreator(Field key, string value, string fileName) => new CsvField(key, value);
+
+        protected virtual bool FilterFile(string fileName, FilterRows filter) => true;
+
+        protected virtual IEnumerable<Row> GetRows(string filePath, FilterRows filter) => GetRows(filePath);
 
         /// <summary>
         /// Detects whether or not <see cref="Row"/> is invalid and shouldn't be returned.

@@ -1,5 +1,6 @@
 ﻿using ReportsGenerator.Utils;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using ReportsGenerator.Data.Providers;
 
@@ -16,6 +17,10 @@ namespace ReportsGenerator.Data.DataSources
         /// <inheritdoc/> 
         public JHopkinsDataSourceReader(IEnumerable<string> files, IDataProvider dataProvider, ILogger logger) : base(files, dataProvider, logger)
         {
+            SupportedFilters = new[]
+            {
+                Field.LastUpdate
+            };
         }
 
         /// <inheritdoc/> 
@@ -71,6 +76,12 @@ namespace ReportsGenerator.Data.DataSources
 
                 _ => false
             };
+        }
+
+        /// <inheritdoc/>
+        protected override bool FilterFile(string fileName, FilterRows filter)
+        {
+            return filter(new CsvField(Field.LastUpdate, Path.GetFileNameWithoutExtension(fileName)));
         }
     }
 }

@@ -31,6 +31,11 @@ static string GetDataFolder<T>() where T : IDataSource
         return Path.Combine(dataRoot, "Misc");
     }
 
+    if (typeof(T) == typeof(ModelCacheDataSource))
+    {
+        return Path.Combine(dataRoot, ".cache");
+    }
+
     throw new ArgumentOutOfRangeException(nameof(T));
 }
 
@@ -74,13 +79,19 @@ try
     reportsSaver = new ReportsSaver<string>(new CsvReportFormatter(), new CsvFileReportStorage(argsParser.ReportsDir, true), new NullLogger());
     var reportsBuilder = new ReportsBuilder(logger);
 
+    logger.WriteInfo("Initialize cache...");
+    reportsBuilder.InitializeCache(new ModelCacheDataSource(GetDataFolder<ModelCacheDataSource>(), logger),out var lastDay);
+
     logger.WriteInfo("Reading raw data...");
     logger.IndentIncrease();
 
     miscStorage.Init();
     foreach (var ds in dataSources)
     {
-        await foreach (var row in ds.GetReader().GetRowsAsync(entryFactory.CreateEntry))
+        await foreach (var row in ds.GetReader()
+            .GetRowsAsync(
+                field => field.Name == Field.LastUpdate && field.Value.AsDate() > lastDay,
+                entryFactory.CreateEntry))
         {
             parsedData.Add(row);
         }
@@ -109,15 +120,15 @@ try
     logger.WriteInfo("Create country stats...");
     var countryStats = reportsBuilder.AvailableCountries.Select(reportsBuilder.GetCountryStats).ToArray();
 
-    Parallel.ForEach(countryStats.Select(cs => cs.Root), reportsSaver.WriteReport); //Country
+    Parallel.ForEach(countryStats.Select(statsWalker => statsWalker.Country), reportsSaver.WriteReport); //Country
     Parallel.ForEach(
-        countryStats.SelectMany(cs => cs.Root.Children)
+        countryStats.SelectMany(statsWalker => statsWalker.Provinces)
             .Where(r => r.Name != Consts.MainCountryRegion && r.Name != Consts.OtherCountryRegion),
         reportsSaver.WriteReport); //Region
     Parallel.ForEach(
-        countryStats.SelectMany(cs =>
-            cs.Root.Children.Where(r => r.Name != Consts.MainCountryRegion && r.Name != Consts.OtherCountryRegion)
-                .SelectMany(csc => csc.Children)), reportsSaver.WriteReport); // County
+        countryStats.SelectMany(statsWalker =>
+            statsWalker.Provinces.Where(r => r.Name != Consts.MainCountryRegion && r.Name != Consts.OtherCountryRegion)
+                .SelectMany(province => statsWalker.GetCounties(province.Name))), reportsSaver.WriteReport); // County
 
     logger.WriteInfo("Create model cache...");
     Parallel.ForEach(reportsBuilder.DumpModelData(), reportsSaver.WriteReport);

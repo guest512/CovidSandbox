@@ -30,23 +30,6 @@ namespace ReportsGenerator.Tests
         }
 
         [Test]
-        public void ValidateMetricsFromEntry()
-        {
-            var row = new Row(new[]
-            {
-                new CsvField(Field.CountryRegion, "Test country"),
-                new CsvField(Field.Active, "5"),
-                new CsvField(Field.Deaths, "8"),
-            }, RowVersion.JHopkinsV1);
-            var entryFactory = new EntryFactory(new Dictionary<RowVersion, IRowProcessor>
-                {{RowVersion.JHopkinsV1, new JHopkinsTestRowProcessor()}}, new NullLogger());
-            var entry = entryFactory.CreateEntry(row);
-            var metrics = Metrics.FromEntry(entry);
-
-            Assert.That(metrics, Is.EqualTo(new Metrics(0, -8, 0, 8)));
-        }
-
-        [Test]
         public void ValidateMetricsOperatorsOverload()
         {
             var m1 = new Metrics(1, 2, 3, 4);
