@@ -266,6 +266,7 @@ namespace ReportsGenerator.Model
                 case "United Kingdom":
                 case "France":
                 case "None":
+                case "Repatriated Travellers":
                     province = string.Empty;
                     break;
 
