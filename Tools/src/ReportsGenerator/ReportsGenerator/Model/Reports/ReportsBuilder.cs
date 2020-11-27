@@ -33,12 +33,17 @@ namespace ReportsGenerator.Model.Reports
             _logger = logger;
         }
 
+        /// <summary>
+        /// Initializes cache from provided cache data source.
+        /// </summary>
+        /// <param name="cacheDataSource">Cache data source.</param>
+        /// <param name="lastDay">Gets a last day found in <paramref name="cacheDataSource"/>.</param>
         public void InitializeCache(ModelCacheDataSource cacheDataSource, out DateTime lastDay)
         {
             lastDay = DateTime.MinValue;
             foreach (var row in cacheDataSource.GetReader().GetRows())
             {
-                var country = row[Field.CountryRegion];
+                var country = row[FieldId.CountryRegion];
                 if (!_cachedDataReports.ContainsKey(country))
                 {
                     _cachedDataReports.Add(country, new List<ModelDataReport>());
@@ -324,15 +329,15 @@ namespace ReportsGenerator.Model.Reports
 
             public ModelDataReport(Row cachedRow)
             {
-                Country = cachedRow[Field.CountryRegion];
-                Province = cachedRow[Field.ProvinceState];
-                County = cachedRow[Field.Admin2];
-                Day = cachedRow[Field.LastUpdate].AsDate("dd-MM-yyyy");
+                Country = cachedRow[FieldId.CountryRegion];
+                Province = cachedRow[FieldId.ProvinceState];
+                County = cachedRow[FieldId.Admin2];
+                Day = cachedRow[FieldId.LastUpdate].AsDate("dd-MM-yyyy");
                 Total = new Metrics(
-                    cachedRow[Field.Confirmed].AsLong(),
-                    cachedRow[Field.Active].AsLong(),
-                    cachedRow[Field.Recovered].AsLong(),
-                    cachedRow[Field.Deaths].AsLong());
+                    cachedRow[FieldId.Confirmed].AsLong(),
+                    cachedRow[FieldId.Active].AsLong(),
+                    cachedRow[FieldId.Recovered].AsLong(),
+                    cachedRow[FieldId.Deaths].AsLong());
             }
 
             public DateTime Day { get; }
@@ -401,12 +406,12 @@ namespace ReportsGenerator.Model.Reports
 
             public ModelMetadataReport(Row cachedRow)
             {
-                Country = cachedRow[Field.CountryRegion];
-                Province = cachedRow[Field.ProvinceState];
-                County = cachedRow[Field.Admin2];
-                Continent = cachedRow[Field.ContinentName];
-                Population = cachedRow[Field.Population].AsLong();
-                StatsName = cachedRow[Field.CombinedKey];
+                Country = cachedRow[FieldId.CountryRegion];
+                Province = cachedRow[FieldId.ProvinceState];
+                County = cachedRow[FieldId.Admin2];
+                Continent = cachedRow[FieldId.ContinentName];
+                Population = cachedRow[FieldId.Population].AsLong();
+                StatsName = cachedRow[FieldId.CombinedKey];
             }
 
             public string Country { get; }

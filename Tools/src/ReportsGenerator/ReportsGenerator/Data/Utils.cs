@@ -35,7 +35,5 @@ namespace ReportsGenerator.Data
 
             yield return row[(lastSeparatorIndex + 1)..].Trim('\"');
         }
-
-        public static string ToCsvString(this string str) => str.Contains(',') ? $"\"{str}\"" : str;
     }
 }

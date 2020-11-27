@@ -12,68 +12,68 @@
         {
             VersionFieldsDictionary.Add(RowVersion.StatsBase, new[]
             {
-                Field.UID,
-                Field.Iso2,
-                Field.Iso3,
-                Field.Code3,
-                Field.FIPS,
-                Field.Admin2,
-                Field.ProvinceState,
-                Field.CountryRegion,
-                Field.Latitude,
-                Field.Longitude,
-                Field.CombinedKey,
-                Field.Population
+                FieldId.UID,
+                FieldId.Iso2,
+                FieldId.Iso3,
+                FieldId.Code3,
+                FieldId.FIPS,
+                FieldId.Admin2,
+                FieldId.ProvinceState,
+                FieldId.CountryRegion,
+                FieldId.Latitude,
+                FieldId.Longitude,
+                FieldId.CombinedKey,
+                FieldId.Population
             });
 
             VersionFieldsDictionary.Add(RowVersion.StatsEx, new[]
             {
-                Field.ContinentName,
-                Field.ContinentCode,
-                Field.CountryRegion,
-                Field.Iso2,
-                Field.Iso3,
-                Field.Code3
+                FieldId.ContinentName,
+                FieldId.ContinentCode,
+                FieldId.CountryRegion,
+                FieldId.Iso2,
+                FieldId.Iso3,
+                FieldId.Code3
             });
 
             VersionFieldsDictionary.Add(RowVersion.State, new[]
             {
-                Field.Abbreviation,
-                Field.Name
+                FieldId.Abbreviation,
+                FieldId.Name
             });
 
             VersionFieldsDictionary.Add(RowVersion.Translation, new[]
             {
-                Field.English,
-                Field.Russian
+                FieldId.English,
+                FieldId.Russian
             });
         }
 
         /// <inheritdoc />
-        protected override string FieldToString(Field field, RowVersion version)
+        protected override string FieldToString(FieldId field, RowVersion version)
         {
             return field switch
             {
-                Field.Iso2 when version == RowVersion.StatsBase => "iso2",
-                Field.Iso3 when version == RowVersion.StatsBase => "iso3",
-                Field.Code3 when version == RowVersion.StatsBase => "code3",
-                Field.CountryRegion when version == RowVersion.StatsBase => "Country_Region",
+                FieldId.Iso2 when version == RowVersion.StatsBase => "iso2",
+                FieldId.Iso3 when version == RowVersion.StatsBase => "iso3",
+                FieldId.Code3 when version == RowVersion.StatsBase => "code3",
+                FieldId.CountryRegion when version == RowVersion.StatsBase => "Country_Region",
 
-                Field.Iso2 when version == RowVersion.StatsEx => "Two_Letter_Country_Code",
-                Field.Iso3 when version == RowVersion.StatsEx => "Three_Letter_Country_Code",
-                Field.Code3 when version == RowVersion.StatsEx => "Country_Number",
-                Field.CountryRegion when version == RowVersion.StatsEx => "Country_Name",
+                FieldId.Iso2 when version == RowVersion.StatsEx => "Two_Letter_Country_Code",
+                FieldId.Iso3 when version == RowVersion.StatsEx => "Three_Letter_Country_Code",
+                FieldId.Code3 when version == RowVersion.StatsEx => "Country_Number",
+                FieldId.CountryRegion when version == RowVersion.StatsEx => "Country_Name",
 
-                Field.ProvinceState => "Province_State",
-                Field.Latitude => "Lat",
-                Field.Longitude => "Long_",
-                Field.CombinedKey => "Combined_Key",
+                FieldId.ProvinceState => "Province_State",
+                FieldId.Latitude => "Lat",
+                FieldId.Longitude => "Long_",
+                FieldId.CombinedKey => "Combined_Key",
 
-                Field.ContinentName => "Continent_Name",
-                Field.ContinentCode => "Continent_Code",
+                FieldId.ContinentName => "Continent_Name",
+                FieldId.ContinentCode => "Continent_Code",
 
-                Field.English => "English_JHopkins",
-                Field.Russian => "Russian_Yandex",
+                FieldId.English => "English_JHopkins",
+                FieldId.Russian => "Russian_Yandex",
 
                 _ => field.ToString()
             };

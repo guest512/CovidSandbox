@@ -56,7 +56,7 @@ namespace ReportsGenerator.Tests
             {
                 var row = new Row(new[]
                 {
-                    new CsvField(Field.CountryRegion, countryFromReport),
+                    new Field(FieldId.CountryRegion, countryFromReport),
                 }, RowVersion.JHopkinsV1);
 
                 Assert.That(_factory.CreateEntry(row).CountryRegion, Is.EqualTo(actualCountryName));
@@ -68,23 +68,23 @@ namespace ReportsGenerator.Tests
         {
             var e1 = _factory.CreateEntry(new Row(new[]
             {
-                new CsvField(Field.CountryRegion, "Russia"),
-                new CsvField(Field.Deaths, "5"),
-                new CsvField(Field.LastUpdate, "2/22/2020 2:20"),
+                new Field(FieldId.CountryRegion, "Russia"),
+                new Field(FieldId.Deaths, "5"),
+                new Field(FieldId.LastUpdate, "2/22/2020 2:20"),
             }, RowVersion.JHopkinsV1));
 
             var e2 = _factory.CreateEntry(new Row(new[]
             {
-                new CsvField(Field.CountryRegion, "Russia"),
-                new CsvField(Field.ProvinceState, "Kamchatka Krai"),
-                new CsvField(Field.Deaths, "5"),
-                new CsvField(Field.LastUpdate, "2/22/2020 2:20"),
+                new Field(FieldId.CountryRegion, "Russia"),
+                new Field(FieldId.ProvinceState, "Kamchatka Krai"),
+                new Field(FieldId.Deaths, "5"),
+                new Field(FieldId.LastUpdate, "2/22/2020 2:20"),
             }, RowVersion.JHopkinsV1));
             var e3 = _factory.CreateEntry(new Row(new[]
             {
-                new CsvField(Field.CountryRegion, "Russia"),
-                new CsvField(Field.Deaths, "5"),
-                new CsvField(Field.LastUpdate, "2/22/2020 2:20"),
+                new Field(FieldId.CountryRegion, "Russia"),
+                new Field(FieldId.Deaths, "5"),
+                new Field(FieldId.LastUpdate, "2/22/2020 2:20"),
             }, RowVersion.JHopkinsV1));
 
             Assert.That(e2 != e1, Is.True);
@@ -101,19 +101,19 @@ namespace ReportsGenerator.Tests
         {
             var entry = _factory.CreateEntry(new Row(new[]
             {
-                new CsvField(Field.CountryRegion, "Russia"),
-                new CsvField(Field.Deaths, "5"),
-                new CsvField(Field.LastUpdate, "2/22/2020 2:20"),
+                new Field(FieldId.CountryRegion, "Russia"),
+                new Field(FieldId.Deaths, "5"),
+                new Field(FieldId.LastUpdate, "2/22/2020 2:20"),
             }, RowVersion.JHopkinsV1));
             Assert.That(entry.ToString(),
                 Is.EqualTo($"JHopkins-Russia(Main territory), {new DateTime(2020, 2, 22).ToShortDateString()}: 0--5-0-5"));
 
             entry = _factory.CreateEntry(new Row(new[]
             {
-                new CsvField(Field.CountryRegion, "Russia"),
-                new CsvField(Field.ProvinceState, "Kamchatka Krai"),
-                new CsvField(Field.Deaths, "5"),
-                new CsvField(Field.LastUpdate, "2/22/2020 2:20"),
+                new Field(FieldId.CountryRegion, "Russia"),
+                new Field(FieldId.ProvinceState, "Kamchatka Krai"),
+                new Field(FieldId.Deaths, "5"),
+                new Field(FieldId.LastUpdate, "2/22/2020 2:20"),
             }, RowVersion.JHopkinsV1));
             Assert.That(entry.ToString(),
                 Is.EqualTo($"JHopkins-Russia(TEST CYRILLIC NAME), {new DateTime(2020, 2, 22).ToShortDateString()}: 0--5-0-5"));

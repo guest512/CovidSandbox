@@ -4,14 +4,27 @@ using ReportsGenerator.Data;
 
 namespace ReportsGenerator.Model.Reports
 {
-    public record StatsInfoReport(string Country = "", string Name = "", string Parent = "", string Continent = "", long Population = 0, string StatsName = "") : IFormattableReport<string, string>
+    /// <summary>
+    /// Represents a statistical report for the country or its part.
+    /// </summary>
+    public record StatsInfoReport(
+        string Country = "",
+        string Name = "",
+        string Parent = "",
+        string Continent = "",
+        long Population = 0,
+        string StatsName = "") : IFormattableReport<string, string>
     {
-        private static readonly string[] FormattableReportProperties = {
+        private static readonly string[] FormattableReportProperties =
+        {
             "Name",
             "Continent",
             "Population"
         };
 
+        /// <summary>
+        /// Gets an empty (with default values) instance of <see cref="StatsInfoReport"/>.
+        /// </summary>
         public static StatsInfoReport Empty { get; } = new();
 
         #region IFormattableReport

@@ -3,6 +3,9 @@ using System.Linq;
 
 namespace ReportsGenerator.Model.Reports
 {
+    /// <summary>
+    /// Helper class to build <see cref="StatsInfoReportWalker"/> from strings.
+    /// </summary>
     public class StatsInfoReportWalkerBuilder
     {
         private readonly StatsInfoStructureNode _countryName;
@@ -10,12 +13,22 @@ namespace ReportsGenerator.Model.Reports
         private readonly Dictionary<StatsInfoStructureNode, List<StatsInfoStructureNode>> _countryStructure = new();
         private readonly Dictionary<string, List<string>> _namesCache = new();
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="StatsInfoReportWalkerBuilder"/> class.
+        /// </summary>
+        /// <param name="country">Country name.</param>
+        /// <param name="statsProvider"><see cref="IStatsProvider"/> instance to collect additional information about geographical objects.</param>
         public StatsInfoReportWalkerBuilder(string country, IStatsProvider statsProvider)
         {
             _statsProvider = statsProvider;
             _countryName = new StatsInfoStructureNode(country, country, statsProvider.GetCountryStatsName(country));
         }
 
+        /// <summary>
+        /// Adds province, if needed, to the structure.
+        /// </summary>
+        /// <param name="provinceName">Province name.</param>
+        /// <param name="provinceStatsName">Province name to lookup in <see cref="IStatsProvider"/>.</param>
         public void AddProvince(string provinceName, string provinceStatsName)
         {
             AddProvinceNode(provinceName, provinceStatsName);
@@ -34,6 +47,12 @@ namespace ReportsGenerator.Model.Reports
             return provinceNode;
         }
 
+        /// <summary>
+        /// Adds county, if needed, to the structure.
+        /// </summary>
+        /// <param name="countyName">County name.</param>
+        /// <param name="countyStatsName">County name to lookup in <see cref="IStatsProvider"/>.</param>
+        /// <param name="provinceName">Province where county is belongs to.</param>
         public void AddCounty(string provinceName, string countyName, string countyStatsName)
         {
             StatsInfoStructureNode provinceNode;
@@ -54,6 +73,10 @@ namespace ReportsGenerator.Model.Reports
             _namesCache[provinceName].Add(countyName);
         }
 
+        /// <summary>
+        /// Builds <see cref="StatsInfoReportWalker"/> from the current state.
+        /// </summary>
+        /// <returns>A new instance of the <see cref="StatsInfoReportWalker"/>.</returns>
         public StatsInfoReportWalker Build()
         {
             var walker = new StatsInfoReportWalker(_countryName.Name);

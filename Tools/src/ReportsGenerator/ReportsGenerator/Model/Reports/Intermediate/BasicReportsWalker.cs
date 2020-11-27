@@ -38,7 +38,7 @@ namespace ReportsGenerator.Model.Reports.Intermediate
         /// Initializes a new instance of the <see cref="BasicReportsWalker"/> class.
         /// </summary>
         /// <param name="reports"><see cref="BasicReport"/> collection to use for data extraction.</param>
-        /// <param name="reportsStructure"><see cref="StatsReport"/> for the country to know how to walk across reports.</param>
+        /// <param name="reportsStructure"><see cref="StatsInfoReportWalker"/> for the country to know how to walk across reports.</param>
         public BasicReportsWalker(IEnumerable<BasicReport> reports, StatsInfoReportWalker reportsStructure) : this()
         {
             var grouppedReports = reports.GroupBy(r => r.Parent).ToArray();

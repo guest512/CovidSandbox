@@ -32,13 +32,14 @@ namespace ReportsGenerator.Data.DataSources
             _logger = logger;
         }
 
-        public IEnumerable<Field> SupportedFilters { get; protected set; } = Enumerable.Empty<Field>();
+        /// <inheritdoc />
+        public IEnumerable<FieldId> SupportedFilters { get; protected init; } = Enumerable.Empty<FieldId>();
 
         /// <inheritdoc />
         public IEnumerable<Row> GetRows() => GetRows(_ => true);
 
         /// <inheritdoc />
-        public IEnumerable<Row> GetRows(FilterRows filter)
+        public IEnumerable<Row> GetRows(RowsFilter filter)
         {
             foreach (string file in _files.Where(f => FilterFile(f, filter)))
             {
@@ -50,16 +51,16 @@ namespace ReportsGenerator.Data.DataSources
         }
 
         /// <inheritdoc />
-        public IAsyncEnumerable<Row> GetRowsAsync() => GetRowsAsync((CsvField _) => true);
+        public IAsyncEnumerable<Row> GetRowsAsync() => GetRowsAsync((Field _) => true);
 
         /// <inheritdoc />
         public IAsyncEnumerable<TResult> GetRowsAsync<TResult>(GetRowsCallback<TResult> callback) => GetRowsAsync(_ => true, callback);
 
         /// <inheritdoc />
-        public IAsyncEnumerable<Row> GetRowsAsync(FilterRows filter) => GetRowsAsync(filter, row => row);
+        public IAsyncEnumerable<Row> GetRowsAsync(RowsFilter filter) => GetRowsAsync(filter, row => row);
 
         /// <inheritdoc />
-        public async IAsyncEnumerable<TResult> GetRowsAsync<TResult>(FilterRows filter, GetRowsCallback<TResult> callback)
+        public async IAsyncEnumerable<TResult> GetRowsAsync<TResult>(RowsFilter filter, GetRowsCallback<TResult> callback)
         {
             ConcurrentStack<TResult> rows = new();
             var source = new CancellationTokenSource();
@@ -128,26 +129,38 @@ namespace ReportsGenerator.Data.DataSources
         }
 
         /// <summary>
-        /// Factory function to create <see cref="CsvField"/> object.
+        /// Factory function to create <see cref="Field"/> object.
         /// </summary>
         /// <param name="key">Column name.</param>
         /// <param name="value">Cell value.</param>
         /// <param name="fileName">File from where it comes.</param>
         /// <returns></returns>
-        protected virtual CsvField CsvFieldCreator(Field key, string value, string fileName) => new CsvField(key, value);
+        protected virtual Field CsvFieldCreator(FieldId key, string value, string fileName) => new(key, value);
 
-        protected virtual bool FilterFile(string fileName, FilterRows filter) => true;
+        /// <summary>
+        /// Filters row on file level.
+        /// </summary>
+        /// <param name="filePath">File path to read rows from.</param>
+        /// <param name="filter">Filter delegate to call to determine whether or not file should be skipped.</param>
+        /// <returns><see langword="true" /> if file should be user, otherwise returns <see langword="false" />.</returns>
+        protected virtual bool FilterFile(string filePath, RowsFilter filter) => true;
 
-        protected virtual IEnumerable<Row> GetRows(string filePath, FilterRows filter) => GetRows(filePath);
+        /// <summary>
+        /// Reads CSV file and returns rows collection
+        /// </summary>
+        /// <param name="filePath">File name to read rows from.</param>
+        /// <param name="filter">Filter delegate to call to determine whether or not row should be skipped.</param>
+        /// <returns>A <see cref="IEnumerable{T}"/> of <see cref="Row"/> read from file.</returns>
+        protected virtual IEnumerable<Row> GetRows(string filePath, RowsFilter filter) => GetRows(filePath);
 
         /// <summary>
         /// Detects whether or not <see cref="Row"/> is invalid and shouldn't be returned.
         /// </summary>
         /// <param name="row">CSV row to test.</param>
-        /// <returns><langword>True</langword> if by some reason <see cref="Row"/> should be ignored, otherwise returns <langword>False</langword>.</returns>
+        /// <returns><see langword="true" /> if by some reason <see cref="Row"/> should be ignored, otherwise returns <see langword="false" />.</returns>
         protected virtual bool IsInvalidData(Row row) => false;
 
-        private IEnumerable<CsvField> GetCsvFields(IEnumerable<Field> keys, IEnumerable<string> fields, string fileName)
+        private IEnumerable<Field> GetCsvFields(IEnumerable<FieldId> keys, IEnumerable<string> fields, string fileName)
         {
             using var keyEnumerator = keys.GetEnumerator();
             using var fieldsEnumerator = fields.GetEnumerator();

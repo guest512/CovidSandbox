@@ -31,6 +31,7 @@ namespace ReportsGenerator.Utils
         /// Helper function to convert date from string to <see cref="DateTime"/>.
         /// </summary>
         /// <param name="dateString">Date string representation.</param>
+        /// <param name="format">Exact date format, if known.</param>
         /// <returns>Date <see cref="DateTime"/> representation.</returns>
         public static DateTime AsDate(this string dateString, string format = "")
         {

@@ -116,9 +116,9 @@ namespace ReportsGenerator.Model
             if (_russianRegions == null)
                 ProcessRows();
 
-            var county = row[Field.Admin2].Trim();
-            var province = row[Field.ProvinceState].Trim();
-            var country = row[Field.CountryRegion].Trim();
+            var county = row[FieldId.Admin2].Trim();
+            var province = row[FieldId.ProvinceState].Trim();
+            var country = row[FieldId.CountryRegion].Trim();
 
             if (_russianRegions!.ContainsValue(province))
             {
@@ -419,10 +419,10 @@ namespace ReportsGenerator.Model
             {
                 var name = GetStatsName(row);
                 var entry = new StatEntry(
-                    continentInfo.First(ci => ci[Field.Iso3] == row[Field.Iso3])[Field.ContinentName],
-                    row[Field.Code3],
-                    row[Field.Iso3],
-                    row[Field.Population],
+                    continentInfo.First(ci => ci[FieldId.Iso3] == row[FieldId.Iso3])[FieldId.ContinentName],
+                    row[FieldId.Code3],
+                    row[FieldId.Iso3],
+                    row[FieldId.Population],
                     name);
 
                 if (res.ContainsKey(name)) // Ignore duplicates
@@ -449,9 +449,9 @@ namespace ReportsGenerator.Model
                 .ToDictionary(gr => gr.Key);
 
             _logger.WriteInfo("Initialize russian regions info...");
-            _russianRegions = rows[RowVersion.Translation].ToDictionary(r => r[Field.English], r => r[Field.Russian]);
+            _russianRegions = rows[RowVersion.Translation].ToDictionary(r => r[FieldId.English], r => r[FieldId.Russian]);
             _logger.WriteInfo("Initialize US & Canada states abbreviations info...");
-            _states = rows[RowVersion.State].ToDictionary(r => r[Field.Abbreviation], r => r[Field.Name]);
+            _states = rows[RowVersion.State].ToDictionary(r => r[FieldId.Abbreviation], r => r[FieldId.Name]);
             _logger.WriteInfo("Initialize statistics..");
             _stats = CreateStats(rows[RowVersion.StatsBase], rows[RowVersion.StatsEx].ToArray());
         }

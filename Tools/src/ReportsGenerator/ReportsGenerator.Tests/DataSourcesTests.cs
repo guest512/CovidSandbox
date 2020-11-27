@@ -64,10 +64,10 @@ namespace ReportsGenerator.Tests
             var rows = ds.GetReader().GetRows().ToList();
 
             Assert.That(rows.Count, Is.EqualTo(2));
-            Assert.That(rows[1][Field.CountryRegion], Is.EqualTo("Mainland China"));
-            Assert.That(rows[0][Field.ProvinceState], Is.EqualTo("Fujian"));
-            Assert.That(rows[0][Field.Recovered], Is.EqualTo(string.Empty));
-            Assert.That(rows[1][Field.CaseFatalityRatio], Is.EqualTo(string.Empty));
+            Assert.That(rows[1][FieldId.CountryRegion], Is.EqualTo("Mainland China"));
+            Assert.That(rows[0][FieldId.ProvinceState], Is.EqualTo("Fujian"));
+            Assert.That(rows[0][FieldId.Recovered], Is.EqualTo(string.Empty));
+            Assert.That(rows[1][FieldId.CaseFatalityRatio], Is.EqualTo(string.Empty));
         }
 
         [Test]
@@ -84,10 +84,10 @@ namespace ReportsGenerator.Tests
             var rows = ds.GetReader().GetRows().ToList();
 
             Assert.That(rows.Count, Is.EqualTo(2));
-            Assert.That(rows[0][Field.CountryRegion], Is.EqualTo("China"));
-            Assert.That(rows[1][Field.ProvinceState], Is.EqualTo(string.Empty));
-            Assert.That(rows[0][Field.Recovered], Is.EqualTo("932"));
-            Assert.That(rows[1][Field.CaseFatalityRatio], Is.EqualTo(string.Empty));
+            Assert.That(rows[0][FieldId.CountryRegion], Is.EqualTo("China"));
+            Assert.That(rows[1][FieldId.ProvinceState], Is.EqualTo(string.Empty));
+            Assert.That(rows[0][FieldId.Recovered], Is.EqualTo("932"));
+            Assert.That(rows[1][FieldId.CaseFatalityRatio], Is.EqualTo(string.Empty));
         }
 
         [Test]
@@ -104,11 +104,11 @@ namespace ReportsGenerator.Tests
             var rows = ds.GetReader().GetRows().ToList();
 
             Assert.That(rows.Count, Is.EqualTo(2));
-            Assert.That(rows[0][Field.CountryRegion], Is.EqualTo("US"));
-            Assert.That(rows[1][Field.ProvinceState], Is.EqualTo("Michigan"));
-            Assert.That(rows[0][Field.Recovered], Is.EqualTo("0"));
-            Assert.That(rows[1][Field.CaseFatalityRatio], Is.EqualTo(string.Empty));
-            Assert.That(rows[0][Field.FIPS], Is.EqualTo("28001"));
+            Assert.That(rows[0][FieldId.CountryRegion], Is.EqualTo("US"));
+            Assert.That(rows[1][FieldId.ProvinceState], Is.EqualTo("Michigan"));
+            Assert.That(rows[0][FieldId.Recovered], Is.EqualTo("0"));
+            Assert.That(rows[1][FieldId.CaseFatalityRatio], Is.EqualTo(string.Empty));
+            Assert.That(rows[0][FieldId.FIPS], Is.EqualTo("28001"));
         }
 
         [Test]
@@ -125,11 +125,11 @@ namespace ReportsGenerator.Tests
             var rows = ds.GetReader().GetRows().ToList();
 
             Assert.That(rows.Count, Is.EqualTo(2));
-            Assert.That(rows[0][Field.CountryRegion], Is.EqualTo("US"));
-            Assert.That(rows[1][Field.ProvinceState], Is.EqualTo("Mykolaiv Oblast"));
-            Assert.That(rows[0][Field.Recovered], Is.EqualTo("0"));
-            Assert.That(rows[1][Field.CaseFatalityRatio], Is.EqualTo("2.3728813559322033"));
-            Assert.That(rows[0][Field.FIPS], Is.EqualTo("16003"));
+            Assert.That(rows[0][FieldId.CountryRegion], Is.EqualTo("US"));
+            Assert.That(rows[1][FieldId.ProvinceState], Is.EqualTo("Mykolaiv Oblast"));
+            Assert.That(rows[0][FieldId.Recovered], Is.EqualTo("0"));
+            Assert.That(rows[1][FieldId.CaseFatalityRatio], Is.EqualTo("2.3728813559322033"));
+            Assert.That(rows[0][FieldId.FIPS], Is.EqualTo("16003"));
         }
 
         [Test]

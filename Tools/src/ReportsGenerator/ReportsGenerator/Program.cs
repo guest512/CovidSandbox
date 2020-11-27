@@ -90,7 +90,7 @@ try
     {
         await foreach (var row in ds.GetReader()
             .GetRowsAsync(
-                field => field.Name == Field.LastUpdate && field.Value.AsDate() > lastDay,
+                field => field.Id == FieldId.LastUpdate && field.Value.AsDate() > lastDay,
                 entryFactory.CreateEntry))
         {
             parsedData.Add(row);

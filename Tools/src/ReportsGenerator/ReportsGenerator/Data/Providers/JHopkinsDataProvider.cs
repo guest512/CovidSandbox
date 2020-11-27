@@ -12,106 +12,106 @@
         {
             VersionFieldsDictionary.Add(RowVersion.JHopkinsV1, new[]
             {
-                Field.ProvinceState,
-                Field.CountryRegion,
-                Field.LastUpdate,
-                Field.Confirmed,
-                Field.Deaths,
-                Field.Recovered
+                FieldId.ProvinceState,
+                FieldId.CountryRegion,
+                FieldId.LastUpdate,
+                FieldId.Confirmed,
+                FieldId.Deaths,
+                FieldId.Recovered
             });
 
             VersionFieldsDictionary.Add(RowVersion.JHopkinsV2, new[]
             {
-                Field.ProvinceState,
-                Field.CountryRegion,
-                Field.LastUpdate,
-                Field.Confirmed,
-                Field.Deaths,
-                Field.Recovered,
-                Field.Latitude,
-                Field.Longitude
+                FieldId.ProvinceState,
+                FieldId.CountryRegion,
+                FieldId.LastUpdate,
+                FieldId.Confirmed,
+                FieldId.Deaths,
+                FieldId.Recovered,
+                FieldId.Latitude,
+                FieldId.Longitude
             });
 
             VersionFieldsDictionary.Add(RowVersion.JHopkinsV3, new[]
             {
-                Field.FIPS,
-                Field.Admin2,
-                Field.ProvinceState,
-                Field.CountryRegion,
-                Field.LastUpdate,
-                Field.Latitude,
-                Field.Longitude,
-                Field.Confirmed,
-                Field.Deaths,
-                Field.Recovered,
-                Field.Active,
-                Field.CombinedKey
+                FieldId.FIPS,
+                FieldId.Admin2,
+                FieldId.ProvinceState,
+                FieldId.CountryRegion,
+                FieldId.LastUpdate,
+                FieldId.Latitude,
+                FieldId.Longitude,
+                FieldId.Confirmed,
+                FieldId.Deaths,
+                FieldId.Recovered,
+                FieldId.Active,
+                FieldId.CombinedKey
             });
 
             VersionFieldsDictionary.Add(RowVersion.JHopkinsV4, new[]
             {
-                Field.FIPS,
-                Field.Admin2,
-                Field.ProvinceState,
-                Field.CountryRegion,
-                Field.LastUpdate,
-                Field.Latitude,
-                Field.Longitude,
-                Field.Confirmed,
-                Field.Deaths,
-                Field.Recovered,
-                Field.Active,
-                Field.CombinedKey,
-                Field.IncidenceRate,
-                Field.CaseFatalityRatio
+                FieldId.FIPS,
+                FieldId.Admin2,
+                FieldId.ProvinceState,
+                FieldId.CountryRegion,
+                FieldId.LastUpdate,
+                FieldId.Latitude,
+                FieldId.Longitude,
+                FieldId.Confirmed,
+                FieldId.Deaths,
+                FieldId.Recovered,
+                FieldId.Active,
+                FieldId.CombinedKey,
+                FieldId.IncidenceRate,
+                FieldId.CaseFatalityRatio
             });
 
             VersionFieldsDictionary.Add(RowVersion.JHopkinsV5, new[]
             {
-                Field.FIPS,
-                Field.Admin2,
-                Field.ProvinceState,
-                Field.CountryRegion,
-                Field.LastUpdate,
-                Field.Latitude,
-                Field.Longitude,
-                Field.Confirmed,
-                Field.Deaths,
-                Field.Recovered,
-                Field.Active,
-                Field.CombinedKey,
-                Field.IncidenceRate,
-                Field.CaseFatalityRatio
+                FieldId.FIPS,
+                FieldId.Admin2,
+                FieldId.ProvinceState,
+                FieldId.CountryRegion,
+                FieldId.LastUpdate,
+                FieldId.Latitude,
+                FieldId.Longitude,
+                FieldId.Confirmed,
+                FieldId.Deaths,
+                FieldId.Recovered,
+                FieldId.Active,
+                FieldId.CombinedKey,
+                FieldId.IncidenceRate,
+                FieldId.CaseFatalityRatio
             });
         }
 
         /// <inheritdoc />
-        protected override string FieldToString(Field field, RowVersion version)
+        protected override string FieldToString(FieldId field, RowVersion version)
         {
             return field switch
             {
-                Field.ProvinceState when version == RowVersion.JHopkinsV1 || version == RowVersion.JHopkinsV2 => "Province/State",
-                Field.ProvinceState => "Province_State",
+                FieldId.ProvinceState when version == RowVersion.JHopkinsV1 || version == RowVersion.JHopkinsV2 => "Province/State",
+                FieldId.ProvinceState => "Province_State",
 
-                Field.CountryRegion when version == RowVersion.JHopkinsV1 || version == RowVersion.JHopkinsV2 => "Country/Region",
-                Field.CountryRegion => "Country_Region",
+                FieldId.CountryRegion when version == RowVersion.JHopkinsV1 || version == RowVersion.JHopkinsV2 => "Country/Region",
+                FieldId.CountryRegion => "Country_Region",
 
-                Field.LastUpdate when version == RowVersion.JHopkinsV1 || version == RowVersion.JHopkinsV2 => "Last Update",
-                Field.LastUpdate => "Last_Update",
+                FieldId.LastUpdate when version == RowVersion.JHopkinsV1 || version == RowVersion.JHopkinsV2 => "Last Update",
+                FieldId.LastUpdate => "Last_Update",
 
-                Field.Latitude when version == RowVersion.JHopkinsV1 || version == RowVersion.JHopkinsV2 => field.ToString(),
-                Field.Latitude => "Lat",
+                FieldId.Latitude when version == RowVersion.JHopkinsV1 || version == RowVersion.JHopkinsV2 => field.ToString(),
+                FieldId.Latitude => "Lat",
 
-                Field.Longitude when version == RowVersion.JHopkinsV1 || version == RowVersion.JHopkinsV2 => field.ToString(),
-                Field.Longitude => "Long_",
+                FieldId.Longitude when version == RowVersion.JHopkinsV1 || version == RowVersion.JHopkinsV2 => field.ToString(),
+                FieldId.Longitude => "Long_",
 
-                Field.CombinedKey => "Combined_Key",
+                FieldId.CombinedKey => "Combined_Key",
 
-                Field.IncidenceRate when version == RowVersion.JHopkinsV4 => "Incidence_Rate",
-                Field.IncidenceRate when version == RowVersion.JHopkinsV5 => "Incident_Rate",
+                FieldId.IncidenceRate when version == RowVersion.JHopkinsV4 => "Incidence_Rate",
+                FieldId.IncidenceRate when version == RowVersion.JHopkinsV5 => "Incident_Rate",
 
-                Field.CaseFatalityRatio when version == RowVersion.JHopkinsV4 => "Case-Fatality_Ratio",
-                Field.CaseFatalityRatio when version == RowVersion.JHopkinsV5 => "Case_Fatality_Ratio",
+                FieldId.CaseFatalityRatio when version == RowVersion.JHopkinsV4 => "Case-Fatality_Ratio",
+                FieldId.CaseFatalityRatio when version == RowVersion.JHopkinsV5 => "Case_Fatality_Ratio",
 
 
                 _ => field.ToString()

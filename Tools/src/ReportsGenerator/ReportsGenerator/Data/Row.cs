@@ -8,17 +8,17 @@ namespace ReportsGenerator.Data
     /// </summary>
     public class Row
     {
-        private readonly Dictionary<Field, string> _data;
+        private readonly Dictionary<FieldId, string> _data;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="Row"/> class.
         /// </summary>
-        /// <param name="fields"><see cref="CsvField"/> collection to store in row.</param>
+        /// <param name="fields"><see cref="Field"/> collection to store in row.</param>
         /// <param name="version">Row version.</param>
-        public Row(IEnumerable<CsvField> fields, RowVersion version)
+        public Row(IEnumerable<Field> fields, RowVersion version)
         {
             Version = version;
-            _data = fields.ToDictionary(_ => _.Name, _ => _.Value);
+            _data = fields.ToDictionary(_ => _.Id, _ => _.Value);
         }
 
         /// <summary>
@@ -31,6 +31,6 @@ namespace ReportsGenerator.Data
         /// </summary>
         /// <param name="key">A key to lookup in row.</param>
         /// <returns>A data value for the specified key, or empty string, if key not found.</returns>
-        public string this[Field key] => _data.ContainsKey(key) ? _data[key] : string.Empty;
+        public string this[FieldId key] => _data.ContainsKey(key) ? _data[key] : string.Empty;
     }
 }

@@ -1,46 +1,52 @@
 ﻿using System.Collections.Generic;
-using System.IO;
 
 namespace ReportsGenerator.Data.Providers
 {
+    /// <summary>
+    /// Represents an implementation of <see cref="IDataProvider"/> for data model cache.
+    /// </summary>
     public class ModelCacheDataProvider : MultiVersionDataProvider
     {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="ModelCacheDataProvider"/> class.
+        /// </summary>
         public ModelCacheDataProvider()
         {
-            VersionFieldsDictionary.Add(RowVersion.ModelCacheData, new List<Field>
+            VersionFieldsDictionary.Add(RowVersion.ModelCacheData, new List<FieldId>
             {
-                Field.LastUpdate,
-                Field.CountryRegion,
-                Field.ProvinceState,
-                Field.Admin2,
-                Field.Confirmed,
-                Field.Active,
-                Field.Recovered,
-                Field.Deaths
+                FieldId.LastUpdate,
+                FieldId.CountryRegion,
+                FieldId.ProvinceState,
+                FieldId.Admin2,
+                FieldId.Confirmed,
+                FieldId.Active,
+                FieldId.Recovered,
+                FieldId.Deaths
             });
 
-            VersionFieldsDictionary.Add(RowVersion.ModelCacheMetaData, new List<Field>
+            VersionFieldsDictionary.Add(RowVersion.ModelCacheMetaData, new List<FieldId>
             {
-                Field.CountryRegion,
-                Field.ProvinceState,
-                Field.Admin2,
-                Field.ContinentName,
-                Field.Population,
-                Field.CombinedKey
+                FieldId.CountryRegion,
+                FieldId.ProvinceState,
+                FieldId.Admin2,
+                FieldId.ContinentName,
+                FieldId.Population,
+                FieldId.CombinedKey
             });
         }
 
-        protected override string FieldToString(Field field, RowVersion version)
+        /// <inheritdoc />
+        protected override string FieldToString(FieldId field, RowVersion version)
         {
             return field switch
             {
-                Field.LastUpdate => "Day",
-                Field.CountryRegion => "Country",
-                Field.ProvinceState => "Province",
-                Field.Admin2 => "County",
-                Field.ContinentName => "Continent",
-                Field.Population => "Population",
-                Field.CombinedKey => "StatsName",
+                FieldId.LastUpdate => "Day",
+                FieldId.CountryRegion => "Country",
+                FieldId.ProvinceState => "Province",
+                FieldId.Admin2 => "County",
+                FieldId.ContinentName => "Continent",
+                FieldId.Population => "Population",
+                FieldId.CombinedKey => "StatsName",
                 _ => field.ToString()
             };
         }

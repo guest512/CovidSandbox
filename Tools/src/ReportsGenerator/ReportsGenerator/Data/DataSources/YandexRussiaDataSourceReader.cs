@@ -18,24 +18,24 @@ namespace ReportsGenerator.Data.DataSources
         {
             SupportedFilters = new[]
             {
-                Field.LastUpdate
+                FieldId.LastUpdate
             };
         }
 
         /// <inheritdoc/>
-        protected override IEnumerable<Row> GetRows(string filePath, FilterRows filter)
+        protected override IEnumerable<Row> GetRows(string filePath, RowsFilter filter)
         {
             var simpleBannedCache = new List<string>();
 
             foreach (Row row in base.GetRows(filePath, filter))
             {
-                if(simpleBannedCache.Contains(row[Field.LastUpdate]))
+                if(simpleBannedCache.Contains(row[FieldId.LastUpdate]))
                     continue;
 
-                if (filter(new CsvField(Field.LastUpdate, row[Field.LastUpdate]))) 
+                if (filter(new Field(FieldId.LastUpdate, row[FieldId.LastUpdate]))) 
                     yield return row;
                 else
-                    simpleBannedCache.Add(row[Field.LastUpdate]);
+                    simpleBannedCache.Add(row[FieldId.LastUpdate]);
             }
         }
     }
