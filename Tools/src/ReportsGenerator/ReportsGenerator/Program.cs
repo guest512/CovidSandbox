@@ -12,10 +12,10 @@ using ReportsGenerator.Model.Processors;
 using ReportsGenerator.Model.Reports;
 using ReportsGenerator.Utils;
 
+const string dataRoot = "Data";
+
 static string GetDataFolder<T>() where T : IDataSource
 {
-    const string dataRoot = "Data";
-
     if (typeof(T) == typeof(JHopkinsDataSource))
     {
         return Path.Combine(dataRoot, "JHopkins");
@@ -56,56 +56,9 @@ static Dictionary<RowVersion, IRowProcessor> GetRowProcessors(INames namesServic
     return rowProcessors;
 }
 
-var logger = new ConsoleLogger();
-ReportsSaver<string>? reportsSaver = null;
-
-try
+static void SaveReports(string dest, ReportsBuilder reportsBuilder, ILogger logger)
 {
-    logger.WriteInfo("Logger created");
-    Convertors.SetLogger(logger);
-
-    var argsParser = new ArgsParser(args, logger);
-
-    var parsedData = new List<Entry>();
-
-    var dataSources = new IDataSource[]
-    {
-                    new JHopkinsDataSource(GetDataFolder<JHopkinsDataSource>(), logger),
-                    new YandexRussiaDataSource(GetDataFolder<YandexRussiaDataSource>(), logger)
-    };
-
-    var miscStorage = new MiscStorage(new MiscDataSource(GetDataFolder<MiscDataSource>(), logger), logger);
-    var entryFactory = new EntryFactory(GetRowProcessors(miscStorage, miscStorage, logger), logger);
-    reportsSaver = new ReportsSaver<string>(new CsvReportFormatter(), new CsvFileReportStorage(argsParser.ReportsDir, true), new NullLogger());
-    var reportsBuilder = new ReportsBuilder(logger);
-
-    logger.WriteInfo("Initialize cache...");
-    reportsBuilder.InitializeCache(new ModelCacheDataSource(GetDataFolder<ModelCacheDataSource>(), logger),out var lastDay);
-
-    logger.WriteInfo("Reading raw data...");
-    logger.IndentIncrease();
-
-    miscStorage.Init();
-    foreach (var ds in dataSources)
-    {
-        await foreach (var row in ds.GetReader()
-            .GetRowsAsync(
-                field => field.Id == FieldId.LastUpdate && field.Value.AsDate() > lastDay,
-                entryFactory.CreateEntry))
-        {
-            parsedData.Add(row);
-        }
-    }
-
-    logger.IndentDecrease();
-
-    logger.WriteInfo("Initialize reports generator...");
-    logger.IndentIncrease();
-
-    reportsBuilder.AddEntries(parsedData);
-    reportsBuilder.Build(miscStorage);
-
-    logger.IndentDecrease();
+    using ReportsSaver<string> reportsSaver = new(new CsvReportFormatter(), new CsvFileReportStorage(dest, true), new NullLogger());
 
     logger.WriteInfo("Create day by day reports...");
     Parallel.ForEach(reportsBuilder.AvailableDates.Select(reportsBuilder.GetDayReport),
@@ -129,10 +82,69 @@ try
         countryStats.SelectMany(statsWalker =>
             statsWalker.Provinces.Where(r => r.Name != Consts.MainCountryRegion && r.Name != Consts.OtherCountryRegion)
                 .SelectMany(province => statsWalker.GetCounties(province.Name))), reportsSaver.WriteReport); // County
+}
 
+static void UpdateCache(string cacheLocation, ReportsBuilder reportsBuilder, ILogger logger)
+{
+    using ReportsSaver<string> reportsSaver = new(new CsvReportFormatter(), new CsvFileReportStorage(cacheLocation, false), new NullLogger());
     logger.WriteInfo("Create model cache...");
     Parallel.ForEach(reportsBuilder.DumpModelData(), reportsSaver.WriteReport);
     Parallel.ForEach(reportsBuilder.DumpModelMetadata(), reportsSaver.WriteReport);
+
+}
+
+var logger = new ConsoleLogger();
+
+
+try
+{
+    logger.WriteInfo("Logger created");
+    Convertors.SetLogger(logger);
+
+    var argsParser = new ArgsParser(args, logger);
+
+    var parsedData = new List<Entry>();
+
+    var dataSources = new IDataSource[]
+    {
+                    new JHopkinsDataSource(GetDataFolder<JHopkinsDataSource>(), logger),
+                    new YandexRussiaDataSource(GetDataFolder<YandexRussiaDataSource>(), logger)
+    };
+
+    var miscStorage = new MiscStorage(new MiscDataSource(GetDataFolder<MiscDataSource>(), logger), logger);
+    var entryFactory = new EntryFactory(GetRowProcessors(miscStorage, miscStorage, logger), logger);
+    
+    var reportsBuilder = new ReportsBuilder(miscStorage, logger);
+
+    logger.WriteInfo("Initialize cache...");
+    reportsBuilder.InitializeCache(new ModelCacheDataSource(GetDataFolder<ModelCacheDataSource>(), logger),out var lastDay);
+
+    logger.WriteInfo("Reading raw data...");
+    logger.IndentIncrease();
+
+    foreach (var ds in dataSources)
+    {
+        await foreach (var row in ds.GetReader()
+            .GetRowsAsync(
+                field => field.Id == FieldId.LastUpdate && field.Value.AsDate() > lastDay,
+                entryFactory.CreateEntry))
+        {
+            parsedData.Add(row);
+        }
+    }
+
+    logger.IndentDecrease();
+
+    logger.WriteInfo("Initialize reports generator...");
+    logger.IndentIncrease();
+
+    reportsBuilder.AddEntries(parsedData);
+    reportsBuilder.Build();
+
+    logger.IndentDecrease();
+
+    SaveReports(argsParser.ReportsDir, reportsBuilder, logger);
+    UpdateCache(dataRoot, reportsBuilder, logger);
 }
 catch (Exception ex)
 {
@@ -148,7 +160,6 @@ finally
 {
     Convertors.SetLogger(new NullLogger());
     logger.Dispose();
-    reportsSaver?.Dispose();
 }
 
 return 0;

@@ -13,6 +13,7 @@ namespace ReportsGenerator.Model
     {
         private readonly MiscDataSource _dataSource;
         private readonly ILogger _logger;
+        private readonly object _locker = new();
 
         private Dictionary<string, string>? _russianRegions;
         private Dictionary<string, string>? _states;
@@ -388,11 +389,6 @@ namespace ReportsGenerator.Model
             return GenerateName(county, province, country);
         }
 
-        /// <summary>
-        /// Forces storage initialization to ensure that it will be ready before its usage.
-        /// </summary>
-        public void Init() => ProcessRows();
-
         /// <inheritdoc />
         public string LookupContinentName(string name)
         {
@@ -444,16 +440,23 @@ namespace ReportsGenerator.Model
 
         private void ProcessRows()
         {
-            _logger.WriteInfo("Initialize misc storage...");
-            var rows = _dataSource.GetReader().GetRows().GroupBy(r => r.Version)
-                .ToDictionary(gr => gr.Key);
+            lock (_locker)
+            {
+                if (_stats != null)
+                    return;
 
-            _logger.WriteInfo("Initialize russian regions info...");
-            _russianRegions = rows[RowVersion.Translation].ToDictionary(r => r[FieldId.English], r => r[FieldId.Russian]);
-            _logger.WriteInfo("Initialize US & Canada states abbreviations info...");
-            _states = rows[RowVersion.State].ToDictionary(r => r[FieldId.Abbreviation], r => r[FieldId.Name]);
-            _logger.WriteInfo("Initialize statistics..");
-            _stats = CreateStats(rows[RowVersion.StatsBase], rows[RowVersion.StatsEx].ToArray());
+                _logger.WriteInfo("Initialize misc storage...");
+                var rows = _dataSource.GetReader().GetRows().GroupBy(r => r.Version)
+                    .ToDictionary(gr => gr.Key);
+
+                _logger.WriteInfo("Initialize russian regions info...");
+                _russianRegions = rows[RowVersion.Translation]
+                    .ToDictionary(r => r[FieldId.English], r => r[FieldId.Russian]);
+                _logger.WriteInfo("Initialize US & Canada states abbreviations info...");
+                _states = rows[RowVersion.State].ToDictionary(r => r[FieldId.Abbreviation], r => r[FieldId.Name]);
+                _logger.WriteInfo("Initialize statistics..");
+                _stats = CreateStats(rows[RowVersion.StatsBase], rows[RowVersion.StatsEx].ToArray());
+            }
         }
 
         private readonly struct StatEntry

@@ -52,7 +52,7 @@ namespace ReportsGenerator.Model.Reports
         /// </summary>
         /// <param name="countyName">County name.</param>
         /// <param name="countyStatsName">County name to lookup in <see cref="IStatsProvider"/>.</param>
-        /// <param name="provinceName">Province where county is belongs to.</param>
+        /// <param name="provinceName">Province where county is belonged to.</param>
         public void AddCounty(string provinceName, string countyName, string countyStatsName)
         {
             StatsInfoStructureNode provinceNode;

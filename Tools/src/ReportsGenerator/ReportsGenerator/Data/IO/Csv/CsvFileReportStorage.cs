@@ -55,16 +55,18 @@ namespace ReportsGenerator.Data.IO.Csv
         {
             var names = name.Select(n => n.Replace('*', '_')).ToArray();
             var fileName = names.Last();
-            var append = false;
+            var append = true;
             List<string> parts = new();
 
             switch (type)
             {
                 case ReportType.Day:
+                    append = false;
                     parts.Add(_daysFolder);
                     break;
 
                 case ReportType.Country:
+                    append = false;
                     parts.Add(_countriesFolder);
                     parts.Add(names[0]);
                     if (names.Length == 2)
@@ -73,7 +75,6 @@ namespace ReportsGenerator.Data.IO.Csv
                     break;
 
                 case ReportType.Stats:
-                    append = true;
                     parts.Add(_statsFolder);
                     fileName = "countries";
                     if (names.Length > 1)
@@ -91,7 +92,6 @@ namespace ReportsGenerator.Data.IO.Csv
                     break;
 
                 case ReportType.Model:
-                    append = true;
                     parts.Add(_modelCacheFolder);
                     fileName = names[0] == "data" ? "model" : "metadata";
 

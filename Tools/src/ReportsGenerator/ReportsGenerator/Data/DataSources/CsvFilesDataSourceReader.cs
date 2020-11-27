@@ -43,7 +43,7 @@ namespace ReportsGenerator.Data.DataSources
         {
             foreach (string file in _files.Where(f => FilterFile(f, filter)))
             {
-                _logger.WriteInfo($"--Reading file: {file}");
+                _logger.WriteInfo($"{GetType().Name}: reading file {file}");
 
                 foreach (var row in GetRows(file, filter))
                     yield return row;
@@ -69,7 +69,7 @@ namespace ReportsGenerator.Data.DataSources
             void ProcessFile(string file)
             {
                 token.ThrowIfCancellationRequested();
-                _logger.WriteInfo($"--Reading file: {file}");
+                _logger.WriteInfo($"{GetType().Name}: reading file {file}");
                 var items = new List<TResult>();
 
                 foreach (var row in GetRows(file, filter))
@@ -194,7 +194,7 @@ namespace ReportsGenerator.Data.DataSources
             if (version != RowVersion.Unknown)
                 return version;
 
-            _logger.WriteError($"CsvFile '{fileName}' has unknown format");
+            _logger.WriteError($"{GetType().Name}: CsvFile '{fileName}' has unknown format");
             throw new Exception("CsvFile has unknown format");
         }
     }

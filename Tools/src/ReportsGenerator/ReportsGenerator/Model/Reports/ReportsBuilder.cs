@@ -21,15 +21,16 @@ namespace ReportsGenerator.Model.Reports
         private readonly ConcurrentDictionary<string, StatsInfoReportWalker> _statsInfoWalkers = new();
         private readonly ILogger _logger;
         private readonly ConcurrentDictionary<string, BasicReportsWalker> _reportsWalkers = new();
-        private readonly Dictionary<string, List<ModelDataReport>> _cachedDataReports = new();
-        private readonly Dictionary<string, List<ModelMetadataReport>> _cachedStatsReports = new();
+        private readonly ReportsBuilderCache _cache;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="ReportsBuilder"/> class.
         /// </summary>
+        /// <param name="statsProvider">A <see cref="IStatsProvider"/> object to lookup for countries information.</param>
         /// <param name="logger">A <see cref="ILogger"/> instance.</param>
-        public ReportsBuilder(ILogger logger)
+        public ReportsBuilder(IStatsProvider statsProvider, ILogger logger)
         {
+            _cache = new ReportsBuilderCache(statsProvider, logger);
             _logger = logger;
         }
 
@@ -40,30 +41,8 @@ namespace ReportsGenerator.Model.Reports
         /// <param name="lastDay">Gets a last day found in <paramref name="cacheDataSource"/>.</param>
         public void InitializeCache(ModelCacheDataSource cacheDataSource, out DateTime lastDay)
         {
-            lastDay = DateTime.MinValue;
-            foreach (var row in cacheDataSource.GetReader().GetRows())
-            {
-                var country = row[FieldId.CountryRegion];
-                if (!_cachedDataReports.ContainsKey(country))
-                {
-                    _cachedDataReports.Add(country, new List<ModelDataReport>());
-                    _cachedStatsReports.Add(country, new List<ModelMetadataReport>());
-                }
-                switch (row.Version)
-                {
-                    case RowVersion.ModelCacheData:
-                        var dataReport = new ModelDataReport(row);
-                        if (dataReport.Day > lastDay)
-                            lastDay = dataReport.Day;
-
-                        _cachedDataReports[country].Add(dataReport);
-                        break;
-
-                    case RowVersion.ModelCacheMetaData:
-                        _cachedStatsReports[country].Add(new ModelMetadataReport(row));
-                        break;
-                }
-            }
+            _cache.Initialize(cacheDataSource);
+            lastDay = _cache.LastDay;
         }
 
         /// <summary>
@@ -108,11 +87,10 @@ namespace ReportsGenerator.Model.Reports
         /// Results can be extracted via properties: <see cref="AvailableDates"/> and <see cref="AvailableCountries"/>.
         /// Also they are available through functions: <see cref="GetCountryReport"/>, <see cref="GetCountryStats"/>, and <see cref="GetDayReport"/>.
         /// </summary>
-        /// <param name="statsProvider"></param>
-        public void Build(IStatsProvider statsProvider)
+        public void Build()
         {
             var uniqueEntries = _entries.ToArray();
-            var countriesList = uniqueEntries.Select(x => x.CountryRegion).Concat(_cachedDataReports.Keys).Distinct();
+            var countriesList = uniqueEntries.Select(x => x.CountryRegion).Concat(_cache.Countries).Distinct();
 
             Parallel.ForEach(countriesList, country =>
             {
@@ -123,20 +101,19 @@ namespace ReportsGenerator.Model.Reports
 
                 var countryEntries = uniqueEntries.Where(x => x.CountryRegion == country);
                 var basicReports = new List<BasicReport>();
-                var statsInfoWalkerBuilder = new StatsInfoReportWalkerBuilder(country, statsProvider);
+                var statsInfoWalkerBuilder = new StatsInfoReportWalkerBuilder(country, _cache.StatsProvider);
 
-                if (_cachedDataReports.ContainsKey(country))
+                if (_cache.Countries.Contains(country))
                 {
-                    basicReports.AddRange(_cachedDataReports[country].Select(CreateBasicReport));
+                    basicReports.AddRange(_cache.GetCachedDataReports(country));
 
-                    foreach (var cachedMetadata in _cachedStatsReports[country]
+                    foreach (var (_, province, county, statsName) in _cache.GetCachedMetadataReports(country)
                         .Where(r => !string.IsNullOrEmpty(r.Province)))
                     {
-                        if (string.IsNullOrEmpty(cachedMetadata.County))
-                            statsInfoWalkerBuilder.AddProvince(cachedMetadata.Province, cachedMetadata.StatsName);
+                        if (string.IsNullOrEmpty(county))
+                            statsInfoWalkerBuilder.AddProvince(province, statsName);
                         else
-                            statsInfoWalkerBuilder.AddCounty(cachedMetadata.Province, cachedMetadata.County,
-                                cachedMetadata.StatsName);
+                            statsInfoWalkerBuilder.AddCounty(province, county, statsName);
                     }
                 }
 
@@ -155,7 +132,7 @@ namespace ReportsGenerator.Model.Reports
 
                         foreach (var dayCountryEntry in dayCountryEntries)
                         {
-                            ProcessEntry(dayCountryEntry, basicReports, statsInfoWalkerBuilder);
+                            ProcessEntry(dayCountryEntry, basicReports, statsInfoWalkerBuilder, _cache);
                         }
                     }
                 }
@@ -163,7 +140,7 @@ namespace ReportsGenerator.Model.Reports
                 {
                     foreach (var countryEntry in countryEntries)
                     {
-                        ProcessEntry(countryEntry, basicReports, statsInfoWalkerBuilder);
+                        ProcessEntry(countryEntry, basicReports, statsInfoWalkerBuilder, _cache);
                     }
                 }
 
@@ -174,18 +151,24 @@ namespace ReportsGenerator.Model.Reports
         }
 
         private static void ProcessEntry(Entry entry, ICollection<BasicReport> dataCollection,
-            StatsInfoReportWalkerBuilder metadataBuilder)
+            StatsInfoReportWalkerBuilder metadataBuilder, ReportsBuilderCache builderCache)
         {
-            dataCollection.Add(CreateBasicReport(entry));
+            var dataReport = CreateBasicReport(entry);
+            dataCollection.Add(dataReport);
+            builderCache.AddNewDataReport(entry.CountryRegion, dataReport);
 
             switch (entry.IsoLevel)
             {
                 case IsoLevel.ProvinceState:
                     metadataBuilder.AddProvince(entry.ProvinceState, entry.StatsName);
+                    builderCache.AddProvinceMetadata(entry.CountryRegion, entry.ProvinceState, entry.StatsName);
                     break;
 
                 case IsoLevel.County:
                     metadataBuilder.AddCounty(entry.ProvinceState, entry.County, entry.StatsName);
+                    builderCache.AddCountyMetadata(entry.CountryRegion, entry.ProvinceState, entry.County,
+                        entry.StatsName);
+
                     break;
             }
         }
@@ -194,29 +177,15 @@ namespace ReportsGenerator.Model.Reports
         /// Gets all data reports as <see cref="IFormattableReport{TRow,TName}"/> objects used to build reports.
         /// </summary>
         /// <returns>An <see cref="IEnumerable{T}"/> of <see cref="IFormattableReport{TRow,TName}"/>.</returns>
-        public IEnumerable<IFormattableReport<int, string>> DumpModelData() =>
-            _reportsWalkers.SelectMany(
-                rw => rw.Value.DumpReports().Select(br => new ModelDataReport(rw.Key, br)));
+        public IEnumerable<IFormattableReport<int, string>> DumpModelData(bool newOnly = true) =>
+            _cache.DumpData(newOnly);
 
         /// <summary>
         /// Gets all metadata reports as <see cref="IFormattableReport{TRow,TName}"/> objects used to build reports.
         /// </summary>
         /// <returns>An <see cref="IEnumerable{T}"/> of <see cref="IFormattableReport{TRow,TName}"/>.</returns>
-        public IEnumerable<IFormattableReport<int, string>> DumpModelMetadata()
-        {
-            foreach (var (countryName, walker) in _statsInfoWalkers)
-            {
-                yield return new ModelMetadataReport(countryName, walker.Country);
-                foreach (var provinceRoot in walker.Provinces)
-                {
-                    yield return new ModelMetadataReport(countryName, provinceRoot);
-                    foreach (var countyRoot in walker.GetCounties(provinceRoot.Name))
-                    {
-                        yield return new ModelMetadataReport(countryName, countyRoot);
-                    }
-                }
-            }
-        }
+        public IEnumerable<IFormattableReport<int, string>> DumpModelMetadata(bool newOnly = true) =>
+            _cache.DumpMetadata(newOnly);
 
         /// <summary>
         /// Returns the <see cref="CountryReport"/> for the particular country name.
@@ -258,23 +227,6 @@ namespace ReportsGenerator.Model.Reports
             return _dayReports[day];
         }
 
-        private static BasicReport CreateBasicReport(ModelDataReport cachedReport)
-        {
-            var template = new BasicReport
-            {
-                Day = cachedReport.Day,
-                Total = cachedReport.Total
-            };
-
-            if (!string.IsNullOrEmpty(cachedReport.County))
-                return template with { Name = cachedReport.County, Parent = cachedReport.Province };
-
-            if (!string.IsNullOrEmpty(cachedReport.Province))
-                return template with { Name = cachedReport.Province, Parent = cachedReport.Country };
-
-            return template with { Name = cachedReport.Country };
-        }
-
         private static BasicReport CreateBasicReport(Entry entry)
         {
             var template = new BasicReport
@@ -291,157 +243,6 @@ namespace ReportsGenerator.Model.Reports
 
                 _ => throw new ArgumentOutOfRangeException(nameof(entry.IsoLevel), $"Unknown ISO level of {entry}")
             };
-        }
-
-        private class ModelDataReport : IFormattableReport<int, string>
-        {
-            private static readonly string[] FormattableReportProperties =
-            {
-                "Day",
-                "Country",
-                "Province",
-                "County",
-                "Total"
-            };
-
-            public ModelDataReport(string countryName, BasicReport report)
-            {
-                Country = countryName;
-
-                if (report.Parent == string.Empty)
-                {
-                    Province = County = string.Empty;
-                }
-                else if (report.Parent == countryName)
-                {
-                    Province = report.Name;
-                    County = string.Empty;
-                }
-                else
-                {
-                    Province = report.Parent;
-                    County = report.Name;
-                }
-
-                Day = report.Day;
-                Total = report.Total;
-            }
-
-            public ModelDataReport(Row cachedRow)
-            {
-                Country = cachedRow[FieldId.CountryRegion];
-                Province = cachedRow[FieldId.ProvinceState];
-                County = cachedRow[FieldId.Admin2];
-                Day = cachedRow[FieldId.LastUpdate].AsDate("dd-MM-yyyy");
-                Total = new Metrics(
-                    cachedRow[FieldId.Confirmed].AsLong(),
-                    cachedRow[FieldId.Active].AsLong(),
-                    cachedRow[FieldId.Recovered].AsLong(),
-                    cachedRow[FieldId.Deaths].AsLong());
-            }
-
-            public DateTime Day { get; }
-            public string Country { get; }
-            public string Province { get; }
-            public string County { get; }
-            public Metrics Total { get; }
-
-            #region IFormattableReport
-
-            IEnumerable<string> IFormattableReport<int, string>.Name { get; } = new[] { "data" };
-
-            IEnumerable<string> IFormattableReport<int, string>.Properties { get; } = FormattableReportProperties;
-
-            ReportType IFormattableReport<int, string>.ReportType { get; } = ReportType.Model;
-            IEnumerable<int> IFormattableReport<int, string>.RowIds { get; } = new[] { 0 };
-
-            object IFormattableReport<int, string>.GetValue(string property, int key) => property switch
-            {
-                "Day" => Day,
-                "Country" => Country,
-                "Province" => Province,
-                "County" => County,
-                "Total" => Total,
-                _ => throw new ArgumentOutOfRangeException(nameof(property), property, null)
-            };
-
-            #endregion IFormattableReport
-        }
-
-        private class ModelMetadataReport : IFormattableReport<int, string>
-        {
-            private static readonly string[] FormattableReportProperties =
-            {
-                "Country",
-                "Province",
-                "County",
-                "Continent",
-                "Population",
-                "StatsName"
-            };
-
-            public ModelMetadataReport(string countryName, StatsInfoReport report)
-            {
-                Country = countryName;
-
-                if (report.Parent == string.Empty)
-                {
-                    Province = County = string.Empty;
-                }
-                else if (report.Parent == countryName)
-                {
-                    Province = report.Name;
-                    County = string.Empty;
-                }
-                else
-                {
-                    Province = report.Parent;
-                    County = report.Name;
-                }
-
-                Continent = report.Continent;
-                Population = report.Population;
-                StatsName = report.StatsName;
-            }
-
-            public ModelMetadataReport(Row cachedRow)
-            {
-                Country = cachedRow[FieldId.CountryRegion];
-                Province = cachedRow[FieldId.ProvinceState];
-                County = cachedRow[FieldId.Admin2];
-                Continent = cachedRow[FieldId.ContinentName];
-                Population = cachedRow[FieldId.Population].AsLong();
-                StatsName = cachedRow[FieldId.CombinedKey];
-            }
-
-            public string Country { get; }
-            public string Province { get; }
-            public string County { get; }
-            public string Continent { get; }
-            public long Population { get; }
-            public string StatsName { get; }
-
-            #region IFormattableReport
-
-            IEnumerable<string> IFormattableReport<int, string>.Name => new[] { "metadata" };
-
-            IEnumerable<string> IFormattableReport<int, string>.Properties => FormattableReportProperties;
-
-            ReportType IFormattableReport<int, string>.ReportType => ReportType.Model;
-            IEnumerable<int> IFormattableReport<int, string>.RowIds => new[] { 0 };
-
-            object IFormattableReport<int, string>.GetValue(string property, int key) => property switch
-            {
-                "Country" => Country,
-                "Province" => Province,
-                "County" => County,
-                "Continent" => Continent,
-                "Population" => Population,
-                "StatsName" => StatsName,
-                _ => throw new ArgumentOutOfRangeException(nameof(property), property, null)
-            };
-
-            #endregion IFormattableReport
         }
     }
 }
