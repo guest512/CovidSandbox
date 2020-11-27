@@ -12,7 +12,7 @@ namespace ReportsGenerator.Tests
     public class ReportsTests
     {
         private BasicReportsWalker? walker;
-        private StatsReport? structure;
+        private StatsInfoReportWalker? structure;
 
         [OneTimeSetUp]
         public void InitReports()
@@ -39,7 +39,7 @@ namespace ReportsGenerator.Tests
                 reports.Add(CreateReport(startDate.AddDays(i), 33846 + data[..(i+1)].Sum()));
             }
 
-            structure = new StatsReport("Test", "Test", new TestStatsProvider());
+            structure = new StatsInfoReportWalker("Test");
             walker = new BasicReportsWalker(reports, structure);
 
         }
