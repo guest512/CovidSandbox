@@ -178,6 +178,7 @@ if (Test-Path .\ReportsProcessing\temp) {
 if (!(Test-Path .\ReportsProcessing\maps)) {
     Write-Log-String("Prepare maps...")
     Copy-Item .\3rdparty\Maps\NaturalEarth\10m_cultural .\ReportsProcessing\maps -Recurse
+    Confirm-Last-Result $?
 }
 
 if ($Docker) {
