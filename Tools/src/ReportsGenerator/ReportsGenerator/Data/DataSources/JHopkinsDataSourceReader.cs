@@ -1,7 +1,7 @@
-﻿using ReportsGenerator.Utils;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using ReportsGenerator.Data.Providers;
+using ReportsGenerator.Utils;
 
 namespace ReportsGenerator.Data.DataSources
 {
@@ -13,12 +13,12 @@ namespace ReportsGenerator.Data.DataSources
         /// <summary>
         /// Initializes a new instance of the <see cref="JHopkinsDataSourceReader"/> class.
         /// </summary>
-        /// <inheritdoc/> 
+        /// <inheritdoc/>
         public JHopkinsDataSourceReader(IEnumerable<string> files, IDataProvider dataProvider, ILogger logger) : base(files, dataProvider, logger)
         {
         }
 
-        /// <inheritdoc/> 
+        /// <inheritdoc/>
         protected override CsvField CsvFieldCreator(Field key, string value, string fileName)
         {
             return key == Field.LastUpdate
@@ -26,7 +26,7 @@ namespace ReportsGenerator.Data.DataSources
                 : new CsvField(key, value);
         }
 
-        /// <inheritdoc/> 
+        /// <inheritdoc/>
         protected override bool IsInvalidData(Row row)
         {
             static bool IsInvalidDate(Row row, IEnumerable<string> badDates) =>
@@ -52,6 +52,7 @@ namespace ReportsGenerator.Data.DataSources
                 "France" when row[Field.ProvinceState] == "French Guiana" => IsInvalidDate(row, Enumerable.Range(16, 6).Select(n => $"03-{n}-2020")),
                 "France" when row[Field.ProvinceState] == "Fench Guiana" => true,
 
+                "Mainland China" when row[Field.ProvinceState] == "Hubei" && row[Field.Recovered] == "28.0" => true,
                 "Mainland China" => IsInvalidDate(row, new[] { "03-11-2020", "03-12-2020" }),
 
                 "US" when row[Field.LastUpdate] == "03-22-2020" && row[Field.FIPS] == "11001" && row[Field.Deaths] == "0" => true,
@@ -60,8 +61,7 @@ namespace ReportsGenerator.Data.DataSources
 
                 "Australia" when row[Field.ProvinceState] == "External territories" => true,
 
-
-                "United Kingdom" when row[Field.ProvinceState] == "Channel Islands" => IsInvalidDate(row, Enumerable.Range(14,2).Select(n=>$"03-{n}-2020")),
+                "United Kingdom" when row[Field.ProvinceState] == "Channel Islands" => IsInvalidDate(row, Enumerable.Range(14, 2).Select(n => $"03-{n}-2020")),
                 "Guernsey" => IsInvalidDate(row, Enumerable.Range(16, 6).Select(n => $"03-{n}-2020")),
                 "Jersey" => IsInvalidDate(row, Enumerable.Range(16, 6).Select(n => $"03-{n}-2020")),
 
