@@ -1,5 +1,5 @@
 
-FROM alpine:3.11 as base_builder
+FROM alpine:3.11.8 as base_builder
 
 ENV dotnet_install_dir=/usr/share/dotnet
 ENV DOTNET_ROOT=$dotnet_install_dir
