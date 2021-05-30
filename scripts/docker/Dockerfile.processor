@@ -1,24 +1,25 @@
 FROM ubuntu:20.04 as base_runner
 WORKDIR /work
-RUN apt update -y && \
+RUN apt update && \
+    apt upgrade -y && \
     apt install python3-pip locales -y && \
     apt-get clean && \
     locale-gen ru_RU && \
     locale-gen ru_RU.UTF-8 && \
     update-locale && \
-    pip3 install pip --upgrade && \
+    pip3 install pip setuptools wheel --upgrade && \
     pip3 install \
         jupyter==1.0.0 \
-        numpy==1.20.1 \
-        pandas==1.2.3 \
-        matplotlib==3.3.4 \
+        numpy==1.20.3 \
+        pandas==1.2.4 \
+        matplotlib==3.4.2 \
         seaborn==0.11.1 \
         geopandas==0.9.0 \
         descartes==1.1.0 \
         imageio==2.9.0 \
-        imageio-ffmpeg==0.4.3 \
+        imageio-ffmpeg==0.4.4 \
         multiprocess==0.70.11.1 \
-        tqdm==4.59.0
+        tqdm==4.61.0
 
 
 
