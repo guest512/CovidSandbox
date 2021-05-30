@@ -49,7 +49,11 @@ function Build-Docker {
     Write-Log-String("Data preparation image...")
     docker build --target data_preparation -t covid_sandbox_prepare:$today -t covid_sandbox_prepare:latest -f .\scripts\docker\Dockerfile.tools .
     Confirm-Last-Result $?
-    
+
+    Write-Log-String("Cache updater image...")
+    docker build --target cache_updater -t covid_sandbox_cache_updater:$today -t covid_sandbox_cache_updater:latest -f .\scripts\docker\Dockerfile.tools .
+    Confirm-Last-Result $?
+
     Write-Log-String("Reports generator image...")
     docker build --target reports_generator -t covid_sandbox_generator:$today -t covid_sandbox_generator:latest -f .\scripts\docker\Dockerfile.tools .
     Confirm-Last-Result $?
@@ -69,6 +73,10 @@ function Start-Docker {
 
     Write-Log-String("Generate reports...")
     docker run -v ${pwd}/temp:/work/Data -v ${pwd}/ReportsProcessing/data:/work/out --name covid_sandbox_generator_afd876 --rm covid_sandbox_generator
+    Confirm-Last-Result $?
+
+    Write-Log-String("Update repo cache...")
+    docker run -v ${pwd}/temp:/work/out -v ${pwd}/Data:/work/data --name covid_sandbox_cache_updater_afd876 --rm covid_sandbox_cache_updater
     Confirm-Last-Result $?
 
     Write-Log-String("Clean temp data...")

@@ -3,7 +3,7 @@
     <Import Project="Tools.props" />
     <Import Project="Tools.targets" />
 
-    <Target Name="PrepareData" DependsOnTargets="CopyJHopkinsFiles;CopyMiscFiles;CopyYandexFiles">
+    <Target Name="PrepareData" DependsOnTargets="CopyJHopkinsFiles;CopyMiscFiles;CopyYandexFiles;CopyCacheFiles">
         <Message Text="All data files are copied" Importance="High"/>
     </Target>
 

@@ -27,4 +27,26 @@
         </ItemGroup>        
         <Copy SourceFiles="@(MiscFiles)" DestinationFolder="$(BinaryDataOutDir)/Misc" />
     </Target>
+
+    <Target Name="CopyCacheFiles">
+        <PropertyGroup>
+            <CacheDir>$(DataRootFolder)/.cache</CacheDir>
+        </PropertyGroup>
+        <ItemGroup>
+            <CacheFiles Include="$(CacheDir)/*.*" />
+        </ItemGroup>
+
+        <Copy SourceFiles="@(CacheFiles)" DestinationFolder="$(BinaryDataOutDir)/.cache" />
+    </Target>
+
+    <Target Name="UpdateCacheFiles">
+        <PropertyGroup>
+            <CacheDir>$(DataRootFolder)/.cache</CacheDir>
+        </PropertyGroup>
+        <ItemGroup>
+            <CacheFiles Include="$(BinaryDataOutDir)/.cache/*.*" />
+        </ItemGroup>
+
+        <Copy SourceFiles="@(CacheFiles)" DestinationFolder="$(CacheDir)" />
+    </Target>
 </Project>

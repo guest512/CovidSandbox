@@ -40,6 +40,21 @@ CMD dotnet msbuild build.proj /t:PrepareData \
 
 
 
+FROM base_builder_dotnet as cache_updater
+
+VOLUME [ "/work/out", "/work/data" ]
+COPY Tools/build ./
+
+CMD dotnet msbuild build.proj /t:UpdateCacheFiles \
+    /p:DataSourcesRootFolder=$PWD/dataSources \
+    /p:DataRootFolder=$PWD/data \
+    /p:BinaryDataOutDir=$PWD/out \
+    -v:n
+
+
+
+
+
 FROM base_builder_dotnet as builder
 
 COPY Tools ./
