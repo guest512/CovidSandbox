@@ -12,30 +12,30 @@
         {
             VersionFieldsDictionary.Add(RowVersion.YandexRussia, new[]
             {
-                Field.LastUpdate,
-                Field.ProvinceState,
-                Field.Confirmed,
-                Field.Recovered,
-                Field.Deaths,
-                Field.DeathsByDay,
-                Field.ConfirmedByDay,
-                Field.RecoveredByDay
+                FieldId.LastUpdate,
+                FieldId.ProvinceState,
+                FieldId.Confirmed,
+                FieldId.Recovered,
+                FieldId.Deaths,
+                FieldId.DeathsByDay,
+                FieldId.ConfirmedByDay,
+                FieldId.RecoveredByDay
             });
         }
 
         /// <inheritdoc />
-        protected override string FieldToString(Field field, RowVersion version)
+        protected override string FieldToString(FieldId field, RowVersion version)
         {
             return field switch
             {
-                Field.Confirmed => "Заражений",
-                Field.LastUpdate => "Дата",
-                Field.ProvinceState => "Регион",
-                Field.Recovered => "Выздоровлений",
-                Field.Deaths => "Смертей",
-                Field.DeathsByDay => "Смертей за день",
-                Field.ConfirmedByDay => "Заражений за день",
-                Field.RecoveredByDay => "Выздоровлений за день",
+                FieldId.Confirmed => "Заражений",
+                FieldId.LastUpdate => "Дата",
+                FieldId.ProvinceState => "Регион",
+                FieldId.Recovered => "Выздоровлений",
+                FieldId.Deaths => "Смертей",
+                FieldId.DeathsByDay => "Смертей за день",
+                FieldId.ConfirmedByDay => "Заражений за день",
+                FieldId.RecoveredByDay => "Выздоровлений за день",
 
                 _ => field.ToString()
             };

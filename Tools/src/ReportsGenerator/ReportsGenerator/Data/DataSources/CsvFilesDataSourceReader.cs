@@ -1,13 +1,12 @@
-﻿using ReportsGenerator.Data.IO;
-using ReportsGenerator.Data.Providers;
-using ReportsGenerator.Utils;
-using System;
+﻿using System;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 using ReportsGenerator.Data.IO.Csv;
+using ReportsGenerator.Data.Providers;
+using ReportsGenerator.Utils;
 
 namespace ReportsGenerator.Data.DataSources
 {
@@ -34,52 +33,64 @@ namespace ReportsGenerator.Data.DataSources
         }
 
         /// <inheritdoc />
-        public IEnumerable<Row> GetRows()
-        {
-            foreach (string file in _files)
-            {
-                _logger.WriteInfo($"--Reading file: {file}");
+        public IEnumerable<FieldId> SupportedFilters { get; protected init; } = Enumerable.Empty<FieldId>();
 
-                foreach (var row in GetRows(file))
+        /// <inheritdoc />
+        public IEnumerable<Row> GetRows() => GetRows(_ => true);
+
+        /// <inheritdoc />
+        public IEnumerable<Row> GetRows(RowsFilter filter)
+        {
+            foreach (string file in _files.Where(f => FilterFile(f, filter)))
+            {
+                _logger.WriteInfo($"{GetType().Name}: reading file {file}");
+
+                foreach (var row in GetRows(file, filter))
                     yield return row;
             }
         }
 
         /// <inheritdoc />
-        public async IAsyncEnumerable<Row> GetRowsAsync()
-        {
-            await foreach (var row in GetRowsAsync(row => row))
-                yield return row;
-        }
+        public IAsyncEnumerable<Row> GetRowsAsync() => GetRowsAsync((Field _) => true);
 
         /// <inheritdoc />
-        public async IAsyncEnumerable<T> GetRowsAsync<T>(GetRowsCallback<T> callback)
+        public IAsyncEnumerable<TResult> GetRowsAsync<TResult>(GetRowsCallback<TResult> callback) => GetRowsAsync(_ => true, callback);
+
+        /// <inheritdoc />
+        public IAsyncEnumerable<Row> GetRowsAsync(RowsFilter filter) => GetRowsAsync(filter, row => row);
+
+        /// <inheritdoc />
+        public async IAsyncEnumerable<TResult> GetRowsAsync<TResult>(RowsFilter filter, GetRowsCallback<TResult> callback)
         {
-            ConcurrentStack<T> rows = new ConcurrentStack<T>();
+            ConcurrentStack<TResult> rows = new();
             var source = new CancellationTokenSource();
             var token = source.Token;
 
             void ProcessFile(string file)
             {
                 token.ThrowIfCancellationRequested();
-                _logger.WriteInfo($"--Reading file: {file}");
-                var items = new List<T>();
+                _logger.WriteInfo($"{GetType().Name}: reading file {file}");
+                var items = new List<TResult>();
 
-                foreach (var row in GetRows(file))
+                foreach (var row in GetRows(file, filter))
                 {
                     token.ThrowIfCancellationRequested();
                     items.Add(callback(row));
                 }
 
                 token.ThrowIfCancellationRequested();
-                rows.PushRange(items.ToArray());
+                if (items.Count > 0)
+                {
+                    rows.PushRange(items.ToArray());
+                }
             }
 
             var tasks = _files
+                .Where(f => FilterFile(f, filter))
                 .Select(file => Task.Run(() => ProcessFile(file), token))
                 .ToArray();
 
-            T[] buffer = new T[10240];
+            TResult[] buffer = new TResult[10240];
             try
             {
                 while (rows.Any() || !tasks.All(t => t.IsCompleted))
@@ -118,22 +129,38 @@ namespace ReportsGenerator.Data.DataSources
         }
 
         /// <summary>
-        /// Factory function to create <see cref="CsvField"/> object.
+        /// Factory function to create <see cref="Field"/> object.
         /// </summary>
         /// <param name="key">Column name.</param>
         /// <param name="value">Cell value.</param>
         /// <param name="fileName">File from where it comes.</param>
         /// <returns></returns>
-        protected virtual CsvField CsvFieldCreator(Field key, string value, string fileName) => new CsvField(key, value);
+        protected virtual Field CsvFieldCreator(FieldId key, string value, string fileName) => new(key, value);
+
+        /// <summary>
+        /// Filters row on file level.
+        /// </summary>
+        /// <param name="filePath">File path to read rows from.</param>
+        /// <param name="filter">Filter delegate to call to determine whether or not file should be skipped.</param>
+        /// <returns><see langword="true" /> if file should be user, otherwise returns <see langword="false" />.</returns>
+        protected virtual bool FilterFile(string filePath, RowsFilter filter) => true;
+
+        /// <summary>
+        /// Reads CSV file and returns rows collection
+        /// </summary>
+        /// <param name="filePath">File name to read rows from.</param>
+        /// <param name="filter">Filter delegate to call to determine whether or not row should be skipped.</param>
+        /// <returns>A <see cref="IEnumerable{T}"/> of <see cref="Row"/> read from file.</returns>
+        protected virtual IEnumerable<Row> GetRows(string filePath, RowsFilter filter) => GetRows(filePath);
 
         /// <summary>
         /// Detects whether or not <see cref="Row"/> is invalid and shouldn't be returned.
         /// </summary>
         /// <param name="row">CSV row to test.</param>
-        /// <returns><langword>True</langword> if by some reason <see cref="Row"/> should be ignored, otherwise returns <langword>False</langword>.</returns>
+        /// <returns><see langword="true" /> if by some reason <see cref="Row"/> should be ignored, otherwise returns <see langword="false" />.</returns>
         protected virtual bool IsInvalidData(Row row) => false;
 
-        private IEnumerable<CsvField> GetCsvFields(IEnumerable<Field> keys, IEnumerable<string> fields, string fileName)
+        private IEnumerable<Field> GetCsvFields(IEnumerable<FieldId> keys, IEnumerable<string> fields, string fileName)
         {
             using var keyEnumerator = keys.GetEnumerator();
             using var fieldsEnumerator = fields.GetEnumerator();
@@ -167,7 +194,7 @@ namespace ReportsGenerator.Data.DataSources
             if (version != RowVersion.Unknown)
                 return version;
 
-            _logger.WriteError($"CsvFile '{fileName}' has unknown format");
+            _logger.WriteError($"{GetType().Name}: CsvFile '{fileName}' has unknown format");
             throw new Exception("CsvFile has unknown format");
         }
     }

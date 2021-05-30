@@ -41,7 +41,7 @@ namespace ReportsGenerator.Data
                         break;
 
                     case string stringValue:
-                        yield return stringValue;
+                        yield return EscapeString(stringValue);
                         break;
 
                     case long longValue:
@@ -108,5 +108,7 @@ namespace ReportsGenerator.Data
                 yield return deaths.ToString();
             }
         }
+
+        private static string EscapeString(string str) => str.Contains(',') ? $"\"{str}\"" : str;
     }
 }

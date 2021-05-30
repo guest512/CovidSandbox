@@ -18,9 +18,9 @@ namespace ReportsGenerator.Model.Reports
         /// <param name="name">Country name.</param>
         /// <param name="walker">A <see cref="BasicReportsWalker"/> instance for retrieving the data for the country.</param>
         /// <param name="structure">A geographical objects structure and relations for the country.</param>
-        public CountryReport(string name, BasicReportsWalker walker, StatsReport structure) : base(walker, name)
+        public CountryReport(string name, BasicReportsWalker walker, StatsInfoReportWalker structure) : base(walker, name)
         {
-            RegionReports = structure.GetProvinces().Select(province => new RegionReport(Name,province, walker));
+            RegionReports = structure.Provinces.Select(province => new RegionReport(Name,province.Name, walker));
         }
 
         /// <summary>

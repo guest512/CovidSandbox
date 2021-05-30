@@ -32,7 +32,7 @@ namespace ReportsGenerator.Model.Processors
         public virtual long GetActive(Row row) => GetConfirmed(row) - GetDeaths(row) - GetRecovered(row);
 
         /// <inheritdoc />
-        public virtual long GetConfirmed(Row row) => row[Field.Confirmed].AsLong();
+        public virtual long GetConfirmed(Row row) => row[FieldId.Confirmed].AsLong();
 
         /// <inheritdoc />
         public abstract string GetCountryName(Row row);
@@ -41,7 +41,7 @@ namespace ReportsGenerator.Model.Processors
         public abstract string GetCountyName(Row row);
 
         /// <inheritdoc />
-        public virtual long GetDeaths(Row row) => row[Field.Deaths].AsLong();
+        public virtual long GetDeaths(Row row) => row[FieldId.Deaths].AsLong();
 
         /// <inheritdoc />
         public IsoLevel GetIsoLevel(Row row)
@@ -79,7 +79,7 @@ namespace ReportsGenerator.Model.Processors
         }
 
         /// <inheritdoc />
-        public virtual DateTime GetLastUpdate(Row row) => row[Field.LastUpdate].AsDate();
+        public virtual DateTime GetLastUpdate(Row row) => row[FieldId.LastUpdate].AsDate();
 
         /// <inheritdoc />
         public abstract Origin GetOrigin(Row row);
@@ -88,7 +88,7 @@ namespace ReportsGenerator.Model.Processors
         public abstract string GetProvinceName(Row row);
 
         /// <inheritdoc />
-        public virtual long GetRecovered(Row row) => row[Field.Recovered].AsLong();
+        public virtual long GetRecovered(Row row) => row[FieldId.Recovered].AsLong();
 
         /// <inheritdoc />
         public string GetStatsName(Row row) => _statsProvider.GetStatsName(row);

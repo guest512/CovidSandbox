@@ -25,8 +25,8 @@ namespace ReportsGenerator.Model.Processors
         /// <inheritdoc />
         public override string GetCountryName(Row row)
         {
-            var country = row[Field.CountryRegion];
-            var province = row[Field.ProvinceState];
+            var country = row[FieldId.CountryRegion];
+            var province = row[FieldId.ProvinceState];
 
             // Many rows from this data source have messed relation between country and province.
             // The format for this data source has changed several times. For instance,
@@ -107,9 +107,9 @@ namespace ReportsGenerator.Model.Processors
         /// <inheritdoc />
         public override string GetCountyName(Row row)
         {
-            var countyRowValue = row[Field.Admin2];
-            var provinceRowValue = row[Field.ProvinceState];
-            var countryRowValue = row[Field.CountryRegion];
+            var countyRowValue = row[FieldId.Admin2];
+            var provinceRowValue = row[FieldId.ProvinceState];
+            var countryRowValue = row[FieldId.CountryRegion];
 
             return countryRowValue switch
             {
@@ -127,8 +127,8 @@ namespace ReportsGenerator.Model.Processors
         /// <inheritdoc />
         public override string GetProvinceName(Row row)
         {
-            var country = row[Field.CountryRegion];
-            var province = row[Field.ProvinceState];
+            var country = row[FieldId.CountryRegion];
+            var province = row[FieldId.ProvinceState];
 
             // Many rows from this data source have messed relation between country and province.
             // The format for this data source has changed several times. For instance,

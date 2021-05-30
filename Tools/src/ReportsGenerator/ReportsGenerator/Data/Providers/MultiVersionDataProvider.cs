@@ -9,22 +9,22 @@ namespace ReportsGenerator.Data.Providers
     public abstract class MultiVersionDataProvider : IDataProvider
     {
         /// <summary>
-        /// Dictionary to store <see cref="ICollection{T}"/> of <see cref="Field"/> for each supported <see cref="RowVersion"/>.
+        /// Dictionary to store <see cref="ICollection{T}"/> of <see cref="FieldId"/> for each supported <see cref="RowVersion"/>.
         /// </summary>
-        protected readonly IDictionary<RowVersion, ICollection<Field>> VersionFieldsDictionary;
+        protected readonly IDictionary<RowVersion, ICollection<FieldId>> VersionFieldsDictionary;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="MultiVersionDataProvider"/> class.
         /// </summary>
         protected MultiVersionDataProvider()
         {
-            VersionFieldsDictionary = new Dictionary<RowVersion, ICollection<Field>>();
+            VersionFieldsDictionary = new Dictionary<RowVersion, ICollection<FieldId>>();
         }
 
         /// <inheritdoc />
-        public IEnumerable<Field> GetFields(RowVersion version)
+        public IEnumerable<FieldId> GetFields(RowVersion version)
         {
-            return VersionFieldsDictionary.ContainsKey(version) ? VersionFieldsDictionary[version] : Enumerable.Empty<Field>();
+            return VersionFieldsDictionary.ContainsKey(version) ? VersionFieldsDictionary[version] : Enumerable.Empty<FieldId>();
         }
 
         /// <inheritdoc />
@@ -39,12 +39,12 @@ namespace ReportsGenerator.Data.Providers
         }
 
         /// <summary>
-        /// Helper function that returns a <see cref="string"/> representation of given <see cref="Field"/> in the particular <see cref="RowVersion"/>.
+        /// Helper function that returns a <see cref="string"/> representation of given <see cref="FieldId"/> in the particular <see cref="RowVersion"/>.
         /// </summary>
         /// <param name="field">Field to convert to string.</param>
         /// <param name="version"><see cref="RowVersion"/> to where this field come from.</param>
-        /// <returns>A <see cref="string"/> representation of given <see cref="Field"/>.</returns>
-        protected abstract string FieldToString(Field field, RowVersion version);
+        /// <returns>A <see cref="string"/> representation of given <see cref="FieldId"/>.</returns>
+        protected abstract string FieldToString(FieldId field, RowVersion version);
 
         private bool ValidateColumnsOrder(RowVersion version, IEnumerable<string> headerColumns)
         {

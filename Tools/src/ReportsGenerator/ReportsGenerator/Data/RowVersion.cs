@@ -56,8 +56,18 @@
         State,
 
         /// <summary>
+        /// Model cache data row.
+        /// </summary>
+        ModelCacheData,
+
+        /// <summary>
+        /// Model cache metadata row.
+        /// </summary>
+        ModelCacheMetaData,
+
+        /// <summary>
         /// Not supported.
         /// </summary>
-        Unknown
+        Unknown,
     }
 }

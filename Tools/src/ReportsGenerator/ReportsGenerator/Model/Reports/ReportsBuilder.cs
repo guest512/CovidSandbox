@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using ReportsGenerator.Data;
+using ReportsGenerator.Data.DataSources;
 using ReportsGenerator.Model.Reports.Intermediate;
 using ReportsGenerator.Utils;
 
@@ -17,17 +18,31 @@ namespace ReportsGenerator.Model.Reports
         private readonly Dictionary<string, CountryReport> _countryReports = new();
         private readonly Dictionary<DateTime, DayReport> _dayReports = new();
         private readonly List<Entry> _entries = new();
-        private readonly ConcurrentDictionary<string, StatsReport> _graphStructures = new();
+        private readonly ConcurrentDictionary<string, StatsInfoReportWalker> _statsInfoWalkers = new();
         private readonly ILogger _logger;
         private readonly ConcurrentDictionary<string, BasicReportsWalker> _reportsWalkers = new();
+        private readonly ReportsBuilderCache _cache;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="ReportsBuilder"/> class.
         /// </summary>
+        /// <param name="statsProvider">A <see cref="IStatsProvider"/> object to lookup for countries information.</param>
         /// <param name="logger">A <see cref="ILogger"/> instance.</param>
-        public ReportsBuilder(ILogger logger)
+        public ReportsBuilder(IStatsProvider statsProvider, ILogger logger)
         {
+            _cache = new ReportsBuilderCache(statsProvider, logger);
             _logger = logger;
+        }
+
+        /// <summary>
+        /// Initializes cache from provided cache data source.
+        /// </summary>
+        /// <param name="cacheDataSource">Cache data source.</param>
+        /// <param name="lastDay">Gets a last day found in <paramref name="cacheDataSource"/>.</param>
+        public void InitializeCache(ModelCacheDataSource cacheDataSource, out DateTime lastDay)
+        {
+            _cache.Initialize(cacheDataSource);
+            lastDay = _cache.LastDay;
         }
 
         /// <summary>
@@ -72,11 +87,10 @@ namespace ReportsGenerator.Model.Reports
         /// Results can be extracted via properties: <see cref="AvailableDates"/> and <see cref="AvailableCountries"/>.
         /// Also they are available through functions: <see cref="GetCountryReport"/>, <see cref="GetCountryStats"/>, and <see cref="GetDayReport"/>.
         /// </summary>
-        /// <param name="statsProvider"></param>
-        public void Build(IStatsProvider statsProvider)
+        public void Build()
         {
             var uniqueEntries = _entries.ToArray();
-            var countriesList = uniqueEntries.Select(x => x.CountryRegion).Distinct();
+            var countriesList = uniqueEntries.Select(x => x.CountryRegion).Concat(_cache.Countries).Distinct();
 
             Parallel.ForEach(countriesList, country =>
             {
@@ -87,7 +101,21 @@ namespace ReportsGenerator.Model.Reports
 
                 var countryEntries = uniqueEntries.Where(x => x.CountryRegion == country);
                 var basicReports = new List<BasicReport>();
-                var graphStructure = new StatsReport(country, statsProvider.GetCountryStatsName(country), statsProvider);
+                var statsInfoWalkerBuilder = new StatsInfoReportWalkerBuilder(country, _cache.StatsProvider);
+
+                if (_cache.Countries.Contains(country))
+                {
+                    basicReports.AddRange(_cache.GetCachedDataReports(country));
+
+                    foreach (var (_, province, county, statsName) in _cache.GetCachedMetadataReports(country)
+                        .Where(r => !string.IsNullOrEmpty(r.Province)))
+                    {
+                        if (string.IsNullOrEmpty(county))
+                            statsInfoWalkerBuilder.AddProvince(province, statsName);
+                        else
+                            statsInfoWalkerBuilder.AddCounty(province, county, statsName);
+                    }
+                }
 
                 if (country == "Russia")
                 {
@@ -104,19 +132,7 @@ namespace ReportsGenerator.Model.Reports
 
                         foreach (var dayCountryEntry in dayCountryEntries)
                         {
-                            switch (dayCountryEntry.IsoLevel)
-                            {
-                                case IsoLevel.ProvinceState:
-                                    graphStructure.AddProvince(dayCountryEntry.ProvinceState, dayCountryEntry.StatsName);
-                                    break;
-
-                                case IsoLevel.County:
-                                    graphStructure.AddCounty(dayCountryEntry.County, dayCountryEntry.StatsName,
-                                        dayCountryEntry.ProvinceState);
-                                    break;
-                            }
-
-                            basicReports.Add(CreateBasicReport(dayCountryEntry));
+                            ProcessEntry(dayCountryEntry, basicReports, statsInfoWalkerBuilder, _cache);
                         }
                     }
                 }
@@ -124,53 +140,52 @@ namespace ReportsGenerator.Model.Reports
                 {
                     foreach (var countryEntry in countryEntries)
                     {
-                        switch (countryEntry.IsoLevel)
-                        {
-                            case IsoLevel.ProvinceState:
-                                graphStructure.AddProvince(countryEntry.ProvinceState, countryEntry.StatsName);
-                                break;
-
-                            case IsoLevel.County:
-                                graphStructure.AddCounty(countryEntry.County, countryEntry.StatsName, countryEntry.ProvinceState);
-                                break;
-                        }
-
-                        basicReports.Add(CreateBasicReport(countryEntry));
+                        ProcessEntry(countryEntry, basicReports, statsInfoWalkerBuilder, _cache);
                     }
                 }
 
-                _reportsWalkers.TryAdd(country, new BasicReportsWalker(basicReports, graphStructure));
-                _graphStructures.TryAdd(country, graphStructure);
+                var statsInfoWalker = statsInfoWalkerBuilder.Build();
+                _reportsWalkers.TryAdd(country, new BasicReportsWalker(basicReports, statsInfoWalker));
+                _statsInfoWalkers.TryAdd(country, statsInfoWalker);
             });
+        }
+
+        private static void ProcessEntry(Entry entry, ICollection<BasicReport> dataCollection,
+            StatsInfoReportWalkerBuilder metadataBuilder, ReportsBuilderCache builderCache)
+        {
+            var dataReport = CreateBasicReport(entry);
+            dataCollection.Add(dataReport);
+            builderCache.AddNewDataReport(entry.CountryRegion, dataReport);
+
+            switch (entry.IsoLevel)
+            {
+                case IsoLevel.ProvinceState:
+                    metadataBuilder.AddProvince(entry.ProvinceState, entry.StatsName);
+                    builderCache.AddProvinceMetadata(entry.CountryRegion, entry.ProvinceState, entry.StatsName);
+                    break;
+
+                case IsoLevel.County:
+                    metadataBuilder.AddCounty(entry.ProvinceState, entry.County, entry.StatsName);
+                    builderCache.AddCountyMetadata(entry.CountryRegion, entry.ProvinceState, entry.County,
+                        entry.StatsName);
+
+                    break;
+            }
         }
 
         /// <summary>
         /// Gets all data reports as <see cref="IFormattableReport{TRow,TName}"/> objects used to build reports.
         /// </summary>
         /// <returns>An <see cref="IEnumerable{T}"/> of <see cref="IFormattableReport{TRow,TName}"/>.</returns>
-        public IEnumerable<IFormattableReport<int, string>> DumpModelData() =>
-            _reportsWalkers.SelectMany(
-                rw => rw.Value.DumpReports().Select(br => new ModelDataReport(rw.Key, br)));
+        public IEnumerable<IFormattableReport<int, string>> DumpModelData(bool newOnly = true) =>
+            _cache.DumpData(newOnly);
 
         /// <summary>
         /// Gets all metadata reports as <see cref="IFormattableReport{TRow,TName}"/> objects used to build reports.
         /// </summary>
         /// <returns>An <see cref="IEnumerable{T}"/> of <see cref="IFormattableReport{TRow,TName}"/>.</returns>
-        public IEnumerable<IFormattableReport<int, string>> DumpModelMetadata()
-        {
-            foreach (var graphStructure in _graphStructures)
-            {
-                yield return new ModelMetadataReport(graphStructure.Key, graphStructure.Value.Root);
-                foreach (var provinceRoot in graphStructure.Value.Root.Children)
-                {
-                    yield return new ModelMetadataReport(graphStructure.Key, provinceRoot);
-                    foreach (var countyRoot in provinceRoot.Children)
-                    {
-                        yield return new ModelMetadataReport(graphStructure.Key, countyRoot);
-                    }
-                }
-            }
-        }
+        public IEnumerable<IFormattableReport<int, string>> DumpModelMetadata(bool newOnly = true) =>
+            _cache.DumpMetadata(newOnly);
 
         /// <summary>
         /// Returns the <see cref="CountryReport"/> for the particular country name.
@@ -189,11 +204,11 @@ namespace ReportsGenerator.Model.Reports
         }
 
         /// <summary>
-        /// Returns the <see cref="StatsReport"/> for the particular country name.
+        /// Returns the <see cref="StatsInfoReportWalker"/> for the particular country name.
         /// </summary>
         /// <param name="countryName">Country name to retrieve.</param>
-        /// <returns>The <see cref="StatsReport"/> for the particular country name.</returns>
-        public StatsReport GetCountryStats(string countryName) => _graphStructures[countryName];
+        /// <returns>The <see cref="StatsInfoReportWalker"/> for the particular country name.</returns>
+        public StatsInfoReportWalker GetCountryStats(string countryName) => _statsInfoWalkers[countryName];
 
         /// <summary>
         /// Returns the <see cref="DayReport"/> for the particular day.
@@ -212,141 +227,21 @@ namespace ReportsGenerator.Model.Reports
             return _dayReports[day];
         }
 
-        private static BasicReport CreateBasicReport(Entry entry) => entry.IsoLevel switch
+        private static BasicReport CreateBasicReport(Entry entry)
         {
-            IsoLevel.CountryRegion => new BasicReport
+            var template = new BasicReport
             {
-                Name = entry.CountryRegion,
                 Day = entry.LastUpdate,
-                Total = Metrics.FromEntry(entry)
-            },
-
-            IsoLevel.ProvinceState => new BasicReport
-            {
-                Name = entry.ProvinceState,
-                Parent = entry.CountryRegion,
-                Day = entry.LastUpdate,
-                Total = Metrics.FromEntry(entry)
-            },
-
-            IsoLevel.County => new BasicReport
-            {
-                Name = entry.County,
-                Parent = entry.ProvinceState,
-                Day = entry.LastUpdate,
-                Total = Metrics.FromEntry(entry)
-            },
-
-            _ => throw new ArgumentOutOfRangeException(nameof(entry.IsoLevel), $"Unknown ISO level of {entry}")
-        };
-
-        private class ModelDataReport : IFormattableReport<int, string>
-        {
-            private static readonly string[] FormattableReportProperties =
-            {
-                "Day",
-                "Country",
-                "Province",
-                "County",
-                "Total"
+                Total = new Metrics(entry.Confirmed, entry.Active, entry.Recovered, entry.Deaths)
             };
 
-            private readonly string _countryName;
-            private readonly BasicReport _report;
-            private readonly IsoLevel _reportLevel;
-
-            public ModelDataReport(string countryName, BasicReport report)
+            return entry.IsoLevel switch
             {
-                _countryName = countryName;
-                _report = report;
-                _reportLevel =
-                    _report.Name == _countryName ? IsoLevel.CountryRegion :
-                    _report.Parent == _countryName ? IsoLevel.ProvinceState :
-                    IsoLevel.County;
-            }
+                IsoLevel.CountryRegion => template with { Name = entry.CountryRegion },
+                IsoLevel.ProvinceState => template with { Name = entry.ProvinceState, Parent = entry.CountryRegion },
+                IsoLevel.County => template with { Name = entry.County, Parent = entry.ProvinceState },
 
-            IEnumerable<string> IFormattableReport<int, string>.Name { get; } = new[] { "data" };
-
-            IEnumerable<string> IFormattableReport<int, string>.Properties { get; } = FormattableReportProperties;
-
-            ReportType IFormattableReport<int, string>.ReportType { get; } = ReportType.Model;
-            IEnumerable<int> IFormattableReport<int, string>.RowIds { get; } = new[] { 0 };
-
-            object IFormattableReport<int, string>.GetValue(string property, int key) => property switch
-            {
-                "Day" => _report.Day.ToString("MM-dd-yyyy"),
-                "Country" => _countryName,
-                "Province" => _reportLevel switch
-                {
-                    IsoLevel.CountryRegion => string.Empty,
-                    IsoLevel.ProvinceState => _report.Name,
-                    IsoLevel.County => _report.Parent,
-                    _ => throw new ArgumentOutOfRangeException()
-                },
-                "County" => _reportLevel switch
-                {
-                    IsoLevel.CountryRegion => string.Empty,
-                    IsoLevel.ProvinceState => string.Empty,
-                    IsoLevel.County => _report.Name,
-                    _ => throw new ArgumentOutOfRangeException()
-                },
-                "Total" => _report.Total,
-                _ => throw new ArgumentOutOfRangeException(nameof(property), property, null)
-            };
-        }
-
-        private class ModelMetadataReport : IFormattableReport<int, string>
-        {
-            private static readonly string[] FormattableReportProperties =
-            {
-                "Country",
-                "Province",
-                "County",
-                "Continent",
-                "Population"
-            };
-
-            private readonly string _countryName;
-            private readonly StatsReportNode _report;
-            private readonly IsoLevel _reportLevel;
-
-            public ModelMetadataReport(string countryName, StatsReportNode report)
-            {
-                _countryName = countryName;
-                _report = report;
-                _reportLevel =
-                    report.Parent == StatsReportNode.Empty ? IsoLevel.CountryRegion :
-                    report.Parent.Name == _countryName ? IsoLevel.ProvinceState :
-                    IsoLevel.County;
-            }
-
-            IEnumerable<string> IFormattableReport<int, string>.Name => new[] { "metadata" };
-
-            IEnumerable<string> IFormattableReport<int, string>.Properties => FormattableReportProperties;
-
-            ReportType IFormattableReport<int, string>.ReportType => ReportType.Model;
-            IEnumerable<int> IFormattableReport<int, string>.RowIds => new[] { 0 };
-
-            object IFormattableReport<int, string>.GetValue(string property, int key) => property switch
-            {
-                "Country" => _countryName,
-                "Province" => _reportLevel switch
-                {
-                    IsoLevel.CountryRegion => string.Empty,
-                    IsoLevel.ProvinceState => _report.Name,
-                    IsoLevel.County => _report.Parent.Name,
-                    _ => throw new ArgumentOutOfRangeException(),
-                },
-                "County" => _reportLevel switch
-                {
-                    IsoLevel.CountryRegion => string.Empty,
-                    IsoLevel.ProvinceState => string.Empty,
-                    IsoLevel.County => _report.Name,
-                    _ => throw new ArgumentOutOfRangeException(),
-                },
-                "Continent" => _report.Continent,
-                "Population" => _report.Population,
-                _ => throw new ArgumentOutOfRangeException()
+                _ => throw new ArgumentOutOfRangeException(nameof(entry.IsoLevel), $"Unknown ISO level of {entry}")
             };
         }
     }

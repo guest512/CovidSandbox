@@ -9,20 +9,7 @@
         /// Gets an empty <see cref="Metrics"/>.
         /// </summary>
         public static Metrics Empty { get; } = new(0, 0, 0, 0);
-
-        /// <summary>
-        /// A helper function that converts <see cref="Entry"/> to <see cref="Metrics"/>.
-        /// </summary>
-        /// <param name="entry">An object to convert.</param>
-        /// <returns>A new <see cref="Metrics"/> instance, that contains values from <see cref="Entry"/> object.</returns>
-        public static Metrics FromEntry(Entry entry)
-        {
-            return entry != Entry.Empty ? new Metrics(entry.Confirmed,
-                entry.Active,
-                entry.Recovered,
-                entry.Deaths) : Metrics.Empty;
-        }
-
+        
         /// <summary>
         /// Subtracts 'right' <see cref="Metrics"/> instance from 'left' <see cref="Metrics"/> instance.
         /// </summary>

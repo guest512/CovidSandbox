@@ -28,6 +28,6 @@ namespace ReportsGenerator.Model.Processors
         public override Origin GetOrigin(Row row) => Origin.Yandex;
 
         /// <inheritdoc />
-        public override string GetProvinceName(Row row) => row[Field.ProvinceState];
+        public override string GetProvinceName(Row row) => row[FieldId.ProvinceState];
     }
 }

@@ -12,10 +12,10 @@ using ReportsGenerator.Model.Processors;
 using ReportsGenerator.Model.Reports;
 using ReportsGenerator.Utils;
 
+const string dataRoot = "Data";
+
 static string GetDataFolder<T>() where T : IDataSource
 {
-    const string dataRoot = "Data";
-
     if (typeof(T) == typeof(JHopkinsDataSource))
     {
         return Path.Combine(dataRoot, "JHopkins");
@@ -29,6 +29,11 @@ static string GetDataFolder<T>() where T : IDataSource
     if (typeof(T) == typeof(MiscDataSource))
     {
         return Path.Combine(dataRoot, "Misc");
+    }
+
+    if (typeof(T) == typeof(ModelCacheDataSource))
+    {
+        return Path.Combine(dataRoot, ".cache");
     }
 
     throw new ArgumentOutOfRangeException(nameof(T));
@@ -51,8 +56,45 @@ static Dictionary<RowVersion, IRowProcessor> GetRowProcessors(INames namesServic
     return rowProcessors;
 }
 
+static void SaveReports(string dest, ReportsBuilder reportsBuilder, ILogger logger)
+{
+    using ReportsSaver<string> reportsSaver = new(new CsvReportFormatter(), new CsvFileReportStorage(dest, true), new NullLogger());
+
+    logger.WriteInfo("Create day by day reports...");
+    Parallel.ForEach(reportsBuilder.AvailableDates.Select(reportsBuilder.GetDayReport),
+        reportsSaver.WriteReport);
+
+    logger.WriteInfo("Create country reports...");
+    var countryReports = reportsBuilder.AvailableCountries.Select(reportsBuilder.GetCountryReport).ToArray();
+
+    Parallel.ForEach(countryReports, reportsSaver.WriteReport);
+    Parallel.ForEach(countryReports.SelectMany(cr => cr.RegionReports), reportsSaver.WriteReport);
+
+    logger.WriteInfo("Create country stats...");
+    var countryStats = reportsBuilder.AvailableCountries.Select(reportsBuilder.GetCountryStats).ToArray();
+
+    Parallel.ForEach(countryStats.Select(statsWalker => statsWalker.Country), reportsSaver.WriteReport); //Country
+    Parallel.ForEach(
+        countryStats.SelectMany(statsWalker => statsWalker.Provinces)
+            .Where(r => r.Name != Consts.MainCountryRegion && r.Name != Consts.OtherCountryRegion),
+        reportsSaver.WriteReport); //Region
+    Parallel.ForEach(
+        countryStats.SelectMany(statsWalker =>
+            statsWalker.Provinces.Where(r => r.Name != Consts.MainCountryRegion && r.Name != Consts.OtherCountryRegion)
+                .SelectMany(province => statsWalker.GetCounties(province.Name))), reportsSaver.WriteReport); // County
+}
+
+static void UpdateCache(string cacheLocation, ReportsBuilder reportsBuilder, ILogger logger)
+{
+    using ReportsSaver<string> reportsSaver = new(new CsvReportFormatter(), new CsvFileReportStorage(cacheLocation, false), new NullLogger());
+    logger.WriteInfo("Create model cache...");
+    Parallel.ForEach(reportsBuilder.DumpModelData(), reportsSaver.WriteReport);
+    Parallel.ForEach(reportsBuilder.DumpModelMetadata(), reportsSaver.WriteReport);
+
+}
+
 var logger = new ConsoleLogger();
-ReportsSaver<string>? reportsSaver = null;
+
 
 try
 {
@@ -71,16 +113,21 @@ try
 
     var miscStorage = new MiscStorage(new MiscDataSource(GetDataFolder<MiscDataSource>(), logger), logger);
     var entryFactory = new EntryFactory(GetRowProcessors(miscStorage, miscStorage, logger), logger);
-    reportsSaver = new ReportsSaver<string>(new CsvReportFormatter(), new CsvFileReportStorage(argsParser.ReportsDir, true), new NullLogger());
-    var reportsBuilder = new ReportsBuilder(logger);
+    
+    var reportsBuilder = new ReportsBuilder(miscStorage, logger);
+
+    logger.WriteInfo("Initialize cache...");
+    reportsBuilder.InitializeCache(new ModelCacheDataSource(GetDataFolder<ModelCacheDataSource>(), logger),out var lastDay);
 
     logger.WriteInfo("Reading raw data...");
     logger.IndentIncrease();
 
-    miscStorage.Init();
     foreach (var ds in dataSources)
     {
-        await foreach (var row in ds.GetReader().GetRowsAsync(entryFactory.CreateEntry))
+        await foreach (var row in ds.GetReader()
+            .GetRowsAsync(
+                field => field.Id == FieldId.LastUpdate && field.Value.AsDate() > lastDay,
+                entryFactory.CreateEntry))
         {
             parsedData.Add(row);
         }
@@ -92,36 +139,12 @@ try
     logger.IndentIncrease();
 
     reportsBuilder.AddEntries(parsedData);
-    reportsBuilder.Build(miscStorage);
+    reportsBuilder.Build();
 
     logger.IndentDecrease();
 
-    logger.WriteInfo("Create day by day reports...");
-    Parallel.ForEach(reportsBuilder.AvailableDates.Select(reportsBuilder.GetDayReport),
-        reportsSaver.WriteReport);
-
-    logger.WriteInfo("Create country reports...");
-    var countryReports = reportsBuilder.AvailableCountries.Select(reportsBuilder.GetCountryReport).ToArray();
-
-    Parallel.ForEach(countryReports, reportsSaver.WriteReport);
-    Parallel.ForEach(countryReports.SelectMany(cr => cr.RegionReports), reportsSaver.WriteReport);
-
-    logger.WriteInfo("Create country stats...");
-    var countryStats = reportsBuilder.AvailableCountries.Select(reportsBuilder.GetCountryStats).ToArray();
-
-    Parallel.ForEach(countryStats.Select(cs => cs.Root), reportsSaver.WriteReport); //Country
-    Parallel.ForEach(
-        countryStats.SelectMany(cs => cs.Root.Children)
-            .Where(r => r.Name != Consts.MainCountryRegion && r.Name != Consts.OtherCountryRegion),
-        reportsSaver.WriteReport); //Region
-    Parallel.ForEach(
-        countryStats.SelectMany(cs =>
-            cs.Root.Children.Where(r => r.Name != Consts.MainCountryRegion && r.Name != Consts.OtherCountryRegion)
-                .SelectMany(csc => csc.Children)), reportsSaver.WriteReport); // County
-
-    logger.WriteInfo("Create model cache...");
-    Parallel.ForEach(reportsBuilder.DumpModelData(), reportsSaver.WriteReport);
-    Parallel.ForEach(reportsBuilder.DumpModelMetadata(), reportsSaver.WriteReport);
+    SaveReports(argsParser.ReportsDir, reportsBuilder, logger);
+    UpdateCache(dataRoot, reportsBuilder, logger);
 }
 catch (Exception ex)
 {
@@ -137,7 +160,6 @@ finally
 {
     Convertors.SetLogger(new NullLogger());
     logger.Dispose();
-    reportsSaver?.Dispose();
 }
 
 return 0;
