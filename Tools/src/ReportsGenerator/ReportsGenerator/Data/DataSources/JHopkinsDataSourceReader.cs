@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using ReportsGenerator.Data.Providers;
-using ReportsGenerator.Utils;
 
 namespace ReportsGenerator.Data.DataSources
 {
