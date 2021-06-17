@@ -1,4 +1,6 @@
-![Build](https://github.com/guest512/CovidSandbox/workflows/Build/badge.svg)
+[![Build](https://github.com/guest512/CovidSandbox/actions/workflows/build.yml/badge.svg)](https://github.com/guest512/CovidSandbox/actions/workflows/build.yml)
+[![Code Smells](https://sonarcloud.io/api/project_badges/measure?project=guest512_CovidSandbox&metric=code_smells)](https://sonarcloud.io/dashboard?id=guest512_CovidSandbox)
+[![Coverage](https://sonarcloud.io/api/project_badges/measure?project=guest512_CovidSandbox&metric=coverage)](https://sonarcloud.io/dashboard?id=guest512_CovidSandbox)
 
 # CovidSandbox
 
