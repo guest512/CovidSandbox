@@ -58,7 +58,7 @@ static Dictionary<RowVersion, IRowProcessor> GetRowProcessors(INames namesServic
 
 static void SaveReports(string dest, ReportsBuilder reportsBuilder, ILogger logger)
 {
-    using ReportsSaver<string> reportsSaver = new(new CsvReportFormatter(), new CsvFileReportStorage(dest, true), new NullLogger());
+    using ReportsSaver<string> reportsSaver = new(new CsvReportFormatter(), new CsvFileReportStorage(dest, true));
 
     logger.WriteInfo("Create day by day reports...");
     Parallel.ForEach(reportsBuilder.AvailableDates.Select(reportsBuilder.GetDayReport),
@@ -86,7 +86,7 @@ static void SaveReports(string dest, ReportsBuilder reportsBuilder, ILogger logg
 
 static void UpdateCache(string cacheLocation, ReportsBuilder reportsBuilder, ILogger logger)
 {
-    using ReportsSaver<string> reportsSaver = new(new CsvReportFormatter(), new CsvFileReportStorage(cacheLocation, false), new NullLogger());
+    using ReportsSaver<string> reportsSaver = new(new CsvReportFormatter(), new CsvFileReportStorage(cacheLocation, false));
     logger.WriteInfo("Create model cache...");
     Parallel.ForEach(reportsBuilder.DumpModelData(), reportsSaver.WriteReport);
     Parallel.ForEach(reportsBuilder.DumpModelMetadata(), reportsSaver.WriteReport);

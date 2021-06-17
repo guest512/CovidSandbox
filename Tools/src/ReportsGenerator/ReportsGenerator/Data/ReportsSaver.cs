@@ -1,6 +1,5 @@
 using System;
 using ReportsGenerator.Data.IO;
-using ReportsGenerator.Utils;
 
 namespace ReportsGenerator.Data
 {
@@ -11,7 +10,6 @@ namespace ReportsGenerator.Data
     public class ReportsSaver<TFormat> : IDisposable
     {
         private readonly IReportFormatter<TFormat> _formatter;
-        private readonly ILogger _logger;
         private readonly IReportStorage<TFormat> _storage;
 
         /// <summary>
@@ -19,12 +17,10 @@ namespace ReportsGenerator.Data
         /// </summary>
         /// <param name="formatter">Desired report formatter to read reports.</param>
         /// <param name="storage">Desired storage to save reports data.</param>
-        /// <param name="logger">A <see cref="ILogger"/> instance.</param>
-        public ReportsSaver(IReportFormatter<TFormat> formatter, IReportStorage<TFormat> storage, ILogger logger)
+        public ReportsSaver(IReportFormatter<TFormat> formatter, IReportStorage<TFormat> storage)
         {
             _formatter = formatter;
             _storage = storage;
-            _logger = logger;
         }
 
         /// <summary>

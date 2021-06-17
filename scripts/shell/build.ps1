@@ -125,7 +125,7 @@ function Build-Local {
     dotnet.exe msbuild Tools/build/build.proj /t:Build /p:Configuration=Release -v:n
     Confirm-Last-Result $?
 
-    dotnet.exe test Tools/src --no-build -c:Release
+    dotnet.exe test Tools/src --no-build -c:Release /p:CollectCoverage=true /p:CoverletOutputFormat=opencover /p:CoverletOutput="$PWD/bin/TestReports/"
     Confirm-Last-Result $?
 }
 
