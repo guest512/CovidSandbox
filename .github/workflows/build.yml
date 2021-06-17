@@ -52,7 +52,7 @@ jobs:
       run: chmod +x ./scripts/shell/build.sh && ./scripts/shell/build.sh --docker --build-only
  
   sonarcloud:
-    name: Build
+    name: Sonarcloud check
     runs-on: windows-latest
     steps:
       - name: Set up JDK 11
