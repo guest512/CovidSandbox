@@ -24,12 +24,9 @@ namespace ReportsGenerator.Data.DataSources
         }
 
         /// <inheritdoc />
-        public IDataSourceReader GetReader()
-        {
-            return new MiscDataSourceReader(
-                Directory.EnumerateFileSystemEntries(_location),
-                new MiscDataProvider(),
-                _logger);
-        }
+        public IDataSourceReader GetReader() => new MiscDataSourceReader(
+		        Directory.EnumerateFileSystemEntries(_location),
+		        new MiscDataProvider(),
+		        _logger);
     }
 }

@@ -9,6 +9,7 @@
         /// Used in JHopkins files.
         /// US only. Federal Information Processing Standards code that uniquely identifies counties within the USA.
         /// </summary>
+        // ReSharper disable once InconsistentNaming
         FIPS,
         
         /// <summary>
@@ -119,6 +120,7 @@
         /// <summary>
         /// Unique Identifier for each row entry. Ignored.
         /// </summary>
+        // ReSharper disable once InconsistentNaming
         UID,
 
         /// <summary>

@@ -1,7 +1,5 @@
 ﻿using System;
 using System.Globalization;
-using ReportsGenerator.Data;
-using ReportsGenerator.Model;
 
 namespace ReportsGenerator.Utils
 {

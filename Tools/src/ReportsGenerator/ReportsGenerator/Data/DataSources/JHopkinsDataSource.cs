@@ -24,12 +24,9 @@ namespace ReportsGenerator.Data.DataSources
         }
 
         /// <inheritdoc />
-        public IDataSourceReader GetReader()
-        {
-            return new JHopkinsDataSourceReader(
-                Directory.EnumerateFiles(_location, "*.csv"),
-                new JHopkinsDataProvider(),
-                _logger);
-        }
+        public IDataSourceReader GetReader() => new JHopkinsDataSourceReader(
+            Directory.EnumerateFiles(_location, "*.csv"), 
+            new JHopkinsDataProvider(), 
+            _logger);
     }
 }

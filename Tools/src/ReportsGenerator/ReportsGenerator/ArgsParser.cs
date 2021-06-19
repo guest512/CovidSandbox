@@ -32,6 +32,7 @@ namespace ReportsGenerator
         /// </summary>
         public string ReportsDir { get; private set; } = string.Empty;
 
+        // ReSharper disable once InconsistentNaming
         private void ParseArgs(string argKVPair)
         {
             _logger.WriteInfo($"--Parsing '{argKVPair}' argument");

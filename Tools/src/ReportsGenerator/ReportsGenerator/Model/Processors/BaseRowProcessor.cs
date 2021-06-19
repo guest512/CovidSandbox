@@ -13,7 +13,7 @@ namespace ReportsGenerator.Model.Processors
         /// <summary>
         /// A <see cref="ILogger"/> instance.
         /// </summary>
-        protected readonly ILogger Logger;
+        private readonly ILogger _logger;
 
         private readonly IStatsProvider _statsProvider;
 
@@ -25,7 +25,7 @@ namespace ReportsGenerator.Model.Processors
         protected BaseRowProcessor(IStatsProvider statsProvider, ILogger logger)
         {
             _statsProvider = statsProvider;
-            Logger = logger;
+            _logger = logger;
         }
 
         /// <inheritdoc />
@@ -61,7 +61,7 @@ namespace ReportsGenerator.Model.Processors
                 {
                     if (countyNameSet)
                     {
-                        Logger.WriteWarning("The row has country and county names but doesn't have province name. Treat it as country level.");
+                        _logger.WriteWarning("The row has country and county names but doesn't have province name. Treat it as country level.");
                         Debugger.Break();
                     }
 
@@ -70,7 +70,7 @@ namespace ReportsGenerator.Model.Processors
             }
             else
             {
-                Logger.WriteError("The row doesn't have a country name.");
+                _logger.WriteError("The row doesn't have a country name.");
                 Debugger.Break();
                 throw new InvalidOperationException("The row doesn't have a country name.");
             }
