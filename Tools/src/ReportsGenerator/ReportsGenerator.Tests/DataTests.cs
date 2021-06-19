@@ -104,18 +104,18 @@ namespace ReportsGenerator.Tests
         }
 
         public static KeyValuePair<string, DateTime>[] Dates = {
-            new KeyValuePair<string, DateTime>("1/31/2020 23:59",new DateTime(2020,1,31)),
-            new KeyValuePair<string, DateTime>("2/1/2020 13:33", new DateTime(2020,2,1)),
-            new KeyValuePair<string, DateTime>("2/1/2020 1:52", new DateTime(2020,2,1)),
+            new("1/31/2020 23:59",new DateTime(2020,1,31)),
+            new("2/1/2020 13:33", new DateTime(2020,2,1)),
+            new("2/1/2020 1:52", new DateTime(2020,2,1)),
 
-            new KeyValuePair<string, DateTime>("3/22/20 23:45", new DateTime(2020,3,22)),
-            new KeyValuePair<string, DateTime>("4/4/20 23:34", new DateTime(2020,4,4)),
+            new("3/22/20 23:45", new DateTime(2020,3,22)),
+            new("4/4/20 23:34", new DateTime(2020,4,4)),
 
-            new KeyValuePair<string, DateTime>("2020-06-05 02:33:06", new DateTime(2020,6,5)),
-            new KeyValuePair<string, DateTime>("2020-03-21T20:43:02", new DateTime(2020,3,21)),
+            new("2020-06-05 02:33:06", new DateTime(2020,6,5)),
+            new("2020-03-21T20:43:02", new DateTime(2020,3,21)),
 
-            new KeyValuePair<string, DateTime>("03-21-2020", new DateTime(2020,3,21)),
-            new KeyValuePair<string, DateTime>("22.04.2020", new DateTime(2020,4,22)), 
+            new("03-21-2020", new DateTime(2020,3,21)),
+            new("22.04.2020", new DateTime(2020,4,22)), 
         };
 
         [Test]

@@ -24,11 +24,5 @@ namespace ReportsGenerator.Data.IO
         /// </summary>
         /// <param name="header">Header to write.</param>
         void WriteHeader(IEnumerable<string> header);
-
-        void IDisposable.Dispose()
-        {
-            Close();
-            GC.SuppressFinalize(this);
-        }
     }
 }

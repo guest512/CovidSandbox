@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Text;
 
@@ -50,6 +51,13 @@ namespace ReportsGenerator.Data.IO.Csv
 
             _file.Position = 0;
             _fileWriter.WriteLine(string.Join(',', header));
+        }
+
+        /// <inheritdoc />
+        public void Dispose()
+        {
+            Close();
+            GC.SuppressFinalize(this);
         }
     }
 }

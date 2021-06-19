@@ -33,8 +33,9 @@ namespace ReportsGenerator.Data.Providers
             var headersCount = header.Count;
 
             var (rowVersion, fields) = VersionFieldsDictionary
-                .FirstOrDefault(_ => headersCount == _.Value.Count() && ValidateColumnsOrder(_.Key, header));
+                .FirstOrDefault(_ => headersCount == _.Value.Count && ValidateColumnsOrder(_.Key, header));
 
+            // ReSharper disable once ConditionIsAlwaysTrueOrFalse
             return fields == null ? RowVersion.Unknown : rowVersion;
         }
 

@@ -1,9 +1,5 @@
-﻿using System.Collections.Generic;
-using NUnit.Framework;
-using ReportsGenerator.Data;
+﻿using NUnit.Framework;
 using ReportsGenerator.Model;
-using ReportsGenerator.Model.Processors;
-using ReportsGenerator.Utils;
 
 namespace ReportsGenerator.Tests
 {
