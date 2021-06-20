@@ -37,6 +37,8 @@ namespace ReportsGenerator.Tests
 			{
 				await Task.Delay(500);
 			}
+
+			Assert.That(logger.Indentation, Is.EqualTo(0));
 		}
 	}
 }
