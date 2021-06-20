@@ -24,12 +24,9 @@ namespace ReportsGenerator.Data.DataSources
         }
 
         /// <inheritdoc />
-        public IDataSourceReader GetReader()
-        {
-            return new YandexRussiaDataSourceReader(
+        public IDataSourceReader GetReader() => new YandexRussiaDataSourceReader(
                 Path.Combine(_location, "Russia.csv"),
                 new YandexRussiaDataProvider(),
                 _logger);
-        }
     }
 }

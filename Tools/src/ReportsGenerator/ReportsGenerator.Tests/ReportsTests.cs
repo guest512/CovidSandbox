@@ -11,8 +11,8 @@ namespace ReportsGenerator.Tests
     [TestFixture]
     public class ReportsTests
     {
-        private BasicReportsWalker? walker;
-        private StatsInfoReportWalker? structure;
+        private BasicReportsWalker? _walker;
+        private StatsInfoReportWalker? _structure;
 
         [OneTimeSetUp]
         public void InitReports()
@@ -39,8 +39,8 @@ namespace ReportsGenerator.Tests
                 reports.Add(CreateReport(startDate.AddDays(i), 33846 + data[..(i+1)].Sum()));
             }
 
-            structure = new StatsInfoReportWalker("Test");
-            walker = new BasicReportsWalker(reports, structure);
+            _structure = new StatsInfoReportWalker("Test");
+            _walker = new BasicReportsWalker(reports, _structure);
 
         }
 
@@ -69,9 +69,9 @@ namespace ReportsGenerator.Tests
                 1.033241,
             };
             const double eps = 1e-5;
-            var countryReport = new CountryReport("test", walker!, structure!);
+            var countryReport = new CountryReport("test", _walker!, _structure!);
 
-            var actual = new[] {walker!.StartDay, walker.LastDay}.GetContinuousDateRange()
+            var actual = new[] {_walker!.StartDay, _walker.LastDay}.GetContinuousDateRange()
                 .Select(day => countryReport.GetRt(day)).ToArray();
 
             CollectionAssert.AreEqual(result,actual,new DoubleComparer(eps));

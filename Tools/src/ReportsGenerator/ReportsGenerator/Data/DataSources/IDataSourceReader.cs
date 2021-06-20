@@ -23,10 +23,22 @@ namespace ReportsGenerator.Data.DataSources
     public interface IDataSourceReader
     {
         /// <summary>
+        /// Gets a collection of <see cref="FieldId"/> that could be used in <see cref="RowsFilter"/> calls.
+        /// </summary>
+        IEnumerable<FieldId> SupportedFilters { get; }
+
+        /// <summary>
         /// Reads <see cref="IDataSource"/> and returns its content as an <see cref="IEnumerable{T}"/> of <see cref="Row"/>.
         /// </summary>
         /// <returns>Rows collection.</returns>
         IEnumerable<Row> GetRows();
+
+        /// <summary>
+        /// Reads <see cref="IDataSource"/> and returns its content as an <see cref="IEnumerable{T}"/> of <see cref="Row"/>.
+        /// </summary>
+        /// <param name="filter">A function to call to determine whether or not row(-s) should be skipped.</param>
+        /// <returns>Rows collection.</returns>
+        IEnumerable<Row> GetRows(RowsFilter filter);
 
         /// <summary>
         /// Reads <see cref="IDataSource"/> and returns its content as an <see cref="IAsyncEnumerable{T}"/> of <see cref="Row"/>.
@@ -41,18 +53,6 @@ namespace ReportsGenerator.Data.DataSources
         /// <param name="callback">A function to call to convert <see cref="Row"/> to instance of <typeparamref name="TResult"/>.</param>
         /// <returns><typeparamref name="TResult"/> objects collection.</returns>
         IAsyncEnumerable<TResult> GetRowsAsync<TResult>(GetRowsCallback<TResult> callback);
-
-        /// <summary>
-        /// Gets a collection of <see cref="FieldId"/> that could be used in <see cref="RowsFilter"/> calls.
-        /// </summary>
-        IEnumerable<FieldId> SupportedFilters { get; }
-
-        /// <summary>
-        /// Reads <see cref="IDataSource"/> and returns its content as an <see cref="IEnumerable{T}"/> of <see cref="Row"/>.
-        /// </summary>
-        /// <param name="filter">A function to call to determine whether or not row(-s) should be skipped.</param>
-        /// <returns>Rows collection.</returns>
-        IEnumerable<Row> GetRows(RowsFilter filter);
 
         /// <summary>
         /// Reads <see cref="IDataSource"/> and returns its content as an <see cref="IAsyncEnumerable{T}"/> of <see cref="Row"/>.

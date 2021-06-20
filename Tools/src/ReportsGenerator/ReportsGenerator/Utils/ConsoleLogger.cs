@@ -14,7 +14,7 @@ namespace ReportsGenerator.Utils
         private const int MaxIndentation = 20;
 
         // Locker is needed for thread-safety.
-        private readonly SemaphoreSlim _locker = new SemaphoreSlim(1, 1);
+        private readonly SemaphoreSlim _locker = new(1, 1);
 
         /// <inheritdoc />
         public int Indentation { get; private set; }

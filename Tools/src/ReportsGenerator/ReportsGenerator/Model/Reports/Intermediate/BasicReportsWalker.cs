@@ -54,7 +54,7 @@ namespace ReportsGenerator.Model.Reports.Intermediate
                 var countyWalkers =
                     reportsStructure.GetCounties(province).Select(county => new
                     {
-                        Name = county.Name,
+                        county.Name,
                         Walker = new BasicReportsWalker(
                             grouppedReports.First(grp => grp.Key == province).Where(br => br.Name == county.Name),
                             countyChildren)
