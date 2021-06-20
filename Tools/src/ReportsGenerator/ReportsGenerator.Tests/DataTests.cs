@@ -8,6 +8,7 @@ using ReportsGenerator.Utils;
 
 namespace ReportsGenerator.Tests
 {
+    [TestFixture]
     public class DataTests
     {
         [Test]
@@ -103,7 +104,7 @@ namespace ReportsGenerator.Tests
             Assert.DoesNotThrow(() => { provider.GetFields(version); });
         }
 
-        public static KeyValuePair<string, DateTime>[] Dates = {
+        private static KeyValuePair<string, DateTime>[] _dates = {
             new("1/31/2020 23:59",new DateTime(2020,1,31)),
             new("2/1/2020 13:33", new DateTime(2020,2,1)),
             new("2/1/2020 1:52", new DateTime(2020,2,1)),
@@ -119,10 +120,28 @@ namespace ReportsGenerator.Tests
         };
 
         [Test]
-        [TestCaseSource(nameof(Dates))]
+        [TestCaseSource(nameof(_dates))]
         public void ValidateDateParser(KeyValuePair<string, DateTime> data)
         {
             Assert.That(data.Key.AsDate(), Is.EqualTo(data.Value));
+        }
+
+        private static KeyValuePair<string, long>[] _longs =
+        {
+            new("0", 0),
+            new("", long.MinValue),
+            new("120", 120),
+            new("-120", -120),
+            new("45.0", 45),
+            new("-90.0", -90),
+            new("45.9", long.MinValue)
+        };
+
+        [Test]
+        [TestCaseSource(nameof(_longs))]
+        public void ValidateLongParser(KeyValuePair<string, long> data)
+        {
+            Assert.That(data.Key.AsLong(long.MinValue), Is.EqualTo(data.Value));
         }
 
         [Test]
