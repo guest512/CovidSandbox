@@ -1,0 +1,38 @@
+name: LocalBuild
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    types: [opened, synchronize, reopened]
+    branches: [ master ]
+
+jobs:
+  build:
+    name: Local build
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest] # For a list of available runner types, refer to 
+                                            # https://help.github.com/en/actions/reference/workflow-syntax-for-github-actions#jobsjob_idruns-on
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+      with:
+        submodules: false
+
+    # Install the .NET Core workload
+    - name: Install .NET Core
+      uses: actions/setup-dotnet@v1
+      with:
+        dotnet-version: 5.0.x
+
+    # Build app and tests
+    - name: Run local build script Windows
+      if: contains(runner.os, 'Windows')
+      run: powershell -ExecutionPolicy ByPass -File .\scripts\shell\build.ps1 -BuildOnly
+
+    - name: Run local build script ubuntu
+      if: contains(runner.os, 'Linux')
+      run: chmod +x ./scripts/shell/build.sh && ./scripts/shell/build.sh --build-only

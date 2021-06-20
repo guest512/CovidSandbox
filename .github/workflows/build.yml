@@ -8,37 +8,7 @@ on:
     branches: [ master ]
 
 jobs:
-  local_build:
-    name: Local build
-    runs-on: ${{ matrix.os }}
-    strategy:
-      matrix:
-        os: [ubuntu-latest, windows-latest] # For a list of available runner types, refer to 
-                                            # https://help.github.com/en/actions/reference/workflow-syntax-for-github-actions#jobsjob_idruns-on
-
-    steps:
-    - name: Checkout
-      uses: actions/checkout@v2
-      with:
-        submodules: false
-
-    # Install the .NET Core workload
-    - name: Install .NET Core
-      uses: actions/setup-dotnet@v1
-      with:
-        dotnet-version: 5.0.x
-
-    # Build app and tests
-    - name: Run local build script Windows
-      if: contains(runner.os, 'Windows')
-      run: powershell -ExecutionPolicy ByPass -File .\scripts\shell\build.ps1 -BuildOnly
-
-    - name: Run local build script ubuntu
-      if: contains(runner.os, 'Linux')
-      run: chmod +x ./scripts/shell/build.sh && ./scripts/shell/build.sh --build-only
-      
-  
-  docker_build:
+  build:
     name: Docker build
     runs-on: ubuntu-latest
     steps:
@@ -50,43 +20,3 @@ jobs:
 
     - name: Run docker build scripts
       run: chmod +x ./scripts/shell/build.sh && ./scripts/shell/build.sh --docker --build-only
- 
-  sonarcloud:
-    name: Sonarcloud check
-    runs-on: windows-latest
-    steps:
-      - name: Set up JDK 11
-        uses: actions/setup-java@v1
-        with:
-          java-version: 1.11
-      - uses: actions/checkout@v2
-        with:
-          fetch-depth: 0  # Shallow clones should be disabled for a better relevancy of analysis
-      - name: Cache SonarCloud packages
-        uses: actions/cache@v1
-        with:
-          path: ~\sonar\cache
-          key: ${{ runner.os }}-sonar
-          restore-keys: ${{ runner.os }}-sonar
-      - name: Cache SonarCloud scanner
-        id: cache-sonar-scanner
-        uses: actions/cache@v1
-        with:
-          path: .\.sonar\scanner
-          key: ${{ runner.os }}-sonar-scanner
-          restore-keys: ${{ runner.os }}-sonar-scanner
-      - name: Install SonarCloud scanner
-        if: steps.cache-sonar-scanner.outputs.cache-hit != 'true'
-        shell: powershell
-        run: |
-          New-Item -Path .\.sonar\scanner -ItemType Directory
-          dotnet tool update dotnet-sonarscanner --tool-path .\.sonar\scanner
-      - name: Build and analyze
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Needed to get PR information, if any
-          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-        shell: powershell
-        run: |
-          .\.sonar\scanner\dotnet-sonarscanner begin /k:"guest512_CovidSandbox" /o:"guest512" /d:sonar.login="${{ secrets.SONAR_TOKEN }}" /d:sonar.host.url="https://sonarcloud.io"
-          .\scripts\shell\build.ps1 -BuildOnly
-          .\.sonar\scanner\dotnet-sonarscanner end /d:sonar.login="${{ secrets.SONAR_TOKEN }}"
