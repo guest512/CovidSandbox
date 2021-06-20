@@ -24,12 +24,8 @@ namespace ReportsGenerator.Data.DataSources
         }
 
         /// <inheritdoc/> 
-        protected override Field CsvFieldCreator(FieldId key, string value, string fileName)
-        {
-            return key == FieldId.LastUpdate
-                ? new Field(key, fileName)
-                : new Field(key, value);
-        }
+        protected override Field CsvFieldCreator(FieldId key, string value, string fileName) =>
+            key == FieldId.LastUpdate ? new Field(key, fileName) : new Field(key, value);
 
         /// <inheritdoc/>
         protected override bool IsInvalidData(Row row)
@@ -80,9 +76,7 @@ namespace ReportsGenerator.Data.DataSources
         }
 
         /// <inheritdoc/>
-        protected override bool FilterFile(string filePath, RowsFilter filter)
-        {
-            return filter(new Field(FieldId.LastUpdate, Path.GetFileNameWithoutExtension(filePath)));
-        }
+        protected override bool FilterFile(string filePath, RowsFilter filter) => 
+            filter(new Field(FieldId.LastUpdate, Path.GetFileNameWithoutExtension(filePath)));
     }
 }

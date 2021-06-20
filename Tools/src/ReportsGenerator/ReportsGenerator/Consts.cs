@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace ReportsGenerator
+﻿namespace ReportsGenerator
 {
     /// <summary>
     /// Application constants.

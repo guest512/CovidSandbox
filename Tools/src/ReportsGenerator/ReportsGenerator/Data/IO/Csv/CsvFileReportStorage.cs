@@ -207,6 +207,20 @@ namespace ReportsGenerator.Data.IO.Csv
                 _realWriter.Value.WriteHeader(header);
                 _semaphore.Release();
             }
+
+            /// <inheritdoc />
+            public void Dispose()
+            {
+                Close();
+                GC.SuppressFinalize(this);
+            }
+        }
+
+        /// <inheritdoc />
+        public void Dispose()
+        {
+            Close();
+            GC.SuppressFinalize(this);
         }
     }
 }

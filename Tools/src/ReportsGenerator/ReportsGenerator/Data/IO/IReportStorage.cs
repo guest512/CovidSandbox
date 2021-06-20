@@ -21,11 +21,5 @@ namespace ReportsGenerator.Data.IO
         /// Closes storage and all its writers.
         /// </summary>
         void Close();
-
-        void IDisposable.Dispose()
-        {
-            Close();
-            GC.SuppressFinalize(this);
-        }
     }
 }
