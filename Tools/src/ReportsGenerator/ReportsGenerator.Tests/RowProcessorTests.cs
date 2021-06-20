@@ -22,7 +22,11 @@ namespace ReportsGenerator.Tests
 		}
 
 		[Test]
-		[TestCase("Country", "", "", IsoLevel.CountryRegion)]
+
+		[TestCase("", "Province", "County", default)]
+		[TestCase("", "Province", "", default)]
+		[TestCase("", "", "County", default)]
+		[TestCase("Country", "", "County", IsoLevel.CountryRegion)]
 		[TestCase("Country", "Province", "", IsoLevel.ProvinceState)]
 		[TestCase("Country", "Province", "County", IsoLevel.County)]
 		public void ValidateIsoLevel(string country, string province, string county, IsoLevel expectedLevel)
@@ -34,7 +38,14 @@ namespace ReportsGenerator.Tests
 				new Field(FieldId.Admin2, county)
 			}, RowVersion.Unknown);
 
-			Assert.That(_rowProcessor.Object.GetIsoLevel(row), Is.EqualTo(expectedLevel));
+			if (string.IsNullOrWhiteSpace(country))
+			{
+				Assert.That(()=>_rowProcessor.Object.GetIsoLevel(row),Throws.InvalidOperationException);
+			}
+			else
+			{
+				Assert.That(_rowProcessor.Object.GetIsoLevel(row), Is.EqualTo(expectedLevel));
+			}
 		}
 	}
 }
