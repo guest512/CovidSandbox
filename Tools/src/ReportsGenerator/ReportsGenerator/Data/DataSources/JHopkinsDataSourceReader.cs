@@ -1,8 +1,8 @@
-﻿using ReportsGenerator.Utils;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using ReportsGenerator.Data.Providers;
+using ReportsGenerator.Utils;
 
 namespace ReportsGenerator.Data.DataSources
 {
@@ -23,7 +23,7 @@ namespace ReportsGenerator.Data.DataSources
             };
         }
 
-        /// <inheritdoc/> 
+        /// <inheritdoc/>
         protected override Field CsvFieldCreator(FieldId key, string value, string fileName) =>
             key == FieldId.LastUpdate ? new Field(key, fileName) : new Field(key, value);
 
@@ -62,12 +62,13 @@ namespace ReportsGenerator.Data.DataSources
 
                 "Australia" when row[FieldId.ProvinceState] == "External territories" => true,
 
-
-                "United Kingdom" when row[FieldId.ProvinceState] == "Channel Islands" => IsInvalidDate(row, Enumerable.Range(14,2).Select(n=>$"03-{n}-2020")),
+                "United Kingdom" when row[FieldId.ProvinceState] == "Channel Islands" => IsInvalidDate(row, Enumerable.Range(14, 2).Select(n => $"03-{n}-2020")),
                 "Guernsey" => IsInvalidDate(row, Enumerable.Range(16, 6).Select(n => $"03-{n}-2020")),
                 "Jersey" => IsInvalidDate(row, Enumerable.Range(16, 6).Select(n => $"03-{n}-2020")),
 
                 "Cape Verde" when row[FieldId.LastUpdate] == "03-21-2020" => true,
+                
+                "Summer Olympics 2020" => true,
 
                 "" => true,
 
@@ -76,7 +77,7 @@ namespace ReportsGenerator.Data.DataSources
         }
 
         /// <inheritdoc/>
-        protected override bool FilterFile(string filePath, RowsFilter filter) => 
+        protected override bool FilterFile(string filePath, RowsFilter filter) =>
             filter(new Field(FieldId.LastUpdate, Path.GetFileNameWithoutExtension(filePath)));
     }
 }
