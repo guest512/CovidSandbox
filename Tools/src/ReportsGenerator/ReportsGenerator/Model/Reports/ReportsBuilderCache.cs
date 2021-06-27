@@ -63,7 +63,7 @@ namespace ReportsGenerator.Model.Reports
         {
             AddProvinceMetadata(country, province, statsName[(statsName.IndexOf(',') + 2)..]);
 
-            if (_countries.Contains(country) && 
+            if (_countries.Contains(country) &&
                 _cachedOldStatsReports[country].Any(r => r.Province == province && r.County == county) ||
                 _cachedNewStatsReports[country].Any(r => r.Province == province && r.County == county))
                 return;
@@ -91,7 +91,10 @@ namespace ReportsGenerator.Model.Reports
             {
                 lock (_lockerData)
                 {
-                    _cachedNewDataReports.Add(country, new List<ModelDataReport>());
+                    if (!_cachedNewDataReports.ContainsKey((country)))
+                    {
+                        _cachedNewDataReports.Add(country, new List<ModelDataReport>());
+                    }
                 }
             }
 
@@ -256,11 +259,14 @@ namespace ReportsGenerator.Model.Reports
             {
                 lock (_lockerStats)
                 {
-                    _cachedNewStatsReports.Add(country, new List<ModelMetadataReport>());
+                    if (!_cachedNewStatsReports.ContainsKey(country))
+                    {
+                        _cachedNewStatsReports.Add(country, new List<ModelMetadataReport>());
+                    }
                 }
             }
 
-            if (_countries.Contains(country) && 
+            if (_countries.Contains(country) &&
                 _cachedOldStatsReports[country].Any(r => r.Country == country && r.Province == string.Empty) ||
                 _cachedNewStatsReports[country].Any(r => r.Country == country && r.Province == string.Empty))
                 return;
