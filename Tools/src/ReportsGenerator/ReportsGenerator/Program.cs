@@ -90,11 +90,9 @@ static void UpdateCache(string cacheLocation, ReportsBuilder reportsBuilder, ILo
     logger.WriteInfo("Create model cache...");
     Parallel.ForEach(reportsBuilder.DumpModelData(), reportsSaver.WriteReport);
     Parallel.ForEach(reportsBuilder.DumpModelMetadata(), reportsSaver.WriteReport);
-
 }
 
 var logger = new ConsoleLogger();
-
 
 try
 {
@@ -107,17 +105,17 @@ try
 
     var dataSources = new IDataSource[]
     {
-                    new JHopkinsDataSource(GetDataFolder<JHopkinsDataSource>(), logger),
-                    new YandexRussiaDataSource(GetDataFolder<YandexRussiaDataSource>(), logger)
+        new JHopkinsDataSource(GetDataFolder<JHopkinsDataSource>(), logger),
+        new YandexRussiaDataSource(GetDataFolder<YandexRussiaDataSource>(), logger)
     };
 
     var miscStorage = new MiscStorage(new MiscDataSource(GetDataFolder<MiscDataSource>(), logger), logger);
     var entryFactory = new EntryFactory(GetRowProcessors(miscStorage, miscStorage, logger), logger);
-    
+
     var reportsBuilder = new ReportsBuilder(miscStorage, logger);
 
     logger.WriteInfo("Initialize cache...");
-    reportsBuilder.InitializeCache(new ModelCacheDataSource(GetDataFolder<ModelCacheDataSource>(), logger),out var lastDay);
+    reportsBuilder.InitializeCache(new ModelCacheDataSource(GetDataFolder<ModelCacheDataSource>(), logger), out var lastDay);
 
     logger.WriteInfo("Reading raw data...");
     logger.IndentIncrease();
