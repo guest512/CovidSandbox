@@ -17,7 +17,7 @@ namespace ReportsGenerator.Model.Reports
     public class ReportsBuilderCache
     {
         private readonly ConcurrentDictionary<string, List<ModelDataReport>> _cachedNewDataReports = new();
-        private readonly Dictionary<string, List<ModelMetadataReport>> _cachedNewStatsReports = new();
+        private readonly ConcurrentDictionary<string, List<ModelMetadataReport>> _cachedNewStatsReports = new();
         private readonly Dictionary<string, List<ModelDataReport>> _cachedOldDataReports = new();
         private readonly Dictionary<string, List<ModelMetadataReport>> _cachedOldStatsReports = new();
         private readonly List<string> _countries = new();
@@ -247,16 +247,7 @@ namespace ReportsGenerator.Model.Reports
 
         private void AddCountryMetadata(string country)
         {
-            if (!_cachedNewStatsReports.ContainsKey(country))
-            {
-                lock (_lockerStats)
-                {
-                    if (!_cachedNewStatsReports.ContainsKey(country))
-                    {
-                        _cachedNewStatsReports.Add(country, new List<ModelMetadataReport>());
-                    }
-                }
-            }
+            _cachedNewStatsReports.TryAdd(country, new List<ModelMetadataReport>());
 
             if (_countries.Contains(country) &&
                 _cachedOldStatsReports[country].Any(r => r.Country == country && r.Province == string.Empty) ||

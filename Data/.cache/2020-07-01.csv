@@ -1,0 +1,3793 @@
+Day,Country,Province,County,Confirmed,Active,Recovered,Deaths
+01-07-2020,Monaco,Main territory,,103,4,95,4
+01-07-2020,Poland,Main territory,,34775,11507,21791,1477
+01-07-2020,Senegal,Main territory,,6925,2264,4545,116
+01-07-2020,Morocco,Main territory,,12636,3382,9026,228
+01-07-2020,Iraq,Main territory,,51524,23207,26267,2050
+01-07-2020,Fiji,Main territory,,18,0,18,0
+01-07-2020,Greece,Main territory,,3432,1866,1374,192
+01-07-2020,Haiti,Main territory,,5933,4796,1032,105
+01-07-2020,Peru,Other,,0,-178245,178245,0
+01-07-2020,Peru,Ucayali,,7824,6768,0,1056
+01-07-2020,Peru,Tumbes,,2849,2415,0,434
+01-07-2020,Peru,Tacna,,944,905,0,39
+01-07-2020,Peru,San Martin,,5076,4391,0,685
+01-07-2020,Peru,Puno,,974,916,0,58
+01-07-2020,Peru,Piura,,17149,13649,0,3500
+01-07-2020,Peru,Pasco,,1121,1074,0,47
+01-07-2020,Peru,Moquegua,,958,923,0,35
+01-07-2020,Peru,Madre de Dios,,1897,1865,0,32
+01-07-2020,Peru,Loreto,,9072,6789,0,2283
+01-07-2020,Peru,Lima,,159403,140549,0,18854
+01-07-2020,Peru,Lambayeque,,13779,11463,0,2316
+01-07-2020,Peru,La Libertad,,10148,8269,0,1879
+01-07-2020,Peru,Junin,,3996,3595,0,401
+01-07-2020,Peru,Ica,,7727,6388,0,1339
+01-07-2020,Peru,Huanuco,,2466,2254,0,212
+01-07-2020,Peru,Huancavelica,,913,882,0,31
+01-07-2020,Peru,Cusco,,1817,1761,0,56
+01-07-2020,Peru,Callao,,18155,15361,0,2794
+01-07-2020,Peru,Cajamarca,,2196,2028,0,168
+01-07-2020,Peru,Ayacucho,,1829,1725,0,104
+01-07-2020,Peru,Arequipa,,7234,6499,0,735
+01-07-2020,Peru,Apurimac,,566,536,0,30
+01-07-2020,Peru,Ancash,,8130,6901,0,1229
+01-07-2020,Peru,Amazonas,,2254,2122,0,132
+01-07-2020,Saint Vincent and the Grenadines,Main territory,,29,0,29,0
+01-07-2020,Seychelles,Main territory,,81,70,11,0
+01-07-2020,Sri Lanka,Main territory,,2054,295,1748,11
+01-07-2020,Uruguay,Main territory,,943,90,825,28
+01-07-2020,Germany,Other,,1005,122,883,0
+01-07-2020,Germany,Thuringen,,3258,37,3040,181
+01-07-2020,Germany,Schleswig-Holstein,,3163,11,3000,152
+01-07-2020,Germany,Sachsen-Anhalt,,1878,94,1725,59
+01-07-2020,Germany,Sachsen,,5451,78,5150,223
+01-07-2020,Germany,Saarland,,2806,49,2584,173
+01-07-2020,Germany,Rheinland-Pfalz,,7027,189,6603,235
+01-07-2020,Germany,Nordrhein-Westfalen,,43242,3859,37700,1683
+01-07-2020,Germany,Niedersachsen,,13577,695,12250,632
+01-07-2020,Germany,Mecklenburg-Vorpommern,,803,16,767,20
+01-07-2020,Germany,Hessen,,10811,394,9909,508
+01-07-2020,Germany,Hamburg,,5204,45,4900,259
+01-07-2020,Germany,Bremen,,1673,64,1556,53
+01-07-2020,Germany,Brandenburg,,3459,88,3200,171
+01-07-2020,Germany,Berlin,,8301,654,7433,214
+01-07-2020,Germany,Bavaria,,48480,786,45100,2594
+01-07-2020,Germany,Baden-Wurttemberg,,35755,617,33300,1838
+01-07-2020,Zimbabwe,Main territory,,605,432,166,7
+01-07-2020,Thailand,Main territory,,3173,56,3059,58
+01-07-2020,Netherlands,Main territory,,50273,44160,0,6113
+01-07-2020,Netherlands,Sint Maarten,,77,0,62,15
+01-07-2020,Netherlands,Curacao,,23,3,19,1
+01-07-2020,Netherlands,"Bonaire, Sint Eustatius and Saba",,7,0,7,0
+01-07-2020,Netherlands,Aruba,,103,2,98,3
+01-07-2020,Kuwait,Main territory,,46940,8867,37715,358
+01-07-2020,Liberia,Main territory,,804,432,335,37
+01-07-2020,Sudan,Main territory,,9500,4292,4606,602
+01-07-2020,Azerbaijan,Main territory,,18112,7831,10061,220
+01-07-2020,Bolivia,Main territory,,34227,23262,9764,1201
+01-07-2020,Romania,Main territory,,27296,6315,19314,1667
+01-07-2020,Honduras,Main territory,,20262,17597,2123,542
+01-07-2020,Madagascar,Main territory,,2303,1275,1006,22
+01-07-2020,Austria,Main territory,,17873,677,16491,705
+01-07-2020,Luxembourg,Main territory,,4345,232,4003,110
+01-07-2020,Bosnia and Herzegovina,Main territory,,4606,1986,2432,188
+01-07-2020,Argentina,Main territory,,67197,42806,23040,1351
+01-07-2020,Botswana,Main territory,,227,198,28,1
+01-07-2020,Dominican Republic,Main territory,,33387,14729,17904,754
+01-07-2020,Mozambique,Main territory,,903,649,248,6
+01-07-2020,Cuba,Main territory,,2348,44,2218,86
+01-07-2020,Barbados,Main territory,,97,0,90,7
+01-07-2020,Denmark,Main territory,,12794,495,11693,606
+01-07-2020,Denmark,Greenland,,13,0,13,0
+01-07-2020,Denmark,Faroe Islands,,187,0,187,0
+01-07-2020,Kosovo,Main territory,,2991,1293,1644,54
+01-07-2020,Lebanon,Main territory,,1788,531,1223,34
+01-07-2020,Mongolia,Main territory,,220,43,177,0
+01-07-2020,Liechtenstein,Main territory,,82,0,81,1
+01-07-2020,Libya,Main territory,,874,626,223,25
+01-07-2020,South Sudan,Main territory,,2021,1650,333,38
+01-07-2020,Grenada,Main territory,,23,0,23,0
+01-07-2020,Indonesia,Main territory,,57770,29241,25595,2934
+01-07-2020,Papua New Guinea,Main territory,,11,3,8,0
+01-07-2020,Ireland,Main territory,,25477,375,23364,1738
+01-07-2020,San Marino,Main territory,,698,0,656,42
+01-07-2020,Uganda,Main territory,,893,56,837,0
+01-07-2020,Switzerland,Main territory,,31851,686,29200,1965
+01-07-2020,Spain,Other,,0,0,0,0
+01-07-2020,Spain,Pais Vasco,,13792,-3928,16160,1560
+01-07-2020,Spain,Navarra,,5468,1035,3905,528
+01-07-2020,Spain,Murcia,,1690,-637,2180,147
+01-07-2020,Spain,Melilla,,126,-1,125,2
+01-07-2020,Spain,Madrid,,72033,22870,40736,8427
+01-07-2020,Spain,La Rioja,,4077,604,3107,366
+01-07-2020,Spain,Galicia,,9222,-601,9204,619
+01-07-2020,Spain,Extremadura,,3033,-138,2652,519
+01-07-2020,Spain,Ceuta,,163,-4,163,4
+01-07-2020,Spain,Catalonia,,61639,29765,26203,5671
+01-07-2020,Spain,Castilla y Leon,,19730,8227,8716,2787
+01-07-2020,Spain,Castilla - La Mancha,,18160,8742,6392,3026
+01-07-2020,Spain,Cantabria,,2363,-140,2287,216
+01-07-2020,Spain,Canarias,,2432,733,1537,162
+01-07-2020,Spain,C. Valenciana,,11588,186,9970,1432
+01-07-2020,Spain,Baleares,,2216,459,1533,224
+01-07-2020,Spain,Asturias,,2435,1038,1063,334
+01-07-2020,Spain,Aragon,,6353,1669,3772,912
+01-07-2020,Spain,Andalusia,,13139,1040,10671,1428
+01-07-2020,Mali,Main territory,,2202,603,1483,116
+01-07-2020,Paraguay,Main territory,,2260,1139,1102,19
+01-07-2020,Latvia,Main territory,,1121,117,974,30
+01-07-2020,Laos,Main territory,,19,0,19,0
+01-07-2020,Bhutan,Main territory,,77,27,50,0
+01-07-2020,Myanmar,Main territory,,303,75,222,6
+01-07-2020,Finland,Main territory,,7236,208,6700,328
+01-07-2020,Nepal,Main territory,,14046,9360,4656,30
+01-07-2020,Singapore,Main territory,,44122,5085,39011,26
+01-07-2020,Iceland,Main territory,,1847,14,1823,10
+01-07-2020,Egypt,Main territory,,69814,47899,18881,3034
+01-07-2020,Andorra,Main territory,,855,4,799,52
+01-07-2020,Malawi,Main territory,,1265,989,260,16
+01-07-2020,Malta,Main territory,,671,15,647,9
+01-07-2020,Costa Rica,Main territory,,3753,2220,1516,17
+01-07-2020,Cameroon,Main territory,,12592,2179,10100,313
+01-07-2020,Mauritius,Main territory,,341,5,326,10
+01-07-2020,Italy,Veneto,,19289,418,16849,2022
+01-07-2020,Italy,Valle d'Aosta,,1195,3,1046,146
+01-07-2020,Italy,Umbria,,1441,10,1351,80
+01-07-2020,Italy,Toscana,,10254,323,8825,1106
+01-07-2020,Italy,Sicilia,,3081,126,2673,282
+01-07-2020,Italy,Sardegna,,1366,11,1222,133
+01-07-2020,Italy,Puglia,,4530,112,3873,545
+01-07-2020,Italy,Piemonte,,31365,1353,25921,4091
+01-07-2020,Italy,P.A. Trento,,4864,47,4412,405
+01-07-2020,Italy,P.A. Bolzano,,2642,84,2266,292
+01-07-2020,Italy,Molise,,445,25,397,23
+01-07-2020,Italy,Marche,,6786,248,5551,987
+01-07-2020,Italy,Lombardia,,94010,9938,67422,16650
+01-07-2020,Italy,Liguria,,9982,280,8144,1558
+01-07-2020,Italy,Lazio,,8119,832,6448,839
+01-07-2020,Italy,Friuli Venezia Giulia,,3312,56,2911,345
+01-07-2020,Italy,Emilia-Romagna,,28508,1002,23242,4264
+01-07-2020,Italy,Campania,,4699,189,4078,432
+01-07-2020,Italy,Calabria,,1181,26,1058,97
+01-07-2020,Italy,Basilicata,,402,2,373,27
+01-07-2020,Italy,Abruzzo,,3289,170,2655,464
+01-07-2020,Ecuador,Main territory,,58257,25794,27887,4576
+01-07-2020,Qatar,Main territory,,97003,12923,83965,115
+01-07-2020,Russia,Ярославская обл.,,4825,1440,3366,19
+01-07-2020,Russia,Ямало-Ненецкий АО,,5783,3310,2434,39
+01-07-2020,Russia,Чукотский АО,,138,7,130,1
+01-07-2020,Russia,Чувашия,,5134,2182,2920,32
+01-07-2020,Russia,Чечня,,1723,505,1195,23
+01-07-2020,Russia,Челябинская обл.,,7339,3481,3770,88
+01-07-2020,Russia,ХМАО – Югра,,9219,4501,4662,56
+01-07-2020,Russia,Хакасия,,1904,533,1356,15
+01-07-2020,Russia,Хабаровский край,,4300,2089,2182,29
+01-07-2020,Russia,Ульяновская обл.,,5888,2690,3155,43
+01-07-2020,Russia,Удмуртия,,1440,356,1068,16
+01-07-2020,Russia,Тюменская обл.,,3155,1244,1893,18
+01-07-2020,Russia,Тыва,,4605,3385,1217,3
+01-07-2020,Russia,Тульская обл.,,6762,998,5653,111
+01-07-2020,Russia,Томская обл.,,2307,1159,1134,14
+01-07-2020,Russia,Тверская обл.,,3668,979,2617,72
+01-07-2020,Russia,Татарстан,,4595,873,3710,12
+01-07-2020,Russia,Тамбовская обл.,,4772,1823,2930,19
+01-07-2020,Russia,Ставропольский край,,5225,2078,3049,98
+01-07-2020,Russia,Смоленская обл.,,4619,2141,2413,65
+01-07-2020,Russia,Северная Осетия,,4028,419,3542,67
+01-07-2020,Russia,Севастополь,,235,52,179,4
+01-07-2020,Russia,Свердловская обл.,,13048,5333,7614,101
+01-07-2020,Russia,Сахалинская обл.,,828,490,338,0
+01-07-2020,Russia,Саха (Якутия),,4267,1202,3033,32
+01-07-2020,Russia,Саратовская обл.,,6546,2952,3550,44
+01-07-2020,Russia,Санкт-Петербург,,24469,5132,18155,1182
+01-07-2020,Russia,Самарская обл.,,4900,2039,2805,56
+01-07-2020,Russia,Рязанская обл.,,5237,1570,3648,19
+01-07-2020,Russia,Ростовская обл.,,9706,3476,6103,127
+01-07-2020,Russia,Псковская обл.,,2830,1772,1035,23
+01-07-2020,Russia,Приморский край,,4383,1463,2874,46
+01-07-2020,Russia,Пермский край,,3743,937,2728,78
+01-07-2020,Russia,Пензенская обл.,,5045,134,4869,42
+01-07-2020,Russia,Орловская обл.,,4544,1570,2908,66
+01-07-2020,Russia,Оренбургская обл.,,3853,920,2914,19
+01-07-2020,Russia,Омская обл.,,3701,1648,2023,30
+01-07-2020,Russia,Новосибирская обл.,,6085,2368,3618,99
+01-07-2020,Russia,Новгородская обл.,,2931,2068,837,26
+01-07-2020,Russia,Нижегородская обл.,,17709,6098,11369,242
+01-07-2020,Russia,Ненецкий АО,,107,69,38,0
+01-07-2020,Russia,Мурманская обл.,,5346,1739,3591,16
+01-07-2020,Russia,Московская обл.,,57876,20913,36052,911
+01-07-2020,Russia,Москва,,222209,66185,152193,3831
+01-07-2020,Russia,Мордовия,,3431,1154,2250,27
+01-07-2020,Russia,Марий Эл,,2990,137,2830,23
+01-07-2020,Russia,Магаданская обл.,,791,426,361,4
+01-07-2020,Russia,Липецкая обл.,,3816,1391,2409,16
+01-07-2020,Russia,Ленинградская обл.,,4473,262,4179,32
+01-07-2020,Russia,Курская обл.,,5138,1980,3122,36
+01-07-2020,Russia,Курганская обл.,,794,341,452,1
+01-07-2020,Russia,Крым,,691,163,517,11
+01-07-2020,Russia,Красноярский край,,9044,4779,4128,137
+01-07-2020,Russia,Краснодарский край,,6043,1172,4793,78
+01-07-2020,Russia,Костромская обл.,,1591,623,947,21
+01-07-2020,Russia,Коми,,3463,1699,1731,33
+01-07-2020,Russia,Кировская обл.,,3246,566,2643,37
+01-07-2020,Russia,Кемеровская обл.,,1703,926,768,9
+01-07-2020,Russia,Карелия,,1337,758,576,3
+01-07-2020,Russia,Карачаево-Черкессия,,3599,2095,1491,13
+01-07-2020,Russia,Камчатский край,,2245,1254,963,28
+01-07-2020,Russia,Калужская обл.,,6066,2337,3685,44
+01-07-2020,Russia,Калмыкия,,1523,433,1067,23
+01-07-2020,Russia,Калининградская обл.,,2455,902,1515,38
+01-07-2020,Russia,Кабардино-Балкария,,5061,1320,3688,53
+01-07-2020,Russia,Иркутская обл.,,7533,4620,2850,63
+01-07-2020,Russia,Ингушетия,,3069,534,2467,68
+01-07-2020,Russia,Ивановская обл.,,4761,1749,2967,45
+01-07-2020,Russia,Забайкальский край,,3161,1012,2107,42
+01-07-2020,Russia,Еврейская АО,,428,70,353,5
+01-07-2020,Russia,Дагестан,,7905,1701,5824,380
+01-07-2020,Russia,Воронежская обл.,,7754,3387,4326,41
+01-07-2020,Russia,Вологодская обл.,,1628,391,1220,17
+01-07-2020,Russia,Волгоградская обл.,,6419,3352,3028,39
+01-07-2020,Russia,Владимирская обл.,,4408,1506,2837,65
+01-07-2020,Russia,Бурятия,,2957,910,2028,19
+01-07-2020,Russia,Брянская обл.,,6271,1748,4489,34
+01-07-2020,Russia,Белгородская обл.,,4583,905,3636,42
+01-07-2020,Russia,Башкортостан,,5405,2283,3104,18
+01-07-2020,Russia,Астраханская обл.,,3513,1129,2352,32
+01-07-2020,Russia,Архангельская обл.,,5674,2698,2915,61
+01-07-2020,Russia,Амурская обл.,,1734,896,825,13
+01-07-2020,Russia,Алтайский край,,4059,1051,2972,36
+01-07-2020,Russia,Алтай,,681,374,306,1
+01-07-2020,Russia,Адыгея,,1935,581,1340,14
+01-07-2020,Mauritania,Main territory,,4472,2666,1677,129
+01-07-2020,Jamaica,Main territory,,707,142,555,10
+01-07-2020,Chad,Main territory,,866,7,785,74
+01-07-2020,Timor-Leste,Main territory,,24,0,24,0
+01-07-2020,North Macedonia,Main territory,,6454,3550,2598,306
+01-07-2020,Canada,Yukon,,11,0,11,0
+01-07-2020,Canada,Saskatchewan,,785,88,684,13
+01-07-2020,Canada,Quebec,,55524,24936,24949,5639
+01-07-2020,Canada,Prince Edward Island,,27,0,27,0
+01-07-2020,Canada,Ontario,,37085,2356,31995,2734
+01-07-2020,Canada,Nunavut,,0,0,0,0
+01-07-2020,Canada,Nova Scotia,,1063,2,998,63
+01-07-2020,Canada,Northwest Territories,,5,0,5,0
+01-07-2020,Canada,Newfoundland and Labrador,,261,0,258,3
+01-07-2020,Canada,New Brunswick,,165,3,160,2
+01-07-2020,Canada,Manitoba,,325,18,300,7
+01-07-2020,Canada,British Columbia,,2916,152,2590,174
+01-07-2020,Canada,Alberta,,8108,547,7407,154
+01-07-2020,Afghanistan,Main territory,,31826,15395,15651,780
+01-07-2020,Trinidad and Tobago,Main territory,,130,7,115,8
+01-07-2020,Angola,Main territory,,291,179,97,15
+01-07-2020,Chile,Valparaiso,,12008,2101,9677,230
+01-07-2020,Chile,Other,,0,-108,108,0
+01-07-2020,Chile,Tarapaca,,6116,740,5285,91
+01-07-2020,Chile,OHiggins,,6245,1979,4197,69
+01-07-2020,Chile,Nuble,,2414,304,2078,32
+01-07-2020,Chile,Metropolitana,,220467,18784,196729,4954
+01-07-2020,Chile,Maule,,5717,1307,4362,48
+01-07-2020,Chile,Magallanes,,1461,139,1307,15
+01-07-2020,Chile,Los Rios,,706,90,606,10
+01-07-2020,Chile,Los Lagos,,1684,290,1373,21
+01-07-2020,Chile,Coquimbo,,3119,655,2441,23
+01-07-2020,Chile,Biobio,,6845,1819,4976,50
+01-07-2020,Chile,Aysen,,42,14,28,0
+01-07-2020,Chile,Atacama,,1114,344,768,2
+01-07-2020,Chile,Arica y Parinacota,,1776,379,1377,20
+01-07-2020,Chile,Araucania,,3246,250,2955,41
+01-07-2020,Chile,Antofagasta,,9083,1760,7176,147
+01-07-2020,Kiribati,Main territory,,0,0,0,0
+01-07-2020,Norway,Main territory,,8896,507,8138,251
+01-07-2020,Tunisia,Main territory,,1175,87,1038,50
+01-07-2020,Cote d'Ivoire,Main territory,,9702,5253,4381,68
+01-07-2020,Congo (Brazzaville),Main territory,,1382,855,486,41
+01-07-2020,Croatia,Main territory,,2831,568,2155,108
+01-07-2020,New Zealand,Cook Islands,,0,0,0,0
+01-07-2020,New Zealand,Main territory,,1530,18,1490,22
+01-07-2020,Cambodia,Main territory,,141,10,131,0
+01-07-2020,Zambia,Main territory,,1632,254,1348,30
+01-07-2020,Cabo Verde,Main territory,,1267,623,629,15
+01-07-2020,Benin,Main territory,,1199,845,333,21
+01-07-2020,Ghana,Main territory,,18134,4467,13550,117
+01-07-2020,Malaysia,Main territory,,8640,144,8375,121
+01-07-2020,Kazakhstan,Main territory,,41065,26818,14059,188
+01-07-2020,Slovenia,Main territory,,1613,118,1384,111
+01-07-2020,Taiwan,Main territory,,447,2,438,7
+01-07-2020,Algeria,Main territory,,14272,3312,10040,920
+01-07-2020,Dominica,Main territory,,18,0,18,0
+01-07-2020,Eritrea,Main territory,,203,147,56,0
+01-07-2020,Namibia,Main territory,,285,261,24,0
+01-07-2020,West Bank and Gaza,Main territory,,2758,2290,460,8
+01-07-2020,Pakistan,Sindh,,86795,36862,48527,1406
+01-07-2020,Pakistan,Punjab,,77740,47690,28266,1784
+01-07-2020,Pakistan,Khyber Pakhtunkhwa,,26938,12381,13584,973
+01-07-2020,Pakistan,Islamabad,,13082,5103,7850,129
+01-07-2020,Pakistan,Gilgit-Baltistan,,1511,337,1146,28
+01-07-2020,Pakistan,Balochistan,,10608,5723,4764,121
+01-07-2020,Pakistan,Azad Jammu and Kashmir,,1135,546,557,32
+01-07-2020,Somalia,Main territory,,2924,1902,932,90
+01-07-2020,Armenia,Main territory,,26065,11049,14563,453
+01-07-2020,Belize,Main territory,,28,8,18,2
+01-07-2020,Jordan,Main territory,,1133,238,886,9
+01-07-2020,Nicaragua,Main territory,,2519,1198,1238,83
+01-07-2020,Cyprus,Main territory,,999,147,833,19
+01-07-2020,Gabon,Main territory,,5513,2963,2508,42
+01-07-2020,Bulgaria,Main territory,,5154,2200,2722,232
+01-07-2020,Japan,Yamanashi,,75,3,71,1
+01-07-2020,Japan,Yamaguchi,,37,0,37,0
+01-07-2020,Japan,Yamagata,,69,1,68,0
+01-07-2020,Japan,Wakayama,,64,1,60,3
+01-07-2020,Japan,Other,,8,8,0,0
+01-07-2020,Japan,Toyama,,227,0,205,22
+01-07-2020,Japan,Tottori,,3,0,3,0
+01-07-2020,Japan,Tokyo,,6402,630,5447,325
+01-07-2020,Japan,Tokushima,,6,1,4,1
+01-07-2020,Japan,Tochigi,,82,17,65,0
+01-07-2020,Japan,Shizuoka,,82,4,77,1
+01-07-2020,Japan,Shimane,,24,0,24,0
+01-07-2020,Japan,Shiga,,103,3,99,1
+01-07-2020,Japan,Saitama,,1146,123,958,65
+01-07-2020,Japan,Saga,,45,0,45,0
+01-07-2020,Japan,Port Quarantine,,321,126,194,1
+01-07-2020,Japan,Osaka,,1843,52,1705,86
+01-07-2020,Japan,Okinawa,,145,0,138,7
+01-07-2020,Japan,Okayama,,26,1,25,0
+01-07-2020,Japan,Oita,,60,0,59,1
+01-07-2020,Japan,Niigata,,83,1,82,0
+01-07-2020,Japan,Nara,,92,0,90,2
+01-07-2020,Japan,Nagasaki,,17,0,16,1
+01-07-2020,Japan,Nagano,,76,0,76,0
+01-07-2020,Japan,Miyazaki,,17,0,17,0
+01-07-2020,Japan,Miyagi,,95,6,88,1
+01-07-2020,Japan,Mie,,45,0,44,1
+01-07-2020,Japan,Kyoto,,383,19,346,18
+01-07-2020,Japan,Kumamoto,,48,0,45,3
+01-07-2020,Japan,Kochi,,74,0,71,3
+01-07-2020,Japan,Kanagawa,,1508,74,1338,96
+01-07-2020,Japan,Kagoshima,,12,1,11,0
+01-07-2020,Japan,Kagawa,,28,0,28,0
+01-07-2020,Japan,Ishikawa,,300,16,257,27
+01-07-2020,Japan,Ibaraki,,174,5,159,10
+01-07-2020,Japan,Hyogo,,708,10,653,45
+01-07-2020,Japan,Hokkaido,,1258,104,1054,100
+01-07-2020,Japan,Hiroshima,,166,0,163,3
+01-07-2020,Japan,Gunma,,153,3,131,19
+01-07-2020,Japan,Gifu,,157,3,147,7
+01-07-2020,Japan,Fukushima,,82,1,81,0
+01-07-2020,Japan,Fukuoka,,850,17,800,33
+01-07-2020,Japan,Fukui,,122,0,114,8
+01-07-2020,Japan,Ehime,,82,0,77,5
+01-07-2020,Japan,Chiba,,971,55,871,45
+01-07-2020,Japan,Aomori,,30,3,26,1
+01-07-2020,Japan,Akita,,16,0,16,0
+01-07-2020,Japan,Aichi,,523,11,478,34
+01-07-2020,Bahrain,Main territory,,27414,5374,21948,92
+01-07-2020,Comoros,Main territory,,303,96,200,7
+01-07-2020,United Arab Emirates,Main territory,,49069,10593,38160,316
+01-07-2020,Gambia,Main territory,,49,20,27,2
+01-07-2020,Bahamas,Main territory,,104,4,89,11
+01-07-2020,Lesotho,Main territory,,35,24,11,0
+01-07-2020,Uzbekistan,Main territory,,8781,2908,5847,26
+01-07-2020,Panama,Main territory,,34463,17873,15945,645
+01-07-2020,Georgia,Main territory,,931,122,794,15
+01-07-2020,Ukraine,Zhytomyr Oblast,,1408,548,831,29
+01-07-2020,Ukraine,Zaporizhia Oblast,,572,130,425,17
+01-07-2020,Ukraine,Zakarpattia Oblast,,2961,1913,953,95
+01-07-2020,Ukraine,Volyn Oblast,,2427,1648,717,62
+01-07-2020,Ukraine,Vinnytsia Oblast,,1876,627,1220,29
+01-07-2020,Ukraine,Ternopil Oblast,,1930,741,1160,29
+01-07-2020,Ukraine,Sumy Oblast,,297,62,230,5
+01-07-2020,Ukraine,Rivne Oblast,,3784,1899,1815,70
+01-07-2020,Ukraine,Poltava Oblast,,319,36,270,13
+01-07-2020,Ukraine,Odessa Oblast,,1712,951,737,24
+01-07-2020,Ukraine,Mykolaiv Oblast,,447,154,283,10
+01-07-2020,Ukraine,Lviv Oblast,,5578,4632,800,146
+01-07-2020,Ukraine,Luhansk Oblast,,80,21,59,0
+01-07-2020,Ukraine,Kirovohrad Oblast,,647,75,541,31
+01-07-2020,Ukraine,Kiev Oblast,,2610,1204,1356,50
+01-07-2020,Ukraine,Kiev,,5138,3432,1598,108
+01-07-2020,Ukraine,Khmelnytskyi Oblast,,805,239,548,18
+01-07-2020,Ukraine,Kherson Oblast,,193,14,176,3
+01-07-2020,Ukraine,Kharkiv Oblast,,2169,982,1104,83
+01-07-2020,Ukraine,Ivano-Frankivsk Oblast,,2438,1239,1098,101
+01-07-2020,Ukraine,Donetsk Oblast,,484,309,166,9
+01-07-2020,Ukraine,Dnipropetrovsk Oblast,,1090,141,926,23
+01-07-2020,Ukraine,Chernivtsi Oblast,,4850,2751,1916,183
+01-07-2020,Ukraine,Chernihiv Oblast,,538,383,145,10
+01-07-2020,Ukraine,Cherkasy Oblast,,645,146,474,25
+01-07-2020,Brazil,Tocantins,,11222,3900,7118,204
+01-07-2020,Brazil,Sergipe,,25915,10336,14878,701
+01-07-2020,Brazil,Sao Paulo,,289935,117060,157845,15030
+01-07-2020,Brazil,Santa Catarina,,27279,5530,21402,347
+01-07-2020,Brazil,Roraima,,15153,10419,4420,314
+01-07-2020,Brazil,Rondonia,,21462,10744,10198,520
+01-07-2020,Brazil,Rio de Janeiro,,115278,10052,95028,10198
+01-07-2020,Brazil,Rio Grande do Sul,,28171,4917,22618,636
+01-07-2020,Brazil,Rio Grande do Norte,,31899,27928,2904,1067
+01-07-2020,Brazil,Piaui,,22059,-344,21717,686
+01-07-2020,Brazil,Pernambuco,,59705,13468,41343,4894
+01-07-2020,Brazil,Parana,,24225,17746,5816,663
+01-07-2020,Brazil,Paraiba,,48175,31814,15359,1002
+01-07-2020,Brazil,Para,,105853,10033,90860,4960
+01-07-2020,Brazil,Minas Gerais,,47584,18665,27912,1007
+01-07-2020,Brazil,Mato Grosso do Sul,,8676,3926,4665,85
+01-07-2020,Brazil,Mato Grosso,,16621,9444,6543,634
+01-07-2020,Brazil,Maranhao,,83256,18019,63156,2081
+01-07-2020,Brazil,Goias,,25541,25038,0,503
+01-07-2020,Brazil,Espirito Santo,,48821,18376,28752,1693
+01-07-2020,Brazil,Distrito Federal,,50676,14523,35533,620
+01-07-2020,Brazil,Ceara,,113017,18512,88325,6180
+01-07-2020,Brazil,Bahia,,76485,23659,50924,1902
+01-07-2020,Brazil,Amazonas,,72284,10619,58822,2843
+01-07-2020,Brazil,Amapa,,28927,14339,14168,420
+01-07-2020,Brazil,Alagoas,,36819,7511,28236,1072
+01-07-2020,Brazil,Acre,,13715,5695,7650,370
+01-07-2020,Guinea-Bissau,Main territory,,1654,1313,317,24
+01-07-2020,Tanzania,Main territory,,509,305,183,21
+01-07-2020,Australia,Western Australia,,611,4,598,9
+01-07-2020,Australia,Victoria,,2303,417,1866,20
+01-07-2020,Australia,Tasmania,,228,0,215,13
+01-07-2020,Australia,South Australia,,443,3,436,4
+01-07-2020,Australia,Queensland,,1067,7,1054,6
+01-07-2020,Australia,Northern Territory,,30,1,29,0
+01-07-2020,Australia,New South Wales,,3211,375,2787,49
+01-07-2020,Australia,Australian Capital Territory,,108,0,105,3
+01-07-2020,Kyrgyzstan,Main territory,,6261,3665,2530,66
+01-07-2020,Equatorial Guinea,Main territory,,2001,1454,515,32
+01-07-2020,Saint Lucia,Main territory,,19,0,19,0
+01-07-2020,Burundi,Main territory,,170,54,115,1
+01-07-2020,Colombia,Vichada,,1,0,1,0
+01-07-2020,Colombia,Vaupes,,28,15,13,0
+01-07-2020,Colombia,Valle del Cauca,,9974,4897,4665,412
+01-07-2020,Colombia,Other,,122,122,0,0
+01-07-2020,Colombia,Tolima,,943,594,327,22
+01-07-2020,Colombia,Sucre,,1255,1065,123,67
+01-07-2020,Colombia,Santander,,713,500,199,14
+01-07-2020,Colombia,San Andres y Providencia,,23,4,18,1
+01-07-2020,Colombia,Risaralda,,511,216,282,13
+01-07-2020,Colombia,Quindio,,167,45,117,5
+01-07-2020,Colombia,Putumayo,,28,13,9,6
+01-07-2020,Colombia,Norte de Santander,,334,155,159,20
+01-07-2020,Colombia,Narino,,3443,1268,2061,114
+01-07-2020,Colombia,Meta,,1250,263,971,16
+01-07-2020,Colombia,Magdalena,,1854,955,778,121
+01-07-2020,Colombia,La Guajira,,440,337,83,20
+01-07-2020,Colombia,Huila,,341,75,252,14
+01-07-2020,Colombia,Guaviare,,38,32,6,0
+01-07-2020,Colombia,Guainia,,15,12,2,1
+01-07-2020,Colombia,Cundinamarca,,2831,1291,1478,62
+01-07-2020,Colombia,Cordoba,,786,504,229,53
+01-07-2020,Colombia,Choco,,1544,950,547,47
+01-07-2020,Colombia,Cesar,,1027,544,458,25
+01-07-2020,Colombia,Cauca,,376,203,157,16
+01-07-2020,Colombia,Casanare,,66,21,45,0
+01-07-2020,Colombia,Caqueta,,35,11,22,2
+01-07-2020,Colombia,Capital District,,30017,16548,12756,713
+01-07-2020,Colombia,Caldas,,260,72,180,8
+01-07-2020,Colombia,Boyaca,,375,135,224,16
+01-07-2020,Colombia,Bolivar,,9116,4211,4530,375
+01-07-2020,Colombia,Atlantico,,23360,14401,7752,1207
+01-07-2020,Colombia,Arauca,,76,72,4,0
+01-07-2020,Colombia,Antioquia,,4442,2665,1749,28
+01-07-2020,Colombia,Amazonas,,2299,263,1946,90
+01-07-2020,Albania,Main territory,,2580,999,1516,65
+01-07-2020,El Salvador,Main territory,,6736,2590,3964,182
+01-07-2020,Guinea,Main territory,,5404,1025,4346,33
+01-07-2020,Venezuela,Main territory,,6062,4359,1649,54
+01-07-2020,Guatemala,Main territory,,19011,14963,3231,817
+01-07-2020,Serbia,Main territory,,14836,1783,12772,281
+01-07-2020,Montenegro,Main territory,,576,249,315,12
+01-07-2020,Vietnam,Main territory,,355,19,336,0
+01-07-2020,India,West Bengal,,19170,5959,12528,683
+01-07-2020,India,Uttarakhand,,2947,589,2317,41
+01-07-2020,India,Uttar Pradesh,,24056,6709,16629,718
+01-07-2020,India,Other,,6832,6832,0,0
+01-07-2020,India,Tripura,,1396,302,1093,1
+01-07-2020,India,Telangana,,17357,9008,8082,267
+01-07-2020,India,Tamil Nadu,,94049,39859,52926,1264
+01-07-2020,India,Sikkim,,101,48,53,0
+01-07-2020,India,Rajasthan,,18312,3317,14574,421
+01-07-2020,India,Punjab,,5668,1652,3867,149
+01-07-2020,India,Puducherry,,714,430,272,12
+01-07-2020,India,Odisha,,7316,1938,5353,25
+01-07-2020,India,Nagaland,,459,291,168,0
+01-07-2020,India,Mizoram,,160,37,123,0
+01-07-2020,India,Meghalaya,,52,9,42,1
+01-07-2020,India,Manipur,,1260,681,579,0
+01-07-2020,India,Maharashtra,,180298,79091,93154,8053
+01-07-2020,India,Madhya Pradesh,,13861,2625,10655,581
+01-07-2020,India,Ladakh,,990,295,694,1
+01-07-2020,India,Kerala,,4593,2130,2439,24
+01-07-2020,India,Karnataka,,16514,8198,8063,253
+01-07-2020,India,Jharkhand,,2521,575,1931,15
+01-07-2020,India,Jammu and Kashmir,,7695,2734,4856,105
+01-07-2020,India,Himachal Pradesh,,979,355,614,10
+01-07-2020,India,Haryana,,14941,4202,10499,240
+01-07-2020,India,Gujarat,,33232,7335,24030,1867
+01-07-2020,India,Goa,,1387,713,670,4
+01-07-2020,India,Delhi,,89802,27007,59992,2803
+01-07-2020,India,Dadra and Nagar Haveli and Daman and Diu,,215,129,86,0
+01-07-2020,India,Chhattisgarh,,2940,623,2303,14
+01-07-2020,India,Chandigarh,,446,73,367,6
+01-07-2020,India,Bihar,,10249,2233,7946,70
+01-07-2020,India,Assam,,8582,2719,5851,12
+01-07-2020,India,Arunachal Pradesh,,195,128,66,1
+01-07-2020,India,Andhra Pradesh,,15252,8071,6988,193
+01-07-2020,India,Andaman and Nicobar Islands,,100,50,50,0
+01-07-2020,Sierra Leone,Main territory,,1498,439,999,60
+01-07-2020,Bangladesh,Main territory,,149258,85262,62108,1888
+01-07-2020,Holy See,Main territory,,12,0,12,0
+01-07-2020,Iran,Main territory,,230211,27766,191487,10958
+01-07-2020,Czechia,Main territory,,12046,3900,7797,349
+01-07-2020,Oman,Main territory,,41194,16847,24162,185
+01-07-2020,Israel,Main territory,,26410,9246,16834,330
+01-07-2020,Djibouti,Main territory,,4704,99,4550,55
+01-07-2020,Eswatini,Main territory,,840,411,418,11
+01-07-2020,France,Main territory,,197238,95578,71879,29781
+01-07-2020,France,St Martin,,43,3,37,3
+01-07-2020,France,Saint Pierre and Miquelon,,1,0,1,0
+01-07-2020,France,Saint Barthelemy,,6,0,6,0
+01-07-2020,France,Reunion,,528,54,472,2
+01-07-2020,France,New Caledonia,,21,0,21,0
+01-07-2020,France,Mayotte,,2643,267,2341,35
+01-07-2020,France,Martinique,,242,130,98,14
+01-07-2020,France,Guadeloupe,,182,11,157,14
+01-07-2020,France,French Polynesia,,62,2,60,0
+01-07-2020,France,French Guiana,,4268,2650,1602,16
+01-07-2020,China,Other,,0,0,0,0
+01-07-2020,China,Zhejiang,,1269,1,1267,1
+01-07-2020,China,Yunnan,,185,0,183,2
+01-07-2020,China,Xinjiang,,76,0,73,3
+01-07-2020,China,Tibet,,1,0,1,0
+01-07-2020,China,Tianjin,,198,1,194,3
+01-07-2020,China,Sichuan,,595,12,580,3
+01-07-2020,China,Shanxi,,198,0,198,0
+01-07-2020,China,Shanghai,,713,29,677,7
+01-07-2020,China,Shandong,,792,0,785,7
+01-07-2020,China,Shaanxi,,320,7,310,3
+01-07-2020,China,Qinghai,,18,0,18,0
+01-07-2020,China,Ningxia,,75,0,75,0
+01-07-2020,China,Macau,,46,1,45,0
+01-07-2020,China,Liaoning,,155,5,148,2
+01-07-2020,China,Jilin,,155,0,153,2
+01-07-2020,China,Jiangxi,,932,0,931,1
+01-07-2020,China,Jiangsu,,654,0,654,0
+01-07-2020,China,Inner Mongolia,,238,0,237,1
+01-07-2020,China,Hunan,,1019,0,1015,4
+01-07-2020,China,Hubei,,68135,0,63623,4512
+01-07-2020,China,Hong Kong,,1233,109,1117,7
+01-07-2020,China,Henan,,1276,0,1254,22
+01-07-2020,China,Heilongjiang,,947,0,934,13
+01-07-2020,China,Hebei,,349,9,334,6
+01-07-2020,China,Hainan,,171,0,165,6
+01-07-2020,China,Guizhou,,147,0,145,2
+01-07-2020,China,Guangxi,,254,0,252,2
+01-07-2020,China,Guangdong,,1642,7,1627,8
+01-07-2020,China,Gansu,,164,13,149,2
+01-07-2020,China,Fujian,,363,3,359,1
+01-07-2020,China,Chongqing,,582,3,573,6
+01-07-2020,China,Beijing,,923,325,589,9
+01-07-2020,China,Anhui,,991,0,985,6
+01-07-2020,Philippines,Main territory,,38511,26803,10438,1270
+01-07-2020,Tajikistan,Main territory,,6005,1326,4627,52
+01-07-2020,Saudi Arabia,Main territory,,194225,59767,132760,1698
+01-07-2020,Slovakia,Main territory,,1687,193,1466,28
+01-07-2020,Suriname,Main territory,,535,280,242,13
+01-07-2020,Kenya,Main territory,,6673,4435,2089,149
+01-07-2020,Portugal,Main territory,,42454,13077,27798,1579
+01-07-2020,Guyana,Main territory,,248,119,116,13
+01-07-2020,Lithuania,Main territory,,1813,218,1534,61
+01-07-2020,Congo (Kinshasa),Main territory,,7122,5162,1785,175
+01-07-2020,US,Alaska,Chugach,19,19,0,0
+01-07-2020,US,Alaska,Copper River,2,2,0,0
+01-07-2020,US,Virgin Islands,,90,84,0,6
+01-07-2020,US,Recovered,,0,-729994,729994,0
+01-07-2020,US,Puerto Rico,,7537,7384,0,153
+01-07-2020,US,Northern Mariana Islands,,30,28,0,2
+01-07-2020,US,Guam,,267,262,0,5
+01-07-2020,US,South Dakota,Ziebach,2,2,0,0
+01-07-2020,US,Texas,Zavala,21,21,0,0
+01-07-2020,US,Texas,Zapata,52,52,0,0
+01-07-2020,US,Colorado,Yuma,52,52,0,0
+01-07-2020,US,Arizona,Yuma,6498,6400,0,98
+01-07-2020,US,Alaska,Yukon-Koyukuk,3,3,0,0
+01-07-2020,US,California,Yuba,94,93,0,1
+01-07-2020,US,Texas,Young,25,24,0,1
+01-07-2020,US,Virginia,York,115,112,0,3
+01-07-2020,US,South Carolina,York,1257,1245,0,12
+01-07-2020,US,Pennsylvania,York,1531,1481,0,50
+01-07-2020,US,Nebraska,York,42,42,0,0
+01-07-2020,US,Maine,York,529,518,0,11
+01-07-2020,US,California,Yolo,555,531,0,24
+01-07-2020,US,Texas,Yoakum,24,24,0,0
+01-07-2020,US,Montana,Yellowstone,189,185,0,4
+01-07-2020,US,Minnesota,Yellow Medicine,29,29,0,0
+01-07-2020,US,Arkansas,Yell,644,641,0,3
+01-07-2020,US,Mississippi,Yazoo,473,467,0,6
+01-07-2020,US,Arizona,Yavapai,771,761,0,10
+01-07-2020,US,New York,Yates,46,40,0,6
+01-07-2020,US,South Dakota,Yankton,77,77,0,0
+01-07-2020,US,North Carolina,Yancey,44,44,0,0
+01-07-2020,US,Oregon,Yamhill,126,118,0,8
+01-07-2020,US,Mississippi,Yalobusha,161,154,0,7
+01-07-2020,US,Washington,Yakima,7284,7133,0,151
+01-07-2020,US,North Carolina,Yadkin,337,333,0,4
+01-07-2020,US,Virginia,Wythe,53,52,0,1
+01-07-2020,US,West Virginia,Wyoming,7,7,0,0
+01-07-2020,US,Pennsylvania,Wyoming,38,31,0,7
+01-07-2020,US,New York,Wyoming,95,90,0,5
+01-07-2020,US,Kansas,Wyandotte,2335,2252,0,83
+01-07-2020,US,Ohio,Wyandot,58,54,0,4
+01-07-2020,US,Missouri,Wright,14,14,0,0
+01-07-2020,US,Minnesota,Wright,448,443,0,5
+01-07-2020,US,Iowa,Wright,375,375,0,0
+01-07-2020,US,Alaska,Wrangell,3,3,0,0
+01-07-2020,US,Missouri,Worth,4,4,0,0
+01-07-2020,US,Iowa,Worth,14,14,0,0
+01-07-2020,US,Georgia,Worth,317,295,0,22
+01-07-2020,US,Massachusetts,Worcester,12350,11430,0,920
+01-07-2020,US,Maryland,Worcester,289,272,0,17
+01-07-2020,US,Oklahoma,Woodward,12,12,0,0
+01-07-2020,US,Kansas,Woodson,10,10,0,0
+01-07-2020,US,Oklahoma,Woods,7,7,0,0
+01-07-2020,US,Arkansas,Woodruff,6,6,0,0
+01-07-2020,US,Kentucky,Woodford,67,67,0,0
+01-07-2020,US,Illinois,Woodford,33,31,0,2
+01-07-2020,US,Iowa,Woodbury,3177,3133,0,44
+01-07-2020,US,Wisconsin,Wood,61,60,0,1
+01-07-2020,US,West Virginia,Wood,87,85,0,2
+01-07-2020,US,Texas,Wood,92,87,0,5
+01-07-2020,US,Ohio,Wood,384,348,0,36
+01-07-2020,US,Kentucky,Wolfe,3,3,0,0
+01-07-2020,US,Virginia,Wise,28,26,0,2
+01-07-2020,US,Texas,Wise,107,102,0,5
+01-07-2020,US,West Virginia,Wirt,4,4,0,0
+01-07-2020,US,Mississippi,Winston,243,238,0,5
+01-07-2020,US,Alabama,Winston,234,231,0,3
+01-07-2020,US,Minnesota,Winona,119,104,0,15
+01-07-2020,US,Iowa,Winneshiek,32,32,0,0
+01-07-2020,US,Wisconsin,Winnebago,683,672,0,11
+01-07-2020,US,Iowa,Winnebago,26,26,0,0
+01-07-2020,US,Illinois,Winnebago,3046,2951,0,95
+01-07-2020,US,Louisiana,Winn,244,239,0,5
+01-07-2020,US,Texas,Winkler,24,24,0,0
+01-07-2020,US,Vermont,Windsor,58,56,0,2
+01-07-2020,US,Vermont,Windham,94,91,0,3
+01-07-2020,US,Connecticut,Windham,612,598,0,14
+01-07-2020,US,Virginia,Winchester,326,323,0,3
+01-07-2020,US,Texas,Wilson,101,96,0,5
+01-07-2020,US,Tennessee,Wilson,829,812,0,17
+01-07-2020,US,North Carolina,Wilson,735,716,0,19
+01-07-2020,US,Kansas,Wilson,2,2,0,0
+01-07-2020,US,Texas,Williamson,2339,2300,0,39
+01-07-2020,US,Tennessee,Williamson,1090,1076,0,14
+01-07-2020,US,Illinois,Williamson,120,116,0,4
+01-07-2020,US,Virginia,Williamsburg,61,55,0,6
+01-07-2020,US,South Carolina,Williamsburg,412,397,0,15
+01-07-2020,US,Ohio,Williams,65,64,0,1
+01-07-2020,US,North Dakota,Williams,37,37,0,0
+01-07-2020,US,Texas,Willacy,156,153,0,3
+01-07-2020,US,Illinois,Will,6744,6424,0,320
+01-07-2020,US,Mississippi,Wilkinson,91,82,0,9
+01-07-2020,US,Georgia,Wilkinson,76,68,0,8
+01-07-2020,US,Minnesota,Wilkin,20,17,0,3
+01-07-2020,US,North Carolina,Wilkes,578,572,0,6
+01-07-2020,US,Georgia,Wilkes,57,56,0,1
+01-07-2020,US,Georgia,Wilcox,127,112,0,15
+01-07-2020,US,Alabama,Wilcox,286,278,0,8
+01-07-2020,US,Texas,Wilbarger,10,10,0,0
+01-07-2020,US,Maryland,Wicomico,1070,1029,0,41
+01-07-2020,US,Texas,Wichita,363,361,0,2
+01-07-2020,US,Washington,Whitman,41,41,0,0
+01-07-2020,US,Kentucky,Whitley,28,28,0,0
+01-07-2020,US,Indiana,Whitley,81,77,0,4
+01-07-2020,US,Georgia,Whitfield,1152,1142,0,10
+01-07-2020,US,Illinois,Whiteside,191,176,0,15
+01-07-2020,US,Nevada,White Pine,4,4,0,0
+01-07-2020,US,Tennessee,White,64,61,0,3
+01-07-2020,US,Indiana,White,258,248,0,10
+01-07-2020,US,Illinois,White,5,5,0,0
+01-07-2020,US,Georgia,White,143,139,0,4
+01-07-2020,US,Arkansas,White,87,86,0,1
+01-07-2020,US,Texas,Wheeler,16,16,0,0
+01-07-2020,US,Oregon,Wheeler,0,0,0,0
+01-07-2020,US,Nebraska,Wheeler,0,0,0,0
+01-07-2020,US,Georgia,Wheeler,49,49,0,0
+01-07-2020,US,Montana,Wheatland,1,1,0,0
+01-07-2020,US,Washington,Whatcom,646,613,0,33
+01-07-2020,US,Texas,Wharton,203,202,0,1
+01-07-2020,US,Michigan,Wexford,28,24,0,4
+01-07-2020,US,West Virginia,Wetzel,10,10,0,0
+01-07-2020,US,Wyoming,Weston,2,2,0,0
+01-07-2020,US,Virginia,Westmoreland,108,106,0,2
+01-07-2020,US,Pennsylvania,Westmoreland,675,637,0,38
+01-07-2020,US,New York,Westchester,34866,33441,0,1425
+01-07-2020,US,Louisiana,West Feliciana,246,232,0,14
+01-07-2020,US,Louisiana,West Carroll,134,129,0,5
+01-07-2020,US,Louisiana,West Baton Rouge,264,234,0,30
+01-07-2020,US,North Dakota,Wells,8,8,0,0
+01-07-2020,US,Indiana,Wells,68,67,0,1
+01-07-2020,US,Colorado,Weld,2823,2686,0,137
+01-07-2020,US,West Virginia,Webster,1,1,0,0
+01-07-2020,US,Nebraska,Webster,6,6,0,0
+01-07-2020,US,Missouri,Webster,27,26,0,1
+01-07-2020,US,Mississippi,Webster,123,113,0,10
+01-07-2020,US,Louisiana,Webster,423,412,0,11
+01-07-2020,US,Kentucky,Webster,41,41,0,0
+01-07-2020,US,Iowa,Webster,168,166,0,2
+01-07-2020,US,Georgia,Webster,22,21,0,1
+01-07-2020,US,Utah,Weber-Morgan,1004,991,0,13
+01-07-2020,US,Texas,Webb,1538,1508,0,30
+01-07-2020,US,Tennessee,Weakley,61,60,0,1
+01-07-2020,US,Virginia,Waynesboro,84,84,0,0
+01-07-2020,US,West Virginia,Wayne,112,103,0,9
+01-07-2020,US,Tennessee,Wayne,77,77,0,0
+01-07-2020,US,Pennsylvania,Wayne,140,131,0,9
+01-07-2020,US,Ohio,Wayne,354,304,0,50
+01-07-2020,US,North Carolina,Wayne,1822,1794,0,28
+01-07-2020,US,New York,Wayne,174,171,0,3
+01-07-2020,US,Nebraska,Wayne,28,28,0,0
+01-07-2020,US,Missouri,Wayne,3,3,0,0
+01-07-2020,US,Mississippi,Wayne,521,509,0,12
+01-07-2020,US,Michigan,Wayne,22855,20133,0,2722
+01-07-2020,US,Kentucky,Wayne,15,15,0,0
+01-07-2020,US,Iowa,Wayne,8,8,0,0
+01-07-2020,US,Indiana,Wayne,128,122,0,6
+01-07-2020,US,Illinois,Wayne,14,13,0,1
+01-07-2020,US,Georgia,Wayne,77,77,0,0
+01-07-2020,US,Wisconsin,Waushara,29,29,0,0
+01-07-2020,US,Wisconsin,Waupaca,116,109,0,7
+01-07-2020,US,Wisconsin,Waukesha,1210,1171,0,39
+01-07-2020,US,Minnesota,Watonwan,206,206,0,0
+01-07-2020,US,North Carolina,Watauga,70,70,0,0
+01-07-2020,US,Michigan,Washtenaw,1712,1607,0,105
+01-07-2020,US,Nevada,Washoe,2766,2691,0,75
+01-07-2020,US,Oklahoma,Washita,3,3,0,0
+01-07-2020,US,Wisconsin,Washington,380,364,0,16
+01-07-2020,US,Virginia,Washington,64,60,0,4
+01-07-2020,US,Vermont,Washington,41,40,0,1
+01-07-2020,US,Texas,Washington,275,244,0,31
+01-07-2020,US,Tennessee,Washington,134,134,0,0
+01-07-2020,US,Rhode Island,Washington,532,468,0,64
+01-07-2020,US,Pennsylvania,Washington,230,224,0,6
+01-07-2020,US,Oregon,Washington,1379,1359,0,20
+01-07-2020,US,Oklahoma,Washington,400,361,0,39
+01-07-2020,US,Ohio,Washington,127,110,0,17
+01-07-2020,US,North Carolina,Washington,38,35,0,3
+01-07-2020,US,New York,Washington,246,232,0,14
+01-07-2020,US,Nebraska,Washington,51,50,0,1
+01-07-2020,US,Missouri,Washington,21,20,0,1
+01-07-2020,US,Mississippi,Washington,496,487,0,9
+01-07-2020,US,Minnesota,Washington,1025,985,0,40
+01-07-2020,US,Maryland,Washington,697,669,0,28
+01-07-2020,US,Maine,Washington,3,3,0,0
+01-07-2020,US,Louisiana,Washington,691,645,0,46
+01-07-2020,US,Kentucky,Washington,24,24,0,0
+01-07-2020,US,Kansas,Washington,1,1,0,0
+01-07-2020,US,Iowa,Washington,229,220,0,9
+01-07-2020,US,Indiana,Washington,64,63,0,1
+01-07-2020,US,Illinois,Washington,20,20,0,0
+01-07-2020,US,Idaho,Washington,107,107,0,0
+01-07-2020,US,Georgia,Washington,110,109,0,1
+01-07-2020,US,Florida,Washington,112,99,0,13
+01-07-2020,US,Colorado,Washington,45,45,0,0
+01-07-2020,US,Arkansas,Washington,3634,3604,0,30
+01-07-2020,US,Alabama,Washington,108,101,0,7
+01-07-2020,US,Wisconsin,Washburn,4,4,0,0
+01-07-2020,US,Wyoming,Washakie,39,39,0,0
+01-07-2020,US,Minnesota,Waseca,58,58,0,0
+01-07-2020,US,Oregon,Wasco,73,72,0,1
+01-07-2020,US,Utah,Wasatch,410,407,0,3
+01-07-2020,US,Indiana,Warrick,201,172,0,29
+01-07-2020,US,Virginia,Warren,290,285,0,5
+01-07-2020,US,Tennessee,Warren,65,65,0,0
+01-07-2020,US,Pennsylvania,Warren,7,6,0,1
+01-07-2020,US,Ohio,Warren,757,738,0,19
+01-07-2020,US,North Carolina,Warren,161,156,0,5
+01-07-2020,US,New York,Warren,263,233,0,30
+01-07-2020,US,New Jersey,Warren,1246,1087,0,159
+01-07-2020,US,Missouri,Warren,40,40,0,0
+01-07-2020,US,Mississippi,Warren,443,426,0,17
+01-07-2020,US,Kentucky,Warren,1547,1534,0,13
+01-07-2020,US,Iowa,Warren,249,248,0,1
+01-07-2020,US,Indiana,Warren,14,13,0,1
+01-07-2020,US,Illinois,Warren,138,138,0,0
+01-07-2020,US,Georgia,Warren,23,23,0,0
+01-07-2020,US,Georgia,Ware,448,433,0,15
+01-07-2020,US,Texas,Ward,20,20,0,0
+01-07-2020,US,North Dakota,Ward,60,59,0,1
+01-07-2020,US,Iowa,Wapello,701,671,0,30
+01-07-2020,US,Wisconsin,Walworth,612,594,0,18
+01-07-2020,US,South Dakota,Walworth,13,13,0,0
+01-07-2020,US,Georgia,Walton,417,389,0,28
+01-07-2020,US,Florida,Walton,257,248,0,9
+01-07-2020,US,Mississippi,Walthall,172,168,0,4
+01-07-2020,US,North Dakota,Walsh,24,24,0,0
+01-07-2020,US,Oregon,Wallowa,10,10,0,0
+01-07-2020,US,Texas,Waller,156,156,0,0
+01-07-2020,US,Washington,Walla Walla,172,170,0,2
+01-07-2020,US,Texas,Walker,2028,2000,0,28
+01-07-2020,US,Georgia,Walker,325,314,0,11
+01-07-2020,US,Alabama,Walker,882,859,0,23
+01-07-2020,US,Maine,Waldo,56,42,0,14
+01-07-2020,US,Florida,Wakulla,65,64,0,1
+01-07-2020,US,North Carolina,Wake,5298,5251,0,47
+01-07-2020,US,Washington,Wahkiakum,5,5,0,0
+01-07-2020,US,Oklahoma,Wagoner,269,250,0,19
+01-07-2020,US,Minnesota,Wadena,15,15,0,0
+01-07-2020,US,Kansas,Wabaunsee,35,35,0,0
+01-07-2020,US,Minnesota,Wabasha,31,31,0,0
+01-07-2020,US,Indiana,Wabash,107,105,0,2
+01-07-2020,US,Illinois,Wabash,22,22,0,0
+01-07-2020,US,Florida,Volusia,2219,2161,0,58
+01-07-2020,US,Virginia,Virginia Beach,1203,1174,0,29
+01-07-2020,US,Ohio,Vinton,22,20,0,2
+01-07-2020,US,Wisconsin,Vilas,10,10,0,0
+01-07-2020,US,Indiana,Vigo,224,214,0,10
+01-07-2020,US,Texas,Victoria,697,689,0,8
+01-07-2020,US,Wisconsin,Vernon,36,36,0,0
+01-07-2020,US,Missouri,Vernon,16,16,0,0
+01-07-2020,US,Louisiana,Vernon,153,145,0,8
+01-07-2020,US,Indiana,Vermillion,13,13,0,0
+01-07-2020,US,Louisiana,Vermilion,265,259,0,6
+01-07-2020,US,Illinois,Vermilion,66,64,0,2
+01-07-2020,US,California,Ventura,3096,3050,0,46
+01-07-2020,US,Pennsylvania,Venango,19,19,0,0
+01-07-2020,US,Indiana,Vanderburgh,430,422,0,8
+01-07-2020,US,North Carolina,Vance,506,469,0,37
+01-07-2020,US,Texas,Van Zandt,91,88,0,3
+01-07-2020,US,Ohio,Van Wert,27,26,0,1
+01-07-2020,US,Tennessee,Van Buren,7,7,0,0
+01-07-2020,US,Michigan,Van Buren,230,222,0,8
+01-07-2020,US,Iowa,Van Buren,19,19,0,0
+01-07-2020,US,Arkansas,Van Buren,33,31,0,2
+01-07-2020,US,Nebraska,Valley,8,8,0,0
+01-07-2020,US,Montana,Valley,4,4,0,0
+01-07-2020,US,Idaho,Valley,14,14,0,0
+01-07-2020,US,New Mexico,Valencia,124,122,0,2
+01-07-2020,US,Alaska,Valdez-Cordova,0,0,0,0
+01-07-2020,US,Texas,Val Verde,256,256,0,0
+01-07-2020,US,Texas,Uvalde,85,84,0,1
+01-07-2020,US,Utah,Utah,4154,4132,0,22
+01-07-2020,US,Texas,Upton,3,3,0,0
+01-07-2020,US,Georgia,Upson,363,320,0,43
+01-07-2020,US,West Virginia,Upshur,21,21,0,0
+01-07-2020,US,Texas,Upshur,58,58,0,0
+01-07-2020,US,Tennessee,Union,13,13,0,0
+01-07-2020,US,South Dakota,Union,124,123,0,1
+01-07-2020,US,South Carolina,Union,91,91,0,0
+01-07-2020,US,Pennsylvania,Union,91,89,0,2
+01-07-2020,US,Oregon,Union,342,341,0,1
+01-07-2020,US,Ohio,Union,80,78,0,2
+01-07-2020,US,North Carolina,Union,1261,1237,0,24
+01-07-2020,US,New Mexico,Union,8,8,0,0
+01-07-2020,US,New Jersey,Union,16482,15153,0,1329
+01-07-2020,US,Mississippi,Union,175,166,0,9
+01-07-2020,US,Louisiana,Union,433,409,0,24
+01-07-2020,US,Kentucky,Union,29,29,0,0
+01-07-2020,US,Iowa,Union,25,25,0,0
+01-07-2020,US,Indiana,Union,13,13,0,0
+01-07-2020,US,Illinois,Union,191,172,0,19
+01-07-2020,US,Georgia,Union,76,73,0,3
+01-07-2020,US,Florida,Union,62,60,0,2
+01-07-2020,US,Arkansas,Union,249,236,0,13
+01-07-2020,US,Tennessee,Unicoi,54,54,0,0
+01-07-2020,US,Wyoming,Unassigned,0,-19,0,19
+01-07-2020,US,Wisconsin,Unassigned,0,0,0,0
+01-07-2020,US,West Virginia,Unassigned,0,0,0,0
+01-07-2020,US,Washington,Unassigned,26,26,0,0
+01-07-2020,US,Virginia,Unassigned,0,0,0,0
+01-07-2020,US,Vermont,Unassigned,6,6,0,0
+01-07-2020,US,Utah,Unassigned,0,0,0,0
+01-07-2020,US,Texas,Unassigned,0,0,0,0
+01-07-2020,US,Tennessee,Unassigned,425,424,0,1
+01-07-2020,US,South Dakota,Unassigned,0,0,0,0
+01-07-2020,US,South Carolina,Unassigned,0,0,0,0
+01-07-2020,US,Rhode Island,Unassigned,1624,1623,0,1
+01-07-2020,US,Pennsylvania,Unassigned,0,0,0,0
+01-07-2020,US,Oregon,Unassigned,0,0,0,0
+01-07-2020,US,Oklahoma,Unassigned,0,0,0,0
+01-07-2020,US,Ohio,Unassigned,0,0,0,0
+01-07-2020,US,North Dakota,Unassigned,0,0,0,0
+01-07-2020,US,North Carolina,Unassigned,0,0,0,0
+01-07-2020,US,New York,Unassigned,0,0,0,0
+01-07-2020,US,New Mexico,Unassigned,908,908,0,0
+01-07-2020,US,New Jersey,Unassigned,643,643,0,0
+01-07-2020,US,New Hampshire,Unassigned,1,1,0,0
+01-07-2020,US,Nevada,Unassigned,0,0,0,0
+01-07-2020,US,Nebraska,Unassigned,176,175,0,1
+01-07-2020,US,Montana,Unassigned,0,0,0,0
+01-07-2020,US,Missouri,Unassigned,98,98,0,0
+01-07-2020,US,Mississippi,Unassigned,0,0,0,0
+01-07-2020,US,Minnesota,Unassigned,81,44,0,37
+01-07-2020,US,Michigan,Unassigned,4,4,0,0
+01-07-2020,US,Massachusetts,Unassigned,288,281,0,7
+01-07-2020,US,Maryland,Unassigned,0,-25,0,25
+01-07-2020,US,Maine,Unassigned,2,2,0,0
+01-07-2020,US,Louisiana,Unassigned,3,-105,0,108
+01-07-2020,US,Kentucky,Unassigned,4,4,0,0
+01-07-2020,US,Kansas,Unassigned,0,-1,0,1
+01-07-2020,US,Iowa,Unassigned,4,4,0,0
+01-07-2020,US,Indiana,Unassigned,0,-43,0,43
+01-07-2020,US,Illinois,Unassigned,50,50,0,0
+01-07-2020,US,Idaho,Unassigned,1,1,0,0
+01-07-2020,US,Hawaii,Unassigned,0,0,0,0
+01-07-2020,US,Georgia,Unassigned,2395,2393,0,2
+01-07-2020,US,Florida,Unassigned,167,167,0,0
+01-07-2020,US,Delaware,Unassigned,42,42,0,0
+01-07-2020,US,Connecticut,Unassigned,209,209,0,0
+01-07-2020,US,Colorado,Unassigned,17,17,0,0
+01-07-2020,US,California,Unassigned,0,0,0,0
+01-07-2020,US,Arkansas,Unassigned,706,706,0,0
+01-07-2020,US,Arizona,Unassigned,0,-1,0,1
+01-07-2020,US,Alaska,Unassigned,0,0,0,0
+01-07-2020,US,Alabama,Unassigned,0,-25,0,25
+01-07-2020,US,Oregon,Umatilla,533,529,0,4
+01-07-2020,US,New York,Ulster,1782,1696,0,86
+01-07-2020,US,Wyoming,Uinta,177,177,0,0
+01-07-2020,US,North Carolina,Tyrrell,11,11,0,0
+01-07-2020,US,West Virginia,Tyler,4,4,0,0
+01-07-2020,US,Texas,Tyler,25,25,0,0
+01-07-2020,US,Idaho,Twin Falls,614,589,0,25
+01-07-2020,US,Georgia,Twiggs,27,26,0,1
+01-07-2020,US,Michigan,Tuscola,232,206,0,26
+01-07-2020,US,Ohio,Tuscarawas,515,507,0,8
+01-07-2020,US,Alabama,Tuscaloosa,2072,2034,0,38
+01-07-2020,US,South Dakota,Turner,25,25,0,0
+01-07-2020,US,Georgia,Turner,177,161,0,16
+01-07-2020,US,California,Tuolumne,30,30,0,0
+01-07-2020,US,Mississippi,Tunica,89,86,0,3
+01-07-2020,US,Oklahoma,Tulsa,3544,3475,0,69
+01-07-2020,US,California,Tulare,4323,4195,0,128
+01-07-2020,US,West Virginia,Tucker,6,6,0,0
+01-07-2020,US,Ohio,Trumbull,863,792,0,71
+01-07-2020,US,Tennessee,Trousdale,1489,1484,0,5
+01-07-2020,US,Georgia,Troup,1464,1430,0,34
+01-07-2020,US,South Dakota,Tripp,16,16,0,0
+01-07-2020,US,Texas,Trinity,36,36,0,0
+01-07-2020,US,California,Trinity,2,2,0,0
+01-07-2020,US,Kentucky,Trimble,6,6,0,0
+01-07-2020,US,Kentucky,Trigg,26,26,0,0
+01-07-2020,US,Utah,TriCounty,50,50,0,0
+01-07-2020,US,Georgia,Treutlen,23,22,0,1
+01-07-2020,US,Wisconsin,Trempealeau,118,118,0,0
+01-07-2020,US,Kansas,Trego,1,1,0,0
+01-07-2020,US,Montana,Treasure,2,2,0,0
+01-07-2020,US,Texas,Travis,9527,9403,0,124
+01-07-2020,US,Minnesota,Traverse,5,5,0,0
+01-07-2020,US,North Carolina,Transylvania,22,21,0,1
+01-07-2020,US,North Dakota,Traill,19,19,0,0
+01-07-2020,US,Georgia,Towns,45,44,0,1
+01-07-2020,US,New Mexico,Torrance,43,42,0,1
+01-07-2020,US,Georgia,Toombs,254,249,0,5
+01-07-2020,US,Montana,Toole,31,25,0,6
+01-07-2020,US,Utah,Tooele,247,247,0,0
+01-07-2020,US,New York,Tompkins,177,177,0,0
+01-07-2020,US,Texas,Tom Green,423,421,0,2
+01-07-2020,US,Connecticut,Tolland,913,849,0,64
+01-07-2020,US,South Dakota,Todd,57,56,0,1
+01-07-2020,US,Minnesota,Todd,400,398,0,2
+01-07-2020,US,Kentucky,Todd,25,25,0,0
+01-07-2020,US,Texas,Titus,710,705,0,5
+01-07-2020,US,Mississippi,Tishomingo,68,67,0,1
+01-07-2020,US,Tennessee,Tipton,611,607,0,4
+01-07-2020,US,Indiana,Tipton,30,29,0,1
+01-07-2020,US,Indiana,Tippecanoe,640,632,0,8
+01-07-2020,US,Mississippi,Tippah,123,112,0,11
+01-07-2020,US,Pennsylvania,Tioga,25,23,0,2
+01-07-2020,US,New York,Tioga,143,119,0,24
+01-07-2020,US,Oklahoma,Tillman,23,22,0,1
+01-07-2020,US,Oregon,Tillamook,11,11,0,0
+01-07-2020,US,Georgia,Tift,754,728,0,26
+01-07-2020,US,Washington,Thurston,273,269,0,4
+01-07-2020,US,Nebraska,Thurston,84,83,0,1
+01-07-2020,US,Texas,Throckmorton,1,1,0,0
+01-07-2020,US,Nebraska,Thomas,1,1,0,0
+01-07-2020,US,Kansas,Thomas,15,15,0,0
+01-07-2020,US,Georgia,Thomas,459,427,0,32
+01-07-2020,US,Nebraska,Thayer,1,1,0,0
+01-07-2020,US,Oklahoma,Texas,987,981,0,6
+01-07-2020,US,Missouri,Texas,4,4,0,0
+01-07-2020,US,Wyoming,Teton,131,131,0,0
+01-07-2020,US,Idaho,Teton,20,20,0,0
+01-07-2020,US,Texas,Terry,17,17,0,0
+01-07-2020,US,Texas,Terrell,3,3,0,0
+01-07-2020,US,Georgia,Terrell,227,200,0,27
+01-07-2020,US,Louisiana,Terrebonne,1068,1007,0,61
+01-07-2020,US,Louisiana,Tensas,26,26,0,0
+01-07-2020,US,Colorado,Teller,41,39,0,2
+01-07-2020,US,Georgia,Telfair,120,117,0,3
+01-07-2020,US,California,Tehama,82,81,0,1
+01-07-2020,US,Virginia,Tazewell,15,15,0,0
+01-07-2020,US,Illinois,Tazewell,137,129,0,8
+01-07-2020,US,Wisconsin,Taylor,13,13,0,0
+01-07-2020,US,West Virginia,Taylor,16,16,0,0
+01-07-2020,US,Texas,Taylor,423,418,0,5
+01-07-2020,US,Kentucky,Taylor,42,41,0,1
+01-07-2020,US,Iowa,Taylor,79,79,0,0
+01-07-2020,US,Georgia,Taylor,28,26,0,2
+01-07-2020,US,Florida,Taylor,80,79,0,1
+01-07-2020,US,Georgia,Tattnall,141,141,0,0
+01-07-2020,US,Mississippi,Tate,257,250,0,7
+01-07-2020,US,Texas,Tarrant,13423,13123,0,300
+01-07-2020,US,New Mexico,Taos,43,42,0,1
+01-07-2020,US,Louisiana,Tangipahoa,1353,1310,0,43
+01-07-2020,US,Missouri,Taney,48,46,0,2
+01-07-2020,US,Iowa,Tama,451,422,0,29
+01-07-2020,US,Alabama,Tallapoosa,573,504,0,69
+01-07-2020,US,Mississippi,Tallahatchie,104,101,0,3
+01-07-2020,US,Alabama,Talladega,286,279,0,7
+01-07-2020,US,Georgia,Taliaferro,2,2,0,0
+01-07-2020,US,Maryland,Talbot,137,133,0,4
+01-07-2020,US,Georgia,Talbot,73,71,0,2
+01-07-2020,US,Indiana,Switzerland,25,25,0,0
+01-07-2020,US,Texas,Swisher,35,34,0,1
+01-07-2020,US,Minnesota,Swift,20,19,0,1
+01-07-2020,US,Wyoming,Sweetwater,89,89,0,0
+01-07-2020,US,North Carolina,Swain,58,57,0,1
+01-07-2020,US,Florida,Suwannee,532,511,0,21
+01-07-2020,US,Texas,Sutton,5,5,0,0
+01-07-2020,US,California,Sutter,197,194,0,3
+01-07-2020,US,Virginia,Sussex,200,197,0,3
+01-07-2020,US,New Jersey,Sussex,1203,1010,0,193
+01-07-2020,US,Delaware,Sussex,4690,4503,0,187
+01-07-2020,US,Pennsylvania,Susquehanna,182,158,0,24
+01-07-2020,US,Virginia,Surry,16,15,0,1
+01-07-2020,US,North Carolina,Surry,482,480,0,2
+01-07-2020,US,Mississippi,Sunflower,306,300,0,6
+01-07-2020,US,South Carolina,Sumter,1080,1057,0,23
+01-07-2020,US,Georgia,Sumter,557,507,0,50
+01-07-2020,US,Florida,Sumter,368,351,0,17
+01-07-2020,US,Alabama,Sumter,278,266,0,12
+01-07-2020,US,Tennessee,Sumner,1469,1417,0,52
+01-07-2020,US,Kansas,Sumner,13,12,0,1
+01-07-2020,US,Utah,Summit,493,493,0,0
+01-07-2020,US,Ohio,Summit,1969,1806,0,163
+01-07-2020,US,Colorado,Summit,274,271,0,3
+01-07-2020,US,West Virginia,Summers,2,2,0,0
+01-07-2020,US,South Dakota,Sully,1,1,0,0
+01-07-2020,US,Tennessee,Sullivan,91,89,0,2
+01-07-2020,US,Pennsylvania,Sullivan,5,5,0,0
+01-07-2020,US,New York,Sullivan,1452,1407,0,45
+01-07-2020,US,New Hampshire,Sullivan,33,32,0,1
+01-07-2020,US,Missouri,Sullivan,108,108,0,0
+01-07-2020,US,Indiana,Sullivan,44,43,0,1
+01-07-2020,US,Virginia,Suffolk,420,385,0,35
+01-07-2020,US,New York,Suffolk,41427,39446,0,1981
+01-07-2020,US,Massachusetts,Suffolk,19819,18817,0,1002
+01-07-2020,US,Wyoming,Sublette,6,6,0,0
+01-07-2020,US,North Dakota,Stutsman,63,62,0,1
+01-07-2020,US,New Hampshire,Strafford,292,279,0,13
+01-07-2020,US,Iowa,Story,722,719,0,3
+01-07-2020,US,Nevada,Storey,2,2,0,0
+01-07-2020,US,Missouri,Stone,12,12,0,0
+01-07-2020,US,Mississippi,Stone,52,51,0,1
+01-07-2020,US,Arkansas,Stone,14,14,0,0
+01-07-2020,US,North Carolina,Stokes,129,128,0,1
+01-07-2020,US,Missouri,Stoddard,134,126,0,8
+01-07-2020,US,Montana,Stillwater,6,6,0,0
+01-07-2020,US,Tennessee,Stewart,21,21,0,0
+01-07-2020,US,Georgia,Stewart,129,126,0,3
+01-07-2020,US,Washington,Stevens,18,17,0,1
+01-07-2020,US,Minnesota,Stevens,4,4,0,0
+01-07-2020,US,Kansas,Stevens,32,32,0,0
+01-07-2020,US,New York,Steuben,268,227,0,41
+01-07-2020,US,Indiana,Steuben,123,121,0,2
+01-07-2020,US,Illinois,Stephenson,274,269,0,5
+01-07-2020,US,Texas,Stephens,8,8,0,0
+01-07-2020,US,Oklahoma,Stephens,63,62,0,1
+01-07-2020,US,Georgia,Stephens,234,228,0,6
+01-07-2020,US,North Dakota,Steele,2,2,0,0
+01-07-2020,US,Minnesota,Steele,219,219,0,0
+01-07-2020,US,Minnesota,Stearns,2287,2268,0,19
+01-07-2020,US,Missouri,Ste. Genevieve,17,16,0,1
+01-07-2020,US,Virginia,Staunton,74,74,0,0
+01-07-2020,US,Texas,Starr,721,718,0,3
+01-07-2020,US,Indiana,Starke,73,70,0,3
+01-07-2020,US,Ohio,Stark,1052,961,0,91
+01-07-2020,US,North Dakota,Stark,75,72,0,3
+01-07-2020,US,Illinois,Stark,3,3,0,0
+01-07-2020,US,Nebraska,Stanton,21,21,0,0
+01-07-2020,US,Kansas,Stanton,10,10,0,0
+01-07-2020,US,North Carolina,Stanly,394,389,0,5
+01-07-2020,US,South Dakota,Stanley,12,12,0,0
+01-07-2020,US,California,Stanislaus,2310,2266,0,44
+01-07-2020,US,Virginia,Stafford,990,985,0,5
+01-07-2020,US,Kansas,Stafford,1,1,0,0
+01-07-2020,US,Louisiana,St. Tammany,2371,2196,0,175
+01-07-2020,US,Maryland,St. Mary's,639,588,0,51
+01-07-2020,US,Louisiana,St. Mary,489,451,0,38
+01-07-2020,US,Louisiana,St. Martin,727,701,0,26
+01-07-2020,US,Florida,St. Lucie,1812,1764,0,48
+01-07-2020,US,Missouri,St. Louis City,2867,2701,0,166
+01-07-2020,US,Missouri,St. Louis,6616,6035,0,581
+01-07-2020,US,Minnesota,St. Louis,169,154,0,15
+01-07-2020,US,New York,St. Lawrence,219,217,0,2
+01-07-2020,US,Louisiana,St. Landry,653,596,0,57
+01-07-2020,US,Michigan,St. Joseph,327,323,0,4
+01-07-2020,US,Indiana,St. Joseph,1849,1778,0,71
+01-07-2020,US,Florida,St. Johns,989,982,0,7
+01-07-2020,US,Louisiana,St. John the Baptist,976,889,0,87
+01-07-2020,US,Louisiana,St. James,375,346,0,29
+01-07-2020,US,Louisiana,St. Helena,99,98,0,1
+01-07-2020,US,Missouri,St. Francois,138,136,0,2
+01-07-2020,US,Arkansas,St. Francis,814,811,0,3
+01-07-2020,US,Wisconsin,St. Croix,171,170,0,1
+01-07-2020,US,Missouri,St. Clair,2,2,0,0
+01-07-2020,US,Michigan,St. Clair,561,511,0,50
+01-07-2020,US,Illinois,St. Clair,1906,1770,0,136
+01-07-2020,US,Alabama,St. Clair,324,322,0,2
+01-07-2020,US,Missouri,St. Charles,1010,937,0,73
+01-07-2020,US,Louisiana,St. Charles,778,729,0,49
+01-07-2020,US,Louisiana,St. Bernard,621,598,0,23
+01-07-2020,US,Virginia,Spotsylvania,994,964,0,30
+01-07-2020,US,Washington,Spokane,1450,1410,0,40
+01-07-2020,US,South Dakota,Spink,11,11,0,0
+01-07-2020,US,Kentucky,Spencer,37,37,0,0
+01-07-2020,US,Indiana,Spencer,31,30,0,1
+01-07-2020,US,South Carolina,Spartanburg,1663,1615,0,48
+01-07-2020,US,Georgia,Spalding,425,393,0,32
+01-07-2020,US,Utah,Southwest Utah,1553,1542,0,11
+01-07-2020,US,Utah,Southeast Utah,37,37,0,0
+01-07-2020,US,Alaska,Southeast Fairbanks,8,8,0,0
+01-07-2020,US,Virginia,Southampton,157,152,0,5
+01-07-2020,US,California,Sonoma,1185,1178,0,7
+01-07-2020,US,Texas,Somervell,8,8,0,0
+01-07-2020,US,Pennsylvania,Somerset,61,60,0,1
+01-07-2020,US,New Jersey,Somerset,4926,4398,0,528
+01-07-2020,US,Maryland,Somerset,87,84,0,3
+01-07-2020,US,Maine,Somerset,28,28,0,0
+01-07-2020,US,California,Solano,1402,1377,0,25
+01-07-2020,US,New Mexico,Socorro,60,55,0,5
+01-07-2020,US,Pennsylvania,Snyder,66,64,0,2
+01-07-2020,US,Washington,Snohomish,3595,3427,0,168
+01-07-2020,US,Virginia,Smyth,39,38,0,1
+01-07-2020,US,Texas,Smith,618,614,0,4
+01-07-2020,US,Tennessee,Smith,96,95,0,1
+01-07-2020,US,Mississippi,Smith,206,195,0,11
+01-07-2020,US,Kansas,Smith,3,3,0,0
+01-07-2020,US,North Dakota,Slope,3,3,0,0
+01-07-2020,US,Washington,Skamania,6,6,0,0
+01-07-2020,US,Washington,Skagit,528,514,0,14
+01-07-2020,US,Alaska,Sitka,12,12,0,0
+01-07-2020,US,California,Siskiyou,31,31,0,0
+01-07-2020,US,North Dakota,Sioux,24,24,0,0
+01-07-2020,US,Nebraska,Sioux,6,6,0,0
+01-07-2020,US,Iowa,Sioux,457,457,0,0
+01-07-2020,US,Mississippi,Simpson,230,227,0,3
+01-07-2020,US,Kentucky,Simpson,78,75,0,3
+01-07-2020,US,Montana,Silver Bow,15,15,0,0
+01-07-2020,US,New Mexico,Sierra,12,12,0,0
+01-07-2020,US,California,Sierra,1,1,0,0
+01-07-2020,US,Minnesota,Sibley,48,46,0,2
+01-07-2020,US,Michigan,Shiawassee,273,245,0,28
+01-07-2020,US,Texas,Sherman,30,30,0,0
+01-07-2020,US,Oregon,Sherman,1,1,0,0
+01-07-2020,US,Nebraska,Sherman,5,5,0,0
+01-07-2020,US,Kansas,Sherman,7,7,0,0
+01-07-2020,US,Wyoming,Sheridan,27,27,0,0
+01-07-2020,US,North Dakota,Sheridan,1,1,0,0
+01-07-2020,US,Nebraska,Sheridan,4,4,0,0
+01-07-2020,US,Kansas,Sheridan,5,5,0,0
+01-07-2020,US,Minnesota,Sherburne,297,293,0,4
+01-07-2020,US,Virginia,Shenandoah,567,538,0,29
+01-07-2020,US,Texas,Shelby,278,269,0,9
+01-07-2020,US,Tennessee,Shelby,10344,10151,0,193
+01-07-2020,US,Ohio,Shelby,59,55,0,4
+01-07-2020,US,Missouri,Shelby,3,3,0,0
+01-07-2020,US,Kentucky,Shelby,418,406,0,12
+01-07-2020,US,Iowa,Shelby,106,106,0,0
+01-07-2020,US,Indiana,Shelby,416,391,0,25
+01-07-2020,US,Illinois,Shelby,18,17,0,1
+01-07-2020,US,Alabama,Shelby,1109,1086,0,23
+01-07-2020,US,Wisconsin,Sheboygan,208,204,0,4
+01-07-2020,US,Kansas,Shawnee,670,658,0,12
+01-07-2020,US,Wisconsin,Shawano,78,78,0,0
+01-07-2020,US,California,Shasta,129,125,0,4
+01-07-2020,US,Arkansas,Sharp,53,48,0,5
+01-07-2020,US,Mississippi,Sharkey,24,24,0,0
+01-07-2020,US,Missouri,Shannon,6,6,0,0
+01-07-2020,US,Texas,Shackelford,1,1,0,0
+01-07-2020,US,Nebraska,Seward,36,35,0,1
+01-07-2020,US,Kansas,Seward,1019,1017,0,2
+01-07-2020,US,Tennessee,Sevier,657,654,0,3
+01-07-2020,US,Arkansas,Sevier,706,699,0,7
+01-07-2020,US,Oklahoma,Sequoyah,40,37,0,3
+01-07-2020,US,Tennessee,Sequatchie,28,28,0,0
+01-07-2020,US,Ohio,Seneca,33,30,0,3
+01-07-2020,US,New York,Seneca,70,70,0,0
+01-07-2020,US,Oklahoma,Seminole,41,38,0,3
+01-07-2020,US,Georgia,Seminole,51,49,0,2
+01-07-2020,US,Florida,Seminole,2682,2665,0,17
+01-07-2020,US,Kansas,Sedgwick,1278,1250,0,28
+01-07-2020,US,Arkansas,Sebastian,476,471,0,5
+01-07-2020,US,Arkansas,Searcy,7,7,0,0
+01-07-2020,US,Texas,Scurry,36,36,0,0
+01-07-2020,US,Georgia,Screven,93,87,0,6
+01-07-2020,US,Nebraska,Scotts Bluff,216,213,0,3
+01-07-2020,US,Virginia,Scott,10,8,0,2
+01-07-2020,US,Tennessee,Scott,15,15,0,0
+01-07-2020,US,Missouri,Scott,161,150,0,11
+01-07-2020,US,Mississippi,Scott,750,735,0,15
+01-07-2020,US,Minnesota,Scott,671,667,0,4
+01-07-2020,US,Kentucky,Scott,91,91,0,0
+01-07-2020,US,Kansas,Scott,16,16,0,0
+01-07-2020,US,Iowa,Scott,664,654,0,10
+01-07-2020,US,Indiana,Scott,154,147,0,7
+01-07-2020,US,Illinois,Scott,0,0,0,0
+01-07-2020,US,Arkansas,Scott,12,12,0,0
+01-07-2020,US,North Carolina,Scotland,138,136,0,2
+01-07-2020,US,Missouri,Scotland,11,10,0,1
+01-07-2020,US,Ohio,Scioto,36,36,0,0
+01-07-2020,US,Pennsylvania,Schuylkill,747,703,0,44
+01-07-2020,US,New York,Schuyler,13,13,0,0
+01-07-2020,US,Missouri,Schuyler,5,5,0,0
+01-07-2020,US,Illinois,Schuyler,13,13,0,0
+01-07-2020,US,Michigan,Schoolcraft,4,4,0,0
+01-07-2020,US,New York,Schoharie,58,58,0,0
+01-07-2020,US,Georgia,Schley,25,24,0,1
+01-07-2020,US,Texas,Schleicher,20,20,0,0
+01-07-2020,US,New York,Schenectady,805,768,0,37
+01-07-2020,US,Wisconsin,Sawyer,12,12,0,0
+01-07-2020,US,Nebraska,Saunders,78,76,0,2
+01-07-2020,US,Wisconsin,Sauk,108,105,0,3
+01-07-2020,US,Nebraska,Sarpy,1178,1170,0,8
+01-07-2020,US,North Dakota,Sargent,6,6,0,0
+01-07-2020,US,New York,Saratoga,550,536,0,14
+01-07-2020,US,Florida,Sarasota,1601,1504,0,97
+01-07-2020,US,Florida,Santa Rosa,617,608,0,9
+01-07-2020,US,New Mexico,Santa Fe,240,237,0,3
+01-07-2020,US,California,Santa Cruz,399,396,0,3
+01-07-2020,US,Arizona,Santa Cruz,1802,1780,0,22
+01-07-2020,US,California,Santa Clara,4572,4413,0,159
+01-07-2020,US,California,Santa Barbara,2896,2867,0,29
+01-07-2020,US,Michigan,Sanilac,49,43,0,6
+01-07-2020,US,Illinois,Sangamon,431,399,0,32
+01-07-2020,US,Ohio,Sandusky,122,110,0,12
+01-07-2020,US,New Mexico,Sandoval,731,702,0,29
+01-07-2020,US,South Dakota,Sanborn,12,12,0,0
+01-07-2020,US,Texas,San Saba,4,4,0,0
+01-07-2020,US,Texas,San Patricio,161,161,0,0
+01-07-2020,US,New Mexico,San Miguel,21,21,0,0
+01-07-2020,US,Colorado,San Miguel,39,39,0,0
+01-07-2020,US,California,San Mateo,3311,3203,0,108
+01-07-2020,US,California,San Luis Obispo,642,640,0,2
+01-07-2020,US,Washington,San Juan,19,19,0,0
+01-07-2020,US,Utah,San Juan,402,393,0,9
+01-07-2020,US,New Mexico,San Juan,2460,2297,0,163
+01-07-2020,US,Colorado,San Juan,2,2,0,0
+01-07-2020,US,California,San Joaquin,3914,3860,0,54
+01-07-2020,US,Texas,San Jacinto,35,35,0,0
+01-07-2020,US,California,San Francisco,3648,3598,0,50
+01-07-2020,US,California,San Diego,14623,14253,0,370
+01-07-2020,US,California,San Bernardino,12746,12497,0,249
+01-07-2020,US,California,San Benito,239,237,0,2
+01-07-2020,US,Texas,San Augustine,105,98,0,7
+01-07-2020,US,North Carolina,Sampson,1060,1054,0,6
+01-07-2020,US,South Carolina,Saluda,215,214,0,1
+01-07-2020,US,Utah,Salt Lake,11437,11329,0,108
+01-07-2020,US,Nebraska,Saline,535,533,0,2
+01-07-2020,US,Missouri,Saline,282,278,0,4
+01-07-2020,US,Kansas,Saline,123,121,0,2
+01-07-2020,US,Illinois,Saline,9,9,0,0
+01-07-2020,US,Arkansas,Saline,292,290,0,2
+01-07-2020,US,Virginia,Salem,69,66,0,3
+01-07-2020,US,New Jersey,Salem,780,705,0,75
+01-07-2020,US,Colorado,Saguache,102,100,0,2
+01-07-2020,US,Michigan,Saginaw,1292,1169,0,123
+01-07-2020,US,Maine,Sagadahoc,34,34,0,0
+01-07-2020,US,California,Sacramento,3397,3329,0,68
+01-07-2020,US,Iowa,Sac,63,63,0,0
+01-07-2020,US,Texas,Sabine,24,23,0,1
+01-07-2020,US,Louisiana,Sabine,89,88,0,1
+01-07-2020,US,Vermont,Rutland,73,72,0,1
+01-07-2020,US,Tennessee,Rutherford,2648,2613,0,35
+01-07-2020,US,North Carolina,Rutherford,306,297,0,9
+01-07-2020,US,Virginia,Russell,12,12,0,0
+01-07-2020,US,Kentucky,Russell,46,42,0,4
+01-07-2020,US,Kansas,Russell,2,2,0,0
+01-07-2020,US,Alabama,Russell,496,496,0,0
+01-07-2020,US,Wisconsin,Rusk,11,11,0,0
+01-07-2020,US,Texas,Rusk,277,274,0,3
+01-07-2020,US,Kansas,Rush,1,1,0,0
+01-07-2020,US,Indiana,Rush,57,54,0,3
+01-07-2020,US,Texas,Runnels,8,8,0,0
+01-07-2020,US,North Carolina,Rowan,1227,1185,0,42
+01-07-2020,US,Kentucky,Rowan,22,22,0,0
+01-07-2020,US,Colorado,Routt,75,69,0,6
+01-07-2020,US,Ohio,Ross,109,106,0,3
+01-07-2020,US,Montana,Rosebud,10,9,0,1
+01-07-2020,US,Minnesota,Roseau,9,9,0,0
+01-07-2020,US,Michigan,Roscommon,28,28,0,0
+01-07-2020,US,New Mexico,Roosevelt,59,58,0,1
+01-07-2020,US,Montana,Roosevelt,7,7,0,0
+01-07-2020,US,Kansas,Rooks,7,7,0,0
+01-07-2020,US,North Dakota,Rolette,10,10,0,0
+01-07-2020,US,Oklahoma,Rogers,186,180,0,6
+01-07-2020,US,Texas,Rockwall,375,359,0,16
+01-07-2020,US,New York,Rockland,13602,12934,0,668
+01-07-2020,US,Virginia,Rockingham,720,709,0,11
+01-07-2020,US,North Carolina,Rockingham,234,232,0,2
+01-07-2020,US,New Hampshire,Rockingham,1476,1387,0,89
+01-07-2020,US,Georgia,Rockdale,471,460,0,11
+01-07-2020,US,Kentucky,Rockcastle,21,21,0,0
+01-07-2020,US,Virginia,Rockbridge,31,31,0,0
+01-07-2020,US,Illinois,Rock Island,947,918,0,29
+01-07-2020,US,Wisconsin,Rock,873,849,0,24
+01-07-2020,US,Nebraska,Rock,1,1,0,0
+01-07-2020,US,Minnesota,Rock,29,29,0,0
+01-07-2020,US,North Carolina,Robeson,1240,1201,0,39
+01-07-2020,US,Texas,Robertson,52,52,0,0
+01-07-2020,US,Tennessee,Robertson,792,781,0,11
+01-07-2020,US,Kentucky,Robertson,1,1,0,0
+01-07-2020,US,Texas,Roberts,3,3,0,0
+01-07-2020,US,South Dakota,Roberts,47,47,0,0
+01-07-2020,US,Virginia,Roanoke City,438,428,0,10
+01-07-2020,US,Virginia,Roanoke,253,247,0,6
+01-07-2020,US,West Virginia,Roane,11,10,0,1
+01-07-2020,US,Tennessee,Roane,46,46,0,0
+01-07-2020,US,California,Riverside,18041,17578,0,463
+01-07-2020,US,West Virginia,Ritchie,2,2,0,0
+01-07-2020,US,Missouri,Ripley,17,17,0,0
+01-07-2020,US,Indiana,Ripley,112,105,0,7
+01-07-2020,US,Colorado,Rio Grande,76,74,0,2
+01-07-2020,US,Colorado,Rio Blanco,4,4,0,0
+01-07-2020,US,New Mexico,Rio Arriba,101,100,0,1
+01-07-2020,US,Iowa,Ringgold,15,15,0,0
+01-07-2020,US,Kansas,Riley,242,239,0,3
+01-07-2020,US,Virginia,Richmond City,2213,2184,0,29
+01-07-2020,US,Virginia,Richmond,298,294,0,4
+01-07-2020,US,North Carolina,Richmond,290,283,0,7
+01-07-2020,US,Georgia,Richmond,1012,963,0,49
+01-07-2020,US,Wisconsin,Richland,15,11,0,4
+01-07-2020,US,South Carolina,Richland,3632,3548,0,84
+01-07-2020,US,Ohio,Richland,318,313,0,5
+01-07-2020,US,North Dakota,Richland,41,41,0,0
+01-07-2020,US,Montana,Richland,12,12,0,0
+01-07-2020,US,Louisiana,Richland,195,191,0,4
+01-07-2020,US,Illinois,Richland,4,4,0,0
+01-07-2020,US,Nebraska,Richardson,5,4,0,1
+01-07-2020,US,Minnesota,Rice,824,817,0,7
+01-07-2020,US,Kansas,Rice,4,4,0,0
+01-07-2020,US,Tennessee,Rhea,272,272,0,0
+01-07-2020,US,Missouri,Reynolds,2,2,0,0
+01-07-2020,US,Kansas,Republic,11,11,0,0
+01-07-2020,US,North Dakota,Renville,5,5,0,0
+01-07-2020,US,Minnesota,Renville,28,26,0,2
+01-07-2020,US,New York,Rensselaer,555,527,0,28
+01-07-2020,US,Kansas,Reno,66,66,0,0
+01-07-2020,US,Texas,Refugio,13,13,0,0
+01-07-2020,US,Texas,Reeves,31,31,0,0
+01-07-2020,US,Minnesota,Redwood,17,17,0,0
+01-07-2020,US,Nebraska,Red Willow,6,6,0,0
+01-07-2020,US,Texas,Red River,112,102,0,10
+01-07-2020,US,Louisiana,Red River,62,54,0,8
+01-07-2020,US,Minnesota,Red Lake,3,3,0,0
+01-07-2020,US,Texas,Real,1,1,0,0
+01-07-2020,US,Texas,Reagan,6,6,0,0
+01-07-2020,US,Missouri,Ray,25,25,0,0
+01-07-2020,US,Montana,Ravalli,31,31,0,0
+01-07-2020,US,Virginia,Rappahannock,20,20,0,0
+01-07-2020,US,Louisiana,Rapides,1578,1516,0,62
+01-07-2020,US,North Dakota,Ransom,17,17,0,0
+01-07-2020,US,Mississippi,Rankin,841,829,0,12
+01-07-2020,US,West Virginia,Randolph,162,162,0,0
+01-07-2020,US,North Carolina,Randolph,1206,1176,0,30
+01-07-2020,US,Missouri,Randolph,12,12,0,0
+01-07-2020,US,Indiana,Randolph,76,71,0,5
+01-07-2020,US,Illinois,Randolph,287,280,0,7
+01-07-2020,US,Georgia,Randolph,200,175,0,25
+01-07-2020,US,Arkansas,Randolph,50,49,0,1
+01-07-2020,US,Alabama,Randolph,188,179,0,9
+01-07-2020,US,Texas,Randall,863,856,0,7
+01-07-2020,US,North Dakota,Ramsey,10,9,0,1
+01-07-2020,US,Minnesota,Ramsey,4724,4506,0,218
+01-07-2020,US,Missouri,Ralls,9,9,0,0
+01-07-2020,US,West Virginia,Raleigh,53,53,0,0
+01-07-2020,US,Texas,Rains,12,12,0,0
+01-07-2020,US,Virginia,Radford,12,12,0,0
+01-07-2020,US,Wisconsin,Racine,2176,2113,0,63
+01-07-2020,US,Georgia,Rabun,45,42,0,3
+01-07-2020,US,Mississippi,Quitman,68,68,0,0
+01-07-2020,US,Georgia,Quitman,17,16,0,1
+01-07-2020,US,Maryland,Queen Anne's,230,211,0,19
+01-07-2020,US,New Mexico,Quay,6,5,0,1
+01-07-2020,US,West Virginia,Putnam,58,58,0,0
+01-07-2020,US,Tennessee,Putnam,805,798,0,7
+01-07-2020,US,Ohio,Putnam,115,105,0,10
+01-07-2020,US,New York,Putnam,1329,1266,0,63
+01-07-2020,US,Missouri,Putnam,2,2,0,0
+01-07-2020,US,Indiana,Putnam,165,157,0,8
+01-07-2020,US,Illinois,Putnam,1,1,0,0
+01-07-2020,US,Georgia,Putnam,157,145,0,12
+01-07-2020,US,Florida,Putnam,381,375,0,6
+01-07-2020,US,Oklahoma,Pushmataha,13,13,0,0
+01-07-2020,US,Virginia,Pulaski,46,44,0,2
+01-07-2020,US,Missouri,Pulaski,120,119,0,1
+01-07-2020,US,Kentucky,Pulaski,94,92,0,2
+01-07-2020,US,Indiana,Pulaski,63,62,0,1
+01-07-2020,US,Illinois,Pulaski,76,76,0,0
+01-07-2020,US,Georgia,Pulaski,50,48,0,2
+01-07-2020,US,Arkansas,Pulaski,2080,2021,0,59
+01-07-2020,US,Colorado,Pueblo,393,363,0,30
+01-07-2020,US,Colorado,Prowers,21,21,0,0
+01-07-2020,US,Rhode Island,Providence,12937,12148,0,789
+01-07-2020,US,Alaska,Prince of Wales-Hyder,2,2,0,0
+01-07-2020,US,Virginia,Prince William,7331,7187,0,144
+01-07-2020,US,Maryland,Prince George's,18645,17959,0,686
+01-07-2020,US,Virginia,Prince George,239,238,0,1
+01-07-2020,US,Virginia,Prince Edward,191,187,0,4
+01-07-2020,US,Wisconsin,Price,2,2,0,0
+01-07-2020,US,West Virginia,Preston,79,77,0,2
+01-07-2020,US,Michigan,Presque Isle,13,13,0,0
+01-07-2020,US,Texas,Presidio,19,19,0,0
+01-07-2020,US,Mississippi,Prentiss,98,95,0,3
+01-07-2020,US,Ohio,Preble,66,63,0,3
+01-07-2020,US,Kansas,Pratt,12,12,0,0
+01-07-2020,US,Arkansas,Prairie,21,21,0,0
+01-07-2020,US,Virginia,Powhatan,82,80,0,2
+01-07-2020,US,Iowa,Poweshiek,104,96,0,8
+01-07-2020,US,Idaho,Power,17,17,0,0
+01-07-2020,US,Kentucky,Powell,7,7,0,0
+01-07-2020,US,Texas,Potter,2885,2846,0,39
+01-07-2020,US,Pennsylvania,Potter,16,16,0,0
+01-07-2020,US,Iowa,Pottawattamie,701,690,0,11
+01-07-2020,US,Oklahoma,Pottawatomie,105,101,0,4
+01-07-2020,US,Kansas,Pottawatomie,69,69,0,0
+01-07-2020,US,Indiana,Posey,35,35,0,0
+01-07-2020,US,Virginia,Portsmouth,497,481,0,16
+01-07-2020,US,Indiana,Porter,685,646,0,39
+01-07-2020,US,Wisconsin,Portage,147,147,0,0
+01-07-2020,US,Ohio,Portage,418,367,0,51
+01-07-2020,US,Virginia,Poquoson,19,19,0,0
+01-07-2020,US,Minnesota,Pope,10,10,0,0
+01-07-2020,US,Illinois,Pope,1,1,0,0
+01-07-2020,US,Arkansas,Pope,442,439,0,3
+01-07-2020,US,Oklahoma,Pontotoc,42,40,0,2
+01-07-2020,US,Mississippi,Pontotoc,247,241,0,6
+01-07-2020,US,Montana,Pondera,2,2,0,0
+01-07-2020,US,Wisconsin,Polk,52,51,0,1
+01-07-2020,US,Texas,Polk,121,121,0,0
+01-07-2020,US,Tennessee,Polk,41,41,0,0
+01-07-2020,US,Oregon,Polk,149,137,0,12
+01-07-2020,US,North Carolina,Polk,73,69,0,4
+01-07-2020,US,Nebraska,Polk,12,12,0,0
+01-07-2020,US,Missouri,Polk,13,13,0,0
+01-07-2020,US,Minnesota,Polk,81,79,0,2
+01-07-2020,US,Iowa,Polk,6120,5942,0,178
+01-07-2020,US,Georgia,Polk,208,206,0,2
+01-07-2020,US,Florida,Polk,4048,3946,0,102
+01-07-2020,US,Arkansas,Polk,75,75,0,0
+01-07-2020,US,Louisiana,Pointe Coupee,256,229,0,27
+01-07-2020,US,Arkansas,Poinsett,59,56,0,3
+01-07-2020,US,West Virginia,Pocahontas,25,25,0,0
+01-07-2020,US,Iowa,Pocahontas,84,83,0,1
+01-07-2020,US,Massachusetts,Plymouth,8684,8019,0,665
+01-07-2020,US,Iowa,Plymouth,305,301,0,4
+01-07-2020,US,California,Plumas,10,10,0,0
+01-07-2020,US,West Virginia,Pleasants,5,5,0,0
+01-07-2020,US,Wyoming,Platte,4,4,0,0
+01-07-2020,US,Nebraska,Platte,664,661,0,3
+01-07-2020,US,Missouri,Platte,114,108,0,6
+01-07-2020,US,Louisiana,Plaquemines,270,253,0,17
+01-07-2020,US,California,Placer,724,713,0,11
+01-07-2020,US,Virginia,Pittsylvania,122,121,0,1
+01-07-2020,US,Oklahoma,Pittsburg,58,55,0,3
+01-07-2020,US,North Carolina,Pitt,709,702,0,7
+01-07-2020,US,Colorado,Pitkin,99,97,0,2
+01-07-2020,US,Maine,Piscataquis,3,3,0,0
+01-07-2020,US,Minnesota,Pipestone,26,25,0,1
+01-07-2020,US,Florida,Pinellas,6861,6689,0,172
+01-07-2020,US,Minnesota,Pine,103,103,0,0
+01-07-2020,US,Arizona,Pinal,3777,3706,0,71
+01-07-2020,US,Arizona,Pima,8387,8107,0,280
+01-07-2020,US,Pennsylvania,Pike,496,476,0,20
+01-07-2020,US,Ohio,Pike,20,18,0,2
+01-07-2020,US,Missouri,Pike,36,35,0,1
+01-07-2020,US,Mississippi,Pike,367,355,0,12
+01-07-2020,US,Kentucky,Pike,86,84,0,2
+01-07-2020,US,Indiana,Pike,8,8,0,0
+01-07-2020,US,Illinois,Pike,2,2,0,0
+01-07-2020,US,Georgia,Pike,90,87,0,3
+01-07-2020,US,Arkansas,Pike,7,7,0,0
+01-07-2020,US,Alabama,Pike,415,410,0,5
+01-07-2020,US,Wisconsin,Pierce,68,68,0,0
+01-07-2020,US,Washington,Pierce,2652,2550,0,102
+01-07-2020,US,North Dakota,Pierce,5,5,0,0
+01-07-2020,US,Nebraska,Pierce,8,8,0,0
+01-07-2020,US,Georgia,Pierce,174,169,0,5
+01-07-2020,US,Tennessee,Pickett,6,6,0,0
+01-07-2020,US,South Carolina,Pickens,855,850,0,5
+01-07-2020,US,Georgia,Pickens,95,90,0,5
+01-07-2020,US,Alabama,Pickens,216,210,0,6
+01-07-2020,US,Ohio,Pickaway,2176,2143,0,33
+01-07-2020,US,Illinois,Piatt,20,20,0,0
+01-07-2020,US,Kansas,Phillips,3,3,0,0
+01-07-2020,US,Colorado,Phillips,16,16,0,0
+01-07-2020,US,Arkansas,Phillips,143,140,0,3
+01-07-2020,US,Pennsylvania,Philadelphia,26257,24646,0,1611
+01-07-2020,US,Nebraska,Phelps,26,26,0,0
+01-07-2020,US,Missouri,Phelps,21,21,0,0
+01-07-2020,US,Missouri,Pettis,116,115,0,1
+01-07-2020,US,Virginia,Petersburg,239,235,0,4
+01-07-2020,US,Alaska,Petersburg,4,3,0,1
+01-07-2020,US,North Carolina,Person,107,106,0,1
+01-07-2020,US,Nevada,Pershing,6,6,0,0
+01-07-2020,US,Tennessee,Perry,32,32,0,0
+01-07-2020,US,Pennsylvania,Perry,86,81,0,5
+01-07-2020,US,Ohio,Perry,30,29,0,1
+01-07-2020,US,Missouri,Perry,123,123,0,0
+01-07-2020,US,Mississippi,Perry,61,57,0,4
+01-07-2020,US,Kentucky,Perry,57,56,0,1
+01-07-2020,US,Indiana,Perry,120,111,0,9
+01-07-2020,US,Illinois,Perry,54,53,0,1
+01-07-2020,US,Arkansas,Perry,32,32,0,0
+01-07-2020,US,Alabama,Perry,152,151,0,1
+01-07-2020,US,North Carolina,Perquimans,36,34,0,2
+01-07-2020,US,Nebraska,Perkins,0,0,0,0
+01-07-2020,US,Wisconsin,Pepin,1,1,0,0
+01-07-2020,US,Illinois,Peoria,499,471,0,28
+01-07-2020,US,Maine,Penobscot,108,106,0,2
+01-07-2020,US,South Dakota,Pennington,523,507,0,16
+01-07-2020,US,Minnesota,Pennington,51,51,0,0
+01-07-2020,US,West Virginia,Pendleton,13,12,0,1
+01-07-2020,US,Kentucky,Pendleton,17,17,0,0
+01-07-2020,US,North Carolina,Pender,262,261,0,1
+01-07-2020,US,Washington,Pend Oreille,4,4,0,0
+01-07-2020,US,Missouri,Pemiscot,110,104,0,6
+01-07-2020,US,North Dakota,Pembina,9,9,0,0
+01-07-2020,US,Texas,Pecos,127,127,0,0
+01-07-2020,US,Mississippi,Pearl River,244,212,0,32
+01-07-2020,US,Georgia,Peach,107,98,0,9
+01-07-2020,US,Oklahoma,Payne,387,386,0,1
+01-07-2020,US,Idaho,Payette,111,109,0,2
+01-07-2020,US,Oklahoma,Pawnee,57,55,0,2
+01-07-2020,US,Nebraska,Pawnee,0,0,0,0
+01-07-2020,US,Kansas,Pawnee,3,3,0,0
+01-07-2020,US,Ohio,Paulding,23,23,0,0
+01-07-2020,US,Georgia,Paulding,627,612,0,15
+01-07-2020,US,Virginia,Patrick,47,46,0,1
+01-07-2020,US,New Jersey,Passaic,16959,15772,0,1187
+01-07-2020,US,North Carolina,Pasquotank,210,193,0,17
+01-07-2020,US,Florida,Pasco,2133,2112,0,21
+01-07-2020,US,Texas,Parmer,199,191,0,8
+01-07-2020,US,Texas,Parker,291,290,0,1
+01-07-2020,US,Indiana,Parke,22,22,0,0
+01-07-2020,US,Wyoming,Park,56,56,0,0
+01-07-2020,US,Montana,Park,11,11,0,0
+01-07-2020,US,Colorado,Park,27,27,0,0
+01-07-2020,US,Texas,Panola,209,185,0,24
+01-07-2020,US,Mississippi,Panola,270,264,0,6
+01-07-2020,US,North Carolina,Pamlico,21,20,0,1
+01-07-2020,US,Texas,Palo Pinto,21,19,0,2
+01-07-2020,US,Iowa,Palo Alto,31,31,0,0
+01-07-2020,US,Florida,Palm Beach,14447,13935,0,512
+01-07-2020,US,Virginia,Page,275,251,0,24
+01-07-2020,US,Iowa,Page,20,20,0,0
+01-07-2020,US,Washington,Pacific,18,17,0,1
+01-07-2020,US,Wisconsin,Ozaukee,238,223,0,15
+01-07-2020,US,Missouri,Ozark,1,1,0,0
+01-07-2020,US,Maine,Oxford,37,37,0,0
+01-07-2020,US,Idaho,Owyhee,41,41,0,0
+01-07-2020,US,Kentucky,Owsley,2,2,0,0
+01-07-2020,US,Kentucky,Owen,6,6,0,0
+01-07-2020,US,Indiana,Owen,45,44,0,1
+01-07-2020,US,Tennessee,Overton,57,56,0,1
+01-07-2020,US,Wisconsin,Outagamie,491,482,0,9
+01-07-2020,US,Tennessee,Out of TN,1044,1037,0,7
+01-07-2020,US,Oklahoma,Out of OK,0,0,0,0
+01-07-2020,US,Michigan,Out of MI,38,38,0,0
+01-07-2020,US,Illinois,Out of IL,1,1,0,0
+01-07-2020,US,Hawaii,Out of HI,17,17,0,0
+01-07-2020,US,Georgia,Out of GA,4648,4600,0,48
+01-07-2020,US,Alabama,Out of AL,0,0,0,0
+01-07-2020,US,Colorado,Ouray,11,10,0,1
+01-07-2020,US,Louisiana,Ouachita,2474,2399,0,75
+01-07-2020,US,Arkansas,Ouachita,20,20,0,0
+01-07-2020,US,Minnesota,Otter Tail,92,91,0,1
+01-07-2020,US,Oklahoma,Ottawa,73,71,0,2
+01-07-2020,US,Ohio,Ottawa,130,109,0,21
+01-07-2020,US,Michigan,Ottawa,1046,995,0,51
+01-07-2020,US,Kansas,Ottawa,6,6,0,0
+01-07-2020,US,New York,Otsego,84,79,0,5
+01-07-2020,US,Michigan,Otsego,122,112,0,10
+01-07-2020,US,Nebraska,Otoe,22,22,0,0
+01-07-2020,US,New Mexico,Otero,43,37,0,6
+01-07-2020,US,Colorado,Otero,22,21,0,1
+01-07-2020,US,New York,Oswego,201,198,0,3
+01-07-2020,US,Michigan,Oscoda,20,19,0,1
+01-07-2020,US,Michigan,Osceola,29,29,0,0
+01-07-2020,US,Iowa,Osceola,56,56,0,0
+01-07-2020,US,Florida,Osceola,2164,2139,0,25
+01-07-2020,US,Kansas,Osborne,2,2,0,0
+01-07-2020,US,Oklahoma,Osage,168,160,0,8
+01-07-2020,US,Missouri,Osage,7,7,0,0
+01-07-2020,US,Kansas,Osage,13,13,0,0
+01-07-2020,US,Vermont,Orleans,14,14,0,0
+01-07-2020,US,New York,Orleans,281,230,0,51
+01-07-2020,US,Louisiana,Orleans,7919,7385,0,534
+01-07-2020,US,Missouri,Oregon,7,7,0,0
+01-07-2020,US,South Carolina,Orangeburg,777,763,0,14
+01-07-2020,US,Virginia,Orange,150,147,0,3
+01-07-2020,US,Vermont,Orange,9,9,0,0
+01-07-2020,US,Texas,Orange,272,269,0,3
+01-07-2020,US,North Carolina,Orange,690,649,0,41
+01-07-2020,US,New York,Orange,10730,10252,0,478
+01-07-2020,US,Indiana,Orange,133,110,0,23
+01-07-2020,US,Florida,Orange,10874,10816,0,58
+01-07-2020,US,California,Orange,23049,22704,0,345
+01-07-2020,US,New York,Ontario,265,256,0,9
+01-07-2020,US,North Carolina,Onslow,308,305,0,3
+01-07-2020,US,New York,Onondaga,2863,2679,0,184
+01-07-2020,US,Wisconsin,Oneida,20,20,0,0
+01-07-2020,US,New York,Oneida,1642,1552,0,90
+01-07-2020,US,Idaho,Oneida,3,3,0,0
+01-07-2020,US,Minnesota,Olmsted,1058,1043,0,15
+01-07-2020,US,North Dakota,Oliver,2,2,0,0
+01-07-2020,US,Texas,Oldham,4,3,0,1
+01-07-2020,US,Kentucky,Oldham,130,123,0,7
+01-07-2020,US,Mississippi,Oktibbeha,486,462,0,24
+01-07-2020,US,Oklahoma,Okmulgee,62,62,0,0
+01-07-2020,US,Oklahoma,Oklahoma,3029,2959,0,70
+01-07-2020,US,Oklahoma,Okfuskee,14,14,0,0
+01-07-2020,US,Florida,Okeechobee,383,383,0,0
+01-07-2020,US,Washington,Okanogan,86,84,0,2
+01-07-2020,US,Florida,Okaloosa,704,697,0,7
+01-07-2020,US,West Virginia,Ohio,96,95,0,1
+01-07-2020,US,Kentucky,Ohio,187,187,0,0
+01-07-2020,US,Indiana,Ohio,14,14,0,0
+01-07-2020,US,Georgia,Oglethorpe,91,84,0,7
+01-07-2020,US,Illinois,Ogle,261,257,0,4
+01-07-2020,US,South Dakota,Oglala Lakota,87,87,0,0
+01-07-2020,US,Michigan,Ogemaw,33,31,0,2
+01-07-2020,US,Wisconsin,Oconto,61,61,0,0
+01-07-2020,US,South Carolina,Oconee,271,270,0,1
+01-07-2020,US,Georgia,Oconee,159,149,0,10
+01-07-2020,US,Texas,Ochiltree,53,51,0,2
+01-07-2020,US,Michigan,Oceana,292,289,0,3
+01-07-2020,US,New Jersey,Ocean,9678,8719,0,959
+01-07-2020,US,Tennessee,Obion,98,96,0,2
+01-07-2020,US,Michigan,Oakland,12051,10960,0,1091
+01-07-2020,US,Iowa,O'Brien,85,84,0,1
+01-07-2020,US,Nevada,Nye,112,109,0,3
+01-07-2020,US,Texas,Nueces,2756,2747,0,9
+01-07-2020,US,Nebraska,Nuckolls,1,1,0,0
+01-07-2020,US,Mississippi,Noxubee,245,237,0,8
+01-07-2020,US,Oklahoma,Nowata,34,33,0,1
+01-07-2020,US,Virginia,Nottoway,111,109,0,2
+01-07-2020,US,Virginia,Norton,4,4,0,0
+01-07-2020,US,Kansas,Norton,4,4,0,0
+01-07-2020,US,Alaska,Northwest Arctic,5,5,0,0
+01-07-2020,US,Virginia,Northumberland,37,36,0,1
+01-07-2020,US,Pennsylvania,Northumberland,314,309,0,5
+01-07-2020,US,Virginia,Northampton,269,241,0,28
+01-07-2020,US,Pennsylvania,Northampton,3425,3159,0,266
+01-07-2020,US,North Carolina,Northampton,199,184,0,15
+01-07-2020,US,Alaska,North Slope,4,4,0,0
+01-07-2020,US,Minnesota,Norman,20,20,0,0
+01-07-2020,US,Virginia,Norfolk,934,924,0,10
+01-07-2020,US,Massachusetts,Norfolk,9166,8243,0,923
+01-07-2020,US,Alaska,Nome,8,8,0,0
+01-07-2020,US,Texas,Nolan,36,36,0,0
+01-07-2020,US,Missouri,Nodaway,17,17,0,0
+01-07-2020,US,Minnesota,Nobles,1655,1649,0,6
+01-07-2020,US,Oklahoma,Noble,39,39,0,0
+01-07-2020,US,Ohio,Noble,11,11,0,0
+01-07-2020,US,Indiana,Noble,447,418,0,29
+01-07-2020,US,Wyoming,Niobrara,2,2,0,0
+01-07-2020,US,Minnesota,Nicollet,149,137,0,12
+01-07-2020,US,West Virginia,Nicholas,10,9,0,1
+01-07-2020,US,Kentucky,Nicholas,5,5,0,0
+01-07-2020,US,New York,Niagara,1237,1149,0,88
+01-07-2020,US,Idaho,Nez Perce,97,78,0,19
+01-07-2020,US,Texas,Newton,12,12,0,0
+01-07-2020,US,Missouri,Newton,348,346,0,2
+01-07-2020,US,Mississippi,Newton,328,319,0,9
+01-07-2020,US,Indiana,Newton,95,84,0,11
+01-07-2020,US,Georgia,Newton,616,605,0,11
+01-07-2020,US,Arkansas,Newton,6,6,0,0
+01-07-2020,US,Virginia,Newport News,535,525,0,10
+01-07-2020,US,Rhode Island,Newport,308,301,0,7
+01-07-2020,US,South Carolina,Newberry,264,260,0,4
+01-07-2020,US,Michigan,Newaygo,169,169,0,0
+01-07-2020,US,New York,New York City,215475,192371,0,23104
+01-07-2020,US,Missouri,New Madrid,38,37,0,1
+01-07-2020,US,Connecticut,New London,1268,1166,0,102
+01-07-2020,US,Virginia,New Kent,57,56,0,1
+01-07-2020,US,Connecticut,New Haven,12368,11295,0,1073
+01-07-2020,US,North Carolina,New Hanover,1018,1013,0,5
+01-07-2020,US,Delaware,New Castle,5079,4799,0,280
+01-07-2020,US,California,Nevada,117,116,0,1
+01-07-2020,US,Arkansas,Nevada,102,99,0,3
+01-07-2020,US,Kansas,Ness,4,4,0,0
+01-07-2020,US,Mississippi,Neshoba,960,891,0,69
+01-07-2020,US,Kansas,Neosho,32,32,0,0
+01-07-2020,US,Nebraska,Nemaha,5,5,0,0
+01-07-2020,US,Kansas,Nemaha,27,27,0,0
+01-07-2020,US,Virginia,Nelson,18,18,0,0
+01-07-2020,US,North Dakota,Nelson,1,1,0,0
+01-07-2020,US,Kentucky,Nelson,76,75,0,1
+01-07-2020,US,Texas,Navarro,241,235,0,6
+01-07-2020,US,Arizona,Navajo,3703,3573,0,130
+01-07-2020,US,Wyoming,Natrona,126,126,0,0
+01-07-2020,US,Louisiana,Natchitoches,295,281,0,14
+01-07-2020,US,New York,Nassau,41853,39670,0,2183
+01-07-2020,US,Florida,Nassau,196,195,0,1
+01-07-2020,US,North Carolina,Nash,478,472,0,6
+01-07-2020,US,California,Napa,333,329,0,4
+01-07-2020,US,Nebraska,Nance,4,4,0,0
+01-07-2020,US,Texas,Nacogdoches,407,381,0,26
+01-07-2020,US,Montana,Musselshell,1,1,0,0
+01-07-2020,US,Oklahoma,Muskogee,123,112,0,11
+01-07-2020,US,Ohio,Muskingum,73,73,0,0
+01-07-2020,US,Michigan,Muskegon,821,770,0,51
+01-07-2020,US,Georgia,Muscogee,1741,1692,0,49
+01-07-2020,US,Iowa,Muscatine,620,576,0,44
+01-07-2020,US,Oklahoma,Murray,18,18,0,0
+01-07-2020,US,Minnesota,Murray,51,51,0,0
+01-07-2020,US,Georgia,Murray,222,220,0,2
+01-07-2020,US,Oregon,Multnomah,2239,2170,0,69
+01-07-2020,US,Kentucky,Muhlenberg,505,497,0,8
+01-07-2020,US,Minnesota,Mower,928,926,0,2
+01-07-2020,US,North Dakota,Mountrail,50,50,0,0
+01-07-2020,US,Illinois,Moultrie,18,18,0,0
+01-07-2020,US,Texas,Motley,1,1,0,0
+01-07-2020,US,North Dakota,Morton,91,89,0,2
+01-07-2020,US,Kansas,Morton,6,5,0,1
+01-07-2020,US,Oregon,Morrow,64,63,0,1
+01-07-2020,US,Ohio,Morrow,115,114,0,1
+01-07-2020,US,Minnesota,Morrison,57,56,0,1
+01-07-2020,US,Texas,Morris,39,39,0,0
+01-07-2020,US,New Jersey,Morris,6790,5991,0,799
+01-07-2020,US,Kansas,Morris,5,5,0,0
+01-07-2020,US,Nebraska,Morrill,38,38,0,0
+01-07-2020,US,West Virginia,Morgan,20,20,0,0
+01-07-2020,US,Tennessee,Morgan,24,23,0,1
+01-07-2020,US,Ohio,Morgan,9,9,0,0
+01-07-2020,US,Missouri,Morgan,13,13,0,0
+01-07-2020,US,Kentucky,Morgan,8,8,0,0
+01-07-2020,US,Indiana,Morgan,320,289,0,31
+01-07-2020,US,Illinois,Morgan,128,125,0,3
+01-07-2020,US,Georgia,Morgan,52,52,0,0
+01-07-2020,US,Colorado,Morgan,653,607,0,46
+01-07-2020,US,Alabama,Morgan,1041,1038,0,3
+01-07-2020,US,Louisiana,Morehouse,239,231,0,8
+01-07-2020,US,Texas,Moore,893,878,0,15
+01-07-2020,US,Tennessee,Moore,8,8,0,0
+01-07-2020,US,North Carolina,Moore,484,470,0,14
+01-07-2020,US,South Dakota,Moody,23,23,0,0
+01-07-2020,US,Colorado,Montrose,207,195,0,12
+01-07-2020,US,Pennsylvania,Montour,74,73,0,1
+01-07-2020,US,Michigan,Montmorency,5,5,0,0
+01-07-2020,US,Virginia,Montgomery,147,145,0,2
+01-07-2020,US,Texas,Montgomery,2257,2221,0,36
+01-07-2020,US,Tennessee,Montgomery,493,486,0,7
+01-07-2020,US,Pennsylvania,Montgomery,8483,7679,0,804
+01-07-2020,US,Ohio,Montgomery,1784,1761,0,23
+01-07-2020,US,North Carolina,Montgomery,317,310,0,7
+01-07-2020,US,New York,Montgomery,118,114,0,4
+01-07-2020,US,Missouri,Montgomery,16,16,0,0
+01-07-2020,US,Mississippi,Montgomery,122,120,0,2
+01-07-2020,US,Maryland,Montgomery,14803,14064,0,739
+01-07-2020,US,Kentucky,Montgomery,52,52,0,0
+01-07-2020,US,Kansas,Montgomery,44,41,0,3
+01-07-2020,US,Iowa,Montgomery,10,8,0,2
+01-07-2020,US,Indiana,Montgomery,287,266,0,21
+01-07-2020,US,Illinois,Montgomery,44,43,0,1
+01-07-2020,US,Georgia,Montgomery,32,32,0,0
+01-07-2020,US,Arkansas,Montgomery,5,5,0,0
+01-07-2020,US,Alabama,Montgomery,3881,3782,0,99
+01-07-2020,US,Colorado,Montezuma,72,69,0,3
+01-07-2020,US,California,Monterey,1691,1676,0,15
+01-07-2020,US,Michigan,Montcalm,91,90,0,1
+01-07-2020,US,Texas,Montague,18,17,0,1
+01-07-2020,US,Wisconsin,Monroe,65,64,0,1
+01-07-2020,US,West Virginia,Monroe,12,12,0,0
+01-07-2020,US,Tennessee,Monroe,135,131,0,4
+01-07-2020,US,Pennsylvania,Monroe,1423,1315,0,108
+01-07-2020,US,Ohio,Monroe,86,71,0,15
+01-07-2020,US,New York,Monroe,3780,3514,0,266
+01-07-2020,US,Missouri,Monroe,5,5,0,0
+01-07-2020,US,Mississippi,Monroe,367,338,0,29
+01-07-2020,US,Michigan,Monroe,618,597,0,21
+01-07-2020,US,Kentucky,Monroe,36,35,0,1
+01-07-2020,US,Iowa,Monroe,50,44,0,6
+01-07-2020,US,Indiana,Monroe,256,228,0,28
+01-07-2020,US,Illinois,Monroe,127,114,0,13
+01-07-2020,US,Georgia,Monroe,165,148,0,17
+01-07-2020,US,Florida,Monroe,270,266,0,4
+01-07-2020,US,Arkansas,Monroe,13,13,0,0
+01-07-2020,US,Alabama,Monroe,202,200,0,2
+01-07-2020,US,West Virginia,Monongalia,180,175,0,5
+01-07-2020,US,Iowa,Monona,71,71,0,0
+01-07-2020,US,California,Mono,42,41,0,1
+01-07-2020,US,New Jersey,Monmouth,9201,8393,0,808
+01-07-2020,US,Missouri,Moniteau,49,48,0,1
+01-07-2020,US,Arizona,Mohave,1142,1055,0,87
+01-07-2020,US,Colorado,Moffat,14,14,0,0
+01-07-2020,US,Alabama,Mobile,3804,3670,0,134
+01-07-2020,US,Texas,Mitchell,9,9,0,0
+01-07-2020,US,North Carolina,Mitchell,33,33,0,0
+01-07-2020,US,Kansas,Mitchell,4,4,0,0
+01-07-2020,US,Iowa,Mitchell,28,28,0,0
+01-07-2020,US,Georgia,Mitchell,451,413,0,38
+01-07-2020,US,Montana,Missoula,89,88,0,1
+01-07-2020,US,Missouri,Mississippi,88,88,0,0
+01-07-2020,US,Arkansas,Mississippi,180,177,0,3
+01-07-2020,US,Michigan,Missaukee,29,28,0,1
+01-07-2020,US,South Dakota,Minnehaha,3627,3569,0,58
+01-07-2020,US,Idaho,Minidoka,188,188,0,0
+01-07-2020,US,West Virginia,Mingo,23,21,0,2
+01-07-2020,US,West Virginia,Mineral,57,54,0,3
+01-07-2020,US,Nevada,Mineral,5,5,0,0
+01-07-2020,US,Colorado,Mineral,7,7,0,0
+01-07-2020,US,South Dakota,Miner,9,9,0,0
+01-07-2020,US,Wisconsin,Milwaukee,11510,11120,0,390
+01-07-2020,US,Texas,Mills,1,1,0,0
+01-07-2020,US,Iowa,Mills,34,34,0,0
+01-07-2020,US,Missouri,Miller,12,12,0,0
+01-07-2020,US,Georgia,Miller,49,49,0,0
+01-07-2020,US,Arkansas,Miller,118,116,0,2
+01-07-2020,US,Minnesota,Mille Lacs,34,32,0,2
+01-07-2020,US,Texas,Milam,88,87,0,1
+01-07-2020,US,Pennsylvania,Mifflin,63,62,0,1
+01-07-2020,US,Texas,Midland,701,686,0,15
+01-07-2020,US,Michigan,Midland,169,160,0,9
+01-07-2020,US,Virginia,Middlesex,15,15,0,0
+01-07-2020,US,New Jersey,Middlesex,16873,15549,0,1324
+01-07-2020,US,Massachusetts,Middlesex,23962,22111,0,1851
+01-07-2020,US,Connecticut,Middlesex,1304,1119,0,185
+01-07-2020,US,Michigan,Michigan Department of Corrections (MDOC),4110,4042,0,68
+01-07-2020,US,Florida,Miami-Dade,37961,36961,0,1000
+01-07-2020,US,Ohio,Miami,442,416,0,26
+01-07-2020,US,Kansas,Miami,34,34,0,0
+01-07-2020,US,Indiana,Miami,180,178,0,2
+01-07-2020,US,Kentucky,Metcalfe,10,8,0,2
+01-07-2020,US,Colorado,Mesa,96,96,0,0
+01-07-2020,US,New Hampshire,Merrimack,412,394,0,18
+01-07-2020,US,Nebraska,Merrick,38,38,0,0
+01-07-2020,US,Georgia,Meriwether,187,184,0,3
+01-07-2020,US,West Virginia,Mercer,44,44,0,0
+01-07-2020,US,Pennsylvania,Mercer,140,134,0,6
+01-07-2020,US,Ohio,Mercer,272,262,0,10
+01-07-2020,US,North Dakota,Mercer,7,7,0,0
+01-07-2020,US,New Jersey,Mercer,7686,7107,0,579
+01-07-2020,US,Missouri,Mercer,6,6,0,0
+01-07-2020,US,Kentucky,Mercer,23,23,0,0
+01-07-2020,US,Illinois,Mercer,20,20,0,0
+01-07-2020,US,California,Merced,1131,1120,0,11
+01-07-2020,US,Wisconsin,Menominee,7,7,0,0
+01-07-2020,US,Michigan,Menominee,16,16,0,0
+01-07-2020,US,Kentucky,Menifee,13,13,0,0
+01-07-2020,US,California,Mendocino,85,85,0,0
+01-07-2020,US,Texas,Menard,6,6,0,0
+01-07-2020,US,Illinois,Menard,25,25,0,0
+01-07-2020,US,South Dakota,Mellette,4,4,0,0
+01-07-2020,US,Tennessee,Meigs,32,32,0,0
+01-07-2020,US,Ohio,Meigs,11,8,0,3
+01-07-2020,US,Minnesota,Meeker,58,57,0,1
+01-07-2020,US,Texas,Medina,278,276,0,2
+01-07-2020,US,Ohio,Medina,491,458,0,33
+01-07-2020,US,Michigan,Mecosta,29,27,0,2
+01-07-2020,US,Virginia,Mecklenburg,242,216,0,26
+01-07-2020,US,North Carolina,Mecklenburg,11534,11384,0,150
+01-07-2020,US,Montana,Meagher,2,2,0,0
+01-07-2020,US,South Dakota,Meade,49,48,0,1
+01-07-2020,US,Kentucky,Meade,26,24,0,2
+01-07-2020,US,Kansas,Meade,30,30,0,0
+01-07-2020,US,South Dakota,McPherson,4,4,0,0
+01-07-2020,US,Nebraska,McPherson,0,0,0,0
+01-07-2020,US,Kansas,McPherson,75,75,0,0
+01-07-2020,US,Tennessee,McNairy,62,62,0,0
+01-07-2020,US,Tennessee,McMinn,216,199,0,17
+01-07-2020,US,Minnesota,McLeod,85,85,0,0
+01-07-2020,US,Texas,McLennan,957,948,0,9
+01-07-2020,US,North Dakota,McLean,11,11,0,0
+01-07-2020,US,Kentucky,McLean,24,23,0,1
+01-07-2020,US,Illinois,McLean,261,248,0,13
+01-07-2020,US,New Mexico,McKinley,3395,3225,0,170
+01-07-2020,US,North Dakota,McKenzie,27,27,0,0
+01-07-2020,US,Pennsylvania,McKean,18,17,0,1
+01-07-2020,US,Oklahoma,McIntosh,59,58,0,1
+01-07-2020,US,North Dakota,McIntosh,2,2,0,0
+01-07-2020,US,Georgia,McIntosh,43,42,0,1
+01-07-2020,US,North Dakota,McHenry,3,2,0,1
+01-07-2020,US,Illinois,McHenry,2061,1964,0,97
+01-07-2020,US,Georgia,McDuffie,101,95,0,6
+01-07-2020,US,West Virginia,McDowell,6,6,0,0
+01-07-2020,US,North Carolina,McDowell,237,235,0,2
+01-07-2020,US,Illinois,McDonough,101,86,0,15
+01-07-2020,US,Missouri,McDonald,498,497,0,1
+01-07-2020,US,Oklahoma,McCurtain,483,479,0,4
+01-07-2020,US,Texas,McCulloch,13,13,0,0
+01-07-2020,US,Kentucky,McCreary,18,18,0,0
+01-07-2020,US,Kentucky,McCracken,168,165,0,3
+01-07-2020,US,South Carolina,McCormick,17,15,0,2
+01-07-2020,US,South Dakota,McCook,10,9,0,1
+01-07-2020,US,Oklahoma,McClain,167,163,0,4
+01-07-2020,US,Oklahoma,Mayes,82,77,0,5
+01-07-2020,US,Texas,Maverick,434,431,0,3
+01-07-2020,US,Tennessee,Maury,297,294,0,3
+01-07-2020,US,Hawaii,Maui,125,119,0,6
+01-07-2020,US,Virginia,Mathews,6,6,0,0
+01-07-2020,US,Alaska,Matanuska-Susitna,88,87,0,1
+01-07-2020,US,Texas,Matagorda,213,208,0,5
+01-07-2020,US,Illinois,Massac,13,13,0,0
+01-07-2020,US,West Virginia,Mason,19,19,0,0
+01-07-2020,US,Washington,Mason,53,52,0,1
+01-07-2020,US,Texas,Mason,34,34,0,0
+01-07-2020,US,Michigan,Mason,53,53,0,0
+01-07-2020,US,Kentucky,Mason,31,31,0,0
+01-07-2020,US,Illinois,Mason,22,22,0,0
+01-07-2020,US,Virginia,Martinsville,78,77,0,1
+01-07-2020,US,Texas,Martin,17,16,0,1
+01-07-2020,US,North Carolina,Martin,135,131,0,4
+01-07-2020,US,Minnesota,Martin,161,156,0,5
+01-07-2020,US,Kentucky,Martin,7,7,0,0
+01-07-2020,US,Indiana,Martin,22,22,0,0
+01-07-2020,US,Florida,Martin,2112,2087,0,25
+01-07-2020,US,West Virginia,Marshall,41,41,0,0
+01-07-2020,US,Tennessee,Marshall,73,72,0,1
+01-07-2020,US,South Dakota,Marshall,5,5,0,0
+01-07-2020,US,Oklahoma,Marshall,32,32,0,0
+01-07-2020,US,Mississippi,Marshall,201,198,0,3
+01-07-2020,US,Minnesota,Marshall,12,12,0,0
+01-07-2020,US,Kentucky,Marshall,59,57,0,2
+01-07-2020,US,Kansas,Marshall,2,2,0,0
+01-07-2020,US,Iowa,Marshall,1016,998,0,18
+01-07-2020,US,Indiana,Marshall,412,409,0,3
+01-07-2020,US,Illinois,Marshall,8,8,0,0
+01-07-2020,US,Alabama,Marshall,1608,1598,0,10
+01-07-2020,US,Wisconsin,Marquette,16,15,0,1
+01-07-2020,US,Michigan,Marquette,65,54,0,11
+01-07-2020,US,South Carolina,Marlboro,307,303,0,4
+01-07-2020,US,California,Mariposa,27,26,0,1
+01-07-2020,US,West Virginia,Marion,61,59,0,2
+01-07-2020,US,Texas,Marion,28,27,0,1
+01-07-2020,US,Tennessee,Marion,67,63,0,4
+01-07-2020,US,South Carolina,Marion,212,205,0,7
+01-07-2020,US,Oregon,Marion,1539,1492,0,47
+01-07-2020,US,Ohio,Marion,2731,2698,0,33
+01-07-2020,US,Missouri,Marion,15,15,0,0
+01-07-2020,US,Mississippi,Marion,248,237,0,11
+01-07-2020,US,Kentucky,Marion,52,52,0,0
+01-07-2020,US,Kansas,Marion,9,8,0,1
+01-07-2020,US,Iowa,Marion,66,66,0,0
+01-07-2020,US,Indiana,Marion,11387,10680,0,707
+01-07-2020,US,Illinois,Marion,66,66,0,0
+01-07-2020,US,Georgia,Marion,82,80,0,2
+01-07-2020,US,Florida,Marion,727,717,0,10
+01-07-2020,US,Arkansas,Marion,6,6,0,0
+01-07-2020,US,Alabama,Marion,208,196,0,12
+01-07-2020,US,Wisconsin,Marinette,60,57,0,3
+01-07-2020,US,California,Marin,2394,2375,0,19
+01-07-2020,US,Missouri,Maries,4,4,0,0
+01-07-2020,US,Arizona,Maricopa,52266,51449,0,817
+01-07-2020,US,Alabama,Marengo,291,280,0,11
+01-07-2020,US,Wisconsin,Marathon,174,173,0,1
+01-07-2020,US,Wisconsin,Manitowoc,99,98,0,1
+01-07-2020,US,Michigan,Manistee,19,19,0,0
+01-07-2020,US,Florida,Manatee,3015,2886,0,129
+01-07-2020,US,Virginia,Manassas Park,430,424,0,6
+01-07-2020,US,Virginia,Manassas,1414,1396,0,18
+01-07-2020,US,Oregon,Malheur,124,123,0,1
+01-07-2020,US,Oklahoma,Major,8,7,0,1
+01-07-2020,US,Ohio,Mahoning,1752,1545,0,207
+01-07-2020,US,Minnesota,Mahnomen,7,6,0,1
+01-07-2020,US,Iowa,Mahaska,115,98,0,17
+01-07-2020,US,Kentucky,Magoffin,5,5,0,0
+01-07-2020,US,Virginia,Madison,43,42,0,1
+01-07-2020,US,Texas,Madison,33,33,0,0
+01-07-2020,US,Tennessee,Madison,255,253,0,2
+01-07-2020,US,Ohio,Madison,188,182,0,6
+01-07-2020,US,North Carolina,Madison,14,14,0,0
+01-07-2020,US,New York,Madison,357,340,0,17
+01-07-2020,US,Nebraska,Madison,365,361,0,4
+01-07-2020,US,Montana,Madison,8,7,0,1
+01-07-2020,US,Missouri,Madison,4,4,0,0
+01-07-2020,US,Mississippi,Madison,1222,1188,0,34
+01-07-2020,US,Louisiana,Madison,362,360,0,2
+01-07-2020,US,Kentucky,Madison,122,121,0,1
+01-07-2020,US,Iowa,Madison,37,35,0,2
+01-07-2020,US,Indiana,Madison,643,578,0,65
+01-07-2020,US,Illinois,Madison,947,878,0,69
+01-07-2020,US,Idaho,Madison,35,35,0,0
+01-07-2020,US,Georgia,Madison,101,97,0,4
+01-07-2020,US,Florida,Madison,200,197,0,3
+01-07-2020,US,Arkansas,Madison,194,194,0,0
+01-07-2020,US,Alabama,Madison,1034,1027,0,7
+01-07-2020,US,California,Madera,541,536,0,5
+01-07-2020,US,Illinois,Macoupin,52,49,0,3
+01-07-2020,US,Tennessee,Macon,409,406,0,3
+01-07-2020,US,North Carolina,Macon,282,279,0,3
+01-07-2020,US,Missouri,Macon,7,7,0,0
+01-07-2020,US,Illinois,Macon,231,209,0,22
+01-07-2020,US,Georgia,Macon,116,107,0,9
+01-07-2020,US,Alabama,Macon,179,171,0,8
+01-07-2020,US,Michigan,Macomb,7428,6512,0,916
+01-07-2020,US,Michigan,Mackinac,9,9,0,0
+01-07-2020,US,Nevada,Lyon,120,118,0,2
+01-07-2020,US,Minnesota,Lyon,300,298,0,2
+01-07-2020,US,Kentucky,Lyon,20,17,0,3
+01-07-2020,US,Kansas,Lyon,499,492,0,7
+01-07-2020,US,Iowa,Lyon,40,40,0,0
+01-07-2020,US,Texas,Lynn,33,32,0,1
+01-07-2020,US,Virginia,Lynchburg,145,144,0,1
+01-07-2020,US,South Dakota,Lyman,65,65,0,0
+01-07-2020,US,Pennsylvania,Lycoming,187,168,0,19
+01-07-2020,US,Pennsylvania,Luzerne,2915,2738,0,177
+01-07-2020,US,Virginia,Lunenburg,34,34,0,0
+01-07-2020,US,New Mexico,Luna,80,77,0,3
+01-07-2020,US,Georgia,Lumpkin,140,137,0,3
+01-07-2020,US,Michigan,Luce,3,3,0,0
+01-07-2020,US,Ohio,Lucas,2628,2364,0,264
+01-07-2020,US,Iowa,Lucas,30,26,0,4
+01-07-2020,US,Texas,Lubbock,2273,2221,0,52
+01-07-2020,US,Mississippi,Lowndes,453,442,0,11
+01-07-2020,US,Georgia,Lowndes,1237,1225,0,12
+01-07-2020,US,Alabama,Lowndes,459,439,0,20
+01-07-2020,US,Oklahoma,Love,30,30,0,0
+01-07-2020,US,Nebraska,Loup,0,0,0,0
+01-07-2020,US,Virginia,Louisa,119,118,0,1
+01-07-2020,US,Iowa,Louisa,360,347,0,13
+01-07-2020,US,Virginia,Loudoun,4047,3960,0,87
+01-07-2020,US,Tennessee,Loudon,265,264,0,1
+01-07-2020,US,California,Los Angeles,105665,102260,0,3405
+01-07-2020,US,New Mexico,Los Alamos,8,8,0,0
+01-07-2020,US,Ohio,Lorain,962,897,0,65
+01-07-2020,US,Arkansas,Lonoke,144,143,0,1
+01-07-2020,US,Georgia,Long,46,45,0,1
+01-07-2020,US,West Virginia,Logan,24,23,0,1
+01-07-2020,US,Oklahoma,Logan,49,48,0,1
+01-07-2020,US,Ohio,Logan,58,55,0,3
+01-07-2020,US,Nebraska,Logan,0,0,0,0
+01-07-2020,US,Kentucky,Logan,220,209,0,11
+01-07-2020,US,Kansas,Logan,1,1,0,0
+01-07-2020,US,Illinois,Logan,15,15,0,0
+01-07-2020,US,Colorado,Logan,638,633,0,5
+01-07-2020,US,Arkansas,Logan,46,46,0,0
+01-07-2020,US,Texas,Llano,11,11,0,0
+01-07-2020,US,New York,Livingston,130,122,0,8
+01-07-2020,US,Missouri,Livingston,11,11,0,0
+01-07-2020,US,Michigan,Livingston,579,551,0,28
+01-07-2020,US,Louisiana,Livingston,983,945,0,38
+01-07-2020,US,Kentucky,Livingston,10,10,0,0
+01-07-2020,US,Illinois,Livingston,45,43,0,2
+01-07-2020,US,Texas,Live Oak,31,31,0,0
+01-07-2020,US,Arkansas,Little River,38,38,0,0
+01-07-2020,US,Connecticut,Litchfield,1490,1353,0,137
+01-07-2020,US,Texas,Lipscomb,11,11,0,0
+01-07-2020,US,Oregon,Linn,151,142,0,9
+01-07-2020,US,Missouri,Linn,15,14,0,1
+01-07-2020,US,Kansas,Linn,14,14,0,0
+01-07-2020,US,Iowa,Linn,1215,1133,0,82
+01-07-2020,US,Wyoming,Lincoln,24,24,0,0
+01-07-2020,US,Wisconsin,Lincoln,10,10,0,0
+01-07-2020,US,West Virginia,Lincoln,8,8,0,0
+01-07-2020,US,Washington,Lincoln,4,4,0,0
+01-07-2020,US,Tennessee,Lincoln,59,59,0,0
+01-07-2020,US,South Dakota,Lincoln,347,346,0,1
+01-07-2020,US,Oregon,Lincoln,324,322,0,2
+01-07-2020,US,Oklahoma,Lincoln,30,28,0,2
+01-07-2020,US,North Carolina,Lincoln,258,256,0,2
+01-07-2020,US,New Mexico,Lincoln,11,11,0,0
+01-07-2020,US,Nevada,Lincoln,2,2,0,0
+01-07-2020,US,Nebraska,Lincoln,59,57,0,2
+01-07-2020,US,Montana,Lincoln,8,7,0,1
+01-07-2020,US,Missouri,Lincoln,96,95,0,1
+01-07-2020,US,Mississippi,Lincoln,435,401,0,34
+01-07-2020,US,Minnesota,Lincoln,9,9,0,0
+01-07-2020,US,Maine,Lincoln,24,24,0,0
+01-07-2020,US,Louisiana,Lincoln,329,311,0,18
+01-07-2020,US,Kentucky,Lincoln,28,27,0,1
+01-07-2020,US,Kansas,Lincoln,1,1,0,0
+01-07-2020,US,Idaho,Lincoln,36,36,0,0
+01-07-2020,US,Georgia,Lincoln,38,37,0,1
+01-07-2020,US,Colorado,Lincoln,4,4,0,0
+01-07-2020,US,Arkansas,Lincoln,1040,1029,0,11
+01-07-2020,US,Texas,Limestone,52,51,0,1
+01-07-2020,US,Alabama,Limestone,460,460,0,0
+01-07-2020,US,Ohio,Licking,416,400,0,16
+01-07-2020,US,Texas,Liberty,331,328,0,3
+01-07-2020,US,Montana,Liberty,1,1,0,0
+01-07-2020,US,Georgia,Liberty,127,126,0,1
+01-07-2020,US,Florida,Liberty,222,221,0,1
+01-07-2020,US,Virginia,Lexington,10,10,0,0
+01-07-2020,US,South Carolina,Lexington,2161,2111,0,50
+01-07-2020,US,Montana,Lewis and Clark,28,28,0,0
+01-07-2020,US,West Virginia,Lewis,19,17,0,2
+01-07-2020,US,Washington,Lewis,74,71,0,3
+01-07-2020,US,Tennessee,Lewis,7,7,0,0
+01-07-2020,US,New York,Lewis,30,30,0,0
+01-07-2020,US,Missouri,Lewis,7,6,0,1
+01-07-2020,US,Kentucky,Lewis,22,22,0,0
+01-07-2020,US,Idaho,Lewis,0,0,0,0
+01-07-2020,US,Florida,Levy,181,180,0,1
+01-07-2020,US,Kentucky,Letcher,14,14,0,0
+01-07-2020,US,Kentucky,Leslie,8,8,0,0
+01-07-2020,US,Texas,Leon,31,31,0,0
+01-07-2020,US,Florida,Leon,1149,1141,0,8
+01-07-2020,US,North Carolina,Lenoir,371,360,0,11
+01-07-2020,US,Michigan,Lenawee,221,215,0,6
+01-07-2020,US,Idaho,Lemhi,2,2,0,0
+01-07-2020,US,Pennsylvania,Lehigh,4258,3958,0,300
+01-07-2020,US,Mississippi,Leflore,472,423,0,49
+01-07-2020,US,Michigan,Leelanau,19,19,0,0
+01-07-2020,US,Virginia,Lee,11,11,0,0
+01-07-2020,US,Texas,Lee,60,57,0,3
+01-07-2020,US,South Carolina,Lee,293,271,0,22
+01-07-2020,US,North Carolina,Lee,841,833,0,8
+01-07-2020,US,Mississippi,Lee,493,477,0,16
+01-07-2020,US,Kentucky,Lee,1,1,0,0
+01-07-2020,US,Iowa,Lee,49,47,0,2
+01-07-2020,US,Illinois,Lee,97,95,0,2
+01-07-2020,US,Georgia,Lee,390,368,0,22
+01-07-2020,US,Florida,Lee,5869,5710,0,159
+01-07-2020,US,Arkansas,Lee,746,744,0,2
+01-07-2020,US,Alabama,Lee,1263,1226,0,37
+01-07-2020,US,Pennsylvania,Lebanon,1350,1307,0,43
+01-07-2020,US,Kansas,Leavenworth,1171,1164,0,7
+01-07-2020,US,Mississippi,Leake,548,529,0,19
+01-07-2020,US,New Mexico,Lea,134,134,0,0
+01-07-2020,US,Minnesota,Le Sueur,86,85,0,1
+01-07-2020,US,Oklahoma,Le Flore,33,32,0,1
+01-07-2020,US,Tennessee,Lawrence,133,128,0,5
+01-07-2020,US,South Dakota,Lawrence,19,19,0,0
+01-07-2020,US,Pennsylvania,Lawrence,103,94,0,9
+01-07-2020,US,Ohio,Lawrence,65,65,0,0
+01-07-2020,US,Missouri,Lawrence,30,30,0,0
+01-07-2020,US,Mississippi,Lawrence,159,158,0,1
+01-07-2020,US,Kentucky,Lawrence,8,8,0,0
+01-07-2020,US,Indiana,Lawrence,231,206,0,25
+01-07-2020,US,Illinois,Lawrence,7,7,0,0
+01-07-2020,US,Arkansas,Lawrence,100,91,0,9
+01-07-2020,US,Alabama,Lawrence,111,111,0,0
+01-07-2020,US,Texas,Lavaca,134,133,0,1
+01-07-2020,US,South Carolina,Laurens,489,482,0,7
+01-07-2020,US,Georgia,Laurens,177,176,0,1
+01-07-2020,US,Kentucky,Laurel,111,108,0,3
+01-07-2020,US,Tennessee,Lauderdale,120,118,0,2
+01-07-2020,US,Mississippi,Lauderdale,882,804,0,78
+01-07-2020,US,Alabama,Lauderdale,455,449,0,6
+01-07-2020,US,Oklahoma,Latimer,11,10,0,1
+01-07-2020,US,Idaho,Latah,24,24,0,0
+01-07-2020,US,California,Lassen,233,233,0,0
+01-07-2020,US,Colorado,Las Animas,9,9,0,0
+01-07-2020,US,Kentucky,Larue,15,14,0,1
+01-07-2020,US,Colorado,Larimer,747,718,0,29
+01-07-2020,US,Wyoming,Laramie,270,270,0,0
+01-07-2020,US,Michigan,Lapeer,295,264,0,31
+01-07-2020,US,Georgia,Lanier,137,134,0,3
+01-07-2020,US,Wisconsin,Langlade,10,10,0,0
+01-07-2020,US,Oregon,Lane,165,162,0,3
+01-07-2020,US,Kansas,Lane,5,5,0,0
+01-07-2020,US,Nevada,Lander,35,35,0,0
+01-07-2020,US,Virginia,Lancaster,11,11,0,0
+01-07-2020,US,South Carolina,Lancaster,493,480,0,13
+01-07-2020,US,Pennsylvania,Lancaster,4464,4100,0,364
+01-07-2020,US,Nebraska,Lancaster,1746,1734,0,12
+01-07-2020,US,Texas,Lampasas,20,20,0,0
+01-07-2020,US,Vermont,Lamoille,30,29,0,1
+01-07-2020,US,Texas,Lamb,41,41,0,0
+01-07-2020,US,Texas,Lamar,296,283,0,13
+01-07-2020,US,Mississippi,Lamar,419,412,0,7
+01-07-2020,US,Georgia,Lamar,121,115,0,6
+01-07-2020,US,Alabama,Lamar,68,67,0,1
+01-07-2020,US,Minnesota,Lake of the Woods,0,0,0,0
+01-07-2020,US,Tennessee,Lake,690,690,0,0
+01-07-2020,US,South Dakota,Lake,21,20,0,1
+01-07-2020,US,Oregon,Lake,19,19,0,0
+01-07-2020,US,Ohio,Lake,443,423,0,20
+01-07-2020,US,Montana,Lake,18,18,0,0
+01-07-2020,US,Minnesota,Lake,6,6,0,0
+01-07-2020,US,Michigan,Lake,8,8,0,0
+01-07-2020,US,Indiana,Lake,4872,4618,0,254
+01-07-2020,US,Illinois,Lake,9752,9334,0,418
+01-07-2020,US,Florida,Lake,1410,1388,0,22
+01-07-2020,US,Colorado,Lake,51,51,0,0
+01-07-2020,US,California,Lake,79,79,0,0
+01-07-2020,US,Louisiana,Lafourche,1177,1088,0,89
+01-07-2020,US,Wisconsin,Lafayette,74,74,0,0
+01-07-2020,US,Missouri,Lafayette,87,85,0,2
+01-07-2020,US,Mississippi,Lafayette,352,348,0,4
+01-07-2020,US,Louisiana,Lafayette,2359,2314,0,45
+01-07-2020,US,Florida,Lafayette,32,32,0,0
+01-07-2020,US,Arkansas,Lafayette,19,18,0,1
+01-07-2020,US,Missouri,Laclede,25,25,0,0
+01-07-2020,US,Pennsylvania,Lackawanna,1707,1503,0,204
+01-07-2020,US,Minnesota,Lac qui Parle,4,4,0,0
+01-07-2020,US,Kansas,Labette,61,61,0,0
+01-07-2020,US,Louisiana,LaSalle,97,97,0,0
+01-07-2020,US,Illinois,LaSalle,219,202,0,17
+01-07-2020,US,Indiana,LaPorte,539,514,0,25
+01-07-2020,US,North Dakota,LaMoure,13,13,0,0
+01-07-2020,US,Indiana,LaGrange,459,453,0,6
+01-07-2020,US,Texas,La Salle,14,14,0,0
+01-07-2020,US,Colorado,La Plata,116,115,0,1
+01-07-2020,US,Arizona,La Paz,345,340,0,5
+01-07-2020,US,Wisconsin,La Crosse,455,455,0,0
+01-07-2020,US,Iowa,Kossuth,32,32,0,0
+01-07-2020,US,Indiana,Kosciusko,495,493,0,2
+01-07-2020,US,Idaho,Kootenai,286,285,0,1
+01-07-2020,US,Minnesota,Koochiching,14,13,0,1
+01-07-2020,US,Alaska,Kodiak Island,3,3,0,0
+01-07-2020,US,Texas,Knox,3,3,0,0
+01-07-2020,US,Tennessee,Knox,982,977,0,5
+01-07-2020,US,Ohio,Knox,39,37,0,2
+01-07-2020,US,Nebraska,Knox,21,21,0,0
+01-07-2020,US,Missouri,Knox,2,2,0,0
+01-07-2020,US,Maine,Knox,25,24,0,1
+01-07-2020,US,Kentucky,Knox,69,69,0,0
+01-07-2020,US,Indiana,Knox,62,62,0,0
+01-07-2020,US,Illinois,Knox,132,132,0,0
+01-07-2020,US,Kentucky,Knott,8,8,0,0
+01-07-2020,US,Washington,Klickitat,65,63,0,2
+01-07-2020,US,Texas,Kleberg,71,70,0,1
+01-07-2020,US,Oregon,Klamath,123,123,0,0
+01-07-2020,US,Minnesota,Kittson,2,2,0,0
+01-07-2020,US,Washington,Kittitas,139,139,0,0
+01-07-2020,US,Washington,Kitsap,231,229,0,2
+01-07-2020,US,Colorado,Kit Carson,33,30,0,3
+01-07-2020,US,Oklahoma,Kiowa,10,9,0,1
+01-07-2020,US,Kansas,Kiowa,3,3,0,0
+01-07-2020,US,Texas,Kinney,2,2,0,0
+01-07-2020,US,South Dakota,Kingsbury,6,6,0,0
+01-07-2020,US,California,Kings,2504,2470,0,34
+01-07-2020,US,Oklahoma,Kingfisher,26,26,0,0
+01-07-2020,US,Virginia,King and Queen,23,22,0,1
+01-07-2020,US,Virginia,King William,42,42,0,0
+01-07-2020,US,Virginia,King George,97,93,0,4
+01-07-2020,US,Washington,King,10547,9937,0,610
+01-07-2020,US,Texas,Kimble,5,5,0,0
+01-07-2020,US,Nebraska,Kimball,10,10,0,0
+01-07-2020,US,North Dakota,Kidder,2,2,0,0
+01-07-2020,US,Nebraska,Keya Paha,0,0,0,0
+01-07-2020,US,Michigan,Keweenaw,1,1,0,0
+01-07-2020,US,Wisconsin,Kewaunee,59,58,0,1
+01-07-2020,US,Alaska,Ketchikan Gateway,22,22,0,0
+01-07-2020,US,South Carolina,Kershaw,695,680,0,15
+01-07-2020,US,Texas,Kerr,90,89,0,1
+01-07-2020,US,California,Kern,4768,4692,0,76
+01-07-2020,US,Iowa,Keokuk,19,18,0,1
+01-07-2020,US,Kentucky,Kenton,800,764,0,36
+01-07-2020,US,Rhode Island,Kent,1199,1097,0,102
+01-07-2020,US,Michigan,Kent,4945,4811,0,134
+01-07-2020,US,Maryland,Kent,200,177,0,23
+01-07-2020,US,Delaware,Kent,1699,1599,0,100
+01-07-2020,US,Wisconsin,Kenosha,1522,1479,0,43
+01-07-2020,US,Maine,Kennebec,147,137,0,10
+01-07-2020,US,Texas,Kendall,67,67,0,0
+01-07-2020,US,Illinois,Kendall,963,943,0,20
+01-07-2020,US,Alaska,Kenai Peninsula,151,149,0,2
+01-07-2020,US,Mississippi,Kemper,176,162,0,14
+01-07-2020,US,Nebraska,Keith,4,4,0,0
+01-07-2020,US,Kansas,Kearny,48,47,0,1
+01-07-2020,US,Nebraska,Kearney,14,14,0,0
+01-07-2020,US,Oklahoma,Kay,98,91,0,7
+01-07-2020,US,Texas,Kaufman,627,623,0,4
+01-07-2020,US,Hawaii,Kauai,38,38,0,0
+01-07-2020,US,Texas,Karnes,48,48,0,0
+01-07-2020,US,Missouri,Kansas City,2242,2211,0,31
+01-07-2020,US,Illinois,Kankakee,1285,1220,0,65
+01-07-2020,US,Illinois,Kane,7733,7462,0,271
+01-07-2020,US,Minnesota,Kandiyohi,565,564,0,1
+01-07-2020,US,West Virginia,Kanawha,328,308,0,20
+01-07-2020,US,Minnesota,Kanabec,14,13,0,1
+01-07-2020,US,Michigan,Kalkaska,34,32,0,2
+01-07-2020,US,Michigan,Kalamazoo,1089,1021,0,68
+01-07-2020,US,Pennsylvania,Juniata,111,105,0,6
+01-07-2020,US,Wisconsin,Juneau,39,38,0,1
+01-07-2020,US,Alaska,Juneau,44,42,0,2
+01-07-2020,US,Oregon,Josephine,33,32,0,1
+01-07-2020,US,Texas,Jones,613,613,0,0
+01-07-2020,US,North Carolina,Jones,35,32,0,3
+01-07-2020,US,Mississippi,Jones,1069,1020,0,49
+01-07-2020,US,Iowa,Jones,55,55,0,0
+01-07-2020,US,Georgia,Jones,77,77,0,0
+01-07-2020,US,Oklahoma,Johnston,13,13,0,0
+01-07-2020,US,North Carolina,Johnston,1541,1509,0,32
+01-07-2020,US,Wyoming,Johnson,20,19,0,1
+01-07-2020,US,Texas,Johnson,448,444,0,4
+01-07-2020,US,Tennessee,Johnson,37,37,0,0
+01-07-2020,US,Nebraska,Johnson,7,7,0,0
+01-07-2020,US,Missouri,Johnson,112,112,0,0
+01-07-2020,US,Kentucky,Johnson,9,9,0,0
+01-07-2020,US,Kansas,Johnson,1798,1711,0,87
+01-07-2020,US,Iowa,Johnson,1181,1173,0,8
+01-07-2020,US,Indiana,Johnson,1235,1111,0,124
+01-07-2020,US,Illinois,Johnson,20,20,0,0
+01-07-2020,US,Georgia,Johnson,90,88,0,2
+01-07-2020,US,Arkansas,Johnson,236,236,0,0
+01-07-2020,US,Illinois,Jo Daviess,44,43,0,1
+01-07-2020,US,Texas,Jim Wells,147,147,0,0
+01-07-2020,US,Texas,Jim Hogg,15,15,0,0
+01-07-2020,US,Kansas,Jewell,4,4,0,0
+01-07-2020,US,Kentucky,Jessamine,106,106,0,0
+01-07-2020,US,Illinois,Jersey,35,34,0,1
+01-07-2020,US,Idaho,Jerome,243,238,0,5
+01-07-2020,US,South Dakota,Jerauld,39,38,0,1
+01-07-2020,US,Indiana,Jennings,169,158,0,11
+01-07-2020,US,Georgia,Jenkins,109,98,0,11
+01-07-2020,US,Mississippi,Jefferson Davis,106,102,0,4
+01-07-2020,US,Louisiana,Jefferson Davis,370,361,0,9
+01-07-2020,US,Wisconsin,Jefferson,242,238,0,4
+01-07-2020,US,West Virginia,Jefferson,232,228,0,4
+01-07-2020,US,Washington,Jefferson,38,38,0,0
+01-07-2020,US,Texas,Jefferson,1875,1841,0,34
+01-07-2020,US,Tennessee,Jefferson,107,107,0,0
+01-07-2020,US,Pennsylvania,Jefferson,24,23,0,1
+01-07-2020,US,Oregon,Jefferson,118,118,0,0
+01-07-2020,US,Oklahoma,Jefferson,8,8,0,0
+01-07-2020,US,Ohio,Jefferson,80,77,0,3
+01-07-2020,US,New York,Jefferson,88,88,0,0
+01-07-2020,US,Nebraska,Jefferson,10,10,0,0
+01-07-2020,US,Montana,Jefferson,3,3,0,0
+01-07-2020,US,Missouri,Jefferson,445,426,0,19
+01-07-2020,US,Mississippi,Jefferson,92,89,0,3
+01-07-2020,US,Louisiana,Jefferson,9637,9152,0,485
+01-07-2020,US,Kentucky,Jefferson,3942,3746,0,196
+01-07-2020,US,Kansas,Jefferson,25,25,0,0
+01-07-2020,US,Iowa,Jefferson,53,53,0,0
+01-07-2020,US,Indiana,Jefferson,65,64,0,1
+01-07-2020,US,Illinois,Jefferson,107,90,0,17
+01-07-2020,US,Idaho,Jefferson,18,18,0,0
+01-07-2020,US,Georgia,Jefferson,109,108,0,1
+01-07-2020,US,Florida,Jefferson,51,47,0,4
+01-07-2020,US,Colorado,Jefferson,2711,2500,0,211
+01-07-2020,US,Arkansas,Jefferson,706,678,0,28
+01-07-2020,US,Alabama,Jefferson,4534,4392,0,142
+01-07-2020,US,Texas,Jeff Davis,4,4,0,0
+01-07-2020,US,Georgia,Jeff Davis,112,110,0,2
+01-07-2020,US,Indiana,Jay,67,67,0,0
+01-07-2020,US,Texas,Jasper,52,51,0,1
+01-07-2020,US,South Carolina,Jasper,138,135,0,3
+01-07-2020,US,Missouri,Jasper,447,444,0,3
+01-07-2020,US,Mississippi,Jasper,250,244,0,6
+01-07-2020,US,Iowa,Jasper,318,301,0,17
+01-07-2020,US,Indiana,Jasper,109,107,0,2
+01-07-2020,US,Illinois,Jasper,46,39,0,7
+01-07-2020,US,Georgia,Jasper,69,68,0,1
+01-07-2020,US,Virginia,James City,265,250,0,15
+01-07-2020,US,Wisconsin,Jackson,27,26,0,1
+01-07-2020,US,West Virginia,Jackson,143,125,0,18
+01-07-2020,US,Texas,Jackson,47,46,0,1
+01-07-2020,US,Tennessee,Jackson,26,26,0,0
+01-07-2020,US,South Dakota,Jackson,6,5,0,1
+01-07-2020,US,Oregon,Jackson,117,117,0,0
+01-07-2020,US,Oklahoma,Jackson,38,35,0,3
+01-07-2020,US,Ohio,Jackson,17,16,0,1
+01-07-2020,US,North Carolina,Jackson,117,116,0,1
+01-07-2020,US,Missouri,Jackson,1126,1102,0,24
+01-07-2020,US,Mississippi,Jackson,533,517,0,16
+01-07-2020,US,Minnesota,Jackson,54,54,0,0
+01-07-2020,US,Michigan,Jackson,513,483,0,30
+01-07-2020,US,Louisiana,Jackson,213,197,0,16
+01-07-2020,US,Kentucky,Jackson,109,95,0,14
+01-07-2020,US,Kansas,Jackson,113,112,0,1
+01-07-2020,US,Iowa,Jackson,25,25,0,0
+01-07-2020,US,Indiana,Jackson,455,452,0,3
+01-07-2020,US,Illinois,Jackson,332,313,0,19
+01-07-2020,US,Georgia,Jackson,390,380,0,10
+01-07-2020,US,Florida,Jackson,365,363,0,2
+01-07-2020,US,Colorado,Jackson,2,2,0,0
+01-07-2020,US,Arkansas,Jackson,27,27,0,0
+01-07-2020,US,Alabama,Jackson,228,226,0,2
+01-07-2020,US,Texas,Jack,11,11,0,0
+01-07-2020,US,Arkansas,Izard,23,22,0,1
+01-07-2020,US,Mississippi,Itawamba,127,119,0,8
+01-07-2020,US,Minnesota,Itasca,65,53,0,12
+01-07-2020,US,Mississippi,Issaquena,7,6,0,1
+01-07-2020,US,Virginia,Isle of Wight,181,173,0,8
+01-07-2020,US,Washington,Island,196,186,0,10
+01-07-2020,US,Minnesota,Isanti,64,64,0,0
+01-07-2020,US,Michigan,Isabella,127,119,0,8
+01-07-2020,US,Georgia,Irwin,64,63,0,1
+01-07-2020,US,Illinois,Iroquois,157,152,0,5
+01-07-2020,US,Wisconsin,Iron,7,6,0,1
+01-07-2020,US,Missouri,Iron,3,3,0,0
+01-07-2020,US,Michigan,Iron,5,4,0,1
+01-07-2020,US,Texas,Irion,2,2,0,0
+01-07-2020,US,North Carolina,Iredell,785,776,0,9
+01-07-2020,US,Wisconsin,Iowa,32,32,0,0
+01-07-2020,US,Iowa,Iowa,50,50,0,0
+01-07-2020,US,Michigan,Iosco,114,103,0,11
+01-07-2020,US,Michigan,Ionia,195,191,0,4
+01-07-2020,US,California,Inyo,32,31,0,1
+01-07-2020,US,Michigan,Ingham,1042,1013,0,29
+01-07-2020,US,Pennsylvania,Indiana,111,105,0,6
+01-07-2020,US,Florida,Indian River,739,723,0,16
+01-07-2020,US,Arkansas,Independence,55,55,0,0
+01-07-2020,US,California,Imperial,6523,6426,0,97
+01-07-2020,US,Idaho,Idaho,5,5,0,0
+01-07-2020,US,Iowa,Ida,22,22,0,0
+01-07-2020,US,Louisiana,Iberville,719,676,0,43
+01-07-2020,US,Louisiana,Iberia,748,704,0,44
+01-07-2020,US,South Dakota,Hyde,3,3,0,0
+01-07-2020,US,North Carolina,Hyde,12,12,0,0
+01-07-2020,US,Texas,Hutchinson,65,65,0,0
+01-07-2020,US,South Dakota,Hutchinson,12,12,0,0
+01-07-2020,US,Ohio,Huron,177,173,0,4
+01-07-2020,US,Michigan,Huron,66,63,0,3
+01-07-2020,US,Indiana,Huntington,70,68,0,2
+01-07-2020,US,Pennsylvania,Huntingdon,252,248,0,4
+01-07-2020,US,New Jersey,Hunterdon,1084,960,0,124
+01-07-2020,US,Texas,Hunt,452,446,0,6
+01-07-2020,US,Tennessee,Humphreys,23,22,0,1
+01-07-2020,US,Mississippi,Humphreys,123,114,0,9
+01-07-2020,US,Nevada,Humboldt,83,79,0,4
+01-07-2020,US,Iowa,Humboldt,51,50,0,1
+01-07-2020,US,California,Humboldt,133,129,0,4
+01-07-2020,US,South Dakota,Hughes,58,58,0,0
+01-07-2020,US,Oklahoma,Hughes,11,11,0,0
+01-07-2020,US,Colorado,Huerfano,4,3,0,1
+01-07-2020,US,Texas,Hudspeth,15,15,0,0
+01-07-2020,US,New Jersey,Hudson,18976,17519,0,1457
+01-07-2020,US,Minnesota,Hubbard,5,5,0,0
+01-07-2020,US,Missouri,Howell,36,36,0,0
+01-07-2020,US,Texas,Howard,40,39,0,1
+01-07-2020,US,Nebraska,Howard,46,42,0,4
+01-07-2020,US,Missouri,Howard,5,5,0,0
+01-07-2020,US,Maryland,Howard,2568,2479,0,89
+01-07-2020,US,Iowa,Howard,27,27,0,0
+01-07-2020,US,Indiana,Howard,543,484,0,59
+01-07-2020,US,Arkansas,Howard,94,93,0,1
+01-07-2020,US,Texas,Houston,162,162,0,0
+01-07-2020,US,Tennessee,Houston,12,12,0,0
+01-07-2020,US,Minnesota,Houston,24,24,0,0
+01-07-2020,US,Georgia,Houston,652,628,0,24
+01-07-2020,US,Alabama,Houston,451,447,0,4
+01-07-2020,US,Michigan,Houghton,12,12,0,0
+01-07-2020,US,Wyoming,Hot Springs,12,12,0,0
+01-07-2020,US,Arkansas,Hot Spring,429,429,0,0
+01-07-2020,US,South Carolina,Horry,3550,3502,0,48
+01-07-2020,US,Texas,Hopkins,63,62,0,1
+01-07-2020,US,Kentucky,Hopkins,255,223,0,32
+01-07-2020,US,Virginia,Hopewell,176,174,0,2
+01-07-2020,US,Nebraska,Hooker,1,1,0,0
+01-07-2020,US,Oregon,Hood River,88,88,0,0
+01-07-2020,US,Texas,Hood,67,63,0,4
+01-07-2020,US,Hawaii,Honolulu,659,647,0,12
+01-07-2020,US,Nebraska,Holt,3,3,0,0
+01-07-2020,US,Missouri,Holt,1,1,0,0
+01-07-2020,US,Ohio,Holmes,204,200,0,4
+01-07-2020,US,Mississippi,Holmes,527,486,0,41
+01-07-2020,US,Florida,Holmes,181,181,0,0
+01-07-2020,US,North Carolina,Hoke,383,380,0,3
+01-07-2020,US,Kansas,Hodgeman,9,9,0,0
+01-07-2020,US,Texas,Hockley,50,49,0,1
+01-07-2020,US,Ohio,Hocking,76,67,0,9
+01-07-2020,US,Nebraska,Hitchcock,1,1,0,0
+01-07-2020,US,Colorado,Hinsdale,3,3,0,0
+01-07-2020,US,Mississippi,Hinds,2152,2113,0,39
+01-07-2020,US,Michigan,Hillsdale,194,169,0,25
+01-07-2020,US,New Hampshire,Hillsborough,3288,3040,0,248
+01-07-2020,US,Florida,Hillsborough,11465,11325,0,140
+01-07-2020,US,Texas,Hill,70,69,0,1
+01-07-2020,US,Montana,Hill,1,1,0,0
+01-07-2020,US,Florida,Highlands,365,354,0,11
+01-07-2020,US,Virginia,Highland,3,3,0,0
+01-07-2020,US,Ohio,Highland,43,42,0,1
+01-07-2020,US,Texas,Hidalgo,3982,3936,0,46
+01-07-2020,US,New Mexico,Hidalgo,49,49,0,0
+01-07-2020,US,Tennessee,Hickman,72,72,0,0
+01-07-2020,US,Kentucky,Hickman,5,5,0,0
+01-07-2020,US,North Dakota,Hettinger,1,1,0,0
+01-07-2020,US,North Carolina,Hertford,164,154,0,10
+01-07-2020,US,Florida,Hernando,408,403,0,5
+01-07-2020,US,New York,Herkimer,162,159,0,3
+01-07-2020,US,Virginia,Henry,264,260,0,4
+01-07-2020,US,Tennessee,Henry,42,42,0,0
+01-07-2020,US,Ohio,Henry,29,28,0,1
+01-07-2020,US,Missouri,Henry,19,16,0,3
+01-07-2020,US,Kentucky,Henry,35,33,0,2
+01-07-2020,US,Iowa,Henry,82,79,0,3
+01-07-2020,US,Indiana,Henry,235,220,0,15
+01-07-2020,US,Illinois,Henry,88,87,0,1
+01-07-2020,US,Georgia,Henry,1243,1210,0,33
+01-07-2020,US,Alabama,Henry,134,131,0,3
+01-07-2020,US,Virginia,Henrico,2603,2457,0,146
+01-07-2020,US,Minnesota,Hennepin,11892,11116,0,776
+01-07-2020,US,Florida,Hendry,980,955,0,25
+01-07-2020,US,Indiana,Hendricks,1366,1265,0,101
+01-07-2020,US,Texas,Henderson,137,133,0,4
+01-07-2020,US,Tennessee,Henderson,35,35,0,0
+01-07-2020,US,North Carolina,Henderson,644,594,0,50
+01-07-2020,US,Kentucky,Henderson,160,157,0,3
+01-07-2020,US,Illinois,Henderson,8,8,0,0
+01-07-2020,US,Arkansas,Hempstead,50,49,0,1
+01-07-2020,US,Texas,Hemphill,8,8,0,0
+01-07-2020,US,Georgia,Heard,51,48,0,3
+01-07-2020,US,Tennessee,Haywood,74,72,0,2
+01-07-2020,US,North Carolina,Haywood,90,90,0,0
+01-07-2020,US,Texas,Hays,2819,2812,0,7
+01-07-2020,US,Nebraska,Hayes,0,0,0,0
+01-07-2020,US,Tennessee,Hawkins,51,49,0,2
+01-07-2020,US,Hawaii,Hawaii,87,87,0,0
+01-07-2020,US,Texas,Haskell,5,5,0,0
+01-07-2020,US,Oklahoma,Haskell,10,10,0,0
+01-07-2020,US,Kansas,Haskell,24,24,0,0
+01-07-2020,US,Kansas,Harvey,37,37,0,0
+01-07-2020,US,Texas,Hartley,28,26,0,2
+01-07-2020,US,Connecticut,Hartford,11691,10318,0,1373
+01-07-2020,US,Kentucky,Hart,41,41,0,0
+01-07-2020,US,Georgia,Hart,60,60,0,0
+01-07-2020,US,Virginia,Harrisonburg,937,913,0,24
+01-07-2020,US,West Virginia,Harrison,65,64,0,1
+01-07-2020,US,Texas,Harrison,314,284,0,30
+01-07-2020,US,Ohio,Harrison,12,11,0,1
+01-07-2020,US,Missouri,Harrison,13,13,0,0
+01-07-2020,US,Mississippi,Harrison,744,736,0,8
+01-07-2020,US,Kentucky,Harrison,73,73,0,0
+01-07-2020,US,Iowa,Harrison,51,51,0,0
+01-07-2020,US,Indiana,Harrison,208,185,0,23
+01-07-2020,US,Texas,Harris,32859,32475,0,384
+01-07-2020,US,Georgia,Harris,336,327,0,9
+01-07-2020,US,Oklahoma,Harper,1,1,0,0
+01-07-2020,US,Kansas,Harper,4,4,0,0
+01-07-2020,US,Oregon,Harney,1,1,0,0
+01-07-2020,US,North Carolina,Harnett,648,618,0,30
+01-07-2020,US,Oklahoma,Harmon,1,1,0,0
+01-07-2020,US,Nebraska,Harlan,1,1,0,0
+01-07-2020,US,Kentucky,Harlan,24,22,0,2
+01-07-2020,US,Maryland,Harford,1127,1065,0,62
+01-07-2020,US,West Virginia,Hardy,44,44,0,0
+01-07-2020,US,New Mexico,Harding,1,1,0,0
+01-07-2020,US,Texas,Hardin,254,249,0,5
+01-07-2020,US,Tennessee,Hardin,100,95,0,5
+01-07-2020,US,Ohio,Hardin,113,103,0,10
+01-07-2020,US,Kentucky,Hardin,164,158,0,6
+01-07-2020,US,Iowa,Hardin,63,63,0,0
+01-07-2020,US,Illinois,Hardin,1,1,0,0
+01-07-2020,US,Texas,Hardeman,5,5,0,0
+01-07-2020,US,Tennessee,Hardeman,304,303,0,1
+01-07-2020,US,Florida,Hardee,440,437,0,3
+01-07-2020,US,Georgia,Haralson,76,71,0,5
+01-07-2020,US,South Dakota,Hanson,7,7,0,0
+01-07-2020,US,Texas,Hansford,28,26,0,2
+01-07-2020,US,Virginia,Hanover,429,402,0,27
+01-07-2020,US,South Dakota,Hand,7,7,0,0
+01-07-2020,US,West Virginia,Hancock,23,23,0,0
+01-07-2020,US,Tennessee,Hancock,3,3,0,0
+01-07-2020,US,Ohio,Hancock,76,71,0,5
+01-07-2020,US,Mississippi,Hancock,120,107,0,13
+01-07-2020,US,Maine,Hancock,16,15,0,1
+01-07-2020,US,Kentucky,Hancock,18,18,0,0
+01-07-2020,US,Iowa,Hancock,47,47,0,0
+01-07-2020,US,Indiana,Hancock,429,394,0,35
+01-07-2020,US,Illinois,Hancock,19,18,0,1
+01-07-2020,US,Georgia,Hancock,217,185,0,32
+01-07-2020,US,Virginia,Hampton,336,331,0,5
+01-07-2020,US,South Carolina,Hampton,73,71,0,2
+01-07-2020,US,West Virginia,Hampshire,42,41,0,1
+01-07-2020,US,Massachusetts,Hampshire,962,852,0,110
+01-07-2020,US,Massachusetts,Hampden,6776,6121,0,655
+01-07-2020,US,South Dakota,Hamlin,12,12,0,0
+01-07-2020,US,Texas,Hamilton,24,23,0,1
+01-07-2020,US,Tennessee,Hamilton,2532,2502,0,30
+01-07-2020,US,Ohio,Hamilton,5224,5052,0,172
+01-07-2020,US,New York,Hamilton,6,6,0,0
+01-07-2020,US,Nebraska,Hamilton,64,52,0,12
+01-07-2020,US,Kansas,Hamilton,30,30,0,0
+01-07-2020,US,Iowa,Hamilton,185,184,0,1
+01-07-2020,US,Indiana,Hamilton,1484,1381,0,103
+01-07-2020,US,Illinois,Hamilton,5,5,0,0
+01-07-2020,US,Florida,Hamilton,345,343,0,2
+01-07-2020,US,Tennessee,Hamblen,263,259,0,4
+01-07-2020,US,Texas,Hall,2,1,0,1
+01-07-2020,US,Nebraska,Hall,1593,1546,0,47
+01-07-2020,US,Georgia,Hall,3252,3192,0,60
+01-07-2020,US,Virginia,Halifax,54,53,0,1
+01-07-2020,US,North Carolina,Halifax,321,317,0,4
+01-07-2020,US,Texas,Hale,300,293,0,7
+01-07-2020,US,Alabama,Hale,301,280,0,21
+01-07-2020,US,Alaska,Haines,2,2,0,0
+01-07-2020,US,Georgia,Habersham,699,664,0,35
+01-07-2020,US,Georgia,Gwinnett,8362,8189,0,173
+01-07-2020,US,Iowa,Guthrie,64,60,0,4
+01-07-2020,US,Colorado,Gunnison,188,182,0,6
+01-07-2020,US,Florida,Gulf,23,23,0,0
+01-07-2020,US,North Carolina,Guilford,2891,2776,0,115
+01-07-2020,US,Ohio,Guernsey,60,55,0,5
+01-07-2020,US,Texas,Guadalupe,705,703,0,2
+01-07-2020,US,New Mexico,Guadalupe,20,20,0,0
+01-07-2020,US,Tennessee,Grundy,58,57,0,1
+01-07-2020,US,Missouri,Grundy,18,18,0,0
+01-07-2020,US,Iowa,Grundy,34,34,0,0
+01-07-2020,US,Illinois,Grundy,167,163,0,4
+01-07-2020,US,Texas,Grimes,539,537,0,2
+01-07-2020,US,North Dakota,Griggs,2,2,0,0
+01-07-2020,US,Mississippi,Grenada,380,375,0,5
+01-07-2020,US,South Dakota,Gregory,4,4,0,0
+01-07-2020,US,Texas,Gregg,375,362,0,13
+01-07-2020,US,Oklahoma,Greer,66,59,0,7
+01-07-2020,US,South Carolina,Greenwood,506,499,0,7
+01-07-2020,US,Kansas,Greenwood,11,11,0,0
+01-07-2020,US,South Carolina,Greenville,5118,5035,0,83
+01-07-2020,US,Kentucky,Greenup,28,28,0,0
+01-07-2020,US,Virginia,Greensville,361,354,0,7
+01-07-2020,US,Arizona,Greenlee,18,17,0,1
+01-07-2020,US,Virginia,Greene,66,65,0,1
+01-07-2020,US,Tennessee,Greene,85,83,0,2
+01-07-2020,US,Pennsylvania,Greene,41,41,0,0
+01-07-2020,US,Ohio,Greene,222,210,0,12
+01-07-2020,US,North Carolina,Greene,175,172,0,3
+01-07-2020,US,New York,Greene,260,242,0,18
+01-07-2020,US,Missouri,Greene,265,257,0,8
+01-07-2020,US,Mississippi,Greene,92,85,0,7
+01-07-2020,US,Iowa,Greene,28,28,0,0
+01-07-2020,US,Indiana,Greene,184,153,0,31
+01-07-2020,US,Illinois,Greene,9,9,0,0
+01-07-2020,US,Georgia,Greene,98,89,0,9
+01-07-2020,US,Arkansas,Greene,119,119,0,0
+01-07-2020,US,Alabama,Greene,186,179,0,7
+01-07-2020,US,West Virginia,Greenbrier,59,58,0,1
+01-07-2020,US,Wisconsin,Green Lake,33,33,0,0
+01-07-2020,US,Wisconsin,Green,89,88,0,1
+01-07-2020,US,Kentucky,Green,5,4,0,1
+01-07-2020,US,Nebraska,Greeley,3,3,0,0
+01-07-2020,US,Virginia,Grayson,86,84,0,2
+01-07-2020,US,Texas,Grayson,580,575,0,5
+01-07-2020,US,Kentucky,Grayson,138,128,0,10
+01-07-2020,US,Washington,Grays Harbor,25,25,0,0
+01-07-2020,US,Texas,Gray,117,113,0,4
+01-07-2020,US,Kansas,Gray,31,31,0,0
+01-07-2020,US,Kentucky,Graves,207,186,0,21
+01-07-2020,US,Michigan,Gratiot,92,79,0,13
+01-07-2020,US,North Carolina,Granville,813,792,0,21
+01-07-2020,US,Wisconsin,Grant,161,148,0,13
+01-07-2020,US,West Virginia,Grant,16,16,0,0
+01-07-2020,US,Washington,Grant,516,511,0,5
+01-07-2020,US,South Dakota,Grant,13,13,0,0
+01-07-2020,US,Oregon,Grant,1,1,0,0
+01-07-2020,US,Oklahoma,Grant,2,2,0,0
+01-07-2020,US,North Dakota,Grant,3,3,0,0
+01-07-2020,US,New Mexico,Grant,19,19,0,0
+01-07-2020,US,Nebraska,Grant,0,0,0,0
+01-07-2020,US,Minnesota,Grant,8,8,0,0
+01-07-2020,US,Louisiana,Grant,86,85,0,1
+01-07-2020,US,Kentucky,Grant,58,54,0,4
+01-07-2020,US,Kansas,Grant,48,47,0,1
+01-07-2020,US,Indiana,Grant,285,259,0,26
+01-07-2020,US,Arkansas,Grant,41,41,0,0
+01-07-2020,US,Montana,Granite,4,4,0,0
+01-07-2020,US,Michigan,Grand Traverse,49,44,0,5
+01-07-2020,US,Vermont,Grand Isle,10,10,0,0
+01-07-2020,US,North Dakota,Grand Forks,387,383,0,4
+01-07-2020,US,Colorado,Grand,21,20,0,1
+01-07-2020,US,Tennessee,Grainger,37,37,0,0
+01-07-2020,US,North Carolina,Graham,10,10,0,0
+01-07-2020,US,Arizona,Graham,108,107,0,1
+01-07-2020,US,New Hampshire,Grafton,86,85,0,1
+01-07-2020,US,Oklahoma,Grady,139,134,0,5
+01-07-2020,US,Georgia,Grady,208,204,0,4
+01-07-2020,US,Kansas,Gove,1,1,0,0
+01-07-2020,US,Nebraska,Gosper,13,13,0,0
+01-07-2020,US,Wyoming,Goshen,5,5,0,0
+01-07-2020,US,Georgia,Gordon,399,381,0,18
+01-07-2020,US,Idaho,Gooding,65,64,0,1
+01-07-2020,US,Minnesota,Goodhue,124,116,0,8
+01-07-2020,US,Virginia,Goochland,120,114,0,6
+01-07-2020,US,Texas,Gonzales,261,257,0,4
+01-07-2020,US,Texas,Goliad,14,14,0,0
+01-07-2020,US,Montana,Golden Valley,3,3,0,0
+01-07-2020,US,Michigan,Gogebic,7,6,0,1
+01-07-2020,US,Georgia,Glynn,839,833,0,6
+01-07-2020,US,Virginia,Gloucester,49,48,0,1
+01-07-2020,US,New Jersey,Gloucester,2611,2429,0,182
+01-07-2020,US,California,Glenn,115,115,0,0
+01-07-2020,US,Texas,Glasscock,5,5,0,0
+01-07-2020,US,Georgia,Glascock,7,7,0,0
+01-07-2020,US,Michigan,Gladwin,27,26,0,1
+01-07-2020,US,Florida,Glades,164,163,0,1
+01-07-2020,US,Montana,Glacier,18,18,0,0
+01-07-2020,US,Colorado,Gilpin,7,7,0,0
+01-07-2020,US,West Virginia,Gilmer,13,13,0,0
+01-07-2020,US,Georgia,Gilmer,189,187,0,2
+01-07-2020,US,Oregon,Gilliam,0,0,0,0
+01-07-2020,US,Texas,Gillespie,42,42,0,0
+01-07-2020,US,Virginia,Giles,15,15,0,0
+01-07-2020,US,Tennessee,Giles,50,49,0,1
+01-07-2020,US,Florida,Gilchrist,102,102,0,0
+01-07-2020,US,Arizona,Gila,309,303,0,6
+01-07-2020,US,Tennessee,Gibson,106,105,0,1
+01-07-2020,US,Indiana,Gibson,44,42,0,2
+01-07-2020,US,South Carolina,Georgetown,489,486,0,3
+01-07-2020,US,Mississippi,George,74,71,0,3
+01-07-2020,US,Missouri,Gentry,57,48,0,9
+01-07-2020,US,Alabama,Geneva,72,72,0,0
+01-07-2020,US,New York,Genesee,238,233,0,5
+01-07-2020,US,Michigan,Genesee,2743,2455,0,288
+01-07-2020,US,Idaho,Gem,26,26,0,0
+01-07-2020,US,Ohio,Geauga,390,352,0,38
+01-07-2020,US,Kansas,Geary,53,52,0,1
+01-07-2020,US,North Carolina,Gates,27,25,0,2
+01-07-2020,US,North Carolina,Gaston,1139,1127,0,12
+01-07-2020,US,Missouri,Gasconade,11,11,0,0
+01-07-2020,US,Texas,Garza,12,12,0,0
+01-07-2020,US,Oklahoma,Garvin,73,72,0,1
+01-07-2020,US,Maryland,Garrett,11,11,0,0
+01-07-2020,US,Kentucky,Garrard,24,24,0,0
+01-07-2020,US,Arkansas,Garland,253,252,0,1
+01-07-2020,US,Washington,Garfield,0,0,0,0
+01-07-2020,US,Oklahoma,Garfield,68,66,0,2
+01-07-2020,US,Nebraska,Garfield,1,1,0,0
+01-07-2020,US,Colorado,Garfield,300,298,0,2
+01-07-2020,US,Nebraska,Garden,4,4,0,0
+01-07-2020,US,Texas,Galveston,3293,3253,0,40
+01-07-2020,US,Ohio,Gallia,14,12,0,2
+01-07-2020,US,Montana,Gallatin,271,270,0,1
+01-07-2020,US,Kentucky,Gallatin,65,58,0,7
+01-07-2020,US,Illinois,Gallatin,2,2,0,0
+01-07-2020,US,Virginia,Galax,256,242,0,14
+01-07-2020,US,Texas,Gaines,16,16,0,0
+01-07-2020,US,Nebraska,Gage,52,48,0,4
+01-07-2020,US,Florida,Gadsden,389,382,0,7
+01-07-2020,US,Nebraska,Furnas,10,9,0,1
+01-07-2020,US,Pennsylvania,Fulton,18,17,0,1
+01-07-2020,US,Ohio,Fulton,57,53,0,4
+01-07-2020,US,New York,Fulton,257,233,0,24
+01-07-2020,US,Kentucky,Fulton,23,23,0,0
+01-07-2020,US,Indiana,Fulton,66,65,0,1
+01-07-2020,US,Illinois,Fulton,15,15,0,0
+01-07-2020,US,Georgia,Fulton,7277,6963,0,314
+01-07-2020,US,Arkansas,Fulton,15,15,0,0
+01-07-2020,US,Nebraska,Frontier,1,1,0,0
+01-07-2020,US,Texas,Frio,218,218,0,0
+01-07-2020,US,California,Fresno,5289,5214,0,75
+01-07-2020,US,Wyoming,Fremont,358,358,0,0
+01-07-2020,US,Iowa,Fremont,7,7,0,0
+01-07-2020,US,Idaho,Fremont,7,7,0,0
+01-07-2020,US,Colorado,Fremont,37,37,0,0
+01-07-2020,US,Texas,Freestone,29,29,0,0
+01-07-2020,US,Minnesota,Freeborn,286,286,0,0
+01-07-2020,US,Virginia,Fredericksburg,249,249,0,0
+01-07-2020,US,Virginia,Frederick,505,499,0,6
+01-07-2020,US,Maryland,Frederick,2493,2375,0,118
+01-07-2020,US,Virginia,Franklin City,52,50,0,2
+01-07-2020,US,Washington,Franklin,1800,1768,0,32
+01-07-2020,US,Virginia,Franklin,91,90,0,1
+01-07-2020,US,Vermont,Franklin,105,99,0,6
+01-07-2020,US,Texas,Franklin,41,41,0,0
+01-07-2020,US,Tennessee,Franklin,80,77,0,3
+01-07-2020,US,Pennsylvania,Franklin,940,896,0,44
+01-07-2020,US,Ohio,Franklin,9338,8984,0,354
+01-07-2020,US,North Carolina,Franklin,357,336,0,21
+01-07-2020,US,New York,Franklin,31,31,0,0
+01-07-2020,US,Nebraska,Franklin,6,6,0,0
+01-07-2020,US,Missouri,Franklin,204,186,0,18
+01-07-2020,US,Mississippi,Franklin,38,36,0,2
+01-07-2020,US,Massachusetts,Franklin,366,312,0,54
+01-07-2020,US,Maine,Franklin,41,40,0,1
+01-07-2020,US,Louisiana,Franklin,471,457,0,14
+01-07-2020,US,Kentucky,Franklin,138,134,0,4
+01-07-2020,US,Kansas,Franklin,77,77,0,0
+01-07-2020,US,Iowa,Franklin,78,78,0,0
+01-07-2020,US,Indiana,Franklin,124,116,0,8
+01-07-2020,US,Illinois,Franklin,22,22,0,0
+01-07-2020,US,Idaho,Franklin,25,25,0,0
+01-07-2020,US,Georgia,Franklin,197,196,0,1
+01-07-2020,US,Florida,Franklin,6,6,0,0
+01-07-2020,US,Arkansas,Franklin,21,21,0,0
+01-07-2020,US,Alabama,Franklin,867,854,0,13
+01-07-2020,US,Indiana,Fountain,29,27,0,2
+01-07-2020,US,North Dakota,Foster,2,2,0,0
+01-07-2020,US,Texas,Fort Bend,3782,3728,0,54
+01-07-2020,US,North Carolina,Forsyth,3077,3042,0,35
+01-07-2020,US,Georgia,Forsyth,851,836,0,15
+01-07-2020,US,Mississippi,Forrest,814,772,0,42
+01-07-2020,US,Wisconsin,Forest,39,36,0,3
+01-07-2020,US,Pennsylvania,Forest,7,7,0,0
+01-07-2020,US,Kansas,Ford,1947,1939,0,8
+01-07-2020,US,Illinois,Ford,33,32,0,1
+01-07-2020,US,Wisconsin,Fond du Lac,313,307,0,6
+01-07-2020,US,Virginia,Fluvanna,112,105,0,7
+01-07-2020,US,Virginia,Floyd,18,17,0,1
+01-07-2020,US,Texas,Floyd,31,30,0,1
+01-07-2020,US,Kentucky,Floyd,29,29,0,0
+01-07-2020,US,Iowa,Floyd,66,64,0,2
+01-07-2020,US,Indiana,Floyd,363,318,0,45
+01-07-2020,US,Georgia,Floyd,539,524,0,15
+01-07-2020,US,Wisconsin,Florence,3,3,0,0
+01-07-2020,US,South Carolina,Florence,1230,1177,0,53
+01-07-2020,US,Kentucky,Fleming,21,21,0,0
+01-07-2020,US,Montana,Flathead,58,56,0,2
+01-07-2020,US,Florida,Flagler,323,318,0,5
+01-07-2020,US,Texas,Fisher,5,4,0,1
+01-07-2020,US,Kansas,Finney,1574,1564,0,10
+01-07-2020,US,Nebraska,Fillmore,14,13,0,1
+01-07-2020,US,Minnesota,Fillmore,27,27,0,0
+01-07-2020,US,Washington,Ferry,1,1,0,0
+01-07-2020,US,Montana,Fergus,2,2,0,0
+01-07-2020,US,Tennessee,Fentress,18,18,0,0
+01-07-2020,US,Michigan,Federal Correctional Institution (FCI),183,178,0,5
+01-07-2020,US,West Virginia,Fayette,66,62,0,4
+01-07-2020,US,Texas,Fayette,90,88,0,2
+01-07-2020,US,Tennessee,Fayette,292,290,0,2
+01-07-2020,US,Pennsylvania,Fayette,117,113,0,4
+01-07-2020,US,Ohio,Fayette,46,46,0,0
+01-07-2020,US,Kentucky,Fayette,1467,1440,0,27
+01-07-2020,US,Iowa,Fayette,33,33,0,0
+01-07-2020,US,Indiana,Fayette,96,89,0,7
+01-07-2020,US,Illinois,Fayette,23,20,0,3
+01-07-2020,US,Georgia,Fayette,346,327,0,19
+01-07-2020,US,Alabama,Fayette,73,72,0,1
+01-07-2020,US,Virginia,Fauquier,420,413,0,7
+01-07-2020,US,Arkansas,Faulkner,492,489,0,3
+01-07-2020,US,South Dakota,Faulk,23,22,0,1
+01-07-2020,US,Minnesota,Faribault,53,53,0,0
+01-07-2020,US,Texas,Fannin,91,84,0,7
+01-07-2020,US,Georgia,Fannin,101,100,0,1
+01-07-2020,US,Virginia,Falls Church,52,44,0,8
+01-07-2020,US,Texas,Falls,31,31,0,0
+01-07-2020,US,South Dakota,Fall River,12,12,0,0
+01-07-2020,US,South Carolina,Fairfield,302,280,0,22
+01-07-2020,US,Ohio,Fairfield,503,492,0,11
+01-07-2020,US,Connecticut,Fairfield,16717,15341,0,1376
+01-07-2020,US,Virginia,Fairfax City,70,63,0,7
+01-07-2020,US,Virginia,Fairfax,13864,13376,0,488
+01-07-2020,US,Alaska,Fairbanks North Star,147,145,0,2
+01-07-2020,US,Georgia,Evans,25,25,0,0
+01-07-2020,US,Louisiana,Evangeline,201,200,0,1
+01-07-2020,US,Nevada,Eureka,1,1,0,0
+01-07-2020,US,Alabama,Etowah,648,635,0,13
+01-07-2020,US,Kentucky,Estill,4,4,0,0
+01-07-2020,US,Virginia,Essex,59,59,0,0
+01-07-2020,US,Vermont,Essex,3,3,0,0
+01-07-2020,US,New York,Essex,42,42,0,0
+01-07-2020,US,New Jersey,Essex,18871,16847,0,2024
+01-07-2020,US,Massachusetts,Essex,16088,14984,0,1104
+01-07-2020,US,Nevada,Esmeralda,0,0,0,0
+01-07-2020,US,Florida,Escambia,2046,2002,0,44
+01-07-2020,US,Alabama,Escambia,293,287,0,6
+01-07-2020,US,Pennsylvania,Erie,620,608,0,12
+01-07-2020,US,Ohio,Erie,229,217,0,12
+01-07-2020,US,New York,Erie,7337,6703,0,634
+01-07-2020,US,Texas,Erath,152,151,0,1
+01-07-2020,US,Virginia,Emporia,137,123,0,14
+01-07-2020,US,North Dakota,Emmons,4,3,0,1
+01-07-2020,US,Michigan,Emmet,29,27,0,2
+01-07-2020,US,Iowa,Emmet,75,75,0,0
+01-07-2020,US,Georgia,Emanuel,118,115,0,3
+01-07-2020,US,Idaho,Elmore,61,59,0,2
+01-07-2020,US,Alabama,Elmore,826,812,0,14
+01-07-2020,US,Kansas,Ellsworth,4,4,0,0
+01-07-2020,US,Texas,Ellis,862,843,0,19
+01-07-2020,US,Oklahoma,Ellis,1,1,0,0
+01-07-2020,US,Kansas,Ellis,21,21,0,0
+01-07-2020,US,Kentucky,Elliott,3,3,0,0
+01-07-2020,US,Nevada,Elko,125,124,0,1
+01-07-2020,US,Indiana,Elkhart,3085,3042,0,43
+01-07-2020,US,Pennsylvania,Elk,15,15,0,0
+01-07-2020,US,Kansas,Elk,1,1,0,0
+01-07-2020,US,Georgia,Elbert,106,106,0,0
+01-07-2020,US,Colorado,Elbert,57,55,0,2
+01-07-2020,US,Texas,El Paso,6124,5993,0,131
+01-07-2020,US,Colorado,El Paso,2431,2311,0,120
+01-07-2020,US,California,El Dorado,198,198,0,0
+01-07-2020,US,Illinois,Effingham,12,11,0,1
+01-07-2020,US,Georgia,Effingham,148,147,0,1
+01-07-2020,US,Texas,Edwards,2,2,0,0
+01-07-2020,US,Kansas,Edwards,7,7,0,0
+01-07-2020,US,Illinois,Edwards,2,2,0,0
+01-07-2020,US,South Dakota,Edmunds,7,7,0,0
+01-07-2020,US,Kentucky,Edmonson,75,64,0,11
+01-07-2020,US,South Carolina,Edgefield,83,80,0,3
+01-07-2020,US,North Carolina,Edgecombe,317,308,0,9
+01-07-2020,US,Illinois,Edgar,10,10,0,0
+01-07-2020,US,North Dakota,Eddy,5,5,0,0
+01-07-2020,US,New Mexico,Eddy,82,81,0,1
+01-07-2020,US,Texas,Ector,558,551,0,7
+01-07-2020,US,Georgia,Echols,185,185,0,0
+01-07-2020,US,Wisconsin,Eau Claire,240,239,0,1
+01-07-2020,US,Michigan,Eaton,331,324,0,7
+01-07-2020,US,Texas,Eastland,10,10,0,0
+01-07-2020,US,Louisiana,East Feliciana,300,267,0,33
+01-07-2020,US,Louisiana,East Carroll,445,444,0,1
+01-07-2020,US,Louisiana,East Baton Rouge,5350,5079,0,271
+01-07-2020,US,Georgia,Early,264,233,0,31
+01-07-2020,US,Colorado,Eagle,693,685,0,8
+01-07-2020,US,Tennessee,Dyer,225,224,0,1
+01-07-2020,US,Texas,Duval,50,50,0,0
+01-07-2020,US,Florida,Duval,6480,6413,0,67
+01-07-2020,US,New York,Dutchess,4213,4062,0,151
+01-07-2020,US,North Carolina,Durham,3752,3689,0,63
+01-07-2020,US,North Carolina,Duplin,1486,1458,0,28
+01-07-2020,US,Wisconsin,Dunn,38,38,0,0
+01-07-2020,US,North Dakota,Dunn,14,14,0,0
+01-07-2020,US,Missouri,Dunklin,92,89,0,3
+01-07-2020,US,Nebraska,Dundy,0,0,0,0
+01-07-2020,US,Massachusetts,Dukes and Nantucket,64,64,0,0
+01-07-2020,US,Iowa,Dubuque,539,517,0,22
+01-07-2020,US,Indiana,Dubois,260,254,0,6
+01-07-2020,US,Illinois,DuPage,9083,8611,0,472
+01-07-2020,US,Arkansas,Drew,65,63,0,2
+01-07-2020,US,Wisconsin,Douglas,30,30,0,0
+01-07-2020,US,Washington,Douglas,255,252,0,3
+01-07-2020,US,South Dakota,Douglas,4,4,0,0
+01-07-2020,US,Oregon,Douglas,42,42,0,0
+01-07-2020,US,Nevada,Douglas,69,69,0,0
+01-07-2020,US,Nebraska,Douglas,7146,7052,0,94
+01-07-2020,US,Missouri,Douglas,3,3,0,0
+01-07-2020,US,Minnesota,Douglas,61,61,0,0
+01-07-2020,US,Kansas,Douglas,190,190,0,0
+01-07-2020,US,Illinois,Douglas,52,52,0,0
+01-07-2020,US,Georgia,Douglas,971,935,0,36
+01-07-2020,US,Colorado,Douglas,964,912,0,52
+01-07-2020,US,Georgia,Dougherty,1914,1759,0,155
+01-07-2020,US,South Carolina,Dorchester,773,770,0,3
+01-07-2020,US,Maryland,Dorchester,188,183,0,5
+01-07-2020,US,Wisconsin,Door,43,40,0,3
+01-07-2020,US,Georgia,Dooly,210,198,0,12
+01-07-2020,US,Texas,Donley,27,27,0,0
+01-07-2020,US,Kansas,Doniphan,26,26,0,0
+01-07-2020,US,New Mexico,Dona Ana,957,948,0,9
+01-07-2020,US,Wisconsin,Dodge,461,456,0,5
+01-07-2020,US,Nebraska,Dodge,687,679,0,8
+01-07-2020,US,Minnesota,Dodge,81,81,0,0
+01-07-2020,US,Georgia,Dodge,104,102,0,2
+01-07-2020,US,Nebraska,Dixon,48,46,0,2
+01-07-2020,US,Florida,Dixie,69,65,0,4
+01-07-2020,US,North Dakota,Divide,1,1,0,0
+01-07-2020,US,District of Columbia,District of Columbia,10365,9812,0,553
+01-07-2020,US,Virginia,Dinwiddie,142,142,0,0
+01-07-2020,US,Texas,Dimmit,13,13,0,0
+01-07-2020,US,South Carolina,Dillon,307,297,0,10
+01-07-2020,US,Tennessee,Dickson,180,180,0,0
+01-07-2020,US,Michigan,Dickinson,7,5,0,2
+01-07-2020,US,Kansas,Dickinson,8,7,0,1
+01-07-2020,US,Iowa,Dickinson,249,247,0,2
+01-07-2020,US,North Dakota,Dickey,4,4,0,0
+01-07-2020,US,Virginia,Dickenson,4,4,0,0
+01-07-2020,US,Texas,Dickens,2,2,0,0
+01-07-2020,US,South Dakota,Dewey,5,5,0,0
+01-07-2020,US,Oklahoma,Dewey,5,5,0,0
+01-07-2020,US,South Dakota,Deuel,3,3,0,0
+01-07-2020,US,Nebraska,Deuel,0,0,0,0
+01-07-2020,US,Arkansas,Desha,47,46,0,1
+01-07-2020,US,Oregon,Deschutes,183,183,0,0
+01-07-2020,US,Iowa,Des Moines,85,82,0,3
+01-07-2020,US,Colorado,Denver,7149,6768,0,381
+01-07-2020,US,Texas,Denton,2952,2915,0,37
+01-07-2020,US,Missouri,Dent,3,3,0,0
+01-07-2020,US,Texas,Delta,6,6,0,0
+01-07-2020,US,Michigan,Delta,24,21,0,3
+01-07-2020,US,Colorado,Delta,84,83,0,1
+01-07-2020,US,Pennsylvania,Delaware,7230,6575,0,655
+01-07-2020,US,Oklahoma,Delaware,153,137,0,16
+01-07-2020,US,Ohio,Delaware,518,504,0,14
+01-07-2020,US,New York,Delaware,91,87,0,4
+01-07-2020,US,Iowa,Delaware,45,44,0,1
+01-07-2020,US,Indiana,Delaware,426,378,0,48
+01-07-2020,US,California,Del Norte,51,50,0,1
+01-07-2020,US,Ohio,Defiance,48,46,0,2
+01-07-2020,US,Montana,Deer Lodge,4,4,0,0
+01-07-2020,US,Tennessee,Decatur,21,21,0,0
+01-07-2020,US,Iowa,Decatur,10,10,0,0
+01-07-2020,US,Indiana,Decatur,246,214,0,32
+01-07-2020,US,Georgia,Decatur,253,245,0,8
+01-07-2020,US,Indiana,Dearborn,204,182,0,22
+01-07-2020,US,Texas,Deaf Smith,305,289,0,16
+01-07-2020,US,Texas,DeWitt,70,69,0,1
+01-07-2020,US,Mississippi,DeSoto,1373,1357,0,16
+01-07-2020,US,Florida,DeSoto,634,624,0,10
+01-07-2020,US,Tennessee,DeKalb,54,54,0,0
+01-07-2020,US,Missouri,DeKalb,11,11,0,0
+01-07-2020,US,Indiana,DeKalb,159,154,0,5
+01-07-2020,US,Illinois,DeKalb,558,540,0,18
+01-07-2020,US,Georgia,DeKalb,5959,5786,0,173
+01-07-2020,US,Alabama,DeKalb,656,651,0,5
+01-07-2020,US,Illinois,De Witt,6,6,0,0
+01-07-2020,US,Louisiana,De Soto,349,331,0,18
+01-07-2020,US,New Mexico,De Baca,0,0,0,0
+01-07-2020,US,South Dakota,Day,16,16,0,0
+01-07-2020,US,Texas,Dawson,52,51,0,1
+01-07-2020,US,Nebraska,Dawson,859,851,0,8
+01-07-2020,US,Montana,Dawson,8,8,0,0
+01-07-2020,US,Georgia,Dawson,144,141,0,3
+01-07-2020,US,Nebraska,Dawes,4,4,0,0
+01-07-2020,US,South Dakota,Davison,41,41,0,0
+01-07-2020,US,Utah,Davis,1218,1213,0,5
+01-07-2020,US,Iowa,Davis,38,37,0,1
+01-07-2020,US,Missouri,Daviess,8,8,0,0
+01-07-2020,US,Kentucky,Daviess,435,427,0,8
+01-07-2020,US,Indiana,Daviess,139,123,0,16
+01-07-2020,US,North Carolina,Davie,214,210,0,4
+01-07-2020,US,Tennessee,Davidson,9769,9655,0,114
+01-07-2020,US,North Carolina,Davidson,989,974,0,15
+01-07-2020,US,Pennsylvania,Dauphin,2059,1924,0,135
+01-07-2020,US,South Carolina,Darlington,452,438,0,14
+01-07-2020,US,Ohio,Darke,236,218,0,18
+01-07-2020,US,North Carolina,Dare,59,58,0,1
+01-07-2020,US,Virginia,Danville,87,85,0,2
+01-07-2020,US,Wisconsin,Dane,1953,1921,0,32
+01-07-2020,US,Texas,Dallas,21882,21430,0,452
+01-07-2020,US,Missouri,Dallas,12,11,0,1
+01-07-2020,US,Iowa,Dallas,1194,1165,0,29
+01-07-2020,US,Arkansas,Dallas,10,10,0,0
+01-07-2020,US,Alabama,Dallas,831,823,0,8
+01-07-2020,US,Texas,Dallam,85,84,0,1
+01-07-2020,US,Alabama,Dale,261,261,0,0
+01-07-2020,US,Nebraska,Dakota,1763,1732,0,31
+01-07-2020,US,Minnesota,Dakota,2218,2129,0,89
+01-07-2020,US,Missouri,Dade,1,1,0,0
+01-07-2020,US,Georgia,Dade,67,66,0,1
+01-07-2020,US,Ohio,Cuyahoga,7013,6667,0,346
+01-07-2020,US,South Dakota,Custer,9,9,0,0
+01-07-2020,US,Oklahoma,Custer,55,55,0,0
+01-07-2020,US,Nebraska,Custer,40,36,0,4
+01-07-2020,US,Montana,Custer,29,29,0,0
+01-07-2020,US,Idaho,Custer,4,4,0,0
+01-07-2020,US,Colorado,Custer,2,2,0,0
+01-07-2020,US,Oregon,Curry,7,7,0,0
+01-07-2020,US,New Mexico,Curry,165,165,0,0
+01-07-2020,US,North Carolina,Currituck,19,19,0,0
+01-07-2020,US,Nebraska,Cuming,35,34,0,1
+01-07-2020,US,Virginia,Cumberland,52,52,0,0
+01-07-2020,US,Tennessee,Cumberland,173,170,0,3
+01-07-2020,US,Pennsylvania,Cumberland,856,792,0,64
+01-07-2020,US,North Carolina,Cumberland,1218,1177,0,41
+01-07-2020,US,New Jersey,Cumberland,2999,2854,0,145
+01-07-2020,US,Maine,Cumberland,1733,1673,0,60
+01-07-2020,US,Kentucky,Cumberland,6,6,0,0
+01-07-2020,US,Illinois,Cumberland,12,12,0,0
+01-07-2020,US,Virginia,Culpeper,811,801,0,10
+01-07-2020,US,Alabama,Cullman,417,414,0,3
+01-07-2020,US,Texas,Culberson,3,3,0,0
+01-07-2020,US,Colorado,Crowley,70,69,0,1
+01-07-2020,US,Minnesota,Crow Wing,102,90,0,12
+01-07-2020,US,Arkansas,Cross,86,85,0,1
+01-07-2020,US,Texas,Crosby,25,24,0,1
+01-07-2020,US,Wyoming,Crook,7,7,0,0
+01-07-2020,US,Oregon,Crook,10,10,0,0
+01-07-2020,US,Texas,Crockett,10,10,0,0
+01-07-2020,US,Tennessee,Crockett,31,28,0,3
+01-07-2020,US,Kentucky,Crittenden,9,8,0,1
+01-07-2020,US,Arkansas,Crittenden,749,736,0,13
+01-07-2020,US,Georgia,Crisp,274,262,0,12
+01-07-2020,US,Alabama,Crenshaw,132,129,0,3
+01-07-2020,US,Oklahoma,Creek,147,140,0,7
+01-07-2020,US,Wisconsin,Crawford,34,34,0,0
+01-07-2020,US,Pennsylvania,Crawford,57,57,0,0
+01-07-2020,US,Ohio,Crawford,135,129,0,6
+01-07-2020,US,Missouri,Crawford,11,11,0,0
+01-07-2020,US,Michigan,Crawford,70,65,0,5
+01-07-2020,US,Kansas,Crawford,262,261,0,1
+01-07-2020,US,Iowa,Crawford,667,665,0,2
+01-07-2020,US,Indiana,Crawford,29,29,0,0
+01-07-2020,US,Illinois,Crawford,18,18,0,0
+01-07-2020,US,Georgia,Crawford,45,45,0,0
+01-07-2020,US,Arkansas,Crawford,166,165,0,1
+01-07-2020,US,North Carolina,Craven,372,366,0,6
+01-07-2020,US,Texas,Crane,57,48,0,9
+01-07-2020,US,Arkansas,Craighead,453,446,0,7
+01-07-2020,US,Virginia,Craig,7,7,0,0
+01-07-2020,US,Oklahoma,Craig,22,22,0,0
+01-07-2020,US,Washington,Cowlitz,200,200,0,0
+01-07-2020,US,Kansas,Cowley,71,70,0,1
+01-07-2020,US,Georgia,Coweta,684,668,0,16
+01-07-2020,US,Virginia,Covington,5,5,0,0
+01-07-2020,US,Mississippi,Covington,302,297,0,5
+01-07-2020,US,Alabama,Covington,335,328,0,7
+01-07-2020,US,Minnesota,Cottonwood,134,134,0,0
+01-07-2020,US,Oklahoma,Cotton,6,4,0,2
+01-07-2020,US,Texas,Cottle,4,3,0,1
+01-07-2020,US,Colorado,Costilla,21,21,0,0
+01-07-2020,US,Ohio,Coshocton,81,79,0,2
+01-07-2020,US,Texas,Coryell,331,329,0,2
+01-07-2020,US,New York,Cortland,47,47,0,0
+01-07-2020,US,South Dakota,Corson,18,18,0,0
+01-07-2020,US,Mississippi,Copiah,566,551,0,15
+01-07-2020,US,Alabama,Coosa,57,56,0,1
+01-07-2020,US,Oregon,Coos,41,41,0,0
+01-07-2020,US,New Hampshire,Coos,7,7,0,0
+01-07-2020,US,Missouri,Cooper,14,14,0,0
+01-07-2020,US,Texas,Cooke,43,43,0,0
+01-07-2020,US,Minnesota,Cook,1,1,0,0
+01-07-2020,US,Illinois,Cook,90911,86330,0,4581
+01-07-2020,US,Georgia,Cook,147,146,0,1
+01-07-2020,US,Arkansas,Conway,60,57,0,3
+01-07-2020,US,Wyoming,Converse,26,26,0,0
+01-07-2020,US,California,Contra Costa,3248,3171,0,77
+01-07-2020,US,Colorado,Conejos,13,13,0,0
+01-07-2020,US,Alabama,Conecuh,187,183,0,4
+01-07-2020,US,Louisiana,Concordia,111,105,0,6
+01-07-2020,US,Texas,Concho,9,9,0,0
+01-07-2020,US,Texas,Comanche,31,30,0,1
+01-07-2020,US,Oklahoma,Comanche,408,403,0,5
+01-07-2020,US,Kansas,Comanche,2,2,0,0
+01-07-2020,US,Texas,Comal,525,518,0,7
+01-07-2020,US,California,Colusa,59,59,0,0
+01-07-2020,US,North Carolina,Columbus,535,496,0,39
+01-07-2020,US,Ohio,Columbiana,1209,1143,0,66
+01-07-2020,US,Wisconsin,Columbia,88,87,0,1
+01-07-2020,US,Washington,Columbia,8,8,0,0
+01-07-2020,US,Pennsylvania,Columbia,403,369,0,34
+01-07-2020,US,Oregon,Columbia,30,30,0,0
+01-07-2020,US,New York,Columbia,466,429,0,37
+01-07-2020,US,Georgia,Columbia,505,496,0,9
+01-07-2020,US,Florida,Columbia,296,293,0,3
+01-07-2020,US,Arkansas,Columbia,84,80,0,4
+01-07-2020,US,Georgia,Colquitt,992,974,0,18
+01-07-2020,US,Texas,Colorado,93,93,0,0
+01-07-2020,US,Virginia,Colonial Heights,144,127,0,17
+01-07-2020,US,Texas,Collingsworth,6,6,0,0
+01-07-2020,US,Texas,Collin,2997,2955,0,42
+01-07-2020,US,Florida,Collier,4376,4295,0,81
+01-07-2020,US,South Carolina,Colleton,333,312,0,21
+01-07-2020,US,New Mexico,Colfax,9,8,0,1
+01-07-2020,US,Nebraska,Colfax,670,666,0,4
+01-07-2020,US,Illinois,Coles,170,153,0,17
+01-07-2020,US,Texas,Coleman,3,3,0,0
+01-07-2020,US,Missouri,Cole,72,70,0,2
+01-07-2020,US,Alabama,Colbert,383,378,0,5
+01-07-2020,US,Texas,Coke,5,4,0,1
+01-07-2020,US,Kansas,Coffey,53,45,0,8
+01-07-2020,US,Tennessee,Coffee,109,109,0,0
+01-07-2020,US,Georgia,Coffee,564,547,0,17
+01-07-2020,US,Alabama,Coffee,355,353,0,2
+01-07-2020,US,South Dakota,Codington,70,70,0,0
+01-07-2020,US,Arizona,Coconino,1941,1847,0,94
+01-07-2020,US,Tennessee,Cocke,70,70,0,0
+01-07-2020,US,Texas,Cochran,1,1,0,0
+01-07-2020,US,Arizona,Cochise,657,645,0,12
+01-07-2020,US,Georgia,Cobb,5081,4836,0,245
+01-07-2020,US,Oklahoma,Coal,8,8,0,0
+01-07-2020,US,Mississippi,Coahoma,186,180,0,6
+01-07-2020,US,Kansas,Cloud,18,18,0,0
+01-07-2020,US,Pennsylvania,Clinton,80,76,0,4
+01-07-2020,US,Ohio,Clinton,62,61,0,1
+01-07-2020,US,New York,Clinton,101,97,0,4
+01-07-2020,US,Missouri,Clinton,23,23,0,0
+01-07-2020,US,Michigan,Clinton,226,214,0,12
+01-07-2020,US,Kentucky,Clinton,5,5,0,0
+01-07-2020,US,Iowa,Clinton,99,98,0,1
+01-07-2020,US,Indiana,Clinton,279,277,0,2
+01-07-2020,US,Illinois,Clinton,237,220,0,17
+01-07-2020,US,Georgia,Clinch,108,105,0,3
+01-07-2020,US,Oklahoma,Cleveland,911,871,0,40
+01-07-2020,US,North Carolina,Cleveland,315,311,0,4
+01-07-2020,US,Arkansas,Cleveland,26,26,0,0
+01-07-2020,US,Ohio,Clermont,356,351,0,5
+01-07-2020,US,Arkansas,Cleburne,92,88,0,4
+01-07-2020,US,Alabama,Cleburne,29,28,0,1
+01-07-2020,US,Minnesota,Clearwater,7,7,0,0
+01-07-2020,US,Idaho,Clearwater,1,1,0,0
+01-07-2020,US,Pennsylvania,Clearfield,72,72,0,0
+01-07-2020,US,Colorado,Clear Creek,19,18,0,1
+01-07-2020,US,Iowa,Clayton,39,36,0,3
+01-07-2020,US,Georgia,Clayton,2002,1923,0,79
+01-07-2020,US,West Virginia,Clay,10,9,0,1
+01-07-2020,US,Texas,Clay,8,8,0,0
+01-07-2020,US,Tennessee,Clay,16,16,0,0
+01-07-2020,US,South Dakota,Clay,83,83,0,0
+01-07-2020,US,North Carolina,Clay,12,12,0,0
+01-07-2020,US,Nebraska,Clay,27,27,0,0
+01-07-2020,US,Missouri,Clay,414,404,0,10
+01-07-2020,US,Mississippi,Clay,242,232,0,10
+01-07-2020,US,Minnesota,Clay,576,539,0,37
+01-07-2020,US,Kentucky,Clay,62,59,0,3
+01-07-2020,US,Kansas,Clay,7,5,0,2
+01-07-2020,US,Iowa,Clay,126,126,0,0
+01-07-2020,US,Indiana,Clay,59,55,0,4
+01-07-2020,US,Illinois,Clay,2,2,0,0
+01-07-2020,US,Georgia,Clay,57,55,0,2
+01-07-2020,US,Florida,Clay,729,695,0,34
+01-07-2020,US,Arkansas,Clay,59,56,0,3
+01-07-2020,US,Alabama,Clay,58,56,0,2
+01-07-2020,US,Oregon,Clatsop,49,49,0,0
+01-07-2020,US,Virginia,Clarke,51,51,0,0
+01-07-2020,US,Mississippi,Clarke,201,177,0,24
+01-07-2020,US,Iowa,Clarke,126,124,0,2
+01-07-2020,US,Georgia,Clarke,574,559,0,15
+01-07-2020,US,Alabama,Clarke,258,253,0,5
+01-07-2020,US,Wisconsin,Clark,77,71,0,6
+01-07-2020,US,Washington,Clark,758,725,0,33
+01-07-2020,US,South Dakota,Clark,15,15,0,0
+01-07-2020,US,Ohio,Clark,739,728,0,11
+01-07-2020,US,Nevada,Clark,15604,15184,0,420
+01-07-2020,US,Missouri,Clark,2,2,0,0
+01-07-2020,US,Kentucky,Clark,98,93,0,5
+01-07-2020,US,Kansas,Clark,34,33,0,1
+01-07-2020,US,Indiana,Clark,622,578,0,44
+01-07-2020,US,Illinois,Clark,14,14,0,0
+01-07-2020,US,Arkansas,Clark,57,57,0,0
+01-07-2020,US,Pennsylvania,Clarion,35,33,0,2
+01-07-2020,US,South Carolina,Clarendon,418,376,0,42
+01-07-2020,US,Michigan,Clare,28,25,0,3
+01-07-2020,US,Washington,Clallam,41,41,0,0
+01-07-2020,US,Tennessee,Claiborne,28,28,0,0
+01-07-2020,US,Mississippi,Claiborne,236,226,0,10
+01-07-2020,US,Louisiana,Claiborne,120,110,0,10
+01-07-2020,US,Oregon,Clackamas,751,727,0,24
+01-07-2020,US,Florida,Citrus,323,310,0,13
+01-07-2020,US,Oklahoma,Cimarron,1,1,0,0
+01-07-2020,US,New Mexico,Cibola,212,198,0,14
+01-07-2020,US,Nevada,Churchill,12,11,0,1
+01-07-2020,US,Missouri,Christian,40,40,0,0
+01-07-2020,US,Kentucky,Christian,195,191,0,4
+01-07-2020,US,Illinois,Christian,43,39,0,4
+01-07-2020,US,North Carolina,Chowan,24,24,0,0
+01-07-2020,US,Oklahoma,Choctaw,112,111,0,1
+01-07-2020,US,Mississippi,Choctaw,71,67,0,4
+01-07-2020,US,Alabama,Choctaw,192,180,0,12
+01-07-2020,US,Vermont,Chittenden,608,569,0,39
+01-07-2020,US,Minnesota,Chisago,95,94,0,1
+01-07-2020,US,Wisconsin,Chippewa,88,88,0,0
+01-07-2020,US,Minnesota,Chippewa,76,75,0,1
+01-07-2020,US,Michigan,Chippewa,11,11,0,0
+01-07-2020,US,Alabama,Chilton,221,219,0,2
+01-07-2020,US,Texas,Childress,7,7,0,0
+01-07-2020,US,Arkansas,Chicot,139,136,0,3
+01-07-2020,US,Mississippi,Chickasaw,259,241,0,18
+01-07-2020,US,Iowa,Chickasaw,27,27,0,0
+01-07-2020,US,Nebraska,Cheyenne,19,19,0,0
+01-07-2020,US,Kansas,Cheyenne,2,2,0,0
+01-07-2020,US,Colorado,Cheyenne,5,5,0,0
+01-07-2020,US,Virginia,Chesterfield,2914,2861,0,53
+01-07-2020,US,South Carolina,Chesterfield,373,359,0,14
+01-07-2020,US,Tennessee,Chester,23,23,0,0
+01-07-2020,US,South Carolina,Chester,189,188,0,1
+01-07-2020,US,Pennsylvania,Chester,3791,3455,0,336
+01-07-2020,US,New Hampshire,Cheshire,72,70,0,2
+01-07-2020,US,Virginia,Chesapeake,925,905,0,20
+01-07-2020,US,Nebraska,Cherry,1,1,0,0
+01-07-2020,US,Texas,Cherokee,147,145,0,2
+01-07-2020,US,South Carolina,Cherokee,158,150,0,8
+01-07-2020,US,Oklahoma,Cherokee,79,78,0,1
+01-07-2020,US,North Carolina,Cherokee,36,35,0,1
+01-07-2020,US,Kansas,Cherokee,34,34,0,0
+01-07-2020,US,Iowa,Cherokee,73,73,0,0
+01-07-2020,US,Georgia,Cherokee,1348,1305,0,43
+01-07-2020,US,Alabama,Cherokee,82,75,0,7
+01-07-2020,US,New York,Chenango,146,141,0,5
+01-07-2020,US,New York,Chemung,144,142,0,2
+01-07-2020,US,Washington,Chelan,373,367,0,6
+01-07-2020,US,Michigan,Cheboygan,27,25,0,2
+01-07-2020,US,Tennessee,Cheatham,214,213,0,1
+01-07-2020,US,New Mexico,Chaves,95,93,0,2
+01-07-2020,US,New York,Chautauqua,127,120,0,7
+01-07-2020,US,Kansas,Chautauqua,4,4,0,0
+01-07-2020,US,Georgia,Chattooga,62,60,0,2
+01-07-2020,US,Georgia,Chattahoochee,413,413,0,0
+01-07-2020,US,North Carolina,Chatham,956,913,0,43
+01-07-2020,US,Georgia,Chatham,1379,1342,0,37
+01-07-2020,US,Nebraska,Chase,1,1,0,0
+01-07-2020,US,Kansas,Chase,4,4,0,0
+01-07-2020,US,Georgia,Charlton,56,54,0,2
+01-07-2020,US,Virginia,Charlottesville,216,212,0,4
+01-07-2020,US,Virginia,Charlotte,32,32,0,0
+01-07-2020,US,Florida,Charlotte,793,717,0,76
+01-07-2020,US,Michigan,Charlevoix,27,25,0,2
+01-07-2020,US,South Carolina,Charleston,4289,4256,0,33
+01-07-2020,US,South Dakota,Charles Mix,85,85,0,0
+01-07-2020,US,Virginia,Charles City,39,36,0,3
+01-07-2020,US,Maryland,Charles,1399,1313,0,86
+01-07-2020,US,Missouri,Chariton,6,6,0,0
+01-07-2020,US,Ohio,Champaign,38,37,0,1
+01-07-2020,US,Illinois,Champaign,880,868,0,12
+01-07-2020,US,Texas,Chambers,308,306,0,2
+01-07-2020,US,Alabama,Chambers,609,582,0,27
+01-07-2020,US,Colorado,Chaffee,77,58,0,19
+01-07-2020,US,Iowa,Cerro Gordo,105,104,0,1
+01-07-2020,US,Pennsylvania,Centre,205,198,0,7
+01-07-2020,US,Utah,Central Utah,173,173,0,0
+01-07-2020,US,Nebraska,Cedar,17,17,0,0
+01-07-2020,US,Missouri,Cedar,9,9,0,0
+01-07-2020,US,Iowa,Cedar,77,76,0,1
+01-07-2020,US,Maryland,Cecil,480,451,0,29
+01-07-2020,US,New York,Cayuga,119,117,0,2
+01-07-2020,US,North Dakota,Cavalier,2,2,0,0
+01-07-2020,US,New York,Cattaraugus,123,117,0,6
+01-07-2020,US,New Mexico,Catron,2,1,0,1
+01-07-2020,US,Georgia,Catoosa,314,306,0,8
+01-07-2020,US,North Carolina,Catawba,825,811,0,14
+01-07-2020,US,Louisiana,Catahoula,190,187,0,3
+01-07-2020,US,North Carolina,Caswell,135,134,0,1
+01-07-2020,US,Texas,Castro,87,86,0,1
+01-07-2020,US,Idaho,Cassia,248,247,0,1
+01-07-2020,US,Texas,Cass,41,39,0,2
+01-07-2020,US,North Dakota,Cass,2260,2194,0,66
+01-07-2020,US,Nebraska,Cass,67,66,0,1
+01-07-2020,US,Missouri,Cass,125,117,0,8
+01-07-2020,US,Minnesota,Cass,12,10,0,2
+01-07-2020,US,Michigan,Cass,149,144,0,5
+01-07-2020,US,Iowa,Cass,17,17,0,0
+01-07-2020,US,Indiana,Cass,1636,1627,0,9
+01-07-2020,US,Illinois,Cass,130,128,0,2
+01-07-2020,US,Kentucky,Casey,19,19,0,0
+01-07-2020,US,Montana,Cascade,33,31,0,2
+01-07-2020,US,Minnesota,Carver,348,347,0,1
+01-07-2020,US,North Carolina,Carteret,94,91,0,3
+01-07-2020,US,Tennessee,Carter,56,55,0,1
+01-07-2020,US,Oklahoma,Carter,95,94,0,1
+01-07-2020,US,Missouri,Carter,6,5,0,1
+01-07-2020,US,Kentucky,Carter,25,25,0,0
+01-07-2020,US,Nevada,Carson City,155,150,0,5
+01-07-2020,US,Texas,Carson,6,6,0,0
+01-07-2020,US,Virginia,Carroll,221,213,0,8
+01-07-2020,US,Tennessee,Carroll,39,38,0,1
+01-07-2020,US,Ohio,Carroll,51,47,0,4
+01-07-2020,US,New Hampshire,Carroll,54,54,0,0
+01-07-2020,US,Missouri,Carroll,11,11,0,0
+01-07-2020,US,Mississippi,Carroll,160,149,0,11
+01-07-2020,US,Maryland,Carroll,1136,1024,0,112
+01-07-2020,US,Kentucky,Carroll,37,37,0,0
+01-07-2020,US,Iowa,Carroll,86,85,0,1
+01-07-2020,US,Indiana,Carroll,109,107,0,2
+01-07-2020,US,Illinois,Carroll,21,19,0,2
+01-07-2020,US,Georgia,Carroll,730,691,0,39
+01-07-2020,US,Arkansas,Carroll,168,163,0,5
+01-07-2020,US,Virginia,Caroline,125,121,0,4
+01-07-2020,US,Maryland,Caroline,320,317,0,3
+01-07-2020,US,Minnesota,Carlton,83,83,0,0
+01-07-2020,US,Kentucky,Carlisle,5,4,0,1
+01-07-2020,US,Idaho,Caribou,11,11,0,0
+01-07-2020,US,Wyoming,Carbon,23,23,0,0
+01-07-2020,US,Pennsylvania,Carbon,280,254,0,26
+01-07-2020,US,Montana,Carbon,23,23,0,0
+01-07-2020,US,New Jersey,Cape May,804,731,0,73
+01-07-2020,US,Missouri,Cape Girardeau,141,138,0,3
+01-07-2020,US,Idaho,Canyon,900,894,0,6
+01-07-2020,US,Tennessee,Cannon,31,31,0,0
+01-07-2020,US,Georgia,Candler,43,43,0,0
+01-07-2020,US,Oklahoma,Canadian,289,286,0,3
+01-07-2020,US,Wyoming,Campbell,56,56,0,0
+01-07-2020,US,Virginia,Campbell,45,44,0,1
+01-07-2020,US,Tennessee,Campbell,39,38,0,1
+01-07-2020,US,Kentucky,Campbell,262,249,0,13
+01-07-2020,US,Texas,Camp,118,117,0,1
+01-07-2020,US,Texas,Cameron,2399,2344,0,55
+01-07-2020,US,Pennsylvania,Cameron,3,3,0,0
+01-07-2020,US,Louisiana,Cameron,53,53,0,0
+01-07-2020,US,North Carolina,Camden,29,29,0,0
+01-07-2020,US,New Jersey,Camden,7399,6906,0,493
+01-07-2020,US,Missouri,Camden,60,59,0,1
+01-07-2020,US,Georgia,Camden,135,133,0,2
+01-07-2020,US,Pennsylvania,Cambria,83,80,0,3
+01-07-2020,US,Idaho,Camas,1,1,0,0
+01-07-2020,US,Maryland,Calvert,415,388,0,27
+01-07-2020,US,Wisconsin,Calumet,111,109,0,2
+01-07-2020,US,Kentucky,Calloway,82,81,0,1
+01-07-2020,US,Missouri,Callaway,44,43,0,1
+01-07-2020,US,Texas,Callahan,17,15,0,2
+01-07-2020,US,West Virginia,Calhoun,2,2,0,0
+01-07-2020,US,Texas,Calhoun,90,87,0,3
+01-07-2020,US,South Carolina,Calhoun,99,97,0,2
+01-07-2020,US,Mississippi,Calhoun,124,120,0,4
+01-07-2020,US,Michigan,Calhoun,539,506,0,33
+01-07-2020,US,Iowa,Calhoun,47,45,0,2
+01-07-2020,US,Illinois,Calhoun,1,1,0,0
+01-07-2020,US,Georgia,Calhoun,163,158,0,5
+01-07-2020,US,Florida,Calhoun,77,71,0,6
+01-07-2020,US,Alabama,Calhoun,288,283,0,5
+01-07-2020,US,Vermont,Caledonia,19,19,0,0
+01-07-2020,US,Texas,Caldwell,346,344,0,2
+01-07-2020,US,North Carolina,Caldwell,434,430,0,4
+01-07-2020,US,Missouri,Caldwell,9,9,0,0
+01-07-2020,US,Louisiana,Caldwell,105,104,0,1
+01-07-2020,US,Kentucky,Caldwell,15,15,0,0
+01-07-2020,US,Louisiana,Calcasieu,1729,1670,0,59
+01-07-2020,US,California,Calaveras,40,40,0,0
+01-07-2020,US,Oklahoma,Caddo,189,178,0,11
+01-07-2020,US,Louisiana,Caddo,3418,3183,0,235
+01-07-2020,US,West Virginia,Cabell,130,130,0,0
+01-07-2020,US,North Carolina,Cabarrus,1164,1131,0,33
+01-07-2020,US,Georgia,Butts,276,243,0,33
+01-07-2020,US,South Dakota,Butte,0,0,0,0
+01-07-2020,US,California,Butte,189,187,0,2
+01-07-2020,US,Pennsylvania,Butler,311,298,0,13
+01-07-2020,US,Ohio,Butler,1448,1397,0,51
+01-07-2020,US,Nebraska,Butler,51,51,0,0
+01-07-2020,US,Missouri,Butler,75,75,0,0
+01-07-2020,US,Kentucky,Butler,257,243,0,14
+01-07-2020,US,Kansas,Butler,56,56,0,0
+01-07-2020,US,Iowa,Butler,47,45,0,2
+01-07-2020,US,Alabama,Butler,602,575,0,27
+01-07-2020,US,Nebraska,Burt,14,14,0,0
+01-07-2020,US,Wisconsin,Burnett,3,2,0,1
+01-07-2020,US,Texas,Burnet,135,132,0,3
+01-07-2020,US,New Jersey,Burlington,5211,4783,0,428
+01-07-2020,US,Texas,Burleson,83,83,0,0
+01-07-2020,US,North Dakota,Burleigh,267,267,0,0
+01-07-2020,US,North Dakota,Burke,5,5,0,0
+01-07-2020,US,North Carolina,Burke,1042,1022,0,20
+01-07-2020,US,Georgia,Burke,146,139,0,7
+01-07-2020,US,Illinois,Bureau,29,27,0,2
+01-07-2020,US,North Carolina,Buncombe,603,563,0,40
+01-07-2020,US,Alabama,Bullock,358,349,0,9
+01-07-2020,US,Georgia,Bulloch,391,387,0,4
+01-07-2020,US,Kentucky,Bullitt,151,147,0,4
+01-07-2020,US,Wisconsin,Buffalo,8,6,0,2
+01-07-2020,US,South Dakota,Buffalo,71,69,0,2
+01-07-2020,US,Nebraska,Buffalo,189,188,0,1
+01-07-2020,US,Virginia,Buena Vista,16,16,0,0
+01-07-2020,US,Iowa,Buena Vista,1697,1686,0,11
+01-07-2020,US,Pennsylvania,Bucks,5777,5212,0,565
+01-07-2020,US,Virginia,Buckingham,559,555,0,4
+01-07-2020,US,Virginia,Buchanan,31,31,0,0
+01-07-2020,US,Missouri,Buchanan,838,835,0,3
+01-07-2020,US,Iowa,Buchanan,46,45,0,1
+01-07-2020,US,Oklahoma,Bryan,100,99,0,1
+01-07-2020,US,Georgia,Bryan,134,129,0,5
+01-07-2020,US,Virginia,Brunswick,106,105,0,1
+01-07-2020,US,North Carolina,Brunswick,546,540,0,6
+01-07-2020,US,South Dakota,Brule,24,24,0,0
+01-07-2020,US,Wisconsin,Brown,2916,2874,0,42
+01-07-2020,US,Texas,Brown,77,67,0,10
+01-07-2020,US,South Dakota,Brown,342,340,0,2
+01-07-2020,US,Ohio,Brown,53,52,0,1
+01-07-2020,US,Nebraska,Brown,0,0,0,0
+01-07-2020,US,Minnesota,Brown,31,29,0,2
+01-07-2020,US,Kansas,Brown,14,14,0,0
+01-07-2020,US,Indiana,Brown,38,37,0,1
+01-07-2020,US,Illinois,Brown,10,10,0,0
+01-07-2020,US,Florida,Broward,16155,15770,0,385
+01-07-2020,US,Colorado,Broomfield,301,271,0,30
+01-07-2020,US,New York,Broome,722,664,0,58
+01-07-2020,US,Texas,Brooks,3,3,0,0
+01-07-2020,US,Georgia,Brooks,158,147,0,11
+01-07-2020,US,South Dakota,Brookings,65,65,0,0
+01-07-2020,US,West Virginia,Brooke,9,9,0,0
+01-07-2020,US,Montana,Broadwater,5,5,0,0
+01-07-2020,US,Virginia,Bristol,4,4,0,0
+01-07-2020,US,Rhode Island,Bristol,253,238,0,15
+01-07-2020,US,Massachusetts,Bristol,8225,7651,0,574
+01-07-2020,US,Texas,Briscoe,3,3,0,0
+01-07-2020,US,Texas,Brewster,136,135,0,1
+01-07-2020,US,Florida,Brevard,1962,1945,0,17
+01-07-2020,US,Iowa,Bremer,88,82,0,6
+01-07-2020,US,Kentucky,Breckinridge,24,22,0,2
+01-07-2020,US,Kentucky,Breathitt,8,8,0,0
+01-07-2020,US,Texas,Brazos,2127,2096,0,31
+01-07-2020,US,Texas,Brazoria,2336,2315,0,21
+01-07-2020,US,West Virginia,Braxton,3,3,0,0
+01-07-2020,US,Georgia,Brantley,96,94,0,2
+01-07-2020,US,Michigan,Branch,257,255,0,2
+01-07-2020,US,Tennessee,Bradley,580,577,0,3
+01-07-2020,US,Arkansas,Bradley,52,50,0,2
+01-07-2020,US,Pennsylvania,Bradford,58,55,0,3
+01-07-2020,US,Florida,Bradford,84,82,0,2
+01-07-2020,US,Kentucky,Bracken,17,17,0,0
+01-07-2020,US,Kentucky,Boyle,39,39,0,0
+01-07-2020,US,Nebraska,Boyd,1,1,0,0
+01-07-2020,US,Kentucky,Boyd,62,59,0,3
+01-07-2020,US,Nebraska,Box Butte,3,3,0,0
+01-07-2020,US,North Dakota,Bowman,1,1,0,0
+01-07-2020,US,Texas,Bowie,438,427,0,11
+01-07-2020,US,Kentucky,Bourbon,32,31,0,1
+01-07-2020,US,Kansas,Bourbon,28,27,0,1
+01-07-2020,US,Idaho,Boundary,1,1,0,0
+01-07-2020,US,Colorado,Boulder,1401,1329,0,72
+01-07-2020,US,North Dakota,Bottineau,5,5,0,0
+01-07-2020,US,Virginia,Botetourt,123,119,0,4
+01-07-2020,US,Louisiana,Bossier,906,875,0,31
+01-07-2020,US,Texas,Bosque,14,14,0,0
+01-07-2020,US,West Virginia,Boone,21,21,0,0
+01-07-2020,US,Nebraska,Boone,7,7,0,0
+01-07-2020,US,Missouri,Boone,313,311,0,2
+01-07-2020,US,Kentucky,Boone,602,579,0,23
+01-07-2020,US,Iowa,Boone,136,135,0,1
+01-07-2020,US,Indiana,Boone,422,380,0,42
+01-07-2020,US,Illinois,Boone,595,574,0,21
+01-07-2020,US,Arkansas,Boone,27,26,0,1
+01-07-2020,US,Idaho,Bonneville,117,116,0,1
+01-07-2020,US,Idaho,Bonner,33,33,0,0
+01-07-2020,US,Illinois,Bond,13,12,0,1
+01-07-2020,US,South Dakota,Bon Homme,11,11,0,0
+01-07-2020,US,Missouri,Bollinger,12,12,0,0
+01-07-2020,US,Mississippi,Bolivar,277,264,0,13
+01-07-2020,US,Idaho,Boise,4,4,0,0
+01-07-2020,US,Minnesota,Blue Earth,422,420,0,2
+01-07-2020,US,Tennessee,Blount,188,185,0,3
+01-07-2020,US,Alabama,Blount,221,220,0,1
+01-07-2020,US,Tennessee,Bledsoe,618,617,0,1
+01-07-2020,US,Georgia,Bleckley,62,61,0,1
+01-07-2020,US,Virginia,Bland,2,2,0,0
+01-07-2020,US,Texas,Blanco,27,26,0,1
+01-07-2020,US,Pennsylvania,Blair,72,71,0,1
+01-07-2020,US,Oklahoma,Blaine,14,14,0,0
+01-07-2020,US,Nebraska,Blaine,0,0,0,0
+01-07-2020,US,Idaho,Blaine,535,530,0,5
+01-07-2020,US,North Carolina,Bladen,379,376,0,3
+01-07-2020,US,Indiana,Blackford,37,35,0,2
+01-07-2020,US,Iowa,Black Hawk,2130,2072,0,58
+01-07-2020,US,Idaho,Bingham,43,43,0,0
+01-07-2020,US,North Dakota,Billings,1,1,0,0
+01-07-2020,US,Minnesota,Big Stone,14,14,0,0
+01-07-2020,US,Wyoming,Big Horn,20,20,0,0
+01-07-2020,US,Montana,Big Horn,77,74,0,3
+01-07-2020,US,Louisiana,Bienville,227,200,0,27
+01-07-2020,US,Georgia,Bibb,922,882,0,40
+01-07-2020,US,Alabama,Bibb,181,180,0,1
+01-07-2020,US,Texas,Bexar,12504,12393,0,111
+01-07-2020,US,Alaska,Bethel,9,9,0,0
+01-07-2020,US,North Carolina,Bertie,146,142,0,4
+01-07-2020,US,Michigan,Berrien,899,839,0,60
+01-07-2020,US,Georgia,Berrien,119,119,0,0
+01-07-2020,US,New Mexico,Bernalillo,2178,2092,0,86
+01-07-2020,US,Massachusetts,Berkshire,594,550,0,44
+01-07-2020,US,Pennsylvania,Berks,4559,4208,0,351
+01-07-2020,US,West Virginia,Berkeley,460,450,0,10
+01-07-2020,US,South Carolina,Berkeley,1170,1147,0,23
+01-07-2020,US,New Jersey,Bergen,19603,17607,0,1996
+01-07-2020,US,Michigan,Benzie,10,10,0,0
+01-07-2020,US,Washington,Benton,1839,1757,0,82
+01-07-2020,US,Tennessee,Benton,12,11,0,1
+01-07-2020,US,Oregon,Benton,84,79,0,5
+01-07-2020,US,Missouri,Benton,17,17,0,0
+01-07-2020,US,Mississippi,Benton,27,27,0,0
+01-07-2020,US,Minnesota,Benton,208,205,0,3
+01-07-2020,US,Iowa,Benton,59,58,0,1
+01-07-2020,US,Indiana,Benton,48,48,0,0
+01-07-2020,US,Arkansas,Benton,2752,2733,0,19
+01-07-2020,US,Colorado,Bent,4,4,0,0
+01-07-2020,US,North Dakota,Benson,4,4,0,0
+01-07-2020,US,Vermont,Bennington,72,71,0,1
+01-07-2020,US,South Dakota,Bennett,4,4,0,0
+01-07-2020,US,Idaho,Benewah,21,21,0,0
+01-07-2020,US,Georgia,Ben Hill,168,167,0,1
+01-07-2020,US,Minnesota,Beltrami,28,28,0,0
+01-07-2020,US,Ohio,Belmont,534,514,0,20
+01-07-2020,US,Texas,Bell,1315,1302,0,13
+01-07-2020,US,Kentucky,Bell,8,8,0,0
+01-07-2020,US,New Hampshire,Belknap,81,80,0,1
+01-07-2020,US,Texas,Bee,47,47,0,0
+01-07-2020,US,Virginia,Bedford,119,116,0,3
+01-07-2020,US,Tennessee,Bedford,520,515,0,5
+01-07-2020,US,Pennsylvania,Bedford,87,83,0,4
+01-07-2020,US,Oklahoma,Beckham,11,11,0,0
+01-07-2020,US,Minnesota,Becker,55,55,0,0
+01-07-2020,US,Montana,Beaverhead,1,1,0,0
+01-07-2020,US,Pennsylvania,Beaver,678,600,0,78
+01-07-2020,US,Oklahoma,Beaver,30,30,0,0
+01-07-2020,US,Louisiana,Beauregard,214,206,0,8
+01-07-2020,US,South Carolina,Beaufort,1282,1264,0,18
+01-07-2020,US,North Carolina,Beaufort,83,83,0,0
+01-07-2020,US,Utah,Bear River,1538,1536,0,2
+01-07-2020,US,Idaho,Bear Lake,2,2,0,0
+01-07-2020,US,South Dakota,Beadle,527,521,0,6
+01-07-2020,US,Texas,Baylor,1,1,0,0
+01-07-2020,US,Wisconsin,Bayfield,3,2,0,1
+01-07-2020,US,Michigan,Bay,392,362,0,30
+01-07-2020,US,Florida,Bay,408,403,0,5
+01-07-2020,US,Arkansas,Baxter,20,20,0,0
+01-07-2020,US,Virginia,Bath,0,0,0,0
+01-07-2020,US,Kentucky,Bath,15,14,0,1
+01-07-2020,US,Missouri,Bates,12,11,0,1
+01-07-2020,US,Texas,Bastrop,446,440,0,6
+01-07-2020,US,Georgia,Bartow,714,672,0,42
+01-07-2020,US,Missouri,Barton,21,21,0,0
+01-07-2020,US,Kansas,Barton,57,55,0,2
+01-07-2020,US,Indiana,Bartholomew,578,530,0,48
+01-07-2020,US,Missouri,Barry,43,43,0,0
+01-07-2020,US,Michigan,Barry,103,101,0,2
+01-07-2020,US,Georgia,Barrow,532,507,0,25
+01-07-2020,US,Wisconsin,Barron,34,33,0,1
+01-07-2020,US,Kentucky,Barren,86,84,0,2
+01-07-2020,US,South Carolina,Barnwell,82,81,0,1
+01-07-2020,US,Massachusetts,Barnstable,1538,1394,0,144
+01-07-2020,US,North Dakota,Barnes,19,19,0,0
+01-07-2020,US,West Virginia,Barbour,15,14,0,1
+01-07-2020,US,Alabama,Barbour,337,336,0,1
+01-07-2020,US,Kansas,Barber,1,1,0,0
+01-07-2020,US,Michigan,Baraga,5,5,0,0
+01-07-2020,US,Idaho,Bannock,104,103,0,1
+01-07-2020,US,Nebraska,Banner,1,1,0,0
+01-07-2020,US,Georgia,Banks,138,138,0,0
+01-07-2020,US,Texas,Bandera,21,21,0,0
+01-07-2020,US,South Carolina,Bamberg,117,116,0,1
+01-07-2020,US,Maryland,Baltimore City,7605,7267,0,338
+01-07-2020,US,Maryland,Baltimore,8040,7566,0,474
+01-07-2020,US,Kentucky,Ballard,14,14,0,0
+01-07-2020,US,Georgia,Baldwin,517,483,0,34
+01-07-2020,US,Alabama,Baldwin,739,730,0,9
+01-07-2020,US,Oregon,Baker,4,4,0,0
+01-07-2020,US,Georgia,Baker,43,40,0,3
+01-07-2020,US,Florida,Baker,72,68,0,4
+01-07-2020,US,Texas,Bailey,100,99,0,1
+01-07-2020,US,Georgia,Bacon,244,240,0,4
+01-07-2020,US,Colorado,Baca,14,14,0,0
+01-07-2020,US,Louisiana,Avoyelles,341,327,0,14
+01-07-2020,US,North Carolina,Avery,12,12,0,0
+01-07-2020,US,Alabama,Autauga,562,551,0,11
+01-07-2020,US,Texas,Austin,72,72,0,0
+01-07-2020,US,South Dakota,Aurora,34,34,0,0
+01-07-2020,US,Virginia,Augusta,184,182,0,2
+01-07-2020,US,Ohio,Auglaize,99,98,0,1
+01-07-2020,US,Iowa,Audubon,16,15,0,1
+01-07-2020,US,Missouri,Audrain,138,137,0,1
+01-07-2020,US,Mississippi,Attala,352,329,0,23
+01-07-2020,US,Oklahoma,Atoka,22,22,0,0
+01-07-2020,US,New Jersey,Atlantic,2909,2693,0,216
+01-07-2020,US,Georgia,Atkinson,152,150,0,2
+01-07-2020,US,Ohio,Athens,37,35,0,2
+01-07-2020,US,Missouri,Atchison,3,3,0,0
+01-07-2020,US,Kansas,Atchison,36,36,0,0
+01-07-2020,US,Texas,Atascosa,108,106,0,2
+01-07-2020,US,Louisiana,Assumption,357,342,0,15
+01-07-2020,US,Washington,Asotin,21,19,0,2
+01-07-2020,US,Ohio,Ashtabula,421,384,0,37
+01-07-2020,US,Arkansas,Ashley,74,73,0,1
+01-07-2020,US,Wisconsin,Ashland,3,3,0,0
+01-07-2020,US,Ohio,Ashland,55,53,0,2
+01-07-2020,US,North Carolina,Ashe,54,53,0,1
+01-07-2020,US,Louisiana,Ascension,1213,1155,0,58
+01-07-2020,US,Nebraska,Arthur,0,0,0,0
+01-07-2020,US,Maine,Aroostook,24,23,0,1
+01-07-2020,US,Texas,Armstrong,3,3,0,0
+01-07-2020,US,Pennsylvania,Armstrong,76,70,0,6
+01-07-2020,US,Virginia,Arlington,2484,2352,0,132
+01-07-2020,US,Arkansas,Arkansas,31,31,0,0
+01-07-2020,US,Michigan,Arenac,39,37,0,2
+01-07-2020,US,Colorado,Archuleta,8,8,0,0
+01-07-2020,US,Texas,Archer,7,7,0,0
+01-07-2020,US,Colorado,Arapahoe,5234,4890,0,344
+01-07-2020,US,Texas,Aransas,24,24,0,0
+01-07-2020,US,Virginia,Appomattox,40,40,0,0
+01-07-2020,US,Georgia,Appling,260,246,0,14
+01-07-2020,US,Iowa,Appanoose,20,17,0,3
+01-07-2020,US,Arizona,Apache,2381,2291,0,90
+01-07-2020,US,Michigan,Antrim,19,19,0,0
+01-07-2020,US,Nebraska,Antelope,9,8,0,1
+01-07-2020,US,North Carolina,Anson,132,130,0,2
+01-07-2020,US,Minnesota,Anoka,2124,2017,0,107
+01-07-2020,US,Maryland,Anne Arundel,5134,4925,0,209
+01-07-2020,US,Texas,Angelina,507,498,0,9
+01-07-2020,US,Maine,Androscoggin,484,480,0,4
+01-07-2020,US,Texas,Andrews,82,82,0,0
+01-07-2020,US,Missouri,Andrew,49,49,0,0
+01-07-2020,US,Texas,Anderson,1040,1038,0,2
+01-07-2020,US,Tennessee,Anderson,104,102,0,2
+01-07-2020,US,South Carolina,Anderson,635,624,0,11
+01-07-2020,US,Kentucky,Anderson,26,25,0,1
+01-07-2020,US,Kansas,Anderson,4,4,0,0
+01-07-2020,US,Alaska,Anchorage,457,451,0,6
+01-07-2020,US,Mississippi,Amite,82,80,0,2
+01-07-2020,US,Virginia,Amherst,36,36,0,0
+01-07-2020,US,Virginia,Amelia,44,43,0,1
+01-07-2020,US,California,Amador,24,24,0,0
+01-07-2020,US,California,Alpine,2,2,0,0
+01-07-2020,US,Michigan,Alpena,122,111,0,11
+01-07-2020,US,South Carolina,Allendale,50,47,0,3
+01-07-2020,US,Ohio,Allen,297,264,0,33
+01-07-2020,US,Louisiana,Allen,310,300,0,10
+01-07-2020,US,Kentucky,Allen,168,163,0,5
+01-07-2020,US,Kansas,Allen,4,4,0,0
+01-07-2020,US,Indiana,Allen,2677,2563,0,114
+01-07-2020,US,Pennsylvania,Allegheny,2870,2683,0,187
+01-07-2020,US,Virginia,Alleghany,33,31,0,2
+01-07-2020,US,North Carolina,Alleghany,32,32,0,0
+01-07-2020,US,New York,Allegany,61,61,0,0
+01-07-2020,US,Maryland,Allegany,205,188,0,17
+01-07-2020,US,Michigan,Allegan,317,310,0,7
+01-07-2020,US,Iowa,Allamakee,126,122,0,4
+01-07-2020,US,Michigan,Alger,4,4,0,0
+01-07-2020,US,Oklahoma,Alfalfa,1,1,0,0
+01-07-2020,US,Virginia,Alexandria,2325,2268,0,57
+01-07-2020,US,North Carolina,Alexander,93,92,0,1
+01-07-2020,US,Illinois,Alexander,22,22,0,0
+01-07-2020,US,Mississippi,Alcorn,56,55,0,1
+01-07-2020,US,Michigan,Alcona,21,20,0,1
+01-07-2020,US,Virginia,Albemarle,407,398,0,9
+01-07-2020,US,Wyoming,Albany,34,34,0,0
+01-07-2020,US,New York,Albany,2112,1991,0,121
+01-07-2020,US,Colorado,Alamosa,197,193,0,4
+01-07-2020,US,California,Alameda,6156,6019,0,137
+01-07-2020,US,North Carolina,Alamance,1151,1114,0,37
+01-07-2020,US,Florida,Alachua,1245,1233,0,12
+01-07-2020,US,Minnesota,Aitkin,14,14,0,0
+01-07-2020,US,South Carolina,Aiken,406,396,0,10
+01-07-2020,US,Vermont,Addison,68,66,0,2
+01-07-2020,US,Wisconsin,Adams,19,17,0,2
+01-07-2020,US,Washington,Adams,145,145,0,0
+01-07-2020,US,Pennsylvania,Adams,341,328,0,13
+01-07-2020,US,Ohio,Adams,21,20,0,1
+01-07-2020,US,Nebraska,Adams,296,285,0,11
+01-07-2020,US,Mississippi,Adams,267,249,0,18
+01-07-2020,US,Iowa,Adams,8,8,0,0
+01-07-2020,US,Indiana,Adams,45,44,0,1
+01-07-2020,US,Illinois,Adams,93,92,0,1
+01-07-2020,US,Idaho,Adams,11,11,0,0
+01-07-2020,US,Colorado,Adams,4226,4070,0,156
+01-07-2020,US,Oklahoma,Adair,115,111,0,4
+01-07-2020,US,Missouri,Adair,90,90,0,0
+01-07-2020,US,Kentucky,Adair,121,102,0,19
+01-07-2020,US,Iowa,Adair,15,15,0,0
+01-07-2020,US,Idaho,Ada,2288,2265,0,23
+01-07-2020,US,Virginia,Accomack,1043,1029,0,14
+01-07-2020,US,Louisiana,Acadia,919,882,0,37
+01-07-2020,US,South Carolina,Abbeville,113,113,0,0
+01-07-2020,Niger,Main territory,,1075,65,943,67
+01-07-2020,Antigua and Barbuda,Main territory,,69,44,22,3
+01-07-2020,Belarus,Main territory,,62424,14473,47553,398
+01-07-2020,Samoa,Main territory,,0,0,0,0
+01-07-2020,UK,Wales,,15775,14259,0,1516
+01-07-2020,UK,Other,,116237,116237,0,0
+01-07-2020,UK,Turks and Caicos Islands,,42,29,11,2
+01-07-2020,UK,Scotland,,15827,13342,0,2485
+01-07-2020,UK,"Saint Helena, Ascension and Tristan da Cunha",,0,0,0,0
+01-07-2020,UK,Northern Ireland,,4880,4329,0,551
+01-07-2020,UK,Montserrat,,11,0,10,1
+01-07-2020,UK,Isle of Man,,336,0,312,24
+01-07-2020,UK,Gibraltar,,178,2,176,0
+01-07-2020,UK,Falkland Islands (Malvinas),,13,0,13,0
+01-07-2020,UK,England,,160764,121410,0,39354
+01-07-2020,UK,Channel Islands,,571,12,512,47
+01-07-2020,UK,Cayman Islands,,201,7,193,1
+01-07-2020,UK,British Virgin Islands,,8,0,7,1
+01-07-2020,UK,Bermuda,,146,2,135,9
+01-07-2020,UK,Anguilla,,3,0,3,0
+01-07-2020,Nigeria,Main territory,,26484,15729,10152,603
+01-07-2020,Turkey,Main territory,,201098,20526,175422,5150
+01-07-2020,Hungary,Main territory,,4157,857,2714,586
+01-07-2020,Belgium,Main territory,,61509,34734,17021,9754
+01-07-2020,Moldova,Main territory,,16898,6755,9594,549
+01-07-2020,Saint Kitts and Nevis,Main territory,,15,0,15,0
+01-07-2020,Mexico,Zacatecas,,941,209,633,99
+01-07-2020,Mexico,Yucatan,,4509,1136,2930,443
+01-07-2020,Mexico,Veracruz,,10518,1194,7729,1595
+01-07-2020,Mexico,Tlaxcala,,2541,271,1917,353
+01-07-2020,Mexico,Tamaulipas,,6041,855,4813,373
+01-07-2020,Mexico,Tabasco,,10921,1143,8700,1078
+01-07-2020,Mexico,Sonora,,7876,591,6548,737
+01-07-2020,Mexico,Sinaloa,,8456,445,6680,1331
+01-07-2020,Mexico,San Luis Potosi,,3216,690,2369,157
+01-07-2020,Mexico,Quintana Roo,,3783,716,2472,595
+01-07-2020,Mexico,Queretaro,,2012,247,1472,293
+01-07-2020,Mexico,Puebla,,10719,1448,7933,1338
+01-07-2020,Mexico,Oaxaca,,5409,542,4279,588
+01-07-2020,Mexico,Nuevo Leon,,6226,1336,4546,344
+01-07-2020,Mexico,Nayarit,,1776,376,1192,208
+01-07-2020,Mexico,Morelos,,2984,218,2088,678
+01-07-2020,Mexico,Michoacan,,5810,469,4875,466
+01-07-2020,Mexico,Main territory,,34953,2207,28296,4450
+01-07-2020,Mexico,Jalisco,,6873,956,5188,729
+01-07-2020,Mexico,Hidalgo,,3977,462,2836,679
+01-07-2020,Mexico,Guerrero,,5571,526,4145,900
+01-07-2020,Mexico,Guanajuato,,7744,1582,5792,370
+01-07-2020,Mexico,Durango,,2001,460,1394,147
+01-07-2020,Mexico,Colima,,578,137,368,73
+01-07-2020,Mexico,Coahuila,,4883,1133,3517,233
+01-07-2020,Mexico,Ciudad de Mexico,,48568,3469,38457,6642
+01-07-2020,Mexico,Chihuahua,,3112,123,2341,648
+01-07-2020,Mexico,Chiapas,,4612,374,3681,557
+01-07-2020,Mexico,Campeche,,1998,222,1560,216
+01-07-2020,Mexico,Baja California Sur,,1578,280,1221,77
+01-07-2020,Mexico,Baja California,,9221,582,6677,1962
+01-07-2020,Mexico,Aguascalientes,,2363,335,1877,151
+01-07-2020,South Africa,Main territory,,159333,80559,76025,2749
+01-07-2020,Ethiopia,Main territory,,5846,3313,2430,103
+01-07-2020,Maldives,Main territory,,2382,419,1954,9
+01-07-2020,South Korea,Main territory,,12904,938,11684,282
+01-07-2020,Syria,Main territory,,293,174,110,9
+01-07-2020,Burkina Faso,Main territory,,962,71,838,53
+01-07-2020,Rwanda,Main territory,,1042,559,480,3
+01-07-2020,Palau,Main territory,,0,0,0,0
+01-07-2020,Estonia,Main territory,,1989,84,1836,69
+01-07-2020,Brunei,Main territory,,141,0,138,3
+01-07-2020,Central African Republic,Main territory,,3745,2911,787,47
+01-07-2020,Yemen,Main territory,,1190,368,504,318
+01-07-2020,Togo,Main territory,,661,233,414,14
+01-07-2020,Sao Tome and Principe,Main territory,,715,450,252,13
+01-07-2020,Sweden,Vastra Gotaland,,15408,14647,0,761
+01-07-2020,Sweden,Vastmanland,,2274,2108,0,166
+01-07-2020,Sweden,Vasternorrland,,1382,1265,0,117
+01-07-2020,Sweden,Vasterbotten,,708,677,0,31
+01-07-2020,Sweden,Varmland,,954,885,0,69
+01-07-2020,Sweden,Uppsala,,3299,3073,0,226
+01-07-2020,Sweden,Stockholm,,20547,18244,0,2303
+01-07-2020,Sweden,Sormland,,2123,1879,0,244
+01-07-2020,Sweden,Skane,,3072,2826,0,246
+01-07-2020,Sweden,Ostergotland,,3217,2993,0,224
+01-07-2020,Sweden,Orebro,,2333,2170,0,163
+01-07-2020,Sweden,Norrbotten,,1326,1259,0,67
+01-07-2020,Sweden,Kronoberg,,1066,970,0,96
+01-07-2020,Sweden,Kalmar,,645,590,0,55
+01-07-2020,Sweden,Jonkoping,,4035,3866,0,169
+01-07-2020,Sweden,Jamtland Harjedalen,,1038,984,0,54
+01-07-2020,Sweden,Halland,,1536,1464,0,72
+01-07-2020,Sweden,Gotland,,162,156,0,6
+01-07-2020,Sweden,Gavleborg,,2467,2336,0,131
+01-07-2020,Sweden,Dalarna,,1653,1496,0,157
+01-07-2020,Sweden,Blekinge,,447,434,0,13

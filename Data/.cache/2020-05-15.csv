@@ -1,0 +1,3387 @@
+Day,Country,Province,County,Confirmed,Active,Recovered,Deaths
+15-05-2020,Monaco,Main territory,,96,5,87,4
+15-05-2020,Poland,Main territory,,18016,10191,6918,907
+15-05-2020,Senegal,Main territory,,2310,1395,890,25
+15-05-2020,Morocco,Main territory,,6652,3062,3400,190
+15-05-2020,Iraq,Main territory,,3193,987,2089,117
+15-05-2020,Fiji,Main territory,,18,3,15,0
+15-05-2020,Greece,Main territory,,2810,1276,1374,160
+15-05-2020,Haiti,Main territory,,234,187,29,18
+15-05-2020,Peru,Main territory,,84495,45524,27147,11824
+15-05-2020,Saint Vincent and the Grenadines,Main territory,,17,3,14,0
+15-05-2020,Seychelles,Main territory,,11,1,10,0
+15-05-2020,Sri Lanka,Main territory,,935,449,477,9
+15-05-2020,Uruguay,Main territory,,732,160,553,19
+15-05-2020,Germany,Other,,1450,1450,0,0
+15-05-2020,Germany,Thuringen,,2689,354,2200,135
+15-05-2020,Germany,Schleswig-Holstein,,2998,272,2600,126
+15-05-2020,Germany,Sachsen-Anhalt,,1676,122,1500,54
+15-05-2020,Germany,Sachsen,,5082,486,4400,196
+15-05-2020,Germany,Saarland,,2705,151,2400,154
+15-05-2020,Germany,Rheinland-Pfalz,,6439,423,5800,216
+15-05-2020,Germany,Nordrhein-Westfalen,,35967,2974,31500,1493
+15-05-2020,Germany,Niedersachsen,,11111,969,9600,542
+15-05-2020,Germany,Mecklenburg-Vorpommern,,745,25,700,20
+15-05-2020,Germany,Hessen,,9204,875,7900,429
+15-05-2020,Germany,Hamburg,,5009,381,4400,228
+15-05-2020,Germany,Bremen,,1153,316,800,37
+15-05-2020,Germany,Brandenburg,,3191,227,2800,164
+15-05-2020,Germany,Berlin,,6424,456,5787,181
+15-05-2020,Germany,Bavaria,,45532,3745,39510,2277
+15-05-2020,Germany,Baden-Wurttemberg,,33858,2513,29700,1645
+15-05-2020,Zimbabwe,Main territory,,42,25,13,4
+15-05-2020,Thailand,Main territory,,3025,115,2854,56
+15-05-2020,Netherlands,Main territory,,43681,38038,0,5643
+15-05-2020,Netherlands,Sint Maarten,,76,15,46,15
+15-05-2020,Netherlands,Curacao,,16,1,14,1
+15-05-2020,Netherlands,"Bonaire, Sint Eustatius and Saba",,6,0,6,0
+15-05-2020,Netherlands,Aruba,,101,5,93,3
+15-05-2020,Kuwait,Main territory,,12860,9124,3640,96
+15-05-2020,Liberia,Main territory,,219,91,108,20
+15-05-2020,Sudan,Main territory,,1964,1668,205,91
+15-05-2020,Azerbaijan,Main territory,,2980,1058,1886,36
+15-05-2020,Bolivia,Main territory,,3577,2979,434,164
+15-05-2020,Romania,Main territory,,16437,5997,9370,1070
+15-05-2020,Honduras,Main territory,,2460,2062,264,134
+15-05-2020,Madagascar,Main territory,,238,126,112,0
+15-05-2020,Austria,Main territory,,16109,1010,14471,628
+15-05-2020,Luxembourg,Main territory,,3923,137,3682,104
+15-05-2020,Bosnia and Herzegovina,Main territory,,2236,772,1336,128
+15-05-2020,Argentina,Main territory,,7479,4626,2497,356
+15-05-2020,Botswana,Main territory,,24,6,17,1
+15-05-2020,Dominican Republic,Main territory,,11739,7758,3557,424
+15-05-2020,Mozambique,Main territory,,119,77,42,0
+15-05-2020,Cuba,Main territory,,1840,336,1425,79
+15-05-2020,Barbados,Main territory,,85,13,65,7
+15-05-2020,Denmark,Main territory,,10791,1295,8959,537
+15-05-2020,Denmark,Greenland,,11,0,11,0
+15-05-2020,Denmark,Faroe Islands,,187,0,187,0
+15-05-2020,Kosovo,Main territory,,944,225,690,29
+15-05-2020,Lebanon,Main territory,,891,619,246,26
+15-05-2020,Mongolia,Main territory,,98,78,20,0
+15-05-2020,Liechtenstein,Main territory,,82,26,55,1
+15-05-2020,Libya,Main territory,,64,33,28,3
+15-05-2020,South Sudan,Main territory,,236,228,4,4
+15-05-2020,Grenada,Main territory,,22,8,14,0
+15-05-2020,Indonesia,Main territory,,16496,11617,3803,1076
+15-05-2020,Papua New Guinea,Main territory,,8,0,8,0
+15-05-2020,Ireland,Main territory,,23956,2968,19470,1518
+15-05-2020,San Marino,Main territory,,652,422,189,41
+15-05-2020,Uganda,Main territory,,203,140,63,0
+15-05-2020,Switzerland,Main territory,,30514,1536,27100,1878
+15-05-2020,Spain,Pais Vasco,,13257,-3453,15256,1454
+15-05-2020,Spain,Navarra,,5116,1066,3550,500
+15-05-2020,Spain,Murcia,,1534,-643,2034,143
+15-05-2020,Spain,Melilla,,119,-2,119,2
+15-05-2020,Spain,Madrid,,66005,16813,40383,8809
+15-05-2020,Spain,La Rioja,,4016,741,2927,348
+15-05-2020,Spain,Galicia,,9323,439,8283,601
+15-05-2020,Spain,Extremadura,,2933,-148,2587,494
+15-05-2020,Spain,Ceuta,,116,-48,160,4
+15-05-2020,Spain,Catalonia,,55464,23678,25904,5882
+15-05-2020,Spain,Castilla y Leon,,18272,8670,7672,1930
+15-05-2020,Spain,Castilla - La Mancha,,16513,7349,6294,2870
+15-05-2020,Spain,Cantabria,,2263,-95,2152,206
+15-05-2020,Spain,Canarias,,2280,623,1506,151
+15-05-2020,Spain,C. Valenciana,,10813,-253,9708,1358
+15-05-2020,Spain,Baleares,,1967,238,1513,216
+15-05-2020,Spain,Asturias,,2359,996,1053,310
+15-05-2020,Spain,Aragon,,5432,1061,3534,837
+15-05-2020,Spain,Andalusia,,12401,909,10148,1344
+15-05-2020,Mali,Main territory,,806,305,455,46
+15-05-2020,Paraguay,Main territory,,759,555,193,11
+15-05-2020,Latvia,Main territory,,970,289,662,19
+15-05-2020,Laos,Main territory,,19,5,14,0
+15-05-2020,Bhutan,Main territory,,21,16,5,0
+15-05-2020,Myanmar,Main territory,,182,87,89,6
+15-05-2020,Finland,Main territory,,6228,935,5000,293
+15-05-2020,Nepal,Main territory,,267,231,36,0
+15-05-2020,Singapore,Main territory,,26891,19622,7248,21
+15-05-2020,Iceland,Main territory,,1802,10,1782,10
+15-05-2020,Egypt,Main territory,,11228,7837,2799,592
+15-05-2020,Andorra,Main territory,,761,108,604,49
+15-05-2020,Malawi,Main territory,,63,36,24,3
+15-05-2020,Malta,Main territory,,532,68,458,6
+15-05-2020,Costa Rica,Main territory,,843,292,542,9
+15-05-2020,Cameroon,Main territory,,3105,1398,1567,140
+15-05-2020,Mauritius,Main territory,,332,0,322,10
+15-05-2020,Italy,Veneto,,18889,4439,12688,1762
+15-05-2020,Italy,Valle d'Aosta,,1172,77,953,142
+15-05-2020,Italy,Umbria,,1422,90,1259,73
+15-05-2020,Italy,Toscana,,9883,3168,5739,976
+15-05-2020,Italy,Sicilia,,3374,1760,1351,263
+15-05-2020,Italy,Sardegna,,1348,461,762,125
+15-05-2020,Italy,Puglia,,4366,2181,1724,461
+15-05-2020,Italy,Piemonte,,29346,11113,14676,3557
+15-05-2020,Italy,P.A. Trento,,4318,406,3461,451
+15-05-2020,Italy,P.A. Bolzano,,2578,359,1929,290
+15-05-2020,Italy,Molise,,407,227,158,22
+15-05-2020,Italy,Marche,,6619,2795,2847,977
+15-05-2020,Italy,Lombardia,,84119,27746,40962,15411
+15-05-2020,Italy,Liguria,,9060,2603,5121,1336
+15-05-2020,Italy,Lazio,,7364,4088,2672,604
+15-05-2020,Italy,Friuli Venezia Giulia,,3175,741,2116,318
+15-05-2020,Italy,Emilia-Romagna,,27110,6001,17166,3943
+15-05-2020,Italy,Campania,,4654,1736,2522,396
+15-05-2020,Italy,Calabria,,1144,505,544,95
+15-05-2020,Italy,Basilicata,,389,120,242,27
+15-05-2020,Italy,Abruzzo,,3148,1454,1313,381
+15-05-2020,Ecuador,Main territory,,31467,25440,3433,2594
+15-05-2020,Qatar,Main territory,,29425,25865,3546,14
+15-05-2020,Russia,Ярославская обл.,,1537,1282,244,11
+15-05-2020,Russia,Ямало-Ненецкий АО,,1548,1325,220,3
+15-05-2020,Russia,Чукотский АО,,42,26,16,0
+15-05-2020,Russia,Чувашия,,1522,1109,405,8
+15-05-2020,Russia,Чечня,,891,353,529,9
+15-05-2020,Russia,Челябинская обл.,,1407,963,438,6
+15-05-2020,Russia,ХМАО – Югра,,965,601,356,8
+15-05-2020,Russia,Хакасия,,557,356,192,9
+15-05-2020,Russia,Хабаровский край,,1126,622,497,7
+15-05-2020,Russia,Ульяновская обл.,,1081,830,246,5
+15-05-2020,Russia,Удмуртия,,408,194,202,12
+15-05-2020,Russia,Тюменская обл.,,1057,694,357,6
+15-05-2020,Russia,Тыва,,222,177,44,1
+15-05-2020,Russia,Тульская обл.,,2263,1689,556,18
+15-05-2020,Russia,Томская обл.,,329,245,80,4
+15-05-2020,Russia,Тверская обл.,,1006,549,447,10
+15-05-2020,Russia,Татарстан,,2064,1052,1006,6
+15-05-2020,Russia,Тамбовская обл.,,1737,1263,471,3
+15-05-2020,Russia,Ставропольский край,,1308,820,462,26
+15-05-2020,Russia,Смоленская обл.,,1105,769,326,10
+15-05-2020,Russia,Северная Осетия,,1943,1027,903,13
+15-05-2020,Russia,Севастополь,,135,68,65,2
+15-05-2020,Russia,Свердловская обл.,,2466,1915,546,5
+15-05-2020,Russia,Сахалинская обл.,,45,18,27,0
+15-05-2020,Russia,Саха (Якутия),,722,472,246,4
+15-05-2020,Russia,Саратовская обл.,,1526,1198,321,7
+15-05-2020,Russia,Санкт-Петербург,,9486,7407,2005,74
+15-05-2020,Russia,Самарская обл.,,1302,1060,233,9
+15-05-2020,Russia,Рязанская обл.,,2123,1764,352,7
+15-05-2020,Russia,Ростовская обл.,,2200,1546,629,25
+15-05-2020,Russia,Псковская обл.,,367,247,112,8
+15-05-2020,Russia,Приморский край,,1110,758,340,12
+15-05-2020,Russia,Пермский край,,921,368,540,13
+15-05-2020,Russia,Пензенская обл.,,985,317,658,10
+15-05-2020,Russia,Орловская обл.,,1329,957,362,10
+15-05-2020,Russia,Оренбургская обл.,,1208,675,528,5
+15-05-2020,Russia,Омская обл.,,436,355,74,7
+15-05-2020,Russia,Новосибирская обл.,,1447,903,526,18
+15-05-2020,Russia,Новгородская обл.,,584,421,158,5
+15-05-2020,Russia,Нижегородская обл.,,5903,4643,1220,40
+15-05-2020,Russia,Ненецкий АО,,52,45,7,0
+15-05-2020,Russia,Мурманская обл.,,2551,2056,489,6
+15-05-2020,Russia,Московская обл.,,25525,22804,2468,253
+15-05-2020,Russia,Москва,,135464,109544,24562,1358
+15-05-2020,Russia,Мордовия,,1323,964,350,9
+15-05-2020,Russia,Марий Эл,,1078,262,809,7
+15-05-2020,Russia,Магаданская обл.,,171,70,98,3
+15-05-2020,Russia,Липецкая обл.,,1083,822,258,3
+15-05-2020,Russia,Ленинградская обл.,,1841,1241,593,7
+15-05-2020,Russia,Курская обл.,,1777,1334,436,7
+15-05-2020,Russia,Курганская обл.,,103,60,43,0
+15-05-2020,Russia,Крым,,245,154,89,2
+15-05-2020,Russia,Красноярский край,,1590,1074,500,16
+15-05-2020,Russia,Краснодарский край,,2418,1415,979,24
+15-05-2020,Russia,Костромская обл.,,452,281,168,3
+15-05-2020,Russia,Коми,,882,479,387,16
+15-05-2020,Russia,Кировская обл.,,932,475,452,5
+15-05-2020,Russia,Кемеровская обл.,,296,190,99,7
+15-05-2020,Russia,Карелия,,194,144,49,1
+15-05-2020,Russia,Карачаево-Черкессия,,614,482,129,3
+15-05-2020,Russia,Камчатский край,,443,331,111,1
+15-05-2020,Russia,Калужская обл.,,2213,1756,438,19
+15-05-2020,Russia,Калмыкия,,618,417,195,6
+15-05-2020,Russia,Калининградская обл.,,881,547,323,11
+15-05-2020,Russia,Кабардино-Балкария,,1619,1293,319,7
+15-05-2020,Russia,Иркутская обл.,,474,353,117,4
+15-05-2020,Russia,Ингушетия,,1407,1035,337,35
+15-05-2020,Russia,Ивановская обл.,,1124,804,307,13
+15-05-2020,Russia,Забайкальский край,,454,274,178,2
+15-05-2020,Russia,Еврейская АО,,222,160,60,2
+15-05-2020,Russia,Дагестан,,3192,1675,1490,27
+15-05-2020,Russia,Воронежская обл.,,1074,510,552,12
+15-05-2020,Russia,Вологодская обл.,,361,187,172,2
+15-05-2020,Russia,Волгоградская обл.,,1445,1025,407,13
+15-05-2020,Russia,Владимирская обл.,,1592,1428,149,15
+15-05-2020,Russia,Бурятия,,824,541,277,6
+15-05-2020,Russia,Брянская обл.,,1995,1131,834,30
+15-05-2020,Russia,Белгородская обл.,,1073,765,299,9
+15-05-2020,Russia,Башкортостан,,1874,1334,524,16
+15-05-2020,Russia,Астраханская обл.,,945,644,294,7
+15-05-2020,Russia,Архангельская обл.,,586,354,229,3
+15-05-2020,Russia,Амурская обл.,,204,159,44,1
+15-05-2020,Russia,Алтайский край,,847,422,422,3
+15-05-2020,Russia,Алтай,,65,35,30,0
+15-05-2020,Russia,Адыгея,,307,85,214,8
+15-05-2020,Mauritania,Main territory,,29,19,7,3
+15-05-2020,Jamaica,Main territory,,511,381,121,9
+15-05-2020,Chad,Main territory,,428,292,88,48
+15-05-2020,Timor-Leste,Main territory,,24,0,24,0
+15-05-2020,North Macedonia,Main territory,,1740,392,1251,97
+15-05-2020,Canada,Yukon,,11,0,11,0
+15-05-2020,Canada,Saskatchewan,,590,175,408,7
+15-05-2020,Canada,Quebec,,41429,26215,11039,4175
+15-05-2020,Canada,Prince Edward Island,,27,0,27,0
+15-05-2020,Canada,Ontario,,23258,4678,16641,1939
+15-05-2020,Canada,Nunavut,,0,0,0,0
+15-05-2020,Canada,Nova Scotia,,1034,61,918,55
+15-05-2020,Canada,Northwest Territories,,5,0,5,0
+15-05-2020,Canada,Newfoundland and Labrador,,260,9,248,3
+15-05-2020,Canada,New Brunswick,,120,1,119,0
+15-05-2020,Canada,Manitoba,,289,28,254,7
+15-05-2020,Canada,British Columbia,,2407,359,1908,140
+15-05-2020,Canada,Alberta,,6515,1073,5317,125
+15-05-2020,Afghanistan,Main territory,,6054,5156,745,153
+15-05-2020,Trinidad and Tobago,Main territory,,116,1,107,8
+15-05-2020,Angola,Main territory,,48,29,17,2
+15-05-2020,Chile,Main territory,,39542,22534,16614,394
+15-05-2020,Kiribati,Main territory,,0,0,0,0
+15-05-2020,Norway,Main territory,,8219,7955,32,232
+15-05-2020,Tunisia,Main territory,,1035,188,802,45
+15-05-2020,Cote d'Ivoire,Main territory,,2017,1051,942,24
+15-05-2020,Congo (Brazzaville),Main territory,,391,289,87,15
+15-05-2020,Croatia,Main territory,,2222,258,1869,95
+15-05-2020,New Zealand,Cook Islands,,0,0,0,0
+15-05-2020,New Zealand,Main territory,,1498,49,1428,21
+15-05-2020,Cambodia,Main territory,,122,0,122,0
+15-05-2020,Zambia,Main territory,,654,523,124,7
+15-05-2020,Cabo Verde,Main territory,,326,257,67,2
+15-05-2020,Benin,Main territory,,339,254,83,2
+15-05-2020,Ghana,Main territory,,5638,4150,1460,28
+15-05-2020,Malaysia,Main territory,,6855,1304,5439,112
+15-05-2020,Kazakhstan,Main territory,,5689,2948,2707,34
+15-05-2020,Slovenia,Main territory,,1465,1092,270,103
+15-05-2020,Taiwan,Main territory,,440,46,387,7
+15-05-2020,Algeria,Main territory,,6629,2822,3271,536
+15-05-2020,Dominica,Main territory,,16,1,15,0
+15-05-2020,Eritrea,Main territory,,39,0,39,0
+15-05-2020,Namibia,Main territory,,16,3,13,0
+15-05-2020,West Bank and Gaza,Main territory,,375,58,315,2
+15-05-2020,Pakistan,Main territory,,38799,27085,10880,834
+15-05-2020,Somalia,Main territory,,1284,1096,135,53
+15-05-2020,Armenia,Main territory,,4044,2326,1666,52
+15-05-2020,Belize,Main territory,,18,0,16,2
+15-05-2020,Jordan,Main territory,,596,186,401,9
+15-05-2020,Nicaragua,Main territory,,25,10,7,8
+15-05-2020,Cyprus,Main territory,,910,412,481,17
+15-05-2020,Gabon,Main territory,,1209,980,219,10
+15-05-2020,Bulgaria,Main territory,,2138,1491,545,102
+15-05-2020,Japan,Main territory,,16203,5152,10338,713
+15-05-2020,Bahrain,Main territory,,6583,3931,2640,12
+15-05-2020,Comoros,Main territory,,11,7,3,1
+15-05-2020,United Arab Emirates,Main territory,,21831,14293,7328,210
+15-05-2020,Gambia,Main territory,,23,12,10,1
+15-05-2020,Bahamas,Main territory,,96,44,41,11
+15-05-2020,Lesotho,Main territory,,1,1,0,0
+15-05-2020,Uzbekistan,Main territory,,2686,517,2158,11
+15-05-2020,Panama,Main territory,,9268,2922,6080,266
+15-05-2020,Georgia,Main territory,,671,266,393,12
+15-05-2020,Ukraine,Main territory,,17330,12381,4473,476
+15-05-2020,Brazil,Main territory,,220291,120359,84970,14962
+15-05-2020,Guinea-Bissau,Main territory,,913,884,26,3
+15-05-2020,Tanzania,Main territory,,509,305,183,21
+15-05-2020,Australia,Western Australia,,552,5,538,9
+15-05-2020,Australia,Victoria,,1551,116,1417,18
+15-05-2020,Australia,Tasmania,,228,24,191,13
+15-05-2020,Australia,South Australia,,439,0,435,4
+15-05-2020,Australia,Queensland,,1055,13,1036,6
+15-05-2020,Australia,Northern Territory,,29,2,27,0
+15-05-2020,Australia,New South Wales,,3074,418,2611,45
+15-05-2020,Australia,Australian Capital Territory,,107,0,104,3
+15-05-2020,Kyrgyzstan,Main territory,,1111,352,745,14
+15-05-2020,Equatorial Guinea,Main territory,,594,565,22,7
+15-05-2020,Saint Lucia,Main territory,,18,0,18,0
+15-05-2020,Burundi,Main territory,,15,7,7,1
+15-05-2020,Colombia,Main territory,,14216,10210,3460,546
+15-05-2020,Albania,Main territory,,916,180,705,31
+15-05-2020,El Salvador,Main territory,,1210,768,417,25
+15-05-2020,Guinea,Main territory,,2473,1563,895,15
+15-05-2020,Venezuela,Main territory,,459,220,229,10
+15-05-2020,Guatemala,Main territory,,1643,1478,135,30
+15-05-2020,Serbia,Main territory,,10438,5912,4301,225
+15-05-2020,Montenegro,Main territory,,324,4,311,9
+15-05-2020,Vietnam,Main territory,,314,54,260,0
+15-05-2020,India,Main territory,,85784,52773,30258,2753
+15-05-2020,Sierra Leone,Main territory,,447,323,97,27
+15-05-2020,Bangladesh,Main territory,,20065,15885,3882,298
+15-05-2020,Holy See,Main territory,,12,10,2,0
+15-05-2020,Iran,Main territory,,116635,17897,91836,6902
+15-05-2020,Czechia,Main territory,,8406,2730,5381,295
+15-05-2020,Oman,Main territory,,4625,3255,1350,20
+15-05-2020,Israel,Main territory,,16523,3462,12793,268
+15-05-2020,Djibouti,Main territory,,1309,370,935,4
+15-05-2020,Eswatini,Main territory,,190,122,66,2
+15-05-2020,France,Main territory,,178837,92209,59143,27485
+15-05-2020,France,St Martin,,39,6,30,3
+15-05-2020,France,Saint Pierre and Miquelon,,1,0,1,0
+15-05-2020,France,Saint Barthelemy,,6,0,6,0
+15-05-2020,France,Reunion,,441,87,354,0
+15-05-2020,France,New Caledonia,,18,0,18,0
+15-05-2020,France,Mayotte,,1210,567,627,16
+15-05-2020,France,Martinique,,192,87,91,14
+15-05-2020,France,Guadeloupe,,155,33,109,13
+15-05-2020,France,French Polynesia,,60,1,59,0
+15-05-2020,France,French Guiana,,189,64,124,1
+15-05-2020,China,Other,,0,0,0,0
+15-05-2020,China,Zhejiang,,1268,0,1267,1
+15-05-2020,China,Yunnan,,185,0,183,2
+15-05-2020,China,Xinjiang,,76,0,73,3
+15-05-2020,China,Tibet,,1,0,1,0
+15-05-2020,China,Tianjin,,191,1,187,3
+15-05-2020,China,Sichuan,,561,0,558,3
+15-05-2020,China,Shanxi,,198,0,198,0
+15-05-2020,China,Shanghai,,665,18,640,7
+15-05-2020,China,Shandong,,788,1,780,7
+15-05-2020,China,Shaanxi,,308,4,301,3
+15-05-2020,China,Qinghai,,18,0,18,0
+15-05-2020,China,Ningxia,,75,0,75,0
+15-05-2020,China,Macau,,45,2,43,0
+15-05-2020,China,Liaoning,,149,3,144,2
+15-05-2020,China,Jilin,,140,31,108,1
+15-05-2020,China,Jiangxi,,937,0,936,1
+15-05-2020,China,Jiangsu,,653,0,653,0
+15-05-2020,China,Inner Mongolia,,209,12,196,1
+15-05-2020,China,Hunan,,1019,0,1015,4
+15-05-2020,China,Hubei,,68134,6,63616,4512
+15-05-2020,China,Hong Kong,,1052,29,1019,4
+15-05-2020,China,Henan,,1276,0,1254,22
+15-05-2020,China,Heilongjiang,,945,1,931,13
+15-05-2020,China,Hebei,,328,1,321,6
+15-05-2020,China,Hainan,,169,1,162,6
+15-05-2020,China,Guizhou,,147,0,145,2
+15-05-2020,China,Guangxi,,254,0,252,2
+15-05-2020,China,Guangdong,,1589,2,1579,8
+15-05-2020,China,Gansu,,139,0,137,2
+15-05-2020,China,Fujian,,356,0,355,1
+15-05-2020,China,Chongqing,,579,0,573,6
+15-05-2020,China,Beijing,,593,8,576,9
+15-05-2020,China,Anhui,,991,0,985,6
+15-05-2020,Philippines,Main territory,,12091,8825,2460,806
+15-05-2020,Tajikistan,Main territory,,1118,1085,0,33
+15-05-2020,Saudi Arabia,Main territory,,49176,27015,21869,292
+15-05-2020,Slovakia,Main territory,,1480,322,1131,27
+15-05-2020,Suriname,Main territory,,10,0,9,1
+15-05-2020,Kenya,Main territory,,781,452,284,45
+15-05-2020,Portugal,Main territory,,28583,24065,3328,1190
+15-05-2020,Guyana,Main territory,,116,63,43,10
+15-05-2020,Lithuania,Main territory,,1521,384,1096,41
+15-05-2020,Congo (Kinshasa),Main territory,,1298,1036,212,50
+15-05-2020,US,Alaska,Chugach,1,1,0,0
+15-05-2020,US,Alaska,Copper River,0,0,0,0
+15-05-2020,US,Virgin Islands,,69,63,0,6
+15-05-2020,US,Recovered,,0,-250747,250747,0
+15-05-2020,US,Puerto Rico,,2542,2420,0,122
+15-05-2020,US,Northern Mariana Islands,,19,17,0,2
+15-05-2020,US,Guam,,154,149,0,5
+15-05-2020,US,South Dakota,Ziebach,1,1,0,0
+15-05-2020,US,Texas,Zavala,9,9,0,0
+15-05-2020,US,Texas,Zapata,7,7,0,0
+15-05-2020,US,Colorado,Yuma,12,12,0,0
+15-05-2020,US,Arizona,Yuma,310,306,0,4
+15-05-2020,US,Alaska,Yukon-Koyukuk,1,1,0,0
+15-05-2020,US,California,Yuba,25,24,0,1
+15-05-2020,US,Texas,Young,4,3,0,1
+15-05-2020,US,Virginia,York,62,59,0,3
+15-05-2020,US,South Carolina,York,280,275,0,5
+15-05-2020,US,Pennsylvania,York,828,812,0,16
+15-05-2020,US,Nebraska,York,28,28,0,0
+15-05-2020,US,Maine,York,281,273,0,8
+15-05-2020,US,California,Yolo,182,160,0,22
+15-05-2020,US,Texas,Yoakum,2,2,0,0
+15-05-2020,US,Montana,Yellowstone,83,81,0,2
+15-05-2020,US,Minnesota,Yellow Medicine,3,3,0,0
+15-05-2020,US,Arkansas,Yell,9,8,0,1
+15-05-2020,US,Mississippi,Yazoo,180,178,0,2
+15-05-2020,US,Arizona,Yavapai,254,249,0,5
+15-05-2020,US,New York,Yates,22,18,0,4
+15-05-2020,US,South Dakota,Yankton,38,38,0,0
+15-05-2020,US,North Carolina,Yancey,8,8,0,0
+15-05-2020,US,Oregon,Yamhill,55,48,0,7
+15-05-2020,US,Mississippi,Yalobusha,66,66,0,0
+15-05-2020,US,Washington,Yakima,2052,1976,0,76
+15-05-2020,US,North Carolina,Yadkin,92,91,0,1
+15-05-2020,US,Virginia,Wythe,15,14,0,1
+15-05-2020,US,West Virginia,Wyoming,1,1,0,0
+15-05-2020,US,Pennsylvania,Wyoming,28,25,0,3
+15-05-2020,US,New York,Wyoming,77,72,0,5
+15-05-2020,US,Kansas,Wyandotte,1129,1060,0,69
+15-05-2020,US,Ohio,Wyandot,29,27,0,2
+15-05-2020,US,Missouri,Wright,10,10,0,0
+15-05-2020,US,Minnesota,Wright,140,139,0,1
+15-05-2020,US,Iowa,Wright,7,7,0,0
+15-05-2020,US,Missouri,Worth,2,2,0,0
+15-05-2020,US,Iowa,Worth,2,2,0,0
+15-05-2020,US,Georgia,Worth,195,178,0,17
+15-05-2020,US,Massachusetts,Worcester,8786,8248,0,538
+15-05-2020,US,Maryland,Worcester,131,126,0,5
+15-05-2020,US,Oklahoma,Woodward,1,1,0,0
+15-05-2020,US,Kansas,Woodson,6,6,0,0
+15-05-2020,US,Oklahoma,Woods,3,3,0,0
+15-05-2020,US,Arkansas,Woodruff,1,1,0,0
+15-05-2020,US,Kentucky,Woodford,19,19,0,0
+15-05-2020,US,Illinois,Woodford,14,13,0,1
+15-05-2020,US,Iowa,Woodbury,2111,2097,0,14
+15-05-2020,US,Wisconsin,Wood,5,5,0,0
+15-05-2020,US,West Virginia,Wood,45,43,0,2
+15-05-2020,US,Texas,Wood,17,17,0,0
+15-05-2020,US,Ohio,Wood,237,205,0,32
+15-05-2020,US,Virginia,Wise,23,21,0,2
+15-05-2020,US,Texas,Wise,36,34,0,2
+15-05-2020,US,West Virginia,Wirt,3,3,0,0
+15-05-2020,US,Mississippi,Winston,73,73,0,0
+15-05-2020,US,Alabama,Winston,26,25,0,1
+15-05-2020,US,Minnesota,Winona,75,60,0,15
+15-05-2020,US,Iowa,Winneshiek,18,18,0,0
+15-05-2020,US,Wisconsin,Winnebago,112,111,0,1
+15-05-2020,US,Iowa,Winnebago,6,6,0,0
+15-05-2020,US,Illinois,Winnebago,1390,1357,0,33
+15-05-2020,US,Louisiana,Winn,76,74,0,2
+15-05-2020,US,Texas,Winkler,3,3,0,0
+15-05-2020,US,Vermont,Windsor,47,45,0,2
+15-05-2020,US,Vermont,Windham,77,74,0,3
+15-05-2020,US,Connecticut,Windham,301,289,0,12
+15-05-2020,US,Virginia,Winchester,79,78,0,1
+15-05-2020,US,Texas,Wilson,36,32,0,4
+15-05-2020,US,Tennessee,Wilson,316,308,0,8
+15-05-2020,US,North Carolina,Wilson,222,213,0,9
+15-05-2020,US,Kansas,Wilson,1,1,0,0
+15-05-2020,US,Texas,Williamson,451,432,0,19
+15-05-2020,US,Tennessee,Williamson,462,452,0,10
+15-05-2020,US,Illinois,Williamson,51,50,0,1
+15-05-2020,US,Virginia,Williamsburg,42,39,0,3
+15-05-2020,US,South Carolina,Williamsburg,165,156,0,9
+15-05-2020,US,Ohio,Williams,46,46,0,0
+15-05-2020,US,North Dakota,Williams,21,21,0,0
+15-05-2020,US,Texas,Willacy,14,13,0,1
+15-05-2020,US,Illinois,Will,4277,4040,0,237
+15-05-2020,US,Mississippi,Wilkinson,78,69,0,9
+15-05-2020,US,Georgia,Wilkinson,42,39,0,3
+15-05-2020,US,Minnesota,Wilkin,11,8,0,3
+15-05-2020,US,North Carolina,Wilkes,287,286,0,1
+15-05-2020,US,Georgia,Wilkes,28,27,0,1
+15-05-2020,US,Georgia,Wilcox,95,83,0,12
+15-05-2020,US,Alabama,Wilcox,89,84,0,5
+15-05-2020,US,Texas,Wilbarger,5,5,0,0
+15-05-2020,US,Maryland,Wicomico,777,758,0,19
+15-05-2020,US,Texas,Wichita,78,76,0,2
+15-05-2020,US,Kansas,Wichita,1,1,0,0
+15-05-2020,US,Washington,Whitman,16,16,0,0
+15-05-2020,US,Kentucky,Whitley,12,12,0,0
+15-05-2020,US,Indiana,Whitley,28,26,0,2
+15-05-2020,US,Georgia,Whitfield,177,171,0,6
+15-05-2020,US,Illinois,Whiteside,113,105,0,8
+15-05-2020,US,Nevada,White Pine,3,3,0,0
+15-05-2020,US,Tennessee,White,17,17,0,0
+15-05-2020,US,Indiana,White,164,161,0,3
+15-05-2020,US,Illinois,White,2,2,0,0
+15-05-2020,US,Georgia,White,89,87,0,2
+15-05-2020,US,Arkansas,White,36,35,0,1
+15-05-2020,US,Texas,Wheeler,14,14,0,0
+15-05-2020,US,Georgia,Wheeler,7,7,0,0
+15-05-2020,US,Montana,Wheatland,1,1,0,0
+15-05-2020,US,Washington,Whatcom,344,312,0,32
+15-05-2020,US,Texas,Wharton,42,42,0,0
+15-05-2020,US,Michigan,Wexford,11,9,0,2
+15-05-2020,US,West Virginia,Wetzel,6,6,0,0
+15-05-2020,US,Virginia,Westmoreland,42,42,0,0
+15-05-2020,US,Pennsylvania,Westmoreland,423,391,0,32
+15-05-2020,US,New York,Westchester,31943,30674,0,1269
+15-05-2020,US,Louisiana,West Feliciana,184,176,0,8
+15-05-2020,US,Louisiana,West Carroll,11,11,0,0
+15-05-2020,US,Louisiana,West Baton Rouge,150,120,0,30
+15-05-2020,US,North Dakota,Wells,2,2,0,0
+15-05-2020,US,Indiana,Wells,15,15,0,0
+15-05-2020,US,Colorado,Weld,2260,2138,0,122
+15-05-2020,US,Nebraska,Webster,5,5,0,0
+15-05-2020,US,Missouri,Webster,16,16,0,0
+15-05-2020,US,Mississippi,Webster,22,21,0,1
+15-05-2020,US,Louisiana,Webster,112,107,0,5
+15-05-2020,US,Kentucky,Webster,32,32,0,0
+15-05-2020,US,Iowa,Webster,13,12,0,1
+15-05-2020,US,Georgia,Webster,11,10,0,1
+15-05-2020,US,Utah,Weber-Morgan,216,213,0,3
+15-05-2020,US,Texas,Webb,451,434,0,17
+15-05-2020,US,Tennessee,Weakley,24,24,0,0
+15-05-2020,US,Virginia,Waynesboro,22,22,0,0
+15-05-2020,US,West Virginia,Wayne,95,86,0,9
+15-05-2020,US,Tennessee,Wayne,61,61,0,0
+15-05-2020,US,Pennsylvania,Wayne,107,100,0,7
+15-05-2020,US,Ohio,Wayne,198,151,0,47
+15-05-2020,US,North Carolina,Wayne,801,786,0,15
+15-05-2020,US,New York,Wayne,91,89,0,2
+15-05-2020,US,Nebraska,Wayne,4,4,0,0
+15-05-2020,US,Mississippi,Wayne,33,33,0,0
+15-05-2020,US,Michigan,Wayne,18882,16690,0,2192
+15-05-2020,US,Kentucky,Wayne,8,8,0,0
+15-05-2020,US,Iowa,Wayne,1,1,0,0
+15-05-2020,US,Indiana,Wayne,60,55,0,5
+15-05-2020,US,Illinois,Wayne,8,7,0,1
+15-05-2020,US,Georgia,Wayne,14,14,0,0
+15-05-2020,US,Wisconsin,Waushara,5,5,0,0
+15-05-2020,US,Wisconsin,Waupaca,16,15,0,1
+15-05-2020,US,Wisconsin,Waukesha,454,431,0,23
+15-05-2020,US,Minnesota,Watonwan,33,33,0,0
+15-05-2020,US,North Carolina,Watauga,9,9,0,0
+15-05-2020,US,Michigan,Washtenaw,1236,1149,0,87
+15-05-2020,US,Nevada,Washoe,1190,1144,0,46
+15-05-2020,US,Oklahoma,Washita,1,1,0,0
+15-05-2020,US,Wisconsin,Washington,129,125,0,4
+15-05-2020,US,Virginia,Washington,49,46,0,3
+15-05-2020,US,Vermont,Washington,38,37,0,1
+15-05-2020,US,Texas,Washington,179,157,0,22
+15-05-2020,US,Tennessee,Washington,66,66,0,0
+15-05-2020,US,Rhode Island,Washington,425,398,0,27
+15-05-2020,US,Pennsylvania,Washington,129,125,0,4
+15-05-2020,US,Oregon,Washington,620,605,0,15
+15-05-2020,US,Oklahoma,Washington,301,271,0,30
+15-05-2020,US,Ohio,Washington,116,101,0,15
+15-05-2020,US,North Carolina,Washington,26,23,0,3
+15-05-2020,US,New York,Washington,217,204,0,13
+15-05-2020,US,Nebraska,Washington,24,23,0,1
+15-05-2020,US,Missouri,Washington,9,8,0,1
+15-05-2020,US,Mississippi,Washington,100,96,0,4
+15-05-2020,US,Minnesota,Washington,305,287,0,18
+15-05-2020,US,Maryland,Washington,320,311,0,9
+15-05-2020,US,Maine,Washington,2,2,0,0
+15-05-2020,US,Louisiana,Washington,357,326,0,31
+15-05-2020,US,Kentucky,Washington,5,5,0,0
+15-05-2020,US,Kansas,Washington,0,0,0,0
+15-05-2020,US,Iowa,Washington,163,155,0,8
+15-05-2020,US,Indiana,Washington,50,49,0,1
+15-05-2020,US,Illinois,Washington,17,17,0,0
+15-05-2020,US,Idaho,Washington,13,13,0,0
+15-05-2020,US,Georgia,Washington,63,62,0,1
+15-05-2020,US,Florida,Washington,14,14,0,0
+15-05-2020,US,Colorado,Washington,9,9,0,0
+15-05-2020,US,Arkansas,Washington,131,126,0,5
+15-05-2020,US,Alabama,Washington,63,58,0,5
+15-05-2020,US,Wisconsin,Washburn,1,1,0,0
+15-05-2020,US,Wyoming,Washakie,9,9,0,0
+15-05-2020,US,Minnesota,Waseca,19,19,0,0
+15-05-2020,US,Oregon,Wasco,16,15,0,1
+15-05-2020,US,Utah,Wasatch,196,195,0,1
+15-05-2020,US,Indiana,Warrick,145,122,0,23
+15-05-2020,US,Virginia,Warren,94,92,0,2
+15-05-2020,US,Tennessee,Warren,14,14,0,0
+15-05-2020,US,Pennsylvania,Warren,2,2,0,0
+15-05-2020,US,Ohio,Warren,259,247,0,12
+15-05-2020,US,North Carolina,Warren,26,26,0,0
+15-05-2020,US,New York,Warren,228,203,0,25
+15-05-2020,US,New Jersey,Warren,1074,956,0,118
+15-05-2020,US,Missouri,Warren,28,28,0,0
+15-05-2020,US,Mississippi,Warren,129,125,0,4
+15-05-2020,US,Kentucky,Warren,751,749,0,2
+15-05-2020,US,Iowa,Warren,63,63,0,0
+15-05-2020,US,Indiana,Warren,12,11,0,1
+15-05-2020,US,Illinois,Warren,105,105,0,0
+15-05-2020,US,Georgia,Warren,16,16,0,0
+15-05-2020,US,Georgia,Ware,170,158,0,12
+15-05-2020,US,North Dakota,Ward,28,27,0,1
+15-05-2020,US,Iowa,Wapello,350,348,0,2
+15-05-2020,US,Wisconsin,Walworth,269,258,0,11
+15-05-2020,US,South Dakota,Walworth,5,5,0,0
+15-05-2020,US,Georgia,Walton,158,150,0,8
+15-05-2020,US,Florida,Walton,76,74,0,2
+15-05-2020,US,Mississippi,Walthall,44,44,0,0
+15-05-2020,US,North Dakota,Walsh,9,9,0,0
+15-05-2020,US,Oregon,Wallowa,2,2,0,0
+15-05-2020,US,Texas,Waller,38,38,0,0
+15-05-2020,US,Washington,Walla Walla,105,103,0,2
+15-05-2020,US,Texas,Walker,374,355,0,19
+15-05-2020,US,Georgia,Walker,74,74,0,0
+15-05-2020,US,Alabama,Walker,124,124,0,0
+15-05-2020,US,Maine,Waldo,50,36,0,14
+15-05-2020,US,Florida,Wakulla,31,30,0,1
+15-05-2020,US,North Carolina,Wake,1165,1137,0,28
+15-05-2020,US,Washington,Wahkiakum,4,4,0,0
+15-05-2020,US,Oklahoma,Wagoner,133,116,0,17
+15-05-2020,US,Minnesota,Wadena,4,4,0,0
+15-05-2020,US,Kansas,Wabaunsee,28,28,0,0
+15-05-2020,US,Minnesota,Wabasha,16,16,0,0
+15-05-2020,US,Indiana,Wabash,69,67,0,2
+15-05-2020,US,Illinois,Wabash,1,1,0,0
+15-05-2020,US,Florida,Volusia,590,560,0,30
+15-05-2020,US,Virginia,Virginia Beach,535,516,0,19
+15-05-2020,US,Ohio,Vinton,16,16,0,0
+15-05-2020,US,Wisconsin,Vilas,4,4,0,0
+15-05-2020,US,Indiana,Vigo,103,97,0,6
+15-05-2020,US,Texas,Victoria,154,148,0,6
+15-05-2020,US,Wisconsin,Vernon,8,8,0,0
+15-05-2020,US,Missouri,Vernon,4,4,0,0
+15-05-2020,US,Louisiana,Vernon,19,17,0,2
+15-05-2020,US,Indiana,Vermillion,7,7,0,0
+15-05-2020,US,Louisiana,Vermilion,43,40,0,3
+15-05-2020,US,Illinois,Vermilion,29,28,0,1
+15-05-2020,US,California,Ventura,764,739,0,25
+15-05-2020,US,Pennsylvania,Venango,7,7,0,0
+15-05-2020,US,Indiana,Vanderburgh,201,198,0,3
+15-05-2020,US,North Carolina,Vance,195,178,0,17
+15-05-2020,US,Texas,Van Zandt,22,21,0,1
+15-05-2020,US,Ohio,Van Wert,3,3,0,0
+15-05-2020,US,Tennessee,Van Buren,3,3,0,0
+15-05-2020,US,Michigan,Van Buren,106,101,0,5
+15-05-2020,US,Iowa,Van Buren,8,8,0,0
+15-05-2020,US,Arkansas,Van Buren,28,26,0,2
+15-05-2020,US,Nebraska,Valley,3,3,0,0
+15-05-2020,US,Idaho,Valley,2,2,0,0
+15-05-2020,US,New Mexico,Valencia,63,62,0,1
+15-05-2020,US,Texas,Val Verde,13,13,0,0
+15-05-2020,US,Texas,Uvalde,6,6,0,0
+15-05-2020,US,Utah,Utah,1455,1444,0,11
+15-05-2020,US,Georgia,Upson,257,229,0,28
+15-05-2020,US,West Virginia,Upshur,6,6,0,0
+15-05-2020,US,Texas,Upshur,18,18,0,0
+15-05-2020,US,Tennessee,Union,4,4,0,0
+15-05-2020,US,South Dakota,Union,57,57,0,0
+15-05-2020,US,South Carolina,Union,31,31,0,0
+15-05-2020,US,Pennsylvania,Union,44,43,0,1
+15-05-2020,US,Oregon,Union,5,5,0,0
+15-05-2020,US,Ohio,Union,30,30,0,0
+15-05-2020,US,North Carolina,Union,337,320,0,17
+15-05-2020,US,New Mexico,Union,3,3,0,0
+15-05-2020,US,New Jersey,Union,14506,13567,0,939
+15-05-2020,US,Mississippi,Union,59,55,0,4
+15-05-2020,US,Louisiana,Union,238,225,0,13
+15-05-2020,US,Kentucky,Union,10,10,0,0
+15-05-2020,US,Iowa,Union,1,1,0,0
+15-05-2020,US,Indiana,Union,8,8,0,0
+15-05-2020,US,Illinois,Union,117,113,0,4
+15-05-2020,US,Georgia,Union,36,35,0,1
+15-05-2020,US,Florida,Union,14,14,0,0
+15-05-2020,US,Arkansas,Union,105,101,0,4
+15-05-2020,US,Tennessee,Unicoi,3,3,0,0
+15-05-2020,US,Wyoming,Unassigned,0,-6,0,6
+15-05-2020,US,Wisconsin,Unassigned,0,0,0,0
+15-05-2020,US,West Virginia,Unassigned,0,0,0,0
+15-05-2020,US,Washington,Unassigned,125,125,0,0
+15-05-2020,US,Virginia,Unassigned,0,0,0,0
+15-05-2020,US,Vermont,Unassigned,4,4,0,0
+15-05-2020,US,Utah,Unassigned,0,0,0,0
+15-05-2020,US,Texas,Unassigned,0,0,0,0
+15-05-2020,US,Tennessee,Unassigned,0,-1,0,1
+15-05-2020,US,South Dakota,Unassigned,0,0,0,0
+15-05-2020,US,South Carolina,Unassigned,0,0,0,0
+15-05-2020,US,Rhode Island,Unassigned,1430,1278,0,152
+15-05-2020,US,Pennsylvania,Unassigned,0,0,0,0
+15-05-2020,US,Oregon,Unassigned,0,0,0,0
+15-05-2020,US,Oklahoma,Unassigned,1,1,0,0
+15-05-2020,US,Ohio,Unassigned,0,0,0,0
+15-05-2020,US,North Dakota,Unassigned,0,-6,0,6
+15-05-2020,US,North Carolina,Unassigned,0,0,0,0
+15-05-2020,US,New York,Unassigned,0,0,0,0
+15-05-2020,US,New Mexico,Unassigned,74,74,0,0
+15-05-2020,US,New Jersey,Unassigned,0,0,0,0
+15-05-2020,US,New Hampshire,Unassigned,34,15,0,19
+15-05-2020,US,Nevada,Unassigned,0,0,0,0
+15-05-2020,US,Nebraska,Unassigned,0,-43,0,43
+15-05-2020,US,Montana,Unassigned,0,0,0,0
+15-05-2020,US,Missouri,Unassigned,3,3,0,0
+15-05-2020,US,Mississippi,Unassigned,0,0,0,0
+15-05-2020,US,Minnesota,Unassigned,24,15,0,9
+15-05-2020,US,Michigan,Unassigned,15,14,0,1
+15-05-2020,US,Massachusetts,Unassigned,285,283,0,2
+15-05-2020,US,Maryland,Unassigned,0,-91,0,91
+15-05-2020,US,Maine,Unassigned,2,2,0,0
+15-05-2020,US,Louisiana,Unassigned,65,-1,0,66
+15-05-2020,US,Kentucky,Unassigned,31,31,0,0
+15-05-2020,US,Kansas,Unassigned,0,0,0,0
+15-05-2020,US,Iowa,Unassigned,10,10,0,0
+15-05-2020,US,Indiana,Unassigned,0,-134,0,134
+15-05-2020,US,Illinois,Unassigned,50,49,0,1
+15-05-2020,US,Idaho,Unassigned,0,0,0,0
+15-05-2020,US,Hawaii,Unassigned,0,0,0,0
+15-05-2020,US,Georgia,Unassigned,1644,1644,0,0
+15-05-2020,US,Florida,Unassigned,78,78,0,0
+15-05-2020,US,Delaware,Unassigned,43,43,0,0
+15-05-2020,US,Connecticut,Unassigned,238,235,0,3
+15-05-2020,US,Colorado,Unassigned,61,60,0,1
+15-05-2020,US,California,Unassigned,0,0,0,0
+15-05-2020,US,Arkansas,Unassigned,139,139,0,0
+15-05-2020,US,Arizona,Unassigned,0,-1,0,1
+15-05-2020,US,Alaska,Unassigned,1,1,0,0
+15-05-2020,US,Alabama,Unassigned,0,0,0,0
+15-05-2020,US,Oregon,Umatilla,91,89,0,2
+15-05-2020,US,New York,Ulster,1511,1447,0,64
+15-05-2020,US,Wyoming,Uinta,9,9,0,0
+15-05-2020,US,North Carolina,Tyrrell,4,4,0,0
+15-05-2020,US,West Virginia,Tyler,3,3,0,0
+15-05-2020,US,Texas,Tyler,7,7,0,0
+15-05-2020,US,Idaho,Twin Falls,298,285,0,13
+15-05-2020,US,Georgia,Twiggs,9,9,0,0
+15-05-2020,US,Michigan,Tuscola,166,149,0,17
+15-05-2020,US,Ohio,Tuscarawas,246,245,0,1
+15-05-2020,US,Alabama,Tuscaloosa,339,331,0,8
+15-05-2020,US,South Dakota,Turner,19,19,0,0
+15-05-2020,US,Georgia,Turner,81,69,0,12
+15-05-2020,US,California,Tuolumne,2,2,0,0
+15-05-2020,US,Mississippi,Tunica,44,42,0,2
+15-05-2020,US,Oklahoma,Tulsa,752,715,0,37
+15-05-2020,US,California,Tulare,1338,1274,0,64
+15-05-2020,US,West Virginia,Tucker,4,4,0,0
+15-05-2020,US,Ohio,Trumbull,440,397,0,43
+15-05-2020,US,Tennessee,Trousdale,1382,1378,0,4
+15-05-2020,US,Georgia,Troup,195,189,0,6
+15-05-2020,US,South Dakota,Tripp,1,1,0,0
+15-05-2020,US,Texas,Trinity,11,11,0,0
+15-05-2020,US,California,Trinity,1,1,0,0
+15-05-2020,US,Kentucky,Trimble,3,3,0,0
+15-05-2020,US,Kentucky,Trigg,9,9,0,0
+15-05-2020,US,Utah,TriCounty,16,16,0,0
+15-05-2020,US,Georgia,Treutlen,7,7,0,0
+15-05-2020,US,Wisconsin,Trempealeau,7,7,0,0
+15-05-2020,US,Texas,Travis,2381,2304,0,77
+15-05-2020,US,Minnesota,Traverse,3,3,0,0
+15-05-2020,US,North Carolina,Transylvania,7,7,0,0
+15-05-2020,US,North Dakota,Traill,1,1,0,0
+15-05-2020,US,Georgia,Towns,21,20,0,1
+15-05-2020,US,New Mexico,Torrance,18,17,0,1
+15-05-2020,US,Georgia,Toombs,43,39,0,4
+15-05-2020,US,Montana,Toole,29,23,0,6
+15-05-2020,US,Utah,Tooele,86,86,0,0
+15-05-2020,US,New York,Tompkins,136,136,0,0
+15-05-2020,US,Texas,Tom Green,86,85,0,1
+15-05-2020,US,Connecticut,Tolland,583,532,0,51
+15-05-2020,US,South Dakota,Todd,15,15,0,0
+15-05-2020,US,Minnesota,Todd,46,46,0,0
+15-05-2020,US,Kentucky,Todd,17,17,0,0
+15-05-2020,US,Texas,Titus,83,82,0,1
+15-05-2020,US,Mississippi,Tishomingo,13,13,0,0
+15-05-2020,US,Tennessee,Tipton,402,400,0,2
+15-05-2020,US,Indiana,Tipton,21,20,0,1
+15-05-2020,US,Indiana,Tippecanoe,281,279,0,2
+15-05-2020,US,Mississippi,Tippah,67,56,0,11
+15-05-2020,US,Pennsylvania,Tioga,16,15,0,1
+15-05-2020,US,New York,Tioga,110,90,0,20
+15-05-2020,US,Oklahoma,Tillman,21,20,0,1
+15-05-2020,US,Oregon,Tillamook,6,6,0,0
+15-05-2020,US,Georgia,Tift,175,164,0,11
+15-05-2020,US,Washington,Thurston,122,121,0,1
+15-05-2020,US,Nebraska,Thurston,18,18,0,0
+15-05-2020,US,Nebraska,Thomas,1,1,0,0
+15-05-2020,US,Georgia,Thomas,281,252,0,29
+15-05-2020,US,Nebraska,Thayer,1,1,0,0
+15-05-2020,US,Oklahoma,Texas,606,602,0,4
+15-05-2020,US,Missouri,Texas,0,0,0,0
+15-05-2020,US,Wyoming,Teton,99,99,0,0
+15-05-2020,US,Idaho,Teton,11,11,0,0
+15-05-2020,US,Texas,Terry,12,12,0,0
+15-05-2020,US,Georgia,Terrell,199,175,0,24
+15-05-2020,US,Louisiana,Terrebonne,557,514,0,43
+15-05-2020,US,Louisiana,Tensas,6,6,0,0
+15-05-2020,US,Colorado,Teller,31,29,0,2
+15-05-2020,US,Georgia,Telfair,29,28,0,1
+15-05-2020,US,California,Tehama,1,0,0,1
+15-05-2020,US,Virginia,Tazewell,6,6,0,0
+15-05-2020,US,Illinois,Tazewell,62,59,0,3
+15-05-2020,US,West Virginia,Taylor,8,8,0,0
+15-05-2020,US,Texas,Taylor,215,209,0,6
+15-05-2020,US,Kentucky,Taylor,9,9,0,0
+15-05-2020,US,Iowa,Taylor,1,1,0,0
+15-05-2020,US,Georgia,Taylor,22,20,0,2
+15-05-2020,US,Florida,Taylor,3,3,0,0
+15-05-2020,US,Georgia,Tattnall,11,11,0,0
+15-05-2020,US,Mississippi,Tate,55,55,0,0
+15-05-2020,US,Texas,Tarrant,4350,4196,0,154
+15-05-2020,US,New Mexico,Taos,23,23,0,0
+15-05-2020,US,Louisiana,Tangipahoa,707,677,0,30
+15-05-2020,US,Missouri,Taney,12,10,0,2
+15-05-2020,US,Iowa,Tama,350,335,0,15
+15-05-2020,US,Alabama,Tallapoosa,357,300,0,57
+15-05-2020,US,Mississippi,Tallahatchie,18,17,0,1
+15-05-2020,US,Alabama,Talladega,78,76,0,2
+15-05-2020,US,Georgia,Taliaferro,1,1,0,0
+15-05-2020,US,Maryland,Talbot,65,64,0,1
+15-05-2020,US,Georgia,Talbot,28,27,0,1
+15-05-2020,US,Indiana,Switzerland,15,15,0,0
+15-05-2020,US,Texas,Swisher,14,14,0,0
+15-05-2020,US,Minnesota,Swift,11,11,0,0
+15-05-2020,US,Wyoming,Sweetwater,22,22,0,0
+15-05-2020,US,North Carolina,Swain,6,6,0,0
+15-05-2020,US,Florida,Suwannee,151,133,0,18
+15-05-2020,US,California,Sutter,37,35,0,2
+15-05-2020,US,Virginia,Sussex,67,66,0,1
+15-05-2020,US,New Jersey,Sussex,1051,914,0,137
+15-05-2020,US,Delaware,Sussex,3565,3426,0,139
+15-05-2020,US,Pennsylvania,Susquehanna,82,68,0,14
+15-05-2020,US,Virginia,Surry,6,5,0,1
+15-05-2020,US,North Carolina,Surry,67,66,0,1
+15-05-2020,US,Mississippi,Sunflower,69,66,0,3
+15-05-2020,US,South Carolina,Sumter,313,297,0,16
+15-05-2020,US,Georgia,Sumter,413,375,0,38
+15-05-2020,US,Florida,Sumter,250,234,0,16
+15-05-2020,US,Alabama,Sumter,119,115,0,4
+15-05-2020,US,Tennessee,Sumner,724,683,0,41
+15-05-2020,US,Kansas,Sumner,6,5,0,1
+15-05-2020,US,Utah,Summit,396,396,0,0
+15-05-2020,US,Ohio,Summit,989,856,0,133
+15-05-2020,US,Colorado,Summit,178,177,0,1
+15-05-2020,US,West Virginia,Summers,1,1,0,0
+15-05-2020,US,South Dakota,Sully,1,1,0,0
+15-05-2020,US,Tennessee,Sullivan,57,55,0,2
+15-05-2020,US,Pennsylvania,Sullivan,2,2,0,0
+15-05-2020,US,New York,Sullivan,1189,1164,0,25
+15-05-2020,US,New Hampshire,Sullivan,16,15,0,1
+15-05-2020,US,Missouri,Sullivan,13,13,0,0
+15-05-2020,US,Indiana,Sullivan,25,25,0,0
+15-05-2020,US,Virginia,Suffolk,255,233,0,22
+15-05-2020,US,New York,Suffolk,37719,36010,0,1709
+15-05-2020,US,Massachusetts,Suffolk,15996,15228,0,768
+15-05-2020,US,Wyoming,Sublette,3,3,0,0
+15-05-2020,US,North Dakota,Stutsman,16,16,0,0
+15-05-2020,US,New Hampshire,Strafford,221,210,0,11
+15-05-2020,US,Iowa,Story,73,72,0,1
+15-05-2020,US,Nevada,Storey,1,1,0,0
+15-05-2020,US,Missouri,Stone,3,3,0,0
+15-05-2020,US,Mississippi,Stone,24,24,0,0
+15-05-2020,US,Arkansas,Stone,8,8,0,0
+15-05-2020,US,North Carolina,Stokes,23,23,0,0
+15-05-2020,US,Missouri,Stoddard,34,34,0,0
+15-05-2020,US,Montana,Stillwater,1,1,0,0
+15-05-2020,US,Tennessee,Stewart,7,7,0,0
+15-05-2020,US,Georgia,Stewart,37,37,0,0
+15-05-2020,US,Washington,Stevens,9,8,0,1
+15-05-2020,US,Minnesota,Stevens,1,1,0,0
+15-05-2020,US,Kansas,Stevens,26,26,0,0
+15-05-2020,US,New York,Steuben,231,192,0,39
+15-05-2020,US,Indiana,Steuben,67,65,0,2
+15-05-2020,US,Illinois,Stephenson,135,135,0,0
+15-05-2020,US,Texas,Stephens,2,2,0,0
+15-05-2020,US,Oklahoma,Stephens,23,22,0,1
+15-05-2020,US,Georgia,Stephens,97,96,0,1
+15-05-2020,US,Minnesota,Steele,92,92,0,0
+15-05-2020,US,Minnesota,Stearns,1641,1632,0,9
+15-05-2020,US,Missouri,Ste. Genevieve,8,7,0,1
+15-05-2020,US,Virginia,Staunton,34,34,0,0
+15-05-2020,US,Texas,Starr,16,16,0,0
+15-05-2020,US,Indiana,Starke,26,24,0,2
+15-05-2020,US,Ohio,Stark,548,482,0,66
+15-05-2020,US,North Dakota,Stark,61,59,0,2
+15-05-2020,US,Illinois,Stark,1,1,0,0
+15-05-2020,US,Nebraska,Stanton,15,15,0,0
+15-05-2020,US,Kansas,Stanton,9,9,0,0
+15-05-2020,US,North Carolina,Stanly,32,28,0,4
+15-05-2020,US,South Dakota,Stanley,9,9,0,0
+15-05-2020,US,California,Stanislaus,544,521,0,23
+15-05-2020,US,Virginia,Stafford,442,438,0,4
+15-05-2020,US,Kansas,Stafford,1,1,0,0
+15-05-2020,US,Louisiana,St. Tammany,1520,1377,0,143
+15-05-2020,US,Maryland,St. Mary's,299,290,0,9
+15-05-2020,US,Louisiana,St. Mary,268,240,0,28
+15-05-2020,US,Louisiana,St. Martin,278,256,0,22
+15-05-2020,US,Florida,St. Lucie,313,286,0,27
+15-05-2020,US,Missouri,St. Louis City,1654,1554,0,100
+15-05-2020,US,Missouri,St. Louis,4172,3854,0,318
+15-05-2020,US,Minnesota,St. Louis,100,88,0,12
+15-05-2020,US,New York,St. Lawrence,192,190,0,2
+15-05-2020,US,Louisiana,St. Landry,244,193,0,51
+15-05-2020,US,Michigan,St. Joseph,82,81,0,1
+15-05-2020,US,Indiana,St. Joseph,921,891,0,30
+15-05-2020,US,Florida,St. Johns,231,226,0,5
+15-05-2020,US,Louisiana,St. John the Baptist,830,753,0,77
+15-05-2020,US,Louisiana,St. James,284,261,0,23
+15-05-2020,US,Louisiana,St. Helena,40,39,0,1
+15-05-2020,US,Missouri,St. Francois,33,31,0,2
+15-05-2020,US,Arkansas,St. Francis,333,333,0,0
+15-05-2020,US,Wisconsin,St. Croix,37,37,0,0
+15-05-2020,US,Missouri,St. Clair,2,2,0,0
+15-05-2020,US,Michigan,St. Clair,399,369,0,30
+15-05-2020,US,Illinois,St. Clair,765,702,0,63
+15-05-2020,US,Alabama,St. Clair,95,94,0,1
+15-05-2020,US,Missouri,St. Charles,688,636,0,52
+15-05-2020,US,Louisiana,St. Charles,606,565,0,41
+15-05-2020,US,Louisiana,St. Bernard,517,499,0,18
+15-05-2020,US,Virginia,Spotsylvania,291,287,0,4
+15-05-2020,US,Washington,Spokane,393,363,0,30
+15-05-2020,US,South Dakota,Spink,4,4,0,0
+15-05-2020,US,Kentucky,Spencer,16,16,0,0
+15-05-2020,US,Indiana,Spencer,7,6,0,1
+15-05-2020,US,South Carolina,Spartanburg,376,363,0,13
+15-05-2020,US,Georgia,Spalding,239,224,0,15
+15-05-2020,US,Utah,Southwest Utah,200,197,0,3
+15-05-2020,US,Utah,Southeast Utah,13,13,0,0
+15-05-2020,US,Alaska,Southeast Fairbanks,3,3,0,0
+15-05-2020,US,Virginia,Southampton,135,133,0,2
+15-05-2020,US,California,Sonoma,351,347,0,4
+15-05-2020,US,Pennsylvania,Somerset,32,31,0,1
+15-05-2020,US,New Jersey,Somerset,4193,3834,0,359
+15-05-2020,US,Maryland,Somerset,54,54,0,0
+15-05-2020,US,Maine,Somerset,19,19,0,0
+15-05-2020,US,California,Solano,408,394,0,14
+15-05-2020,US,New Mexico,Socorro,49,45,0,4
+15-05-2020,US,Pennsylvania,Snyder,33,31,0,2
+15-05-2020,US,Washington,Snohomish,2756,2630,0,126
+15-05-2020,US,Virginia,Smyth,15,15,0,0
+15-05-2020,US,Texas,Smith,189,186,0,3
+15-05-2020,US,Tennessee,Smith,24,23,0,1
+15-05-2020,US,Mississippi,Smith,109,102,0,7
+15-05-2020,US,Kansas,Smith,2,2,0,0
+15-05-2020,US,North Dakota,Slope,3,3,0,0
+15-05-2020,US,Washington,Skamania,3,3,0,0
+15-05-2020,US,Washington,Skagit,423,410,0,13
+15-05-2020,US,Alaska,Sitka,1,1,0,0
+15-05-2020,US,California,Siskiyou,5,5,0,0
+15-05-2020,US,North Dakota,Sioux,1,1,0,0
+15-05-2020,US,Iowa,Sioux,126,126,0,0
+15-05-2020,US,Mississippi,Simpson,75,75,0,0
+15-05-2020,US,Kentucky,Simpson,35,33,0,2
+15-05-2020,US,Montana,Silver Bow,11,11,0,0
+15-05-2020,US,New Mexico,Sierra,1,1,0,0
+15-05-2020,US,Minnesota,Sibley,4,4,0,0
+15-05-2020,US,Michigan,Shiawassee,222,203,0,19
+15-05-2020,US,Texas,Sherman,23,23,0,0
+15-05-2020,US,Oregon,Sherman,1,1,0,0
+15-05-2020,US,Nebraska,Sherman,2,2,0,0
+15-05-2020,US,Kansas,Sherman,5,5,0,0
+15-05-2020,US,Wyoming,Sheridan,16,16,0,0
+15-05-2020,US,Kansas,Sheridan,2,2,0,0
+15-05-2020,US,Minnesota,Sherburne,135,134,0,1
+15-05-2020,US,Virginia,Shenandoah,285,275,0,10
+15-05-2020,US,Texas,Shelby,172,167,0,5
+15-05-2020,US,Tennessee,Shelby,3595,3514,0,81
+15-05-2020,US,Ohio,Shelby,35,33,0,2
+15-05-2020,US,Missouri,Shelby,1,1,0,0
+15-05-2020,US,Kentucky,Shelby,65,62,0,3
+15-05-2020,US,Iowa,Shelby,20,20,0,0
+15-05-2020,US,Indiana,Shelby,278,259,0,19
+15-05-2020,US,Illinois,Shelby,12,11,0,1
+15-05-2020,US,Alabama,Shelby,399,380,0,19
+15-05-2020,US,Wisconsin,Sheboygan,68,65,0,3
+15-05-2020,US,Kansas,Shawnee,184,179,0,5
+15-05-2020,US,Wisconsin,Shawano,29,29,0,0
+15-05-2020,US,California,Shasta,33,29,0,4
+15-05-2020,US,Arkansas,Sharp,37,35,0,2
+15-05-2020,US,Mississippi,Sharkey,5,5,0,0
+15-05-2020,US,Texas,Shackelford,1,1,0,0
+15-05-2020,US,Nebraska,Seward,23,22,0,1
+15-05-2020,US,Kansas,Seward,758,757,0,1
+15-05-2020,US,Tennessee,Sevier,66,64,0,2
+15-05-2020,US,Arkansas,Sevier,25,24,0,1
+15-05-2020,US,Oklahoma,Sequoyah,14,11,0,3
+15-05-2020,US,Tennessee,Sequatchie,10,10,0,0
+15-05-2020,US,Ohio,Seneca,15,13,0,2
+15-05-2020,US,New York,Seneca,49,49,0,0
+15-05-2020,US,Oklahoma,Seminole,21,19,0,2
+15-05-2020,US,Georgia,Seminole,40,38,0,2
+15-05-2020,US,Florida,Seminole,429,418,0,11
+15-05-2020,US,Kansas,Sedgwick,530,510,0,20
+15-05-2020,US,Arkansas,Sebastian,15,15,0,0
+15-05-2020,US,Arkansas,Searcy,6,6,0,0
+15-05-2020,US,Texas,Scurry,2,2,0,0
+15-05-2020,US,Georgia,Screven,18,17,0,1
+15-05-2020,US,Nebraska,Scotts Bluff,51,51,0,0
+15-05-2020,US,Virginia,Scott,7,5,0,2
+15-05-2020,US,Tennessee,Scott,11,11,0,0
+15-05-2020,US,Missouri,Scott,85,79,0,6
+15-05-2020,US,Mississippi,Scott,504,498,0,6
+15-05-2020,US,Minnesota,Scott,207,206,0,1
+15-05-2020,US,Kentucky,Scott,34,34,0,0
+15-05-2020,US,Kansas,Scott,8,8,0,0
+15-05-2020,US,Iowa,Scott,297,289,0,8
+15-05-2020,US,Indiana,Scott,90,88,0,2
+15-05-2020,US,Arkansas,Scott,1,1,0,0
+15-05-2020,US,North Carolina,Scotland,48,48,0,0
+15-05-2020,US,Missouri,Scotland,4,4,0,0
+15-05-2020,US,Ohio,Scioto,13,13,0,0
+15-05-2020,US,Pennsylvania,Schuylkill,506,491,0,15
+15-05-2020,US,New York,Schuyler,8,8,0,0
+15-05-2020,US,Illinois,Schuyler,7,7,0,0
+15-05-2020,US,Michigan,Schoolcraft,4,4,0,0
+15-05-2020,US,New York,Schoharie,47,47,0,0
+15-05-2020,US,Georgia,Schley,15,14,0,1
+15-05-2020,US,New York,Schenectady,603,575,0,28
+15-05-2020,US,Wisconsin,Sawyer,4,4,0,0
+15-05-2020,US,Nebraska,Saunders,18,18,0,0
+15-05-2020,US,Wisconsin,Sauk,76,73,0,3
+15-05-2020,US,Nebraska,Sarpy,309,308,0,1
+15-05-2020,US,North Dakota,Sargent,3,3,0,0
+15-05-2020,US,New York,Saratoga,421,410,0,11
+15-05-2020,US,Florida,Sarasota,496,438,0,58
+15-05-2020,US,Florida,Santa Rosa,182,173,0,9
+15-05-2020,US,New Mexico,Santa Fe,114,111,0,3
+15-05-2020,US,California,Santa Cruz,149,147,0,2
+15-05-2020,US,Arizona,Santa Cruz,69,69,0,0
+15-05-2020,US,California,Santa Clara,2391,2256,0,135
+15-05-2020,US,California,Santa Barbara,1387,1376,0,11
+15-05-2020,US,Michigan,Sanilac,38,33,0,5
+15-05-2020,US,Illinois,Sangamon,299,274,0,25
+15-05-2020,US,Ohio,Sandusky,56,48,0,8
+15-05-2020,US,New Mexico,Sandoval,483,461,0,22
+15-05-2020,US,South Dakota,Sanborn,4,4,0,0
+15-05-2020,US,Texas,San Patricio,25,25,0,0
+15-05-2020,US,New Mexico,San Miguel,9,9,0,0
+15-05-2020,US,Colorado,San Miguel,22,22,0,0
+15-05-2020,US,California,San Mateo,1575,1509,0,66
+15-05-2020,US,California,San Luis Obispo,240,239,0,1
+15-05-2020,US,Washington,San Juan,15,15,0,0
+15-05-2020,US,Utah,San Juan,159,155,0,4
+15-05-2020,US,New Mexico,San Juan,1274,1190,0,84
+15-05-2020,US,Colorado,San Juan,1,1,0,0
+15-05-2020,US,California,San Joaquin,659,628,0,31
+15-05-2020,US,Texas,San Jacinto,12,12,0,0
+15-05-2020,US,California,San Francisco,2026,1990,0,36
+15-05-2020,US,California,San Diego,5391,5191,0,200
+15-05-2020,US,California,San Bernardino,3311,3162,0,149
+15-05-2020,US,California,San Benito,59,57,0,2
+15-05-2020,US,Texas,San Augustine,22,21,0,1
+15-05-2020,US,North Carolina,Sampson,219,218,0,1
+15-05-2020,US,South Carolina,Saluda,98,98,0,0
+15-05-2020,US,Utah,Salt Lake,3709,3657,0,52
+15-05-2020,US,Nebraska,Saline,403,403,0,0
+15-05-2020,US,Missouri,Saline,241,241,0,0
+15-05-2020,US,Kansas,Saline,23,21,0,2
+15-05-2020,US,Illinois,Saline,6,6,0,0
+15-05-2020,US,Arkansas,Saline,80,79,0,1
+15-05-2020,US,Virginia,Salem,32,32,0,0
+15-05-2020,US,New Jersey,Salem,446,428,0,18
+15-05-2020,US,Colorado,Saguache,16,16,0,0
+15-05-2020,US,Michigan,Saginaw,877,782,0,95
+15-05-2020,US,Maine,Sagadahoc,26,26,0,0
+15-05-2020,US,California,Sacramento,1211,1157,0,54
+15-05-2020,US,Iowa,Sac,4,4,0,0
+15-05-2020,US,Texas,Sabine,3,3,0,0
+15-05-2020,US,Louisiana,Sabine,29,29,0,0
+15-05-2020,US,Vermont,Rutland,49,48,0,1
+15-05-2020,US,Tennessee,Rutherford,814,795,0,19
+15-05-2020,US,North Carolina,Rutherford,153,146,0,7
+15-05-2020,US,Virginia,Russell,6,6,0,0
+15-05-2020,US,Kentucky,Russell,19,15,0,4
+15-05-2020,US,Alabama,Russell,95,95,0,0
+15-05-2020,US,Wisconsin,Rusk,4,4,0,0
+15-05-2020,US,Texas,Rusk,40,39,0,1
+15-05-2020,US,Indiana,Rush,40,38,0,2
+15-05-2020,US,Texas,Runnels,2,2,0,0
+15-05-2020,US,North Carolina,Rowan,517,491,0,26
+15-05-2020,US,Kentucky,Rowan,6,6,0,0
+15-05-2020,US,Colorado,Routt,59,53,0,6
+15-05-2020,US,Ohio,Ross,58,57,0,1
+15-05-2020,US,Minnesota,Roseau,1,1,0,0
+15-05-2020,US,Michigan,Roscommon,21,21,0,0
+15-05-2020,US,New Mexico,Roosevelt,14,14,0,0
+15-05-2020,US,Montana,Roosevelt,7,7,0,0
+15-05-2020,US,Kansas,Rooks,6,6,0,0
+15-05-2020,US,North Dakota,Rolette,4,4,0,0
+15-05-2020,US,Oklahoma,Rogers,72,67,0,5
+15-05-2020,US,Texas,Rockwall,138,133,0,5
+15-05-2020,US,New York,Rockland,12637,12035,0,602
+15-05-2020,US,Virginia,Rockingham,388,386,0,2
+15-05-2020,US,North Carolina,Rockingham,44,42,0,2
+15-05-2020,US,New Hampshire,Rockingham,1040,987,0,53
+15-05-2020,US,Georgia,Rockdale,249,242,0,7
+15-05-2020,US,Kentucky,Rockcastle,12,12,0,0
+15-05-2020,US,Virginia,Rockbridge,10,10,0,0
+15-05-2020,US,Illinois,Rock Island,563,545,0,18
+15-05-2020,US,Wisconsin,Rock,406,392,0,14
+15-05-2020,US,Minnesota,Rock,19,19,0,0
+15-05-2020,US,North Carolina,Robeson,519,508,0,11
+15-05-2020,US,Texas,Robertson,6,6,0,0
+15-05-2020,US,Tennessee,Robertson,263,263,0,0
+15-05-2020,US,Texas,Roberts,2,2,0,0
+15-05-2020,US,South Dakota,Roberts,18,18,0,0
+15-05-2020,US,Virginia,Roanoke City,120,119,0,1
+15-05-2020,US,Virginia,Roanoke,83,82,0,1
+15-05-2020,US,West Virginia,Roane,8,8,0,0
+15-05-2020,US,Tennessee,Roane,8,8,0,0
+15-05-2020,US,California,Riverside,5618,5376,0,242
+15-05-2020,US,West Virginia,Ritchie,1,1,0,0
+15-05-2020,US,Missouri,Ripley,6,6,0,0
+15-05-2020,US,Indiana,Ripley,106,100,0,6
+15-05-2020,US,Colorado,Rio Grande,7,7,0,0
+15-05-2020,US,Colorado,Rio Blanco,1,1,0,0
+15-05-2020,US,New Mexico,Rio Arriba,30,30,0,0
+15-05-2020,US,Kansas,Riley,60,59,0,1
+15-05-2020,US,Virginia,Richmond City,665,647,0,18
+15-05-2020,US,Virginia,Richmond,201,197,0,4
+15-05-2020,US,North Carolina,Richmond,104,102,0,2
+15-05-2020,US,Georgia,Richmond,490,473,0,17
+15-05-2020,US,Wisconsin,Richland,13,11,0,2
+15-05-2020,US,South Carolina,Richland,1196,1136,0,60
+15-05-2020,US,Ohio,Richland,150,148,0,2
+15-05-2020,US,North Dakota,Richland,9,9,0,0
+15-05-2020,US,Montana,Richland,3,3,0,0
+15-05-2020,US,Louisiana,Richland,106,105,0,1
+15-05-2020,US,Illinois,Richland,3,3,0,0
+15-05-2020,US,Nebraska,Richardson,1,1,0,0
+15-05-2020,US,Minnesota,Rice,197,195,0,2
+15-05-2020,US,Kansas,Rice,4,4,0,0
+15-05-2020,US,Tennessee,Rhea,7,7,0,0
+15-05-2020,US,Missouri,Reynolds,2,2,0,0
+15-05-2020,US,Kansas,Republic,4,4,0,0
+15-05-2020,US,North Dakota,Renville,1,1,0,0
+15-05-2020,US,Minnesota,Renville,5,5,0,0
+15-05-2020,US,New York,Rensselaer,428,405,0,23
+15-05-2020,US,Kansas,Reno,41,41,0,0
+15-05-2020,US,Texas,Refugio,3,3,0,0
+15-05-2020,US,Texas,Reeves,7,7,0,0
+15-05-2020,US,Minnesota,Redwood,3,3,0,0
+15-05-2020,US,Nebraska,Red Willow,5,5,0,0
+15-05-2020,US,Texas,Red River,35,35,0,0
+15-05-2020,US,Louisiana,Red River,40,34,0,6
+15-05-2020,US,Minnesota,Red Lake,2,2,0,0
+15-05-2020,US,Missouri,Ray,12,12,0,0
+15-05-2020,US,Montana,Ravalli,5,5,0,0
+15-05-2020,US,Virginia,Rappahannock,11,11,0,0
+15-05-2020,US,Louisiana,Rapides,424,410,0,14
+15-05-2020,US,North Dakota,Ransom,3,3,0,0
+15-05-2020,US,Mississippi,Rankin,276,270,0,6
+15-05-2020,US,West Virginia,Randolph,5,5,0,0
+15-05-2020,US,North Carolina,Randolph,422,416,0,6
+15-05-2020,US,Missouri,Randolph,8,8,0,0
+15-05-2020,US,Indiana,Randolph,29,26,0,3
+15-05-2020,US,Illinois,Randolph,234,231,0,3
+15-05-2020,US,Georgia,Randolph,169,148,0,21
+15-05-2020,US,Arkansas,Randolph,22,22,0,0
+15-05-2020,US,Alabama,Randolph,124,117,0,7
+15-05-2020,US,Texas,Randall,477,473,0,4
+15-05-2020,US,North Dakota,Ramsey,7,7,0,0
+15-05-2020,US,Minnesota,Ramsey,1287,1226,0,61
+15-05-2020,US,Missouri,Ralls,2,2,0,0
+15-05-2020,US,West Virginia,Raleigh,10,10,0,0
+15-05-2020,US,Texas,Rains,2,2,0,0
+15-05-2020,US,Virginia,Radford,3,3,0,0
+15-05-2020,US,Wisconsin,Racine,920,902,0,18
+15-05-2020,US,Georgia,Rabun,14,13,0,1
+15-05-2020,US,Mississippi,Quitman,20,20,0,0
+15-05-2020,US,Georgia,Quitman,8,7,0,1
+15-05-2020,US,Maryland,Queen Anne's,108,99,0,9
+15-05-2020,US,New Mexico,Quay,5,4,0,1
+15-05-2020,US,West Virginia,Putnam,29,29,0,0
+15-05-2020,US,Tennessee,Putnam,206,201,0,5
+15-05-2020,US,Ohio,Putnam,80,71,0,9
+15-05-2020,US,New York,Putnam,1121,1065,0,56
+15-05-2020,US,Indiana,Putnam,95,90,0,5
+15-05-2020,US,Georgia,Putnam,62,55,0,7
+15-05-2020,US,Florida,Putnam,127,124,0,3
+15-05-2020,US,Oklahoma,Pushmataha,1,1,0,0
+15-05-2020,US,Virginia,Pulaski,10,10,0,0
+15-05-2020,US,Missouri,Pulaski,36,35,0,1
+15-05-2020,US,Kentucky,Pulaski,47,45,0,2
+15-05-2020,US,Indiana,Pulaski,34,34,0,0
+15-05-2020,US,Illinois,Pulaski,40,40,0,0
+15-05-2020,US,Georgia,Pulaski,36,35,0,1
+15-05-2020,US,Arkansas,Pulaski,669,646,0,23
+15-05-2020,US,Colorado,Pueblo,195,182,0,13
+15-05-2020,US,Colorado,Prowers,10,10,0,0
+15-05-2020,US,Rhode Island,Providence,9112,8725,0,387
+15-05-2020,US,Alaska,Prince of Wales-Hyder,2,2,0,0
+15-05-2020,US,Virginia,Prince William,3421,3354,0,67
+15-05-2020,US,Maryland,Prince George's,10791,10378,0,413
+15-05-2020,US,Virginia,Prince George,49,49,0,0
+15-05-2020,US,Virginia,Prince Edward,72,70,0,2
+15-05-2020,US,Wisconsin,Price,1,1,0,0
+15-05-2020,US,West Virginia,Preston,15,15,0,0
+15-05-2020,US,Michigan,Presque Isle,11,11,0,0
+15-05-2020,US,Mississippi,Prentiss,36,34,0,2
+15-05-2020,US,Ohio,Preble,28,26,0,2
+15-05-2020,US,Kansas,Pratt,1,1,0,0
+15-05-2020,US,Arkansas,Prairie,2,2,0,0
+15-05-2020,US,Virginia,Powhatan,23,23,0,0
+15-05-2020,US,Iowa,Poweshiek,83,75,0,8
+15-05-2020,US,Idaho,Power,3,3,0,0
+15-05-2020,US,Kentucky,Powell,1,1,0,0
+15-05-2020,US,Texas,Potter,1462,1439,0,23
+15-05-2020,US,Pennsylvania,Potter,4,4,0,0
+15-05-2020,US,Iowa,Pottawattamie,151,149,0,2
+15-05-2020,US,Oklahoma,Pottawatomie,55,51,0,4
+15-05-2020,US,Kansas,Pottawatomie,19,19,0,0
+15-05-2020,US,Indiana,Posey,16,16,0,0
+15-05-2020,US,Virginia,Portsmouth,219,209,0,10
+15-05-2020,US,Indiana,Porter,381,370,0,11
+15-05-2020,US,Wisconsin,Portage,7,7,0,0
+15-05-2020,US,Ohio,Portage,289,244,0,45
+15-05-2020,US,Virginia,Poquoson,7,7,0,0
+15-05-2020,US,Minnesota,Pope,5,5,0,0
+15-05-2020,US,Illinois,Pope,1,1,0,0
+15-05-2020,US,Arkansas,Pope,61,61,0,0
+15-05-2020,US,Oklahoma,Pontotoc,10,8,0,2
+15-05-2020,US,Mississippi,Pontotoc,25,23,0,2
+15-05-2020,US,Montana,Pondera,2,2,0,0
+15-05-2020,US,Wisconsin,Polk,6,6,0,0
+15-05-2020,US,Texas,Polk,47,47,0,0
+15-05-2020,US,Tennessee,Polk,12,12,0,0
+15-05-2020,US,Oregon,Polk,92,83,0,9
+15-05-2020,US,North Carolina,Polk,32,29,0,3
+15-05-2020,US,Nebraska,Polk,9,9,0,0
+15-05-2020,US,Missouri,Polk,1,1,0,0
+15-05-2020,US,Minnesota,Polk,55,53,0,2
+15-05-2020,US,Iowa,Polk,2767,2691,0,76
+15-05-2020,US,Georgia,Polk,78,78,0,0
+15-05-2020,US,Florida,Polk,716,676,0,40
+15-05-2020,US,Arkansas,Polk,7,7,0,0
+15-05-2020,US,Louisiana,Pointe Coupee,155,137,0,18
+15-05-2020,US,Arkansas,Poinsett,25,23,0,2
+15-05-2020,US,West Virginia,Pocahontas,2,2,0,0
+15-05-2020,US,Iowa,Pocahontas,3,3,0,0
+15-05-2020,US,Massachusetts,Plymouth,6875,6431,0,444
+15-05-2020,US,Iowa,Plymouth,78,78,0,0
+15-05-2020,US,California,Plumas,4,4,0,0
+15-05-2020,US,West Virginia,Pleasants,2,2,0,0
+15-05-2020,US,Wyoming,Platte,0,0,0,0
+15-05-2020,US,Nebraska,Platte,426,426,0,0
+15-05-2020,US,Missouri,Platte,54,54,0,0
+15-05-2020,US,Louisiana,Plaquemines,193,177,0,16
+15-05-2020,US,California,Placer,174,166,0,8
+15-05-2020,US,Virginia,Pittsylvania,18,17,0,1
+15-05-2020,US,Oklahoma,Pittsburg,39,36,0,3
+15-05-2020,US,North Carolina,Pitt,196,194,0,2
+15-05-2020,US,Colorado,Pitkin,56,54,0,2
+15-05-2020,US,Maine,Piscataquis,1,1,0,0
+15-05-2020,US,Minnesota,Pipestone,9,9,0,0
+15-05-2020,US,Florida,Pinellas,997,931,0,66
+15-05-2020,US,Minnesota,Pine,82,82,0,0
+15-05-2020,US,Arizona,Pinal,670,642,0,28
+15-05-2020,US,Arizona,Pima,1750,1595,0,155
+15-05-2020,US,Pennsylvania,Pike,458,436,0,22
+15-05-2020,US,Ohio,Pike,5,4,0,1
+15-05-2020,US,Missouri,Pike,14,13,0,1
+15-05-2020,US,Mississippi,Pike,174,164,0,10
+15-05-2020,US,Kentucky,Pike,23,21,0,2
+15-05-2020,US,Indiana,Pike,3,3,0,0
+15-05-2020,US,Illinois,Pike,1,1,0,0
+15-05-2020,US,Georgia,Pike,44,42,0,2
+15-05-2020,US,Arkansas,Pike,3,3,0,0
+15-05-2020,US,Alabama,Pike,107,107,0,0
+15-05-2020,US,Wisconsin,Pierce,16,16,0,0
+15-05-2020,US,Washington,Pierce,1636,1565,0,71
+15-05-2020,US,North Dakota,Pierce,3,3,0,0
+15-05-2020,US,Nebraska,Pierce,1,1,0,0
+15-05-2020,US,Georgia,Pierce,69,65,0,4
+15-05-2020,US,Tennessee,Pickett,1,1,0,0
+15-05-2020,US,South Carolina,Pickens,89,86,0,3
+15-05-2020,US,Georgia,Pickens,35,32,0,3
+15-05-2020,US,Alabama,Pickens,75,72,0,3
+15-05-2020,US,Ohio,Pickaway,2005,1974,0,31
+15-05-2020,US,Illinois,Piatt,8,8,0,0
+15-05-2020,US,Kansas,Phillips,2,2,0,0
+15-05-2020,US,Colorado,Phillips,10,10,0,0
+15-05-2020,US,Arkansas,Phillips,4,3,0,1
+15-05-2020,US,Pennsylvania,Philadelphia,19349,18328,0,1021
+15-05-2020,US,Nebraska,Phelps,13,13,0,0
+15-05-2020,US,Missouri,Phelps,2,2,0,0
+15-05-2020,US,Missouri,Pettis,70,69,0,1
+15-05-2020,US,Virginia,Petersburg,58,56,0,2
+15-05-2020,US,Alaska,Petersburg,4,3,0,1
+15-05-2020,US,North Carolina,Person,32,31,0,1
+15-05-2020,US,Nevada,Pershing,0,0,0,0
+15-05-2020,US,Tennessee,Perry,13,13,0,0
+15-05-2020,US,Pennsylvania,Perry,36,35,0,1
+15-05-2020,US,Ohio,Perry,15,14,0,1
+15-05-2020,US,Missouri,Perry,46,46,0,0
+15-05-2020,US,Mississippi,Perry,36,34,0,2
+15-05-2020,US,Kentucky,Perry,19,19,0,0
+15-05-2020,US,Indiana,Perry,19,19,0,0
+15-05-2020,US,Illinois,Perry,38,38,0,0
+15-05-2020,US,Arkansas,Perry,12,12,0,0
+15-05-2020,US,Alabama,Perry,20,20,0,0
+15-05-2020,US,North Carolina,Perquimans,21,19,0,2
+15-05-2020,US,Wisconsin,Pepin,1,1,0,0
+15-05-2020,US,Illinois,Peoria,156,150,0,6
+15-05-2020,US,Maine,Penobscot,91,90,0,1
+15-05-2020,US,South Dakota,Pennington,43,42,0,1
+15-05-2020,US,Minnesota,Pennington,1,1,0,0
+15-05-2020,US,West Virginia,Pendleton,5,5,0,0
+15-05-2020,US,Kentucky,Pendleton,6,6,0,0
+15-05-2020,US,North Carolina,Pender,43,42,0,1
+15-05-2020,US,Washington,Pend Oreille,2,2,0,0
+15-05-2020,US,Missouri,Pemiscot,68,65,0,3
+15-05-2020,US,North Dakota,Pembina,6,6,0,0
+15-05-2020,US,Texas,Pecos,20,20,0,0
+15-05-2020,US,Mississippi,Pearl River,195,169,0,26
+15-05-2020,US,Georgia,Peach,71,69,0,2
+15-05-2020,US,Oklahoma,Payne,44,43,0,1
+15-05-2020,US,Idaho,Payette,19,17,0,2
+15-05-2020,US,Oklahoma,Pawnee,29,27,0,2
+15-05-2020,US,Ohio,Paulding,11,11,0,0
+15-05-2020,US,Georgia,Paulding,240,230,0,10
+15-05-2020,US,Virginia,Patrick,6,6,0,0
+15-05-2020,US,New Jersey,Passaic,14934,14118,0,816
+15-05-2020,US,North Carolina,Pasquotank,83,78,0,5
+15-05-2020,US,Florida,Pasco,313,304,0,9
+15-05-2020,US,Texas,Parmer,23,23,0,0
+15-05-2020,US,Texas,Parker,57,57,0,0
+15-05-2020,US,Indiana,Parke,17,17,0,0
+15-05-2020,US,Wyoming,Park,1,1,0,0
+15-05-2020,US,Montana,Park,8,8,0,0
+15-05-2020,US,Colorado,Park,16,16,0,0
+15-05-2020,US,Texas,Panola,175,160,0,15
+15-05-2020,US,Mississippi,Panola,47,45,0,2
+15-05-2020,US,North Carolina,Pamlico,8,8,0,0
+15-05-2020,US,Texas,Palo Pinto,9,7,0,2
+15-05-2020,US,Iowa,Palo Alto,1,1,0,0
+15-05-2020,US,Florida,Palm Beach,4391,4120,0,271
+15-05-2020,US,Virginia,Page,145,129,0,16
+15-05-2020,US,Iowa,Page,10,10,0,0
+15-05-2020,US,Washington,Pacific,9,8,0,1
+15-05-2020,US,Wisconsin,Ozaukee,119,109,0,10
+15-05-2020,US,Maine,Oxford,17,17,0,0
+15-05-2020,US,Idaho,Owyhee,8,8,0,0
+15-05-2020,US,Kentucky,Owsley,2,2,0,0
+15-05-2020,US,Kentucky,Owen,1,1,0,0
+15-05-2020,US,Indiana,Owen,27,26,0,1
+15-05-2020,US,Tennessee,Overton,14,14,0,0
+15-05-2020,US,Wisconsin,Outagamie,128,124,0,4
+15-05-2020,US,Tennessee,Out of TN,340,336,0,4
+15-05-2020,US,Oklahoma,Out of OK,0,0,0,0
+15-05-2020,US,Michigan,Out of MI,97,97,0,0
+15-05-2020,US,Illinois,Out of IL,86,84,0,2
+15-05-2020,US,Hawaii,Out of HI,10,10,0,0
+15-05-2020,US,Georgia,Out of GA,1530,1505,0,25
+15-05-2020,US,Colorado,Out of CO,0,0,0,0
+15-05-2020,US,Colorado,Ouray,7,6,0,1
+15-05-2020,US,Louisiana,Ouachita,891,860,0,31
+15-05-2020,US,Arkansas,Ouachita,9,9,0,0
+15-05-2020,US,Minnesota,Otter Tail,35,35,0,0
+15-05-2020,US,Oklahoma,Ottawa,35,33,0,2
+15-05-2020,US,Ohio,Ottawa,57,52,0,5
+15-05-2020,US,Michigan,Ottawa,501,477,0,24
+15-05-2020,US,Kansas,Ottawa,4,4,0,0
+15-05-2020,US,New York,Otsego,67,63,0,4
+15-05-2020,US,Michigan,Otsego,99,89,0,10
+15-05-2020,US,Nebraska,Otoe,5,5,0,0
+15-05-2020,US,New Mexico,Otero,8,7,0,1
+15-05-2020,US,Colorado,Otero,11,10,0,1
+15-05-2020,US,New York,Oswego,80,77,0,3
+15-05-2020,US,Michigan,Oscoda,5,4,0,1
+15-05-2020,US,Michigan,Osceola,9,9,0,0
+15-05-2020,US,Iowa,Osceola,25,25,0,0
+15-05-2020,US,Florida,Osceola,608,592,0,16
+15-05-2020,US,Kansas,Osborne,2,2,0,0
+15-05-2020,US,Oklahoma,Osage,91,83,0,8
+15-05-2020,US,Missouri,Osage,5,5,0,0
+15-05-2020,US,Kansas,Osage,6,6,0,0
+15-05-2020,US,Vermont,Orleans,9,9,0,0
+15-05-2020,US,New York,Orleans,147,127,0,20
+15-05-2020,US,Louisiana,Orleans,6787,6298,0,489
+15-05-2020,US,Missouri,Oregon,2,2,0,0
+15-05-2020,US,South Carolina,Orangeburg,108,106,0,2
+15-05-2020,US,Virginia,Orange,51,51,0,0
+15-05-2020,US,Vermont,Orange,8,8,0,0
+15-05-2020,US,Texas,Orange,87,85,0,2
+15-05-2020,US,North Carolina,Orange,266,232,0,34
+15-05-2020,US,New York,Orange,9825,9417,0,408
+15-05-2020,US,Indiana,Orange,120,101,0,19
+15-05-2020,US,Florida,Orange,1615,1579,0,36
+15-05-2020,US,California,Orange,4852,4768,0,84
+15-05-2020,US,Michigan,Ontonagon,0,0,0,0
+15-05-2020,US,New York,Ontario,133,124,0,9
+15-05-2020,US,North Carolina,Onslow,67,65,0,2
+15-05-2020,US,New York,Onondaga,1440,1350,0,90
+15-05-2020,US,Wisconsin,Oneida,7,7,0,0
+15-05-2020,US,New York,Oneida,713,690,0,23
+15-05-2020,US,Minnesota,Olmsted,417,408,0,9
+15-05-2020,US,North Dakota,Oliver,1,1,0,0
+15-05-2020,US,Texas,Oldham,4,3,0,1
+15-05-2020,US,Kentucky,Oldham,50,50,0,0
+15-05-2020,US,Mississippi,Oktibbeha,99,93,0,6
+15-05-2020,US,Oklahoma,Okmulgee,16,16,0,0
+15-05-2020,US,Oklahoma,Oklahoma,1035,990,0,45
+15-05-2020,US,Oklahoma,Okfuskee,2,2,0,0
+15-05-2020,US,Florida,Okeechobee,33,33,0,0
+15-05-2020,US,Washington,Okanogan,35,33,0,2
+15-05-2020,US,Florida,Okaloosa,174,169,0,5
+15-05-2020,US,West Virginia,Ohio,37,36,0,1
+15-05-2020,US,Kentucky,Ohio,108,108,0,0
+15-05-2020,US,Indiana,Ohio,11,11,0,0
+15-05-2020,US,Georgia,Oglethorpe,55,51,0,4
+15-05-2020,US,Illinois,Ogle,165,163,0,2
+15-05-2020,US,South Dakota,Oglala Lakota,6,6,0,0
+15-05-2020,US,Michigan,Ogemaw,16,16,0,0
+15-05-2020,US,Wisconsin,Oconto,30,30,0,0
+15-05-2020,US,South Carolina,Oconee,42,42,0,0
+15-05-2020,US,Georgia,Oconee,80,78,0,2
+15-05-2020,US,Texas,Ochiltree,40,38,0,2
+15-05-2020,US,Michigan,Oceana,46,44,0,2
+15-05-2020,US,New Jersey,Ocean,7830,7220,0,610
+15-05-2020,US,Tennessee,Obion,17,16,0,1
+15-05-2020,US,Michigan,Oakland,7994,7098,0,896
+15-05-2020,US,Iowa,O'Brien,20,20,0,0
+15-05-2020,US,Nevada,Nye,49,49,0,0
+15-05-2020,US,Texas,Nueces,209,206,0,3
+15-05-2020,US,Mississippi,Noxubee,132,130,0,2
+15-05-2020,US,Oklahoma,Nowata,23,23,0,0
+15-05-2020,US,Virginia,Nottoway,16,16,0,0
+15-05-2020,US,Virginia,Norton,2,2,0,0
+15-05-2020,US,Kansas,Norton,2,2,0,0
+15-05-2020,US,Virginia,Northumberland,15,14,0,1
+15-05-2020,US,Pennsylvania,Northumberland,136,136,0,0
+15-05-2020,US,Virginia,Northampton,193,186,0,7
+15-05-2020,US,Pennsylvania,Northampton,2600,2404,0,196
+15-05-2020,US,North Carolina,Northampton,129,120,0,9
+15-05-2020,US,Minnesota,Norman,11,11,0,0
+15-05-2020,US,Virginia,Norfolk,349,344,0,5
+15-05-2020,US,Massachusetts,Norfolk,7331,6621,0,710
+15-05-2020,US,Alaska,Nome,1,1,0,0
+15-05-2020,US,Texas,Nolan,2,2,0,0
+15-05-2020,US,Missouri,Nodaway,5,5,0,0
+15-05-2020,US,Minnesota,Nobles,1342,1340,0,2
+15-05-2020,US,Oklahoma,Noble,7,7,0,0
+15-05-2020,US,Ohio,Noble,5,5,0,0
+15-05-2020,US,Indiana,Noble,147,128,0,19
+15-05-2020,US,Wyoming,Niobrara,2,2,0,0
+15-05-2020,US,Minnesota,Nicollet,28,26,0,2
+15-05-2020,US,West Virginia,Nicholas,9,8,0,1
+15-05-2020,US,Kentucky,Nicholas,1,1,0,0
+15-05-2020,US,New York,Niagara,743,699,0,44
+15-05-2020,US,Idaho,Nez Perce,79,60,0,19
+15-05-2020,US,Texas,Newton,4,4,0,0
+15-05-2020,US,Missouri,Newton,13,12,0,1
+15-05-2020,US,Mississippi,Newton,172,170,0,2
+15-05-2020,US,Indiana,Newton,71,62,0,9
+15-05-2020,US,Georgia,Newton,262,253,0,9
+15-05-2020,US,Arkansas,Newton,3,3,0,0
+15-05-2020,US,Virginia,Newport News,184,174,0,10
+15-05-2020,US,Rhode Island,Newport,197,193,0,4
+15-05-2020,US,South Carolina,Newberry,30,29,0,1
+15-05-2020,US,Michigan,Newaygo,41,41,0,0
+15-05-2020,US,New York,New York City,190357,169881,0,20476
+15-05-2020,US,Missouri,New Madrid,13,13,0,0
+15-05-2020,US,Connecticut,New London,844,781,0,63
+15-05-2020,US,Virginia,New Kent,26,25,0,1
+15-05-2020,US,Connecticut,New Haven,9881,9098,0,783
+15-05-2020,US,North Carolina,New Hanover,127,124,0,3
+15-05-2020,US,Delaware,New Castle,2619,2442,0,177
+15-05-2020,US,California,Nevada,41,40,0,1
+15-05-2020,US,Arkansas,Nevada,4,4,0,0
+15-05-2020,US,Mississippi,Neshoba,369,350,0,19
+15-05-2020,US,Kansas,Neosho,2,2,0,0
+15-05-2020,US,Nebraska,Nemaha,2,2,0,0
+15-05-2020,US,Kansas,Nemaha,1,1,0,0
+15-05-2020,US,Virginia,Nelson,12,12,0,0
+15-05-2020,US,North Dakota,Nelson,1,1,0,0
+15-05-2020,US,Kentucky,Nelson,32,32,0,0
+15-05-2020,US,Texas,Navarro,38,36,0,2
+15-05-2020,US,Arizona,Navajo,1177,1129,0,48
+15-05-2020,US,Wyoming,Natrona,50,50,0,0
+15-05-2020,US,Louisiana,Natchitoches,102,90,0,12
+15-05-2020,US,New York,Nassau,38864,36837,0,2027
+15-05-2020,US,Florida,Nassau,65,64,0,1
+15-05-2020,US,North Carolina,Nash,149,146,0,3
+15-05-2020,US,California,Napa,83,80,0,3
+15-05-2020,US,Nebraska,Nance,4,4,0,0
+15-05-2020,US,Texas,Nacogdoches,229,212,0,17
+15-05-2020,US,Montana,Musselshell,1,1,0,0
+15-05-2020,US,Oklahoma,Muskogee,29,23,0,6
+15-05-2020,US,Ohio,Muskingum,31,31,0,0
+15-05-2020,US,Michigan,Muskegon,452,430,0,22
+15-05-2020,US,Georgia,Muscogee,424,409,0,15
+15-05-2020,US,Iowa,Muscatine,519,490,0,29
+15-05-2020,US,Oklahoma,Murray,2,2,0,0
+15-05-2020,US,Minnesota,Murray,30,30,0,0
+15-05-2020,US,Georgia,Murray,59,58,0,1
+15-05-2020,US,Oregon,Multnomah,957,902,0,55
+15-05-2020,US,Kentucky,Muhlenberg,464,458,0,6
+15-05-2020,US,Minnesota,Mower,54,54,0,0
+15-05-2020,US,North Dakota,Mountrail,38,38,0,0
+15-05-2020,US,Illinois,Moultrie,7,7,0,0
+15-05-2020,US,Texas,Motley,1,1,0,0
+15-05-2020,US,North Dakota,Morton,39,37,0,2
+15-05-2020,US,Kansas,Morton,4,4,0,0
+15-05-2020,US,Oregon,Morrow,12,12,0,0
+15-05-2020,US,Ohio,Morrow,97,96,0,1
+15-05-2020,US,Minnesota,Morrison,23,23,0,0
+15-05-2020,US,Texas,Morris,10,10,0,0
+15-05-2020,US,New Jersey,Morris,5990,5440,0,550
+15-05-2020,US,Kansas,Morris,3,3,0,0
+15-05-2020,US,Nebraska,Morrill,10,10,0,0
+15-05-2020,US,West Virginia,Morgan,17,17,0,0
+15-05-2020,US,Tennessee,Morgan,12,12,0,0
+15-05-2020,US,Ohio,Morgan,5,5,0,0
+15-05-2020,US,Missouri,Morgan,7,7,0,0
+15-05-2020,US,Kentucky,Morgan,1,1,0,0
+15-05-2020,US,Indiana,Morgan,240,226,0,14
+15-05-2020,US,Illinois,Morgan,35,34,0,1
+15-05-2020,US,Georgia,Morgan,33,33,0,0
+15-05-2020,US,Colorado,Morgan,542,515,0,27
+15-05-2020,US,Alabama,Morgan,111,110,0,1
+15-05-2020,US,Louisiana,Morehouse,92,87,0,5
+15-05-2020,US,Texas,Moore,540,531,0,9
+15-05-2020,US,Tennessee,Moore,3,3,0,0
+15-05-2020,US,North Carolina,Moore,164,154,0,10
+15-05-2020,US,South Dakota,Moody,17,17,0,0
+15-05-2020,US,Colorado,Montrose,131,120,0,11
+15-05-2020,US,Pennsylvania,Montour,50,49,0,1
+15-05-2020,US,Michigan,Montmorency,5,5,0,0
+15-05-2020,US,Virginia,Montgomery,66,65,0,1
+15-05-2020,US,Texas,Montgomery,798,780,0,18
+15-05-2020,US,Tennessee,Montgomery,203,201,0,2
+15-05-2020,US,Pennsylvania,Montgomery,5697,5089,0,608
+15-05-2020,US,Ohio,Montgomery,489,476,0,13
+15-05-2020,US,North Carolina,Montgomery,48,45,0,3
+15-05-2020,US,New York,Montgomery,72,71,0,1
+15-05-2020,US,Missouri,Montgomery,7,7,0,0
+15-05-2020,US,Mississippi,Montgomery,71,70,0,1
+15-05-2020,US,Maryland,Montgomery,7759,7310,0,449
+15-05-2020,US,Kentucky,Montgomery,16,16,0,0
+15-05-2020,US,Kansas,Montgomery,20,18,0,2
+15-05-2020,US,Iowa,Montgomery,5,5,0,0
+15-05-2020,US,Indiana,Montgomery,160,151,0,9
+15-05-2020,US,Illinois,Montgomery,36,35,0,1
+15-05-2020,US,Georgia,Montgomery,8,8,0,0
+15-05-2020,US,Arkansas,Montgomery,1,1,0,0
+15-05-2020,US,Alabama,Montgomery,788,768,0,20
+15-05-2020,US,Colorado,Montezuma,26,23,0,3
+15-05-2020,US,California,Monterey,317,311,0,6
+15-05-2020,US,Michigan,Montcalm,52,51,0,1
+15-05-2020,US,Texas,Montague,9,8,0,1
+15-05-2020,US,Wisconsin,Monroe,15,14,0,1
+15-05-2020,US,West Virginia,Monroe,6,6,0,0
+15-05-2020,US,Tennessee,Monroe,38,37,0,1
+15-05-2020,US,Pennsylvania,Monroe,1242,1172,0,70
+15-05-2020,US,Ohio,Monroe,53,50,0,3
+15-05-2020,US,New York,Monroe,2091,1924,0,167
+15-05-2020,US,Mississippi,Monroe,215,192,0,23
+15-05-2020,US,Michigan,Monroe,417,399,0,18
+15-05-2020,US,Kentucky,Monroe,6,6,0,0
+15-05-2020,US,Iowa,Monroe,18,17,0,1
+15-05-2020,US,Indiana,Monroe,144,135,0,9
+15-05-2020,US,Illinois,Monroe,83,72,0,11
+15-05-2020,US,Georgia,Monroe,47,43,0,4
+15-05-2020,US,Florida,Monroe,95,92,0,3
+15-05-2020,US,Arkansas,Monroe,5,5,0,0
+15-05-2020,US,Alabama,Monroe,15,13,0,2
+15-05-2020,US,West Virginia,Monongalia,114,109,0,5
+15-05-2020,US,Iowa,Monona,15,15,0,0
+15-05-2020,US,California,Mono,33,32,0,1
+15-05-2020,US,New Jersey,Monmouth,7227,6732,0,495
+15-05-2020,US,Missouri,Moniteau,44,44,0,0
+15-05-2020,US,Arizona,Mohave,242,215,0,27
+15-05-2020,US,Colorado,Moffat,6,6,0,0
+15-05-2020,US,Alabama,Mobile,1658,1558,0,100
+15-05-2020,US,Texas,Mitchell,1,1,0,0
+15-05-2020,US,North Carolina,Mitchell,5,5,0,0
+15-05-2020,US,Kansas,Mitchell,3,3,0,0
+15-05-2020,US,Iowa,Mitchell,4,4,0,0
+15-05-2020,US,Georgia,Mitchell,388,356,0,32
+15-05-2020,US,Montana,Missoula,39,38,0,1
+15-05-2020,US,Missouri,Mississippi,49,49,0,0
+15-05-2020,US,Arkansas,Mississippi,58,58,0,0
+15-05-2020,US,Michigan,Missaukee,16,15,0,1
+15-05-2020,US,South Dakota,Minnehaha,3101,3062,0,39
+15-05-2020,US,Idaho,Minidoka,15,15,0,0
+15-05-2020,US,West Virginia,Mingo,3,2,0,1
+15-05-2020,US,West Virginia,Mineral,26,26,0,0
+15-05-2020,US,Nevada,Mineral,4,4,0,0
+15-05-2020,US,Colorado,Mineral,2,2,0,0
+15-05-2020,US,South Dakota,Miner,1,1,0,0
+15-05-2020,US,Wisconsin,Milwaukee,4535,4286,0,249
+15-05-2020,US,Texas,Mills,1,1,0,0
+15-05-2020,US,Iowa,Mills,9,9,0,0
+15-05-2020,US,Missouri,Miller,4,4,0,0
+15-05-2020,US,Georgia,Miller,38,38,0,0
+15-05-2020,US,Arkansas,Miller,42,41,0,1
+15-05-2020,US,Minnesota,Mille Lacs,8,7,0,1
+15-05-2020,US,Texas,Milam,23,22,0,1
+15-05-2020,US,Pennsylvania,Mifflin,57,57,0,0
+15-05-2020,US,Texas,Midland,116,104,0,12
+15-05-2020,US,Michigan,Midland,69,61,0,8
+15-05-2020,US,Virginia,Middlesex,11,11,0,0
+15-05-2020,US,New Jersey,Middlesex,14436,13571,0,865
+15-05-2020,US,Massachusetts,Middlesex,18683,17336,0,1347
+15-05-2020,US,Connecticut,Middlesex,885,761,0,124
+15-05-2020,US,Michigan,Michigan Department of Corrections (MDOC),2227,2171,0,56
+15-05-2020,US,Florida,Miami-Dade,15011,14463,0,548
+15-05-2020,US,Ohio,Miami,326,302,0,24
+15-05-2020,US,Kansas,Miami,6,6,0,0
+15-05-2020,US,Indiana,Miami,129,128,0,1
+15-05-2020,US,Kentucky,Metcalfe,3,3,0,0
+15-05-2020,US,Colorado,Mesa,50,50,0,0
+15-05-2020,US,New Hampshire,Merrimack,261,251,0,10
+15-05-2020,US,Nebraska,Merrick,28,28,0,0
+15-05-2020,US,Georgia,Meriwether,73,72,0,1
+15-05-2020,US,West Virginia,Mercer,12,12,0,0
+15-05-2020,US,Pennsylvania,Mercer,83,81,0,2
+15-05-2020,US,Ohio,Mercer,115,114,0,1
+15-05-2020,US,North Dakota,Mercer,4,4,0,0
+15-05-2020,US,New Jersey,Mercer,5675,5289,0,386
+15-05-2020,US,Kentucky,Mercer,12,12,0,0
+15-05-2020,US,Illinois,Mercer,14,14,0,0
+15-05-2020,US,California,Merced,189,185,0,4
+15-05-2020,US,Wisconsin,Menominee,2,2,0,0
+15-05-2020,US,Michigan,Menominee,8,8,0,0
+15-05-2020,US,Kentucky,Menifee,3,3,0,0
+15-05-2020,US,California,Mendocino,13,13,0,0
+15-05-2020,US,Illinois,Menard,17,17,0,0
+15-05-2020,US,Tennessee,Meigs,22,22,0,0
+15-05-2020,US,Ohio,Meigs,3,0,0,3
+15-05-2020,US,Minnesota,Meeker,24,24,0,0
+15-05-2020,US,Texas,Medina,48,46,0,2
+15-05-2020,US,Ohio,Medina,210,188,0,22
+15-05-2020,US,Michigan,Mecosta,18,16,0,2
+15-05-2020,US,Virginia,Mecklenburg,152,137,0,15
+15-05-2020,US,North Carolina,Mecklenburg,2385,2322,0,63
+15-05-2020,US,Montana,Meagher,1,1,0,0
+15-05-2020,US,South Dakota,Meade,5,5,0,0
+15-05-2020,US,Kentucky,Meade,18,16,0,2
+15-05-2020,US,Kansas,Meade,22,22,0,0
+15-05-2020,US,South Dakota,McPherson,1,1,0,0
+15-05-2020,US,Nebraska,McPherson,0,0,0,0
+15-05-2020,US,Kansas,McPherson,26,26,0,0
+15-05-2020,US,Tennessee,McNairy,12,12,0,0
+15-05-2020,US,Tennessee,McMinn,123,112,0,11
+15-05-2020,US,Minnesota,McLeod,15,15,0,0
+15-05-2020,US,Texas,McLennan,96,92,0,4
+15-05-2020,US,North Dakota,McLean,5,5,0,0
+15-05-2020,US,Kentucky,McLean,18,17,0,1
+15-05-2020,US,Illinois,McLean,132,128,0,4
+15-05-2020,US,New Mexico,McKinley,1787,1718,0,69
+15-05-2020,US,North Dakota,McKenzie,15,15,0,0
+15-05-2020,US,Pennsylvania,McKean,10,9,0,1
+15-05-2020,US,Oklahoma,McIntosh,8,8,0,0
+15-05-2020,US,North Dakota,McIntosh,1,1,0,0
+15-05-2020,US,Georgia,McIntosh,9,9,0,0
+15-05-2020,US,North Dakota,McHenry,2,1,0,1
+15-05-2020,US,Illinois,McHenry,1123,1061,0,62
+15-05-2020,US,Georgia,McDuffie,53,49,0,4
+15-05-2020,US,West Virginia,McDowell,6,6,0,0
+15-05-2020,US,North Carolina,McDowell,30,29,0,1
+15-05-2020,US,Illinois,McDonough,58,56,0,2
+15-05-2020,US,Missouri,McDonald,7,7,0,0
+15-05-2020,US,Oklahoma,McCurtain,9,9,0,0
+15-05-2020,US,Texas,McCulloch,3,3,0,0
+15-05-2020,US,Kentucky,McCreary,13,13,0,0
+15-05-2020,US,Kentucky,McCracken,80,78,0,2
+15-05-2020,US,South Carolina,McCormick,7,6,0,1
+15-05-2020,US,South Dakota,McCook,5,4,0,1
+15-05-2020,US,Oklahoma,McClain,86,84,0,2
+15-05-2020,US,Oklahoma,Mayes,27,23,0,4
+15-05-2020,US,Texas,Maverick,74,74,0,0
+15-05-2020,US,Tennessee,Maury,60,60,0,0
+15-05-2020,US,Hawaii,Maui,117,111,0,6
+15-05-2020,US,Virginia,Mathews,5,5,0,0
+15-05-2020,US,Alaska,Matanuska-Susitna,21,20,0,1
+15-05-2020,US,Texas,Matagorda,65,60,0,5
+15-05-2020,US,Illinois,Massac,6,6,0,0
+15-05-2020,US,West Virginia,Mason,14,14,0,0
+15-05-2020,US,Washington,Mason,30,29,0,1
+15-05-2020,US,Texas,Mason,28,28,0,0
+15-05-2020,US,Michigan,Mason,25,25,0,0
+15-05-2020,US,Kentucky,Mason,8,8,0,0
+15-05-2020,US,Illinois,Mason,16,16,0,0
+15-05-2020,US,Virginia,Martinsville,3,3,0,0
+15-05-2020,US,Texas,Martin,3,2,0,1
+15-05-2020,US,North Carolina,Martin,34,30,0,4
+15-05-2020,US,Minnesota,Martin,114,110,0,4
+15-05-2020,US,Kentucky,Martin,3,3,0,0
+15-05-2020,US,Indiana,Martin,7,7,0,0
+15-05-2020,US,Florida,Martin,294,288,0,6
+15-05-2020,US,West Virginia,Marshall,23,23,0,0
+15-05-2020,US,Tennessee,Marshall,25,24,0,1
+15-05-2020,US,South Dakota,Marshall,1,1,0,0
+15-05-2020,US,Oklahoma,Marshall,4,4,0,0
+15-05-2020,US,Mississippi,Marshall,65,63,0,2
+15-05-2020,US,Minnesota,Marshall,8,8,0,0
+15-05-2020,US,Kentucky,Marshall,35,33,0,2
+15-05-2020,US,Iowa,Marshall,771,766,0,5
+15-05-2020,US,Indiana,Marshall,39,38,0,1
+15-05-2020,US,Illinois,Marshall,5,5,0,0
+15-05-2020,US,Alabama,Marshall,600,591,0,9
+15-05-2020,US,Wisconsin,Marquette,3,2,0,1
+15-05-2020,US,Michigan,Marquette,51,41,0,10
+15-05-2020,US,South Carolina,Marlboro,71,71,0,0
+15-05-2020,US,California,Mariposa,15,14,0,1
+15-05-2020,US,West Virginia,Marion,46,44,0,2
+15-05-2020,US,Texas,Marion,15,15,0,0
+15-05-2020,US,Tennessee,Marion,30,29,0,1
+15-05-2020,US,South Carolina,Marion,48,44,0,4
+15-05-2020,US,Oregon,Marion,797,774,0,23
+15-05-2020,US,Ohio,Marion,2436,2423,0,13
+15-05-2020,US,Missouri,Marion,5,5,0,0
+15-05-2020,US,Mississippi,Marion,86,79,0,7
+15-05-2020,US,Kentucky,Marion,17,17,0,0
+15-05-2020,US,Kansas,Marion,5,4,0,1
+15-05-2020,US,Iowa,Marion,19,19,0,0
+15-05-2020,US,Indiana,Marion,7995,7514,0,481
+15-05-2020,US,Illinois,Marion,47,47,0,0
+15-05-2020,US,Georgia,Marion,39,38,0,1
+15-05-2020,US,Florida,Marion,218,213,0,5
+15-05-2020,US,Arkansas,Marion,1,1,0,0
+15-05-2020,US,Alabama,Marion,101,92,0,9
+15-05-2020,US,Wisconsin,Marinette,21,19,0,2
+15-05-2020,US,California,Marin,279,265,0,14
+15-05-2020,US,Missouri,Maries,2,2,0,0
+15-05-2020,US,Arizona,Maricopa,6821,6519,0,302
+15-05-2020,US,Alabama,Marengo,98,92,0,6
+15-05-2020,US,Wisconsin,Marathon,31,30,0,1
+15-05-2020,US,Wisconsin,Manitowoc,21,20,0,1
+15-05-2020,US,Michigan,Manistee,11,11,0,0
+15-05-2020,US,Florida,Manatee,826,747,0,79
+15-05-2020,US,Virginia,Manassas Park,176,173,0,3
+15-05-2020,US,Virginia,Manassas,533,528,0,5
+15-05-2020,US,Oregon,Malheur,17,17,0,0
+15-05-2020,US,Oklahoma,Major,6,5,0,1
+15-05-2020,US,Ohio,Mahoning,1185,1031,0,154
+15-05-2020,US,Minnesota,Mahnomen,5,4,0,1
+15-05-2020,US,Iowa,Mahaska,22,21,0,1
+15-05-2020,US,Virginia,Madison,23,22,0,1
+15-05-2020,US,Texas,Madison,6,6,0,0
+15-05-2020,US,Tennessee,Madison,160,158,0,2
+15-05-2020,US,Ohio,Madison,95,90,0,5
+15-05-2020,US,North Carolina,Madison,1,1,0,0
+15-05-2020,US,New York,Madison,256,249,0,7
+15-05-2020,US,Nebraska,Madison,264,261,0,3
+15-05-2020,US,Montana,Madison,8,7,0,1
+15-05-2020,US,Missouri,Madison,3,3,0,0
+15-05-2020,US,Mississippi,Madison,507,490,0,17
+15-05-2020,US,Louisiana,Madison,24,24,0,0
+15-05-2020,US,Kentucky,Madison,42,41,0,1
+15-05-2020,US,Iowa,Madison,14,13,0,1
+15-05-2020,US,Indiana,Madison,535,477,0,58
+15-05-2020,US,Illinois,Madison,464,426,0,38
+15-05-2020,US,Idaho,Madison,18,18,0,0
+15-05-2020,US,Georgia,Madison,29,28,0,1
+15-05-2020,US,Florida,Madison,62,59,0,3
+15-05-2020,US,Arkansas,Madison,1,1,0,0
+15-05-2020,US,Alabama,Madison,286,282,0,4
+15-05-2020,US,California,Madera,69,67,0,2
+15-05-2020,US,Illinois,Macoupin,41,40,0,1
+15-05-2020,US,Tennessee,Macon,75,72,0,3
+15-05-2020,US,North Carolina,Macon,3,2,0,1
+15-05-2020,US,Missouri,Macon,2,2,0,0
+15-05-2020,US,Illinois,Macon,159,142,0,17
+15-05-2020,US,Georgia,Macon,90,85,0,5
+15-05-2020,US,Alabama,Macon,53,51,0,2
+15-05-2020,US,Michigan,Macomb,6274,5545,0,729
+15-05-2020,US,Michigan,Mackinac,6,6,0,0
+15-05-2020,US,Nevada,Lyon,47,47,0,0
+15-05-2020,US,Minnesota,Lyon,25,25,0,0
+15-05-2020,US,Kentucky,Lyon,14,11,0,3
+15-05-2020,US,Kansas,Lyon,310,307,0,3
+15-05-2020,US,Iowa,Lyon,16,16,0,0
+15-05-2020,US,Texas,Lynn,5,4,0,1
+15-05-2020,US,Virginia,Lynchburg,73,72,0,1
+15-05-2020,US,South Dakota,Lyman,4,4,0,0
+15-05-2020,US,Pennsylvania,Lycoming,141,134,0,7
+15-05-2020,US,Pennsylvania,Luzerne,2491,2364,0,127
+15-05-2020,US,Virginia,Lunenburg,7,7,0,0
+15-05-2020,US,New Mexico,Luna,8,7,0,1
+15-05-2020,US,Georgia,Lumpkin,82,81,0,1
+15-05-2020,US,Michigan,Luce,1,1,0,0
+15-05-2020,US,Ohio,Lucas,1921,1723,0,198
+15-05-2020,US,Texas,Lubbock,614,564,0,50
+15-05-2020,US,Mississippi,Lowndes,108,104,0,4
+15-05-2020,US,Georgia,Lowndes,202,198,0,4
+15-05-2020,US,Alabama,Lowndes,124,115,0,9
+15-05-2020,US,Oklahoma,Love,3,3,0,0
+15-05-2020,US,Virginia,Louisa,59,59,0,0
+15-05-2020,US,Iowa,Louisa,304,301,0,3
+15-05-2020,US,Virginia,Loudoun,1374,1326,0,48
+15-05-2020,US,Tennessee,Loudon,48,48,0,0
+15-05-2020,US,California,Los Angeles,36316,34563,0,1753
+15-05-2020,US,New Mexico,Los Alamos,6,6,0,0
+15-05-2020,US,Ohio,Lorain,585,538,0,47
+15-05-2020,US,Arkansas,Lonoke,45,45,0,0
+15-05-2020,US,Georgia,Long,6,6,0,0
+15-05-2020,US,West Virginia,Logan,14,13,0,1
+15-05-2020,US,Oklahoma,Logan,18,17,0,1
+15-05-2020,US,Ohio,Logan,24,23,0,1
+15-05-2020,US,Nebraska,Logan,0,0,0,0
+15-05-2020,US,Kentucky,Logan,80,79,0,1
+15-05-2020,US,Illinois,Logan,10,10,0,0
+15-05-2020,US,Colorado,Logan,483,480,0,3
+15-05-2020,US,Arkansas,Logan,4,4,0,0
+15-05-2020,US,Texas,Llano,3,3,0,0
+15-05-2020,US,New York,Livingston,106,99,0,7
+15-05-2020,US,Missouri,Livingston,3,3,0,0
+15-05-2020,US,Michigan,Livingston,381,356,0,25
+15-05-2020,US,Louisiana,Livingston,347,324,0,23
+15-05-2020,US,Kentucky,Livingston,7,7,0,0
+15-05-2020,US,Illinois,Livingston,25,24,0,1
+15-05-2020,US,Texas,Live Oak,6,6,0,0
+15-05-2020,US,Connecticut,Litchfield,1218,1103,0,115
+15-05-2020,US,Texas,Lipscomb,2,2,0,0
+15-05-2020,US,Oregon,Linn,109,101,0,8
+15-05-2020,US,Missouri,Linn,5,4,0,1
+15-05-2020,US,Kansas,Linn,6,6,0,0
+15-05-2020,US,Iowa,Linn,882,813,0,69
+15-05-2020,US,Wyoming,Lincoln,14,14,0,0
+15-05-2020,US,Wisconsin,Lincoln,2,2,0,0
+15-05-2020,US,West Virginia,Lincoln,5,5,0,0
+15-05-2020,US,Washington,Lincoln,2,2,0,0
+15-05-2020,US,Tennessee,Lincoln,16,16,0,0
+15-05-2020,US,South Dakota,Lincoln,198,198,0,0
+15-05-2020,US,Oregon,Lincoln,7,7,0,0
+15-05-2020,US,Oklahoma,Lincoln,17,15,0,2
+15-05-2020,US,North Carolina,Lincoln,44,44,0,0
+15-05-2020,US,New Mexico,Lincoln,2,2,0,0
+15-05-2020,US,Nevada,Lincoln,2,2,0,0
+15-05-2020,US,Nebraska,Lincoln,42,41,0,1
+15-05-2020,US,Montana,Lincoln,7,6,0,1
+15-05-2020,US,Missouri,Lincoln,103,102,0,1
+15-05-2020,US,Mississippi,Lincoln,197,180,0,17
+15-05-2020,US,Minnesota,Lincoln,4,4,0,0
+15-05-2020,US,Maine,Lincoln,16,16,0,0
+15-05-2020,US,Louisiana,Lincoln,122,109,0,13
+15-05-2020,US,Kentucky,Lincoln,7,6,0,1
+15-05-2020,US,Idaho,Lincoln,29,29,0,0
+15-05-2020,US,Georgia,Lincoln,12,12,0,0
+15-05-2020,US,Colorado,Lincoln,3,3,0,0
+15-05-2020,US,Arkansas,Lincoln,952,944,0,8
+15-05-2020,US,Texas,Limestone,15,14,0,1
+15-05-2020,US,Alabama,Limestone,68,68,0,0
+15-05-2020,US,Ohio,Licking,182,172,0,10
+15-05-2020,US,Texas,Liberty,72,70,0,2
+15-05-2020,US,Montana,Liberty,1,1,0,0
+15-05-2020,US,Georgia,Liberty,45,45,0,0
+15-05-2020,US,Florida,Liberty,199,199,0,0
+15-05-2020,US,Virginia,Lexington,5,5,0,0
+15-05-2020,US,South Carolina,Lexington,512,486,0,26
+15-05-2020,US,Montana,Lewis and Clark,16,16,0,0
+15-05-2020,US,West Virginia,Lewis,4,4,0,0
+15-05-2020,US,Washington,Lewis,32,29,0,3
+15-05-2020,US,Tennessee,Lewis,2,2,0,0
+15-05-2020,US,New York,Lewis,12,12,0,0
+15-05-2020,US,Missouri,Lewis,7,6,0,1
+15-05-2020,US,Kentucky,Lewis,8,8,0,0
+15-05-2020,US,Idaho,Lewis,0,0,0,0
+15-05-2020,US,Florida,Levy,24,24,0,0
+15-05-2020,US,Kentucky,Letcher,5,5,0,0
+15-05-2020,US,Kentucky,Leslie,5,5,0,0
+15-05-2020,US,Texas,Leon,9,9,0,0
+15-05-2020,US,Florida,Leon,276,270,0,6
+15-05-2020,US,North Carolina,Lenoir,141,136,0,5
+15-05-2020,US,Michigan,Lenawee,132,129,0,3
+15-05-2020,US,Idaho,Lemhi,1,1,0,0
+15-05-2020,US,Pennsylvania,Lehigh,3396,3260,0,136
+15-05-2020,US,Mississippi,Leflore,199,177,0,22
+15-05-2020,US,Michigan,Leelanau,10,10,0,0
+15-05-2020,US,Virginia,Lee,10,10,0,0
+15-05-2020,US,Texas,Lee,6,6,0,0
+15-05-2020,US,South Carolina,Lee,127,117,0,10
+15-05-2020,US,North Carolina,Lee,305,302,0,3
+15-05-2020,US,Mississippi,Lee,85,81,0,4
+15-05-2020,US,Iowa,Lee,18,18,0,0
+15-05-2020,US,Illinois,Lee,73,72,0,1
+15-05-2020,US,Georgia,Lee,344,321,0,23
+15-05-2020,US,Florida,Lee,1385,1311,0,74
+15-05-2020,US,Arkansas,Lee,10,9,0,1
+15-05-2020,US,Alabama,Lee,447,416,0,31
+15-05-2020,US,Pennsylvania,Lebanon,863,844,0,19
+15-05-2020,US,Kansas,Leavenworth,958,952,0,6
+15-05-2020,US,Mississippi,Leake,351,345,0,6
+15-05-2020,US,New Mexico,Lea,15,15,0,0
+15-05-2020,US,Minnesota,Le Sueur,33,32,0,1
+15-05-2020,US,Oklahoma,Le Flore,13,12,0,1
+15-05-2020,US,Tennessee,Lawrence,21,21,0,0
+15-05-2020,US,South Dakota,Lawrence,9,9,0,0
+15-05-2020,US,Pennsylvania,Lawrence,72,65,0,7
+15-05-2020,US,Ohio,Lawrence,27,27,0,0
+15-05-2020,US,Missouri,Lawrence,7,7,0,0
+15-05-2020,US,Mississippi,Lawrence,74,74,0,0
+15-05-2020,US,Kentucky,Lawrence,2,2,0,0
+15-05-2020,US,Indiana,Lawrence,127,109,0,18
+15-05-2020,US,Illinois,Lawrence,4,4,0,0
+15-05-2020,US,Arkansas,Lawrence,72,68,0,4
+15-05-2020,US,Alabama,Lawrence,28,28,0,0
+15-05-2020,US,Texas,Lavaca,7,6,0,1
+15-05-2020,US,South Carolina,Laurens,57,54,0,3
+15-05-2020,US,Georgia,Laurens,87,86,0,1
+15-05-2020,US,Kentucky,Laurel,21,19,0,2
+15-05-2020,US,Tennessee,Lauderdale,43,43,0,0
+15-05-2020,US,Mississippi,Lauderdale,566,521,0,45
+15-05-2020,US,Alabama,Lauderdale,109,107,0,2
+15-05-2020,US,Oklahoma,Latimer,5,4,0,1
+15-05-2020,US,Idaho,Latah,6,6,0,0
+15-05-2020,US,Colorado,Las Animas,4,4,0,0
+15-05-2020,US,Kentucky,Larue,6,6,0,0
+15-05-2020,US,Colorado,Larimer,472,451,0,21
+15-05-2020,US,Wyoming,Laramie,178,178,0,0
+15-05-2020,US,Michigan,Lapeer,179,149,0,30
+15-05-2020,US,Georgia,Lanier,12,10,0,2
+15-05-2020,US,Oregon,Lane,61,59,0,2
+15-05-2020,US,Nevada,Lander,19,19,0,0
+15-05-2020,US,Virginia,Lancaster,7,7,0,0
+15-05-2020,US,South Carolina,Lancaster,110,105,0,5
+15-05-2020,US,Pennsylvania,Lancaster,2428,2179,0,249
+15-05-2020,US,Nebraska,Lancaster,733,732,0,1
+15-05-2020,US,Texas,Lampasas,8,8,0,0
+15-05-2020,US,Vermont,Lamoille,27,26,0,1
+15-05-2020,US,Texas,Lamb,10,10,0,0
+15-05-2020,US,Texas,Lamar,111,107,0,4
+15-05-2020,US,Mississippi,Lamar,166,162,0,4
+15-05-2020,US,Georgia,Lamar,41,40,0,1
+15-05-2020,US,Alabama,Lamar,15,15,0,0
+15-05-2020,US,Tennessee,Lake,401,401,0,0
+15-05-2020,US,South Dakota,Lake,5,5,0,0
+15-05-2020,US,Ohio,Lake,214,200,0,14
+15-05-2020,US,Montana,Lake,5,5,0,0
+15-05-2020,US,Minnesota,Lake,1,1,0,0
+15-05-2020,US,Michigan,Lake,2,2,0,0
+15-05-2020,US,Indiana,Lake,2747,2608,0,139
+15-05-2020,US,Illinois,Lake,6157,5950,0,207
+15-05-2020,US,Florida,Lake,249,235,0,14
+15-05-2020,US,Colorado,Lake,24,24,0,0
+15-05-2020,US,California,Lake,8,8,0,0
+15-05-2020,US,Louisiana,Lafourche,724,661,0,63
+15-05-2020,US,Wisconsin,Lafayette,16,16,0,0
+15-05-2020,US,Missouri,Lafayette,68,65,0,3
+15-05-2020,US,Mississippi,Lafayette,107,104,0,3
+15-05-2020,US,Louisiana,Lafayette,543,520,0,23
+15-05-2020,US,Florida,Lafayette,5,5,0,0
+15-05-2020,US,Arkansas,Lafayette,9,8,0,1
+15-05-2020,US,Missouri,Laclede,3,3,0,0
+15-05-2020,US,Pennsylvania,Lackawanna,1273,1132,0,141
+15-05-2020,US,Minnesota,Lac qui Parle,2,2,0,0
+15-05-2020,US,Kansas,Labette,22,22,0,0
+15-05-2020,US,Louisiana,LaSalle,36,36,0,0
+15-05-2020,US,Illinois,LaSalle,117,110,0,7
+15-05-2020,US,Indiana,LaPorte,352,338,0,14
+15-05-2020,US,Indiana,LaGrange,48,46,0,2
+15-05-2020,US,Texas,La Salle,4,4,0,0
+15-05-2020,US,Colorado,La Plata,66,65,0,1
+15-05-2020,US,Arizona,La Paz,36,35,0,1
+15-05-2020,US,Wisconsin,La Crosse,42,42,0,0
+15-05-2020,US,Iowa,Kossuth,2,2,0,0
+15-05-2020,US,Indiana,Kosciusko,55,54,0,1
+15-05-2020,US,Idaho,Kootenai,64,64,0,0
+15-05-2020,US,Minnesota,Koochiching,3,3,0,0
+15-05-2020,US,Alaska,Kodiak Island,1,1,0,0
+15-05-2020,US,Texas,Knox,1,1,0,0
+15-05-2020,US,Tennessee,Knox,302,297,0,5
+15-05-2020,US,Ohio,Knox,21,20,0,1
+15-05-2020,US,Nebraska,Knox,8,8,0,0
+15-05-2020,US,Maine,Knox,21,21,0,0
+15-05-2020,US,Kentucky,Knox,7,7,0,0
+15-05-2020,US,Indiana,Knox,22,22,0,0
+15-05-2020,US,Illinois,Knox,84,84,0,0
+15-05-2020,US,Kentucky,Knott,4,4,0,0
+15-05-2020,US,Washington,Klickitat,22,20,0,2
+15-05-2020,US,Texas,Kleberg,13,12,0,1
+15-05-2020,US,Oregon,Klamath,41,41,0,0
+15-05-2020,US,Minnesota,Kittson,1,1,0,0
+15-05-2020,US,Washington,Kittitas,47,47,0,0
+15-05-2020,US,Washington,Kitsap,157,155,0,2
+15-05-2020,US,Colorado,Kit Carson,26,23,0,3
+15-05-2020,US,Oklahoma,Kiowa,7,7,0,0
+15-05-2020,US,Kansas,Kiowa,2,2,0,0
+15-05-2020,US,South Dakota,Kingsbury,0,0,0,0
+15-05-2020,US,California,Kings,358,357,0,1
+15-05-2020,US,Oklahoma,Kingfisher,10,10,0,0
+15-05-2020,US,Virginia,King and Queen,7,7,0,0
+15-05-2020,US,Virginia,King William,13,12,0,1
+15-05-2020,US,Virginia,King George,45,41,0,4
+15-05-2020,US,Washington,King,7325,6801,0,524
+15-05-2020,US,Texas,Kimble,1,1,0,0
+15-05-2020,US,Nebraska,Kimball,9,9,0,0
+15-05-2020,US,Wisconsin,Kewaunee,30,29,0,1
+15-05-2020,US,Alaska,Ketchikan Gateway,16,16,0,0
+15-05-2020,US,South Carolina,Kershaw,261,249,0,12
+15-05-2020,US,Texas,Kerr,10,10,0,0
+15-05-2020,US,California,Kern,1428,1404,0,24
+15-05-2020,US,Iowa,Keokuk,9,9,0,0
+15-05-2020,US,Kentucky,Kenton,437,407,0,30
+15-05-2020,US,Rhode Island,Kent,883,824,0,59
+15-05-2020,US,Michigan,Kent,2705,2652,0,53
+15-05-2020,US,Maryland,Kent,131,117,0,14
+15-05-2020,US,Delaware,Kent,1146,1084,0,62
+15-05-2020,US,Wisconsin,Kenosha,780,763,0,17
+15-05-2020,US,Maine,Kennebec,116,108,0,8
+15-05-2020,US,Texas,Kendall,20,20,0,0
+15-05-2020,US,Illinois,Kendall,531,514,0,17
+15-05-2020,US,Alaska,Kenai Peninsula,24,22,0,2
+15-05-2020,US,Mississippi,Kemper,100,93,0,7
+15-05-2020,US,Nebraska,Keith,2,2,0,0
+15-05-2020,US,Kansas,Kearny,36,36,0,0
+15-05-2020,US,Nebraska,Kearney,10,10,0,0
+15-05-2020,US,Oklahoma,Kay,49,42,0,7
+15-05-2020,US,Texas,Kaufman,143,142,0,1
+15-05-2020,US,Hawaii,Kauai,21,21,0,0
+15-05-2020,US,Texas,Karnes,4,4,0,0
+15-05-2020,US,Missouri,Kansas City,848,830,0,18
+15-05-2020,US,Illinois,Kankakee,647,616,0,31
+15-05-2020,US,Illinois,Kane,4159,4052,0,107
+15-05-2020,US,Minnesota,Kandiyohi,394,393,0,1
+15-05-2020,US,West Virginia,Kanawha,202,187,0,15
+15-05-2020,US,Minnesota,Kanabec,9,9,0,0
+15-05-2020,US,Michigan,Kalkaska,17,15,0,2
+15-05-2020,US,Michigan,Kalamazoo,679,638,0,41
+15-05-2020,US,Pennsylvania,Juniata,94,93,0,1
+15-05-2020,US,Wisconsin,Juneau,21,20,0,1
+15-05-2020,US,Alaska,Juneau,29,29,0,0
+15-05-2020,US,Oregon,Josephine,25,24,0,1
+15-05-2020,US,Texas,Jones,110,110,0,0
+15-05-2020,US,North Carolina,Jones,21,18,0,3
+15-05-2020,US,Mississippi,Jones,304,297,0,7
+15-05-2020,US,Iowa,Jones,36,36,0,0
+15-05-2020,US,Georgia,Jones,30,30,0,0
+15-05-2020,US,Oklahoma,Johnston,3,3,0,0
+15-05-2020,US,North Carolina,Johnston,233,214,0,19
+15-05-2020,US,Wyoming,Johnson,15,14,0,1
+15-05-2020,US,Texas,Johnson,119,115,0,4
+15-05-2020,US,Tennessee,Johnson,15,15,0,0
+15-05-2020,US,Nebraska,Johnson,6,6,0,0
+15-05-2020,US,Missouri,Johnson,71,71,0,0
+15-05-2020,US,Kentucky,Johnson,5,5,0,0
+15-05-2020,US,Kansas,Johnson,638,583,0,55
+15-05-2020,US,Iowa,Johnson,565,558,0,7
+15-05-2020,US,Indiana,Johnson,959,863,0,96
+15-05-2020,US,Illinois,Johnson,7,7,0,0
+15-05-2020,US,Georgia,Johnson,71,69,0,2
+15-05-2020,US,Arkansas,Johnson,35,35,0,0
+15-05-2020,US,Illinois,Jo Daviess,18,18,0,0
+15-05-2020,US,Texas,Jim Wells,7,7,0,0
+15-05-2020,US,Texas,Jim Hogg,3,3,0,0
+15-05-2020,US,Kansas,Jewell,4,4,0,0
+15-05-2020,US,Kentucky,Jessamine,50,50,0,0
+15-05-2020,US,Illinois,Jersey,18,17,0,1
+15-05-2020,US,Idaho,Jerome,87,85,0,2
+15-05-2020,US,South Dakota,Jerauld,6,5,0,1
+15-05-2020,US,Indiana,Jennings,111,107,0,4
+15-05-2020,US,Georgia,Jenkins,16,15,0,1
+15-05-2020,US,Mississippi,Jefferson Davis,67,65,0,2
+15-05-2020,US,Louisiana,Jefferson Davis,70,64,0,6
+15-05-2020,US,Wisconsin,Jefferson,58,56,0,2
+15-05-2020,US,West Virginia,Jefferson,97,96,0,1
+15-05-2020,US,Washington,Jefferson,29,29,0,0
+15-05-2020,US,Texas,Jefferson,429,403,0,26
+15-05-2020,US,Tennessee,Jefferson,26,26,0,0
+15-05-2020,US,Pennsylvania,Jefferson,7,7,0,0
+15-05-2020,US,Oregon,Jefferson,24,24,0,0
+15-05-2020,US,Oklahoma,Jefferson,3,3,0,0
+15-05-2020,US,Ohio,Jefferson,59,56,0,3
+15-05-2020,US,New York,Jefferson,71,71,0,0
+15-05-2020,US,Nebraska,Jefferson,5,5,0,0
+15-05-2020,US,Montana,Jefferson,3,3,0,0
+15-05-2020,US,Missouri,Jefferson,318,304,0,14
+15-05-2020,US,Mississippi,Jefferson,34,34,0,0
+15-05-2020,US,Louisiana,Jefferson,6897,6473,0,424
+15-05-2020,US,Kentucky,Jefferson,1772,1656,0,116
+15-05-2020,US,Kansas,Jefferson,19,19,0,0
+15-05-2020,US,Iowa,Jefferson,10,10,0,0
+15-05-2020,US,Indiana,Jefferson,35,34,0,1
+15-05-2020,US,Illinois,Jefferson,98,81,0,17
+15-05-2020,US,Idaho,Jefferson,5,5,0,0
+15-05-2020,US,Georgia,Jefferson,22,21,0,1
+15-05-2020,US,Florida,Jefferson,28,26,0,2
+15-05-2020,US,Colorado,Jefferson,1775,1657,0,118
+15-05-2020,US,Arkansas,Jefferson,310,291,0,19
+15-05-2020,US,Alabama,Jefferson,1292,1221,0,71
+15-05-2020,US,Georgia,Jeff Davis,24,23,0,1
+15-05-2020,US,Indiana,Jay,25,25,0,0
+15-05-2020,US,Texas,Jasper,23,22,0,1
+15-05-2020,US,South Carolina,Jasper,25,24,0,1
+15-05-2020,US,Missouri,Jasper,29,29,0,0
+15-05-2020,US,Mississippi,Jasper,110,107,0,3
+15-05-2020,US,Iowa,Jasper,241,230,0,11
+15-05-2020,US,Indiana,Jasper,42,41,0,1
+15-05-2020,US,Illinois,Jasper,45,38,0,7
+15-05-2020,US,Georgia,Jasper,26,26,0,0
+15-05-2020,US,Virginia,James City,179,164,0,15
+15-05-2020,US,Wisconsin,Jackson,15,14,0,1
+15-05-2020,US,West Virginia,Jackson,137,120,0,17
+15-05-2020,US,Texas,Jackson,15,14,0,1
+15-05-2020,US,Tennessee,Jackson,10,10,0,0
+15-05-2020,US,Oregon,Jackson,50,50,0,0
+15-05-2020,US,Oklahoma,Jackson,21,20,0,1
+15-05-2020,US,Ohio,Jackson,10,9,0,1
+15-05-2020,US,North Carolina,Jackson,23,22,0,1
+15-05-2020,US,Missouri,Jackson,425,409,0,16
+15-05-2020,US,Mississippi,Jackson,283,270,0,13
+15-05-2020,US,Minnesota,Jackson,34,34,0,0
+15-05-2020,US,Michigan,Jackson,416,390,0,26
+15-05-2020,US,Louisiana,Jackson,69,61,0,8
+15-05-2020,US,Kentucky,Jackson,57,45,0,12
+15-05-2020,US,Kansas,Jackson,23,23,0,0
+15-05-2020,US,Iowa,Jackson,8,8,0,0
+15-05-2020,US,Indiana,Jackson,313,312,0,1
+15-05-2020,US,Illinois,Jackson,177,167,0,10
+15-05-2020,US,Georgia,Jackson,127,124,0,3
+15-05-2020,US,Florida,Jackson,125,125,0,0
+15-05-2020,US,Arkansas,Jackson,1,1,0,0
+15-05-2020,US,Alabama,Jackson,62,60,0,2
+15-05-2020,US,Texas,Jack,4,4,0,0
+15-05-2020,US,Arkansas,Izard,13,13,0,0
+15-05-2020,US,Mississippi,Itawamba,75,68,0,7
+15-05-2020,US,Minnesota,Itasca,42,38,0,4
+15-05-2020,US,Virginia,Isle of Wight,115,112,0,3
+15-05-2020,US,Washington,Island,176,167,0,9
+15-05-2020,US,Minnesota,Isanti,16,16,0,0
+15-05-2020,US,Michigan,Isabella,62,55,0,7
+15-05-2020,US,Georgia,Irwin,22,21,0,1
+15-05-2020,US,Illinois,Iroquois,111,108,0,3
+15-05-2020,US,Wisconsin,Iron,2,1,0,1
+15-05-2020,US,Missouri,Iron,2,2,0,0
+15-05-2020,US,North Carolina,Iredell,170,164,0,6
+15-05-2020,US,Wisconsin,Iowa,11,11,0,0
+15-05-2020,US,Iowa,Iowa,27,27,0,0
+15-05-2020,US,Michigan,Iosco,57,49,0,8
+15-05-2020,US,Michigan,Ionia,116,113,0,3
+15-05-2020,US,California,Inyo,19,18,0,1
+15-05-2020,US,Michigan,Ingham,629,609,0,20
+15-05-2020,US,Pennsylvania,Indiana,84,78,0,6
+15-05-2020,US,Florida,Indian River,104,95,0,9
+15-05-2020,US,Arkansas,Independence,23,23,0,0
+15-05-2020,US,California,Imperial,786,771,0,15
+15-05-2020,US,Idaho,Idaho,3,3,0,0
+15-05-2020,US,Iowa,Ida,4,4,0,0
+15-05-2020,US,Louisiana,Iberville,543,505,0,38
+15-05-2020,US,Louisiana,Iberia,352,321,0,31
+15-05-2020,US,South Dakota,Hyde,1,1,0,0
+15-05-2020,US,North Carolina,Hyde,1,1,0,0
+15-05-2020,US,Texas,Hutchinson,25,25,0,0
+15-05-2020,US,South Dakota,Hutchinson,3,3,0,0
+15-05-2020,US,Ohio,Huron,39,36,0,3
+15-05-2020,US,Michigan,Huron,38,37,0,1
+15-05-2020,US,Indiana,Huntington,19,17,0,2
+15-05-2020,US,Pennsylvania,Huntingdon,204,204,0,0
+15-05-2020,US,New Jersey,Hunterdon,778,729,0,49
+15-05-2020,US,Texas,Hunt,66,63,0,3
+15-05-2020,US,Tennessee,Humphreys,12,11,0,1
+15-05-2020,US,Mississippi,Humphreys,42,37,0,5
+15-05-2020,US,Nevada,Humboldt,71,68,0,3
+15-05-2020,US,Iowa,Humboldt,7,7,0,0
+15-05-2020,US,California,Humboldt,68,68,0,0
+15-05-2020,US,South Dakota,Hughes,16,16,0,0
+15-05-2020,US,Colorado,Huerfano,3,3,0,0
+15-05-2020,US,New Jersey,Hudson,18061,17019,0,1042
+15-05-2020,US,Missouri,Howell,5,5,0,0
+15-05-2020,US,Texas,Howard,6,5,0,1
+15-05-2020,US,Nebraska,Howard,32,32,0,0
+15-05-2020,US,Missouri,Howard,3,3,0,0
+15-05-2020,US,Maryland,Howard,1313,1273,0,40
+15-05-2020,US,Iowa,Howard,12,12,0,0
+15-05-2020,US,Indiana,Howard,262,251,0,11
+15-05-2020,US,Arkansas,Howard,14,14,0,0
+15-05-2020,US,Texas,Houston,74,74,0,0
+15-05-2020,US,Tennessee,Houston,6,6,0,0
+15-05-2020,US,Minnesota,Houston,2,2,0,0
+15-05-2020,US,Georgia,Houston,314,298,0,16
+15-05-2020,US,Alabama,Houston,130,126,0,4
+15-05-2020,US,Michigan,Houghton,2,2,0,0
+15-05-2020,US,Wyoming,Hot Springs,3,3,0,0
+15-05-2020,US,Arkansas,Hot Spring,29,29,0,0
+15-05-2020,US,South Carolina,Horry,283,265,0,18
+15-05-2020,US,Texas,Hopkins,8,8,0,0
+15-05-2020,US,Kentucky,Hopkins,215,188,0,27
+15-05-2020,US,Virginia,Hopewell,49,49,0,0
+15-05-2020,US,Nebraska,Hooker,0,0,0,0
+15-05-2020,US,Oregon,Hood River,14,14,0,0
+15-05-2020,US,Texas,Hood,22,19,0,3
+15-05-2020,US,Hawaii,Honolulu,414,403,0,11
+15-05-2020,US,Nebraska,Holt,1,1,0,0
+15-05-2020,US,Missouri,Holt,1,1,0,0
+15-05-2020,US,Ohio,Holmes,10,9,0,1
+15-05-2020,US,Mississippi,Holmes,278,259,0,19
+15-05-2020,US,Florida,Holmes,11,11,0,0
+15-05-2020,US,North Carolina,Hoke,140,140,0,0
+15-05-2020,US,Texas,Hockley,23,22,0,1
+15-05-2020,US,Ohio,Hocking,31,29,0,2
+15-05-2020,US,Nebraska,Hitchcock,1,1,0,0
+15-05-2020,US,Colorado,Hinsdale,3,3,0,0
+15-05-2020,US,Mississippi,Hinds,745,725,0,20
+15-05-2020,US,Michigan,Hillsdale,162,140,0,22
+15-05-2020,US,New Hampshire,Hillsborough,1680,1626,0,54
+15-05-2020,US,Florida,Hillsborough,1568,1521,0,47
+15-05-2020,US,Texas,Hill,22,21,0,1
+15-05-2020,US,Montana,Hill,1,1,0,0
+15-05-2020,US,Florida,Highlands,103,95,0,8
+15-05-2020,US,Virginia,Highland,2,2,0,0
+15-05-2020,US,Ohio,Highland,14,13,0,1
+15-05-2020,US,Texas,Hidalgo,417,407,0,10
+15-05-2020,US,New Mexico,Hidalgo,0,0,0,0
+15-05-2020,US,Tennessee,Hickman,52,52,0,0
+15-05-2020,US,Kentucky,Hickman,5,5,0,0
+15-05-2020,US,North Carolina,Hertford,51,50,0,1
+15-05-2020,US,Florida,Hernando,105,100,0,5
+15-05-2020,US,New York,Herkimer,87,84,0,3
+15-05-2020,US,Virginia,Henry,30,29,0,1
+15-05-2020,US,Tennessee,Henry,17,17,0,0
+15-05-2020,US,Ohio,Henry,10,9,0,1
+15-05-2020,US,Missouri,Henry,9,8,0,1
+15-05-2020,US,Kentucky,Henry,12,12,0,0
+15-05-2020,US,Iowa,Henry,44,43,0,1
+15-05-2020,US,Indiana,Henry,107,105,0,2
+15-05-2020,US,Illinois,Henry,64,64,0,0
+15-05-2020,US,Georgia,Henry,628,610,0,18
+15-05-2020,US,Alabama,Henry,37,36,0,1
+15-05-2020,US,Virginia,Henrico,1198,1085,0,113
+15-05-2020,US,Minnesota,Hennepin,4674,4225,0,449
+15-05-2020,US,Florida,Hendry,180,169,0,11
+15-05-2020,US,Indiana,Hendricks,1012,954,0,58
+15-05-2020,US,Texas,Henderson,48,48,0,0
+15-05-2020,US,Tennessee,Henderson,11,11,0,0
+15-05-2020,US,North Carolina,Henderson,274,238,0,36
+15-05-2020,US,Kentucky,Henderson,85,82,0,3
+15-05-2020,US,Illinois,Henderson,7,7,0,0
+15-05-2020,US,Arkansas,Hempstead,9,8,0,1
+15-05-2020,US,Texas,Hemphill,1,1,0,0
+15-05-2020,US,Georgia,Heard,17,16,0,1
+15-05-2020,US,Tennessee,Haywood,29,28,0,1
+15-05-2020,US,North Carolina,Haywood,21,21,0,0
+15-05-2020,US,Texas,Hays,219,216,0,3
+15-05-2020,US,Tennessee,Hawkins,32,30,0,2
+15-05-2020,US,Hawaii,Hawaii,76,76,0,0
+15-05-2020,US,Texas,Haskell,1,1,0,0
+15-05-2020,US,Oklahoma,Haskell,5,5,0,0
+15-05-2020,US,Kansas,Haskell,16,16,0,0
+15-05-2020,US,Kansas,Harvey,10,10,0,0
+15-05-2020,US,Texas,Hartley,9,7,0,2
+15-05-2020,US,Connecticut,Hartford,8126,7101,0,1025
+15-05-2020,US,Kentucky,Hart,15,15,0,0
+15-05-2020,US,Georgia,Hart,19,19,0,0
+15-05-2020,US,Virginia,Harrisonburg,620,599,0,21
+15-05-2020,US,West Virginia,Harrison,34,33,0,1
+15-05-2020,US,Texas,Harrison,200,181,0,19
+15-05-2020,US,Ohio,Harrison,9,9,0,0
+15-05-2020,US,Missouri,Harrison,7,7,0,0
+15-05-2020,US,Mississippi,Harrison,214,208,0,6
+15-05-2020,US,Kentucky,Harrison,19,19,0,0
+15-05-2020,US,Iowa,Harrison,17,17,0,0
+15-05-2020,US,Indiana,Harrison,168,153,0,15
+15-05-2020,US,Texas,Harris,9050,8857,0,193
+15-05-2020,US,Georgia,Harris,75,72,0,3
+15-05-2020,US,Oklahoma,Harper,1,1,0,0
+15-05-2020,US,Kansas,Harper,1,1,0,0
+15-05-2020,US,Oregon,Harney,1,1,0,0
+15-05-2020,US,North Carolina,Harnett,237,220,0,17
+15-05-2020,US,Kentucky,Harlan,1,1,0,0
+15-05-2020,US,Maryland,Harford,671,639,0,32
+15-05-2020,US,West Virginia,Hardy,25,25,0,0
+15-05-2020,US,New Mexico,Harding,1,1,0,0
+15-05-2020,US,Texas,Hardin,116,112,0,4
+15-05-2020,US,Tennessee,Hardin,9,9,0,0
+15-05-2020,US,Ohio,Hardin,29,27,0,2
+15-05-2020,US,Kentucky,Hardin,71,69,0,2
+15-05-2020,US,Iowa,Hardin,11,11,0,0
+15-05-2020,US,Illinois,Hardin,1,1,0,0
+15-05-2020,US,Tennessee,Hardeman,180,180,0,0
+15-05-2020,US,Florida,Hardee,39,39,0,0
+15-05-2020,US,Georgia,Haralson,34,32,0,2
+15-05-2020,US,Texas,Hansford,15,13,0,2
+15-05-2020,US,Virginia,Hanover,208,189,0,19
+15-05-2020,US,South Dakota,Hand,1,1,0,0
+15-05-2020,US,West Virginia,Hancock,12,12,0,0
+15-05-2020,US,Tennessee,Hancock,0,0,0,0
+15-05-2020,US,Ohio,Hancock,44,42,0,2
+15-05-2020,US,Mississippi,Hancock,78,68,0,10
+15-05-2020,US,Maine,Hancock,10,9,0,1
+15-05-2020,US,Kentucky,Hancock,7,7,0,0
+15-05-2020,US,Iowa,Hancock,3,3,0,0
+15-05-2020,US,Indiana,Hancock,282,260,0,22
+15-05-2020,US,Illinois,Hancock,12,12,0,0
+15-05-2020,US,Georgia,Hancock,149,145,0,4
+15-05-2020,US,Virginia,Hampton,158,155,0,3
+15-05-2020,US,South Carolina,Hampton,29,29,0,0
+15-05-2020,US,West Virginia,Hampshire,12,11,0,1
+15-05-2020,US,Massachusetts,Hampshire,738,671,0,67
+15-05-2020,US,Massachusetts,Hampden,5038,4544,0,494
+15-05-2020,US,South Dakota,Hamlin,2,2,0,0
+15-05-2020,US,Texas,Hamilton,7,7,0,0
+15-05-2020,US,Tennessee,Hamilton,332,319,0,13
+15-05-2020,US,Ohio,Hamilton,1961,1852,0,109
+15-05-2020,US,New York,Hamilton,5,5,0,0
+15-05-2020,US,Nebraska,Hamilton,48,41,0,7
+15-05-2020,US,Kansas,Hamilton,9,9,0,0
+15-05-2020,US,Iowa,Hamilton,11,11,0,0
+15-05-2020,US,Indiana,Hamilton,977,889,0,88
+15-05-2020,US,Illinois,Hamilton,2,2,0,0
+15-05-2020,US,Florida,Hamilton,144,144,0,0
+15-05-2020,US,Tennessee,Hamblen,25,23,0,2
+15-05-2020,US,Nebraska,Hall,1409,1381,0,28
+15-05-2020,US,Georgia,Hall,2140,2100,0,40
+15-05-2020,US,Virginia,Halifax,27,27,0,0
+15-05-2020,US,North Carolina,Halifax,107,106,0,1
+15-05-2020,US,Texas,Hale,42,38,0,4
+15-05-2020,US,Alabama,Hale,80,78,0,2
+15-05-2020,US,Georgia,Habersham,411,395,0,16
+15-05-2020,US,Georgia,Gwinnett,2597,2496,0,101
+15-05-2020,US,Iowa,Guthrie,37,35,0,2
+15-05-2020,US,Colorado,Gunnison,182,176,0,6
+15-05-2020,US,Florida,Gulf,1,1,0,0
+15-05-2020,US,North Carolina,Guilford,767,721,0,46
+15-05-2020,US,Ohio,Guernsey,22,21,0,1
+15-05-2020,US,Texas,Guadalupe,106,106,0,0
+15-05-2020,US,New Mexico,Guadalupe,19,19,0,0
+15-05-2020,US,Tennessee,Grundy,30,29,0,1
+15-05-2020,US,Iowa,Grundy,17,17,0,0
+15-05-2020,US,Illinois,Grundy,73,72,0,1
+15-05-2020,US,Texas,Grimes,63,62,0,1
+15-05-2020,US,Mississippi,Grenada,58,56,0,2
+15-05-2020,US,Texas,Gregg,142,142,0,0
+15-05-2020,US,Oklahoma,Greer,66,59,0,7
+15-05-2020,US,South Carolina,Greenwood,69,68,0,1
+15-05-2020,US,Kansas,Greenwood,3,3,0,0
+15-05-2020,US,South Carolina,Greenville,1021,975,0,46
+15-05-2020,US,Kentucky,Greenup,13,13,0,0
+15-05-2020,US,Virginia,Greensville,50,43,0,7
+15-05-2020,US,Arizona,Greenlee,2,2,0,0
+15-05-2020,US,Virginia,Greene,16,15,0,1
+15-05-2020,US,Tennessee,Greene,46,44,0,2
+15-05-2020,US,Pennsylvania,Greene,27,26,0,1
+15-05-2020,US,Ohio,Greene,73,67,0,6
+15-05-2020,US,North Carolina,Greene,40,39,0,1
+15-05-2020,US,New York,Greene,209,195,0,14
+15-05-2020,US,Missouri,Greene,105,97,0,8
+15-05-2020,US,Mississippi,Greene,7,6,0,1
+15-05-2020,US,Iowa,Greene,13,13,0,0
+15-05-2020,US,Indiana,Greene,154,137,0,17
+15-05-2020,US,Illinois,Greene,4,4,0,0
+15-05-2020,US,Georgia,Greene,57,51,0,6
+15-05-2020,US,Arkansas,Greene,24,24,0,0
+15-05-2020,US,Alabama,Greene,82,78,0,4
+15-05-2020,US,West Virginia,Greenbrier,8,8,0,0
+15-05-2020,US,Wisconsin,Green Lake,10,10,0,0
+15-05-2020,US,Wisconsin,Green,39,39,0,0
+15-05-2020,US,Kentucky,Green,1,1,0,0
+15-05-2020,US,Nebraska,Greeley,2,2,0,0
+15-05-2020,US,Virginia,Grayson,19,19,0,0
+15-05-2020,US,Texas,Grayson,129,129,0,0
+15-05-2020,US,Kentucky,Grayson,103,95,0,8
+15-05-2020,US,Washington,Grays Harbor,14,14,0,0
+15-05-2020,US,Texas,Gray,88,88,0,0
+15-05-2020,US,Kansas,Gray,12,12,0,0
+15-05-2020,US,Kentucky,Graves,152,134,0,18
+15-05-2020,US,Michigan,Gratiot,35,31,0,4
+15-05-2020,US,North Carolina,Granville,186,180,0,6
+15-05-2020,US,Wisconsin,Grant,72,62,0,10
+15-05-2020,US,West Virginia,Grant,6,6,0,0
+15-05-2020,US,Washington,Grant,185,182,0,3
+15-05-2020,US,South Dakota,Grant,7,7,0,0
+15-05-2020,US,Oregon,Grant,1,1,0,0
+15-05-2020,US,Oklahoma,Grant,2,2,0,0
+15-05-2020,US,North Dakota,Grant,2,2,0,0
+15-05-2020,US,New Mexico,Grant,16,16,0,0
+15-05-2020,US,Minnesota,Grant,2,2,0,0
+15-05-2020,US,Louisiana,Grant,20,19,0,1
+15-05-2020,US,Kentucky,Grant,32,29,0,3
+15-05-2020,US,Kansas,Grant,13,13,0,0
+15-05-2020,US,Indiana,Grant,157,140,0,17
+15-05-2020,US,Arkansas,Grant,16,16,0,0
+15-05-2020,US,Michigan,Grand Traverse,23,18,0,5
+15-05-2020,US,Vermont,Grand Isle,4,4,0,0
+15-05-2020,US,North Dakota,Grand Forks,307,304,0,3
+15-05-2020,US,Colorado,Grand,5,5,0,0
+15-05-2020,US,Tennessee,Grainger,6,6,0,0
+15-05-2020,US,North Carolina,Graham,2,2,0,0
+15-05-2020,US,Arizona,Graham,21,21,0,0
+15-05-2020,US,New Hampshire,Grafton,61,60,0,1
+15-05-2020,US,Oklahoma,Grady,60,58,0,2
+15-05-2020,US,Georgia,Grady,90,86,0,4
+15-05-2020,US,Kansas,Gove,1,1,0,0
+15-05-2020,US,Nebraska,Gosper,13,13,0,0
+15-05-2020,US,Wyoming,Goshen,5,5,0,0
+15-05-2020,US,Georgia,Gordon,125,110,0,15
+15-05-2020,US,Idaho,Gooding,22,22,0,0
+15-05-2020,US,Minnesota,Goodhue,29,29,0,0
+15-05-2020,US,Virginia,Goochland,86,81,0,5
+15-05-2020,US,Texas,Gonzales,73,71,0,2
+15-05-2020,US,Texas,Goliad,7,7,0,0
+15-05-2020,US,Montana,Golden Valley,3,3,0,0
+15-05-2020,US,Michigan,Gogebic,4,3,0,1
+15-05-2020,US,Georgia,Glynn,77,76,0,1
+15-05-2020,US,Virginia,Gloucester,28,27,0,1
+15-05-2020,US,New Jersey,Gloucester,1790,1684,0,106
+15-05-2020,US,California,Glenn,9,9,0,0
+15-05-2020,US,Texas,Glasscock,1,1,0,0
+15-05-2020,US,Georgia,Glascock,1,1,0,0
+15-05-2020,US,Michigan,Gladwin,17,16,0,1
+15-05-2020,US,Florida,Glades,10,9,0,1
+15-05-2020,US,Montana,Glacier,6,6,0,0
+15-05-2020,US,Colorado,Gilpin,3,3,0,0
+15-05-2020,US,West Virginia,Gilmer,8,8,0,0
+15-05-2020,US,Georgia,Gilmer,105,105,0,0
+15-05-2020,US,Texas,Gillespie,4,4,0,0
+15-05-2020,US,Virginia,Giles,5,5,0,0
+15-05-2020,US,Tennessee,Giles,9,9,0,0
+15-05-2020,US,Florida,Gilchrist,7,7,0,0
+15-05-2020,US,Arizona,Gila,22,21,0,1
+15-05-2020,US,Tennessee,Gibson,57,56,0,1
+15-05-2020,US,Indiana,Gibson,9,9,0,0
+15-05-2020,US,South Carolina,Georgetown,51,48,0,3
+15-05-2020,US,Mississippi,George,18,17,0,1
+15-05-2020,US,Missouri,Gentry,2,2,0,0
+15-05-2020,US,Alabama,Geneva,21,21,0,0
+15-05-2020,US,New York,Genesee,175,172,0,3
+15-05-2020,US,Michigan,Genesee,1835,1606,0,229
+15-05-2020,US,Idaho,Gem,16,16,0,0
+15-05-2020,US,Ohio,Geauga,212,190,0,22
+15-05-2020,US,Kansas,Geary,14,14,0,0
+15-05-2020,US,North Carolina,Gates,13,13,0,0
+15-05-2020,US,North Carolina,Gaston,201,195,0,6
+15-05-2020,US,Missouri,Gasconade,2,2,0,0
+15-05-2020,US,Texas,Garza,4,4,0,0
+15-05-2020,US,Oklahoma,Garvin,16,15,0,1
+15-05-2020,US,Maryland,Garrett,6,6,0,0
+15-05-2020,US,Kentucky,Garrard,4,4,0,0
+15-05-2020,US,Arkansas,Garland,127,126,0,1
+15-05-2020,US,Washington,Garfield,0,0,0,0
+15-05-2020,US,Oklahoma,Garfield,23,22,0,1
+15-05-2020,US,Colorado,Garfield,113,111,0,2
+15-05-2020,US,Texas,Galveston,693,663,0,30
+15-05-2020,US,Ohio,Gallia,6,5,0,1
+15-05-2020,US,Montana,Gallatin,149,148,0,1
+15-05-2020,US,Kentucky,Gallatin,2,2,0,0
+15-05-2020,US,Illinois,Gallatin,2,2,0,0
+15-05-2020,US,Virginia,Galax,66,66,0,0
+15-05-2020,US,Texas,Gaines,5,5,0,0
+15-05-2020,US,Nebraska,Gage,42,39,0,3
+15-05-2020,US,Florida,Gadsden,180,179,0,1
+15-05-2020,US,Nebraska,Furnas,5,5,0,0
+15-05-2020,US,Pennsylvania,Fulton,11,11,0,0
+15-05-2020,US,Ohio,Fulton,34,31,0,3
+15-05-2020,US,New York,Fulton,145,131,0,14
+15-05-2020,US,Kentucky,Fulton,1,1,0,0
+15-05-2020,US,Indiana,Fulton,39,38,0,1
+15-05-2020,US,Illinois,Fulton,6,6,0,0
+15-05-2020,US,Georgia,Fulton,3703,3539,0,164
+15-05-2020,US,Arkansas,Fulton,3,3,0,0
+15-05-2020,US,Nebraska,Frontier,1,1,0,0
+15-05-2020,US,Texas,Frio,34,34,0,0
+15-05-2020,US,California,Fresno,1074,1061,0,13
+15-05-2020,US,Wyoming,Fremont,214,214,0,0
+15-05-2020,US,Iowa,Fremont,3,3,0,0
+15-05-2020,US,Idaho,Fremont,3,3,0,0
+15-05-2020,US,Colorado,Fremont,25,25,0,0
+15-05-2020,US,Texas,Freestone,8,8,0,0
+15-05-2020,US,Minnesota,Freeborn,55,55,0,0
+15-05-2020,US,Virginia,Fredericksburg,82,82,0,0
+15-05-2020,US,Virginia,Frederick,195,192,0,3
+15-05-2020,US,Maryland,Frederick,1364,1276,0,88
+15-05-2020,US,Virginia,Franklin City,27,26,0,1
+15-05-2020,US,Washington,Franklin,433,414,0,19
+15-05-2020,US,Virginia,Franklin,30,29,0,1
+15-05-2020,US,Vermont,Franklin,99,94,0,5
+15-05-2020,US,Texas,Franklin,4,4,0,0
+15-05-2020,US,Tennessee,Franklin,43,42,0,1
+15-05-2020,US,Pennsylvania,Franklin,580,563,0,17
+15-05-2020,US,Ohio,Franklin,4330,4171,0,159
+15-05-2020,US,North Carolina,Franklin,121,99,0,22
+15-05-2020,US,New York,Franklin,17,17,0,0
+15-05-2020,US,Nebraska,Franklin,5,5,0,0
+15-05-2020,US,Missouri,Franklin,134,120,0,14
+15-05-2020,US,Mississippi,Franklin,19,18,0,1
+15-05-2020,US,Massachusetts,Franklin,304,261,0,43
+15-05-2020,US,Maine,Franklin,33,32,0,1
+15-05-2020,US,Louisiana,Franklin,266,258,0,8
+15-05-2020,US,Kentucky,Franklin,18,18,0,0
+15-05-2020,US,Kansas,Franklin,32,32,0,0
+15-05-2020,US,Iowa,Franklin,7,7,0,0
+15-05-2020,US,Indiana,Franklin,107,100,0,7
+15-05-2020,US,Illinois,Franklin,11,11,0,0
+15-05-2020,US,Georgia,Franklin,31,30,0,1
+15-05-2020,US,Florida,Franklin,2,2,0,0
+15-05-2020,US,Arkansas,Franklin,2,2,0,0
+15-05-2020,US,Alabama,Franklin,313,309,0,4
+15-05-2020,US,Indiana,Fountain,16,14,0,2
+15-05-2020,US,North Dakota,Foster,1,1,0,0
+15-05-2020,US,Texas,Fort Bend,1471,1431,0,40
+15-05-2020,US,North Carolina,Forsyth,616,609,0,7
+15-05-2020,US,Georgia,Forsyth,397,386,0,11
+15-05-2020,US,Mississippi,Forrest,380,354,0,26
+15-05-2020,US,Wisconsin,Forest,5,5,0,0
+15-05-2020,US,Pennsylvania,Forest,7,7,0,0
+15-05-2020,US,Kansas,Ford,1296,1288,0,8
+15-05-2020,US,Illinois,Ford,16,15,0,1
+15-05-2020,US,Wisconsin,Fond du Lac,119,116,0,3
+15-05-2020,US,Virginia,Fluvanna,79,73,0,6
+15-05-2020,US,Virginia,Floyd,4,4,0,0
+15-05-2020,US,Texas,Floyd,4,4,0,0
+15-05-2020,US,Kentucky,Floyd,16,16,0,0
+15-05-2020,US,Iowa,Floyd,10,9,0,1
+15-05-2020,US,Indiana,Floyd,254,222,0,32
+15-05-2020,US,Georgia,Floyd,172,159,0,13
+15-05-2020,US,Wisconsin,Florence,2,2,0,0
+15-05-2020,US,South Carolina,Florence,505,478,0,27
+15-05-2020,US,Kentucky,Fleming,1,1,0,0
+15-05-2020,US,Montana,Flathead,37,35,0,2
+15-05-2020,US,Florida,Flagler,153,149,0,4
+15-05-2020,US,Texas,Fisher,1,1,0,0
+15-05-2020,US,Kansas,Finney,1234,1229,0,5
+15-05-2020,US,Nebraska,Fillmore,4,4,0,0
+15-05-2020,US,Minnesota,Fillmore,17,16,0,1
+15-05-2020,US,Washington,Ferry,1,1,0,0
+15-05-2020,US,Montana,Fergus,0,0,0,0
+15-05-2020,US,Tennessee,Fentress,6,6,0,0
+15-05-2020,US,Michigan,Federal Correctional Institution (FCI),115,112,0,3
+15-05-2020,US,West Virginia,Fayette,38,38,0,0
+15-05-2020,US,Texas,Fayette,27,25,0,2
+15-05-2020,US,Tennessee,Fayette,88,86,0,2
+15-05-2020,US,Pennsylvania,Fayette,87,83,0,4
+15-05-2020,US,Ohio,Fayette,28,28,0,0
+15-05-2020,US,Kentucky,Fayette,530,518,0,12
+15-05-2020,US,Iowa,Fayette,25,25,0,0
+15-05-2020,US,Indiana,Fayette,40,36,0,4
+15-05-2020,US,Illinois,Fayette,19,17,0,2
+15-05-2020,US,Georgia,Fayette,205,194,0,11
+15-05-2020,US,Alabama,Fayette,11,11,0,0
+15-05-2020,US,Virginia,Fauquier,205,200,0,5
+15-05-2020,US,Arkansas,Faulkner,88,85,0,3
+15-05-2020,US,South Dakota,Faulk,1,1,0,0
+15-05-2020,US,Minnesota,Faribault,12,12,0,0
+15-05-2020,US,Texas,Fannin,24,23,0,1
+15-05-2020,US,Georgia,Fannin,36,35,0,1
+15-05-2020,US,Virginia,Falls Church,40,36,0,4
+15-05-2020,US,Texas,Falls,6,6,0,0
+15-05-2020,US,South Dakota,Fall River,2,2,0,0
+15-05-2020,US,South Carolina,Fairfield,108,100,0,8
+15-05-2020,US,Ohio,Fairfield,203,200,0,3
+15-05-2020,US,Connecticut,Fairfield,14009,12900,0,1109
+15-05-2020,US,Virginia,Fairfax City,46,43,0,3
+15-05-2020,US,Virginia,Fairfax,7159,6886,0,273
+15-05-2020,US,Alaska,Fairbanks North Star,84,82,0,2
+15-05-2020,US,Georgia,Evans,4,4,0,0
+15-05-2020,US,Louisiana,Evangeline,74,73,0,1
+15-05-2020,US,Nevada,Eureka,0,0,0,0
+15-05-2020,US,Alabama,Etowah,194,184,0,10
+15-05-2020,US,Virginia,Essex,30,30,0,0
+15-05-2020,US,Vermont,Essex,2,2,0,0
+15-05-2020,US,New York,Essex,32,32,0,0
+15-05-2020,US,New Jersey,Essex,16116,14596,0,1520
+15-05-2020,US,Massachusetts,Essex,12131,11380,0,751
+15-05-2020,US,Florida,Escambia,682,662,0,20
+15-05-2020,US,Alabama,Escambia,39,36,0,3
+15-05-2020,US,Pennsylvania,Erie,129,126,0,3
+15-05-2020,US,Ohio,Erie,88,87,0,1
+15-05-2020,US,New York,Erie,4782,4371,0,411
+15-05-2020,US,Texas,Erath,15,14,0,1
+15-05-2020,US,Virginia,Emporia,50,47,0,3
+15-05-2020,US,North Dakota,Emmons,1,0,0,1
+15-05-2020,US,Michigan,Emmet,21,19,0,2
+15-05-2020,US,Iowa,Emmet,1,1,0,0
+15-05-2020,US,Georgia,Emanuel,25,24,0,1
+15-05-2020,US,Idaho,Elmore,31,29,0,2
+15-05-2020,US,Alabama,Elmore,177,171,0,6
+15-05-2020,US,Kansas,Ellsworth,2,2,0,0
+15-05-2020,US,Texas,Ellis,241,230,0,11
+15-05-2020,US,Kansas,Ellis,8,8,0,0
+15-05-2020,US,Nevada,Elko,18,17,0,1
+15-05-2020,US,Indiana,Elkhart,609,587,0,22
+15-05-2020,US,Pennsylvania,Elk,6,5,0,1
+15-05-2020,US,Kansas,Elk,0,0,0,0
+15-05-2020,US,Georgia,Elbert,46,46,0,0
+15-05-2020,US,Colorado,Elbert,42,40,0,2
+15-05-2020,US,Texas,El Paso,1607,1564,0,43
+15-05-2020,US,Colorado,El Paso,1251,1168,0,83
+15-05-2020,US,California,El Dorado,64,64,0,0
+15-05-2020,US,Illinois,Effingham,6,5,0,1
+15-05-2020,US,Georgia,Effingham,38,37,0,1
+15-05-2020,US,Kansas,Edwards,4,4,0,0
+15-05-2020,US,Illinois,Edwards,2,2,0,0
+15-05-2020,US,Kentucky,Edmonson,49,43,0,6
+15-05-2020,US,South Carolina,Edgefield,41,39,0,2
+15-05-2020,US,North Carolina,Edgecombe,164,157,0,7
+15-05-2020,US,Illinois,Edgar,1,1,0,0
+15-05-2020,US,North Dakota,Eddy,2,2,0,0
+15-05-2020,US,New Mexico,Eddy,17,16,0,1
+15-05-2020,US,Texas,Ector,103,99,0,4
+15-05-2020,US,Georgia,Echols,15,15,0,0
+15-05-2020,US,Wisconsin,Eau Claire,65,65,0,0
+15-05-2020,US,Michigan,Eaton,162,156,0,6
+15-05-2020,US,Texas,Eastland,4,4,0,0
+15-05-2020,US,Louisiana,East Feliciana,172,151,0,21
+15-05-2020,US,Louisiana,East Carroll,26,26,0,0
+15-05-2020,US,Louisiana,East Baton Rouge,2953,2748,0,205
+15-05-2020,US,Georgia,Early,233,205,0,28
+15-05-2020,US,Colorado,Eagle,566,558,0,8
+15-05-2020,US,Tennessee,Dyer,44,44,0,0
+15-05-2020,US,Texas,Duval,5,5,0,0
+15-05-2020,US,Florida,Duval,1252,1220,0,32
+15-05-2020,US,New York,Dutchess,3498,3381,0,117
+15-05-2020,US,North Carolina,Durham,968,931,0,37
+15-05-2020,US,North Carolina,Duplin,354,343,0,11
+15-05-2020,US,Wisconsin,Dunn,20,20,0,0
+15-05-2020,US,North Dakota,Dunn,11,11,0,0
+15-05-2020,US,Missouri,Dunklin,24,22,0,2
+15-05-2020,US,Massachusetts,Dukes and Nantucket,36,34,0,2
+15-05-2020,US,Iowa,Dubuque,249,239,0,10
+15-05-2020,US,Indiana,Dubois,70,68,0,2
+15-05-2020,US,Illinois,DuPage,5634,5347,0,287
+15-05-2020,US,Arkansas,Drew,19,18,0,1
+15-05-2020,US,Wisconsin,Douglas,12,12,0,0
+15-05-2020,US,Washington,Douglas,124,121,0,3
+15-05-2020,US,South Dakota,Douglas,1,1,0,0
+15-05-2020,US,Oregon,Douglas,25,25,0,0
+15-05-2020,US,Nevada,Douglas,24,24,0,0
+15-05-2020,US,Nebraska,Douglas,2093,2079,0,14
+15-05-2020,US,Minnesota,Douglas,18,18,0,0
+15-05-2020,US,Kansas,Douglas,59,59,0,0
+15-05-2020,US,Illinois,Douglas,22,22,0,0
+15-05-2020,US,Georgia,Douglas,433,418,0,15
+15-05-2020,US,Colorado,Douglas,632,595,0,37
+15-05-2020,US,Georgia,Dougherty,1662,1528,0,134
+15-05-2020,US,South Carolina,Dorchester,110,107,0,3
+15-05-2020,US,Maryland,Dorchester,107,105,0,2
+15-05-2020,US,Wisconsin,Door,29,26,0,3
+15-05-2020,US,Georgia,Dooly,155,143,0,12
+15-05-2020,US,Texas,Donley,26,26,0,0
+15-05-2020,US,Kansas,Doniphan,9,9,0,0
+15-05-2020,US,New Mexico,Dona Ana,270,268,0,2
+15-05-2020,US,Wisconsin,Dodge,87,86,0,1
+15-05-2020,US,Nebraska,Dodge,225,225,0,0
+15-05-2020,US,Minnesota,Dodge,30,30,0,0
+15-05-2020,US,Georgia,Dodge,38,36,0,2
+15-05-2020,US,Nebraska,Dixon,25,25,0,0
+15-05-2020,US,Florida,Dixie,22,22,0,0
+15-05-2020,US,North Dakota,Divide,1,1,0,0
+15-05-2020,US,District of Columbia,District of Columbia,6871,6503,0,368
+15-05-2020,US,Virginia,Dinwiddie,36,36,0,0
+15-05-2020,US,Texas,Dimmit,1,1,0,0
+15-05-2020,US,South Carolina,Dillon,115,115,0,0
+15-05-2020,US,Tennessee,Dickson,90,90,0,0
+15-05-2020,US,Michigan,Dickinson,5,3,0,2
+15-05-2020,US,Kansas,Dickinson,2,2,0,0
+15-05-2020,US,Iowa,Dickinson,6,6,0,0
+15-05-2020,US,Virginia,Dickenson,0,0,0,0
+15-05-2020,US,Texas,Dickens,1,1,0,0
+15-05-2020,US,South Dakota,Dewey,0,0,0,0
+15-05-2020,US,Oklahoma,Dewey,2,2,0,0
+15-05-2020,US,South Dakota,Deuel,1,1,0,0
+15-05-2020,US,Arkansas,Desha,18,18,0,0
+15-05-2020,US,Oregon,Deschutes,94,94,0,0
+15-05-2020,US,Iowa,Des Moines,39,38,0,1
+15-05-2020,US,Colorado,Denver,4452,4204,0,248
+15-05-2020,US,Texas,Denton,1040,1012,0,28
+15-05-2020,US,Texas,Delta,1,1,0,0
+15-05-2020,US,Michigan,Delta,14,12,0,2
+15-05-2020,US,Colorado,Delta,54,53,0,1
+15-05-2020,US,Pennsylvania,Delaware,5409,4943,0,466
+15-05-2020,US,Oklahoma,Delaware,93,77,0,16
+15-05-2020,US,Ohio,Delaware,241,233,0,8
+15-05-2020,US,New York,Delaware,67,63,0,4
+15-05-2020,US,Iowa,Delaware,11,11,0,0
+15-05-2020,US,Indiana,Delaware,254,234,0,20
+15-05-2020,US,California,Del Norte,4,4,0,0
+15-05-2020,US,Ohio,Defiance,25,23,0,2
+15-05-2020,US,Montana,Deer Lodge,3,3,0,0
+15-05-2020,US,Tennessee,Decatur,5,5,0,0
+15-05-2020,US,Iowa,Decatur,0,0,0,0
+15-05-2020,US,Indiana,Decatur,216,185,0,31
+15-05-2020,US,Georgia,Decatur,116,113,0,3
+15-05-2020,US,Indiana,Dearborn,157,139,0,18
+15-05-2020,US,Texas,Deaf Smith,119,117,0,2
+15-05-2020,US,Texas,DeWitt,17,16,0,1
+15-05-2020,US,Mississippi,DeSoto,369,364,0,5
+15-05-2020,US,Florida,DeSoto,61,55,0,6
+15-05-2020,US,Tennessee,DeKalb,28,28,0,0
+15-05-2020,US,Missouri,DeKalb,4,4,0,0
+15-05-2020,US,Indiana,DeKalb,25,24,0,1
+15-05-2020,US,Illinois,DeKalb,229,227,0,2
+15-05-2020,US,Georgia,DeKalb,2751,2671,0,80
+15-05-2020,US,Alabama,DeKalb,189,187,0,2
+15-05-2020,US,Illinois,De Witt,4,4,0,0
+15-05-2020,US,Louisiana,De Soto,225,211,0,14
+15-05-2020,US,New Mexico,De Baca,0,0,0,0
+15-05-2020,US,South Dakota,Day,10,10,0,0
+15-05-2020,US,Texas,Dawson,36,35,0,1
+15-05-2020,US,Nebraska,Dawson,778,778,0,0
+15-05-2020,US,Georgia,Dawson,84,83,0,1
+15-05-2020,US,Nebraska,Dawes,1,1,0,0
+15-05-2020,US,South Dakota,Davison,9,9,0,0
+15-05-2020,US,Utah,Davis,354,352,0,2
+15-05-2020,US,Iowa,Davis,13,13,0,0
+15-05-2020,US,Missouri,Daviess,3,3,0,0
+15-05-2020,US,Kentucky,Daviess,287,283,0,4
+15-05-2020,US,Indiana,Daviess,59,44,0,15
+15-05-2020,US,North Carolina,Davie,43,41,0,2
+15-05-2020,US,Tennessee,Davidson,3795,3754,0,41
+15-05-2020,US,North Carolina,Davidson,270,260,0,10
+15-05-2020,US,Pennsylvania,Dauphin,912,871,0,41
+15-05-2020,US,South Carolina,Darlington,194,189,0,5
+15-05-2020,US,Ohio,Darke,102,91,0,11
+15-05-2020,US,North Carolina,Dare,21,20,0,1
+15-05-2020,US,Virginia,Danville,43,42,0,1
+15-05-2020,US,Wisconsin,Dane,507,482,0,25
+15-05-2020,US,Texas,Dallas,7036,6833,0,203
+15-05-2020,US,Missouri,Dallas,2,2,0,0
+15-05-2020,US,Iowa,Dallas,757,747,0,10
+15-05-2020,US,Arkansas,Dallas,1,1,0,0
+15-05-2020,US,Alabama,Dallas,137,134,0,3
+15-05-2020,US,Texas,Dallam,21,20,0,1
+15-05-2020,US,Alabama,Dale,58,58,0,0
+15-05-2020,US,Nebraska,Dakota,1444,1441,0,3
+15-05-2020,US,Minnesota,Dakota,623,606,0,17
+15-05-2020,US,Georgia,Dade,20,19,0,1
+15-05-2020,US,Ohio,Cuyahoga,3156,2975,0,181
+15-05-2020,US,Oklahoma,Custer,12,12,0,0
+15-05-2020,US,Nebraska,Custer,29,26,0,3
+15-05-2020,US,Idaho,Custer,2,2,0,0
+15-05-2020,US,Colorado,Custer,2,2,0,0
+15-05-2020,US,Oregon,Curry,4,4,0,0
+15-05-2020,US,New Mexico,Curry,36,36,0,0
+15-05-2020,US,North Carolina,Currituck,11,11,0,0
+15-05-2020,US,Nebraska,Cuming,16,16,0,0
+15-05-2020,US,Virginia,Cumberland,18,18,0,0
+15-05-2020,US,Tennessee,Cumberland,88,87,0,1
+15-05-2020,US,Pennsylvania,Cumberland,492,451,0,41
+15-05-2020,US,North Carolina,Cumberland,439,428,0,11
+15-05-2020,US,New Jersey,Cumberland,1494,1446,0,48
+15-05-2020,US,Maine,Cumberland,798,764,0,34
+15-05-2020,US,Kentucky,Cumberland,5,5,0,0
+15-05-2020,US,Illinois,Cumberland,8,8,0,0
+15-05-2020,US,Virginia,Culpeper,343,338,0,5
+15-05-2020,US,Alabama,Cullman,70,70,0,0
+15-05-2020,US,Colorado,Crowley,39,38,0,1
+15-05-2020,US,Minnesota,Crow Wing,25,24,0,1
+15-05-2020,US,Arkansas,Cross,35,35,0,0
+15-05-2020,US,Texas,Crosby,2,1,0,1
+15-05-2020,US,Wyoming,Crook,5,5,0,0
+15-05-2020,US,Oregon,Crook,1,1,0,0
+15-05-2020,US,Tennessee,Crockett,13,12,0,1
+15-05-2020,US,Kentucky,Crittenden,4,3,0,1
+15-05-2020,US,Arkansas,Crittenden,229,222,0,7
+15-05-2020,US,Georgia,Crisp,193,186,0,7
+15-05-2020,US,Alabama,Crenshaw,55,54,0,1
+15-05-2020,US,Oklahoma,Creek,83,76,0,7
+15-05-2020,US,Wisconsin,Crawford,20,20,0,0
+15-05-2020,US,Pennsylvania,Crawford,21,21,0,0
+15-05-2020,US,Ohio,Crawford,92,90,0,2
+15-05-2020,US,Missouri,Crawford,8,8,0,0
+15-05-2020,US,Michigan,Crawford,57,53,0,4
+15-05-2020,US,Kansas,Crawford,8,7,0,1
+15-05-2020,US,Iowa,Crawford,336,335,0,1
+15-05-2020,US,Indiana,Crawford,22,22,0,0
+15-05-2020,US,Illinois,Crawford,11,11,0,0
+15-05-2020,US,Georgia,Crawford,19,19,0,0
+15-05-2020,US,Arkansas,Crawford,9,9,0,0
+15-05-2020,US,North Carolina,Craven,81,77,0,4
+15-05-2020,US,Texas,Crane,2,2,0,0
+15-05-2020,US,Arkansas,Craighead,130,130,0,0
+15-05-2020,US,Virginia,Craig,4,4,0,0
+15-05-2020,US,Oklahoma,Craig,13,13,0,0
+15-05-2020,US,Washington,Cowlitz,68,68,0,0
+15-05-2020,US,Kansas,Cowley,4,3,0,1
+15-05-2020,US,Georgia,Coweta,282,278,0,4
+15-05-2020,US,Virginia,Covington,2,2,0,0
+15-05-2020,US,Mississippi,Covington,104,104,0,0
+15-05-2020,US,Alabama,Covington,60,59,0,1
+15-05-2020,US,Minnesota,Cottonwood,52,52,0,0
+15-05-2020,US,Oklahoma,Cotton,5,3,0,2
+15-05-2020,US,Texas,Cottle,4,3,0,1
+15-05-2020,US,Colorado,Costilla,4,4,0,0
+15-05-2020,US,Ohio,Coshocton,20,19,0,1
+15-05-2020,US,Texas,Coryell,221,219,0,2
+15-05-2020,US,New York,Cortland,33,33,0,0
+15-05-2020,US,South Dakota,Corson,3,3,0,0
+15-05-2020,US,Mississippi,Copiah,190,189,0,1
+15-05-2020,US,Alabama,Coosa,32,31,0,1
+15-05-2020,US,Oregon,Coos,30,30,0,0
+15-05-2020,US,New Hampshire,Coos,4,4,0,0
+15-05-2020,US,Missouri,Cooper,9,9,0,0
+15-05-2020,US,Texas,Cooke,13,13,0,0
+15-05-2020,US,Illinois,Cook,59905,57143,0,2762
+15-05-2020,US,Georgia,Cook,32,30,0,2
+15-05-2020,US,Arkansas,Conway,14,13,0,1
+15-05-2020,US,Wyoming,Converse,23,23,0,0
+15-05-2020,US,California,Contra Costa,1100,1067,0,33
+15-05-2020,US,Colorado,Conejos,1,1,0,0
+15-05-2020,US,Alabama,Conecuh,19,19,0,0
+15-05-2020,US,Louisiana,Concordia,55,51,0,4
+15-05-2020,US,Texas,Concho,1,1,0,0
+15-05-2020,US,Texas,Comanche,3,2,0,1
+15-05-2020,US,Oklahoma,Comanche,205,202,0,3
+15-05-2020,US,Texas,Comal,68,62,0,6
+15-05-2020,US,California,Colusa,3,3,0,0
+15-05-2020,US,North Carolina,Columbus,238,220,0,18
+15-05-2020,US,Ohio,Columbiana,397,342,0,55
+15-05-2020,US,Wisconsin,Columbia,34,33,0,1
+15-05-2020,US,Washington,Columbia,1,1,0,0
+15-05-2020,US,Pennsylvania,Columbia,334,301,0,33
+15-05-2020,US,Oregon,Columbia,16,16,0,0
+15-05-2020,US,New York,Columbia,333,309,0,24
+15-05-2020,US,Georgia,Columbia,202,196,0,6
+15-05-2020,US,Florida,Columbia,108,106,0,2
+15-05-2020,US,Arkansas,Columbia,15,13,0,2
+15-05-2020,US,Georgia,Colquitt,245,234,0,11
+15-05-2020,US,Texas,Colorado,18,18,0,0
+15-05-2020,US,Virginia,Colonial Heights,74,67,0,7
+15-05-2020,US,Texas,Collingsworth,4,4,0,0
+15-05-2020,US,Texas,Collin,993,963,0,30
+15-05-2020,US,Florida,Collier,915,878,0,37
+15-05-2020,US,South Carolina,Colleton,48,44,0,4
+15-05-2020,US,New Mexico,Colfax,5,5,0,0
+15-05-2020,US,Nebraska,Colfax,481,481,0,0
+15-05-2020,US,Illinois,Coles,67,63,0,4
+15-05-2020,US,Texas,Coleman,2,2,0,0
+15-05-2020,US,Missouri,Cole,56,55,0,1
+15-05-2020,US,Alabama,Colbert,87,85,0,2
+15-05-2020,US,Texas,Coke,1,1,0,0
+15-05-2020,US,Kansas,Coffey,50,42,0,8
+15-05-2020,US,Tennessee,Coffee,60,60,0,0
+15-05-2020,US,Georgia,Coffee,192,181,0,11
+15-05-2020,US,Alabama,Coffee,159,158,0,1
+15-05-2020,US,South Dakota,Codington,16,16,0,0
+15-05-2020,US,Arizona,Coconino,823,761,0,62
+15-05-2020,US,Tennessee,Cocke,20,20,0,0
+15-05-2020,US,Texas,Cochran,1,1,0,0
+15-05-2020,US,Arizona,Cochise,45,44,0,1
+15-05-2020,US,Georgia,Cobb,2395,2263,0,132
+15-05-2020,US,Mississippi,Coahoma,75,72,0,3
+15-05-2020,US,Kansas,Cloud,4,4,0,0
+15-05-2020,US,Pennsylvania,Clinton,43,43,0,0
+15-05-2020,US,Ohio,Clinton,38,37,0,1
+15-05-2020,US,New York,Clinton,85,81,0,4
+15-05-2020,US,Missouri,Clinton,14,14,0,0
+15-05-2020,US,Michigan,Clinton,132,122,0,10
+15-05-2020,US,Kentucky,Clinton,3,3,0,0
+15-05-2020,US,Iowa,Clinton,60,59,0,1
+15-05-2020,US,Indiana,Clinton,118,117,0,1
+15-05-2020,US,Illinois,Clinton,159,146,0,13
+15-05-2020,US,Georgia,Clinch,40,39,0,1
+15-05-2020,US,Oklahoma,Cleveland,459,424,0,35
+15-05-2020,US,North Carolina,Cleveland,54,52,0,2
+15-05-2020,US,Arkansas,Cleveland,16,16,0,0
+15-05-2020,US,Ohio,Clermont,144,140,0,4
+15-05-2020,US,Arkansas,Cleburne,72,68,0,4
+15-05-2020,US,Alabama,Cleburne,13,12,0,1
+15-05-2020,US,Minnesota,Clearwater,2,2,0,0
+15-05-2020,US,Pennsylvania,Clearfield,33,33,0,0
+15-05-2020,US,Colorado,Clear Creek,15,14,0,1
+15-05-2020,US,Iowa,Clayton,28,25,0,3
+15-05-2020,US,Georgia,Clayton,999,961,0,38
+15-05-2020,US,West Virginia,Clay,2,2,0,0
+15-05-2020,US,Texas,Clay,3,3,0,0
+15-05-2020,US,Tennessee,Clay,6,6,0,0
+15-05-2020,US,South Dakota,Clay,12,12,0,0
+15-05-2020,US,North Carolina,Clay,8,8,0,0
+15-05-2020,US,Nebraska,Clay,15,15,0,0
+15-05-2020,US,Missouri,Clay,111,110,0,1
+15-05-2020,US,Mississippi,Clay,78,75,0,3
+15-05-2020,US,Minnesota,Clay,279,261,0,18
+15-05-2020,US,Kentucky,Clay,2,2,0,0
+15-05-2020,US,Kansas,Clay,4,3,0,1
+15-05-2020,US,Iowa,Clay,10,10,0,0
+15-05-2020,US,Indiana,Clay,28,27,0,1
+15-05-2020,US,Illinois,Clay,2,2,0,0
+15-05-2020,US,Georgia,Clay,28,25,0,3
+15-05-2020,US,Florida,Clay,308,285,0,23
+15-05-2020,US,Arkansas,Clay,3,3,0,0
+15-05-2020,US,Alabama,Clay,24,22,0,2
+15-05-2020,US,Oregon,Clatsop,36,36,0,0
+15-05-2020,US,Virginia,Clarke,17,17,0,0
+15-05-2020,US,Mississippi,Clarke,97,86,0,11
+15-05-2020,US,Iowa,Clarke,11,11,0,0
+15-05-2020,US,Georgia,Clarke,197,184,0,13
+15-05-2020,US,Alabama,Clarke,70,68,0,2
+15-05-2020,US,Wisconsin,Clark,25,21,0,4
+15-05-2020,US,Washington,Clark,382,356,0,26
+15-05-2020,US,South Dakota,Clark,4,4,0,0
+15-05-2020,US,Ohio,Clark,131,127,0,4
+15-05-2020,US,Nevada,Clark,5235,4944,0,291
+15-05-2020,US,Missouri,Clark,1,1,0,0
+15-05-2020,US,Kentucky,Clark,20,20,0,0
+15-05-2020,US,Kansas,Clark,20,19,0,1
+15-05-2020,US,Indiana,Clark,399,370,0,29
+15-05-2020,US,Illinois,Clark,9,9,0,0
+15-05-2020,US,Arkansas,Clark,35,35,0,0
+15-05-2020,US,Pennsylvania,Clarion,24,23,0,1
+15-05-2020,US,South Carolina,Clarendon,274,241,0,33
+15-05-2020,US,Michigan,Clare,14,12,0,2
+15-05-2020,US,Washington,Clallam,21,21,0,0
+15-05-2020,US,Tennessee,Claiborne,7,7,0,0
+15-05-2020,US,Mississippi,Claiborne,48,48,0,0
+15-05-2020,US,Louisiana,Claiborne,59,49,0,10
+15-05-2020,US,Oregon,Clackamas,277,268,0,9
+15-05-2020,US,Florida,Citrus,110,99,0,11
+15-05-2020,US,Oklahoma,Cimarron,1,1,0,0
+15-05-2020,US,New Mexico,Cibola,100,96,0,4
+15-05-2020,US,Nevada,Churchill,5,5,0,0
+15-05-2020,US,Missouri,Christian,21,21,0,0
+15-05-2020,US,Kentucky,Christian,95,92,0,3
+15-05-2020,US,Illinois,Christian,30,26,0,4
+15-05-2020,US,North Carolina,Chowan,12,12,0,0
+15-05-2020,US,Oklahoma,Choctaw,3,3,0,0
+15-05-2020,US,Mississippi,Choctaw,19,17,0,2
+15-05-2020,US,Alabama,Choctaw,81,78,0,3
+15-05-2020,US,Vermont,Chittenden,433,396,0,37
+15-05-2020,US,Minnesota,Chisago,27,26,0,1
+15-05-2020,US,Wisconsin,Chippewa,37,37,0,0
+15-05-2020,US,Minnesota,Chippewa,27,27,0,0
+15-05-2020,US,Michigan,Chippewa,2,2,0,0
+15-05-2020,US,Alabama,Chilton,79,78,0,1
+15-05-2020,US,Texas,Childress,2,2,0,0
+15-05-2020,US,Arkansas,Chicot,10,10,0,0
+15-05-2020,US,Mississippi,Chickasaw,114,103,0,11
+15-05-2020,US,Iowa,Chickasaw,7,7,0,0
+15-05-2020,US,Nebraska,Cheyenne,8,8,0,0
+15-05-2020,US,Kansas,Cheyenne,2,2,0,0
+15-05-2020,US,Colorado,Cheyenne,5,5,0,0
+15-05-2020,US,Virginia,Chesterfield,946,917,0,29
+15-05-2020,US,South Carolina,Chesterfield,93,92,0,1
+15-05-2020,US,Tennessee,Chester,12,12,0,0
+15-05-2020,US,South Carolina,Chester,40,40,0,0
+15-05-2020,US,Pennsylvania,Chester,2140,1900,0,240
+15-05-2020,US,New Hampshire,Cheshire,47,45,0,2
+15-05-2020,US,Virginia,Chesapeake,379,369,0,10
+15-05-2020,US,Nebraska,Cherry,1,1,0,0
+15-05-2020,US,Texas,Cherokee,31,30,0,1
+15-05-2020,US,South Carolina,Cherokee,23,22,0,1
+15-05-2020,US,Oklahoma,Cherokee,29,28,0,1
+15-05-2020,US,North Carolina,Cherokee,27,26,0,1
+15-05-2020,US,Kansas,Cherokee,8,8,0,0
+15-05-2020,US,Iowa,Cherokee,8,8,0,0
+15-05-2020,US,Georgia,Cherokee,695,672,0,23
+15-05-2020,US,Alabama,Cherokee,25,25,0,0
+15-05-2020,US,New York,Chenango,113,113,0,0
+15-05-2020,US,New York,Chemung,133,132,0,1
+15-05-2020,US,Washington,Chelan,170,164,0,6
+15-05-2020,US,Michigan,Cheboygan,19,18,0,1
+15-05-2020,US,Tennessee,Cheatham,88,88,0,0
+15-05-2020,US,New Mexico,Chaves,30,28,0,2
+15-05-2020,US,New York,Chautauqua,45,41,0,4
+15-05-2020,US,Kansas,Chautauqua,4,4,0,0
+15-05-2020,US,Georgia,Chattooga,15,13,0,2
+15-05-2020,US,Georgia,Chattahoochee,19,19,0,0
+15-05-2020,US,North Carolina,Chatham,495,471,0,24
+15-05-2020,US,Georgia,Chatham,353,339,0,14
+15-05-2020,US,Kansas,Chase,3,3,0,0
+15-05-2020,US,Georgia,Charlton,26,25,0,1
+15-05-2020,US,Virginia,Charlottesville,71,69,0,2
+15-05-2020,US,Virginia,Charlotte,11,11,0,0
+15-05-2020,US,Florida,Charlotte,367,327,0,40
+15-05-2020,US,Michigan,Charlevoix,13,12,0,1
+15-05-2020,US,South Carolina,Charleston,501,491,0,10
+15-05-2020,US,South Dakota,Charles Mix,8,8,0,0
+15-05-2020,US,Virginia,Charles City,22,21,0,1
+15-05-2020,US,Maryland,Charles,829,768,0,61
+15-05-2020,US,Missouri,Chariton,6,6,0,0
+15-05-2020,US,Ohio,Champaign,22,21,0,1
+15-05-2020,US,Illinois,Champaign,344,337,0,7
+15-05-2020,US,Texas,Chambers,52,52,0,0
+15-05-2020,US,Alabama,Chambers,335,313,0,22
+15-05-2020,US,Colorado,Chaffee,69,52,0,17
+15-05-2020,US,Iowa,Cerro Gordo,15,15,0,0
+15-05-2020,US,Pennsylvania,Centre,129,123,0,6
+15-05-2020,US,Utah,Central Utah,29,29,0,0
+15-05-2020,US,Nebraska,Cedar,6,6,0,0
+15-05-2020,US,Missouri,Cedar,9,9,0,0
+15-05-2020,US,Iowa,Cedar,42,41,0,1
+15-05-2020,US,Maryland,Cecil,300,283,0,17
+15-05-2020,US,New York,Cayuga,61,60,0,1
+15-05-2020,US,New York,Cattaraugus,64,64,0,0
+15-05-2020,US,New Mexico,Catron,2,1,0,1
+15-05-2020,US,Georgia,Catoosa,71,71,0,0
+15-05-2020,US,North Carolina,Catawba,96,94,0,2
+15-05-2020,US,Louisiana,Catahoula,103,100,0,3
+15-05-2020,US,North Carolina,Caswell,43,42,0,1
+15-05-2020,US,Texas,Castro,27,26,0,1
+15-05-2020,US,Idaho,Cassia,16,15,0,1
+15-05-2020,US,Texas,Cass,21,21,0,0
+15-05-2020,US,North Dakota,Cass,1032,1006,0,26
+15-05-2020,US,Nebraska,Cass,15,15,0,0
+15-05-2020,US,Missouri,Cass,72,64,0,8
+15-05-2020,US,Minnesota,Cass,8,6,0,2
+15-05-2020,US,Michigan,Cass,50,48,0,2
+15-05-2020,US,Iowa,Cass,1,1,0,0
+15-05-2020,US,Indiana,Cass,1551,1546,0,5
+15-05-2020,US,Illinois,Cass,67,67,0,0
+15-05-2020,US,Kentucky,Casey,2,2,0,0
+15-05-2020,US,Montana,Cascade,17,15,0,2
+15-05-2020,US,Minnesota,Carver,105,103,0,2
+15-05-2020,US,North Carolina,Carteret,36,33,0,3
+15-05-2020,US,Tennessee,Carter,19,18,0,1
+15-05-2020,US,Oklahoma,Carter,8,7,0,1
+15-05-2020,US,Missouri,Carter,3,2,0,1
+15-05-2020,US,Kentucky,Carter,8,8,0,0
+15-05-2020,US,Nevada,Carson City,65,63,0,2
+15-05-2020,US,Texas,Carson,3,3,0,0
+15-05-2020,US,Virginia,Carroll,42,42,0,0
+15-05-2020,US,Tennessee,Carroll,24,23,0,1
+15-05-2020,US,Ohio,Carroll,24,20,0,4
+15-05-2020,US,New Hampshire,Carroll,39,39,0,0
+15-05-2020,US,Missouri,Carroll,7,7,0,0
+15-05-2020,US,Mississippi,Carroll,109,105,0,4
+15-05-2020,US,Maryland,Carroll,635,571,0,64
+15-05-2020,US,Kentucky,Carroll,2,2,0,0
+15-05-2020,US,Iowa,Carroll,8,8,0,0
+15-05-2020,US,Indiana,Carroll,77,75,0,2
+15-05-2020,US,Illinois,Carroll,12,10,0,2
+15-05-2020,US,Georgia,Carroll,408,388,0,20
+15-05-2020,US,Arkansas,Carroll,6,6,0,0
+15-05-2020,US,Virginia,Caroline,42,40,0,2
+15-05-2020,US,Maryland,Caroline,190,190,0,0
+15-05-2020,US,Minnesota,Carlton,66,66,0,0
+15-05-2020,US,Kentucky,Carlisle,3,2,0,1
+15-05-2020,US,Idaho,Caribou,1,1,0,0
+15-05-2020,US,Wyoming,Carbon,8,8,0,0
+15-05-2020,US,Pennsylvania,Carbon,206,189,0,17
+15-05-2020,US,Montana,Carbon,6,6,0,0
+15-05-2020,US,New Jersey,Cape May,505,465,0,40
+15-05-2020,US,Missouri,Cape Girardeau,52,51,0,1
+15-05-2020,US,Idaho,Canyon,276,270,0,6
+15-05-2020,US,Tennessee,Cannon,13,13,0,0
+15-05-2020,US,Georgia,Candler,10,10,0,0
+15-05-2020,US,Oklahoma,Canadian,116,113,0,3
+15-05-2020,US,Wyoming,Campbell,29,29,0,0
+15-05-2020,US,Virginia,Campbell,13,12,0,1
+15-05-2020,US,Tennessee,Campbell,17,16,0,1
+15-05-2020,US,Kentucky,Campbell,129,119,0,10
+15-05-2020,US,Texas,Camp,16,16,0,0
+15-05-2020,US,Texas,Cameron,582,556,0,26
+15-05-2020,US,Pennsylvania,Cameron,2,2,0,0
+15-05-2020,US,Louisiana,Cameron,3,3,0,0
+15-05-2020,US,North Carolina,Camden,2,2,0,0
+15-05-2020,US,New Jersey,Camden,5259,4997,0,262
+15-05-2020,US,Missouri,Camden,36,35,0,1
+15-05-2020,US,Georgia,Camden,46,45,0,1
+15-05-2020,US,Pennsylvania,Cambria,49,48,0,1
+15-05-2020,US,Idaho,Camas,1,1,0,0
+15-05-2020,US,Maryland,Calvert,228,215,0,13
+15-05-2020,US,Wisconsin,Calumet,55,54,0,1
+15-05-2020,US,Kentucky,Calloway,43,42,0,1
+15-05-2020,US,Missouri,Callaway,23,22,0,1
+15-05-2020,US,Texas,Callahan,8,7,0,1
+15-05-2020,US,Texas,Calhoun,36,33,0,3
+15-05-2020,US,South Carolina,Calhoun,9,8,0,1
+15-05-2020,US,Mississippi,Calhoun,58,54,0,4
+15-05-2020,US,Michigan,Calhoun,290,272,0,18
+15-05-2020,US,Iowa,Calhoun,1,1,0,0
+15-05-2020,US,Illinois,Calhoun,1,1,0,0
+15-05-2020,US,Georgia,Calhoun,124,117,0,7
+15-05-2020,US,Florida,Calhoun,38,37,0,1
+15-05-2020,US,Alabama,Calhoun,135,132,0,3
+15-05-2020,US,Vermont,Caledonia,14,14,0,0
+15-05-2020,US,Texas,Caldwell,35,35,0,0
+15-05-2020,US,North Carolina,Caldwell,75,74,0,1
+15-05-2020,US,Missouri,Caldwell,3,3,0,0
+15-05-2020,US,Louisiana,Caldwell,48,48,0,0
+15-05-2020,US,Kentucky,Caldwell,12,12,0,0
+15-05-2020,US,Louisiana,Calcasieu,513,473,0,40
+15-05-2020,US,California,Calaveras,13,13,0,0
+15-05-2020,US,Oklahoma,Caddo,111,102,0,9
+15-05-2020,US,Louisiana,Caddo,1846,1699,0,147
+15-05-2020,US,West Virginia,Cabell,55,55,0,0
+15-05-2020,US,North Carolina,Cabarrus,371,351,0,20
+15-05-2020,US,Georgia,Butts,196,179,0,17
+15-05-2020,US,South Dakota,Butte,0,0,0,0
+15-05-2020,US,California,Butte,22,22,0,0
+15-05-2020,US,Pennsylvania,Butler,202,196,0,6
+15-05-2020,US,Ohio,Butler,558,535,0,23
+15-05-2020,US,Nebraska,Butler,28,28,0,0
+15-05-2020,US,Missouri,Butler,27,27,0,0
+15-05-2020,US,Kentucky,Butler,212,206,0,6
+15-05-2020,US,Kansas,Butler,18,18,0,0
+15-05-2020,US,Iowa,Butler,13,13,0,0
+15-05-2020,US,Alabama,Butler,254,245,0,9
+15-05-2020,US,Nebraska,Burt,5,5,0,0
+15-05-2020,US,Wisconsin,Burnett,1,0,0,1
+15-05-2020,US,Texas,Burnet,28,28,0,0
+15-05-2020,US,New Jersey,Burlington,3854,3616,0,238
+15-05-2020,US,Texas,Burleson,17,17,0,0
+15-05-2020,US,North Dakota,Burleigh,109,109,0,0
+15-05-2020,US,North Dakota,Burke,5,5,0,0
+15-05-2020,US,North Carolina,Burke,175,161,0,14
+15-05-2020,US,Georgia,Burke,112,109,0,3
+15-05-2020,US,Illinois,Bureau,15,14,0,1
+15-05-2020,US,North Carolina,Buncombe,138,134,0,4
+15-05-2020,US,Alabama,Bullock,32,31,0,1
+15-05-2020,US,Georgia,Bulloch,45,43,0,2
+15-05-2020,US,Kentucky,Bullitt,92,88,0,4
+15-05-2020,US,Wisconsin,Buffalo,5,4,0,1
+15-05-2020,US,South Dakota,Buffalo,1,1,0,0
+15-05-2020,US,Nebraska,Buffalo,134,133,0,1
+15-05-2020,US,Virginia,Buena Vista,8,8,0,0
+15-05-2020,US,Iowa,Buena Vista,83,83,0,0
+15-05-2020,US,Pennsylvania,Bucks,4325,3915,0,410
+15-05-2020,US,Virginia,Buckingham,366,364,0,2
+15-05-2020,US,Virginia,Buchanan,16,16,0,0
+15-05-2020,US,Missouri,Buchanan,502,500,0,2
+15-05-2020,US,Iowa,Buchanan,26,26,0,0
+15-05-2020,US,Oklahoma,Bryan,12,11,0,1
+15-05-2020,US,Georgia,Bryan,61,57,0,4
+15-05-2020,US,Virginia,Brunswick,20,19,0,1
+15-05-2020,US,North Carolina,Brunswick,51,49,0,2
+15-05-2020,US,South Dakota,Brule,0,0,0,0
+15-05-2020,US,Wisconsin,Brown,2034,2013,0,21
+15-05-2020,US,Texas,Brown,51,44,0,7
+15-05-2020,US,South Dakota,Brown,173,173,0,0
+15-05-2020,US,Ohio,Brown,22,22,0,0
+15-05-2020,US,Minnesota,Brown,10,8,0,2
+15-05-2020,US,Kansas,Brown,3,3,0,0
+15-05-2020,US,Indiana,Brown,29,28,0,1
+15-05-2020,US,Illinois,Brown,9,9,0,0
+15-05-2020,US,Florida,Broward,6133,5861,0,272
+15-05-2020,US,Colorado,Broomfield,207,185,0,22
+15-05-2020,US,New York,Broome,390,362,0,28
+15-05-2020,US,Texas,Brooks,1,1,0,0
+15-05-2020,US,Georgia,Brooks,64,56,0,8
+15-05-2020,US,South Dakota,Brookings,14,14,0,0
+15-05-2020,US,West Virginia,Brooke,3,3,0,0
+15-05-2020,US,Montana,Broadwater,4,4,0,0
+15-05-2020,US,Virginia,Bristol,3,3,0,0
+15-05-2020,US,Rhode Island,Bristol,172,172,0,0
+15-05-2020,US,Massachusetts,Bristol,5590,5287,0,303
+15-05-2020,US,Texas,Briscoe,1,1,0,0
+15-05-2020,US,Texas,Brewster,1,1,0,0
+15-05-2020,US,Florida,Brevard,356,347,0,9
+15-05-2020,US,Iowa,Bremer,63,58,0,5
+15-05-2020,US,Kentucky,Breckinridge,14,14,0,0
+15-05-2020,US,Kentucky,Breathitt,2,2,0,0
+15-05-2020,US,Texas,Brazos,312,294,0,18
+15-05-2020,US,Texas,Brazoria,712,703,0,9
+15-05-2020,US,West Virginia,Braxton,2,2,0,0
+15-05-2020,US,Georgia,Brantley,35,33,0,2
+15-05-2020,US,Michigan,Branch,92,90,0,2
+15-05-2020,US,Tennessee,Bradley,81,80,0,1
+15-05-2020,US,Arkansas,Bradley,13,12,0,1
+15-05-2020,US,Pennsylvania,Bradford,41,39,0,2
+15-05-2020,US,Florida,Bradford,49,47,0,2
+15-05-2020,US,Kentucky,Bracken,9,9,0,0
+15-05-2020,US,Kentucky,Boyle,18,18,0,0
+15-05-2020,US,Kentucky,Boyd,38,35,0,3
+15-05-2020,US,Nebraska,Box Butte,1,1,0,0
+15-05-2020,US,North Dakota,Bowman,1,1,0,0
+15-05-2020,US,Texas,Bowie,122,120,0,2
+15-05-2020,US,Kentucky,Bourbon,8,7,0,1
+15-05-2020,US,Kansas,Bourbon,6,5,0,1
+15-05-2020,US,Idaho,Boundary,0,0,0,0
+15-05-2020,US,Colorado,Boulder,825,767,0,58
+15-05-2020,US,Virginia,Botetourt,30,27,0,3
+15-05-2020,US,Louisiana,Bossier,336,313,0,23
+15-05-2020,US,Texas,Bosque,6,6,0,0
+15-05-2020,US,West Virginia,Boone,9,9,0,0
+15-05-2020,US,Nebraska,Boone,3,3,0,0
+15-05-2020,US,Missouri,Boone,100,99,0,1
+15-05-2020,US,Kentucky,Boone,285,277,0,8
+15-05-2020,US,Iowa,Boone,41,41,0,0
+15-05-2020,US,Indiana,Boone,252,221,0,31
+15-05-2020,US,Illinois,Boone,274,260,0,14
+15-05-2020,US,Arkansas,Boone,4,4,0,0
+15-05-2020,US,Idaho,Bonneville,30,30,0,0
+15-05-2020,US,Idaho,Bonner,4,4,0,0
+15-05-2020,US,Illinois,Bond,11,10,0,1
+15-05-2020,US,South Dakota,Bon Homme,4,4,0,0
+15-05-2020,US,Missouri,Bollinger,4,4,0,0
+15-05-2020,US,Mississippi,Bolivar,127,117,0,10
+15-05-2020,US,Minnesota,Blue Earth,76,76,0,0
+15-05-2020,US,Tennessee,Blount,75,72,0,3
+15-05-2020,US,Alabama,Blount,48,48,0,0
+15-05-2020,US,Tennessee,Bledsoe,605,604,0,1
+15-05-2020,US,Georgia,Bleckley,33,33,0,0
+15-05-2020,US,Virginia,Bland,0,0,0,0
+15-05-2020,US,Texas,Blanco,6,6,0,0
+15-05-2020,US,Pennsylvania,Blair,32,32,0,0
+15-05-2020,US,Oklahoma,Blaine,2,2,0,0
+15-05-2020,US,Idaho,Blaine,507,502,0,5
+15-05-2020,US,North Carolina,Bladen,68,66,0,2
+15-05-2020,US,Indiana,Blackford,14,13,0,1
+15-05-2020,US,Iowa,Black Hawk,1548,1519,0,29
+15-05-2020,US,Idaho,Bingham,6,6,0,0
+15-05-2020,US,Minnesota,Big Stone,2,2,0,0
+15-05-2020,US,Wyoming,Big Horn,3,3,0,0
+15-05-2020,US,Montana,Big Horn,8,8,0,0
+15-05-2020,US,Louisiana,Bienville,83,63,0,20
+15-05-2020,US,Georgia,Bibb,391,375,0,16
+15-05-2020,US,Alabama,Bibb,51,50,0,1
+15-05-2020,US,Texas,Bexar,1976,1918,0,58
+15-05-2020,US,Alaska,Bethel,1,1,0,0
+15-05-2020,US,North Carolina,Bertie,76,73,0,3
+15-05-2020,US,Michigan,Berrien,485,457,0,28
+15-05-2020,US,Georgia,Berrien,20,20,0,0
+15-05-2020,US,New Mexico,Bernalillo,1180,1124,0,56
+15-05-2020,US,Massachusetts,Berkshire,491,454,0,37
+15-05-2020,US,Pennsylvania,Berks,3593,3386,0,207
+15-05-2020,US,West Virginia,Berkeley,205,199,0,6
+15-05-2020,US,South Carolina,Berkeley,201,186,0,15
+15-05-2020,US,New Jersey,Bergen,17221,15778,0,1443
+15-05-2020,US,Michigan,Benzie,4,4,0,0
+15-05-2020,US,Washington,Benton,615,554,0,61
+15-05-2020,US,Tennessee,Benton,6,5,0,1
+15-05-2020,US,Oregon,Benton,51,46,0,5
+15-05-2020,US,Missouri,Benton,9,9,0,0
+15-05-2020,US,Mississippi,Benton,13,13,0,0
+15-05-2020,US,Minnesota,Benton,117,115,0,2
+15-05-2020,US,Iowa,Benton,37,36,0,1
+15-05-2020,US,Indiana,Benton,21,21,0,0
+15-05-2020,US,Arkansas,Benton,139,139,0,0
+15-05-2020,US,Colorado,Bent,1,1,0,0
+15-05-2020,US,North Dakota,Benson,1,1,0,0
+15-05-2020,US,Vermont,Bennington,60,59,0,1
+15-05-2020,US,Georgia,Ben Hill,45,44,0,1
+15-05-2020,US,Minnesota,Beltrami,9,9,0,0
+15-05-2020,US,Ohio,Belmont,300,291,0,9
+15-05-2020,US,Texas,Bell,242,239,0,3
+15-05-2020,US,New Hampshire,Belknap,50,50,0,0
+15-05-2020,US,Texas,Bee,6,6,0,0
+15-05-2020,US,Virginia,Bedford,40,39,0,1
+15-05-2020,US,Tennessee,Bedford,248,244,0,4
+15-05-2020,US,Pennsylvania,Bedford,30,29,0,1
+15-05-2020,US,Oklahoma,Beckham,6,6,0,0
+15-05-2020,US,Minnesota,Becker,31,31,0,0
+15-05-2020,US,Montana,Beaverhead,1,1,0,0
+15-05-2020,US,Pennsylvania,Beaver,516,433,0,83
+15-05-2020,US,Oklahoma,Beaver,22,22,0,0
+15-05-2020,US,Louisiana,Beauregard,50,46,0,4
+15-05-2020,US,South Carolina,Beaufort,288,276,0,12
+15-05-2020,US,North Carolina,Beaufort,27,27,0,0
+15-05-2020,US,Utah,Bear River,84,83,0,1
+15-05-2020,US,South Dakota,Beadle,22,20,0,2
+15-05-2020,US,Wisconsin,Bayfield,3,2,0,1
+15-05-2020,US,Michigan,Bay,228,214,0,14
+15-05-2020,US,Florida,Bay,80,77,0,3
+15-05-2020,US,Arkansas,Baxter,6,6,0,0
+15-05-2020,US,Virginia,Bath,0,0,0,0
+15-05-2020,US,Kentucky,Bath,7,6,0,1
+15-05-2020,US,Missouri,Bates,6,5,0,1
+15-05-2020,US,Texas,Bastrop,128,126,0,2
+15-05-2020,US,Georgia,Bartow,385,350,0,35
+15-05-2020,US,Kansas,Barton,30,29,0,1
+15-05-2020,US,Indiana,Bartholomew,394,362,0,32
+15-05-2020,US,Missouri,Barry,6,6,0,0
+15-05-2020,US,Michigan,Barry,56,55,0,1
+15-05-2020,US,Georgia,Barrow,258,250,0,8
+15-05-2020,US,Wisconsin,Barron,11,11,0,0
+15-05-2020,US,Kentucky,Barren,34,34,0,0
+15-05-2020,US,South Carolina,Barnwell,39,38,0,1
+15-05-2020,US,Massachusetts,Barnstable,1137,1051,0,86
+15-05-2020,US,North Dakota,Barnes,4,4,0,0
+15-05-2020,US,West Virginia,Barbour,7,6,0,1
+15-05-2020,US,Alabama,Barbour,79,78,0,1
+15-05-2020,US,Kansas,Barber,1,1,0,0
+15-05-2020,US,Michigan,Baraga,1,1,0,0
+15-05-2020,US,Idaho,Bannock,13,13,0,0
+15-05-2020,US,Georgia,Banks,43,43,0,0
+15-05-2020,US,Texas,Bandera,6,6,0,0
+15-05-2020,US,South Carolina,Bamberg,16,16,0,0
+15-05-2020,US,Maryland,Baltimore City,3606,3414,0,192
+15-05-2020,US,Maryland,Baltimore,4399,4165,0,234
+15-05-2020,US,Kentucky,Ballard,10,10,0,0
+15-05-2020,US,Georgia,Baldwin,282,270,0,12
+15-05-2020,US,Alabama,Baldwin,253,245,0,8
+15-05-2020,US,Oregon,Baker,3,3,0,0
+15-05-2020,US,Georgia,Baker,33,31,0,2
+15-05-2020,US,Florida,Baker,26,23,0,3
+15-05-2020,US,Texas,Bailey,3,3,0,0
+15-05-2020,US,Georgia,Bacon,59,57,0,2
+15-05-2020,US,Colorado,Baca,12,12,0,0
+15-05-2020,US,Louisiana,Avoyelles,80,71,0,9
+15-05-2020,US,Alabama,Autauga,100,96,0,4
+15-05-2020,US,Texas,Austin,17,17,0,0
+15-05-2020,US,South Dakota,Aurora,2,2,0,0
+15-05-2020,US,Virginia,Augusta,74,73,0,1
+15-05-2020,US,Ohio,Auglaize,54,53,0,1
+15-05-2020,US,Iowa,Audubon,11,10,0,1
+15-05-2020,US,Missouri,Audrain,2,2,0,0
+15-05-2020,US,Mississippi,Attala,224,219,0,5
+15-05-2020,US,Oklahoma,Atoka,1,1,0,0
+15-05-2020,US,New Jersey,Atlantic,1684,1577,0,107
+15-05-2020,US,Georgia,Atkinson,20,18,0,2
+15-05-2020,US,Ohio,Athens,8,6,0,2
+15-05-2020,US,Missouri,Atchison,2,2,0,0
+15-05-2020,US,Kansas,Atchison,15,15,0,0
+15-05-2020,US,Texas,Atascosa,30,29,0,1
+15-05-2020,US,Louisiana,Assumption,235,224,0,11
+15-05-2020,US,Washington,Asotin,18,16,0,2
+15-05-2020,US,Ohio,Ashtabula,223,198,0,25
+15-05-2020,US,Arkansas,Ashley,18,18,0,0
+15-05-2020,US,Wisconsin,Ashland,2,2,0,0
+15-05-2020,US,Ohio,Ashland,15,14,0,1
+15-05-2020,US,North Carolina,Ashe,17,17,0,0
+15-05-2020,US,Louisiana,Ascension,749,701,0,48
+15-05-2020,US,Nebraska,Arthur,0,0,0,0
+15-05-2020,US,Maine,Aroostook,7,7,0,0
+15-05-2020,US,Texas,Armstrong,2,2,0,0
+15-05-2020,US,Pennsylvania,Armstrong,57,52,0,5
+15-05-2020,US,Virginia,Arlington,1534,1463,0,71
+15-05-2020,US,Arkansas,Arkansas,2,2,0,0
+15-05-2020,US,Michigan,Arenac,29,28,0,1
+15-05-2020,US,Colorado,Archuleta,8,8,0,0
+15-05-2020,US,Texas,Archer,1,1,0,0
+15-05-2020,US,Colorado,Arapahoe,3583,3356,0,227
+15-05-2020,US,Texas,Aransas,3,3,0,0
+15-05-2020,US,Virginia,Appomattox,23,23,0,0
+15-05-2020,US,Georgia,Appling,108,98,0,10
+15-05-2020,US,Iowa,Appanoose,7,4,0,3
+15-05-2020,US,Arizona,Apache,927,911,0,16
+15-05-2020,US,Michigan,Antrim,10,10,0,0
+15-05-2020,US,Nebraska,Antelope,5,5,0,0
+15-05-2020,US,North Carolina,Anson,43,43,0,0
+15-05-2020,US,Minnesota,Anoka,726,688,0,38
+15-05-2020,US,Maryland,Anne Arundel,2752,2616,0,136
+15-05-2020,US,Texas,Angelina,131,130,0,1
+15-05-2020,US,Maine,Androscoggin,113,111,0,2
+15-05-2020,US,Texas,Andrews,22,22,0,0
+15-05-2020,US,Missouri,Andrew,14,14,0,0
+15-05-2020,US,Texas,Anderson,52,52,0,0
+15-05-2020,US,Tennessee,Anderson,36,35,0,1
+15-05-2020,US,South Carolina,Anderson,202,194,0,8
+15-05-2020,US,Kentucky,Anderson,10,9,0,1
+15-05-2020,US,Kansas,Anderson,1,1,0,0
+15-05-2020,US,Alaska,Anchorage,199,195,0,4
+15-05-2020,US,Mississippi,Amite,41,41,0,0
+15-05-2020,US,Virginia,Amherst,22,22,0,0
+15-05-2020,US,Virginia,Amelia,17,16,0,1
+15-05-2020,US,California,Amador,9,9,0,0
+15-05-2020,US,California,Alpine,2,2,0,0
+15-05-2020,US,Michigan,Alpena,90,82,0,8
+15-05-2020,US,South Carolina,Allendale,30,27,0,3
+15-05-2020,US,Ohio,Allen,164,140,0,24
+15-05-2020,US,Louisiana,Allen,94,84,0,10
+15-05-2020,US,Kentucky,Allen,37,36,0,1
+15-05-2020,US,Indiana,Allen,955,895,0,60
+15-05-2020,US,Pennsylvania,Allegheny,1582,1441,0,141
+15-05-2020,US,Virginia,Alleghany,6,6,0,0
+15-05-2020,US,North Carolina,Alleghany,10,10,0,0
+15-05-2020,US,New York,Allegany,44,44,0,0
+15-05-2020,US,Maryland,Allegany,151,138,0,13
+15-05-2020,US,Michigan,Allegan,173,171,0,2
+15-05-2020,US,Iowa,Allamakee,116,112,0,4
+15-05-2020,US,Oklahoma,Alfalfa,1,1,0,0
+15-05-2020,US,Virginia,Alexandria,1396,1364,0,32
+15-05-2020,US,North Carolina,Alexander,15,15,0,0
+15-05-2020,US,Illinois,Alexander,8,8,0,0
+15-05-2020,US,Mississippi,Alcorn,12,11,0,1
+15-05-2020,US,Michigan,Alcona,6,5,0,1
+15-05-2020,US,Virginia,Albemarle,133,129,0,4
+15-05-2020,US,Wyoming,Albany,8,8,0,0
+15-05-2020,US,New York,Albany,1538,1471,0,67
+15-05-2020,US,Colorado,Alamosa,38,36,0,2
+15-05-2020,US,California,Alameda,2367,2284,0,83
+15-05-2020,US,North Carolina,Alamance,196,187,0,9
+15-05-2020,US,Florida,Alachua,330,324,0,6
+15-05-2020,US,Minnesota,Aitkin,2,2,0,0
+15-05-2020,US,South Carolina,Aiken,137,130,0,7
+15-05-2020,US,Vermont,Addison,62,60,0,2
+15-05-2020,US,Wisconsin,Adams,4,3,0,1
+15-05-2020,US,Washington,Adams,50,50,0,0
+15-05-2020,US,Pennsylvania,Adams,183,177,0,6
+15-05-2020,US,Ohio,Adams,8,8,0,0
+15-05-2020,US,Nebraska,Adams,246,243,0,3
+15-05-2020,US,Mississippi,Adams,166,151,0,15
+15-05-2020,US,Indiana,Adams,9,8,0,1
+15-05-2020,US,Illinois,Adams,42,41,0,1
+15-05-2020,US,Idaho,Adams,3,3,0,0
+15-05-2020,US,Colorado,Adams,2520,2421,0,99
+15-05-2020,US,Oklahoma,Adair,74,71,0,3
+15-05-2020,US,Missouri,Adair,17,17,0,0
+15-05-2020,US,Kentucky,Adair,92,78,0,14
+15-05-2020,US,Iowa,Adair,4,4,0,0
+15-05-2020,US,Idaho,Ada,759,737,0,22
+15-05-2020,US,Virginia,Accomack,648,639,0,9
+15-05-2020,US,Louisiana,Acadia,189,178,0,11
+15-05-2020,US,South Carolina,Abbeville,34,34,0,0
+15-05-2020,Niger,Main territory,,885,150,684,51
+15-05-2020,Antigua and Barbuda,Main territory,,25,3,19,3
+15-05-2020,Belarus,Main territory,,27730,18767,8807,156
+15-05-2020,Samoa,Main territory,,0,0,0,0
+15-05-2020,UK,Main territory,,236711,202713,0,33998
+15-05-2020,UK,Turks and Caicos Islands,,12,1,10,1
+15-05-2020,UK,"Saint Helena, Ascension and Tristan da Cunha",,0,0,0,0
+15-05-2020,UK,Montserrat,,11,2,8,1
+15-05-2020,UK,Isle of Man,,334,25,285,24
+15-05-2020,UK,Gibraltar,,147,3,144,0
+15-05-2020,UK,Falkland Islands (Malvinas),,13,0,13,0
+15-05-2020,UK,Channel Islands,,549,49,457,43
+15-05-2020,UK,Cayman Islands,,94,38,55,1
+15-05-2020,UK,British Virgin Islands,,8,1,6,1
+15-05-2020,UK,Bermuda,,122,47,66,9
+15-05-2020,UK,Anguilla,,3,0,3,0
+15-05-2020,Nigeria,Main territory,,5450,3959,1320,171
+15-05-2020,Turkey,Main territory,,146457,36269,106133,4055
+15-05-2020,Hungary,Main territory,,3417,1688,1287,442
+15-05-2020,Belgium,Main territory,,54644,31384,14301,8959
+15-05-2020,Moldova,Main territory,,5745,3315,2228,202
+15-05-2020,Saint Kitts and Nevis,Main territory,,15,1,14,0
+15-05-2020,Mexico,Main territory,,45032,9814,30451,4767
+15-05-2020,South Africa,Main territory,,13524,7194,6083,247
+15-05-2020,Ethiopia,Main territory,,287,170,112,5
+15-05-2020,Maldives,Main territory,,1031,978,49,4
+15-05-2020,South Korea,Main territory,,11037,924,9851,262
+15-05-2020,Syria,Main territory,,50,11,36,3
+15-05-2020,Burkina Faso,Main territory,,780,134,595,51
+15-05-2020,Rwanda,Main territory,,287,110,177,0
+15-05-2020,Palau,Main territory,,0,0,0,0
+15-05-2020,Estonia,Main territory,,1766,780,923,63
+15-05-2020,Brunei,Main territory,,141,5,135,1
+15-05-2020,Central African Republic,Main territory,,301,288,13,0
+15-05-2020,Yemen,Main territory,,106,90,1,15
+15-05-2020,Togo,Main territory,,263,156,96,11
+15-05-2020,Sao Tome and Principe,Main territory,,235,224,4,7
+15-05-2020,Sweden,Main territory,,29207,20590,4971,3646
