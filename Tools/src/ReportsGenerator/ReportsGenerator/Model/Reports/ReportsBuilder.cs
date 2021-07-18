@@ -177,7 +177,7 @@ namespace ReportsGenerator.Model.Reports
         /// Gets all data reports as <see cref="IFormattableReport{TRow,TName}"/> objects used to build reports.
         /// </summary>
         /// <returns>An <see cref="IEnumerable{T}"/> of <see cref="IFormattableReport{TRow,TName}"/>.</returns>
-        public IEnumerable<IFormattableReport<int, string>> DumpModelData(bool newOnly = true) =>
+        public IEnumerable<IFormattableReport<int, DateTime>> DumpModelData(bool newOnly = true) =>
             _cache.DumpData(newOnly);
 
         /// <summary>

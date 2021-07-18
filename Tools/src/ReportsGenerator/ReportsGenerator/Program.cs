@@ -88,8 +88,17 @@ static void UpdateCache(string cacheLocation, ReportsBuilder reportsBuilder, ILo
 {
     using ReportsSaver<string> reportsSaver = new(new CsvReportFormatter(), new CsvFileReportStorage(cacheLocation, false));
     logger.WriteInfo("Create model cache...");
-    Parallel.ForEach(reportsBuilder.DumpModelData(), reportsSaver.WriteReport);
+    logger.IndentIncrease();
+    var model = reportsBuilder.DumpModelData().ToArray();
+
+    Parallel.ForEach(model.GroupBy(r => r.Name.First()), reportsGroup =>
+    {
+        logger.WriteInfo($"-- Write cache for {reportsGroup.Key}...");
+        reportsSaver.WriteReport(new MergedFormattableReport<DateTime>(reportsGroup));
+    });
+
     Parallel.ForEach(reportsBuilder.DumpModelMetadata(), reportsSaver.WriteReport);
+    logger.IndentDecrease();
 }
 
 var logger = new ConsoleLogger();

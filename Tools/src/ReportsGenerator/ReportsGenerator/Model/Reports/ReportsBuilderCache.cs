@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Linq;
 using ReportsGenerator.Data;
@@ -15,7 +16,7 @@ namespace ReportsGenerator.Model.Reports
     /// </summary>
     public class ReportsBuilderCache
     {
-        private readonly Dictionary<string, List<ModelDataReport>> _cachedNewDataReports = new();
+        private readonly ConcurrentDictionary<string, List<ModelDataReport>> _cachedNewDataReports = new();
         private readonly Dictionary<string, List<ModelMetadataReport>> _cachedNewStatsReports = new();
         private readonly Dictionary<string, List<ModelDataReport>> _cachedOldDataReports = new();
         private readonly Dictionary<string, List<ModelMetadataReport>> _cachedOldStatsReports = new();
@@ -87,16 +88,7 @@ namespace ReportsGenerator.Model.Reports
         /// <param name="report">Data to add.</param>
         public void AddNewDataReport(string country, BasicReport report)
         {
-            if (!_cachedNewDataReports.ContainsKey(country))
-            {
-                lock (_lockerData)
-                {
-                    if (!_cachedNewDataReports.ContainsKey((country)))
-                    {
-                        _cachedNewDataReports.Add(country, new List<ModelDataReport>());
-                    }
-                }
-            }
+            _cachedNewDataReports.TryAdd(country, new List<ModelDataReport>());
 
             // Too verbose.
             //_logger.WriteInfo($"CACHE: New {country} data for {report.Day} - {report.Name} added!");
@@ -136,7 +128,7 @@ namespace ReportsGenerator.Model.Reports
         /// </summary>
         /// <param name="deltaOnly">Flag indicating whether or not only fresh added reports should be returned.</param>
         /// <returns>An <see cref="IEnumerable{T}"/> of <see cref="IFormattableReport{TRow,TName}"/>.</returns>
-        public IEnumerable<IFormattableReport<int, string>> DumpData(bool deltaOnly)
+        public IEnumerable<IFormattableReport<int, DateTime>> DumpData(bool deltaOnly)
         {
             if (!deltaOnly)
             {
@@ -283,7 +275,7 @@ namespace ReportsGenerator.Model.Reports
                     StatsName: statsName)));
         }
 
-        private class ModelDataReport : IFormattableReport<int, string>
+        private class ModelDataReport : IFormattableReport<int, DateTime>
         {
             private static readonly string[] FormattableReportProperties =
             {
@@ -338,14 +330,14 @@ namespace ReportsGenerator.Model.Reports
 
             #region IFormattableReport
 
-            IEnumerable<string> IFormattableReport<int, string>.Name { get; } = new[] { "data" };
+            IEnumerable<DateTime> IFormattableReport<int, DateTime>.Name => new[] { Day.Date };
 
-            IEnumerable<string> IFormattableReport<int, string>.Properties { get; } = FormattableReportProperties;
+            IEnumerable<string> IFormattableReport<int, DateTime>.Properties { get; } = FormattableReportProperties;
 
-            ReportType IFormattableReport<int, string>.ReportType { get; } = ReportType.Model;
-            IEnumerable<int> IFormattableReport<int, string>.RowIds { get; } = new[] { 0 };
+            ReportType IFormattableReport<int, DateTime>.ReportType { get; } = ReportType.Model;
+            IEnumerable<int> IFormattableReport<int, DateTime>.RowIds { get; } = new[] { 0 };
 
-            object IFormattableReport<int, string>.GetValue(string property, int key) => property switch
+            object IFormattableReport<int, DateTime>.GetValue(string property, int key) => property switch
             {
                 "Day" => Day,
                 "Country" => Country,

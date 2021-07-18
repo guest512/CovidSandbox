@@ -93,8 +93,6 @@ namespace ReportsGenerator.Data.IO.Csv
 
                 case ReportType.Model:
                     parts.Add(_modelCacheFolder);
-                    fileName = names[0] == "data" ? "model" : "metadata";
-
                     break;
 
                 default:
