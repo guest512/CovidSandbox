@@ -5,12 +5,11 @@ import pandas as _pd
 from datetime import datetime as _datetime
 
 
-class _Dates():
+class _Dates:
     def __init__(self, paths):
         self.__paths = paths
 
-    def get_available_dates(
-            self) -> _types.Tuple[_pd.Timestamp, _pd.Timestamp]:
+    def get_available_dates(self) -> _types.Tuple[_pd.Timestamp, _pd.Timestamp]:
 
         files = self.__paths.get_daily_reports_paths()
         start_date = _pd.Timestamp(files[0][:-4]).normalize()
@@ -19,19 +18,52 @@ class _Dates():
         return (start_date, finish_date)
 
     def get_key_russian_dates(
-            self
+        self,
     ) -> _types.List[_types.Tuple[_pd.Timestamp, _pd.Timedelta, str]]:
-        return list([
-            (self.to_Timestamp('01-04-2020'), self.to_Timedelta(1),
-             'Путин: Начало нерабочих дней'),
-            (self.to_Timestamp('12-05-2020'), self.to_Timedelta(1),
-             'Путин: Пик пройден'),
-            (self.to_Timestamp('15-06-2020'), self.to_Timedelta(1),
-             'Путин: Выход из эпидемии'),
-            (self.to_Timestamp('24-06-2020'), self.to_Timedelta(1), 'Парад'),
-            (self.to_Timestamp('25-06-2020'), self.to_Timedelta(7),
-             'Конституция'),
-        ])
+        return list(
+            [
+                (
+                    self.to_Timestamp("01-04-2020"),
+                    self.to_Timedelta(1),
+                    "Путин: Начало нерабочих дней",
+                ),
+                (
+                    self.to_Timestamp("12-05-2020"),
+                    self.to_Timedelta(1),
+                    "Путин: Пик пройден",
+                ),
+                (
+                    self.to_Timestamp("15-06-2020"),
+                    self.to_Timedelta(1),
+                    "Путин: Выход из эпидемии",
+                ),
+                (
+                    self.to_Timestamp("24-06-2020"), 
+                    self.to_Timedelta(1), 
+                    "Парад 2020"
+                ),
+                (
+                    self.to_Timestamp("25-06-2020"),
+                    self.to_Timedelta(7),
+                    "Конституция"
+                ),
+                (
+                    self.to_Timestamp("31-12-2020"),
+                    self.to_Timedelta(1),
+                    "Новый год 2021"
+                ),
+                (
+                    self.to_Timestamp("11-06-2021"),
+                    self.to_Timedelta(30),
+                    "Евро 2020"
+                ),
+                (
+                    self.to_Timestamp("19-09-2021"),
+                    self.to_Timedelta(1),
+                    "Выборы"
+                ),
+            ]
+        )
 
     @staticmethod
     def to_Timestamp(val: str) -> _pd.Timestamp:
@@ -39,4 +71,4 @@ class _Dates():
 
     @staticmethod
     def to_Timedelta(days: int) -> _pd.Timedelta:
-        return _pd.to_timedelta(str(days) + 'D')
+        return _pd.to_timedelta(str(days) + "D")

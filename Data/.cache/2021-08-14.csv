@@ -1,8 +1,24 @@
 Day,Country,Province,County,Confirmed,Active,Recovered,Deaths
-14-08-2021,Uzbekistan,Main territory,,142124,141154,0,970
-14-08-2021,Costa Rica,Main territory,,428295,423084,0,5211
-14-08-2021,Slovakia,Main territory,,393455,380911,0,12544
-14-08-2021,Albania,Main territory,,135550,133087,0,2463
+14-08-2021,Micronesia,Main territory,,1,1,0,0
+14-08-2021,Romania,Main territory,,1086900,1052558,0,34342
+14-08-2021,Bahrain,Main territory,,270816,269432,0,1384
+14-08-2021,Eswatini,Main territory,,35851,34927,0,924
+14-08-2021,Belgium,West Flanders,,103829,103829,0,0
+14-08-2021,Belgium,Walloon Brabant,,44452,44452,0,0
+14-08-2021,Belgium,Other,,22464,-2823,0,25287
+14-08-2021,Belgium,Namur,,61165,61165,0,0
+14-08-2021,Belgium,Luxembourg,,32338,32338,0,0
+14-08-2021,Belgium,Limburg,,64811,64811,0,0
+14-08-2021,Belgium,Liege,,135546,135546,0,0
+14-08-2021,Belgium,Hainaut,,165692,165692,0,0
+14-08-2021,Belgium,Flemish Brabant,,90276,90276,0,0
+14-08-2021,Belgium,East Flanders,,132119,132119,0,0
+14-08-2021,Belgium,Brussels,,145193,145193,0,0
+14-08-2021,Belgium,Antwerp,,151984,151984,0,0
+14-08-2021,Indonesia,Main territory,,3833541,3717175,0,116366
+14-08-2021,Guatemala,Main territory,,411731,400646,0,11085
+14-08-2021,Israel,Main territory,,934896,928274,0,6622
+14-08-2021,North Macedonia,Main territory,,161359,155817,0,5542
 14-08-2021,China,Zhejiang,,1412,1411,0,1
 14-08-2021,China,Yunnan,,948,946,0,2
 14-08-2021,China,Xinjiang,,980,977,0,3
@@ -37,62 +53,115 @@ Day,Country,Province,County,Confirmed,Active,Recovered,Deaths
 14-08-2021,China,Chongqing,,603,597,0,6
 14-08-2021,China,Beijing,,1103,1094,0,9
 14-08-2021,China,Anhui,,1008,1002,0,6
+14-08-2021,Suriname,Main territory,,26539,25859,0,680
+14-08-2021,Zimbabwe,Main territory,,119853,115763,0,4090
+14-08-2021,Sierra Leone,Main territory,,6338,6217,0,121
 14-08-2021,Mauritania,Main territory,,29884,29248,0,636
-14-08-2021,India,West Bengal,,1537890,1519599,0,18291
-14-08-2021,India,Uttarakhand,,342572,335202,0,7370
-14-08-2021,India,Uttar Pradesh,,1708918,1686135,0,22783
-14-08-2021,India,Other,,0,0,0,0
-14-08-2021,India,Tripura,,81259,80479,0,780
-14-08-2021,India,Telangana,,652135,648294,0,3841
-14-08-2021,India,Tamil Nadu,,2586885,2552389,0,34496
-14-08-2021,India,Sikkim,,28554,28193,0,361
-14-08-2021,India,Rajasthan,,953925,944971,0,8954
-14-08-2021,India,Punjab,,599896,583556,0,16340
-14-08-2021,India,Puducherry,,122203,120399,0,1804
-14-08-2021,India,Odisha,,993507,986684,0,6823
-14-08-2021,India,Nagaland,,29097,28500,0,597
-14-08-2021,India,Mizoram,,48462,48282,0,180
-14-08-2021,India,Meghalaya,,71388,70168,0,1220
-14-08-2021,India,Manipur,,107668,105968,0,1700
-14-08-2021,India,Maharashtra,,6387863,6252954,0,134909
-14-08-2021,India,Madhya Pradesh,,792023,781509,0,10514
-14-08-2021,India,Lakshadweep,,10285,10234,0,51
-14-08-2021,India,Ladakh,,20445,20238,0,207
-14-08-2021,India,Kerala,,3671541,3653042,0,18499
-14-08-2021,India,Karnataka,,2928033,2891075,0,36958
-14-08-2021,India,Jharkhand,,347558,342427,0,5131
-14-08-2021,India,Jammu and Kashmir,,323325,318930,0,4395
-14-08-2021,India,Himachal Pradesh,,209961,206416,0,3545
-14-08-2021,India,Haryana,,770186,760529,0,9657
-14-08-2021,India,Gujarat,,825166,815088,0,10078
-14-08-2021,India,Goa,,172431,169263,0,3168
-14-08-2021,India,Delhi,,1437038,1411969,0,25069
-14-08-2021,India,Dadra and Nagar Haveli and Daman and Diu,,10655,10651,0,4
-14-08-2021,India,Chhattisgarh,,1003697,990151,0,13546
-14-08-2021,India,Chandigarh,,62028,61217,0,811
-14-08-2021,India,Bihar,,725455,715806,0,9649
-14-08-2021,India,Assam,,579488,574006,0,5482
-14-08-2021,India,Arunachal Pradesh,,51300,51048,0,252
-14-08-2021,India,Andhra Pradesh,,1992191,1978560,0,13631
-14-08-2021,India,Andaman and Nicobar Islands,,7548,7419,0,129
-14-08-2021,Botswana,Main territory,,136758,134785,0,1973
-14-08-2021,Tunisia,Main territory,,622262,600517,0,21745
-14-08-2021,Sudan,Main territory,,37543,34739,0,2804
-14-08-2021,Cyprus,Main territory,,108707,108251,0,456
-14-08-2021,Kosovo,Main territory,,115151,112871,0,2280
-14-08-2021,Panama,Main territory,,447261,440314,0,6947
+14-08-2021,Trinidad and Tobago,Main territory,,41676,40503,0,1173
+14-08-2021,Burkina Faso,Main territory,,13671,13501,0,170
+14-08-2021,Morocco,Main territory,,752076,741143,0,10933
 14-08-2021,Nicaragua,Main territory,,10251,10054,0,197
-14-08-2021,Cambodia,Main territory,,84860,83194,0,1666
-14-08-2021,Cameroon,Main territory,,82454,81116,0,1338
-14-08-2021,Bangladesh,Main territory,,1412218,1388230,0,23988
-14-08-2021,Iraq,Main territory,,1768753,1749147,0,19606
-14-08-2021,Algeria,Main territory,,186655,181889,0,4766
-14-08-2021,Malawi,Main territory,,57896,55941,0,1955
-14-08-2021,Lebanon,Main territory,,581497,573525,0,7972
-14-08-2021,Sao Tome and Principe,Main territory,,2488,2451,0,37
-14-08-2021,Gambia,Main territory,,8920,8669,0,251
-14-08-2021,Iran,Main territory,,4389085,4291877,0,97208
-14-08-2021,Gabon,Main territory,,25564,25399,0,165
+14-08-2021,Peru,Other,,5800,5562,0,238
+14-08-2021,Peru,Ucayali,,31918,28861,0,3057
+14-08-2021,Peru,Tumbes,,18016,16473,0,1543
+14-08-2021,Peru,Tacna,,29303,27370,0,1933
+14-08-2021,Peru,San Martin,,47755,44812,0,2943
+14-08-2021,Peru,Puno,,37654,33685,0,3969
+14-08-2021,Peru,Piura,,84924,73137,0,11787
+14-08-2021,Peru,Pasco,,15315,14294,0,1021
+14-08-2021,Peru,Moquegua,,28757,27278,0,1479
+14-08-2021,Peru,Madre de Dios,,13708,12953,0,755
+14-08-2021,Peru,Loreto,,44520,40379,0,4141
+14-08-2021,Peru,Lima,,929028,841399,0,87629
+14-08-2021,Peru,Lambayeque,,60169,51652,0,8517
+14-08-2021,Peru,La Libertad,,85951,75892,0,10059
+14-08-2021,Peru,Junin,,82461,75572,0,6889
+14-08-2021,Peru,Ica,,56976,48772,0,8204
+14-08-2021,Peru,Huanuco,,34901,32244,0,2657
+14-08-2021,Peru,Huancavelica,,15750,14619,0,1131
+14-08-2021,Peru,Cusco,,71140,66493,0,4647
+14-08-2021,Peru,Callao,,98806,88950,0,9856
+14-08-2021,Peru,Cajamarca,,64233,60191,0,4042
+14-08-2021,Peru,Ayacucho,,32232,30170,0,2062
+14-08-2021,Peru,Arequipa,,111833,102307,0,9526
+14-08-2021,Peru,Apurimac,,25614,24142,0,1472
+14-08-2021,Peru,Ancash,,75179,68618,0,6561
+14-08-2021,Peru,Amazonas,,30891,29669,0,1222
+14-08-2021,Somalia,Main territory,,16265,15387,0,878
+14-08-2021,Solomon Islands,Main territory,,20,20,0,0
+14-08-2021,Libya,Main territory,,279099,275230,0,3869
+14-08-2021,Japan,Yamanashi,,3216,3195,0,21
+14-08-2021,Japan,Yamaguchi,,3733,3653,0,80
+14-08-2021,Japan,Yamagata,,2578,2530,0,48
+14-08-2021,Japan,Wakayama,,3425,3375,0,50
+14-08-2021,Japan,Other,,8,8,0,0
+14-08-2021,Japan,Toyama,,2898,2860,0,38
+14-08-2021,Japan,Tottori,,1110,1107,0,3
+14-08-2021,Japan,Tokyo,,274905,272573,0,2332
+14-08-2021,Japan,Tokushima,,1923,1860,0,63
+14-08-2021,Japan,Tochigi,,10228,10134,0,94
+14-08-2021,Japan,Shizuoka,,13951,13793,0,158
+14-08-2021,Japan,Shimane,,929,927,0,2
+14-08-2021,Japan,Shiga,,7505,7410,0,95
+14-08-2021,Japan,Saitama,,74759,73899,0,860
+14-08-2021,Japan,Saga,,3412,3386,0,26
+14-08-2021,Japan,Port Quarantine,,3678,3674,0,4
+14-08-2021,Japan,Osaka,,130690,127948,0,2742
+14-08-2021,Japan,Okinawa,,32330,32084,0,246
+14-08-2021,Japan,Okayama,,9807,9680,0,127
+14-08-2021,Japan,Oita,,4348,4284,0,64
+14-08-2021,Japan,Niigata,,5093,5039,0,54
+14-08-2021,Japan,Nara,,10183,10048,0,135
+14-08-2021,Japan,Nagasaki,,4096,4027,0,69
+14-08-2021,Japan,Nagano,,6136,6042,0,94
+14-08-2021,Japan,Miyazaki,,3743,3716,0,27
+14-08-2021,Japan,Miyagi,,11480,11387,0,93
+14-08-2021,Japan,Mie,,6926,6809,0,117
+14-08-2021,Japan,Kyoto,,22186,21937,0,249
+14-08-2021,Japan,Kumamoto,,8772,8650,0,122
+14-08-2021,Japan,Kochi,,2292,2262,0,30
+14-08-2021,Japan,Kanagawa,,108573,107550,0,1023
+14-08-2021,Japan,Kagoshima,,5154,5110,0,44
+14-08-2021,Japan,Kagawa,,2936,2904,0,32
+14-08-2021,Japan,Iwate,,2386,2338,0,48
+14-08-2021,Japan,Ishikawa,,6196,6075,0,121
+14-08-2021,Japan,Ibaraki,,15976,15801,0,175
+14-08-2021,Japan,Hyogo,,50530,49207,0,1323
+14-08-2021,Japan,Hokkaido,,49186,47756,0,1430
+14-08-2021,Japan,Hiroshima,,13638,13458,0,180
+14-08-2021,Japan,Gunma,,10809,10653,0,156
+14-08-2021,Japan,Gifu,,10563,10374,0,189
+14-08-2021,Japan,Fukushima,,7182,7020,0,162
+14-08-2021,Japan,Fukuoka,,49173,48622,0,551
+14-08-2021,Japan,Fukui,,1984,1948,0,36
+14-08-2021,Japan,Ehime,,3533,3456,0,77
+14-08-2021,Japan,Chiba,,62563,61809,0,754
+14-08-2021,Japan,Aomori,,3129,3097,0,32
+14-08-2021,Japan,Akita,,1174,1153,0,21
+14-08-2021,Japan,Aichi,,59816,58800,0,1016
+14-08-2021,Ireland,Main territory,,322989,317930,0,5059
+14-08-2021,Sudan,Main territory,,37543,34739,0,2804
+14-08-2021,Rwanda,Main territory,,79284,78335,0,949
+14-08-2021,UK,Wales,,251048,245414,0,5634
+14-08-2021,UK,Other,,0,0,0,0
+14-08-2021,UK,Turks and Caicos Islands,,2568,2549,0,19
+14-08-2021,UK,Scotland,,362366,354332,0,8034
+14-08-2021,UK,"Saint Helena, Ascension and Tristan da Cunha",,4,4,0,0
+14-08-2021,UK,Northern Ireland,,174303,172058,0,2245
+14-08-2021,UK,Montserrat,,22,21,0,1
+14-08-2021,UK,Isle of Man,,5915,5878,0,37
+14-08-2021,UK,Gibraltar,,5205,5110,0,95
+14-08-2021,UK,Falkland Islands (Malvinas),,66,66,0,0
+14-08-2021,UK,England,,5453294,5338313,0,114981
+14-08-2021,UK,Channel Islands,,9889,9797,0,92
+14-08-2021,UK,Cayman Islands,,651,649,0,2
+14-08-2021,UK,British Virgin Islands,,2552,2515,0,37
+14-08-2021,UK,Bermuda,,2663,2630,0,33
+14-08-2021,UK,Anguilla,,127,127,0,0
+14-08-2021,Andorra,Main territory,,14924,14795,0,129
+14-08-2021,Oman,Main territory,,299642,295668,0,3974
+14-08-2021,Costa Rica,Main territory,,428295,423084,0,5211
+14-08-2021,Bulgaria,Main territory,,432962,414623,0,18339
 14-08-2021,Pakistan,Sindh,,410766,404353,0,6413
 14-08-2021,Pakistan,Punjab,,371605,360258,0,11347
 14-08-2021,Pakistan,Khyber Pakhtunkhwa,,152197,147543,0,4654
@@ -100,112 +169,118 @@ Day,Country,Province,County,Confirmed,Active,Recovered,Deaths
 14-08-2021,Pakistan,Gilgit-Baltistan,,9316,9153,0,163
 14-08-2021,Pakistan,Balochistan,,31556,31222,0,334
 14-08-2021,Pakistan,Azad Jammu and Kashmir,,29187,28523,0,664
-14-08-2021,Antigua and Barbuda,Main territory,,1378,1335,0,43
-14-08-2021,Bosnia and Herzegovina,Main territory,,207076,197375,0,9701
-14-08-2021,Moldova,Main territory,,261947,255643,0,6304
-14-08-2021,Thailand,Main territory,,885275,877932,0,7343
-14-08-2021,Venezuela,Main territory,,318185,314396,0,3789
-14-08-2021,Sweden,Vastra Gotaland,,193202,190819,0,2383
-14-08-2021,Sweden,Vastmanland,,28094,27741,0,353
-14-08-2021,Sweden,Vasternorrland,,27093,26612,0,481
-14-08-2021,Sweden,Vasterbotten,,24103,23922,0,181
-14-08-2021,Sweden,Varmland,,20774,20560,0,214
-14-08-2021,Sweden,Uppsala,,41016,40476,0,540
-14-08-2021,Sweden,Stockholm,,261921,257552,0,4369
-14-08-2021,Sweden,Sormland,,26239,25762,0,477
-14-08-2021,Sweden,Skane,,158729,156968,0,1761
-14-08-2021,Sweden,Ostergotland,,42934,42297,0,637
-14-08-2021,Sweden,Orebro,,32551,32209,0,342
-14-08-2021,Sweden,Norrbotten,,26965,26691,0,274
-14-08-2021,Sweden,Kronoberg,,22672,22354,0,318
-14-08-2021,Sweden,Kalmar,,24556,24310,0,246
-14-08-2021,Sweden,Jonkoping,,43999,43444,0,555
-14-08-2021,Sweden,Jamtland Harjedalen,,12713,12592,0,121
-14-08-2021,Sweden,Halland,,41662,41342,0,320
-14-08-2021,Sweden,Gotland,,4373,4321,0,52
-14-08-2021,Sweden,Gavleborg,,36226,35666,0,560
-14-08-2021,Sweden,Dalarna,,27325,26981,0,344
-14-08-2021,Sweden,Blekinge,,13000,12870,0,130
-14-08-2021,Congo (Brazzaville),Main territory,,13356,13177,0,179
-14-08-2021,Spain,Other,,0,0,0,0
-14-08-2021,Spain,Pais Vasco,,244063,239462,0,4601
-14-08-2021,Spain,Navarra,,79288,78087,0,1201
-14-08-2021,Spain,Murcia,,132612,130968,0,1644
-14-08-2021,Spain,Melilla,,10098,9999,0,99
-14-08-2021,Spain,Madrid,,852736,837070,0,15666
-14-08-2021,Spain,La Rioja,,37650,36842,0,808
-14-08-2021,Spain,Galicia,,172612,170117,0,2495
-14-08-2021,Spain,Extremadura,,93958,92122,0,1836
-14-08-2021,Spain,Ceuta,,6701,6582,0,119
-14-08-2021,Spain,Catalonia,,868586,853628,0,14958
-14-08-2021,Spain,Castilla y Leon,,287255,280194,0,7061
-14-08-2021,Spain,Castilla - La Mancha,,221956,215917,0,6039
-14-08-2021,Spain,Cantabria,,42337,41753,0,584
-14-08-2021,Spain,Canarias,,87705,86827,0,878
-14-08-2021,Spain,C. Valenciana,,486504,478977,0,7527
-14-08-2021,Spain,Baleares,,90816,89935,0,881
-14-08-2021,Spain,Asturias,,68966,66942,0,2024
-14-08-2021,Spain,Aragon,,153427,149774,0,3653
-14-08-2021,Spain,Andalusia,,756270,745874,0,10396
-14-08-2021,Latvia,Main territory,,140049,137488,0,2561
-14-08-2021,Andorra,Main territory,,14924,14795,0,129
-14-08-2021,Syria,Main territory,,26292,24357,0,1935
-14-08-2021,Kenya,Main territory,,219938,215619,0,4319
-14-08-2021,Mongolia,Main territory,,181291,180419,0,872
-14-08-2021,Croatia,Main territory,,366724,358442,0,8282
-14-08-2021,Colombia,Vichada,,2874,2825,0,49
-14-08-2021,Colombia,Vaupes,,1737,1720,0,17
-14-08-2021,Colombia,Valle del Cauca,,394788,382322,0,12466
-14-08-2021,Colombia,Other,,0,-296,0,296
-14-08-2021,Colombia,Tolima,,106321,102760,0,3561
-14-08-2021,Colombia,Sucre,,58281,56700,0,1581
-14-08-2021,Colombia,Santander,,222229,215079,0,7150
-14-08-2021,Colombia,San Andres y Providencia,,6782,6649,0,133
-14-08-2021,Colombia,Risaralda,,86601,84426,0,2175
-14-08-2021,Colombia,Quindio,,55251,53562,0,1689
-14-08-2021,Colombia,Putumayo,,15863,15216,0,647
-14-08-2021,Colombia,Norte de Santander,,88074,83967,0,4107
-14-08-2021,Colombia,Narino,,88045,85111,0,2934
-14-08-2021,Colombia,Meta,,86750,84570,0,2180
-14-08-2021,Colombia,Magdalena,,90477,87236,0,3241
-14-08-2021,Colombia,La Guajira,,41839,40528,0,1311
-14-08-2021,Colombia,Huila,,87110,84052,0,3058
-14-08-2021,Colombia,Guaviare,,5090,4999,0,91
-14-08-2021,Colombia,Guainia,,2254,2225,0,29
-14-08-2021,Colombia,Cundinamarca,,260895,254205,0,6690
-14-08-2021,Colombia,Cordoba,,101905,98276,0,3629
-14-08-2021,Colombia,Choco,,16178,15792,0,386
-14-08-2021,Colombia,Cesar,,87480,85046,0,2434
-14-08-2021,Colombia,Cauca,,54004,52584,0,1420
-14-08-2021,Colombia,Casanare,,34932,34034,0,898
-14-08-2021,Colombia,Caqueta,,22499,21602,0,897
-14-08-2021,Colombia,Capital District,,1431941,1404874,0,27067
-14-08-2021,Colombia,Caldas,,99285,97082,0,2203
-14-08-2021,Colombia,Boyaca,,104076,101574,0,2502
-14-08-2021,Colombia,Bolivar,,153451,150546,0,2905
-14-08-2021,Colombia,Atlantico,,311377,302077,0,9300
-14-08-2021,Colombia,Arauca,,12975,12542,0,433
-14-08-2021,Colombia,Antioquia,,726551,710927,0,15624
-14-08-2021,Colombia,Amazonas,,6714,6461,0,253
-14-08-2021,Namibia,Main territory,,122227,118956,0,3271
-14-08-2021,Eswatini,Main territory,,35851,34927,0,924
-14-08-2021,Burundi,Main territory,,9620,9582,0,38
-14-08-2021,Tanzania,Main territory,,1367,1317,0,50
-14-08-2021,Malaysia,Main territory,,1384353,1372125,0,12228
-14-08-2021,Hungary,Main territory,,810316,780278,0,30038
-14-08-2021,Oman,Main territory,,299642,295668,0,3974
-14-08-2021,South Africa,Main territory,,2595447,2518578,0,76869
-14-08-2021,Mauritius,Main territory,,5607,5586,0,21
-14-08-2021,Serbia,Main territory,,731227,724064,0,7163
-14-08-2021,Yemen,Main territory,,7273,5872,0,1401
-14-08-2021,El Salvador,Main territory,,90129,87348,0,2781
 14-08-2021,Liechtenstein,Main territory,,3146,3087,0,59
-14-08-2021,Eritrea,Main territory,,6601,6564,0,37
+14-08-2021,Greece,Main territory,,535237,522063,0,13174
+14-08-2021,Malawi,Main territory,,57896,55941,0,1955
+14-08-2021,Estonia,Main territory,,136790,135511,0,1279
+14-08-2021,Marshall Islands,Main territory,,4,4,0,0
+14-08-2021,Niger,Main territory,,5722,5526,0,196
+14-08-2021,Chile,Valparaiso,,121522,118176,0,3346
+14-08-2021,Chile,Other,,51,51,0,0
+14-08-2021,Chile,Tarapaca,,40756,39959,0,797
+14-08-2021,Chile,OHiggins,,67786,66277,0,1509
+14-08-2021,Chile,Nuble,,35578,34950,0,628
+14-08-2021,Chile,Metropolitana,,679382,660722,0,18660
+14-08-2021,Chile,Maule,,100436,98713,0,1723
+14-08-2021,Chile,Magallanes,,29187,28695,0,492
+14-08-2021,Chile,Los Rios,,48953,48303,0,650
+14-08-2021,Chile,Los Lagos,,88001,86627,0,1374
+14-08-2021,Chile,Coquimbo,,48042,47073,0,969
+14-08-2021,Chile,Biobio,,149449,146862,0,2587
+14-08-2021,Chile,Aysen,,8094,8022,0,72
+14-08-2021,Chile,Atacama,,26934,26595,0,339
+14-08-2021,Chile,Arica y Parinacota,,26520,26004,0,516
+14-08-2021,Chile,Araucania,,97373,95926,0,1447
+14-08-2021,Chile,Antofagasta,,60229,59007,0,1222
 14-08-2021,Ethiopia,Main territory,,288788,284317,0,4471
-14-08-2021,Norway,Main territory,,144035,143227,0,808
-14-08-2021,Ghana,Main territory,,110306,109393,0,913
+14-08-2021,Kazakhstan,Main territory,,745138,734347,0,10791
+14-08-2021,Lebanon,Main territory,,581497,573525,0,7972
+14-08-2021,Kyrgyzstan,Main territory,,171758,169319,0,2439
+14-08-2021,Brazil,Tocantins,,214482,210877,0,3605
+14-08-2021,Brazil,Sergipe,,276821,270874,0,5947
+14-08-2021,Brazil,Sao Paulo,,4164587,4022059,0,142528
+14-08-2021,Brazil,Santa Catarina,,1133146,1114818,0,18328
+14-08-2021,Brazil,Roraima,,121697,119781,0,1916
+14-08-2021,Brazil,Rondonia,,260723,254292,0,6431
+14-08-2021,Brazil,Rio de Janeiro,,1080746,1020114,0,60632
+14-08-2021,Brazil,Rio Grande do Sul,,1390173,1356421,0,33752
+14-08-2021,Brazil,Rio Grande do Norte,,362246,355037,0,7209
+14-08-2021,Brazil,Piaui,,313185,306283,0,6902
+14-08-2021,Brazil,Pernambuco,,600002,580850,0,19152
+14-08-2021,Brazil,Parana,,1414605,1378173,0,36432
+14-08-2021,Brazil,Paraiba,,427511,418422,0,9089
+14-08-2021,Brazil,Para,,577856,561611,0,16245
+14-08-2021,Brazil,Minas Gerais,,2019435,1967586,0,51849
+14-08-2021,Brazil,Mato Grosso do Sul,,362732,353572,0,9160
+14-08-2021,Brazil,Mato Grosso,,501961,489034,0,12927
+14-08-2021,Brazil,Maranhao,,343001,333175,0,9826
+14-08-2021,Brazil,Goias,,776773,755038,0,21735
+14-08-2021,Brazil,Espirito Santo,,550902,538832,0,12070
+14-08-2021,Brazil,Distrito Federal,,459095,449293,0,9802
+14-08-2021,Brazil,Ceara,,926017,902202,0,23815
+14-08-2021,Brazil,Bahia,,1208878,1182760,0,26118
+14-08-2021,Brazil,Amazonas,,421434,407809,0,13625
+14-08-2021,Brazil,Amapa,,122012,120076,0,1936
+14-08-2021,Brazil,Alagoas,,232635,226685,0,5950
+14-08-2021,Brazil,Acre,,87487,85680,0,1807
+14-08-2021,Cuba,Main territory,,509032,505107,0,3925
 14-08-2021,Laos,Main territory,,9894,9885,0,9
-14-08-2021,United Arab Emirates,Main territory,,700587,698590,0,1997
+14-08-2021,Finland,Main territory,,116996,115994,0,1002
+14-08-2021,Hungary,Main territory,,810316,780278,0,30038
+14-08-2021,Brunei,Main territory,,640,637,0,3
+14-08-2021,Kiribati,Main territory,,2,2,0,0
+14-08-2021,Canada,Yukon,,647,639,0,8
+14-08-2021,Canada,Saskatchewan,,51162,50576,0,586
+14-08-2021,Canada,Repatriated Travellers,,13,13,0,0
+14-08-2021,Canada,Quebec,,381266,370023,0,11243
+14-08-2021,Canada,Prince Edward Island,,214,214,0,0
+14-08-2021,Canada,Ontario,,562376,552958,0,9418
+14-08-2021,Canada,Nunavut,,657,653,0,4
+14-08-2021,Canada,Nova Scotia,,5920,5827,0,93
+14-08-2021,Canada,Northwest Territories,,131,131,0,0
+14-08-2021,Canada,Newfoundland and Labrador,,1447,1440,0,7
+14-08-2021,Canada,New Brunswick,,2490,2444,0,46
+14-08-2021,Canada,Manitoba,,57972,56787,0,1185
+14-08-2021,Canada,British Columbia,,155079,153300,0,1779
+14-08-2021,Canada,Alberta,,238939,236607,0,2332
+14-08-2021,Mongolia,Main territory,,181291,180419,0,872
+14-08-2021,El Salvador,Main territory,,90129,87348,0,2781
+14-08-2021,Saint Vincent and the Grenadines,Main territory,,2308,2296,0,12
+14-08-2021,Cyprus,Main territory,,110028,109567,0,461
+14-08-2021,Angola,Main territory,,44534,43448,0,1086
+14-08-2021,Malaysia,Other,,0,0,0,0
+14-08-2021,Malaysia,W.P. Putrajaya,,4833,912,3901,20
+14-08-2021,Malaysia,W.P. Labuan,,9739,67,9524,148
+14-08-2021,Malaysia,W.P. Kuala Lumpur,,153056,29440,121999,1617
+14-08-2021,Malaysia,Terengganu,,23784,4445,19161,178
+14-08-2021,Malaysia,Selangor,,505349,94907,406014,4428
+14-08-2021,Malaysia,Sarawak,,86043,8097,77470,476
+14-08-2021,Malaysia,Sabah,,103438,15738,86917,783
+14-08-2021,Malaysia,Pulau Pinang,,59198,11831,47075,292
+14-08-2021,Malaysia,Perlis,,1021,272,736,13
+14-08-2021,Malaysia,Perak,,49511,8321,40871,319
+14-08-2021,Malaysia,Pahang,,32851,8149,24383,319
+14-08-2021,Malaysia,Negeri Sembilan,,84172,10952,72348,872
+14-08-2021,Malaysia,Melaka,,38891,6667,31696,528
+14-08-2021,Malaysia,Kelantan,,56091,9794,45991,306
+14-08-2021,Malaysia,Kedah,,67036,16648,49761,627
+14-08-2021,Malaysia,Johor,,109340,17704,90334,1302
+14-08-2021,Guinea-Bissau,Main territory,,5099,5009,0,90
+14-08-2021,Azerbaijan,Main territory,,365009,359871,0,5138
+14-08-2021,Austria,Main territory,,667841,657087,0,10754
+14-08-2021,Bangladesh,Main territory,,1412218,1388230,0,23988
+14-08-2021,Latvia,Main territory,,140049,137488,0,2561
+14-08-2021,Antigua and Barbuda,Main territory,,1378,1335,0,43
+14-08-2021,West Bank and Gaza,Main territory,,320034,316411,0,3623
+14-08-2021,Australia,Western Australia,,1059,1050,0,9
+14-08-2021,Australia,Victoria,,21144,20324,0,820
+14-08-2021,Australia,Tasmania,,235,222,0,13
+14-08-2021,Australia,South Australia,,868,864,0,4
+14-08-2021,Australia,Queensland,,1956,1949,0,7
+14-08-2021,Australia,Northern Territory,,199,199,0,0
+14-08-2021,Australia,New South Wales,,13503,13401,0,102
+14-08-2021,Australia,Australian Capital Territory,,133,130,0,3
+14-08-2021,Tajikistan,Main territory,,16461,16337,0,124
 14-08-2021,Ukraine,Zhytomyr Oblast,,89142,87327,0,1815
 14-08-2021,Ukraine,Zaporizhia Oblast,,105874,103409,0,2465
 14-08-2021,Ukraine,Zakarpattia Oblast,,62389,60778,0,1611
@@ -231,51 +306,63 @@ Day,Country,Province,County,Confirmed,Active,Recovered,Deaths
 14-08-2021,Ukraine,Chernivtsi Oblast,,80497,78694,0,1803
 14-08-2021,Ukraine,Chernihiv Oblast,,58045,56690,0,1355
 14-08-2021,Ukraine,Cherkasy Oblast,,82491,81164,0,1327
-14-08-2021,Palau,Main territory,,0,0,0,0
-14-08-2021,Central African Republic,Main territory,,11251,11152,0,99
-14-08-2021,Uganda,Main territory,,96678,93815,0,2863
-14-08-2021,Morocco,Main territory,,752076,741143,0,10933
-14-08-2021,Mali,Main territory,,14692,14158,0,534
-14-08-2021,Rwanda,Main territory,,79284,78335,0,949
-14-08-2021,France,Main territory,,6339250,6227802,0,111448
-14-08-2021,France,Wallis and Futuna,,445,438,0,7
-14-08-2021,France,St Martin,,2713,2674,0,39
-14-08-2021,France,Saint Pierre and Miquelon,,30,30,0,0
-14-08-2021,France,Saint Barthelemy,,1336,1334,0,2
-14-08-2021,France,Reunion,,43835,43537,0,298
-14-08-2021,France,New Caledonia,,134,134,0,0
-14-08-2021,France,Mayotte,,19567,19392,0,175
-14-08-2021,France,Martinique,,27883,27699,0,184
-14-08-2021,France,Guadeloupe,,26771,26480,0,291
-14-08-2021,France,French Polynesia,,28330,28142,0,188
-14-08-2021,France,French Guiana,,31633,31436,0,197
-14-08-2021,Saudi Arabia,Main territory,,537374,528986,0,8388
+14-08-2021,Holy See,Main territory,,27,27,0,0
+14-08-2021,Venezuela,Main territory,,318185,314396,0,3789
+14-08-2021,Tanzania,Main territory,,1367,1317,0,50
+14-08-2021,Congo (Kinshasa),Main territory,,53136,52086,0,1050
 14-08-2021,Vietnam,Main territory,,265464,260027,0,5437
-14-08-2021,Kuwait,Main territory,,406234,403848,0,2386
-14-08-2021,Sierra Leone,Main territory,,6338,6217,0,121
-14-08-2021,Monaco,Main territory,,3058,3025,0,33
-14-08-2021,Burkina Faso,Main territory,,13671,13501,0,170
-14-08-2021,Guyana,Main territory,,23455,22882,0,573
-14-08-2021,Libya,Main territory,,279099,275230,0,3869
-14-08-2021,UK,Wales,,251048,245414,0,5634
-14-08-2021,UK,Other,,0,0,0,0
-14-08-2021,UK,Turks and Caicos Islands,,2568,2549,0,19
-14-08-2021,UK,Scotland,,362366,354332,0,8034
-14-08-2021,UK,"Saint Helena, Ascension and Tristan da Cunha",,4,4,0,0
-14-08-2021,UK,Northern Ireland,,174303,172058,0,2245
-14-08-2021,UK,Montserrat,,22,21,0,1
-14-08-2021,UK,Isle of Man,,5915,5878,0,37
-14-08-2021,UK,Gibraltar,,5205,5110,0,95
-14-08-2021,UK,Falkland Islands (Malvinas),,66,66,0,0
-14-08-2021,UK,England,,5453294,5338313,0,114981
-14-08-2021,UK,Channel Islands,,9889,9797,0,92
-14-08-2021,UK,Cayman Islands,,651,649,0,2
-14-08-2021,UK,British Virgin Islands,,2552,2515,0,37
-14-08-2021,UK,Bermuda,,2663,2630,0,33
-14-08-2021,UK,Anguilla,,127,127,0,0
+14-08-2021,Jordan,Main territory,,782210,772007,0,10203
+14-08-2021,Cote d'Ivoire,Main territory,,52202,51843,0,359
 14-08-2021,Madagascar,Main territory,,42811,41859,0,952
-14-08-2021,Austria,Main territory,,667841,657087,0,10754
-14-08-2021,North Macedonia,Main territory,,161359,155817,0,5542
+14-08-2021,Tunisia,Main territory,,622262,600517,0,21745
+14-08-2021,Lesotho,Main territory,,14243,13846,0,397
+14-08-2021,Bolivia,Main territory,,481631,463479,0,18152
+14-08-2021,Grenada,Main territory,,180,179,0,1
+14-08-2021,Sweden,Vastra Gotaland,,193202,190819,0,2383
+14-08-2021,Sweden,Vastmanland,,28094,27741,0,353
+14-08-2021,Sweden,Vasternorrland,,27093,26612,0,481
+14-08-2021,Sweden,Vasterbotten,,24103,23922,0,181
+14-08-2021,Sweden,Varmland,,20774,20560,0,214
+14-08-2021,Sweden,Uppsala,,41016,40476,0,540
+14-08-2021,Sweden,Stockholm,,261921,257552,0,4369
+14-08-2021,Sweden,Sormland,,26239,25762,0,477
+14-08-2021,Sweden,Skane,,158729,156968,0,1761
+14-08-2021,Sweden,Ostergotland,,42934,42297,0,637
+14-08-2021,Sweden,Orebro,,32551,32209,0,342
+14-08-2021,Sweden,Norrbotten,,26965,26691,0,274
+14-08-2021,Sweden,Kronoberg,,22672,22354,0,318
+14-08-2021,Sweden,Kalmar,,24556,24310,0,246
+14-08-2021,Sweden,Jonkoping,,43999,43444,0,555
+14-08-2021,Sweden,Jamtland Harjedalen,,12713,12592,0,121
+14-08-2021,Sweden,Halland,,41662,41342,0,320
+14-08-2021,Sweden,Gotland,,4373,4321,0,52
+14-08-2021,Sweden,Gavleborg,,36226,35666,0,560
+14-08-2021,Sweden,Dalarna,,27325,26981,0,344
+14-08-2021,Sweden,Blekinge,,13000,12870,0,130
+14-08-2021,Saint Lucia,Main territory,,6287,6192,0,95
+14-08-2021,United Arab Emirates,Main territory,,700587,698590,0,1997
+14-08-2021,Kuwait,Main territory,,406234,403848,0,2386
+14-08-2021,Afghanistan,Main territory,,151941,144931,0,7010
+14-08-2021,Switzerland,Main territory,,735375,724565,0,10810
+14-08-2021,Panama,Main territory,,447261,440314,0,6947
+14-08-2021,Netherlands,Zuid-Holland,,450793,446471,0,4322
+14-08-2021,Netherlands,Zeeland,,32682,32432,0,250
+14-08-2021,Netherlands,Utrecht,,146557,145267,0,1290
+14-08-2021,Netherlands,Other,,5404,5389,0,15
+14-08-2021,Netherlands,Sint Maarten,,3164,3124,0,40
+14-08-2021,Netherlands,Overijssel,,122758,121610,0,1148
+14-08-2021,Netherlands,Noord-Holland,,326085,323423,0,2662
+14-08-2021,Netherlands,Noord-Brabant,,303058,299909,0,3149
+14-08-2021,Netherlands,Limburg,,126264,124597,0,1667
+14-08-2021,Netherlands,Groningen,,48207,47941,0,266
+14-08-2021,Netherlands,Gelderland,,210246,208194,0,2052
+14-08-2021,Netherlands,Friesland,,49111,48626,0,485
+14-08-2021,Netherlands,Flevoland,,41127,40880,0,247
+14-08-2021,Netherlands,Drenthe,,37355,37002,0,353
+14-08-2021,Netherlands,Curacao,,14530,14397,0,133
+14-08-2021,Netherlands,"Bonaire, Sint Eustatius and Saba",,1741,1724,0,17
+14-08-2021,Netherlands,Aruba,,13279,13163,0,116
+14-08-2021,Liberia,Main territory,,5482,5261,0,221
 14-08-2021,US,Wyoming,Weston,705,699,0,6
 14-08-2021,US,Wyoming,Washakie,967,941,0,26
 14-08-2021,US,Wyoming,Unassigned,0,0,0,0
@@ -1370,96 +1457,96 @@ Day,Country,Province,County,Confirmed,Active,Recovered,Deaths
 14-08-2021,US,Oklahoma,Atoka,2078,2050,0,28
 14-08-2021,US,Oklahoma,Alfalfa,1178,1171,0,7
 14-08-2021,US,Oklahoma,Adair,3776,3730,0,46
-14-08-2021,US,Ohio,Wyandot,2402,2345,0,57
-14-08-2021,US,Ohio,Wood,13605,13403,0,202
-14-08-2021,US,Ohio,Williams,3715,3636,0,79
-14-08-2021,US,Ohio,Wayne,9622,9393,0,229
+14-08-2021,US,Ohio,Wyandot,2402,2344,0,58
+14-08-2021,US,Ohio,Wood,13605,13399,0,206
+14-08-2021,US,Ohio,Williams,3715,3635,0,80
+14-08-2021,US,Ohio,Wayne,9622,9392,0,230
 14-08-2021,US,Ohio,Washington,5516,5405,0,111
-14-08-2021,US,Ohio,Warren,25693,25380,0,313
+14-08-2021,US,Ohio,Warren,25693,25377,0,316
 14-08-2021,US,Ohio,Vinton,905,888,0,17
-14-08-2021,US,Ohio,Van Wert,2612,2547,0,65
+14-08-2021,US,Ohio,Van Wert,2612,2545,0,67
 14-08-2021,US,Ohio,Union,6065,6016,0,49
 14-08-2021,US,Ohio,Unassigned,0,-5,0,5
-14-08-2021,US,Ohio,Tuscarawas,8900,8640,0,260
-14-08-2021,US,Ohio,Trumbull,17284,16791,0,493
-14-08-2021,US,Ohio,Summit,50110,49088,0,1022
-14-08-2021,US,Ohio,Stark,34677,33736,0,941
+14-08-2021,US,Ohio,Tuscarawas,8900,8639,0,261
+14-08-2021,US,Ohio,Trumbull,17284,16784,0,500
+14-08-2021,US,Ohio,Summit,50110,49076,0,1034
+14-08-2021,US,Ohio,Stark,34677,33726,0,951
 14-08-2021,US,Ohio,Shelby,4996,4898,0,98
-14-08-2021,US,Ohio,Seneca,5478,5350,0,128
-14-08-2021,US,Ohio,Scioto,7372,7263,0,109
+14-08-2021,US,Ohio,Seneca,5478,5345,0,133
+14-08-2021,US,Ohio,Scioto,7372,7254,0,118
 14-08-2021,US,Ohio,Sandusky,5688,5557,0,131
 14-08-2021,US,Ohio,Ross,7247,7081,0,166
-14-08-2021,US,Ohio,Richland,12283,12069,0,214
-14-08-2021,US,Ohio,Putnam,4409,4305,0,104
-14-08-2021,US,Ohio,Preble,4081,3974,0,107
-14-08-2021,US,Ohio,Portage,13818,13599,0,219
-14-08-2021,US,Ohio,Pike,2566,2529,0,37
+14-08-2021,US,Ohio,Richland,12283,12065,0,218
+14-08-2021,US,Ohio,Putnam,4409,4304,0,105
+14-08-2021,US,Ohio,Preble,4081,3972,0,109
+14-08-2021,US,Ohio,Portage,13818,13597,0,221
+14-08-2021,US,Ohio,Pike,2566,2528,0,38
 14-08-2021,US,Ohio,Pickaway,8942,8819,0,123
 14-08-2021,US,Ohio,Perry,3078,3028,0,50
 14-08-2021,US,Ohio,Paulding,1899,1857,0,42
-14-08-2021,US,Ohio,Ottawa,3847,3765,0,82
+14-08-2021,US,Ohio,Ottawa,3847,3764,0,83
 14-08-2021,US,Ohio,Noble,1406,1366,0,40
-14-08-2021,US,Ohio,Muskingum,9415,9278,0,137
-14-08-2021,US,Ohio,Morrow,3081,3037,0,44
-14-08-2021,US,Ohio,Morgan,1137,1113,0,24
-14-08-2021,US,Ohio,Montgomery,55856,54785,0,1071
+14-08-2021,US,Ohio,Muskingum,9415,9274,0,141
+14-08-2021,US,Ohio,Morrow,3081,3035,0,46
+14-08-2021,US,Ohio,Morgan,1137,1111,0,26
+14-08-2021,US,Ohio,Montgomery,55856,54771,0,1085
 14-08-2021,US,Ohio,Monroe,1428,1382,0,46
-14-08-2021,US,Ohio,Miami,11436,11204,0,232
-14-08-2021,US,Ohio,Mercer,5011,4926,0,85
-14-08-2021,US,Ohio,Meigs,1576,1536,0,40
-14-08-2021,US,Ohio,Medina,16425,16146,0,279
-14-08-2021,US,Ohio,Marion,8922,8782,0,140
-14-08-2021,US,Ohio,Mahoning,23269,22654,0,615
+14-08-2021,US,Ohio,Miami,11436,11200,0,236
+14-08-2021,US,Ohio,Mercer,5011,4924,0,87
+14-08-2021,US,Ohio,Meigs,1576,1534,0,42
+14-08-2021,US,Ohio,Medina,16425,16144,0,281
+14-08-2021,US,Ohio,Marion,8922,8781,0,141
+14-08-2021,US,Ohio,Mahoning,23269,22645,0,624
 14-08-2021,US,Ohio,Madison,4584,4519,0,65
-14-08-2021,US,Ohio,Lucas,44675,43838,0,837
-14-08-2021,US,Ohio,Lorain,26825,26312,0,513
+14-08-2021,US,Ohio,Lucas,44675,43832,0,843
+14-08-2021,US,Ohio,Lorain,26825,26305,0,520
 14-08-2021,US,Ohio,Logan,4050,3971,0,79
 14-08-2021,US,Ohio,Licking,17347,17119,0,228
-14-08-2021,US,Ohio,Lawrence,6278,6171,0,107
-14-08-2021,US,Ohio,Lake,22023,21624,0,399
-14-08-2021,US,Ohio,Knox,4882,4768,0,114
-14-08-2021,US,Ohio,Jefferson,5911,5749,0,162
-14-08-2021,US,Ohio,Jackson,3330,3276,0,54
-14-08-2021,US,Ohio,Huron,5848,5726,0,122
+14-08-2021,US,Ohio,Lawrence,6278,6163,0,115
+14-08-2021,US,Ohio,Lake,22023,21619,0,404
+14-08-2021,US,Ohio,Knox,4882,4767,0,115
+14-08-2021,US,Ohio,Jefferson,5911,5744,0,167
+14-08-2021,US,Ohio,Jackson,3330,3274,0,56
+14-08-2021,US,Ohio,Huron,5848,5724,0,124
 14-08-2021,US,Ohio,Holmes,2784,2681,0,103
 14-08-2021,US,Ohio,Hocking,2300,2237,0,63
-14-08-2021,US,Ohio,Highland,3823,3754,0,69
+14-08-2021,US,Ohio,Highland,3823,3753,0,70
 14-08-2021,US,Ohio,Henry,2831,2764,0,67
 14-08-2021,US,Ohio,Harrison,1191,1153,0,38
-14-08-2021,US,Ohio,Hardin,2849,2783,0,66
+14-08-2021,US,Ohio,Hardin,2849,2782,0,67
 14-08-2021,US,Ohio,Hancock,7188,7050,0,138
-14-08-2021,US,Ohio,Hamilton,85081,83815,0,1266
+14-08-2021,US,Ohio,Hamilton,85081,83792,0,1289
 14-08-2021,US,Ohio,Guernsey,3427,3373,0,54
-14-08-2021,US,Ohio,Greene,16234,15979,0,255
-14-08-2021,US,Ohio,Geauga,7175,7022,0,153
-14-08-2021,US,Ohio,Gallia,2620,2569,0,51
-14-08-2021,US,Ohio,Fulton,4569,4492,0,77
-14-08-2021,US,Ohio,Franklin,133970,132468,0,1502
+14-08-2021,US,Ohio,Greene,16234,15977,0,257
+14-08-2021,US,Ohio,Geauga,7175,7020,0,155
+14-08-2021,US,Ohio,Gallia,2620,2568,0,52
+14-08-2021,US,Ohio,Fulton,4569,4489,0,80
+14-08-2021,US,Ohio,Franklin,133970,132452,0,1518
 14-08-2021,US,Ohio,Fayette,2963,2913,0,50
-14-08-2021,US,Ohio,Fairfield,17271,17061,0,210
-14-08-2021,US,Ohio,Erie,8430,8263,0,167
-14-08-2021,US,Ohio,Delaware,19660,19522,0,138
-14-08-2021,US,Ohio,Defiance,4576,4477,0,99
+14-08-2021,US,Ohio,Fairfield,17271,17059,0,212
+14-08-2021,US,Ohio,Erie,8430,8262,0,168
+14-08-2021,US,Ohio,Delaware,19660,19521,0,139
+14-08-2021,US,Ohio,Defiance,4576,4476,0,100
 14-08-2021,US,Ohio,Darke,5565,5434,0,131
-14-08-2021,US,Ohio,Cuyahoga,120021,117745,0,2276
+14-08-2021,US,Ohio,Cuyahoga,120021,117725,0,2296
 14-08-2021,US,Ohio,Crawford,4285,4173,0,112
-14-08-2021,US,Ohio,Coshocton,2808,2746,0,62
+14-08-2021,US,Ohio,Coshocton,2808,2745,0,63
 14-08-2021,US,Ohio,Columbiana,9484,9248,0,236
 14-08-2021,US,Ohio,Clinton,4103,4034,0,69
-14-08-2021,US,Ohio,Clermont,21264,21002,0,262
-14-08-2021,US,Ohio,Clark,14739,14425,0,314
+14-08-2021,US,Ohio,Clermont,21264,20998,0,266
+14-08-2021,US,Ohio,Clark,14739,14422,0,317
 14-08-2021,US,Ohio,Champaign,3598,3538,0,60
 14-08-2021,US,Ohio,Carroll,2092,2043,0,49
-14-08-2021,US,Ohio,Butler,41065,40449,0,616
-14-08-2021,US,Ohio,Brown,4293,4230,0,63
-14-08-2021,US,Ohio,Belmont,6428,6247,0,181
+14-08-2021,US,Ohio,Butler,41065,40432,0,633
+14-08-2021,US,Ohio,Brown,4293,4228,0,65
+14-08-2021,US,Ohio,Belmont,6428,6245,0,183
 14-08-2021,US,Ohio,Auglaize,5207,5120,0,87
 14-08-2021,US,Ohio,Athens,5356,5296,0,60
-14-08-2021,US,Ohio,Ashtabula,7399,7218,0,181
-14-08-2021,US,Ohio,Ashland,4665,4566,0,99
-14-08-2021,US,Ohio,Allen,12330,12085,0,245
-14-08-2021,US,Ohio,Adams,2613,2554,0,59
-14-08-2021,US,Northern Mariana Islands,,183,181,0,2
+14-08-2021,US,Ohio,Ashtabula,7399,7216,0,183
+14-08-2021,US,Ohio,Ashland,4665,4563,0,102
+14-08-2021,US,Ohio,Allen,12330,12082,0,248
+14-08-2021,US,Ohio,Adams,2613,2553,0,60
+14-08-2021,US,Northern Mariana Islands,,214,212,0,2
 14-08-2021,US,North Dakota,Williams,5149,5109,0,40
 14-08-2021,US,North Dakota,Wells,463,455,0,8
 14-08-2021,US,North Dakota,Ward,10383,10182,0,201
@@ -2653,7 +2740,7 @@ Day,Country,Province,County,Confirmed,Active,Recovered,Deaths
 14-08-2021,US,Iowa,Wapello,4486,4362,0,124
 14-08-2021,US,Iowa,Van Buren,593,575,0,18
 14-08-2021,US,Iowa,Union,1306,1271,0,35
-14-08-2021,US,Iowa,Unassigned,15,15,0,0
+14-08-2021,US,Iowa,Unassigned,1965,1965,0,0
 14-08-2021,US,Iowa,Taylor,676,664,0,12
 14-08-2021,US,Iowa,Tama,2163,2091,0,72
 14-08-2021,US,Iowa,Story,11130,11082,0,48
@@ -3299,65 +3386,65 @@ Day,Country,Province,County,Confirmed,Active,Recovered,Deaths
 14-08-2021,US,Colorado,Arapahoe,65998,65224,0,774
 14-08-2021,US,Colorado,Alamosa,1846,1807,0,39
 14-08-2021,US,Colorado,Adams,63766,63028,0,738
-14-08-2021,US,California,Yuba,7562,7511,0,51
-14-08-2021,US,California,Yolo,15761,15536,0,225
-14-08-2021,US,California,Ventura,86440,85388,0,1052
+14-08-2021,US,California,Yuba,7373,7322,0,51
+14-08-2021,US,California,Yolo,16505,16280,0,225
+14-08-2021,US,California,Ventura,90456,89404,0,1052
 14-08-2021,US,California,Unassigned,107,107,0,0
-14-08-2021,US,California,Tuolumne,5053,4978,0,75
-14-08-2021,US,California,Tulare,51770,50914,0,856
-14-08-2021,US,California,Trinity,526,519,0,7
-14-08-2021,US,California,Tehama,6214,6148,0,66
-14-08-2021,US,California,Sutter,10862,10732,0,130
-14-08-2021,US,California,Stanislaus,68731,67625,0,1106
-14-08-2021,US,California,Sonoma,34686,34348,0,338
-14-08-2021,US,California,Solano,37664,37400,0,264
-14-08-2021,US,California,Siskiyou,2786,2746,0,40
-14-08-2021,US,California,Sierra,150,150,0,0
-14-08-2021,US,California,Shasta,13791,13547,0,244
-14-08-2021,US,California,Santa Cruz,17332,17123,0,209
-14-08-2021,US,California,Santa Clara,127446,125677,0,1769
-14-08-2021,US,California,Santa Barbara,37133,36659,0,474
-14-08-2021,US,California,San Mateo,46660,46068,0,592
-14-08-2021,US,California,San Luis Obispo,23359,23088,0,271
-14-08-2021,US,California,San Joaquin,80232,78751,0,1481
-14-08-2021,US,California,San Francisco,44196,43626,0,570
+14-08-2021,US,California,Tuolumne,4969,4894,0,75
+14-08-2021,US,California,Tulare,63010,62154,0,856
+14-08-2021,US,California,Trinity,497,490,0,7
+14-08-2021,US,California,Tehama,6244,6178,0,66
+14-08-2021,US,California,Sutter,10930,10800,0,130
+14-08-2021,US,California,Stanislaus,68559,67453,0,1106
+14-08-2021,US,California,Sonoma,35041,34703,0,338
+14-08-2021,US,California,Solano,38095,37831,0,264
+14-08-2021,US,California,Siskiyou,2728,2688,0,40
+14-08-2021,US,California,Sierra,95,95,0,0
+14-08-2021,US,California,Shasta,15824,15580,0,244
+14-08-2021,US,California,Santa Cruz,18341,18132,0,209
+14-08-2021,US,California,Santa Clara,128417,126648,0,1769
+14-08-2021,US,California,Santa Barbara,38552,38078,0,474
+14-08-2021,US,California,San Mateo,47645,47053,0,592
+14-08-2021,US,California,San Luis Obispo,24268,23997,0,271
+14-08-2021,US,California,San Joaquin,84973,83492,0,1481
+14-08-2021,US,California,San Francisco,46389,45819,0,570
 14-08-2021,US,California,San Diego,313589,309765,0,3824
-14-08-2021,US,California,San Bernardino,316253,310952,0,5301
-14-08-2021,US,California,San Benito,6447,6383,0,64
-14-08-2021,US,California,Sacramento,122868,121056,0,1812
-14-08-2021,US,California,Riverside,319733,315048,0,4685
-14-08-2021,US,California,Plumas,849,843,0,6
-14-08-2021,US,California,Placer,26987,26679,0,308
+14-08-2021,US,California,San Bernardino,321935,316634,0,5301
+14-08-2021,US,California,San Benito,6556,6492,0,64
+14-08-2021,US,California,Sacramento,126038,124226,0,1812
+14-08-2021,US,California,Riverside,328991,324306,0,4685
+14-08-2021,US,California,Plumas,865,859,0,6
+14-08-2021,US,California,Placer,29506,29198,0,308
 14-08-2021,US,California,Orange,292833,287674,0,5159
-14-08-2021,US,California,Nevada,6356,6279,0,77
-14-08-2021,US,California,Napa,10842,10759,0,83
-14-08-2021,US,California,Monterey,45293,44763,0,530
-14-08-2021,US,California,Mono,1377,1372,0,5
-14-08-2021,US,California,Modoc,581,574,0,7
-14-08-2021,US,California,Merced,34558,34066,0,492
-14-08-2021,US,California,Mendocino,5267,5213,0,54
+14-08-2021,US,California,Nevada,6650,6573,0,77
+14-08-2021,US,California,Napa,10942,10859,0,83
+14-08-2021,US,California,Monterey,46846,46316,0,530
+14-08-2021,US,California,Mono,1345,1340,0,5
+14-08-2021,US,California,Modoc,570,563,0,7
+14-08-2021,US,California,Merced,34359,33867,0,492
+14-08-2021,US,California,Mendocino,5137,5083,0,54
 14-08-2021,US,California,Mariposa,636,629,0,7
-14-08-2021,US,California,Marin,15581,15342,0,239
-14-08-2021,US,California,Madera,17614,17365,0,249
+14-08-2021,US,California,Marin,15767,15528,0,239
+14-08-2021,US,California,Madera,18875,18626,0,249
 14-08-2021,US,California,Los Angeles,1347023,1322131,0,24892
 14-08-2021,US,California,Lassen,6015,5989,0,26
-14-08-2021,US,California,Lake,4811,4743,0,68
-14-08-2021,US,California,Kings,24716,24460,0,256
+14-08-2021,US,California,Lake,4885,4817,0,68
+14-08-2021,US,California,Kings,26064,25808,0,256
 14-08-2021,US,California,Kern,117101,115667,0,1434
-14-08-2021,US,California,Inyo,1509,1470,0,39
-14-08-2021,US,California,Imperial,29654,28908,0,746
-14-08-2021,US,California,Humboldt,5970,5912,0,58
-14-08-2021,US,California,Glenn,2574,2547,0,27
-14-08-2021,US,California,Fresno,108638,106885,0,1753
-14-08-2021,US,California,El Dorado,12001,11879,0,122
-14-08-2021,US,California,Del Norte,2060,2050,0,10
-14-08-2021,US,California,Contra Costa,81823,80975,0,848
-14-08-2021,US,California,Colusa,2459,2441,0,18
-14-08-2021,US,California,Calaveras,2564,2506,0,58
-14-08-2021,US,California,Butte,14179,13973,0,206
-14-08-2021,US,California,Amador,4169,4120,0,49
+14-08-2021,US,California,Inyo,1493,1454,0,39
+14-08-2021,US,California,Imperial,32680,31934,0,746
+14-08-2021,US,California,Humboldt,6114,6056,0,58
+14-08-2021,US,California,Glenn,3254,3227,0,27
+14-08-2021,US,California,Fresno,118888,117135,0,1753
+14-08-2021,US,California,El Dorado,13102,12980,0,122
+14-08-2021,US,California,Del Norte,2026,2016,0,10
+14-08-2021,US,California,Contra Costa,83180,82332,0,848
+14-08-2021,US,California,Colusa,2570,2552,0,18
+14-08-2021,US,California,Calaveras,2598,2540,0,58
+14-08-2021,US,California,Butte,16597,16391,0,206
+14-08-2021,US,California,Amador,4247,4198,0,49
 14-08-2021,US,California,Alpine,91,91,0,0
-14-08-2021,US,California,Alameda,101473,100172,0,1301
+14-08-2021,US,California,Alameda,103752,102451,0,1301
 14-08-2021,US,Arkansas,Yell,3800,3734,0,66
 14-08-2021,US,Arkansas,Woodruff,828,812,0,16
 14-08-2021,US,Arkansas,White,10805,10656,0,149
@@ -3551,226 +3638,9 @@ Day,Country,Province,County,Confirmed,Active,Recovered,Deaths
 14-08-2021,US,Alabama,Barbour,2732,2667,0,65
 14-08-2021,US,Alabama,Baldwin,28629,28285,0,344
 14-08-2021,US,Alabama,Autauga,7931,7817,0,114
-14-08-2021,South Korea,Main territory,,223928,221772,0,2156
-14-08-2021,Philippines,Main territory,,1727231,1697161,0,30070
-14-08-2021,Senegal,Main territory,,70413,68826,0,1587
-14-08-2021,Togo,Main territory,,17581,17416,0,165
-14-08-2021,Seychelles,Main territory,,18895,18797,0,98
-14-08-2021,Marshall Islands,Main territory,,4,4,0,0
-14-08-2021,Nepal,Main territory,,730479,720220,0,10259
-14-08-2021,Belarus,Main territory,,459998,456405,0,3593
-14-08-2021,Angola,Main territory,,44534,43448,0,1086
-14-08-2021,Saint Vincent and the Grenadines,Main territory,,2308,2296,0,12
-14-08-2021,Trinidad and Tobago,Main territory,,41676,40503,0,1173
-14-08-2021,Samoa,Main territory,,3,3,0,0
-14-08-2021,Haiti,Main territory,,20507,19931,0,576
-14-08-2021,Guinea,Main territory,,27837,27558,0,279
-14-08-2021,Brunei,Main territory,,640,637,0,3
-14-08-2021,Uruguay,Main territory,,383212,377211,0,6001
-14-08-2021,Belize,Main territory,,14847,14503,0,344
-14-08-2021,Fiji,Main territory,,39770,39402,0,368
-14-08-2021,Liberia,Main territory,,5459,5311,0,148
-14-08-2021,Chile,Valparaiso,,121522,118176,0,3346
-14-08-2021,Chile,Other,,51,51,0,0
-14-08-2021,Chile,Tarapaca,,40756,39959,0,797
-14-08-2021,Chile,OHiggins,,67786,66277,0,1509
-14-08-2021,Chile,Nuble,,35578,34950,0,628
-14-08-2021,Chile,Metropolitana,,679382,660722,0,18660
-14-08-2021,Chile,Maule,,100436,98713,0,1723
-14-08-2021,Chile,Magallanes,,29187,28695,0,492
-14-08-2021,Chile,Los Rios,,48953,48303,0,650
-14-08-2021,Chile,Los Lagos,,88001,86627,0,1374
-14-08-2021,Chile,Coquimbo,,48042,47073,0,969
-14-08-2021,Chile,Biobio,,149449,146862,0,2587
-14-08-2021,Chile,Aysen,,8094,8022,0,72
-14-08-2021,Chile,Atacama,,26934,26595,0,339
-14-08-2021,Chile,Arica y Parinacota,,26520,26004,0,516
-14-08-2021,Chile,Araucania,,97373,95926,0,1447
-14-08-2021,Chile,Antofagasta,,60229,59007,0,1222
-14-08-2021,Bahrain,Main territory,,270816,269432,0,1384
-14-08-2021,Dominican Republic,Main territory,,345960,341984,0,3976
-14-08-2021,Ireland,Main territory,,322989,317930,0,5059
-14-08-2021,Georgia,Main territory,,477264,470893,0,6371
-14-08-2021,Nigeria,Main territory,,181962,179743,0,2219
-14-08-2021,Afghanistan,Main territory,,151770,144770,0,7000
-14-08-2021,Armenia,Main territory,,234227,229542,0,4685
-14-08-2021,Azerbaijan,Main territory,,365009,359871,0,5138
-14-08-2021,Micronesia,Main territory,,1,1,0,0
-14-08-2021,Poland,Main territory,,2885185,2809886,0,75299
-14-08-2021,Peru,Other,,5800,5562,0,238
-14-08-2021,Peru,Ucayali,,31918,28861,0,3057
-14-08-2021,Peru,Tumbes,,18016,16473,0,1543
-14-08-2021,Peru,Tacna,,29303,27370,0,1933
-14-08-2021,Peru,San Martin,,47755,44812,0,2943
-14-08-2021,Peru,Puno,,37654,33685,0,3969
-14-08-2021,Peru,Piura,,84924,73137,0,11787
-14-08-2021,Peru,Pasco,,15315,14294,0,1021
-14-08-2021,Peru,Moquegua,,28757,27278,0,1479
-14-08-2021,Peru,Madre de Dios,,13708,12953,0,755
-14-08-2021,Peru,Loreto,,44520,40379,0,4141
-14-08-2021,Peru,Lima,,929028,841399,0,87629
-14-08-2021,Peru,Lambayeque,,60169,51652,0,8517
-14-08-2021,Peru,La Libertad,,85951,75892,0,10059
-14-08-2021,Peru,Junin,,82461,75572,0,6889
-14-08-2021,Peru,Ica,,56976,48772,0,8204
-14-08-2021,Peru,Huanuco,,34901,32244,0,2657
-14-08-2021,Peru,Huancavelica,,15750,14619,0,1131
-14-08-2021,Peru,Cusco,,71140,66493,0,4647
-14-08-2021,Peru,Callao,,98806,88950,0,9856
-14-08-2021,Peru,Cajamarca,,64233,60191,0,4042
-14-08-2021,Peru,Ayacucho,,32232,30170,0,2062
-14-08-2021,Peru,Arequipa,,111833,102307,0,9526
-14-08-2021,Peru,Apurimac,,25614,24142,0,1472
-14-08-2021,Peru,Ancash,,75179,68618,0,6561
-14-08-2021,Peru,Amazonas,,30891,29669,0,1222
-14-08-2021,New Zealand,Main territory,,2919,2893,0,26
-14-08-2021,New Zealand,Cook Islands,,1,1,0,0
-14-08-2021,Kazakhstan,Main territory,,745138,734347,0,10791
-14-08-2021,Papua New Guinea,Main territory,,17806,17614,0,192
-14-08-2021,Bahamas,Main territory,,16141,15830,0,311
-14-08-2021,Lesotho,Main territory,,14243,13846,0,397
-14-08-2021,Somalia,Main territory,,16265,15387,0,878
-14-08-2021,Canada,Yukon,,647,639,0,8
-14-08-2021,Canada,Saskatchewan,,51162,50576,0,586
-14-08-2021,Canada,Repatriated Travellers,,13,13,0,0
-14-08-2021,Canada,Quebec,,381266,370023,0,11243
-14-08-2021,Canada,Prince Edward Island,,214,214,0,0
-14-08-2021,Canada,Ontario,,562376,553002,0,9374
-14-08-2021,Canada,Nunavut,,657,653,0,4
-14-08-2021,Canada,Nova Scotia,,5920,5827,0,93
-14-08-2021,Canada,Northwest Territories,,131,131,0,0
-14-08-2021,Canada,Newfoundland and Labrador,,1447,1440,0,7
-14-08-2021,Canada,New Brunswick,,2490,2444,0,46
-14-08-2021,Canada,Manitoba,,57972,56787,0,1185
-14-08-2021,Canada,British Columbia,,155079,153300,0,1779
-14-08-2021,Canada,Alberta,,238939,236607,0,2332
-14-08-2021,West Bank and Gaza,Main territory,,320034,316411,0,3623
-14-08-2021,Portugal,Main territory,,1001118,983569,0,17549
-14-08-2021,Finland,Main territory,,116996,115994,0,1002
-14-08-2021,Belgium,West Flanders,,103829,103829,0,0
-14-08-2021,Belgium,Walloon Brabant,,44452,44452,0,0
-14-08-2021,Belgium,Other,,22464,-2823,0,25287
-14-08-2021,Belgium,Namur,,61165,61165,0,0
-14-08-2021,Belgium,Luxembourg,,32338,32338,0,0
-14-08-2021,Belgium,Limburg,,64811,64811,0,0
-14-08-2021,Belgium,Liege,,135546,135546,0,0
-14-08-2021,Belgium,Hainaut,,165692,165692,0,0
-14-08-2021,Belgium,Flemish Brabant,,90276,90276,0,0
-14-08-2021,Belgium,East Flanders,,132119,132119,0,0
-14-08-2021,Belgium,Brussels,,145193,145193,0,0
-14-08-2021,Belgium,Antwerp,,151984,151984,0,0
-14-08-2021,Egypt,Main territory,,285257,268642,0,16615
-14-08-2021,Honduras,Main territory,,316235,307862,0,8373
-14-08-2021,Vanuatu,Main territory,,4,3,0,1
-14-08-2021,Slovenia,Main territory,,261333,256900,0,4433
-14-08-2021,Estonia,Main territory,,136790,135511,0,1279
-14-08-2021,Czechia,Main territory,,1676080,1645707,0,30373
-14-08-2021,Jordan,Main territory,,782210,772007,0,10203
-14-08-2021,Israel,Main territory,,934896,928274,0,6622
-14-08-2021,Congo (Kinshasa),Main territory,,53136,52086,0,1050
-14-08-2021,Mozambique,Main territory,,138344,136637,0,1707
-14-08-2021,Solomon Islands,Main territory,,20,20,0,0
-14-08-2021,Iceland,Main territory,,9458,9428,0,30
-14-08-2021,Mexico,Zacatecas,,35787,32799,0,2988
-14-08-2021,Mexico,Yucatan,,57595,52904,0,4691
-14-08-2021,Mexico,Veracruz,,90941,79719,0,11222
-14-08-2021,Mexico,Other,,0,0,0,0
-14-08-2021,Mexico,Tlaxcala,,22845,20214,0,2631
-14-08-2021,Mexico,Tamaulipas,,78903,73267,0,5636
-14-08-2021,Mexico,Tabasco,,97343,92788,0,4555
-14-08-2021,Mexico,Sonora,,94074,86830,0,7244
-14-08-2021,Mexico,Sinaloa,,63510,56117,0,7393
-14-08-2021,Mexico,San Luis Potosi,,79452,73842,0,5610
-14-08-2021,Mexico,Quintana Roo,,49262,45767,0,3495
-14-08-2021,Mexico,Queretaro,,78207,73514,0,4693
-14-08-2021,Mexico,Puebla,,97477,84770,0,12707
-14-08-2021,Mexico,Oaxaca,,60106,55815,0,4291
-14-08-2021,Mexico,Nuevo Leon,,159436,148860,0,10576
-14-08-2021,Mexico,Nayarit,,24982,22774,0,2208
-14-08-2021,Mexico,Morelos,,39658,35949,0,3709
-14-08-2021,Mexico,Michoacan,,59160,52759,0,6401
-14-08-2021,Mexico,Main territory,,315566,276222,0,39344
-14-08-2021,Mexico,Jalisco,,119525,105743,0,13782
-14-08-2021,Mexico,Hidalgo,,49171,42553,0,6618
-14-08-2021,Mexico,Guerrero,,60391,55231,0,5160
-14-08-2021,Mexico,Guanajuato,,144913,133631,0,11282
-14-08-2021,Mexico,Durango,,40901,38293,0,2608
-14-08-2021,Mexico,Colima,,20894,19518,0,1376
-14-08-2021,Mexico,Coahuila,,76892,70250,0,6642
-14-08-2021,Mexico,Ciudad de Mexico,,843818,807254,0,36564
-14-08-2021,Mexico,Chihuahua,,61664,53955,0,7709
-14-08-2021,Mexico,Chiapas,,17404,15542,0,1862
-14-08-2021,Mexico,Campeche,,16740,15185,0,1555
-14-08-2021,Mexico,Baja California Sur,,51701,49590,0,2111
-14-08-2021,Mexico,Baja California,,54414,45439,0,8975
-14-08-2021,Mexico,Aguascalientes,,29239,26710,0,2529
-14-08-2021,Singapore,Main territory,,66119,66075,0,44
-14-08-2021,Luxembourg,Main territory,,74595,73767,0,828
-14-08-2021,Bhutan,Main territory,,2570,2567,0,3
-14-08-2021,Jamaica,Main territory,,57289,56004,0,1285
-14-08-2021,Brazil,Tocantins,,214482,210877,0,3605
-14-08-2021,Brazil,Sergipe,,276821,270874,0,5947
-14-08-2021,Brazil,Sao Paulo,,4164587,4022059,0,142528
-14-08-2021,Brazil,Santa Catarina,,1133146,1114818,0,18328
-14-08-2021,Brazil,Roraima,,121697,119781,0,1916
-14-08-2021,Brazil,Rondonia,,260723,254292,0,6431
-14-08-2021,Brazil,Rio de Janeiro,,1080746,1020114,0,60632
-14-08-2021,Brazil,Rio Grande do Sul,,1390173,1356421,0,33752
-14-08-2021,Brazil,Rio Grande do Norte,,362246,355037,0,7209
-14-08-2021,Brazil,Piaui,,313185,306283,0,6902
-14-08-2021,Brazil,Pernambuco,,600002,580850,0,19152
-14-08-2021,Brazil,Parana,,1414605,1378173,0,36432
-14-08-2021,Brazil,Paraiba,,427511,418422,0,9089
-14-08-2021,Brazil,Para,,577856,561611,0,16245
-14-08-2021,Brazil,Minas Gerais,,2019435,1967586,0,51849
-14-08-2021,Brazil,Mato Grosso do Sul,,362732,353572,0,9160
-14-08-2021,Brazil,Mato Grosso,,501961,489034,0,12927
-14-08-2021,Brazil,Maranhao,,343001,333175,0,9826
-14-08-2021,Brazil,Goias,,776773,755038,0,21735
-14-08-2021,Brazil,Espirito Santo,,550902,538832,0,12070
-14-08-2021,Brazil,Distrito Federal,,459095,449293,0,9802
-14-08-2021,Brazil,Ceara,,926017,902202,0,23815
-14-08-2021,Brazil,Bahia,,1208878,1182760,0,26118
-14-08-2021,Brazil,Amazonas,,421434,407809,0,13625
-14-08-2021,Brazil,Amapa,,122012,120076,0,1936
-14-08-2021,Brazil,Alagoas,,232635,226685,0,5950
-14-08-2021,Brazil,Acre,,87487,85680,0,1807
-14-08-2021,Australia,Western Australia,,1059,1050,0,9
-14-08-2021,Australia,Victoria,,21144,20324,0,820
-14-08-2021,Australia,Tasmania,,235,222,0,13
-14-08-2021,Australia,South Australia,,868,864,0,4
-14-08-2021,Australia,Queensland,,1956,1949,0,7
-14-08-2021,Australia,Northern Territory,,199,199,0,0
-14-08-2021,Australia,New South Wales,,13503,13401,0,102
-14-08-2021,Australia,Australian Capital Territory,,133,130,0,3
-14-08-2021,Barbados,Main territory,,4525,4477,0,48
-14-08-2021,Germany,Other,,3416,3416,0,0
-14-08-2021,Germany,Thuringen,,129555,125165,0,4390
-14-08-2021,Germany,Schleswig-Holstein,,68055,66414,0,1641
-14-08-2021,Germany,Sachsen-Anhalt,,99972,96497,0,3475
-14-08-2021,Germany,Sachsen,,287505,277357,0,10148
-14-08-2021,Germany,Saarland,,42833,41803,0,1030
-14-08-2021,Germany,Rheinland-Pfalz,,159639,155723,0,3916
-14-08-2021,Germany,Nordrhein-Westfalen,,844012,826692,0,17320
-14-08-2021,Germany,Niedersachsen,,268764,262937,0,5827
-14-08-2021,Germany,Mecklenburg-Vorpommern,,45098,43914,0,1184
-14-08-2021,Germany,Hessen,,298536,290934,0,7602
-14-08-2021,Germany,Hamburg,,81678,80044,0,1634
-14-08-2021,Germany,Bremen,,28303,27809,0,494
-14-08-2021,Germany,Brandenburg,,110115,106297,0,3818
-14-08-2021,Germany,Berlin,,186525,182938,0,3587
-14-08-2021,Germany,Bavaria,,659378,644006,0,15372
-14-08-2021,Germany,Baden-Wurttemberg,,511162,500726,0,10436
-14-08-2021,Kiribati,Main territory,,2,2,0,0
-14-08-2021,Myanmar,Main territory,,351605,338527,0,13078
-14-08-2021,Bulgaria,Main territory,,432962,414623,0,18339
-14-08-2021,Niger,Main territory,,5722,5526,0,196
-14-08-2021,Greece,Main territory,,535237,522063,0,13174
-14-08-2021,Dominica,Main territory,,576,576,0,0
-14-08-2021,Benin,Main territory,,9065,8952,0,113
-14-08-2021,Ecuador,Main territory,,493767,461897,0,31870
-14-08-2021,Guinea-Bissau,Main territory,,5099,5009,0,90
-14-08-2021,Taiwan,Main territory,,15843,15022,0,821
+14-08-2021,Malta,Main territory,,35286,34856,0,430
+14-08-2021,Montenegro,Main territory,,105750,104108,0,1642
+14-08-2021,Cambodia,Main territory,,84860,83194,0,1666
 14-08-2021,Russia,Севастополь,,23604,2390,20276,938
 14-08-2021,Russia,Кемеровская обл.,,48618,1677,45892,1049
 14-08-2021,Russia,Архангельская обл.,,77093,4314,71686,1093
@@ -3856,102 +3726,94 @@ Day,Country,Province,County,Confirmed,Active,Recovered,Deaths
 14-08-2021,Russia,Волгоградская обл.,,75830,6408,67390,2032
 14-08-2021,Russia,Свердловская обл.,,114704,3794,106232,4678
 14-08-2021,Russia,Ставропольский край,,69249,8463,58764,2022
-14-08-2021,Qatar,Main territory,,228981,228380,0,601
-14-08-2021,Montenegro,Main territory,,105750,104108,0,1642
-14-08-2021,Saint Lucia,Main territory,,6287,6192,0,95
-14-08-2021,Holy See,Main territory,,27,27,0,0
-14-08-2021,Netherlands,Zuid-Holland,,450793,446471,0,4322
-14-08-2021,Netherlands,Zeeland,,32682,32432,0,250
-14-08-2021,Netherlands,Utrecht,,146557,145267,0,1290
-14-08-2021,Netherlands,Other,,5404,5389,0,15
-14-08-2021,Netherlands,Sint Maarten,,3164,3124,0,40
-14-08-2021,Netherlands,Overijssel,,122758,121610,0,1148
-14-08-2021,Netherlands,Noord-Holland,,326085,323423,0,2662
-14-08-2021,Netherlands,Noord-Brabant,,303058,299909,0,3149
-14-08-2021,Netherlands,Limburg,,126264,124597,0,1667
-14-08-2021,Netherlands,Groningen,,48207,47941,0,266
-14-08-2021,Netherlands,Gelderland,,210246,208194,0,2052
-14-08-2021,Netherlands,Friesland,,49111,48626,0,485
-14-08-2021,Netherlands,Flevoland,,41127,40880,0,247
-14-08-2021,Netherlands,Drenthe,,37355,37002,0,353
-14-08-2021,Netherlands,Curacao,,14530,14397,0,133
-14-08-2021,Netherlands,"Bonaire, Sint Eustatius and Saba",,1741,1724,0,17
-14-08-2021,Netherlands,Aruba,,13279,13163,0,116
-14-08-2021,Timor-Leste,Main territory,,12272,12243,0,29
-14-08-2021,Guatemala,Main territory,,411731,400646,0,11085
-14-08-2021,Indonesia,Main territory,,3833541,3717175,0,116366
-14-08-2021,Kyrgyzstan,Main territory,,171758,169319,0,2439
-14-08-2021,Argentina,Main territory,,5080908,4971972,0,108936
-14-08-2021,Zimbabwe,Main territory,,119853,115763,0,4090
-14-08-2021,Malta,Main territory,,35286,34856,0,430
-14-08-2021,Bolivia,Main territory,,481631,463479,0,18152
-14-08-2021,Equatorial Guinea,Main territory,,8972,8849,0,123
-14-08-2021,Cote d'Ivoire,Main territory,,52202,51843,0,359
-14-08-2021,South Sudan,Main territory,,11172,11052,0,120
-14-08-2021,Turkey,Main territory,,6059776,6006771,0,53005
-14-08-2021,Japan,Yamanashi,,3216,3195,0,21
-14-08-2021,Japan,Yamaguchi,,3733,3653,0,80
-14-08-2021,Japan,Yamagata,,2578,2530,0,48
-14-08-2021,Japan,Wakayama,,3425,3375,0,50
-14-08-2021,Japan,Other,,8,8,0,0
-14-08-2021,Japan,Toyama,,2898,2860,0,38
-14-08-2021,Japan,Tottori,,1110,1107,0,3
-14-08-2021,Japan,Tokyo,,274905,272573,0,2332
-14-08-2021,Japan,Tokushima,,1923,1860,0,63
-14-08-2021,Japan,Tochigi,,10228,10134,0,94
-14-08-2021,Japan,Shizuoka,,13951,13793,0,158
-14-08-2021,Japan,Shimane,,929,927,0,2
-14-08-2021,Japan,Shiga,,7505,7410,0,95
-14-08-2021,Japan,Saitama,,74759,73899,0,860
-14-08-2021,Japan,Saga,,3412,3386,0,26
-14-08-2021,Japan,Port Quarantine,,3678,3674,0,4
-14-08-2021,Japan,Osaka,,130690,127948,0,2742
-14-08-2021,Japan,Okinawa,,32330,32084,0,246
-14-08-2021,Japan,Okayama,,9807,9680,0,127
-14-08-2021,Japan,Oita,,4348,4284,0,64
-14-08-2021,Japan,Niigata,,5093,5039,0,54
-14-08-2021,Japan,Nara,,10183,10048,0,135
-14-08-2021,Japan,Nagasaki,,4096,4027,0,69
-14-08-2021,Japan,Nagano,,6136,6042,0,94
-14-08-2021,Japan,Miyazaki,,3743,3716,0,27
-14-08-2021,Japan,Miyagi,,11480,11387,0,93
-14-08-2021,Japan,Mie,,6926,6809,0,117
-14-08-2021,Japan,Kyoto,,22186,21937,0,249
-14-08-2021,Japan,Kumamoto,,8772,8650,0,122
-14-08-2021,Japan,Kochi,,2292,2262,0,30
-14-08-2021,Japan,Kanagawa,,108573,107550,0,1023
-14-08-2021,Japan,Kagoshima,,5154,5110,0,44
-14-08-2021,Japan,Kagawa,,2936,2904,0,32
-14-08-2021,Japan,Iwate,,2386,2338,0,48
-14-08-2021,Japan,Ishikawa,,6196,6075,0,121
-14-08-2021,Japan,Ibaraki,,15976,15801,0,175
-14-08-2021,Japan,Hyogo,,50530,49207,0,1323
-14-08-2021,Japan,Hokkaido,,49186,47756,0,1430
-14-08-2021,Japan,Hiroshima,,13638,13458,0,180
-14-08-2021,Japan,Gunma,,10809,10653,0,156
-14-08-2021,Japan,Gifu,,10563,10374,0,189
-14-08-2021,Japan,Fukushima,,7182,7020,0,162
-14-08-2021,Japan,Fukuoka,,49173,48622,0,551
-14-08-2021,Japan,Fukui,,1984,1948,0,36
-14-08-2021,Japan,Ehime,,3533,3456,0,77
-14-08-2021,Japan,Chiba,,62563,61809,0,754
-14-08-2021,Japan,Aomori,,3129,3097,0,32
-14-08-2021,Japan,Akita,,1174,1153,0,21
-14-08-2021,Japan,Aichi,,59816,58800,0,1016
-14-08-2021,San Marino,Main territory,,5194,5104,0,90
-14-08-2021,Lithuania,Main territory,,289346,284900,0,4446
-14-08-2021,Maldives,Main territory,,79000,78778,0,222
-14-08-2021,Comoros,Main territory,,4038,3891,0,147
-14-08-2021,Grenada,Main territory,,180,179,0,1
-14-08-2021,Saint Kitts and Nevis,Main territory,,642,639,0,3
-14-08-2021,Cabo Verde,Main territory,,34344,34045,0,299
-14-08-2021,Cuba,Main territory,,509032,505107,0,3925
-14-08-2021,Switzerland,Main territory,,735375,724452,0,10923
-14-08-2021,Paraguay,Main territory,,456589,441169,0,15420
+14-08-2021,Jamaica,Main territory,,57289,56004,0,1285
+14-08-2021,Fiji,Main territory,,39770,39402,0,368
+14-08-2021,Syria,Main territory,,26292,24357,0,1935
+14-08-2021,France,Main territory,,6339250,6227743,0,111507
+14-08-2021,France,Wallis and Futuna,,454,447,0,7
+14-08-2021,France,St Martin,,2872,2839,0,33
+14-08-2021,France,Saint Pierre and Miquelon,,30,30,0,0
+14-08-2021,France,Saint Barthelemy,,1453,1452,0,1
+14-08-2021,France,Reunion,,43835,43537,0,298
+14-08-2021,France,New Caledonia,,134,134,0,0
+14-08-2021,France,Mayotte,,19567,19392,0,175
+14-08-2021,France,Martinique,,27883,27699,0,184
+14-08-2021,France,Guadeloupe,,26771,26480,0,291
+14-08-2021,France,French Polynesia,,28330,28142,0,188
+14-08-2021,France,French Guiana,,31633,31436,0,197
 14-08-2021,Zambia,Main territory,,202078,198557,0,3521
-14-08-2021,Denmark,Main territory,,329927,327368,0,2559
-14-08-2021,Denmark,Greenland,,245,245,0,0
-14-08-2021,Denmark,Faroe Islands,,991,989,0,2
+14-08-2021,Saudi Arabia,Main territory,,537374,528986,0,8388
+14-08-2021,Taiwan,Main territory,,15843,15022,0,821
+14-08-2021,Sri Lanka,Main territory,,351533,345597,0,5936
+14-08-2021,Honduras,Main territory,,316235,307862,0,8373
+14-08-2021,Iraq,Main territory,,1768753,1749147,0,19606
+14-08-2021,Qatar,Main territory,,228981,228380,0,601
+14-08-2021,Namibia,Main territory,,122227,118956,0,3271
+14-08-2021,Mexico,Zacatecas,,35787,32799,0,2988
+14-08-2021,Mexico,Yucatan,,57595,52904,0,4691
+14-08-2021,Mexico,Veracruz,,90941,79719,0,11222
+14-08-2021,Mexico,Other,,0,0,0,0
+14-08-2021,Mexico,Tlaxcala,,22845,20214,0,2631
+14-08-2021,Mexico,Tamaulipas,,78903,73267,0,5636
+14-08-2021,Mexico,Tabasco,,97343,92788,0,4555
+14-08-2021,Mexico,Sonora,,94074,86830,0,7244
+14-08-2021,Mexico,Sinaloa,,63510,56117,0,7393
+14-08-2021,Mexico,San Luis Potosi,,79452,73842,0,5610
+14-08-2021,Mexico,Quintana Roo,,49262,45767,0,3495
+14-08-2021,Mexico,Queretaro,,78207,73514,0,4693
+14-08-2021,Mexico,Puebla,,97477,84770,0,12707
+14-08-2021,Mexico,Oaxaca,,60106,55815,0,4291
+14-08-2021,Mexico,Nuevo Leon,,159436,148860,0,10576
+14-08-2021,Mexico,Nayarit,,24982,22774,0,2208
+14-08-2021,Mexico,Morelos,,39658,35949,0,3709
+14-08-2021,Mexico,Michoacan,,59160,52759,0,6401
+14-08-2021,Mexico,Main territory,,315566,276222,0,39344
+14-08-2021,Mexico,Jalisco,,119525,105743,0,13782
+14-08-2021,Mexico,Hidalgo,,49171,42553,0,6618
+14-08-2021,Mexico,Guerrero,,60391,55231,0,5160
+14-08-2021,Mexico,Guanajuato,,144913,133631,0,11282
+14-08-2021,Mexico,Durango,,40901,38293,0,2608
+14-08-2021,Mexico,Colima,,20894,19518,0,1376
+14-08-2021,Mexico,Coahuila,,76892,70250,0,6642
+14-08-2021,Mexico,Ciudad de Mexico,,843818,807254,0,36564
+14-08-2021,Mexico,Chihuahua,,61664,53955,0,7709
+14-08-2021,Mexico,Chiapas,,17404,15542,0,1862
+14-08-2021,Mexico,Campeche,,16740,15185,0,1555
+14-08-2021,Mexico,Baja California Sur,,51701,49590,0,2111
+14-08-2021,Mexico,Baja California,,54414,45439,0,8975
+14-08-2021,Mexico,Aguascalientes,,29239,26710,0,2529
+14-08-2021,Spain,Other,,0,0,0,0
+14-08-2021,Spain,Pais Vasco,,244063,239462,0,4601
+14-08-2021,Spain,Navarra,,79288,78087,0,1201
+14-08-2021,Spain,Murcia,,132612,130968,0,1644
+14-08-2021,Spain,Melilla,,10098,9999,0,99
+14-08-2021,Spain,Madrid,,852736,837070,0,15666
+14-08-2021,Spain,La Rioja,,37650,36842,0,808
+14-08-2021,Spain,Galicia,,172612,170117,0,2495
+14-08-2021,Spain,Extremadura,,93958,92122,0,1836
+14-08-2021,Spain,Ceuta,,6701,6582,0,119
+14-08-2021,Spain,Catalonia,,868586,853628,0,14958
+14-08-2021,Spain,Castilla y Leon,,287255,280194,0,7061
+14-08-2021,Spain,Castilla - La Mancha,,221956,215917,0,6039
+14-08-2021,Spain,Cantabria,,42337,41753,0,584
+14-08-2021,Spain,Canarias,,87705,86827,0,878
+14-08-2021,Spain,C. Valenciana,,486504,478977,0,7527
+14-08-2021,Spain,Baleares,,90816,89935,0,881
+14-08-2021,Spain,Asturias,,68966,66942,0,2024
+14-08-2021,Spain,Aragon,,153427,149774,0,3653
+14-08-2021,Spain,Andalusia,,756270,745874,0,10396
+14-08-2021,Equatorial Guinea,Main territory,,8972,8849,0,123
+14-08-2021,Mauritius,Main territory,,5607,5586,0,21
+14-08-2021,Dominica,Main territory,,576,576,0,0
+14-08-2021,Gabon,Main territory,,25564,25399,0,165
+14-08-2021,Armenia,Main territory,,234227,229542,0,4685
+14-08-2021,New Zealand,Main territory,,2919,2893,0,26
+14-08-2021,New Zealand,Cook Islands,,1,1,0,0
+14-08-2021,Barbados,Main territory,,4525,4477,0,48
+14-08-2021,Iran,Main territory,,4389085,4291877,0,97208
+14-08-2021,Turkey,Main territory,,6059776,6006771,0,53005
+14-08-2021,Burundi,Main territory,,9620,9582,0,38
+14-08-2021,Serbia,Main territory,,731227,724064,0,7163
 14-08-2021,Italy,Veneto,,445292,433640,0,11652
 14-08-2021,Italy,Valle d'Aosta,,11893,11420,0,473
 14-08-2021,Italy,Umbria,,59995,58569,0,1426
@@ -3973,9 +3835,163 @@ Day,Country,Province,County,Confirmed,Active,Recovered,Deaths
 14-08-2021,Italy,Calabria,,73454,72181,0,1273
 14-08-2021,Italy,Basilicata,,28040,27446,0,594
 14-08-2021,Italy,Abruzzo,,77460,74942,0,2518
+14-08-2021,Dominican Republic,Main territory,,345960,341984,0,3976
+14-08-2021,Portugal,Main territory,,1001118,983569,0,17549
+14-08-2021,Colombia,Vichada,,2874,2825,0,49
+14-08-2021,Colombia,Vaupes,,1737,1720,0,17
+14-08-2021,Colombia,Valle del Cauca,,394788,382322,0,12466
+14-08-2021,Colombia,Other,,0,-296,0,296
+14-08-2021,Colombia,Tolima,,106321,102760,0,3561
+14-08-2021,Colombia,Sucre,,58281,56700,0,1581
+14-08-2021,Colombia,Santander,,222229,215079,0,7150
+14-08-2021,Colombia,San Andres y Providencia,,6782,6649,0,133
+14-08-2021,Colombia,Risaralda,,86601,84426,0,2175
+14-08-2021,Colombia,Quindio,,55251,53562,0,1689
+14-08-2021,Colombia,Putumayo,,15863,15216,0,647
+14-08-2021,Colombia,Norte de Santander,,88074,83967,0,4107
+14-08-2021,Colombia,Narino,,88045,85111,0,2934
+14-08-2021,Colombia,Meta,,86750,84570,0,2180
+14-08-2021,Colombia,Magdalena,,90477,87236,0,3241
+14-08-2021,Colombia,La Guajira,,41839,40528,0,1311
+14-08-2021,Colombia,Huila,,87110,84052,0,3058
+14-08-2021,Colombia,Guaviare,,5090,4999,0,91
+14-08-2021,Colombia,Guainia,,2254,2225,0,29
+14-08-2021,Colombia,Cundinamarca,,260895,254205,0,6690
+14-08-2021,Colombia,Cordoba,,101905,98276,0,3629
+14-08-2021,Colombia,Choco,,16178,15792,0,386
+14-08-2021,Colombia,Cesar,,87480,85046,0,2434
+14-08-2021,Colombia,Cauca,,54004,52584,0,1420
+14-08-2021,Colombia,Casanare,,34932,34034,0,898
+14-08-2021,Colombia,Caqueta,,22499,21602,0,897
+14-08-2021,Colombia,Capital District,,1431941,1404874,0,27067
+14-08-2021,Colombia,Caldas,,99285,97082,0,2203
+14-08-2021,Colombia,Boyaca,,104076,101574,0,2502
+14-08-2021,Colombia,Bolivar,,153451,150546,0,2905
+14-08-2021,Colombia,Atlantico,,311377,302077,0,9300
+14-08-2021,Colombia,Arauca,,12975,12542,0,433
+14-08-2021,Colombia,Antioquia,,726551,710927,0,15624
+14-08-2021,Colombia,Amazonas,,6714,6461,0,253
+14-08-2021,Kenya,Main territory,,219938,215619,0,4319
+14-08-2021,Saint Kitts and Nevis,Main territory,,642,639,0,3
+14-08-2021,Papua New Guinea,Main territory,,17806,17614,0,192
 14-08-2021,Chad,Main territory,,4982,4808,0,174
-14-08-2021,Tajikistan,Main territory,,16061,15938,0,123
-14-08-2021,Sri Lanka,Main territory,,351533,345597,0,5936
+14-08-2021,Guyana,Main territory,,23455,22882,0,573
+14-08-2021,Togo,Main territory,,17581,17416,0,165
+14-08-2021,Bhutan,Main territory,,2570,2567,0,3
+14-08-2021,Mali,Main territory,,14692,14158,0,534
+14-08-2021,Iceland,Main territory,,9458,9428,0,30
+14-08-2021,Belarus,Main territory,,459998,456405,0,3593
+14-08-2021,South Africa,Main territory,,2595447,2518578,0,76869
+14-08-2021,Algeria,Main territory,,186655,181889,0,4766
+14-08-2021,Belize,Main territory,,14847,14503,0,344
+14-08-2021,Germany,Other,,3416,3416,0,0
+14-08-2021,Germany,Thuringen,,129555,125165,0,4390
+14-08-2021,Germany,Schleswig-Holstein,,68055,66414,0,1641
+14-08-2021,Germany,Sachsen-Anhalt,,99972,96497,0,3475
+14-08-2021,Germany,Sachsen,,287505,277357,0,10148
+14-08-2021,Germany,Saarland,,42833,41803,0,1030
+14-08-2021,Germany,Rheinland-Pfalz,,159639,155723,0,3916
+14-08-2021,Germany,Nordrhein-Westfalen,,844012,826692,0,17320
+14-08-2021,Germany,Niedersachsen,,268764,262937,0,5827
+14-08-2021,Germany,Mecklenburg-Vorpommern,,45098,43914,0,1184
+14-08-2021,Germany,Hessen,,298536,290934,0,7602
+14-08-2021,Germany,Hamburg,,81678,80044,0,1634
+14-08-2021,Germany,Bremen,,28303,27809,0,494
+14-08-2021,Germany,Brandenburg,,110115,106297,0,3818
+14-08-2021,Germany,Berlin,,186525,182938,0,3587
+14-08-2021,Germany,Bavaria,,659378,644006,0,15372
+14-08-2021,Germany,Baden-Wurttemberg,,511162,500726,0,10436
+14-08-2021,Egypt,Main territory,,285257,268642,0,16615
+14-08-2021,Lithuania,Main territory,,289346,284900,0,4446
+14-08-2021,Myanmar,Main territory,,351605,338527,0,13078
+14-08-2021,Central African Republic,Main territory,,11251,11152,0,99
+14-08-2021,Palau,Main territory,,0,0,0,0
+14-08-2021,Argentina,Main territory,,5080908,4971972,0,108936
+14-08-2021,Ecuador,Main territory,,493767,461897,0,31870
+14-08-2021,Croatia,Main territory,,366724,358442,0,8282
+14-08-2021,India,West Bengal,,1537890,1519599,0,18291
+14-08-2021,India,Uttarakhand,,342572,335202,0,7370
+14-08-2021,India,Uttar Pradesh,,1708918,1686135,0,22783
+14-08-2021,India,Other,,0,0,0,0
+14-08-2021,India,Tripura,,81259,80479,0,780
+14-08-2021,India,Telangana,,652135,648294,0,3841
+14-08-2021,India,Tamil Nadu,,2586885,2552389,0,34496
+14-08-2021,India,Sikkim,,28554,28193,0,361
+14-08-2021,India,Rajasthan,,953925,944971,0,8954
+14-08-2021,India,Punjab,,599896,583556,0,16340
+14-08-2021,India,Puducherry,,122203,120399,0,1804
+14-08-2021,India,Odisha,,993507,986684,0,6823
+14-08-2021,India,Nagaland,,29097,28500,0,597
+14-08-2021,India,Mizoram,,48462,48282,0,180
+14-08-2021,India,Meghalaya,,71388,70168,0,1220
+14-08-2021,India,Manipur,,107668,105968,0,1700
+14-08-2021,India,Maharashtra,,6387863,6252954,0,134909
+14-08-2021,India,Madhya Pradesh,,792023,781509,0,10514
+14-08-2021,India,Lakshadweep,,10285,10234,0,51
+14-08-2021,India,Ladakh,,20445,20238,0,207
+14-08-2021,India,Kerala,,3671541,3653042,0,18499
+14-08-2021,India,Karnataka,,2928033,2891075,0,36958
+14-08-2021,India,Jharkhand,,347558,342427,0,5131
+14-08-2021,India,Jammu and Kashmir,,323325,318930,0,4395
+14-08-2021,India,Himachal Pradesh,,209961,206416,0,3545
+14-08-2021,India,Haryana,,770186,760529,0,9657
+14-08-2021,India,Gujarat,,825166,815088,0,10078
+14-08-2021,India,Goa,,172431,169263,0,3168
+14-08-2021,India,Delhi,,1437038,1411969,0,25069
+14-08-2021,India,Dadra and Nagar Haveli and Daman and Diu,,10655,10651,0,4
+14-08-2021,India,Chhattisgarh,,1003697,990151,0,13546
+14-08-2021,India,Chandigarh,,62028,61217,0,811
+14-08-2021,India,Bihar,,725455,715806,0,9649
+14-08-2021,India,Assam,,579488,574006,0,5482
+14-08-2021,India,Arunachal Pradesh,,51300,51048,0,252
+14-08-2021,India,Andhra Pradesh,,1992191,1978560,0,13631
+14-08-2021,India,Andaman and Nicobar Islands,,7548,7419,0,129
+14-08-2021,Nigeria,Main territory,,181962,179743,0,2219
+14-08-2021,Gambia,Main territory,,8920,8669,0,251
+14-08-2021,Maldives,Main territory,,79000,78778,0,222
+14-08-2021,Albania,Main territory,,135550,133087,0,2463
+14-08-2021,Singapore,Main territory,,66119,66075,0,44
+14-08-2021,Congo (Brazzaville),Main territory,,13356,13177,0,179
+14-08-2021,South Korea,Main territory,,223928,221772,0,2156
+14-08-2021,Kosovo,Main territory,,115151,112871,0,2280
+14-08-2021,Thailand,Main territory,,885275,877932,0,7343
+14-08-2021,Comoros,Main territory,,4038,3891,0,147
+14-08-2021,Cabo Verde,Main territory,,34344,34045,0,299
+14-08-2021,Senegal,Main territory,,70413,68826,0,1587
+14-08-2021,Moldova,Main territory,,261947,255643,0,6304
+14-08-2021,Uganda,Main territory,,96678,93815,0,2863
+14-08-2021,Slovenia,Main territory,,261333,256900,0,4433
+14-08-2021,Benin,Main territory,,9065,8952,0,113
+14-08-2021,Eritrea,Main territory,,6601,6564,0,37
+14-08-2021,Timor-Leste,Main territory,,12272,12243,0,29
+14-08-2021,Botswana,Main territory,,136758,134785,0,1973
+14-08-2021,Ghana,Main territory,,110306,109393,0,913
+14-08-2021,Czechia,Main territory,,1676080,1645707,0,30373
+14-08-2021,Uruguay,Main territory,,383212,377211,0,6001
+14-08-2021,Bahamas,Main territory,,16141,15830,0,311
+14-08-2021,Monaco,Main territory,,3058,3025,0,33
+14-08-2021,Haiti,Main territory,,20507,19931,0,576
+14-08-2021,Sao Tome and Principe,Main territory,,2488,2451,0,37
+14-08-2021,Samoa,Main territory,,3,3,0,0
+14-08-2021,Paraguay,Main territory,,456589,441169,0,15420
+14-08-2021,Vanuatu,Main territory,,4,3,0,1
+14-08-2021,Norway,Main territory,,144035,143227,0,808
+14-08-2021,South Sudan,Main territory,,11172,11052,0,120
+14-08-2021,Mozambique,Main territory,,138344,136637,0,1707
+14-08-2021,San Marino,Main territory,,5222,5132,0,90
 14-08-2021,Djibouti,Main territory,,11676,11520,0,156
-14-08-2021,Romania,Main territory,,1086900,1052558,0,34342
-14-08-2021,Suriname,Main territory,,26539,25859,0,680
+14-08-2021,Denmark,Main territory,,329927,327368,0,2559
+14-08-2021,Denmark,Greenland,,245,245,0,0
+14-08-2021,Denmark,Faroe Islands,,991,989,0,2
+14-08-2021,Slovakia,Main territory,,393455,380911,0,12544
+14-08-2021,Guinea,Main territory,,27837,27558,0,279
+14-08-2021,Nepal,Main territory,,730479,720220,0,10259
+14-08-2021,Cameroon,Main territory,,82454,81116,0,1338
+14-08-2021,Uzbekistan,Main territory,,142124,141154,0,970
+14-08-2021,Seychelles,Main territory,,19082,18991,0,91
+14-08-2021,Philippines,Main territory,,1727231,1697161,0,30070
+14-08-2021,Georgia,Main territory,,477264,470893,0,6371
+14-08-2021,Poland,Main territory,,2885185,2809886,0,75299
+14-08-2021,Yemen,Main territory,,7273,5872,0,1401
+14-08-2021,Bosnia and Herzegovina,Main territory,,207076,197375,0,9701
+14-08-2021,Luxembourg,Main territory,,74595,73767,0,828
