@@ -1,5 +1,5 @@
 
-FROM alpine:3.13 as base_builder
+FROM alpine:3.14 as base_builder
 
 ENV dotnet_install_dir=/usr/share/dotnet
 ENV DOTNET_ROOT=$dotnet_install_dir
@@ -19,7 +19,7 @@ RUN wget https://dot.net/v1/dotnet-install.sh \
 
 FROM base_builder as base_builder_dotnet
 
-RUN ./dotnet-install.sh -c Current -InstallDir $dotnet_install_dir
+RUN ./dotnet-install.sh -c LTS -InstallDir $dotnet_install_dir
 
 
 
@@ -60,7 +60,7 @@ FROM base_builder_dotnet as builder
 COPY Tools ./
 
 RUN dotnet test src/ -c:Release -p:BinaryOutDir=$PWD/bin -v:n && \
-    dotnet publish src/ReportsGenerator/ReportsGenerator --self-contained true -c:Release -p:BinaryOutDir=$PWD/bin -p:PublishTrimmed=true -r alpine.3.13-x64 -v:n
+    dotnet publish src/ReportsGenerator/ReportsGenerator --self-contained true -c:Release -p:BinaryOutDir=$PWD/bin -p:PublishTrimmed=true -r alpine.3.14-x64 -v:n
 
 
 
@@ -70,6 +70,6 @@ FROM base_builder as reports_generator
 
 VOLUME [ "/work/Data" , "/work/out" ]
 
-COPY --from=builder work/bin/alpine.3.13-x64/publish .
+COPY --from=builder work/bin/alpine.3.14-x64/publish .
 
 CMD ["./ReportsGenerator"]
