@@ -1,0 +1,4000 @@
+Day,Country,Province,County,Confirmed,Active,Recovered,Deaths
+23-12-2021,Comoros,Main territory,,5123,4971,0,152
+23-12-2021,Singapore,Main territory,,277042,276222,0,820
+23-12-2021,Myanmar,Main territory,,529114,509872,0,19242
+23-12-2021,Afghanistan,Main territory,,157878,150532,0,7346
+23-12-2021,Brunei,Main territory,,15429,15331,0,98
+23-12-2021,Barbados,Main territory,,27486,27227,0,259
+23-12-2021,US,Wyoming,Weston,1246,1232,0,14
+23-12-2021,US,Wyoming,Washakie,1867,1830,0,37
+23-12-2021,US,Wyoming,Unassigned,0,0,0,0
+23-12-2021,US,Wyoming,Uinta,4130,4099,0,31
+23-12-2021,US,Wyoming,Teton,5598,5584,0,14
+23-12-2021,US,Wyoming,Sweetwater,8259,8152,0,107
+23-12-2021,US,Wyoming,Sublette,1522,1499,0,23
+23-12-2021,US,Wyoming,Sheridan,5955,5894,0,61
+23-12-2021,US,Wyoming,Platte,1576,1541,0,35
+23-12-2021,US,Wyoming,Park,5641,5524,0,117
+23-12-2021,US,Wyoming,Niobrara,500,492,0,8
+23-12-2021,US,Wyoming,Natrona,16659,16424,0,235
+23-12-2021,US,Wyoming,Lincoln,3040,3013,0,27
+23-12-2021,US,Wyoming,Laramie,18345,18114,0,231
+23-12-2021,US,Wyoming,Johnson,1384,1367,0,17
+23-12-2021,US,Wyoming,Hot Springs,898,887,0,11
+23-12-2021,US,Wyoming,Goshen,2694,2642,0,52
+23-12-2021,US,Wyoming,Fremont,9649,9490,0,159
+23-12-2021,US,Wyoming,Crook,1020,998,0,22
+23-12-2021,US,Wyoming,Converse,2365,2317,0,48
+23-12-2021,US,Wyoming,Carbon,3291,3245,0,46
+23-12-2021,US,Wyoming,Campbell,9495,9365,0,130
+23-12-2021,US,Wyoming,Big Horn,2174,2116,0,58
+23-12-2021,US,Wyoming,Albany,6934,6891,0,43
+23-12-2021,US,Wisconsin,Wood,14453,14282,0,171
+23-12-2021,US,Wisconsin,Winnebago,34253,33943,0,310
+23-12-2021,US,Wisconsin,Waushara,4454,4385,0,69
+23-12-2021,US,Wisconsin,Waupaca,10122,9907,0,215
+23-12-2021,US,Wisconsin,Waukesha,76057,75222,0,835
+23-12-2021,US,Wisconsin,Washington,27707,27450,0,257
+23-12-2021,US,Wisconsin,Washburn,3040,3006,0,34
+23-12-2021,US,Wisconsin,Walworth,19088,18872,0,216
+23-12-2021,US,Wisconsin,Vilas,3635,3566,0,69
+23-12-2021,US,Wisconsin,Vernon,3985,3912,0,73
+23-12-2021,US,Wisconsin,Unassigned,0,0,0,0
+23-12-2021,US,Wisconsin,Trempealeau,6000,5946,0,54
+23-12-2021,US,Wisconsin,Taylor,3732,3672,0,60
+23-12-2021,US,Wisconsin,St. Croix,17617,17504,0,113
+23-12-2021,US,Wisconsin,Sheboygan,22841,22638,0,203
+23-12-2021,US,Wisconsin,Shawano,8556,8450,0,106
+23-12-2021,US,Wisconsin,Sawyer,3414,3373,0,41
+23-12-2021,US,Wisconsin,Sauk,10814,10733,0,81
+23-12-2021,US,Wisconsin,Rusk,2669,2628,0,41
+23-12-2021,US,Wisconsin,Rock,27991,27713,0,278
+23-12-2021,US,Wisconsin,Richland,2721,2685,0,36
+23-12-2021,US,Wisconsin,Racine,38738,38229,0,509
+23-12-2021,US,Wisconsin,Price,2495,2476,0,19
+23-12-2021,US,Wisconsin,Portage,12244,12119,0,125
+23-12-2021,US,Wisconsin,Polk,9281,9175,0,106
+23-12-2021,US,Wisconsin,Pierce,8293,8233,0,60
+23-12-2021,US,Wisconsin,Pepin,1436,1424,0,12
+23-12-2021,US,Wisconsin,Ozaukee,15029,14898,0,131
+23-12-2021,US,Wisconsin,Outagamie,38078,37776,0,302
+23-12-2021,US,Wisconsin,Oneida,6231,6124,0,107
+23-12-2021,US,Wisconsin,Oconto,8627,8539,0,88
+23-12-2021,US,Wisconsin,Monroe,8328,8261,0,67
+23-12-2021,US,Wisconsin,Milwaukee,175224,173447,0,1777
+23-12-2021,US,Wisconsin,Menominee,1032,1021,0,11
+23-12-2021,US,Wisconsin,Marquette,2840,2802,0,38
+23-12-2021,US,Wisconsin,Marinette,8739,8645,0,94
+23-12-2021,US,Wisconsin,Marathon,27886,27504,0,382
+23-12-2021,US,Wisconsin,Manitowoc,15002,14868,0,134
+23-12-2021,US,Wisconsin,Lincoln,5288,5162,0,126
+23-12-2021,US,Wisconsin,Langlade,3781,3715,0,66
+23-12-2021,US,Wisconsin,Lafayette,2626,2608,0,18
+23-12-2021,US,Wisconsin,La Crosse,21507,21368,0,139
+23-12-2021,US,Wisconsin,Kewaunee,4418,4369,0,49
+23-12-2021,US,Wisconsin,Kenosha,30148,29700,0,448
+23-12-2021,US,Wisconsin,Juneau,5467,5417,0,50
+23-12-2021,US,Wisconsin,Jefferson,14979,14794,0,185
+23-12-2021,US,Wisconsin,Jackson,4173,4136,0,37
+23-12-2021,US,Wisconsin,Iron,1045,1001,0,44
+23-12-2021,US,Wisconsin,Iowa,3440,3417,0,23
+23-12-2021,US,Wisconsin,Green Lake,3724,3677,0,47
+23-12-2021,US,Wisconsin,Green,6086,6044,0,42
+23-12-2021,US,Wisconsin,Grant,9303,9178,0,125
+23-12-2021,US,Wisconsin,Forest,1872,1832,0,40
+23-12-2021,US,Wisconsin,Fond du Lac,22056,21864,0,192
+23-12-2021,US,Wisconsin,Florence,781,766,0,15
+23-12-2021,US,Wisconsin,Eau Claire,20223,20062,0,161
+23-12-2021,US,Wisconsin,Dunn,9362,9304,0,58
+23-12-2021,US,Wisconsin,Douglas,8002,7931,0,71
+23-12-2021,US,Wisconsin,Door,4615,4566,0,49
+23-12-2021,US,Wisconsin,Dodge,19668,19405,0,263
+23-12-2021,US,Wisconsin,Dane,69402,68996,0,406
+23-12-2021,US,Wisconsin,Crawford,2937,2913,0,24
+23-12-2021,US,Wisconsin,Columbia,9900,9799,0,101
+23-12-2021,US,Wisconsin,Clark,5925,5821,0,104
+23-12-2021,US,Wisconsin,Chippewa,13594,13455,0,139
+23-12-2021,US,Wisconsin,Calumet,10416,10328,0,88
+23-12-2021,US,Wisconsin,Burnett,2977,2941,0,36
+23-12-2021,US,Wisconsin,Buffalo,2481,2472,0,9
+23-12-2021,US,Wisconsin,Brown,57419,57048,0,371
+23-12-2021,US,Wisconsin,Bayfield,2222,2191,0,31
+23-12-2021,US,Wisconsin,Barron,10316,10202,0,114
+23-12-2021,US,Wisconsin,Ashland,2378,2354,0,24
+23-12-2021,US,Wisconsin,Adams,3308,3269,0,39
+23-12-2021,US,West Virginia,Wyoming,4153,4077,0,76
+23-12-2021,US,West Virginia,Wood,15043,14769,0,274
+23-12-2021,US,West Virginia,Wirt,992,975,0,17
+23-12-2021,US,West Virginia,Wetzel,2928,2861,0,67
+23-12-2021,US,West Virginia,Webster,1506,1480,0,26
+23-12-2021,US,West Virginia,Wayne,6411,6318,0,93
+23-12-2021,US,West Virginia,Upshur,4705,4632,0,73
+23-12-2021,US,West Virginia,Unassigned,0,0,0,0
+23-12-2021,US,West Virginia,Tyler,1499,1474,0,25
+23-12-2021,US,West Virginia,Tucker,1307,1276,0,31
+23-12-2021,US,West Virginia,Taylor,2857,2807,0,50
+23-12-2021,US,West Virginia,Summers,1666,1629,0,37
+23-12-2021,US,West Virginia,Roane,1996,1969,0,27
+23-12-2021,US,West Virginia,Ritchie,1670,1646,0,24
+23-12-2021,US,West Virginia,Randolph,5821,5758,0,63
+23-12-2021,US,West Virginia,Raleigh,13605,13391,0,214
+23-12-2021,US,West Virginia,Putnam,10401,10255,0,146
+23-12-2021,US,West Virginia,Preston,6268,6156,0,112
+23-12-2021,US,West Virginia,Pocahontas,1329,1307,0,22
+23-12-2021,US,West Virginia,Pleasants,1556,1525,0,31
+23-12-2021,US,West Virginia,Pendleton,1304,1288,0,16
+23-12-2021,US,West Virginia,Ohio,7251,7123,0,128
+23-12-2021,US,West Virginia,Nicholas,4772,4698,0,74
+23-12-2021,US,West Virginia,Morgan,2716,2663,0,53
+23-12-2021,US,West Virginia,Monroe,2529,2499,0,30
+23-12-2021,US,West Virginia,Monongalia,15194,15038,0,156
+23-12-2021,US,West Virginia,Mingo,5242,5145,0,97
+23-12-2021,US,West Virginia,Mineral,5268,5134,0,134
+23-12-2021,US,West Virginia,Mercer,10770,10574,0,196
+23-12-2021,US,West Virginia,McDowell,3428,3372,0,56
+23-12-2021,US,West Virginia,Mason,4256,4191,0,65
+23-12-2021,US,West Virginia,Marshall,6014,5882,0,132
+23-12-2021,US,West Virginia,Marion,9623,9483,0,140
+23-12-2021,US,West Virginia,Logan,6155,6002,0,153
+23-12-2021,US,West Virginia,Lincoln,3456,3402,0,54
+23-12-2021,US,West Virginia,Lewis,3585,3521,0,64
+23-12-2021,US,West Virginia,Kanawha,28292,27726,0,566
+23-12-2021,US,West Virginia,Jefferson,8570,8473,0,97
+23-12-2021,US,West Virginia,Jackson,4506,4398,0,108
+23-12-2021,US,West Virginia,Harrison,13134,12935,0,199
+23-12-2021,US,West Virginia,Hardy,2888,2849,0,39
+23-12-2021,US,West Virginia,Hancock,4911,4787,0,124
+23-12-2021,US,West Virginia,Hampshire,4010,3955,0,55
+23-12-2021,US,West Virginia,Greenbrier,5672,5556,0,116
+23-12-2021,US,West Virginia,Grant,2666,2620,0,46
+23-12-2021,US,West Virginia,Gilmer,1562,1547,0,15
+23-12-2021,US,West Virginia,Fayette,7502,7355,0,147
+23-12-2021,US,West Virginia,Doddridge,1523,1510,0,13
+23-12-2021,US,West Virginia,Clay,1587,1562,0,25
+23-12-2021,US,West Virginia,Calhoun,1205,1196,0,9
+23-12-2021,US,West Virginia,Cabell,17113,16818,0,295
+23-12-2021,US,West Virginia,Brooke,3605,3519,0,86
+23-12-2021,US,West Virginia,Braxton,2613,2584,0,29
+23-12-2021,US,West Virginia,Boone,4215,4153,0,62
+23-12-2021,US,West Virginia,Berkeley,23000,22791,0,209
+23-12-2021,US,West Virginia,Barbour,3185,3130,0,55
+23-12-2021,US,Washington,Yakima,46140,45486,0,654
+23-12-2021,US,Washington,Whitman,6127,6045,0,82
+23-12-2021,US,Washington,Whatcom,19614,19421,0,193
+23-12-2021,US,Washington,Walla Walla,9449,9335,0,114
+23-12-2021,US,Washington,Wahkiakum,312,307,0,5
+23-12-2021,US,Washington,Unassigned,1561,1557,0,4
+23-12-2021,US,Washington,Thurston,24713,24443,0,270
+23-12-2021,US,Washington,Stevens,5585,5476,0,109
+23-12-2021,US,Washington,Spokane,79492,78350,0,1142
+23-12-2021,US,Washington,Snohomish,76527,75687,0,840
+23-12-2021,US,Washington,Skamania,903,894,0,9
+23-12-2021,US,Washington,Skagit,13591,13442,0,149
+23-12-2021,US,Washington,San Juan,472,472,0,0
+23-12-2021,US,Washington,Pierce,104998,103992,0,1006
+23-12-2021,US,Washington,Pend Oreille,1721,1696,0,25
+23-12-2021,US,Washington,Pacific,1994,1955,0,39
+23-12-2021,US,Washington,Okanogan,5730,5626,0,104
+23-12-2021,US,Washington,Mason,6827,6734,0,93
+23-12-2021,US,Washington,Lincoln,1524,1498,0,26
+23-12-2021,US,Washington,Lewis,11552,11365,0,187
+23-12-2021,US,Washington,Klickitat,2327,2293,0,34
+23-12-2021,US,Washington,Kittitas,5476,5421,0,55
+23-12-2021,US,Washington,Kitsap,19210,18947,0,263
+23-12-2021,US,Washington,King,184473,182339,0,2134
+23-12-2021,US,Washington,Jefferson,1353,1332,0,21
+23-12-2021,US,Washington,Island,4750,4695,0,55
+23-12-2021,US,Washington,Grays Harbor,10064,9911,0,153
+23-12-2021,US,Washington,Grant,17437,17256,0,181
+23-12-2021,US,Washington,Garfield,273,266,0,7
+23-12-2021,US,Washington,Franklin,20974,20790,0,184
+23-12-2021,US,Washington,Ferry,918,900,0,18
+23-12-2021,US,Washington,Douglas,6794,6740,0,54
+23-12-2021,US,Washington,Cowlitz,14973,14694,0,279
+23-12-2021,US,Washington,Columbia,414,405,0,9
+23-12-2021,US,Washington,Clark,47712,47122,0,590
+23-12-2021,US,Washington,Clallam,5766,5684,0,82
+23-12-2021,US,Washington,Chelan,12524,12392,0,132
+23-12-2021,US,Washington,Benton,32916,32520,0,396
+23-12-2021,US,Washington,Asotin,3146,3094,0,52
+23-12-2021,US,Washington,Adams,3409,3375,0,34
+23-12-2021,US,Virginia,York,6058,5974,0,84
+23-12-2021,US,Virginia,Wythe,5044,4928,0,116
+23-12-2021,US,Virginia,Wise,6370,6229,0,141
+23-12-2021,US,Virginia,Winchester,4194,4137,0,57
+23-12-2021,US,Virginia,Williamsburg,1291,1278,0,13
+23-12-2021,US,Virginia,Westmoreland,2118,2079,0,39
+23-12-2021,US,Virginia,Waynesboro,3961,3908,0,53
+23-12-2021,US,Virginia,Washington,8921,8753,0,168
+23-12-2021,US,Virginia,Warren,6014,5907,0,107
+23-12-2021,US,Virginia,Virginia Beach,54450,53860,0,590
+23-12-2021,US,Virginia,Unassigned,0,0,0,0
+23-12-2021,US,Virginia,Tazewell,6613,6492,0,121
+23-12-2021,US,Virginia,Sussex,1632,1602,0,30
+23-12-2021,US,Virginia,Surry,665,652,0,13
+23-12-2021,US,Virginia,Suffolk,11808,11554,0,254
+23-12-2021,US,Virginia,Staunton,3794,3708,0,86
+23-12-2021,US,Virginia,Stafford,18484,18370,0,114
+23-12-2021,US,Virginia,Spotsylvania,17441,17266,0,175
+23-12-2021,US,Virginia,Southampton,2506,2434,0,72
+23-12-2021,US,Virginia,Smyth,5528,5392,0,136
+23-12-2021,US,Virginia,Shenandoah,7587,7404,0,183
+23-12-2021,US,Virginia,Scott,3681,3594,0,87
+23-12-2021,US,Virginia,Salem,4183,4100,0,83
+23-12-2021,US,Virginia,Russell,4513,4439,0,74
+23-12-2021,US,Virginia,Rockingham,10454,10276,0,178
+23-12-2021,US,Virginia,Rockbridge,2393,2324,0,69
+23-12-2021,US,Virginia,Roanoke City,13728,13460,0,268
+23-12-2021,US,Virginia,Roanoke,13566,13374,0,192
+23-12-2021,US,Virginia,Richmond City,26973,26591,0,382
+23-12-2021,US,Virginia,Richmond,1769,1753,0,16
+23-12-2021,US,Virginia,Rappahannock,684,677,0,7
+23-12-2021,US,Virginia,Radford,3206,3168,0,38
+23-12-2021,US,Virginia,Pulaski,4682,4578,0,104
+23-12-2021,US,Virginia,Prince William,61354,60758,0,596
+23-12-2021,US,Virginia,Prince George,5528,5476,0,52
+23-12-2021,US,Virginia,Prince Edward,3121,3067,0,54
+23-12-2021,US,Virginia,Powhatan,3214,3183,0,31
+23-12-2021,US,Virginia,Portsmouth,13537,13282,0,255
+23-12-2021,US,Virginia,Poquoson,1450,1427,0,23
+23-12-2021,US,Virginia,Pittsylvania,8922,8786,0,136
+23-12-2021,US,Virginia,Petersburg,5357,5248,0,109
+23-12-2021,US,Virginia,Patrick,2473,2410,0,63
+23-12-2021,US,Virginia,Page,3989,3898,0,91
+23-12-2021,US,Virginia,Orange,4365,4297,0,68
+23-12-2021,US,Virginia,Nottoway,2737,2667,0,70
+23-12-2021,US,Virginia,Norton,726,707,0,19
+23-12-2021,US,Virginia,Northumberland,1306,1269,0,37
+23-12-2021,US,Virginia,Northampton,1221,1173,0,48
+23-12-2021,US,Virginia,Norfolk,26255,25889,0,366
+23-12-2021,US,Virginia,Newport News,22121,21808,0,313
+23-12-2021,US,Virginia,New Kent,2791,2764,0,27
+23-12-2021,US,Virginia,Nelson,1630,1608,0,22
+23-12-2021,US,Virginia,Montgomery,12741,12624,0,117
+23-12-2021,US,Virginia,Middlesex,1064,1030,0,34
+23-12-2021,US,Virginia,Mecklenburg,3727,3632,0,95
+23-12-2021,US,Virginia,Mathews,968,944,0,24
+23-12-2021,US,Virginia,Martinsville,2325,2230,0,95
+23-12-2021,US,Virginia,Manassas Park,1300,1285,0,15
+23-12-2021,US,Virginia,Manassas,5757,5703,0,54
+23-12-2021,US,Virginia,Madison,1253,1229,0,24
+23-12-2021,US,Virginia,Lynchburg,12593,12381,0,212
+23-12-2021,US,Virginia,Lunenburg,1266,1243,0,23
+23-12-2021,US,Virginia,Louisa,3905,3851,0,54
+23-12-2021,US,Virginia,Loudoun,39898,39591,0,307
+23-12-2021,US,Virginia,Lexington,1675,1638,0,37
+23-12-2021,US,Virginia,Lee,4059,3997,0,62
+23-12-2021,US,Virginia,Lancaster,1140,1116,0,24
+23-12-2021,US,Virginia,King and Queen,718,709,0,9
+23-12-2021,US,Virginia,King William,2332,2305,0,27
+23-12-2021,US,Virginia,King George,3103,3078,0,25
+23-12-2021,US,Virginia,James City,7903,7803,0,100
+23-12-2021,US,Virginia,Isle of Wight,4850,4757,0,93
+23-12-2021,US,Virginia,Hopewell,3933,3837,0,96
+23-12-2021,US,Virginia,Highland,223,219,0,4
+23-12-2021,US,Virginia,Henry,7489,7290,0,199
+23-12-2021,US,Virginia,Henrico,38770,38025,0,745
+23-12-2021,US,Virginia,Harrisonburg,8880,8764,0,116
+23-12-2021,US,Virginia,Hanover,13546,13341,0,205
+23-12-2021,US,Virginia,Hampton,16287,16035,0,252
+23-12-2021,US,Virginia,Halifax,4398,4279,0,119
+23-12-2021,US,Virginia,Greensville,1999,1971,0,28
+23-12-2021,US,Virginia,Greene,2506,2460,0,46
+23-12-2021,US,Virginia,Grayson,2544,2488,0,56
+23-12-2021,US,Virginia,Goochland,2374,2339,0,35
+23-12-2021,US,Virginia,Gloucester,4258,4175,0,83
+23-12-2021,US,Virginia,Giles,2545,2508,0,37
+23-12-2021,US,Virginia,Galax,1739,1674,0,65
+23-12-2021,US,Virginia,Fredericksburg,3380,3353,0,27
+23-12-2021,US,Virginia,Frederick,13774,13596,0,178
+23-12-2021,US,Virginia,Franklin City,1727,1683,0,44
+23-12-2021,US,Virginia,Franklin,7084,6958,0,126
+23-12-2021,US,Virginia,Fluvanna,3165,3135,0,30
+23-12-2021,US,Virginia,Floyd,1713,1681,0,32
+23-12-2021,US,Virginia,Fauquier,8272,8179,0,93
+23-12-2021,US,Virginia,Falls Church,821,807,0,14
+23-12-2021,US,Virginia,Fairfax City,1170,1134,0,36
+23-12-2021,US,Virginia,Fairfax,103513,102321,0,1192
+23-12-2021,US,Virginia,Essex,1404,1384,0,20
+23-12-2021,US,Virginia,Emporia,851,805,0,46
+23-12-2021,US,Virginia,Dinwiddie,3606,3544,0,62
+23-12-2021,US,Virginia,Dickenson,2141,2108,0,33
+23-12-2021,US,Virginia,Danville,6783,6577,0,206
+23-12-2021,US,Virginia,Cumberland,810,791,0,19
+23-12-2021,US,Virginia,Culpeper,7576,7482,0,94
+23-12-2021,US,Virginia,Craig,719,708,0,11
+23-12-2021,US,Virginia,Covington,803,784,0,19
+23-12-2021,US,Virginia,Colonial Heights,2845,2774,0,71
+23-12-2021,US,Virginia,Clarke,1694,1661,0,33
+23-12-2021,US,Virginia,Chesterfield,44421,43821,0,600
+23-12-2021,US,Virginia,Chesapeake,31352,30977,0,375
+23-12-2021,US,Virginia,Charlottesville,5857,5794,0,63
+23-12-2021,US,Virginia,Charlotte,1483,1453,0,30
+23-12-2021,US,Virginia,Charles City,789,767,0,22
+23-12-2021,US,Virginia,Carroll,4633,4523,0,110
+23-12-2021,US,Virginia,Caroline,4613,4557,0,56
+23-12-2021,US,Virginia,Campbell,8089,7934,0,155
+23-12-2021,US,Virginia,Buena Vista,1482,1450,0,32
+23-12-2021,US,Virginia,Buckingham,2841,2800,0,41
+23-12-2021,US,Virginia,Buchanan,3032,2948,0,84
+23-12-2021,US,Virginia,Brunswick,1891,1856,0,35
+23-12-2021,US,Virginia,Bristol,2655,2603,0,52
+23-12-2021,US,Virginia,Botetourt,4587,4525,0,62
+23-12-2021,US,Virginia,Bland,1165,1147,0,18
+23-12-2021,US,Virginia,Bedford,11076,10902,0,174
+23-12-2021,US,Virginia,Bath,551,536,0,15
+23-12-2021,US,Virginia,Augusta,11505,11363,0,142
+23-12-2021,US,Virginia,Arlington,22421,22145,0,276
+23-12-2021,US,Virginia,Appomattox,2648,2611,0,37
+23-12-2021,US,Virginia,Amherst,4760,4698,0,62
+23-12-2021,US,Virginia,Amelia,1666,1623,0,43
+23-12-2021,US,Virginia,Alleghany,2451,2365,0,86
+23-12-2021,US,Virginia,Alexandria,16811,16654,0,157
+23-12-2021,US,Virginia,Albemarle,9097,8983,0,114
+23-12-2021,US,Virginia,Accomack,4377,4294,0,83
+23-12-2021,US,Virgin Islands,,7867,7779,0,88
+23-12-2021,US,Vermont,Windsor,4838,4796,0,42
+23-12-2021,US,Vermont,Windham,3489,3460,0,29
+23-12-2021,US,Vermont,Washington,4905,4873,0,32
+23-12-2021,US,Vermont,Unassigned,205,205,0,0
+23-12-2021,US,Vermont,Rutland,6836,6797,0,39
+23-12-2021,US,Vermont,Orleans,3778,3750,0,28
+23-12-2021,US,Vermont,Orange,2051,2042,0,9
+23-12-2021,US,Vermont,Lamoille,2039,2028,0,11
+23-12-2021,US,Vermont,Grand Isle,521,518,0,3
+23-12-2021,US,Vermont,Franklin,5007,4952,0,55
+23-12-2021,US,Vermont,Essex,859,857,0,2
+23-12-2021,US,Vermont,Chittenden,15062,14926,0,136
+23-12-2021,US,Vermont,Caledonia,3084,3063,0,21
+23-12-2021,US,Vermont,Bennington,5187,5144,0,43
+23-12-2021,US,Vermont,Addison,2404,2394,0,10
+23-12-2021,US,Utah,Weber-Morgan,50396,50036,0,360
+23-12-2021,US,Utah,Wasatch,6926,6895,0,31
+23-12-2021,US,Utah,Utah,142317,141666,0,651
+23-12-2021,US,Utah,Unassigned,1729,1727,0,2
+23-12-2021,US,Utah,TriCounty,9151,9068,0,83
+23-12-2021,US,Utah,Tooele,14062,13980,0,82
+23-12-2021,US,Utah,Summit,7866,7847,0,19
+23-12-2021,US,Utah,Southwest Utah,45751,45265,0,486
+23-12-2021,US,Utah,Southeast Utah,7163,7104,0,59
+23-12-2021,US,Utah,San Juan,2831,2786,0,45
+23-12-2021,US,Utah,Salt Lake,221014,219711,0,1303
+23-12-2021,US,Utah,Davis,64052,63741,0,311
+23-12-2021,US,Utah,Central Utah,15172,15046,0,126
+23-12-2021,US,Utah,Bear River,35273,35077,0,196
+23-12-2021,US,Texas,Zavala,2589,2533,0,56
+23-12-2021,US,Texas,Zapata,2254,2208,0,46
+23-12-2021,US,Texas,Young,3077,3003,0,74
+23-12-2021,US,Texas,Yoakum,1377,1342,0,35
+23-12-2021,US,Texas,Wood,6982,6744,0,238
+23-12-2021,US,Texas,Wise,11917,11707,0,210
+23-12-2021,US,Texas,Winkler,1379,1347,0,32
+23-12-2021,US,Texas,Wilson,7818,7675,0,143
+23-12-2021,US,Texas,Williamson,81587,80840,0,747
+23-12-2021,US,Texas,Willacy,4982,4868,0,114
+23-12-2021,US,Texas,Wilbarger,2553,2481,0,72
+23-12-2021,US,Texas,Wichita,22727,22186,0,541
+23-12-2021,US,Texas,Wheeler,846,831,0,15
+23-12-2021,US,Texas,Wharton,6411,6219,0,192
+23-12-2021,US,Texas,Webb,57699,56776,0,923
+23-12-2021,US,Texas,Washington,5964,5829,0,135
+23-12-2021,US,Texas,Ward,2056,2021,0,35
+23-12-2021,US,Texas,Waller,6901,6814,0,87
+23-12-2021,US,Texas,Walker,12088,11900,0,188
+23-12-2021,US,Texas,Victoria,13191,12834,0,357
+23-12-2021,US,Texas,Van Zandt,8395,8165,0,230
+23-12-2021,US,Texas,Val Verde,10829,10571,0,258
+23-12-2021,US,Texas,Uvalde,6494,6376,0,118
+23-12-2021,US,Texas,Upton,654,639,0,15
+23-12-2021,US,Texas,Upshur,6038,5882,0,156
+23-12-2021,US,Texas,Unassigned,0,0,0,0
+23-12-2021,US,Texas,Tyler,2527,2455,0,72
+23-12-2021,US,Texas,Trinity,1698,1634,0,64
+23-12-2021,US,Texas,Travis,127912,126414,0,1498
+23-12-2021,US,Texas,Tom Green,25874,25481,0,393
+23-12-2021,US,Texas,Titus,6100,5995,0,105
+23-12-2021,US,Texas,Throckmorton,142,135,0,7
+23-12-2021,US,Texas,Terry,2421,2349,0,72
+23-12-2021,US,Texas,Terrell,111,108,0,3
+23-12-2021,US,Texas,Taylor,24116,23505,0,611
+23-12-2021,US,Texas,Tarrant,380558,375560,0,4998
+23-12-2021,US,Texas,Swisher,1540,1515,0,25
+23-12-2021,US,Texas,Sutton,648,637,0,11
+23-12-2021,US,Texas,Stonewall,245,239,0,6
+23-12-2021,US,Texas,Sterling,184,179,0,5
+23-12-2021,US,Texas,Stephens,1296,1259,0,37
+23-12-2021,US,Texas,Starr,11991,11655,0,336
+23-12-2021,US,Texas,Somervell,1547,1521,0,26
+23-12-2021,US,Texas,Smith,37702,36867,0,835
+23-12-2021,US,Texas,Sherman,314,298,0,16
+23-12-2021,US,Texas,Shelby,3018,2904,0,114
+23-12-2021,US,Texas,Shackelford,571,563,0,8
+23-12-2021,US,Texas,Scurry,3645,3558,0,87
+23-12-2021,US,Texas,Schleicher,370,361,0,9
+23-12-2021,US,Texas,San Saba,1008,979,0,29
+23-12-2021,US,Texas,San Patricio,7257,6957,0,300
+23-12-2021,US,Texas,San Jacinto,3047,2965,0,82
+23-12-2021,US,Texas,San Augustine,902,864,0,38
+23-12-2021,US,Texas,Sabine,977,900,0,77
+23-12-2021,US,Texas,Rusk,8358,8168,0,190
+23-12-2021,US,Texas,Runnels,1770,1714,0,56
+23-12-2021,US,Texas,Rockwall,18270,18045,0,225
+23-12-2021,US,Texas,Robertson,3001,2933,0,68
+23-12-2021,US,Texas,Roberts,116,115,0,1
+23-12-2021,US,Texas,Refugio,1208,1177,0,31
+23-12-2021,US,Texas,Reeves,3785,3725,0,60
+23-12-2021,US,Texas,Red River,1511,1454,0,57
+23-12-2021,US,Texas,Real,589,568,0,21
+23-12-2021,US,Texas,Reagan,637,627,0,10
+23-12-2021,US,Texas,Randall,26433,26042,0,391
+23-12-2021,US,Texas,Rains,1672,1623,0,49
+23-12-2021,US,Texas,Presidio,930,901,0,29
+23-12-2021,US,Texas,Potter,26692,26100,0,592
+23-12-2021,US,Texas,Polk,6037,5818,0,219
+23-12-2021,US,Texas,Pecos,2400,2342,0,58
+23-12-2021,US,Texas,Parmer,1645,1601,0,44
+23-12-2021,US,Texas,Parker,25493,25139,0,354
+23-12-2021,US,Texas,Panola,3069,2958,0,111
+23-12-2021,US,Texas,Palo Pinto,5010,4883,0,127
+23-12-2021,US,Texas,Orange,14016,13710,0,306
+23-12-2021,US,Texas,Oldham,402,396,0,6
+23-12-2021,US,Texas,Ochiltree,1661,1622,0,39
+23-12-2021,US,Texas,Nueces,69399,68087,0,1312
+23-12-2021,US,Texas,Nolan,2556,2473,0,83
+23-12-2021,US,Texas,Newton,977,923,0,54
+23-12-2021,US,Texas,Navarro,9123,8930,0,193
+23-12-2021,US,Texas,Nacogdoches,8116,7877,0,239
+23-12-2021,US,Texas,Motley,176,167,0,9
+23-12-2021,US,Texas,Morris,1755,1697,0,58
+23-12-2021,US,Texas,Moore,3747,3655,0,92
+23-12-2021,US,Texas,Montgomery,92451,91320,0,1131
+23-12-2021,US,Texas,Montague,3246,3147,0,99
+23-12-2021,US,Texas,Mitchell,1028,985,0,43
+23-12-2021,US,Texas,Mills,957,929,0,28
+23-12-2021,US,Texas,Milam,3861,3770,0,91
+23-12-2021,US,Texas,Midland,30040,29636,0,404
+23-12-2021,US,Texas,Menard,358,347,0,11
+23-12-2021,US,Texas,Medina,7156,6984,0,172
+23-12-2021,US,Texas,McMullen,119,111,0,8
+23-12-2021,US,Texas,McLennan,43951,43184,0,767
+23-12-2021,US,Texas,McCulloch,973,933,0,40
+23-12-2021,US,Texas,Maverick,13152,12739,0,413
+23-12-2021,US,Texas,Matagorda,6227,6065,0,162
+23-12-2021,US,Texas,Mason,587,579,0,8
+23-12-2021,US,Texas,Martin,896,872,0,24
+23-12-2021,US,Texas,Marion,1218,1165,0,53
+23-12-2021,US,Texas,Madison,2568,2522,0,46
+23-12-2021,US,Texas,Lynn,943,915,0,28
+23-12-2021,US,Texas,Lubbock,70300,69210,0,1090
+23-12-2021,US,Texas,Loving,15,15,0,0
+23-12-2021,US,Texas,Llano,2770,2686,0,84
+23-12-2021,US,Texas,Live Oak,1767,1729,0,38
+23-12-2021,US,Texas,Lipscomb,477,465,0,12
+23-12-2021,US,Texas,Limestone,3732,3621,0,111
+23-12-2021,US,Texas,Liberty,13441,13079,0,362
+23-12-2021,US,Texas,Leon,2541,2467,0,74
+23-12-2021,US,Texas,Lee,3020,2966,0,54
+23-12-2021,US,Texas,Lavaca,3266,3166,0,100
+23-12-2021,US,Texas,Lampasas,3670,3600,0,70
+23-12-2021,US,Texas,Lamb,3114,3016,0,98
+23-12-2021,US,Texas,Lamar,9065,8844,0,221
+23-12-2021,US,Texas,La Salle,1452,1412,0,40
+23-12-2021,US,Texas,Knox,380,358,0,22
+23-12-2021,US,Texas,Kleberg,4407,4274,0,133
+23-12-2021,US,Texas,Kinney,527,517,0,10
+23-12-2021,US,Texas,King,27,27,0,0
+23-12-2021,US,Texas,Kimble,456,445,0,11
+23-12-2021,US,Texas,Kerr,7312,7170,0,142
+23-12-2021,US,Texas,Kent,152,149,0,3
+23-12-2021,US,Texas,Kenedy,61,59,0,2
+23-12-2021,US,Texas,Kendall,5374,5272,0,102
+23-12-2021,US,Texas,Kaufman,24875,24426,0,449
+23-12-2021,US,Texas,Karnes,4311,4253,0,58
+23-12-2021,US,Texas,Jones,3361,3282,0,79
+23-12-2021,US,Texas,Johnson,30179,29592,0,587
+23-12-2021,US,Texas,Jim Wells,7367,7184,0,183
+23-12-2021,US,Texas,Jim Hogg,947,927,0,20
+23-12-2021,US,Texas,Jefferson,32745,32010,0,735
+23-12-2021,US,Texas,Jeff Davis,213,207,0,6
+23-12-2021,US,Texas,Jasper,4183,4018,0,165
+23-12-2021,US,Texas,Jackson,2803,2751,0,52
+23-12-2021,US,Texas,Jack,1058,1036,0,22
+23-12-2021,US,Texas,Irion,200,198,0,2
+23-12-2021,US,Texas,Hutchinson,4320,4216,0,104
+23-12-2021,US,Texas,Hunt,11454,11139,0,315
+23-12-2021,US,Texas,Hudspeth,621,607,0,14
+23-12-2021,US,Texas,Howard,5941,5792,0,149
+23-12-2021,US,Texas,Houston,2950,2861,0,89
+23-12-2021,US,Texas,Hopkins,6369,6216,0,153
+23-12-2021,US,Texas,Hood,10112,9897,0,215
+23-12-2021,US,Texas,Hockley,4618,4478,0,140
+23-12-2021,US,Texas,Hill,6005,5832,0,173
+23-12-2021,US,Texas,Hidalgo,122378,118856,0,3522
+23-12-2021,US,Texas,Henderson,10155,9801,0,354
+23-12-2021,US,Texas,Hemphill,761,758,0,3
+23-12-2021,US,Texas,Hays,34970,34559,0,411
+23-12-2021,US,Texas,Haskell,680,644,0,36
+23-12-2021,US,Texas,Hartley,979,977,0,2
+23-12-2021,US,Texas,Harrison,9469,9281,0,188
+23-12-2021,US,Texas,Harris,617822,608121,0,9701
+23-12-2021,US,Texas,Hardin,10577,10362,0,215
+23-12-2021,US,Texas,Hardeman,460,446,0,14
+23-12-2021,US,Texas,Hansford,1229,1202,0,27
+23-12-2021,US,Texas,Hamilton,1370,1341,0,29
+23-12-2021,US,Texas,Hall,630,615,0,15
+23-12-2021,US,Texas,Hale,8303,8100,0,203
+23-12-2021,US,Texas,Guadalupe,25550,25202,0,348
+23-12-2021,US,Texas,Grimes,5418,5308,0,110
+23-12-2021,US,Texas,Gregg,19584,19000,0,584
+23-12-2021,US,Texas,Grayson,16879,16350,0,529
+23-12-2021,US,Texas,Gray,4268,4178,0,90
+23-12-2021,US,Texas,Gonzales,3625,3538,0,87
+23-12-2021,US,Texas,Goliad,678,650,0,28
+23-12-2021,US,Texas,Glasscock,160,157,0,3
+23-12-2021,US,Texas,Gillespie,3755,3672,0,83
+23-12-2021,US,Texas,Garza,763,738,0,25
+23-12-2021,US,Texas,Galveston,67252,66527,0,725
+23-12-2021,US,Texas,Gaines,2205,2138,0,67
+23-12-2021,US,Texas,Frio,4232,4154,0,78
+23-12-2021,US,Texas,Freestone,2820,2747,0,73
+23-12-2021,US,Texas,Franklin,1443,1406,0,37
+23-12-2021,US,Texas,Fort Bend,108654,107604,0,1050
+23-12-2021,US,Texas,Foard,189,179,0,10
+23-12-2021,US,Texas,Floyd,1299,1259,0,40
+23-12-2021,US,Texas,Fisher,454,435,0,19
+23-12-2021,US,Texas,Fayette,3699,3604,0,95
+23-12-2021,US,Texas,Fannin,5179,5025,0,154
+23-12-2021,US,Texas,Falls,2635,2584,0,51
+23-12-2021,US,Texas,Erath,6574,6465,0,109
+23-12-2021,US,Texas,Ellis,34917,34427,0,490
+23-12-2021,US,Texas,El Paso,166243,163156,0,3087
+23-12-2021,US,Texas,Edwards,340,332,0,8
+23-12-2021,US,Texas,Ector,27774,27205,0,569
+23-12-2021,US,Texas,Eastland,2310,2222,0,88
+23-12-2021,US,Texas,Duval,2020,1960,0,60
+23-12-2021,US,Texas,Donley,700,682,0,18
+23-12-2021,US,Texas,Dimmit,3844,3797,0,47
+23-12-2021,US,Texas,Dickens,278,263,0,15
+23-12-2021,US,Texas,Denton,114212,113131,0,1081
+23-12-2021,US,Texas,Delta,728,706,0,22
+23-12-2021,US,Texas,Deaf Smith,3658,3564,0,94
+23-12-2021,US,Texas,DeWitt,3034,2948,0,86
+23-12-2021,US,Texas,Dawson,2264,2182,0,82
+23-12-2021,US,Texas,Dallas,427406,421670,0,5736
+23-12-2021,US,Texas,Dallam,1383,1351,0,32
+23-12-2021,US,Texas,Culberson,413,402,0,11
+23-12-2021,US,Texas,Crosby,1127,1087,0,40
+23-12-2021,US,Texas,Crockett,797,780,0,17
+23-12-2021,US,Texas,Crane,982,963,0,19
+23-12-2021,US,Texas,Cottle,257,248,0,9
+23-12-2021,US,Texas,Coryell,10982,10813,0,169
+23-12-2021,US,Texas,Cooke,5327,5220,0,107
+23-12-2021,US,Texas,Concho,771,761,0,10
+23-12-2021,US,Texas,Comanche,2409,2342,0,67
+23-12-2021,US,Texas,Comal,21057,20581,0,476
+23-12-2021,US,Texas,Colorado,2689,2633,0,56
+23-12-2021,US,Texas,Collingsworth,458,447,0,11
+23-12-2021,US,Texas,Collin,137458,136256,0,1202
+23-12-2021,US,Texas,Coleman,1229,1170,0,59
+23-12-2021,US,Texas,Coke,708,690,0,18
+23-12-2021,US,Texas,Cochran,520,500,0,20
+23-12-2021,US,Texas,Clay,1630,1604,0,26
+23-12-2021,US,Texas,Childress,1841,1819,0,22
+23-12-2021,US,Texas,Cherokee,6921,6693,0,228
+23-12-2021,US,Texas,Chambers,8995,8936,0,59
+23-12-2021,US,Texas,Castro,1462,1421,0,41
+23-12-2021,US,Texas,Cass,4706,4545,0,161
+23-12-2021,US,Texas,Carson,910,881,0,29
+23-12-2021,US,Texas,Camp,2168,2100,0,68
+23-12-2021,US,Texas,Cameron,67814,65978,0,1836
+23-12-2021,US,Texas,Callahan,1980,1922,0,58
+23-12-2021,US,Texas,Calhoun,3947,3908,0,39
+23-12-2021,US,Texas,Caldwell,8768,8612,0,156
+23-12-2021,US,Texas,Burnet,7770,7637,0,133
+23-12-2021,US,Texas,Burleson,3356,3296,0,60
+23-12-2021,US,Texas,Brown,7336,7161,0,175
+23-12-2021,US,Texas,Brooks,1146,1099,0,47
+23-12-2021,US,Texas,Briscoe,261,254,0,7
+23-12-2021,US,Texas,Brewster,1113,1090,0,23
+23-12-2021,US,Texas,Brazos,39865,39497,0,368
+23-12-2021,US,Texas,Brazoria,63732,62868,0,864
+23-12-2021,US,Texas,Bowie,13416,13067,0,349
+23-12-2021,US,Texas,Bosque,2565,2507,0,58
+23-12-2021,US,Texas,Borden,44,42,0,2
+23-12-2021,US,Texas,Blanco,1349,1321,0,28
+23-12-2021,US,Texas,Bexar,334622,329298,0,5324
+23-12-2021,US,Texas,Bell,40272,39524,0,748
+23-12-2021,US,Texas,Bee,5432,5296,0,136
+23-12-2021,US,Texas,Baylor,604,580,0,24
+23-12-2021,US,Texas,Bastrop,14775,14584,0,191
+23-12-2021,US,Texas,Bandera,2514,2450,0,64
+23-12-2021,US,Texas,Bailey,1100,1071,0,29
+23-12-2021,US,Texas,Austin,3852,3795,0,57
+23-12-2021,US,Texas,Atascosa,8901,8690,0,211
+23-12-2021,US,Texas,Armstrong,337,329,0,8
+23-12-2021,US,Texas,Archer,1367,1343,0,24
+23-12-2021,US,Texas,Aransas,2671,2604,0,67
+23-12-2021,US,Texas,Angelina,13957,13531,0,426
+23-12-2021,US,Texas,Andrews,3014,2949,0,65
+23-12-2021,US,Texas,Anderson,8181,7973,0,208
+23-12-2021,US,Tennessee,Wilson,28863,28464,0,399
+23-12-2021,US,Tennessee,Williamson,42716,42402,0,314
+23-12-2021,US,Tennessee,White,5905,5791,0,114
+23-12-2021,US,Tennessee,Weakley,6665,6558,0,107
+23-12-2021,US,Tennessee,Wayne,4227,4180,0,47
+23-12-2021,US,Tennessee,Washington,24756,24372,0,384
+23-12-2021,US,Tennessee,Warren,9023,8878,0,145
+23-12-2021,US,Tennessee,Van Buren,1346,1306,0,40
+23-12-2021,US,Tennessee,Union,3621,3558,0,63
+23-12-2021,US,Tennessee,Unicoi,3375,3297,0,78
+23-12-2021,US,Tennessee,Unassigned,23048,22863,0,185
+23-12-2021,US,Tennessee,Trousdale,3302,3266,0,36
+23-12-2021,US,Tennessee,Tipton,12138,11961,0,177
+23-12-2021,US,Tennessee,Sumner,36648,36072,0,576
+23-12-2021,US,Tennessee,Sullivan,30313,29789,0,524
+23-12-2021,US,Tennessee,Stewart,2292,2249,0,43
+23-12-2021,US,Tennessee,Smith,4356,4293,0,63
+23-12-2021,US,Tennessee,Shelby,154730,152067,0,2663
+23-12-2021,US,Tennessee,Sevier,21517,21194,0,323
+23-12-2021,US,Tennessee,Sequatchie,3156,3096,0,60
+23-12-2021,US,Tennessee,Scott,5993,5907,0,86
+23-12-2021,US,Tennessee,Rutherford,66142,65436,0,706
+23-12-2021,US,Tennessee,Robertson,14896,14668,0,228
+23-12-2021,US,Tennessee,Roane,10614,10434,0,180
+23-12-2021,US,Tennessee,Rhea,7338,7215,0,123
+23-12-2021,US,Tennessee,Putnam,17618,17361,0,257
+23-12-2021,US,Tennessee,Polk,3342,3292,0,50
+23-12-2021,US,Tennessee,Pickett,1150,1122,0,28
+23-12-2021,US,Tennessee,Perry,1680,1639,0,41
+23-12-2021,US,Tennessee,Overton,5092,4991,0,101
+23-12-2021,US,Tennessee,Out of TN,30833,30627,0,206
+23-12-2021,US,Tennessee,Obion,7183,7036,0,147
+23-12-2021,US,Tennessee,Morgan,4049,3992,0,57
+23-12-2021,US,Tennessee,Moore,1496,1466,0,30
+23-12-2021,US,Tennessee,Montgomery,34834,34379,0,455
+23-12-2021,US,Tennessee,Monroe,10237,10046,0,191
+23-12-2021,US,Tennessee,Meigs,2328,2285,0,43
+23-12-2021,US,Tennessee,McNairy,4922,4837,0,85
+23-12-2021,US,Tennessee,McMinn,11047,10854,0,193
+23-12-2021,US,Tennessee,Maury,20427,20160,0,267
+23-12-2021,US,Tennessee,Marshall,7200,7098,0,102
+23-12-2021,US,Tennessee,Marion,6021,5914,0,107
+23-12-2021,US,Tennessee,Madison,18714,18357,0,357
+23-12-2021,US,Tennessee,Macon,5745,5628,0,117
+23-12-2021,US,Tennessee,Loudon,9757,9619,0,138
+23-12-2021,US,Tennessee,Lincoln,6964,6836,0,128
+23-12-2021,US,Tennessee,Lewis,2601,2553,0,48
+23-12-2021,US,Tennessee,Lawrence,10005,9848,0,157
+23-12-2021,US,Tennessee,Lauderdale,5329,5251,0,78
+23-12-2021,US,Tennessee,Lake,2048,2014,0,34
+23-12-2021,US,Tennessee,Knox,83647,82598,0,1049
+23-12-2021,US,Tennessee,Johnson,4144,4084,0,60
+23-12-2021,US,Tennessee,Jefferson,10621,10414,0,207
+23-12-2021,US,Tennessee,Jackson,2187,2139,0,48
+23-12-2021,US,Tennessee,Humphreys,3461,3403,0,58
+23-12-2021,US,Tennessee,Houston,1984,1933,0,51
+23-12-2021,US,Tennessee,Hickman,4936,4847,0,89
+23-12-2021,US,Tennessee,Henry,5721,5607,0,114
+23-12-2021,US,Tennessee,Henderson,6024,5908,0,116
+23-12-2021,US,Tennessee,Haywood,3990,3909,0,81
+23-12-2021,US,Tennessee,Hawkins,11303,11081,0,222
+23-12-2021,US,Tennessee,Hardin,5838,5729,0,109
+23-12-2021,US,Tennessee,Hardeman,5324,5231,0,93
+23-12-2021,US,Tennessee,Hancock,1375,1351,0,24
+23-12-2021,US,Tennessee,Hamilton,67722,66841,0,881
+23-12-2021,US,Tennessee,Hamblen,13789,13505,0,284
+23-12-2021,US,Tennessee,Grundy,3005,2941,0,64
+23-12-2021,US,Tennessee,Greene,15025,14741,0,284
+23-12-2021,US,Tennessee,Grainger,4698,4611,0,87
+23-12-2021,US,Tennessee,Giles,6364,6216,0,148
+23-12-2021,US,Tennessee,Gibson,11079,10869,0,210
+23-12-2021,US,Tennessee,Franklin,8437,8303,0,134
+23-12-2021,US,Tennessee,Fentress,3968,3881,0,87
+23-12-2021,US,Tennessee,Fayette,7778,7648,0,130
+23-12-2021,US,Tennessee,Dyer,8363,8199,0,164
+23-12-2021,US,Tennessee,Dickson,11010,10810,0,200
+23-12-2021,US,Tennessee,Decatur,2535,2486,0,49
+23-12-2021,US,Tennessee,DeKalb,4436,4355,0,81
+23-12-2021,US,Tennessee,Davidson,129602,128247,0,1355
+23-12-2021,US,Tennessee,Cumberland,11909,11639,0,270
+23-12-2021,US,Tennessee,Crockett,3459,3385,0,74
+23-12-2021,US,Tennessee,Coffee,11171,10963,0,208
+23-12-2021,US,Tennessee,Cocke,7923,7764,0,159
+23-12-2021,US,Tennessee,Clay,1627,1588,0,39
+23-12-2021,US,Tennessee,Claiborne,6031,5888,0,143
+23-12-2021,US,Tennessee,Chester,3720,3640,0,80
+23-12-2021,US,Tennessee,Cheatham,7455,7367,0,88
+23-12-2021,US,Tennessee,Carter,11466,11206,0,260
+23-12-2021,US,Tennessee,Carroll,6048,5921,0,127
+23-12-2021,US,Tennessee,Cannon,2948,2898,0,50
+23-12-2021,US,Tennessee,Campbell,7854,7733,0,121
+23-12-2021,US,Tennessee,Bradley,23303,22994,0,309
+23-12-2021,US,Tennessee,Blount,25392,25075,0,317
+23-12-2021,US,Tennessee,Bledsoe,3619,3582,0,37
+23-12-2021,US,Tennessee,Benton,3090,3014,0,76
+23-12-2021,US,Tennessee,Bedford,9825,9627,0,198
+23-12-2021,US,Tennessee,Anderson,14113,13852,0,261
+23-12-2021,US,South Dakota,Ziebach,487,476,0,11
+23-12-2021,US,South Dakota,Yankton,4338,4294,0,44
+23-12-2021,US,South Dakota,Walworth,1003,984,0,19
+23-12-2021,US,South Dakota,Union,3014,2968,0,46
+23-12-2021,US,South Dakota,Unassigned,0,0,0,0
+23-12-2021,US,South Dakota,Turner,1514,1452,0,62
+23-12-2021,US,South Dakota,Tripp,967,946,0,21
+23-12-2021,US,South Dakota,Todd,1925,1886,0,39
+23-12-2021,US,South Dakota,Sully,200,197,0,3
+23-12-2021,US,South Dakota,Stanley,517,514,0,3
+23-12-2021,US,South Dakota,Spink,1130,1099,0,31
+23-12-2021,US,South Dakota,Sanborn,443,440,0,3
+23-12-2021,US,South Dakota,Roberts,1735,1690,0,45
+23-12-2021,US,South Dakota,Potter,514,509,0,5
+23-12-2021,US,South Dakota,Perkins,536,520,0,16
+23-12-2021,US,South Dakota,Pennington,23479,23200,0,279
+23-12-2021,US,South Dakota,Oglala Lakota,2653,2598,0,55
+23-12-2021,US,South Dakota,Moody,971,946,0,25
+23-12-2021,US,South Dakota,Minnehaha,42384,41961,0,423
+23-12-2021,US,South Dakota,Miner,381,369,0,12
+23-12-2021,US,South Dakota,Mellette,359,355,0,4
+23-12-2021,US,South Dakota,Meade,5122,5066,0,56
+23-12-2021,US,South Dakota,McPherson,362,354,0,8
+23-12-2021,US,South Dakota,McCook,1074,1044,0,30
+23-12-2021,US,South Dakota,Marshall,550,542,0,8
+23-12-2021,US,South Dakota,Lyman,873,861,0,12
+23-12-2021,US,South Dakota,Lincoln,11591,11512,0,79
+23-12-2021,US,South Dakota,Lawrence,4901,4828,0,73
+23-12-2021,US,South Dakota,Lake,1813,1791,0,22
+23-12-2021,US,South Dakota,Kingsbury,1017,997,0,20
+23-12-2021,US,South Dakota,Jones,150,149,0,1
+23-12-2021,US,South Dakota,Jerauld,332,313,0,19
+23-12-2021,US,South Dakota,Jackson,434,415,0,19
+23-12-2021,US,South Dakota,Hyde,230,225,0,5
+23-12-2021,US,South Dakota,Hutchinson,1315,1286,0,29
+23-12-2021,US,South Dakota,Hughes,3536,3483,0,53
+23-12-2021,US,South Dakota,Harding,171,168,0,3
+23-12-2021,US,South Dakota,Hanson,502,497,0,5
+23-12-2021,US,South Dakota,Hand,439,431,0,8
+23-12-2021,US,South Dakota,Hamlin,1193,1153,0,40
+23-12-2021,US,South Dakota,Haakon,351,340,0,11
+23-12-2021,US,South Dakota,Gregory,844,812,0,32
+23-12-2021,US,South Dakota,Grant,1521,1474,0,47
+23-12-2021,US,South Dakota,Faulk,464,449,0,15
+23-12-2021,US,South Dakota,Fall River,1257,1228,0,29
+23-12-2021,US,South Dakota,Edmunds,697,683,0,14
+23-12-2021,US,South Dakota,Douglas,581,567,0,14
+23-12-2021,US,South Dakota,Dewey,2189,2154,0,35
+23-12-2021,US,South Dakota,Deuel,809,797,0,12
+23-12-2021,US,South Dakota,Day,917,887,0,30
+23-12-2021,US,South Dakota,Davison,4437,4365,0,72
+23-12-2021,US,South Dakota,Custer,1503,1483,0,20
+23-12-2021,US,South Dakota,Corson,761,746,0,15
+23-12-2021,US,South Dakota,Codington,6363,6272,0,91
+23-12-2021,US,South Dakota,Clay,2406,2389,0,17
+23-12-2021,US,South Dakota,Clark,588,582,0,6
+23-12-2021,US,South Dakota,Charles Mix,2109,2079,0,30
+23-12-2021,US,South Dakota,Campbell,208,202,0,6
+23-12-2021,US,South Dakota,Butte,2135,2098,0,37
+23-12-2021,US,South Dakota,Buffalo,469,453,0,16
+23-12-2021,US,South Dakota,Brule,1039,1022,0,17
+23-12-2021,US,South Dakota,Brown,7568,7461,0,107
+23-12-2021,US,South Dakota,Brookings,5669,5628,0,41
+23-12-2021,US,South Dakota,Bon Homme,1819,1788,0,31
+23-12-2021,US,South Dakota,Bennett,531,522,0,9
+23-12-2021,US,South Dakota,Beadle,3688,3639,0,49
+23-12-2021,US,South Dakota,Aurora,599,582,0,17
+23-12-2021,US,South Carolina,York,50178,49638,0,540
+23-12-2021,US,South Carolina,Williamsburg,5793,5663,0,130
+23-12-2021,US,South Carolina,Union,4993,4880,0,113
+23-12-2021,US,South Carolina,Unassigned,0,0,0,0
+23-12-2021,US,South Carolina,Sumter,17343,17033,0,310
+23-12-2021,US,South Carolina,Spartanburg,64630,63357,0,1273
+23-12-2021,US,South Carolina,Saluda,2645,2583,0,62
+23-12-2021,US,South Carolina,Richland,72050,71250,0,800
+23-12-2021,US,South Carolina,Pickens,29362,28857,0,505
+23-12-2021,US,South Carolina,Orangeburg,15062,14722,0,340
+23-12-2021,US,South Carolina,Oconee,16607,16350,0,257
+23-12-2021,US,South Carolina,Newberry,7926,7772,0,154
+23-12-2021,US,South Carolina,McCormick,1458,1428,0,30
+23-12-2021,US,South Carolina,Marlboro,5018,4932,0,86
+23-12-2021,US,South Carolina,Marion,5622,5479,0,143
+23-12-2021,US,South Carolina,Lexington,57092,56363,0,729
+23-12-2021,US,South Carolina,Lee,2740,2659,0,81
+23-12-2021,US,South Carolina,Laurens,12388,12144,0,244
+23-12-2021,US,South Carolina,Lancaster,17270,17024,0,246
+23-12-2021,US,South Carolina,Kershaw,12822,12604,0,218
+23-12-2021,US,South Carolina,Jasper,4056,3974,0,82
+23-12-2021,US,South Carolina,Horry,65416,64488,0,928
+23-12-2021,US,South Carolina,Hampton,3191,3116,0,75
+23-12-2021,US,South Carolina,Greenwood,13365,13125,0,240
+23-12-2021,US,South Carolina,Greenville,110808,109250,0,1558
+23-12-2021,US,South Carolina,Georgetown,10148,9958,0,190
+23-12-2021,US,South Carolina,Florence,27836,27282,0,554
+23-12-2021,US,South Carolina,Fairfield,3416,3323,0,93
+23-12-2021,US,South Carolina,Edgefield,4632,4572,0,60
+23-12-2021,US,South Carolina,Dorchester,35298,34904,0,394
+23-12-2021,US,South Carolina,Dillon,6574,6455,0,119
+23-12-2021,US,South Carolina,Darlington,12587,12349,0,238
+23-12-2021,US,South Carolina,Colleton,5849,5657,0,192
+23-12-2021,US,South Carolina,Clarendon,5324,5187,0,137
+23-12-2021,US,South Carolina,Chesterfield,7912,7757,0,155
+23-12-2021,US,South Carolina,Chester,6811,6688,0,123
+23-12-2021,US,South Carolina,Cherokee,10534,10272,0,262
+23-12-2021,US,South Carolina,Charleston,68566,67813,0,753
+23-12-2021,US,South Carolina,Calhoun,1806,1753,0,53
+23-12-2021,US,South Carolina,Berkeley,32327,31966,0,361
+23-12-2021,US,South Carolina,Beaufort,28185,27864,0,321
+23-12-2021,US,South Carolina,Barnwell,3992,3904,0,88
+23-12-2021,US,South Carolina,Bamberg,2215,2151,0,64
+23-12-2021,US,South Carolina,Anderson,39027,38216,0,811
+23-12-2021,US,South Carolina,Allendale,1393,1372,0,21
+23-12-2021,US,South Carolina,Aiken,28150,27786,0,364
+23-12-2021,US,South Carolina,Abbeville,4157,4104,0,53
+23-12-2021,US,Rhode Island,Washington,17872,17682,0,190
+23-12-2021,US,Rhode Island,Unassigned,18543,18511,0,32
+23-12-2021,US,Rhode Island,Providence,134381,132208,0,2173
+23-12-2021,US,Rhode Island,Newport,10929,10873,0,56
+23-12-2021,US,Rhode Island,Kent,28171,27757,0,414
+23-12-2021,US,Rhode Island,Bristol,7332,7179,0,153
+23-12-2021,US,Recovered,,0,0,0,0
+23-12-2021,US,Puerto Rico,Yauco,1224,1224,0,0
+23-12-2021,US,Puerto Rico,Yabucoa,1439,1439,0,0
+23-12-2021,US,Puerto Rico,Villalba,991,991,0,0
+23-12-2021,US,Puerto Rico,Vieques,216,216,0,0
+23-12-2021,US,Puerto Rico,Vega Baja,4316,4316,0,0
+23-12-2021,US,Puerto Rico,Vega Alta,2670,2670,0,0
+23-12-2021,US,Puerto Rico,Utuado,1243,1243,0,0
+23-12-2021,US,Puerto Rico,Unassigned,5107,1819,0,3288
+23-12-2021,US,Puerto Rico,Trujillo Alto,4366,4366,0,0
+23-12-2021,US,Puerto Rico,Toa Baja,5692,5692,0,0
+23-12-2021,US,Puerto Rico,Toa Alta,5508,5508,0,0
+23-12-2021,US,Puerto Rico,Santa Isabel,733,733,0,0
+23-12-2021,US,Puerto Rico,San Sebastian,2086,2086,0,0
+23-12-2021,US,Puerto Rico,San Lorenzo,2301,2301,0,0
+23-12-2021,US,Puerto Rico,San Juan,28594,28594,0,0
+23-12-2021,US,Puerto Rico,San German,1064,1064,0,0
+23-12-2021,US,Puerto Rico,Salinas,1069,1069,0,0
+23-12-2021,US,Puerto Rico,Sabana Grande,699,699,0,0
+23-12-2021,US,Puerto Rico,Rio Grande,3161,3161,0,0
+23-12-2021,US,Puerto Rico,Rincon,851,851,0,0
+23-12-2021,US,Puerto Rico,Quebradillas,1358,1358,0,0
+23-12-2021,US,Puerto Rico,Ponce,5622,5622,0,0
+23-12-2021,US,Puerto Rico,Penuelas,770,770,0,0
+23-12-2021,US,Puerto Rico,Patillas,488,488,0,0
+23-12-2021,US,Puerto Rico,Out of PR,434,434,0,0
+23-12-2021,US,Puerto Rico,Orocovis,1092,1092,0,0
+23-12-2021,US,Puerto Rico,Naranjito,2173,2173,0,0
+23-12-2021,US,Puerto Rico,Naguabo,1426,1426,0,0
+23-12-2021,US,Puerto Rico,Morovis,1869,1869,0,0
+23-12-2021,US,Puerto Rico,Moca,2283,2283,0,0
+23-12-2021,US,Puerto Rico,Mayaguez,3759,3759,0,0
+23-12-2021,US,Puerto Rico,Maunabo,482,482,0,0
+23-12-2021,US,Puerto Rico,Maricao,146,146,0,0
+23-12-2021,US,Puerto Rico,Manati,2160,2160,0,0
+23-12-2021,US,Puerto Rico,Luquillo,1162,1162,0,0
+23-12-2021,US,Puerto Rico,Loiza,1696,1696,0,0
+23-12-2021,US,Puerto Rico,Las Piedras,2193,2193,0,0
+23-12-2021,US,Puerto Rico,Las Marias,343,343,0,0
+23-12-2021,US,Puerto Rico,Lares,1131,1131,0,0
+23-12-2021,US,Puerto Rico,Lajas,730,730,0,0
+23-12-2021,US,Puerto Rico,Juncos,2937,2937,0,0
+23-12-2021,US,Puerto Rico,Juana Diaz,1673,1673,0,0
+23-12-2021,US,Puerto Rico,Jayuya,477,477,0,0
+23-12-2021,US,Puerto Rico,Isabela,2522,2522,0,0
+23-12-2021,US,Puerto Rico,Humacao,2972,2972,0,0
+23-12-2021,US,Puerto Rico,Hormigueros,672,672,0,0
+23-12-2021,US,Puerto Rico,Hatillo,1837,1837,0,0
+23-12-2021,US,Puerto Rico,Gurabo,3064,3064,0,0
+23-12-2021,US,Puerto Rico,Guaynabo,6860,6860,0,0
+23-12-2021,US,Puerto Rico,Guayanilla,576,576,0,0
+23-12-2021,US,Puerto Rico,Guayama,1320,1320,0,0
+23-12-2021,US,Puerto Rico,Guanica,406,406,0,0
+23-12-2021,US,Puerto Rico,Florida,725,725,0,0
+23-12-2021,US,Puerto Rico,Fajardo,1843,1843,0,0
+23-12-2021,US,Puerto Rico,Dorado,3049,3049,0,0
+23-12-2021,US,Puerto Rico,Culebra,55,55,0,0
+23-12-2021,US,Puerto Rico,Corozal,2191,2191,0,0
+23-12-2021,US,Puerto Rico,Comerio,994,994,0,0
+23-12-2021,US,Puerto Rico,Coamo,1315,1315,0,0
+23-12-2021,US,Puerto Rico,Cidra,1964,1964,0,0
+23-12-2021,US,Puerto Rico,Ciales,1015,1015,0,0
+23-12-2021,US,Puerto Rico,Ceiba,575,575,0,0
+23-12-2021,US,Puerto Rico,Cayey,1963,1963,0,0
+23-12-2021,US,Puerto Rico,Catano,1744,1744,0,0
+23-12-2021,US,Puerto Rico,Carolina,12755,12755,0,0
+23-12-2021,US,Puerto Rico,Canovanas,2911,2911,0,0
+23-12-2021,US,Puerto Rico,Camuy,1697,1697,0,0
+23-12-2021,US,Puerto Rico,Caguas,8951,8951,0,0
+23-12-2021,US,Puerto Rico,Cabo Rojo,1829,1829,0,0
+23-12-2021,US,Puerto Rico,Bayamon,15050,15050,0,0
+23-12-2021,US,Puerto Rico,Barranquitas,1752,1752,0,0
+23-12-2021,US,Puerto Rico,Barceloneta,1152,1152,0,0
+23-12-2021,US,Puerto Rico,Arroyo,446,446,0,0
+23-12-2021,US,Puerto Rico,Arecibo,4485,4485,0,0
+23-12-2021,US,Puerto Rico,Anasco,1338,1338,0,0
+23-12-2021,US,Puerto Rico,Aibonito,1079,1079,0,0
+23-12-2021,US,Puerto Rico,Aguas Buenas,1595,1595,0,0
+23-12-2021,US,Puerto Rico,Aguadilla,2910,2910,0,0
+23-12-2021,US,Puerto Rico,Aguada,2430,2430,0,0
+23-12-2021,US,Puerto Rico,Adjuntas,686,686,0,0
+23-12-2021,US,Pennsylvania,York,80756,79591,0,1165
+23-12-2021,US,Pennsylvania,Wyoming,3651,3568,0,83
+23-12-2021,US,Pennsylvania,Westmoreland,57133,56048,0,1085
+23-12-2021,US,Pennsylvania,Wayne,7250,7112,0,138
+23-12-2021,US,Pennsylvania,Washington,33536,33036,0,500
+23-12-2021,US,Pennsylvania,Warren,5531,5354,0,177
+23-12-2021,US,Pennsylvania,Venango,8840,8642,0,198
+23-12-2021,US,Pennsylvania,Union,8782,8654,0,128
+23-12-2021,US,Pennsylvania,Unassigned,0,0,0,0
+23-12-2021,US,Pennsylvania,Tioga,6074,5906,0,168
+23-12-2021,US,Pennsylvania,Susquehanna,5474,5392,0,82
+23-12-2021,US,Pennsylvania,Sullivan,776,748,0,28
+23-12-2021,US,Pennsylvania,Somerset,13602,13287,0,315
+23-12-2021,US,Pennsylvania,Snyder,6035,5914,0,121
+23-12-2021,US,Pennsylvania,Schuylkill,25262,24716,0,546
+23-12-2021,US,Pennsylvania,Potter,2544,2468,0,76
+23-12-2021,US,Pennsylvania,Pike,6820,6749,0,71
+23-12-2021,US,Pennsylvania,Philadelphia,207061,202848,0,4213
+23-12-2021,US,Pennsylvania,Perry,6611,6462,0,149
+23-12-2021,US,Pennsylvania,Northumberland,16536,16072,0,464
+23-12-2021,US,Pennsylvania,Northampton,54959,54098,0,861
+23-12-2021,US,Pennsylvania,Montour,3161,3080,0,81
+23-12-2021,US,Pennsylvania,Montgomery,102516,100547,0,1969
+23-12-2021,US,Pennsylvania,Monroe,24456,24052,0,404
+23-12-2021,US,Pennsylvania,Mifflin,8987,8752,0,235
+23-12-2021,US,Pennsylvania,Mercer,17607,17186,0,421
+23-12-2021,US,Pennsylvania,McKean,6233,6120,0,113
+23-12-2021,US,Pennsylvania,Lycoming,21202,20766,0,436
+23-12-2021,US,Pennsylvania,Luzerne,50896,49847,0,1049
+23-12-2021,US,Pennsylvania,Lehigh,59662,58633,0,1029
+23-12-2021,US,Pennsylvania,Lebanon,25858,25471,0,387
+23-12-2021,US,Pennsylvania,Lawrence,14009,13683,0,326
+23-12-2021,US,Pennsylvania,Lancaster,86711,85193,0,1518
+23-12-2021,US,Pennsylvania,Lackawanna,28205,27620,0,585
+23-12-2021,US,Pennsylvania,Juniata,3716,3573,0,143
+23-12-2021,US,Pennsylvania,Jefferson,6735,6554,0,181
+23-12-2021,US,Pennsylvania,Indiana,12082,11793,0,289
+23-12-2021,US,Pennsylvania,Huntingdon,8275,8078,0,197
+23-12-2021,US,Pennsylvania,Greene,6189,6111,0,78
+23-12-2021,US,Pennsylvania,Fulton,3040,2995,0,45
+23-12-2021,US,Pennsylvania,Franklin,28053,27518,0,535
+23-12-2021,US,Pennsylvania,Forest,1846,1815,0,31
+23-12-2021,US,Pennsylvania,Fayette,22377,21853,0,524
+23-12-2021,US,Pennsylvania,Erie,39881,39264,0,617
+23-12-2021,US,Pennsylvania,Elk,5223,5150,0,73
+23-12-2021,US,Pennsylvania,Delaware,72308,70746,0,1562
+23-12-2021,US,Pennsylvania,Dauphin,41756,41012,0,744
+23-12-2021,US,Pennsylvania,Cumberland,35172,34465,0,707
+23-12-2021,US,Pennsylvania,Crawford,14715,14462,0,253
+23-12-2021,US,Pennsylvania,Columbia,10547,10365,0,182
+23-12-2021,US,Pennsylvania,Clinton,6575,6473,0,102
+23-12-2021,US,Pennsylvania,Clearfield,14096,13842,0,254
+23-12-2021,US,Pennsylvania,Clarion,6414,6245,0,169
+23-12-2021,US,Pennsylvania,Chester,62064,61120,0,944
+23-12-2021,US,Pennsylvania,Centre,24917,24636,0,281
+23-12-2021,US,Pennsylvania,Carbon,11271,11044,0,227
+23-12-2021,US,Pennsylvania,Cameron,635,622,0,13
+23-12-2021,US,Pennsylvania,Cambria,24689,24080,0,609
+23-12-2021,US,Pennsylvania,Butler,31567,30965,0,602
+23-12-2021,US,Pennsylvania,Bucks,86640,85110,0,1530
+23-12-2021,US,Pennsylvania,Bradford,10335,10185,0,150
+23-12-2021,US,Pennsylvania,Blair,22595,22105,0,490
+23-12-2021,US,Pennsylvania,Berks,72387,71105,0,1282
+23-12-2021,US,Pennsylvania,Bedford,8517,8299,0,218
+23-12-2021,US,Pennsylvania,Beaver,28847,28262,0,585
+23-12-2021,US,Pennsylvania,Armstrong,11549,11280,0,269
+23-12-2021,US,Pennsylvania,Allegheny,165659,162971,0,2688
+23-12-2021,US,Pennsylvania,Adams,17099,16834,0,265
+23-12-2021,US,Oregon,Yamhill,10300,10145,0,155
+23-12-2021,US,Oregon,Wheeler,137,135,0,2
+23-12-2021,US,Oregon,Washington,44235,43796,0,439
+23-12-2021,US,Oregon,Wasco,3271,3223,0,48
+23-12-2021,US,Oregon,Wallowa,775,762,0,13
+23-12-2021,US,Oregon,Union,3488,3425,0,63
+23-12-2021,US,Oregon,Unassigned,0,0,0,0
+23-12-2021,US,Oregon,Umatilla,15337,15151,0,186
+23-12-2021,US,Oregon,Tillamook,2349,2301,0,48
+23-12-2021,US,Oregon,Sherman,198,195,0,3
+23-12-2021,US,Oregon,Polk,8680,8570,0,110
+23-12-2021,US,Oregon,Multnomah,63468,62568,0,900
+23-12-2021,US,Oregon,Morrow,2028,2003,0,25
+23-12-2021,US,Oregon,Marion,41458,40915,0,543
+23-12-2021,US,Oregon,Malheur,5979,5885,0,94
+23-12-2021,US,Oregon,Linn,15645,15442,0,203
+23-12-2021,US,Oregon,Lincoln,3810,3752,0,58
+23-12-2021,US,Oregon,Lane,31488,31107,0,381
+23-12-2021,US,Oregon,Lake,1076,1055,0,21
+23-12-2021,US,Oregon,Klamath,9289,9125,0,164
+23-12-2021,US,Oregon,Josephine,10768,10507,0,261
+23-12-2021,US,Oregon,Jefferson,4357,4288,0,69
+23-12-2021,US,Oregon,Jackson,26046,25663,0,383
+23-12-2021,US,Oregon,Hood River,2245,2207,0,38
+23-12-2021,US,Oregon,Harney,1241,1207,0,34
+23-12-2021,US,Oregon,Grant,1134,1117,0,17
+23-12-2021,US,Oregon,Gilliam,193,189,0,4
+23-12-2021,US,Oregon,Douglas,14092,13780,0,312
+23-12-2021,US,Oregon,Deschutes,24955,24744,0,211
+23-12-2021,US,Oregon,Curry,1982,1942,0,40
+23-12-2021,US,Oregon,Crook,3571,3511,0,60
+23-12-2021,US,Oregon,Coos,6201,6083,0,118
+23-12-2021,US,Oregon,Columbia,4695,4634,0,61
+23-12-2021,US,Oregon,Clatsop,2788,2753,0,35
+23-12-2021,US,Oregon,Clackamas,34505,34085,0,420
+23-12-2021,US,Oregon,Benton,6492,6449,0,43
+23-12-2021,US,Oregon,Baker,2289,2253,0,36
+23-12-2021,US,Oklahoma,Woodward,4172,4117,0,55
+23-12-2021,US,Oklahoma,Woods,1771,1741,0,30
+23-12-2021,US,Oklahoma,Washita,1732,1698,0,34
+23-12-2021,US,Oklahoma,Washington,8956,8746,0,210
+23-12-2021,US,Oklahoma,Wagoner,13680,13463,0,217
+23-12-2021,US,Oklahoma,Unassigned,4614,3767,0,847
+23-12-2021,US,Oklahoma,Tulsa,115887,114081,0,1806
+23-12-2021,US,Oklahoma,Tillman,1075,1049,0,26
+23-12-2021,US,Oklahoma,Texas,4480,4439,0,41
+23-12-2021,US,Oklahoma,Stephens,8121,7967,0,154
+23-12-2021,US,Oklahoma,Sequoyah,7074,6980,0,94
+23-12-2021,US,Oklahoma,Seminole,4150,4043,0,107
+23-12-2021,US,Oklahoma,Rogers,17217,16908,0,309
+23-12-2021,US,Oklahoma,Roger Mills,677,665,0,12
+23-12-2021,US,Oklahoma,Pushmataha,1874,1834,0,40
+23-12-2021,US,Oklahoma,Pottawatomie,13250,13035,0,215
+23-12-2021,US,Oklahoma,Pontotoc,7342,7235,0,107
+23-12-2021,US,Oklahoma,Pittsburg,7235,7066,0,169
+23-12-2021,US,Oklahoma,Payne,12635,12510,0,125
+23-12-2021,US,Oklahoma,Pawnee,2852,2782,0,70
+23-12-2021,US,Oklahoma,Out of OK,0,0,0,0
+23-12-2021,US,Oklahoma,Ottawa,6587,6481,0,106
+23-12-2021,US,Oklahoma,Osage,7493,7354,0,139
+23-12-2021,US,Oklahoma,Okmulgee,6559,6406,0,153
+23-12-2021,US,Oklahoma,Oklahoma,127977,126006,0,1971
+23-12-2021,US,Oklahoma,Okfuskee,2469,2420,0,49
+23-12-2021,US,Oklahoma,Nowata,1934,1901,0,33
+23-12-2021,US,Oklahoma,Noble,2001,1968,0,33
+23-12-2021,US,Oklahoma,Muskogee,14147,13871,0,276
+23-12-2021,US,Oklahoma,Murray,2800,2743,0,57
+23-12-2021,US,Oklahoma,McIntosh,3044,2938,0,106
+23-12-2021,US,Oklahoma,McCurtain,5921,5782,0,139
+23-12-2021,US,Oklahoma,McClain,7962,7855,0,107
+23-12-2021,US,Oklahoma,Mayes,7235,7102,0,133
+23-12-2021,US,Oklahoma,Marshall,2937,2906,0,31
+23-12-2021,US,Oklahoma,Major,1467,1433,0,34
+23-12-2021,US,Oklahoma,Love,2057,2027,0,30
+23-12-2021,US,Oklahoma,Logan,6613,6490,0,123
+23-12-2021,US,Oklahoma,Lincoln,5215,5097,0,118
+23-12-2021,US,Oklahoma,Le Flore,8698,8604,0,94
+23-12-2021,US,Oklahoma,Latimer,1620,1592,0,28
+23-12-2021,US,Oklahoma,Kiowa,1238,1193,0,45
+23-12-2021,US,Oklahoma,Kingfisher,2750,2694,0,56
+23-12-2021,US,Oklahoma,Kay,8285,8113,0,172
+23-12-2021,US,Oklahoma,Johnston,2037,1988,0,49
+23-12-2021,US,Oklahoma,Jefferson,978,958,0,20
+23-12-2021,US,Oklahoma,Jackson,4383,4294,0,89
+23-12-2021,US,Oklahoma,Hughes,1829,1781,0,48
+23-12-2021,US,Oklahoma,Haskell,1924,1893,0,31
+23-12-2021,US,Oklahoma,Harper,550,540,0,10
+23-12-2021,US,Oklahoma,Harmon,398,389,0,9
+23-12-2021,US,Oklahoma,Greer,824,797,0,27
+23-12-2021,US,Oklahoma,Grant,737,729,0,8
+23-12-2021,US,Oklahoma,Grady,8954,8756,0,198
+23-12-2021,US,Oklahoma,Garvin,5062,4955,0,107
+23-12-2021,US,Oklahoma,Garfield,10890,10671,0,219
+23-12-2021,US,Oklahoma,Ellis,551,545,0,6
+23-12-2021,US,Oklahoma,Dewey,765,741,0,24
+23-12-2021,US,Oklahoma,Delaware,7849,7681,0,168
+23-12-2021,US,Oklahoma,Custer,5657,5523,0,134
+23-12-2021,US,Oklahoma,Creek,12050,11776,0,274
+23-12-2021,US,Oklahoma,Craig,3301,3265,0,36
+23-12-2021,US,Oklahoma,Cotton,1024,1001,0,23
+23-12-2021,US,Oklahoma,Comanche,21863,21533,0,330
+23-12-2021,US,Oklahoma,Coal,1103,1083,0,20
+23-12-2021,US,Oklahoma,Cleveland,46549,45908,0,641
+23-12-2021,US,Oklahoma,Cimarron,411,411,0,0
+23-12-2021,US,Oklahoma,Choctaw,2851,2799,0,52
+23-12-2021,US,Oklahoma,Cherokee,9369,9243,0,126
+23-12-2021,US,Oklahoma,Carter,9556,9357,0,199
+23-12-2021,US,Oklahoma,Canadian,25092,24784,0,308
+23-12-2021,US,Oklahoma,Caddo,5589,5452,0,137
+23-12-2021,US,Oklahoma,Bryan,9345,9227,0,118
+23-12-2021,US,Oklahoma,Blaine,1692,1660,0,32
+23-12-2021,US,Oklahoma,Beckham,4183,4100,0,83
+23-12-2021,US,Oklahoma,Beaver,661,652,0,9
+23-12-2021,US,Oklahoma,Atoka,2826,2786,0,40
+23-12-2021,US,Oklahoma,Alfalfa,1420,1411,0,9
+23-12-2021,US,Oklahoma,Adair,5123,5060,0,63
+23-12-2021,US,Ohio,Wyandot,4081,3998,0,83
+23-12-2021,US,Ohio,Wood,21706,21422,0,284
+23-12-2021,US,Ohio,Williams,6970,6839,0,131
+23-12-2021,US,Ohio,Wayne,17193,16851,0,342
+23-12-2021,US,Ohio,Washington,9029,8863,0,166
+23-12-2021,US,Ohio,Warren,38874,38417,0,457
+23-12-2021,US,Ohio,Vinton,2008,1963,0,45
+23-12-2021,US,Ohio,Van Wert,4994,4880,0,114
+23-12-2021,US,Ohio,Union,10303,10222,0,81
+23-12-2021,US,Ohio,Unassigned,0,-7,0,7
+23-12-2021,US,Ohio,Tuscarawas,15776,15365,0,411
+23-12-2021,US,Ohio,Trumbull,30163,29435,0,728
+23-12-2021,US,Ohio,Summit,82603,81260,0,1343
+23-12-2021,US,Ohio,Stark,59193,57857,0,1336
+23-12-2021,US,Ohio,Shelby,8026,7874,0,152
+23-12-2021,US,Ohio,Seneca,9621,9432,0,189
+23-12-2021,US,Ohio,Scioto,13446,13249,0,197
+23-12-2021,US,Ohio,Sandusky,10108,9913,0,195
+23-12-2021,US,Ohio,Ross,12677,12433,0,244
+23-12-2021,US,Ohio,Richland,22930,22529,0,401
+23-12-2021,US,Ohio,Putnam,6590,6458,0,132
+23-12-2021,US,Ohio,Preble,6826,6674,0,152
+23-12-2021,US,Ohio,Portage,24662,24316,0,346
+23-12-2021,US,Ohio,Pike,4930,4846,0,84
+23-12-2021,US,Ohio,Pickaway,12932,12764,0,168
+23-12-2021,US,Ohio,Perry,6067,5973,0,94
+23-12-2021,US,Ohio,Paulding,3525,3463,0,62
+23-12-2021,US,Ohio,Ottawa,6184,6066,0,118
+23-12-2021,US,Ohio,Noble,2331,2280,0,51
+23-12-2021,US,Ohio,Muskingum,17805,17572,0,233
+23-12-2021,US,Ohio,Morrow,5628,5552,0,76
+23-12-2021,US,Ohio,Morgan,2341,2295,0,46
+23-12-2021,US,Ohio,Montgomery,86134,84609,0,1525
+23-12-2021,US,Ohio,Monroe,2536,2469,0,67
+23-12-2021,US,Ohio,Miami,18632,18255,0,377
+23-12-2021,US,Ohio,Mercer,7304,7192,0,112
+23-12-2021,US,Ohio,Meigs,3223,3155,0,68
+23-12-2021,US,Ohio,Medina,29506,29103,0,403
+23-12-2021,US,Ohio,Marion,14450,14230,0,220
+23-12-2021,US,Ohio,Mahoning,38965,38079,0,886
+23-12-2021,US,Ohio,Madison,6921,6817,0,104
+23-12-2021,US,Ohio,Lucas,67958,66831,0,1127
+23-12-2021,US,Ohio,Lorain,48807,48051,0,756
+23-12-2021,US,Ohio,Logan,7575,7439,0,136
+23-12-2021,US,Ohio,Licking,29558,29184,0,374
+23-12-2021,US,Ohio,Lawrence,11378,11192,0,186
+23-12-2021,US,Ohio,Lake,37543,36971,0,572
+23-12-2021,US,Ohio,Knox,9495,9306,0,189
+23-12-2021,US,Ohio,Jefferson,10371,10119,0,252
+23-12-2021,US,Ohio,Jackson,6185,6073,0,112
+23-12-2021,US,Ohio,Huron,10784,10607,0,177
+23-12-2021,US,Ohio,Holmes,4229,4072,0,157
+23-12-2021,US,Ohio,Hocking,4491,4393,0,98
+23-12-2021,US,Ohio,Highland,7303,7166,0,137
+23-12-2021,US,Ohio,Henry,4685,4595,0,90
+23-12-2021,US,Ohio,Harrison,2334,2275,0,59
+23-12-2021,US,Ohio,Hardin,5317,5195,0,122
+23-12-2021,US,Ohio,Hancock,12466,12248,0,218
+23-12-2021,US,Ohio,Hamilton,123377,121705,0,1672
+23-12-2021,US,Ohio,Guernsey,7588,7485,0,103
+23-12-2021,US,Ohio,Greene,25896,25492,0,404
+23-12-2021,US,Ohio,Geauga,12404,12197,0,207
+23-12-2021,US,Ohio,Gallia,5058,4971,0,87
+23-12-2021,US,Ohio,Fulton,7798,7655,0,143
+23-12-2021,US,Ohio,Franklin,193575,191598,0,1977
+23-12-2021,US,Ohio,Fayette,5410,5329,0,81
+23-12-2021,US,Ohio,Fairfield,26613,26291,0,322
+23-12-2021,US,Ohio,Erie,13849,13630,0,219
+23-12-2021,US,Ohio,Delaware,29520,29319,0,201
+23-12-2021,US,Ohio,Defiance,7863,7732,0,131
+23-12-2021,US,Ohio,Darke,9078,8884,0,194
+23-12-2021,US,Ohio,Cuyahoga,206097,203181,0,2916
+23-12-2021,US,Ohio,Crawford,8058,7890,0,168
+23-12-2021,US,Ohio,Coshocton,5995,5862,0,133
+23-12-2021,US,Ohio,Columbiana,18316,17927,0,389
+23-12-2021,US,Ohio,Clinton,7028,6909,0,119
+23-12-2021,US,Ohio,Clermont,34255,33844,0,411
+23-12-2021,US,Ohio,Clark,24308,23890,0,418
+23-12-2021,US,Ohio,Champaign,6334,6233,0,101
+23-12-2021,US,Ohio,Carroll,4069,3972,0,97
+23-12-2021,US,Ohio,Butler,61521,60620,0,901
+23-12-2021,US,Ohio,Brown,7800,7663,0,137
+23-12-2021,US,Ohio,Belmont,11106,10859,0,247
+23-12-2021,US,Ohio,Auglaize,8512,8376,0,136
+23-12-2021,US,Ohio,Athens,8833,8728,0,105
+23-12-2021,US,Ohio,Ashtabula,14632,14310,0,322
+23-12-2021,US,Ohio,Ashland,8778,8610,0,168
+23-12-2021,US,Ohio,Allen,20351,19970,0,381
+23-12-2021,US,Ohio,Adams,4883,4766,0,117
+23-12-2021,US,Northern Mariana Islands,,2737,2729,0,8
+23-12-2021,US,North Dakota,Williams,7978,7917,0,61
+23-12-2021,US,North Dakota,Wells,773,762,0,11
+23-12-2021,US,North Dakota,Ward,15005,14772,0,233
+23-12-2021,US,North Dakota,Walsh,2562,2529,0,33
+23-12-2021,US,North Dakota,Unassigned,0,-44,0,44
+23-12-2021,US,North Dakota,Traill,1652,1631,0,21
+23-12-2021,US,North Dakota,Towner,468,457,0,11
+23-12-2021,US,North Dakota,Stutsman,5100,5008,0,92
+23-12-2021,US,North Dakota,Steele,295,293,0,2
+23-12-2021,US,North Dakota,Stark,9034,8955,0,79
+23-12-2021,US,North Dakota,Slope,55,55,0,0
+23-12-2021,US,North Dakota,Sioux,975,957,0,18
+23-12-2021,US,North Dakota,Sheridan,234,229,0,5
+23-12-2021,US,North Dakota,Sargent,770,761,0,9
+23-12-2021,US,North Dakota,Rolette,3536,3500,0,36
+23-12-2021,US,North Dakota,Richland,2984,2963,0,21
+23-12-2021,US,North Dakota,Renville,450,435,0,15
+23-12-2021,US,North Dakota,Ransom,1072,1049,0,23
+23-12-2021,US,North Dakota,Ramsey,2595,2553,0,42
+23-12-2021,US,North Dakota,Pierce,843,814,0,29
+23-12-2021,US,North Dakota,Pembina,1488,1473,0,15
+23-12-2021,US,North Dakota,Oliver,252,248,0,4
+23-12-2021,US,North Dakota,Nelson,617,601,0,16
+23-12-2021,US,North Dakota,Mountrail,2243,2211,0,32
+23-12-2021,US,North Dakota,Morton,8397,8268,0,129
+23-12-2021,US,North Dakota,Mercer,1958,1936,0,22
+23-12-2021,US,North Dakota,McLean,2177,2130,0,47
+23-12-2021,US,North Dakota,McKenzie,2643,2620,0,23
+23-12-2021,US,North Dakota,McIntosh,538,529,0,9
+23-12-2021,US,North Dakota,McHenry,1049,1021,0,28
+23-12-2021,US,North Dakota,Logan,350,339,0,11
+23-12-2021,US,North Dakota,LaMoure,770,752,0,18
+23-12-2021,US,North Dakota,Kidder,400,387,0,13
+23-12-2021,US,North Dakota,Hettinger,557,550,0,7
+23-12-2021,US,North Dakota,Griggs,455,453,0,2
+23-12-2021,US,North Dakota,Grant,369,360,0,9
+23-12-2021,US,North Dakota,Grand Forks,14753,14651,0,102
+23-12-2021,US,North Dakota,Golden Valley,381,377,0,4
+23-12-2021,US,North Dakota,Foster,723,704,0,19
+23-12-2021,US,North Dakota,Emmons,607,591,0,16
+23-12-2021,US,North Dakota,Eddy,586,580,0,6
+23-12-2021,US,North Dakota,Dunn,859,852,0,7
+23-12-2021,US,North Dakota,Divide,333,330,0,3
+23-12-2021,US,North Dakota,Dickey,1180,1142,0,38
+23-12-2021,US,North Dakota,Cavalier,590,584,0,6
+23-12-2021,US,North Dakota,Cass,38626,38343,0,283
+23-12-2021,US,North Dakota,Burleigh,25054,24775,0,279
+23-12-2021,US,North Dakota,Burke,359,356,0,3
+23-12-2021,US,North Dakota,Bowman,674,666,0,8
+23-12-2021,US,North Dakota,Bottineau,1177,1153,0,24
+23-12-2021,US,North Dakota,Billings,116,115,0,1
+23-12-2021,US,North Dakota,Benson,1466,1445,0,21
+23-12-2021,US,North Dakota,Barnes,2189,2149,0,40
+23-12-2021,US,North Dakota,Adams,467,459,0,8
+23-12-2021,US,North Carolina,Yancey,3356,3320,0,36
+23-12-2021,US,North Carolina,Yadkin,6957,6875,0,82
+23-12-2021,US,North Carolina,Wilson,13927,13684,0,243
+23-12-2021,US,North Carolina,Wilkes,11682,11484,0,198
+23-12-2021,US,North Carolina,Wayne,18349,18017,0,332
+23-12-2021,US,North Carolina,Watauga,7308,7266,0,42
+23-12-2021,US,North Carolina,Washington,1684,1646,0,38
+23-12-2021,US,North Carolina,Warren,2611,2575,0,36
+23-12-2021,US,North Carolina,Wake,141967,141051,0,916
+23-12-2021,US,North Carolina,Vance,7454,7350,0,104
+23-12-2021,US,North Carolina,Union,40023,39640,0,383
+23-12-2021,US,North Carolina,Unassigned,21,21,0,0
+23-12-2021,US,North Carolina,Tyrrell,606,599,0,7
+23-12-2021,US,North Carolina,Transylvania,4300,4247,0,53
+23-12-2021,US,North Carolina,Swain,2240,2212,0,28
+23-12-2021,US,North Carolina,Surry,14067,13813,0,254
+23-12-2021,US,North Carolina,Stokes,7312,7193,0,119
+23-12-2021,US,North Carolina,Stanly,12775,12564,0,211
+23-12-2021,US,North Carolina,Scotland,6047,5937,0,110
+23-12-2021,US,North Carolina,Sampson,11958,11815,0,143
+23-12-2021,US,North Carolina,Rutherford,12062,11715,0,347
+23-12-2021,US,North Carolina,Rowan,28194,27706,0,488
+23-12-2021,US,North Carolina,Rockingham,13859,13639,0,220
+23-12-2021,US,North Carolina,Robeson,26322,25873,0,449
+23-12-2021,US,North Carolina,Richmond,7649,7498,0,151
+23-12-2021,US,North Carolina,Randolph,23888,23550,0,338
+23-12-2021,US,North Carolina,Polk,2510,2461,0,49
+23-12-2021,US,North Carolina,Pitt,31585,31439,0,146
+23-12-2021,US,North Carolina,Person,5739,5648,0,91
+23-12-2021,US,North Carolina,Perquimans,1774,1758,0,16
+23-12-2021,US,North Carolina,Pender,9549,9446,0,103
+23-12-2021,US,North Carolina,Pasquotank,5730,5620,0,110
+23-12-2021,US,North Carolina,Pamlico,1797,1771,0,26
+23-12-2021,US,North Carolina,Orange,12893,12781,0,112
+23-12-2021,US,North Carolina,Onslow,31403,31125,0,278
+23-12-2021,US,North Carolina,Northampton,2687,2621,0,66
+23-12-2021,US,North Carolina,New Hanover,30247,29947,0,300
+23-12-2021,US,North Carolina,Nash,16191,15949,0,242
+23-12-2021,US,North Carolina,Moore,14618,14360,0,258
+23-12-2021,US,North Carolina,Montgomery,4827,4717,0,110
+23-12-2021,US,North Carolina,Mitchell,2315,2291,0,24
+23-12-2021,US,North Carolina,Mecklenburg,169887,168576,0,1311
+23-12-2021,US,North Carolina,McDowell,9140,9002,0,138
+23-12-2021,US,North Carolina,Martin,3849,3774,0,75
+23-12-2021,US,North Carolina,Madison,3101,3035,0,66
+23-12-2021,US,North Carolina,Macon,5261,5174,0,87
+23-12-2021,US,North Carolina,Lincoln,16630,16511,0,119
+23-12-2021,US,North Carolina,Lenoir,10004,9825,0,179
+23-12-2021,US,North Carolina,Lee,9987,9871,0,116
+23-12-2021,US,North Carolina,Jones,1414,1378,0,36
+23-12-2021,US,North Carolina,Johnston,35370,35023,0,347
+23-12-2021,US,North Carolina,Jackson,6175,6099,0,76
+23-12-2021,US,North Carolina,Iredell,32137,31795,0,342
+23-12-2021,US,North Carolina,Hyde,880,868,0,12
+23-12-2021,US,North Carolina,Hoke,7784,7693,0,91
+23-12-2021,US,North Carolina,Hertford,2969,2897,0,72
+23-12-2021,US,North Carolina,Henderson,17061,16841,0,220
+23-12-2021,US,North Carolina,Haywood,8319,8162,0,157
+23-12-2021,US,North Carolina,Harnett,19868,19591,0,277
+23-12-2021,US,North Carolina,Halifax,8227,8081,0,146
+23-12-2021,US,North Carolina,Guilford,74053,73117,0,936
+23-12-2021,US,North Carolina,Greene,3546,3490,0,56
+23-12-2021,US,North Carolina,Granville,8685,8579,0,106
+23-12-2021,US,North Carolina,Graham,1436,1408,0,28
+23-12-2021,US,North Carolina,Gates,1192,1174,0,18
+23-12-2021,US,North Carolina,Gaston,43817,43168,0,649
+23-12-2021,US,North Carolina,Franklin,10797,10733,0,64
+23-12-2021,US,North Carolina,Forsyth,56881,56274,0,607
+23-12-2021,US,North Carolina,Edgecombe,8376,8249,0,127
+23-12-2021,US,North Carolina,Durham,37370,37101,0,269
+23-12-2021,US,North Carolina,Duplin,10593,10394,0,199
+23-12-2021,US,North Carolina,Davie,7289,7207,0,82
+23-12-2021,US,North Carolina,Davidson,28387,28055,0,332
+23-12-2021,US,North Carolina,Dare,4495,4480,0,15
+23-12-2021,US,North Carolina,Currituck,3194,3167,0,27
+23-12-2021,US,North Carolina,Cumberland,50189,49687,0,502
+23-12-2021,US,North Carolina,Craven,15090,14926,0,164
+23-12-2021,US,North Carolina,Columbus,10576,10343,0,233
+23-12-2021,US,North Carolina,Cleveland,19652,19330,0,322
+23-12-2021,US,North Carolina,Clay,1744,1706,0,38
+23-12-2021,US,North Carolina,Chowan,2452,2408,0,44
+23-12-2021,US,North Carolina,Cherokee,4877,4790,0,87
+23-12-2021,US,North Carolina,Chatham,7434,7335,0,99
+23-12-2021,US,North Carolina,Catawba,30730,30272,0,458
+23-12-2021,US,North Carolina,Caswell,3455,3416,0,39
+23-12-2021,US,North Carolina,Carteret,8988,8905,0,83
+23-12-2021,US,North Carolina,Camden,1294,1285,0,9
+23-12-2021,US,North Carolina,Caldwell,14514,14283,0,231
+23-12-2021,US,North Carolina,Cabarrus,36144,35774,0,370
+23-12-2021,US,North Carolina,Burke,16704,16454,0,250
+23-12-2021,US,North Carolina,Buncombe,31613,31171,0,442
+23-12-2021,US,North Carolina,Brunswick,17869,17617,0,252
+23-12-2021,US,North Carolina,Bladen,5803,5707,0,96
+23-12-2021,US,North Carolina,Bertie,2629,2575,0,54
+23-12-2021,US,North Carolina,Beaufort,7796,7659,0,137
+23-12-2021,US,North Carolina,Avery,3011,2972,0,39
+23-12-2021,US,North Carolina,Ashe,3971,3913,0,58
+23-12-2021,US,North Carolina,Anson,4144,4059,0,85
+23-12-2021,US,North Carolina,Alleghany,2028,2022,0,6
+23-12-2021,US,North Carolina,Alexander,7112,6993,0,119
+23-12-2021,US,North Carolina,Alamance,28902,28527,0,375
+23-12-2021,US,New York,Yates,2301,2266,0,35
+23-12-2021,US,New York,Wyoming,6041,5968,0,73
+23-12-2021,US,New York,Westchester,162233,159854,0,2379
+23-12-2021,US,New York,Wayne,11888,11770,0,118
+23-12-2021,US,New York,Washington,7917,7829,0,88
+23-12-2021,US,New York,Warren,8550,8447,0,103
+23-12-2021,US,New York,Unassigned,177,176,0,1
+23-12-2021,US,New York,Ulster,21150,20841,0,309
+23-12-2021,US,New York,Tompkins,10694,10624,0,70
+23-12-2021,US,New York,Tioga,7309,7233,0,76
+23-12-2021,US,New York,Sullivan,11048,10953,0,95
+23-12-2021,US,New York,Suffolk,286880,283119,0,3761
+23-12-2021,US,New York,Steuben,14233,14027,0,206
+23-12-2021,US,New York,St. Lawrence,14717,14559,0,158
+23-12-2021,US,New York,Seneca,3786,3711,0,75
+23-12-2021,US,New York,Schuyler,2308,2286,0,22
+23-12-2021,US,New York,Schoharie,3269,3240,0,29
+23-12-2021,US,New York,Schenectady,21411,21150,0,261
+23-12-2021,US,New York,Saratoga,28679,28420,0,259
+23-12-2021,US,New York,Rockland,59723,58927,0,796
+23-12-2021,US,New York,Richmond,102068,100073,0,1995
+23-12-2021,US,New York,Rensselaer,19880,19672,0,208
+23-12-2021,US,New York,Queens,359276,348780,0,10496
+23-12-2021,US,New York,Putnam,14811,14707,0,104
+23-12-2021,US,New York,Out of NY,0,-365,0,365
+23-12-2021,US,New York,Otsego,6359,6288,0,71
+23-12-2021,US,New York,Oswego,16370,16227,0,143
+23-12-2021,US,New York,Orleans,6287,6184,0,103
+23-12-2021,US,New York,Orange,69283,68312,0,971
+23-12-2021,US,New York,Ontario,13463,13325,0,138
+23-12-2021,US,New York,Onondaga,66615,65744,0,871
+23-12-2021,US,New York,Oneida,37358,36672,0,686
+23-12-2021,US,New York,Niagara,32566,32105,0,461
+23-12-2021,US,New York,New York,220457,215755,0,4702
+23-12-2021,US,New York,Nassau,255844,252473,0,3371
+23-12-2021,US,New York,Montgomery,8080,7908,0,172
+23-12-2021,US,New York,Monroe,108043,106728,0,1315
+23-12-2021,US,New York,Madison,8609,8495,0,114
+23-12-2021,US,New York,Livingston,8198,8109,0,89
+23-12-2021,US,New York,Lewis,4663,4622,0,41
+23-12-2021,US,New York,Kings,394767,383671,0,11096
+23-12-2021,US,New York,Jefferson,12776,12662,0,114
+23-12-2021,US,New York,Herkimer,9649,9495,0,154
+23-12-2021,US,New York,Hamilton,583,579,0,4
+23-12-2021,US,New York,Greene,5694,5600,0,94
+23-12-2021,US,New York,Genesee,9818,9666,0,152
+23-12-2021,US,New York,Fulton,8781,8655,0,126
+23-12-2021,US,New York,Franklin,6208,6179,0,29
+23-12-2021,US,New York,Essex,3470,3424,0,46
+23-12-2021,US,New York,Erie,139128,136924,0,2204
+23-12-2021,US,New York,Dutchess,42039,41512,0,527
+23-12-2021,US,New York,Delaware,5251,5194,0,57
+23-12-2021,US,New York,Cortland,6854,6764,0,90
+23-12-2021,US,New York,Columbia,6563,6444,0,119
+23-12-2021,US,New York,Clinton,9333,9280,0,53
+23-12-2021,US,New York,Chenango,6447,6348,0,99
+23-12-2021,US,New York,Chemung,14461,14271,0,190
+23-12-2021,US,New York,Chautauqua,17053,16835,0,218
+23-12-2021,US,New York,Cayuga,10935,10816,0,119
+23-12-2021,US,New York,Cattaraugus,11206,11023,0,183
+23-12-2021,US,New York,Broome,31836,31380,0,456
+23-12-2021,US,New York,Bronx,230274,223413,0,6861
+23-12-2021,US,New York,Allegany,6823,6690,0,133
+23-12-2021,US,New York,Albany,38391,37956,0,435
+23-12-2021,US,New Mexico,Valencia,12427,12243,0,184
+23-12-2021,US,New Mexico,Union,508,496,0,12
+23-12-2021,US,New Mexico,Unassigned,5363,5363,0,0
+23-12-2021,US,New Mexico,Torrance,1856,1823,0,33
+23-12-2021,US,New Mexico,Taos,3200,3127,0,73
+23-12-2021,US,New Mexico,Socorro,2497,2428,0,69
+23-12-2021,US,New Mexico,Sierra,1468,1405,0,63
+23-12-2021,US,New Mexico,Santa Fe,16366,16171,0,195
+23-12-2021,US,New Mexico,Sandoval,20661,20351,0,310
+23-12-2021,US,New Mexico,San Miguel,3347,3314,0,33
+23-12-2021,US,New Mexico,San Juan,28128,27487,0,641
+23-12-2021,US,New Mexico,Roosevelt,3448,3368,0,80
+23-12-2021,US,New Mexico,Rio Arriba,6202,6110,0,92
+23-12-2021,US,New Mexico,Quay,1551,1523,0,28
+23-12-2021,US,New Mexico,Otero,8962,8822,0,140
+23-12-2021,US,New Mexico,Mora,460,446,0,14
+23-12-2021,US,New Mexico,McKinley,17383,16848,0,535
+23-12-2021,US,New Mexico,Luna,4844,4740,0,104
+23-12-2021,US,New Mexico,Los Alamos,1003,993,0,10
+23-12-2021,US,New Mexico,Lincoln,3662,3618,0,44
+23-12-2021,US,New Mexico,Lea,14608,14321,0,287
+23-12-2021,US,New Mexico,Hidalgo,677,665,0,12
+23-12-2021,US,New Mexico,Harding,56,52,0,4
+23-12-2021,US,New Mexico,Guadalupe,696,681,0,15
+23-12-2021,US,New Mexico,Grant,4178,4119,0,59
+23-12-2021,US,New Mexico,Eddy,12433,12212,0,221
+23-12-2021,US,New Mexico,Dona Ana,40025,39432,0,593
+23-12-2021,US,New Mexico,De Baca,391,388,0,3
+23-12-2021,US,New Mexico,Curry,8654,8519,0,135
+23-12-2021,US,New Mexico,Colfax,1697,1642,0,55
+23-12-2021,US,New Mexico,Cibola,4376,4219,0,157
+23-12-2021,US,New Mexico,Chaves,15014,14783,0,231
+23-12-2021,US,New Mexico,Catron,283,273,0,10
+23-12-2021,US,New Mexico,Bernalillo,96225,94922,0,1303
+23-12-2021,US,New Jersey,Warren,15286,15015,0,271
+23-12-2021,US,New Jersey,Union,90695,88620,0,2075
+23-12-2021,US,New Jersey,Unassigned,818,818,0,0
+23-12-2021,US,New Jersey,Sussex,21835,21474,0,361
+23-12-2021,US,New Jersey,Somerset,40858,39956,0,902
+23-12-2021,US,New Jersey,Salem,9581,9366,0,215
+23-12-2021,US,New Jersey,Passaic,92075,90014,0,2061
+23-12-2021,US,New Jersey,Ocean,111738,109282,0,2456
+23-12-2021,US,New Jersey,Morris,70254,68916,0,1338
+23-12-2021,US,New Jersey,Monmouth,109721,107915,0,1806
+23-12-2021,US,New Jersey,Middlesex,121682,119147,0,2535
+23-12-2021,US,New Jersey,Mercer,46062,44999,0,1063
+23-12-2021,US,New Jersey,Hunterdon,14698,14500,0,198
+23-12-2021,US,New Jersey,Hudson,108668,106237,0,2431
+23-12-2021,US,New Jersey,Gloucester,45631,44855,0,776
+23-12-2021,US,New Jersey,Essex,125770,122567,0,3203
+23-12-2021,US,New Jersey,Cumberland,24498,23991,0,507
+23-12-2021,US,New Jersey,Cape May,14998,14749,0,249
+23-12-2021,US,New Jersey,Camden,79065,77553,0,1512
+23-12-2021,US,New Jersey,Burlington,65001,64004,0,997
+23-12-2021,US,New Jersey,Bergen,137350,134296,0,3054
+23-12-2021,US,New Jersey,Atlantic,45050,44238,0,812
+23-12-2021,US,New Hampshire,Unassigned,2865,2847,0,18
+23-12-2021,US,New Hampshire,Sullivan,5991,5942,0,49
+23-12-2021,US,New Hampshire,Strafford,18544,18385,0,159
+23-12-2021,US,New Hampshire,Rockingham,42461,42085,0,376
+23-12-2021,US,New Hampshire,Merrimack,20025,19864,0,161
+23-12-2021,US,New Hampshire,Hillsborough,62587,61839,0,748
+23-12-2021,US,New Hampshire,Grafton,9067,9023,0,44
+23-12-2021,US,New Hampshire,Coos,4612,4530,0,82
+23-12-2021,US,New Hampshire,Cheshire,8931,8863,0,68
+23-12-2021,US,New Hampshire,Carroll,5975,5947,0,28
+23-12-2021,US,New Hampshire,Belknap,8929,8785,0,144
+23-12-2021,US,Nevada,White Pine,1308,1290,0,18
+23-12-2021,US,Nevada,Washoe,68987,67974,0,1013
+23-12-2021,US,Nevada,Unassigned,0,0,0,0
+23-12-2021,US,Nevada,Storey,234,226,0,8
+23-12-2021,US,Nevada,Pershing,1207,1178,0,29
+23-12-2021,US,Nevada,Nye,5014,4815,0,199
+23-12-2021,US,Nevada,Mineral,647,633,0,14
+23-12-2021,US,Nevada,Lyon,7263,7126,0,137
+23-12-2021,US,Nevada,Lincoln,670,665,0,5
+23-12-2021,US,Nevada,Lander,792,776,0,16
+23-12-2021,US,Nevada,Humboldt,2617,2575,0,42
+23-12-2021,US,Nevada,Eureka,186,186,0,0
+23-12-2021,US,Nevada,Esmeralda,63,61,0,2
+23-12-2021,US,Nevada,Elko,8929,8806,0,123
+23-12-2021,US,Nevada,Douglas,5179,5105,0,74
+23-12-2021,US,Nevada,Clark,356965,350550,0,6415
+23-12-2021,US,Nevada,Churchill,4376,4286,0,90
+23-12-2021,US,Nevada,Carson City,9586,9408,0,178
+23-12-2021,US,Nebraska,York,2676,2665,0,11
+23-12-2021,US,Nebraska,Wheeler,93,93,0,0
+23-12-2021,US,Nebraska,Webster,557,550,0,7
+23-12-2021,US,Nebraska,Wayne,1405,1398,0,7
+23-12-2021,US,Nebraska,Washington,3303,3278,0,25
+23-12-2021,US,Nebraska,Valley,581,579,0,2
+23-12-2021,US,Nebraska,Unassigned,2745,1658,0,1087
+23-12-2021,US,Nebraska,Thurston,1155,1144,0,11
+23-12-2021,US,Nebraska,Thomas,83,82,0,1
+23-12-2021,US,Nebraska,Thayer,809,805,0,4
+23-12-2021,US,Nebraska,Stanton,560,549,0,11
+23-12-2021,US,Nebraska,Sioux,61,61,0,0
+23-12-2021,US,Nebraska,Sherman,452,448,0,4
+23-12-2021,US,Nebraska,Sheridan,856,846,0,10
+23-12-2021,US,Nebraska,Seward,2571,2539,0,32
+23-12-2021,US,Nebraska,Scotts Bluff,6633,6585,0,48
+23-12-2021,US,Nebraska,Saunders,3712,3696,0,16
+23-12-2021,US,Nebraska,Sarpy,33275,33144,0,131
+23-12-2021,US,Nebraska,Saline,2774,2772,0,2
+23-12-2021,US,Nebraska,Rock,160,158,0,2
+23-12-2021,US,Nebraska,Richardson,1255,1236,0,19
+23-12-2021,US,Nebraska,Red Willow,1919,1904,0,15
+23-12-2021,US,Nebraska,Polk,885,876,0,9
+23-12-2021,US,Nebraska,Platte,6338,6288,0,50
+23-12-2021,US,Nebraska,Pierce,981,961,0,20
+23-12-2021,US,Nebraska,Phelps,1729,1719,0,10
+23-12-2021,US,Nebraska,Perkins,418,407,0,11
+23-12-2021,US,Nebraska,Pawnee,320,319,0,1
+23-12-2021,US,Nebraska,Otoe,2419,2409,0,10
+23-12-2021,US,Nebraska,Nuckolls,725,714,0,11
+23-12-2021,US,Nebraska,Nemaha,1119,1104,0,15
+23-12-2021,US,Nebraska,Nance,613,603,0,10
+23-12-2021,US,Nebraska,Morrill,944,937,0,7
+23-12-2021,US,Nebraska,Merrick,1276,1261,0,15
+23-12-2021,US,Nebraska,McPherson,56,55,0,1
+23-12-2021,US,Nebraska,Madison,6983,6939,0,44
+23-12-2021,US,Nebraska,Loup,70,70,0,0
+23-12-2021,US,Nebraska,Logan,121,121,0,0
+23-12-2021,US,Nebraska,Lincoln,6370,6310,0,60
+23-12-2021,US,Nebraska,Lancaster,49753,49583,0,170
+23-12-2021,US,Nebraska,Knox,1288,1276,0,12
+23-12-2021,US,Nebraska,Kimball,611,610,0,1
+23-12-2021,US,Nebraska,Keya Paha,99,99,0,0
+23-12-2021,US,Nebraska,Keith,1149,1139,0,10
+23-12-2021,US,Nebraska,Kearney,963,958,0,5
+23-12-2021,US,Nebraska,Johnson,769,760,0,9
+23-12-2021,US,Nebraska,Jefferson,992,991,0,1
+23-12-2021,US,Nebraska,Howard,846,836,0,10
+23-12-2021,US,Nebraska,Hooker,96,94,0,2
+23-12-2021,US,Nebraska,Holt,1562,1546,0,16
+23-12-2021,US,Nebraska,Hitchcock,435,430,0,5
+23-12-2021,US,Nebraska,Hayes,92,92,0,0
+23-12-2021,US,Nebraska,Harlan,337,337,0,0
+23-12-2021,US,Nebraska,Hamilton,1569,1552,0,17
+23-12-2021,US,Nebraska,Hall,11295,11178,0,117
+23-12-2021,US,Nebraska,Greeley,316,315,0,1
+23-12-2021,US,Nebraska,Grant,90,86,0,4
+23-12-2021,US,Nebraska,Gosper,284,279,0,5
+23-12-2021,US,Nebraska,Garfield,310,309,0,1
+23-12-2021,US,Nebraska,Garden,261,260,0,1
+23-12-2021,US,Nebraska,Gage,2807,2788,0,19
+23-12-2021,US,Nebraska,Furnas,821,816,0,5
+23-12-2021,US,Nebraska,Frontier,445,444,0,1
+23-12-2021,US,Nebraska,Franklin,354,350,0,4
+23-12-2021,US,Nebraska,Fillmore,800,792,0,8
+23-12-2021,US,Nebraska,Dundy,273,269,0,4
+23-12-2021,US,Nebraska,Douglas,100040,99322,0,718
+23-12-2021,US,Nebraska,Dodge,7252,7190,0,62
+23-12-2021,US,Nebraska,Dixon,880,871,0,9
+23-12-2021,US,Nebraska,Deuel,255,254,0,1
+23-12-2021,US,Nebraska,Dawson,4256,4225,0,31
+23-12-2021,US,Nebraska,Dawes,1148,1136,0,12
+23-12-2021,US,Nebraska,Dakota,5099,5034,0,65
+23-12-2021,US,Nebraska,Custer,1633,1614,0,19
+23-12-2021,US,Nebraska,Cuming,1432,1417,0,15
+23-12-2021,US,Nebraska,Colfax,2038,2017,0,21
+23-12-2021,US,Nebraska,Clay,1134,1123,0,11
+23-12-2021,US,Nebraska,Cheyenne,1517,1501,0,16
+23-12-2021,US,Nebraska,Cherry,453,446,0,7
+23-12-2021,US,Nebraska,Chase,651,646,0,5
+23-12-2021,US,Nebraska,Cedar,1115,1104,0,11
+23-12-2021,US,Nebraska,Cass,4242,4226,0,16
+23-12-2021,US,Nebraska,Butler,1357,1346,0,11
+23-12-2021,US,Nebraska,Burt,955,943,0,12
+23-12-2021,US,Nebraska,Buffalo,8976,8919,0,57
+23-12-2021,US,Nebraska,Brown,412,410,0,2
+23-12-2021,US,Nebraska,Boyd,306,303,0,3
+23-12-2021,US,Nebraska,Box Butte,1715,1707,0,8
+23-12-2021,US,Nebraska,Boone,836,832,0,4
+23-12-2021,US,Nebraska,Blaine,51,51,0,0
+23-12-2021,US,Nebraska,Banner,71,71,0,0
+23-12-2021,US,Nebraska,Arthur,29,28,0,1
+23-12-2021,US,Nebraska,Antelope,831,824,0,7
+23-12-2021,US,Nebraska,Adams,4778,4732,0,46
+23-12-2021,US,Montana,Yellowstone,31895,31427,0,468
+23-12-2021,US,Montana,Wibaux,178,170,0,8
+23-12-2021,US,Montana,Wheatland,275,262,0,13
+23-12-2021,US,Montana,Valley,1397,1365,0,32
+23-12-2021,US,Montana,Unassigned,0,0,0,0
+23-12-2021,US,Montana,Treasure,115,114,0,1
+23-12-2021,US,Montana,Toole,1008,987,0,21
+23-12-2021,US,Montana,Teton,931,912,0,19
+23-12-2021,US,Montana,Sweet Grass,601,593,0,8
+23-12-2021,US,Montana,Stillwater,1245,1216,0,29
+23-12-2021,US,Montana,Silver Bow,6345,6227,0,118
+23-12-2021,US,Montana,Sheridan,562,552,0,10
+23-12-2021,US,Montana,Sanders,1597,1557,0,40
+23-12-2021,US,Montana,Rosebud,1777,1719,0,58
+23-12-2021,US,Montana,Roosevelt,2351,2282,0,69
+23-12-2021,US,Montana,Richland,2029,1999,0,30
+23-12-2021,US,Montana,Ravalli,5474,5346,0,128
+23-12-2021,US,Montana,Prairie,195,193,0,2
+23-12-2021,US,Montana,Powell,1464,1438,0,26
+23-12-2021,US,Montana,Powder River,286,276,0,10
+23-12-2021,US,Montana,Pondera,843,837,0,6
+23-12-2021,US,Montana,Phillips,879,852,0,27
+23-12-2021,US,Montana,Petroleum,27,26,0,1
+23-12-2021,US,Montana,Park,2793,2762,0,31
+23-12-2021,US,Montana,Musselshell,766,740,0,26
+23-12-2021,US,Montana,Missoula,17790,17599,0,191
+23-12-2021,US,Montana,Mineral,759,745,0,14
+23-12-2021,US,Montana,Meagher,279,270,0,9
+23-12-2021,US,Montana,McCone,317,309,0,8
+23-12-2021,US,Montana,Madison,1427,1407,0,20
+23-12-2021,US,Montana,Lincoln,3629,3556,0,73
+23-12-2021,US,Montana,Liberty,268,266,0,2
+23-12-2021,US,Montana,Lewis and Clark,12567,12413,0,154
+23-12-2021,US,Montana,Lake,4792,4706,0,86
+23-12-2021,US,Montana,Judith Basin,164,163,0,1
+23-12-2021,US,Montana,Jefferson,1938,1917,0,21
+23-12-2021,US,Montana,Hill,3430,3359,0,71
+23-12-2021,US,Montana,Granite,409,403,0,6
+23-12-2021,US,Montana,Golden Valley,122,117,0,5
+23-12-2021,US,Montana,Glacier,2500,2437,0,63
+23-12-2021,US,Montana,Garfield,162,159,0,3
+23-12-2021,US,Montana,Gallatin,22924,22821,0,103
+23-12-2021,US,Montana,Flathead,21280,21055,0,225
+23-12-2021,US,Montana,Fergus,1882,1831,0,51
+23-12-2021,US,Montana,Fallon,557,547,0,10
+23-12-2021,US,Montana,Deer Lodge,1681,1653,0,28
+23-12-2021,US,Montana,Dawson,1861,1811,0,50
+23-12-2021,US,Montana,Daniels,312,303,0,9
+23-12-2021,US,Montana,Custer,2422,2381,0,41
+23-12-2021,US,Montana,Chouteau,790,781,0,9
+23-12-2021,US,Montana,Cascade,17061,16780,0,281
+23-12-2021,US,Montana,Carter,208,203,0,5
+23-12-2021,US,Montana,Carbon,1598,1575,0,23
+23-12-2021,US,Montana,Broadwater,1009,992,0,17
+23-12-2021,US,Montana,Blaine,1443,1415,0,28
+23-12-2021,US,Montana,Big Horn,3455,3371,0,84
+23-12-2021,US,Montana,Beaverhead,1600,1577,0,23
+23-12-2021,US,Missouri,Wright,2865,2799,0,66
+23-12-2021,US,Missouri,Worth,313,311,0,2
+23-12-2021,US,Missouri,Webster,6410,6293,0,117
+23-12-2021,US,Missouri,Wayne,1818,1781,0,37
+23-12-2021,US,Missouri,Washington,4419,4319,0,100
+23-12-2021,US,Missouri,Warren,5870,5795,0,75
+23-12-2021,US,Missouri,Vernon,3504,3418,0,86
+23-12-2021,US,Missouri,Unassigned,0,0,0,0
+23-12-2021,US,Missouri,Texas,3490,3419,0,71
+23-12-2021,US,Missouri,Taney,9852,9677,0,175
+23-12-2021,US,Missouri,Sullivan,1338,1321,0,17
+23-12-2021,US,Missouri,Stone,4367,4267,0,100
+23-12-2021,US,Missouri,Stoddard,4788,4678,0,110
+23-12-2021,US,Missouri,Ste. Genevieve,2700,2666,0,34
+23-12-2021,US,Missouri,St. Louis City,35361,34730,0,631
+23-12-2021,US,Missouri,St. Louis,145630,142922,0,2708
+23-12-2021,US,Missouri,St. Francois,13527,13305,0,222
+23-12-2021,US,Missouri,St. Clair,1421,1394,0,27
+23-12-2021,US,Missouri,St. Charles,64230,63489,0,741
+23-12-2021,US,Missouri,Shelby,1119,1106,0,13
+23-12-2021,US,Missouri,Shannon,1180,1151,0,29
+23-12-2021,US,Missouri,Scott,7940,7807,0,133
+23-12-2021,US,Missouri,Scotland,505,489,0,16
+23-12-2021,US,Missouri,Schuyler,534,512,0,22
+23-12-2021,US,Missouri,Saline,4615,4530,0,85
+23-12-2021,US,Missouri,Ripley,2142,2091,0,51
+23-12-2021,US,Missouri,Reynolds,834,821,0,13
+23-12-2021,US,Missouri,Ray,3628,3564,0,64
+23-12-2021,US,Missouri,Randolph,4212,4128,0,84
+23-12-2021,US,Missouri,Ralls,1837,1818,0,19
+23-12-2021,US,Missouri,Putnam,762,743,0,19
+23-12-2021,US,Missouri,Pulaski,5821,5722,0,99
+23-12-2021,US,Missouri,Polk,5754,5673,0,81
+23-12-2021,US,Missouri,Platte,7116,7042,0,74
+23-12-2021,US,Missouri,Pike,3152,3099,0,53
+23-12-2021,US,Missouri,Phelps,7315,7117,0,198
+23-12-2021,US,Missouri,Pettis,8304,8176,0,128
+23-12-2021,US,Missouri,Perry,3637,3597,0,40
+23-12-2021,US,Missouri,Pemiscot,2167,2108,0,59
+23-12-2021,US,Missouri,Ozark,1329,1285,0,44
+23-12-2021,US,Missouri,Osage,2433,2397,0,36
+23-12-2021,US,Missouri,Oregon,1532,1505,0,27
+23-12-2021,US,Missouri,Nodaway,4141,4102,0,39
+23-12-2021,US,Missouri,Newton,8514,8346,0,168
+23-12-2021,US,Missouri,New Madrid,3515,3444,0,71
+23-12-2021,US,Missouri,Morgan,3024,2949,0,75
+23-12-2021,US,Missouri,Montgomery,1753,1719,0,34
+23-12-2021,US,Missouri,Monroe,1615,1581,0,34
+23-12-2021,US,Missouri,Moniteau,2935,2889,0,46
+23-12-2021,US,Missouri,Mississippi,2481,2432,0,49
+23-12-2021,US,Missouri,Miller,4490,4389,0,101
+23-12-2021,US,Missouri,Mercer,528,519,0,9
+23-12-2021,US,Missouri,McDonald,3942,3882,0,60
+23-12-2021,US,Missouri,Marion,6040,5940,0,100
+23-12-2021,US,Missouri,Maries,1157,1135,0,22
+23-12-2021,US,Missouri,Madison,2609,2569,0,40
+23-12-2021,US,Missouri,Macon,2625,2589,0,36
+23-12-2021,US,Missouri,Livingston,2781,2701,0,80
+23-12-2021,US,Missouri,Linn,1985,1927,0,58
+23-12-2021,US,Missouri,Lincoln,11086,10989,0,97
+23-12-2021,US,Missouri,Lewis,1971,1941,0,30
+23-12-2021,US,Missouri,Lawrence,5708,5570,0,138
+23-12-2021,US,Missouri,Lafayette,5628,5537,0,91
+23-12-2021,US,Missouri,Laclede,5939,5787,0,152
+23-12-2021,US,Missouri,Knox,715,707,0,8
+23-12-2021,US,Missouri,Kansas City,73948,72952,0,996
+23-12-2021,US,Missouri,Johnson,8479,8366,0,113
+23-12-2021,US,Missouri,Jefferson,38157,37707,0,450
+23-12-2021,US,Missouri,Jasper,24541,24092,0,449
+23-12-2021,US,Missouri,Jackson,65212,64352,0,860
+23-12-2021,US,Missouri,Iron,1596,1567,0,29
+23-12-2021,US,Missouri,Howell,6482,6308,0,174
+23-12-2021,US,Missouri,Howard,1625,1606,0,19
+23-12-2021,US,Missouri,Holt,787,764,0,23
+23-12-2021,US,Missouri,Hickory,1322,1277,0,45
+23-12-2021,US,Missouri,Henry,3955,3889,0,66
+23-12-2021,US,Missouri,Harrison,1454,1433,0,21
+23-12-2021,US,Missouri,Grundy,1870,1813,0,57
+23-12-2021,US,Missouri,Greene,47887,47044,0,843
+23-12-2021,US,Missouri,Gentry,1658,1630,0,28
+23-12-2021,US,Missouri,Gasconade,2511,2425,0,86
+23-12-2021,US,Missouri,Franklin,16890,16620,0,270
+23-12-2021,US,Missouri,Dunklin,4837,4744,0,93
+23-12-2021,US,Missouri,Douglas,1923,1858,0,65
+23-12-2021,US,Missouri,Dent,2283,2220,0,63
+23-12-2021,US,Missouri,DeKalb,1709,1672,0,37
+23-12-2021,US,Missouri,Daviess,1269,1252,0,17
+23-12-2021,US,Missouri,Dallas,2613,2555,0,58
+23-12-2021,US,Missouri,Dade,988,950,0,38
+23-12-2021,US,Missouri,Crawford,4082,4004,0,78
+23-12-2021,US,Missouri,Cooper,3188,3134,0,54
+23-12-2021,US,Missouri,Cole,14478,14244,0,234
+23-12-2021,US,Missouri,Clinton,3515,3416,0,99
+23-12-2021,US,Missouri,Clay,18233,17967,0,266
+23-12-2021,US,Missouri,Clark,1256,1228,0,28
+23-12-2021,US,Missouri,Christian,14677,14471,0,206
+23-12-2021,US,Missouri,Chariton,1280,1248,0,32
+23-12-2021,US,Missouri,Cedar,2044,2002,0,42
+23-12-2021,US,Missouri,Cass,17010,16789,0,221
+23-12-2021,US,Missouri,Carter,1168,1150,0,18
+23-12-2021,US,Missouri,Carroll,1654,1615,0,39
+23-12-2021,US,Missouri,Cape Girardeau,13752,13548,0,204
+23-12-2021,US,Missouri,Camden,6947,6797,0,150
+23-12-2021,US,Missouri,Callaway,8531,8433,0,98
+23-12-2021,US,Missouri,Caldwell,1329,1303,0,26
+23-12-2021,US,Missouri,Butler,7342,7211,0,131
+23-12-2021,US,Missouri,Buchanan,16051,15799,0,252
+23-12-2021,US,Missouri,Boone,27771,27571,0,200
+23-12-2021,US,Missouri,Bollinger,1992,1957,0,35
+23-12-2021,US,Missouri,Benton,2972,2900,0,72
+23-12-2021,US,Missouri,Bates,2674,2612,0,62
+23-12-2021,US,Missouri,Barton,1980,1940,0,40
+23-12-2021,US,Missouri,Barry,4884,4791,0,93
+23-12-2021,US,Missouri,Audrain,4389,4307,0,82
+23-12-2021,US,Missouri,Atchison,949,931,0,18
+23-12-2021,US,Missouri,Andrew,3390,3349,0,41
+23-12-2021,US,Missouri,Adair,4055,4007,0,48
+23-12-2021,US,Mississippi,Yazoo,4707,4613,0,94
+23-12-2021,US,Mississippi,Yalobusha,2520,2473,0,47
+23-12-2021,US,Mississippi,Winston,3228,3136,0,92
+23-12-2021,US,Mississippi,Wilkinson,1084,1045,0,39
+23-12-2021,US,Mississippi,Webster,2096,2047,0,49
+23-12-2021,US,Mississippi,Wayne,4458,4386,0,72
+23-12-2021,US,Mississippi,Washington,7618,7448,0,170
+23-12-2021,US,Mississippi,Warren,7000,6820,0,180
+23-12-2021,US,Mississippi,Walthall,2242,2176,0,66
+23-12-2021,US,Mississippi,Union,6635,6536,0,99
+23-12-2021,US,Mississippi,Unassigned,0,0,0,0
+23-12-2021,US,Mississippi,Tunica,1688,1649,0,39
+23-12-2021,US,Mississippi,Tishomingo,4044,3948,0,96
+23-12-2021,US,Mississippi,Tippah,5082,4997,0,85
+23-12-2021,US,Mississippi,Tate,4859,4739,0,120
+23-12-2021,US,Mississippi,Tallahatchie,2347,2294,0,53
+23-12-2021,US,Mississippi,Sunflower,4394,4287,0,107
+23-12-2021,US,Mississippi,Stone,3692,3626,0,66
+23-12-2021,US,Mississippi,Smith,2739,2687,0,52
+23-12-2021,US,Mississippi,Simpson,4657,4540,0,117
+23-12-2021,US,Mississippi,Sharkey,657,636,0,21
+23-12-2021,US,Mississippi,Scott,4853,4754,0,99
+23-12-2021,US,Mississippi,Rankin,23104,22696,0,408
+23-12-2021,US,Mississippi,Quitman,1089,1061,0,28
+23-12-2021,US,Mississippi,Prentiss,5275,5188,0,87
+23-12-2021,US,Mississippi,Pontotoc,7325,7214,0,111
+23-12-2021,US,Mississippi,Pike,6015,5857,0,158
+23-12-2021,US,Mississippi,Perry,2167,2111,0,56
+23-12-2021,US,Mississippi,Pearl River,9849,9605,0,244
+23-12-2021,US,Mississippi,Panola,6922,6784,0,138
+23-12-2021,US,Mississippi,Oktibbeha,7318,7178,0,140
+23-12-2021,US,Mississippi,Noxubee,1906,1862,0,44
+23-12-2021,US,Mississippi,Newton,3994,3911,0,83
+23-12-2021,US,Mississippi,Neshoba,6810,6600,0,210
+23-12-2021,US,Mississippi,Montgomery,1862,1805,0,57
+23-12-2021,US,Mississippi,Monroe,7305,7124,0,181
+23-12-2021,US,Mississippi,Marshall,6921,6777,0,144
+23-12-2021,US,Mississippi,Marion,4384,4271,0,113
+23-12-2021,US,Mississippi,Madison,15359,15076,0,283
+23-12-2021,US,Mississippi,Lowndes,11547,11350,0,197
+23-12-2021,US,Mississippi,Lincoln,5615,5479,0,136
+23-12-2021,US,Mississippi,Leflore,4888,4744,0,144
+23-12-2021,US,Mississippi,Lee,17067,16819,0,248
+23-12-2021,US,Mississippi,Leake,4175,4083,0,92
+23-12-2021,US,Mississippi,Lawrence,2245,2202,0,43
+23-12-2021,US,Mississippi,Lauderdale,12473,12150,0,323
+23-12-2021,US,Mississippi,Lamar,10865,10725,0,140
+23-12-2021,US,Mississippi,Lafayette,9059,8916,0,143
+23-12-2021,US,Mississippi,Kemper,1465,1424,0,41
+23-12-2021,US,Mississippi,Jones,14299,14051,0,248
+23-12-2021,US,Mississippi,Jefferson Davis,1768,1725,0,43
+23-12-2021,US,Mississippi,Jefferson,980,946,0,34
+23-12-2021,US,Mississippi,Jasper,3430,3364,0,66
+23-12-2021,US,Mississippi,Jackson,25110,24717,0,393
+23-12-2021,US,Mississippi,Itawamba,5039,4931,0,108
+23-12-2021,US,Mississippi,Issaquena,195,188,0,7
+23-12-2021,US,Mississippi,Humphreys,1348,1309,0,39
+23-12-2021,US,Mississippi,Holmes,2768,2679,0,89
+23-12-2021,US,Mississippi,Hinds,33686,33034,0,652
+23-12-2021,US,Mississippi,Harrison,35351,34786,0,565
+23-12-2021,US,Mississippi,Hancock,7909,7777,0,132
+23-12-2021,US,Mississippi,Grenada,3870,3759,0,111
+23-12-2021,US,Mississippi,Greene,2261,2211,0,50
+23-12-2021,US,Mississippi,George,5129,5049,0,80
+23-12-2021,US,Mississippi,Franklin,1286,1254,0,32
+23-12-2021,US,Mississippi,Forrest,14027,13765,0,262
+23-12-2021,US,Mississippi,DeSoto,34175,33735,0,440
+23-12-2021,US,Mississippi,Covington,4411,4315,0,96
+23-12-2021,US,Mississippi,Copiah,4691,4596,0,95
+23-12-2021,US,Mississippi,Coahoma,4364,4251,0,113
+23-12-2021,US,Mississippi,Clay,3207,3129,0,78
+23-12-2021,US,Mississippi,Clarke,3036,2940,0,96
+23-12-2021,US,Mississippi,Claiborne,1353,1313,0,40
+23-12-2021,US,Mississippi,Choctaw,1394,1367,0,27
+23-12-2021,US,Mississippi,Chickasaw,3351,3278,0,73
+23-12-2021,US,Mississippi,Carroll,1800,1759,0,41
+23-12-2021,US,Mississippi,Calhoun,2948,2897,0,51
+23-12-2021,US,Mississippi,Bolivar,6554,6401,0,153
+23-12-2021,US,Mississippi,Benton,1567,1527,0,40
+23-12-2021,US,Mississippi,Attala,3463,3373,0,90
+23-12-2021,US,Mississippi,Amite,2135,2077,0,58
+23-12-2021,US,Mississippi,Alcorn,6155,6044,0,111
+23-12-2021,US,Mississippi,Adams,4838,4713,0,125
+23-12-2021,US,Minnesota,Yellow Medicine,1991,1966,0,25
+23-12-2021,US,Minnesota,Wright,28126,27875,0,251
+23-12-2021,US,Minnesota,Winona,8142,8080,0,62
+23-12-2021,US,Minnesota,Wilkin,1279,1262,0,17
+23-12-2021,US,Minnesota,Watonwan,2143,2122,0,21
+23-12-2021,US,Minnesota,Washington,44647,44253,0,394
+23-12-2021,US,Minnesota,Waseca,4216,4182,0,34
+23-12-2021,US,Minnesota,Wadena,3202,3159,0,43
+23-12-2021,US,Minnesota,Wabasha,4055,4043,0,12
+23-12-2021,US,Minnesota,Unassigned,559,425,0,134
+23-12-2021,US,Minnesota,Traverse,626,618,0,8
+23-12-2021,US,Minnesota,Todd,5236,5186,0,50
+23-12-2021,US,Minnesota,Swift,1820,1791,0,29
+23-12-2021,US,Minnesota,Stevens,1847,1836,0,11
+23-12-2021,US,Minnesota,Steele,7445,7405,0,40
+23-12-2021,US,Minnesota,Stearns,36480,36174,0,306
+23-12-2021,US,Minnesota,St. Louis,32313,31871,0,442
+23-12-2021,US,Minnesota,Sibley,2760,2740,0,20
+23-12-2021,US,Minnesota,Sherburne,20609,20463,0,146
+23-12-2021,US,Minnesota,Scott,28404,28198,0,206
+23-12-2021,US,Minnesota,Roseau,3379,3345,0,34
+23-12-2021,US,Minnesota,Rock,1841,1809,0,32
+23-12-2021,US,Minnesota,Rice,12341,12194,0,147
+23-12-2021,US,Minnesota,Renville,2842,2790,0,52
+23-12-2021,US,Minnesota,Redwood,3009,2960,0,49
+23-12-2021,US,Minnesota,Red Lake,731,720,0,11
+23-12-2021,US,Minnesota,Ramsey,81204,80093,0,1111
+23-12-2021,US,Minnesota,Pope,2259,2245,0,14
+23-12-2021,US,Minnesota,Polk,6319,6228,0,91
+23-12-2021,US,Minnesota,Pipestone,1600,1570,0,30
+23-12-2021,US,Minnesota,Pine,5599,5551,0,48
+23-12-2021,US,Minnesota,Pennington,2646,2615,0,31
+23-12-2021,US,Minnesota,Otter Tail,10454,10314,0,140
+23-12-2021,US,Minnesota,Olmsted,24426,24287,0,139
+23-12-2021,US,Minnesota,Norman,1090,1080,0,10
+23-12-2021,US,Minnesota,Nobles,5412,5356,0,56
+23-12-2021,US,Minnesota,Nicollet,5629,5568,0,61
+23-12-2021,US,Minnesota,Murray,1596,1582,0,14
+23-12-2021,US,Minnesota,Mower,7802,7749,0,53
+23-12-2021,US,Minnesota,Morrison,7098,7013,0,85
+23-12-2021,US,Minnesota,Mille Lacs,5732,5642,0,90
+23-12-2021,US,Minnesota,Meeker,4676,4609,0,67
+23-12-2021,US,Minnesota,McLeod,7764,7674,0,90
+23-12-2021,US,Minnesota,Martin,4156,4105,0,51
+23-12-2021,US,Minnesota,Marshall,1640,1617,0,23
+23-12-2021,US,Minnesota,Mahnomen,1152,1137,0,15
+23-12-2021,US,Minnesota,Lyon,5550,5484,0,66
+23-12-2021,US,Minnesota,Lincoln,936,931,0,5
+23-12-2021,US,Minnesota,Le Sueur,4992,4951,0,41
+23-12-2021,US,Minnesota,Lake of the Woods,561,556,0,5
+23-12-2021,US,Minnesota,Lake,1459,1433,0,26
+23-12-2021,US,Minnesota,Lac qui Parle,1320,1294,0,26
+23-12-2021,US,Minnesota,Koochiching,1969,1940,0,29
+23-12-2021,US,Minnesota,Kittson,848,825,0,23
+23-12-2021,US,Minnesota,Kandiyohi,10434,10318,0,116
+23-12-2021,US,Minnesota,Kanabec,2777,2734,0,43
+23-12-2021,US,Minnesota,Jackson,1707,1691,0,16
+23-12-2021,US,Minnesota,Itasca,8357,8247,0,110
+23-12-2021,US,Minnesota,Isanti,7734,7640,0,94
+23-12-2021,US,Minnesota,Hubbard,3759,3708,0,51
+23-12-2021,US,Minnesota,Houston,3045,3027,0,18
+23-12-2021,US,Minnesota,Hennepin,195164,193019,0,2145
+23-12-2021,US,Minnesota,Grant,1104,1092,0,12
+23-12-2021,US,Minnesota,Goodhue,9042,8936,0,106
+23-12-2021,US,Minnesota,Freeborn,6214,6163,0,51
+23-12-2021,US,Minnesota,Fillmore,3381,3365,0,16
+23-12-2021,US,Minnesota,Faribault,2802,2764,0,38
+23-12-2021,US,Minnesota,Douglas,8446,8344,0,102
+23-12-2021,US,Minnesota,Dodge,3921,3908,0,13
+23-12-2021,US,Minnesota,Dakota,74141,73504,0,637
+23-12-2021,US,Minnesota,Crow Wing,12016,11881,0,135
+23-12-2021,US,Minnesota,Cottonwood,2453,2420,0,33
+23-12-2021,US,Minnesota,Cook,343,342,0,1
+23-12-2021,US,Minnesota,Clearwater,1682,1657,0,25
+23-12-2021,US,Minnesota,Clay,12977,12866,0,111
+23-12-2021,US,Minnesota,Chisago,10826,10728,0,98
+23-12-2021,US,Minnesota,Chippewa,2326,2283,0,43
+23-12-2021,US,Minnesota,Cass,5312,5251,0,61
+23-12-2021,US,Minnesota,Carver,18273,18187,0,86
+23-12-2021,US,Minnesota,Carlton,6016,5936,0,80
+23-12-2021,US,Minnesota,Brown,4976,4910,0,66
+23-12-2021,US,Minnesota,Blue Earth,12517,12441,0,76
+23-12-2021,US,Minnesota,Big Stone,1002,995,0,7
+23-12-2021,US,Minnesota,Benton,9896,9759,0,137
+23-12-2021,US,Minnesota,Beltrami,8669,8561,0,108
+23-12-2021,US,Minnesota,Becker,6570,6491,0,79
+23-12-2021,US,Minnesota,Anoka,70003,69346,0,657
+23-12-2021,US,Minnesota,Aitkin,2407,2354,0,53
+23-12-2021,US,Michigan,Wexford,5000,4916,0,84
+23-12-2021,US,Michigan,Wayne,258939,252585,0,6354
+23-12-2021,US,Michigan,Washtenaw,43480,43095,0,385
+23-12-2021,US,Michigan,Van Buren,12457,12253,0,204
+23-12-2021,US,Michigan,Unassigned,54,53,0,1
+23-12-2021,US,Michigan,Tuscola,9829,9596,0,233
+23-12-2021,US,Michigan,St. Joseph,10704,10547,0,157
+23-12-2021,US,Michigan,St. Clair,29816,29183,0,633
+23-12-2021,US,Michigan,Shiawassee,12452,12276,0,176
+23-12-2021,US,Michigan,Schoolcraft,1184,1176,0,8
+23-12-2021,US,Michigan,Sanilac,6678,6515,0,163
+23-12-2021,US,Michigan,Saginaw,35112,34337,0,775
+23-12-2021,US,Michigan,Roscommon,3589,3490,0,99
+23-12-2021,US,Michigan,Presque Isle,1718,1668,0,50
+23-12-2021,US,Michigan,Out of MI,3195,3161,0,34
+23-12-2021,US,Michigan,Ottawa,54422,53793,0,629
+23-12-2021,US,Michigan,Otsego,4246,4168,0,78
+23-12-2021,US,Michigan,Oscoda,1159,1110,0,49
+23-12-2021,US,Michigan,Osceola,3845,3785,0,60
+23-12-2021,US,Michigan,Ontonagon,737,711,0,26
+23-12-2021,US,Michigan,Ogemaw,3279,3199,0,80
+23-12-2021,US,Michigan,Oceana,4873,4789,0,84
+23-12-2021,US,Michigan,Oakland,189146,186093,0,3053
+23-12-2021,US,Michigan,Newaygo,8671,8543,0,128
+23-12-2021,US,Michigan,Muskegon,28791,28289,0,502
+23-12-2021,US,Michigan,Montmorency,1331,1291,0,40
+23-12-2021,US,Michigan,Montcalm,11441,11281,0,160
+23-12-2021,US,Michigan,Monroe,26422,26058,0,364
+23-12-2021,US,Michigan,Missaukee,2213,2168,0,45
+23-12-2021,US,Michigan,Midland,13237,13056,0,181
+23-12-2021,US,Michigan,Michigan Department of Corrections (MDOC),28542,28379,0,163
+23-12-2021,US,Michigan,Menominee,4152,4092,0,60
+23-12-2021,US,Michigan,Mecosta,6268,6187,0,81
+23-12-2021,US,Michigan,Mason,4687,4621,0,66
+23-12-2021,US,Michigan,Marquette,8982,8888,0,94
+23-12-2021,US,Michigan,Manistee,2476,2420,0,56
+23-12-2021,US,Michigan,Macomb,157531,154392,0,3139
+23-12-2021,US,Michigan,Mackinac,1666,1647,0,19
+23-12-2021,US,Michigan,Luce,1003,998,0,5
+23-12-2021,US,Michigan,Livingston,32100,31752,0,348
+23-12-2021,US,Michigan,Lenawee,17329,17086,0,243
+23-12-2021,US,Michigan,Leelanau,2431,2390,0,41
+23-12-2021,US,Michigan,Lapeer,15231,14915,0,316
+23-12-2021,US,Michigan,Lake,1372,1341,0,31
+23-12-2021,US,Michigan,Keweenaw,387,376,0,11
+23-12-2021,US,Michigan,Kent,119286,118073,0,1213
+23-12-2021,US,Michigan,Kalkaska,2449,2403,0,46
+23-12-2021,US,Michigan,Kalamazoo,38630,38094,0,536
+23-12-2021,US,Michigan,Jackson,28239,27819,0,420
+23-12-2021,US,Michigan,Isabella,11175,11016,0,159
+23-12-2021,US,Michigan,Iron,1844,1774,0,70
+23-12-2021,US,Michigan,Iosco,3754,3642,0,112
+23-12-2021,US,Michigan,Ionia,11937,11800,0,137
+23-12-2021,US,Michigan,Ingham,40673,40105,0,568
+23-12-2021,US,Michigan,Huron,6225,6105,0,120
+23-12-2021,US,Michigan,Houghton,5610,5539,0,71
+23-12-2021,US,Michigan,Hillsdale,8146,7979,0,167
+23-12-2021,US,Michigan,Gratiot,7846,7688,0,158
+23-12-2021,US,Michigan,Grand Traverse,12008,11836,0,172
+23-12-2021,US,Michigan,Gogebic,2295,2233,0,62
+23-12-2021,US,Michigan,Gladwin,4036,3943,0,93
+23-12-2021,US,Michigan,Genesee,70005,68696,0,1309
+23-12-2021,US,Michigan,Federal Correctional Institution (FCI),321,316,0,5
+23-12-2021,US,Michigan,Emmet,4446,4388,0,58
+23-12-2021,US,Michigan,Eaton,17861,17548,0,313
+23-12-2021,US,Michigan,Dickinson,5022,4930,0,92
+23-12-2021,US,Michigan,Delta,7035,6903,0,132
+23-12-2021,US,Michigan,Crawford,1910,1890,0,20
+23-12-2021,US,Michigan,Clinton,13825,13667,0,158
+23-12-2021,US,Michigan,Clare,5054,4924,0,130
+23-12-2021,US,Michigan,Chippewa,5000,4936,0,64
+23-12-2021,US,Michigan,Cheboygan,3593,3513,0,80
+23-12-2021,US,Michigan,Charlevoix,3360,3310,0,50
+23-12-2021,US,Michigan,Cass,8878,8768,0,110
+23-12-2021,US,Michigan,Calhoun,24376,23920,0,456
+23-12-2021,US,Michigan,Branch,8420,8283,0,137
+23-12-2021,US,Michigan,Berrien,24685,24300,0,385
+23-12-2021,US,Michigan,Benzie,2363,2311,0,52
+23-12-2021,US,Michigan,Bay,18849,18382,0,467
+23-12-2021,US,Michigan,Barry,10518,10393,0,125
+23-12-2021,US,Michigan,Baraga,1472,1425,0,47
+23-12-2021,US,Michigan,Arenac,2320,2270,0,50
+23-12-2021,US,Michigan,Antrim,3096,3046,0,50
+23-12-2021,US,Michigan,Alpena,4473,4363,0,110
+23-12-2021,US,Michigan,Allegan,19899,19632,0,267
+23-12-2021,US,Michigan,Alger,1066,1055,0,11
+23-12-2021,US,Michigan,Alcona,1401,1346,0,55
+23-12-2021,US,Massachusetts,Worcester,119496,116959,0,2537
+23-12-2021,US,Massachusetts,Unassigned,75547,75542,0,5
+23-12-2021,US,Massachusetts,Suffolk,125978,123996,0,1982
+23-12-2021,US,Massachusetts,Plymouth,74305,72662,0,1643
+23-12-2021,US,Massachusetts,Norfolk,78149,76213,0,1936
+23-12-2021,US,Massachusetts,Middlesex,194544,190456,0,4088
+23-12-2021,US,Massachusetts,Hampshire,14757,14417,0,340
+23-12-2021,US,Massachusetts,Hampden,79857,78118,0,1739
+23-12-2021,US,Massachusetts,Franklin,5036,4908,0,128
+23-12-2021,US,Massachusetts,Essex,137357,134667,0,2690
+23-12-2021,US,Massachusetts,Dukes and Nantucket,4423,4416,0,7
+23-12-2021,US,Massachusetts,Bristol,99706,97680,0,2026
+23-12-2021,US,Massachusetts,Berkshire,12435,12097,0,338
+23-12-2021,US,Massachusetts,Barnstable,22932,22380,0,552
+23-12-2021,US,Maryland,Worcester,5309,5184,0,125
+23-12-2021,US,Maryland,Wicomico,11822,11586,0,236
+23-12-2021,US,Maryland,Washington,22026,21597,0,429
+23-12-2021,US,Maryland,Unassigned,45700,45654,0,46
+23-12-2021,US,Maryland,Talbot,3193,3135,0,58
+23-12-2021,US,Maryland,St. Mary's,10513,10337,0,176
+23-12-2021,US,Maryland,Somerset,3471,3416,0,55
+23-12-2021,US,Maryland,Queen Anne's,4274,4197,0,77
+23-12-2021,US,Maryland,Prince George's,102652,100893,0,1759
+23-12-2021,US,Maryland,Montgomery,86011,84274,0,1737
+23-12-2021,US,Maryland,Kent,1923,1866,0,57
+23-12-2021,US,Maryland,Howard,23804,23517,0,287
+23-12-2021,US,Maryland,Harford,22674,22302,0,372
+23-12-2021,US,Maryland,Garrett,3909,3823,0,86
+23-12-2021,US,Maryland,Frederick,26247,25850,0,397
+23-12-2021,US,Maryland,Dorchester,4507,4420,0,87
+23-12-2021,US,Maryland,Charles,15068,14800,0,268
+23-12-2021,US,Maryland,Cecil,9651,9457,0,194
+23-12-2021,US,Maryland,Carroll,13004,12707,0,297
+23-12-2021,US,Maryland,Caroline,3614,3560,0,54
+23-12-2021,US,Maryland,Calvert,6086,5984,0,102
+23-12-2021,US,Maryland,Baltimore City,64970,63587,0,1383
+23-12-2021,US,Maryland,Baltimore,81122,79216,0,1906
+23-12-2021,US,Maryland,Anne Arundel,56103,55308,0,795
+23-12-2021,US,Maryland,Allegany,10726,10454,0,272
+23-12-2021,US,Maine,York,22913,22728,0,185
+23-12-2021,US,Maine,Washington,2701,2663,0,38
+23-12-2021,US,Maine,Waldo,3400,3363,0,37
+23-12-2021,US,Maine,Unassigned,1,1,0,0
+23-12-2021,US,Maine,Somerset,6201,6130,0,71
+23-12-2021,US,Maine,Sagadahoc,2868,2850,0,18
+23-12-2021,US,Maine,Piscataquis,1921,1905,0,16
+23-12-2021,US,Maine,Penobscot,16738,16521,0,217
+23-12-2021,US,Maine,Oxford,7373,7277,0,96
+23-12-2021,US,Maine,Out of ME,0,0,0,0
+23-12-2021,US,Maine,Lincoln,2636,2625,0,11
+23-12-2021,US,Maine,Knox,2896,2877,0,19
+23-12-2021,US,Maine,Kennebec,13900,13758,0,142
+23-12-2021,US,Maine,Hancock,4198,4135,0,63
+23-12-2021,US,Maine,Franklin,3578,3537,0,41
+23-12-2021,US,Maine,Cumberland,27270,27005,0,265
+23-12-2021,US,Maine,Aroostook,6941,6842,0,99
+23-12-2021,US,Maine,Androscoggin,15002,14848,0,154
+23-12-2021,US,Louisiana,Winn,2713,2655,0,58
+23-12-2021,US,Louisiana,West Feliciana,1516,1475,0,41
+23-12-2021,US,Louisiana,West Carroll,2211,2158,0,53
+23-12-2021,US,Louisiana,West Baton Rouge,4517,4438,0,79
+23-12-2021,US,Louisiana,Webster,6957,6804,0,153
+23-12-2021,US,Louisiana,Washington,8364,8142,0,222
+23-12-2021,US,Louisiana,Vernon,6605,6438,0,167
+23-12-2021,US,Louisiana,Vermilion,10555,10360,0,195
+23-12-2021,US,Louisiana,Union,4382,4269,0,113
+23-12-2021,US,Louisiana,Unassigned,591,591,0,0
+23-12-2021,US,Louisiana,Terrebonne,20224,19864,0,360
+23-12-2021,US,Louisiana,Tensas,571,561,0,10
+23-12-2021,US,Louisiana,Tangipahoa,23382,22849,0,533
+23-12-2021,US,Louisiana,St. Tammany,45523,44785,0,738
+23-12-2021,US,Louisiana,St. Mary,8786,8557,0,229
+23-12-2021,US,Louisiana,St. Martin,8677,8514,0,163
+23-12-2021,US,Louisiana,St. Landry,14594,14242,0,352
+23-12-2021,US,Louisiana,St. John the Baptist,6564,6391,0,173
+23-12-2021,US,Louisiana,St. James,3615,3545,0,70
+23-12-2021,US,Louisiana,St. Helena,1273,1254,0,19
+23-12-2021,US,Louisiana,St. Charles,9294,9166,0,128
+23-12-2021,US,Louisiana,St. Bernard,7255,7157,0,98
+23-12-2021,US,Louisiana,Sabine,4638,4541,0,97
+23-12-2021,US,Louisiana,Richland,4456,4376,0,80
+23-12-2021,US,Louisiana,Red River,1453,1404,0,49
+23-12-2021,US,Louisiana,Rapides,21963,21481,0,482
+23-12-2021,US,Louisiana,Pointe Coupee,4037,3952,0,85
+23-12-2021,US,Louisiana,Plaquemines,4165,4124,0,41
+23-12-2021,US,Louisiana,Out of LA,0,0,0,0
+23-12-2021,US,Louisiana,Ouachita,32867,32259,0,608
+23-12-2021,US,Louisiana,Orleans,50836,49828,0,1008
+23-12-2021,US,Louisiana,Natchitoches,6888,6749,0,139
+23-12-2021,US,Louisiana,Morehouse,4662,4545,0,117
+23-12-2021,US,Louisiana,Madison,2300,2245,0,55
+23-12-2021,US,Louisiana,Livingston,25198,24811,0,387
+23-12-2021,US,Louisiana,Lincoln,7396,7277,0,119
+23-12-2021,US,Louisiana,Lafourche,18538,18217,0,321
+23-12-2021,US,Louisiana,Lafayette,40356,39945,0,411
+23-12-2021,US,Louisiana,LaSalle,2807,2761,0,46
+23-12-2021,US,Louisiana,Jefferson Davis,4852,4720,0,132
+23-12-2021,US,Louisiana,Jefferson,72750,71559,0,1191
+23-12-2021,US,Louisiana,Jackson,2842,2778,0,64
+23-12-2021,US,Louisiana,Iberville,5966,5837,0,129
+23-12-2021,US,Louisiana,Iberia,12836,12605,0,231
+23-12-2021,US,Louisiana,Grant,3973,3894,0,79
+23-12-2021,US,Louisiana,Franklin,4850,4708,0,142
+23-12-2021,US,Louisiana,Evangeline,5986,5843,0,143
+23-12-2021,US,Louisiana,East Feliciana,4590,4445,0,145
+23-12-2021,US,Louisiana,East Carroll,1764,1731,0,33
+23-12-2021,US,Louisiana,East Baton Rouge,66032,64856,0,1176
+23-12-2021,US,Louisiana,De Soto,4911,4796,0,115
+23-12-2021,US,Louisiana,Concordia,3326,3246,0,80
+23-12-2021,US,Louisiana,Claiborne,2080,2014,0,66
+23-12-2021,US,Louisiana,Catahoula,1845,1797,0,48
+23-12-2021,US,Louisiana,Cameron,876,868,0,8
+23-12-2021,US,Louisiana,Caldwell,2342,2300,0,42
+23-12-2021,US,Louisiana,Calcasieu,35616,34979,0,637
+23-12-2021,US,Louisiana,Caddo,41321,40331,0,990
+23-12-2021,US,Louisiana,Bossier,22620,22208,0,412
+23-12-2021,US,Louisiana,Bienville,2557,2457,0,100
+23-12-2021,US,Louisiana,Beauregard,6239,6110,0,129
+23-12-2021,US,Louisiana,Avoyelles,7481,7300,0,181
+23-12-2021,US,Louisiana,Assumption,3757,3700,0,57
+23-12-2021,US,Louisiana,Ascension,22577,22327,0,250
+23-12-2021,US,Louisiana,Allen,4838,4719,0,119
+23-12-2021,US,Louisiana,Acadia,10817,10562,0,255
+23-12-2021,US,Kentucky,Woodford,4012,3977,0,35
+23-12-2021,US,Kentucky,Wolfe,1435,1422,0,13
+23-12-2021,US,Kentucky,Whitley,9645,9505,0,140
+23-12-2021,US,Kentucky,Webster,2631,2588,0,43
+23-12-2021,US,Kentucky,Wayne,3660,3589,0,71
+23-12-2021,US,Kentucky,Washington,2653,2602,0,51
+23-12-2021,US,Kentucky,Warren,28322,28023,0,299
+23-12-2021,US,Kentucky,Union,2868,2824,0,44
+23-12-2021,US,Kentucky,Unassigned,9,9,0,0
+23-12-2021,US,Kentucky,Trimble,1481,1453,0,28
+23-12-2021,US,Kentucky,Trigg,2493,2464,0,29
+23-12-2021,US,Kentucky,Todd,1991,1954,0,37
+23-12-2021,US,Kentucky,Taylor,6277,6178,0,99
+23-12-2021,US,Kentucky,Spencer,3345,3302,0,43
+23-12-2021,US,Kentucky,Simpson,3676,3605,0,71
+23-12-2021,US,Kentucky,Shelby,7949,7824,0,125
+23-12-2021,US,Kentucky,Scott,9755,9683,0,72
+23-12-2021,US,Kentucky,Russell,4285,4223,0,62
+23-12-2021,US,Kentucky,Rowan,4381,4335,0,46
+23-12-2021,US,Kentucky,Rockcastle,3485,3441,0,44
+23-12-2021,US,Kentucky,Robertson,447,430,0,17
+23-12-2021,US,Kentucky,Pulaski,12011,11797,0,214
+23-12-2021,US,Kentucky,Powell,3061,3033,0,28
+23-12-2021,US,Kentucky,Pike,11873,11651,0,222
+23-12-2021,US,Kentucky,Perry,6775,6646,0,129
+23-12-2021,US,Kentucky,Pendleton,2324,2295,0,29
+23-12-2021,US,Kentucky,Owsley,1050,1027,0,23
+23-12-2021,US,Kentucky,Owen,1649,1620,0,29
+23-12-2021,US,Kentucky,Oldham,11441,11329,0,112
+23-12-2021,US,Kentucky,Ohio,4919,4830,0,89
+23-12-2021,US,Kentucky,Nicholas,1326,1299,0,27
+23-12-2021,US,Kentucky,Nelson,9430,9321,0,109
+23-12-2021,US,Kentucky,Muhlenberg,6291,6192,0,99
+23-12-2021,US,Kentucky,Morgan,3181,3164,0,17
+23-12-2021,US,Kentucky,Montgomery,4965,4894,0,71
+23-12-2021,US,Kentucky,Monroe,2599,2532,0,67
+23-12-2021,US,Kentucky,Metcalfe,2168,2119,0,49
+23-12-2021,US,Kentucky,Mercer,4876,4783,0,93
+23-12-2021,US,Kentucky,Menifee,1071,1045,0,26
+23-12-2021,US,Kentucky,Meade,3816,3766,0,50
+23-12-2021,US,Kentucky,McLean,1728,1687,0,41
+23-12-2021,US,Kentucky,McCreary,4007,3941,0,66
+23-12-2021,US,Kentucky,McCracken,11498,11296,0,202
+23-12-2021,US,Kentucky,Mason,2983,2902,0,81
+23-12-2021,US,Kentucky,Martin,2188,2149,0,39
+23-12-2021,US,Kentucky,Marshall,5465,5380,0,85
+23-12-2021,US,Kentucky,Marion,4394,4333,0,61
+23-12-2021,US,Kentucky,Magoffin,2588,2554,0,34
+23-12-2021,US,Kentucky,Madison,18269,18057,0,212
+23-12-2021,US,Kentucky,Lyon,2091,2062,0,29
+23-12-2021,US,Kentucky,Logan,5516,5419,0,97
+23-12-2021,US,Kentucky,Livingston,1623,1574,0,49
+23-12-2021,US,Kentucky,Lincoln,4649,4544,0,105
+23-12-2021,US,Kentucky,Lewis,3033,2967,0,66
+23-12-2021,US,Kentucky,Letcher,4429,4343,0,86
+23-12-2021,US,Kentucky,Leslie,2411,2376,0,35
+23-12-2021,US,Kentucky,Lee,1874,1834,0,40
+23-12-2021,US,Kentucky,Lawrence,3124,3076,0,48
+23-12-2021,US,Kentucky,Laurel,13872,13697,0,175
+23-12-2021,US,Kentucky,Larue,2574,2518,0,56
+23-12-2021,US,Kentucky,Knox,7920,7815,0,105
+23-12-2021,US,Kentucky,Knott,2629,2583,0,46
+23-12-2021,US,Kentucky,Kenton,27456,27147,0,309
+23-12-2021,US,Kentucky,Johnson,4107,4032,0,75
+23-12-2021,US,Kentucky,Jessamine,9203,9093,0,110
+23-12-2021,US,Kentucky,Jefferson,133355,131554,0,1801
+23-12-2021,US,Kentucky,Jackson,3027,2969,0,58
+23-12-2021,US,Kentucky,Hopkins,9372,9154,0,218
+23-12-2021,US,Kentucky,Hickman,599,577,0,22
+23-12-2021,US,Kentucky,Henry,3058,3022,0,36
+23-12-2021,US,Kentucky,Henderson,8852,8721,0,131
+23-12-2021,US,Kentucky,Hart,3962,3884,0,78
+23-12-2021,US,Kentucky,Harrison,3899,3843,0,56
+23-12-2021,US,Kentucky,Harlan,6217,6065,0,152
+23-12-2021,US,Kentucky,Hardin,20469,20131,0,338
+23-12-2021,US,Kentucky,Hancock,1639,1620,0,19
+23-12-2021,US,Kentucky,Greenup,7440,7332,0,108
+23-12-2021,US,Kentucky,Green,2627,2592,0,35
+23-12-2021,US,Kentucky,Grayson,5294,5193,0,101
+23-12-2021,US,Kentucky,Graves,7837,7700,0,137
+23-12-2021,US,Kentucky,Grant,4956,4915,0,41
+23-12-2021,US,Kentucky,Garrard,3129,3072,0,57
+23-12-2021,US,Kentucky,Gallatin,1451,1407,0,44
+23-12-2021,US,Kentucky,Fulton,869,846,0,23
+23-12-2021,US,Kentucky,Franklin,8205,8094,0,111
+23-12-2021,US,Kentucky,Floyd,7949,7805,0,144
+23-12-2021,US,Kentucky,Fleming,2532,2491,0,41
+23-12-2021,US,Kentucky,Fayette,56590,56122,0,468
+23-12-2021,US,Kentucky,Estill,2622,2585,0,37
+23-12-2021,US,Kentucky,Elliott,1476,1463,0,13
+23-12-2021,US,Kentucky,Edmonson,1710,1676,0,34
+23-12-2021,US,Kentucky,Daviess,19679,19375,0,304
+23-12-2021,US,Kentucky,Cumberland,1492,1473,0,19
+23-12-2021,US,Kentucky,Crittenden,1429,1392,0,37
+23-12-2021,US,Kentucky,Clinton,2459,2418,0,41
+23-12-2021,US,Kentucky,Clay,5312,5246,0,66
+23-12-2021,US,Kentucky,Clark,6134,6086,0,48
+23-12-2021,US,Kentucky,Christian,11143,10969,0,174
+23-12-2021,US,Kentucky,Casey,2963,2902,0,61
+23-12-2021,US,Kentucky,Carter,5320,5246,0,74
+23-12-2021,US,Kentucky,Carroll,2302,2268,0,34
+23-12-2021,US,Kentucky,Carlisle,728,716,0,12
+23-12-2021,US,Kentucky,Campbell,14361,14242,0,119
+23-12-2021,US,Kentucky,Calloway,5538,5470,0,68
+23-12-2021,US,Kentucky,Caldwell,2646,2593,0,53
+23-12-2021,US,Kentucky,Butler,2615,2572,0,43
+23-12-2021,US,Kentucky,Bullitt,13606,13449,0,157
+23-12-2021,US,Kentucky,Breckinridge,3393,3343,0,50
+23-12-2021,US,Kentucky,Breathitt,2233,2186,0,47
+23-12-2021,US,Kentucky,Bracken,1429,1409,0,20
+23-12-2021,US,Kentucky,Boyle,5845,5731,0,114
+23-12-2021,US,Kentucky,Boyd,9817,9691,0,126
+23-12-2021,US,Kentucky,Bourbon,3737,3695,0,42
+23-12-2021,US,Kentucky,Boone,23631,23405,0,226
+23-12-2021,US,Kentucky,Bell,6155,6037,0,118
+23-12-2021,US,Kentucky,Bath,1984,1950,0,34
+23-12-2021,US,Kentucky,Barren,9084,8907,0,177
+23-12-2021,US,Kentucky,Ballard,822,796,0,26
+23-12-2021,US,Kentucky,Anderson,4055,3999,0,56
+23-12-2021,US,Kentucky,Allen,4237,4158,0,79
+23-12-2021,US,Kentucky,Adair,3899,3813,0,86
+23-12-2021,US,Kansas,Wyandotte,31031,30645,0,386
+23-12-2021,US,Kansas,Woodson,539,529,0,10
+23-12-2021,US,Kansas,Wilson,1834,1799,0,35
+23-12-2021,US,Kansas,Wichita,345,337,0,8
+23-12-2021,US,Kansas,Washington,996,979,0,17
+23-12-2021,US,Kansas,Wallace,340,335,0,5
+23-12-2021,US,Kansas,Wabaunsee,1194,1175,0,19
+23-12-2021,US,Kansas,Unassigned,0,-58,0,58
+23-12-2021,US,Kansas,Trego,550,542,0,8
+23-12-2021,US,Kansas,Thomas,1814,1791,0,23
+23-12-2021,US,Kansas,Sumner,3944,3882,0,62
+23-12-2021,US,Kansas,Stevens,1046,1030,0,16
+23-12-2021,US,Kansas,Stanton,334,327,0,7
+23-12-2021,US,Kansas,Stafford,839,817,0,22
+23-12-2021,US,Kansas,Smith,496,492,0,4
+23-12-2021,US,Kansas,Sherman,1172,1158,0,14
+23-12-2021,US,Kansas,Sheridan,606,589,0,17
+23-12-2021,US,Kansas,Shawnee,30083,29600,0,483
+23-12-2021,US,Kansas,Seward,5293,5238,0,55
+23-12-2021,US,Kansas,Sedgwick,93644,92558,0,1086
+23-12-2021,US,Kansas,Scott,941,909,0,32
+23-12-2021,US,Kansas,Saline,9825,9628,0,197
+23-12-2021,US,Kansas,Russell,1437,1403,0,34
+23-12-2021,US,Kansas,Rush,594,578,0,16
+23-12-2021,US,Kansas,Rooks,978,963,0,15
+23-12-2021,US,Kansas,Riley,8861,8794,0,67
+23-12-2021,US,Kansas,Rice,1767,1750,0,17
+23-12-2021,US,Kansas,Republic,994,980,0,14
+23-12-2021,US,Kansas,Reno,13640,13455,0,185
+23-12-2021,US,Kansas,Rawlins,588,580,0,8
+23-12-2021,US,Kansas,Pratt,1453,1426,0,27
+23-12-2021,US,Kansas,Pottawatomie,3539,3494,0,45
+23-12-2021,US,Kansas,Phillips,1067,1039,0,28
+23-12-2021,US,Kansas,Pawnee,1635,1614,0,21
+23-12-2021,US,Kansas,Out of KS,0,0,0,0
+23-12-2021,US,Kansas,Ottawa,889,875,0,14
+23-12-2021,US,Kansas,Osborne,562,547,0,15
+23-12-2021,US,Kansas,Osage,2517,2477,0,40
+23-12-2021,US,Kansas,Norton,1651,1619,0,32
+23-12-2021,US,Kansas,Ness,581,564,0,17
+23-12-2021,US,Kansas,Neosho,3292,3238,0,54
+23-12-2021,US,Kansas,Nemaha,2420,2362,0,58
+23-12-2021,US,Kansas,Morton,480,470,0,10
+23-12-2021,US,Kansas,Morris,961,938,0,23
+23-12-2021,US,Kansas,Montgomery,6011,5888,0,123
+23-12-2021,US,Kansas,Mitchell,920,903,0,17
+23-12-2021,US,Kansas,Miami,5146,5073,0,73
+23-12-2021,US,Kansas,Meade,801,786,0,15
+23-12-2021,US,Kansas,McPherson,5353,5251,0,102
+23-12-2021,US,Kansas,Marshall,1951,1915,0,36
+23-12-2021,US,Kansas,Marion,2152,2116,0,36
+23-12-2021,US,Kansas,Lyon,6417,6319,0,98
+23-12-2021,US,Kansas,Logan,593,584,0,9
+23-12-2021,US,Kansas,Linn,1873,1851,0,22
+23-12-2021,US,Kansas,Lincoln,440,433,0,7
+23-12-2021,US,Kansas,Leavenworth,11983,11839,0,144
+23-12-2021,US,Kansas,Lane,221,213,0,8
+23-12-2021,US,Kansas,Labette,4303,4239,0,64
+23-12-2021,US,Kansas,Kiowa,458,452,0,6
+23-12-2021,US,Kansas,Kingman,1414,1390,0,24
+23-12-2021,US,Kansas,Kearny,981,964,0,17
+23-12-2021,US,Kansas,Johnson,89623,88626,0,997
+23-12-2021,US,Kansas,Jewell,625,613,0,12
+23-12-2021,US,Kansas,Jefferson,3158,3105,0,53
+23-12-2021,US,Kansas,Jackson,2603,2582,0,21
+23-12-2021,US,Kansas,Hodgeman,287,277,0,10
+23-12-2021,US,Kansas,Haskell,709,700,0,9
+23-12-2021,US,Kansas,Harvey,6198,6103,0,95
+23-12-2021,US,Kansas,Harper,1234,1210,0,24
+23-12-2021,US,Kansas,Hamilton,351,349,0,2
+23-12-2021,US,Kansas,Greenwood,1180,1161,0,19
+23-12-2021,US,Kansas,Greeley,231,228,0,3
+23-12-2021,US,Kansas,Gray,961,938,0,23
+23-12-2021,US,Kansas,Grant,1578,1546,0,32
+23-12-2021,US,Kansas,Graham,378,365,0,13
+23-12-2021,US,Kansas,Gove,616,594,0,22
+23-12-2021,US,Kansas,Geary,5269,5207,0,62
+23-12-2021,US,Kansas,Franklin,4539,4474,0,65
+23-12-2021,US,Kansas,Ford,7740,7642,0,98
+23-12-2021,US,Kansas,Finney,8595,8496,0,99
+23-12-2021,US,Kansas,Ellsworth,1585,1554,0,31
+23-12-2021,US,Kansas,Ellis,5115,5039,0,76
+23-12-2021,US,Kansas,Elk,386,379,0,7
+23-12-2021,US,Kansas,Edwards,474,461,0,13
+23-12-2021,US,Kansas,Douglas,14289,14181,0,108
+23-12-2021,US,Kansas,Doniphan,1730,1700,0,30
+23-12-2021,US,Kansas,Dickinson,3460,3397,0,63
+23-12-2021,US,Kansas,Decatur,518,504,0,14
+23-12-2021,US,Kansas,Crawford,7643,7537,0,106
+23-12-2021,US,Kansas,Cowley,6824,6695,0,129
+23-12-2021,US,Kansas,Comanche,356,343,0,13
+23-12-2021,US,Kansas,Coffey,1567,1536,0,31
+23-12-2021,US,Kansas,Cloud,1795,1762,0,33
+23-12-2021,US,Kansas,Clay,1409,1378,0,31
+23-12-2021,US,Kansas,Clark,367,360,0,7
+23-12-2021,US,Kansas,Cheyenne,507,493,0,14
+23-12-2021,US,Kansas,Cherokee,4001,3922,0,79
+23-12-2021,US,Kansas,Chautauqua,630,616,0,14
+23-12-2021,US,Kansas,Chase,454,448,0,6
+23-12-2021,US,Kansas,Butler,12608,12465,0,143
+23-12-2021,US,Kansas,Brown,1979,1937,0,42
+23-12-2021,US,Kansas,Bourbon,2865,2821,0,44
+23-12-2021,US,Kansas,Barton,4648,4577,0,71
+23-12-2021,US,Kansas,Barber,667,660,0,7
+23-12-2021,US,Kansas,Atchison,2899,2871,0,28
+23-12-2021,US,Kansas,Anderson,1352,1329,0,23
+23-12-2021,US,Kansas,Allen,2587,2560,0,27
+23-12-2021,US,Iowa,Wright,2847,2793,0,54
+23-12-2021,US,Iowa,Worth,1307,1297,0,10
+23-12-2021,US,Iowa,Woodbury,21568,21287,0,281
+23-12-2021,US,Iowa,Winneshiek,2937,2893,0,44
+23-12-2021,US,Iowa,Winnebago,2403,2362,0,41
+23-12-2021,US,Iowa,Webster,7878,7750,0,128
+23-12-2021,US,Iowa,Wayne,952,926,0,26
+23-12-2021,US,Iowa,Washington,4185,4118,0,67
+23-12-2021,US,Iowa,Warren,9180,9069,0,111
+23-12-2021,US,Iowa,Wapello,6987,6830,0,157
+23-12-2021,US,Iowa,Van Buren,1041,1017,0,24
+23-12-2021,US,Iowa,Union,2152,2108,0,44
+23-12-2021,US,Iowa,Unassigned,1532,1532,0,0
+23-12-2021,US,Iowa,Taylor,1060,1041,0,19
+23-12-2021,US,Iowa,Tama,3003,2923,0,80
+23-12-2021,US,Iowa,Story,14570,14509,0,61
+23-12-2021,US,Iowa,Sioux,6457,6379,0,78
+23-12-2021,US,Iowa,Shelby,2132,2088,0,44
+23-12-2021,US,Iowa,Scott,29772,29462,0,310
+23-12-2021,US,Iowa,Sac,1843,1816,0,27
+23-12-2021,US,Iowa,Ringgold,855,824,0,31
+23-12-2021,US,Iowa,Poweshiek,2633,2587,0,46
+23-12-2021,US,Iowa,Pottawattamie,17276,17032,0,244
+23-12-2021,US,Iowa,Polk,86837,85984,0,853
+23-12-2021,US,Iowa,Pocahontas,1278,1253,0,25
+23-12-2021,US,Iowa,Plymouth,5137,5047,0,90
+23-12-2021,US,Iowa,Palo Alto,1603,1571,0,32
+23-12-2021,US,Iowa,Page,2857,2819,0,38
+23-12-2021,US,Iowa,Osceola,1100,1082,0,18
+23-12-2021,US,Iowa,O'Brien,2655,2588,0,67
+23-12-2021,US,Iowa,Muscatine,7110,6991,0,119
+23-12-2021,US,Iowa,Montgomery,1688,1640,0,48
+23-12-2021,US,Iowa,Monroe,1523,1480,0,43
+23-12-2021,US,Iowa,Monona,1318,1277,0,41
+23-12-2021,US,Iowa,Mitchell,1948,1902,0,46
+23-12-2021,US,Iowa,Mills,2435,2405,0,30
+23-12-2021,US,Iowa,Marshall,7008,6914,0,94
+23-12-2021,US,Iowa,Marion,5963,5861,0,102
+23-12-2021,US,Iowa,Mahaska,3952,3883,0,69
+23-12-2021,US,Iowa,Madison,2505,2480,0,25
+23-12-2021,US,Iowa,Lyon,2192,2148,0,44
+23-12-2021,US,Iowa,Lucas,1341,1313,0,28
+23-12-2021,US,Iowa,Louisa,1941,1887,0,54
+23-12-2021,US,Iowa,Linn,35780,35341,0,439
+23-12-2021,US,Iowa,Lee,6292,6183,0,109
+23-12-2021,US,Iowa,Kossuth,3149,3069,0,80
+23-12-2021,US,Iowa,Keokuk,1608,1567,0,41
+23-12-2021,US,Iowa,Jones,4380,4313,0,67
+23-12-2021,US,Iowa,Johnson,21493,21377,0,116
+23-12-2021,US,Iowa,Jefferson,2490,2446,0,44
+23-12-2021,US,Iowa,Jasper,6708,6617,0,91
+23-12-2021,US,Iowa,Jackson,3621,3572,0,49
+23-12-2021,US,Iowa,Iowa,2531,2495,0,36
+23-12-2021,US,Iowa,Ida,1414,1372,0,42
+23-12-2021,US,Iowa,Humboldt,2011,1978,0,33
+23-12-2021,US,Iowa,Howard,1640,1616,0,24
+23-12-2021,US,Iowa,Henry,4403,4347,0,56
+23-12-2021,US,Iowa,Harrison,2616,2533,0,83
+23-12-2021,US,Iowa,Hardin,3104,3049,0,55
+23-12-2021,US,Iowa,Hancock,2365,2324,0,41
+23-12-2021,US,Iowa,Hamilton,2741,2681,0,60
+23-12-2021,US,Iowa,Guthrie,1812,1772,0,40
+23-12-2021,US,Iowa,Grundy,1975,1938,0,37
+23-12-2021,US,Iowa,Greene,1338,1320,0,18
+23-12-2021,US,Iowa,Fremont,1044,1028,0,16
+23-12-2021,US,Iowa,Franklin,1971,1936,0,35
+23-12-2021,US,Iowa,Floyd,2759,2706,0,53
+23-12-2021,US,Iowa,Fayette,3093,3036,0,57
+23-12-2021,US,Iowa,Emmet,1913,1866,0,47
+23-12-2021,US,Iowa,Dubuque,20278,20018,0,260
+23-12-2021,US,Iowa,Dickinson,3324,3264,0,60
+23-12-2021,US,Iowa,Des Moines,7372,7262,0,110
+23-12-2021,US,Iowa,Delaware,3246,3185,0,61
+23-12-2021,US,Iowa,Decatur,1134,1118,0,16
+23-12-2021,US,Iowa,Davis,1337,1311,0,26
+23-12-2021,US,Iowa,Dallas,16453,16334,0,119
+23-12-2021,US,Iowa,Crawford,3693,3644,0,49
+23-12-2021,US,Iowa,Clinton,8842,8723,0,119
+23-12-2021,US,Iowa,Clayton,2719,2656,0,63
+23-12-2021,US,Iowa,Clay,3081,3043,0,38
+23-12-2021,US,Iowa,Clarke,1743,1712,0,31
+23-12-2021,US,Iowa,Chickasaw,2045,2022,0,23
+23-12-2021,US,Iowa,Cherokee,2283,2233,0,50
+23-12-2021,US,Iowa,Cerro Gordo,8722,8589,0,133
+23-12-2021,US,Iowa,Cedar,2907,2880,0,27
+23-12-2021,US,Iowa,Cass,2449,2378,0,71
+23-12-2021,US,Iowa,Carroll,3852,3795,0,57
+23-12-2021,US,Iowa,Calhoun,2064,2044,0,20
+23-12-2021,US,Iowa,Butler,2531,2484,0,47
+23-12-2021,US,Iowa,Buena Vista,5143,5094,0,49
+23-12-2021,US,Iowa,Buchanan,3463,3419,0,44
+23-12-2021,US,Iowa,Bremer,4291,4217,0,74
+23-12-2021,US,Iowa,Boone,4229,4185,0,44
+23-12-2021,US,Iowa,Black Hawk,23753,23356,0,397
+23-12-2021,US,Iowa,Benton,4521,4459,0,62
+23-12-2021,US,Iowa,Audubon,830,812,0,18
+23-12-2021,US,Iowa,Appanoose,2242,2184,0,58
+23-12-2021,US,Iowa,Allamakee,2265,2208,0,57
+23-12-2021,US,Iowa,Adams,629,618,0,11
+23-12-2021,US,Iowa,Adair,1302,1259,0,43
+23-12-2021,US,Indiana,Whitley,7153,7086,0,67
+23-12-2021,US,Indiana,White,5156,5083,0,73
+23-12-2021,US,Indiana,Wells,5211,5095,0,116
+23-12-2021,US,Indiana,Wayne,12889,12612,0,277
+23-12-2021,US,Indiana,Washington,4121,4064,0,57
+23-12-2021,US,Indiana,Warrick,13026,12824,0,202
+23-12-2021,US,Indiana,Warren,1496,1476,0,20
+23-12-2021,US,Indiana,Wabash,6718,6591,0,127
+23-12-2021,US,Indiana,Vigo,20232,19911,0,321
+23-12-2021,US,Indiana,Vermillion,3036,2975,0,61
+23-12-2021,US,Indiana,Vanderburgh,36654,36149,0,505
+23-12-2021,US,Indiana,Union,1358,1341,0,17
+23-12-2021,US,Indiana,Unassigned,0,-639,0,639
+23-12-2021,US,Indiana,Tipton,2656,2589,0,67
+23-12-2021,US,Indiana,Tippecanoe,33215,32919,0,296
+23-12-2021,US,Indiana,Switzerland,1580,1566,0,14
+23-12-2021,US,Indiana,Sullivan,3688,3632,0,56
+23-12-2021,US,Indiana,Steuben,7280,7188,0,92
+23-12-2021,US,Indiana,Starke,3898,3820,0,78
+23-12-2021,US,Indiana,St. Joseph,53717,53031,0,686
+23-12-2021,US,Indiana,Spencer,3867,3816,0,51
+23-12-2021,US,Indiana,Shelby,9179,9038,0,141
+23-12-2021,US,Indiana,Scott,5324,5242,0,82
+23-12-2021,US,Indiana,Rush,3374,3338,0,36
+23-12-2021,US,Indiana,Ripley,6084,5989,0,95
+23-12-2021,US,Indiana,Randolph,4331,4216,0,115
+23-12-2021,US,Indiana,Putnam,6852,6762,0,90
+23-12-2021,US,Indiana,Pulaski,2294,2227,0,67
+23-12-2021,US,Indiana,Posey,4348,4303,0,45
+23-12-2021,US,Indiana,Porter,27725,27310,0,415
+23-12-2021,US,Indiana,Pike,2722,2677,0,45
+23-12-2021,US,Indiana,Perry,3121,3067,0,54
+23-12-2021,US,Indiana,Parke,2630,2596,0,34
+23-12-2021,US,Indiana,Owen,3820,3738,0,82
+23-12-2021,US,Indiana,Orange,3565,3489,0,76
+23-12-2021,US,Indiana,Ohio,979,965,0,14
+23-12-2021,US,Indiana,Noble,10001,9866,0,135
+23-12-2021,US,Indiana,Newton,1989,1934,0,55
+23-12-2021,US,Indiana,Morgan,11222,11019,0,203
+23-12-2021,US,Indiana,Montgomery,7764,7637,0,127
+23-12-2021,US,Indiana,Monroe,17625,17398,0,227
+23-12-2021,US,Indiana,Miami,7050,6931,0,119
+23-12-2021,US,Indiana,Martin,1595,1575,0,20
+23-12-2021,US,Indiana,Marshall,9866,9710,0,156
+23-12-2021,US,Indiana,Marion,154816,152484,0,2332
+23-12-2021,US,Indiana,Madison,22910,22425,0,485
+23-12-2021,US,Indiana,Lawrence,8631,8429,0,202
+23-12-2021,US,Indiana,Lake,78577,77261,0,1316
+23-12-2021,US,Indiana,LaPorte,18566,18286,0,280
+23-12-2021,US,Indiana,LaGrange,4597,4504,0,93
+23-12-2021,US,Indiana,Kosciusko,15492,15316,0,176
+23-12-2021,US,Indiana,Knox,7440,7322,0,118
+23-12-2021,US,Indiana,Johnson,29588,29109,0,479
+23-12-2021,US,Indiana,Jennings,4902,4833,0,69
+23-12-2021,US,Indiana,Jefferson,6539,6427,0,112
+23-12-2021,US,Indiana,Jay,3631,3577,0,54
+23-12-2021,US,Indiana,Jasper,6733,6634,0,99
+23-12-2021,US,Indiana,Jackson,8421,8323,0,98
+23-12-2021,US,Indiana,Huntington,8335,8215,0,120
+23-12-2021,US,Indiana,Howard,18013,17673,0,340
+23-12-2021,US,Indiana,Henry,9813,9634,0,179
+23-12-2021,US,Indiana,Hendricks,28120,27709,0,411
+23-12-2021,US,Indiana,Harrison,7448,7341,0,107
+23-12-2021,US,Indiana,Hancock,14267,14071,0,196
+23-12-2021,US,Indiana,Hamilton,55131,54627,0,504
+23-12-2021,US,Indiana,Greene,5059,4954,0,105
+23-12-2021,US,Indiana,Grant,13005,12735,0,270
+23-12-2021,US,Indiana,Gibson,7585,7464,0,121
+23-12-2021,US,Indiana,Fulton,3884,3803,0,81
+23-12-2021,US,Indiana,Franklin,3198,3153,0,45
+23-12-2021,US,Indiana,Fountain,4094,4024,0,70
+23-12-2021,US,Indiana,Floyd,12664,12429,0,235
+23-12-2021,US,Indiana,Fayette,5031,4923,0,108
+23-12-2021,US,Indiana,Elkhart,42605,42030,0,575
+23-12-2021,US,Indiana,Dubois,9216,9068,0,148
+23-12-2021,US,Indiana,Delaware,18087,17760,0,327
+23-12-2021,US,Indiana,Decatur,5035,4923,0,112
+23-12-2021,US,Indiana,Dearborn,9524,9417,0,107
+23-12-2021,US,Indiana,DeKalb,8608,8490,0,118
+23-12-2021,US,Indiana,Daviess,5374,5251,0,123
+23-12-2021,US,Indiana,Crawford,1806,1776,0,30
+23-12-2021,US,Indiana,Clinton,6723,6639,0,84
+23-12-2021,US,Indiana,Clay,4936,4871,0,65
+23-12-2021,US,Indiana,Clark,21222,20929,0,293
+23-12-2021,US,Indiana,Cass,8690,8554,0,136
+23-12-2021,US,Indiana,Carroll,3221,3177,0,44
+23-12-2021,US,Indiana,Brown,1918,1868,0,50
+23-12-2021,US,Indiana,Boone,10529,10400,0,129
+23-12-2021,US,Indiana,Blackford,2379,2332,0,47
+23-12-2021,US,Indiana,Benton,1815,1796,0,19
+23-12-2021,US,Indiana,Bartholomew,14076,13876,0,200
+23-12-2021,US,Indiana,Allen,72475,71536,0,939
+23-12-2021,US,Indiana,Adams,5786,5696,0,90
+23-12-2021,US,Illinois,Woodford,7094,6999,0,95
+23-12-2021,US,Illinois,Winnebago,52365,51726,0,639
+23-12-2021,US,Illinois,Williamson,13872,13673,0,199
+23-12-2021,US,Illinois,Will,111679,110458,0,1221
+23-12-2021,US,Illinois,Whiteside,10123,9928,0,195
+23-12-2021,US,Illinois,White,3073,3040,0,33
+23-12-2021,US,Illinois,Wayne,3480,3414,0,66
+23-12-2021,US,Illinois,Washington,2377,2347,0,30
+23-12-2021,US,Illinois,Warren,2881,2811,0,70
+23-12-2021,US,Illinois,Wabash,2361,2342,0,19
+23-12-2021,US,Illinois,Vermilion,18383,18150,0,233
+23-12-2021,US,Illinois,Union,3511,3459,0,52
+23-12-2021,US,Illinois,Unassigned,125,-2308,0,2433
+23-12-2021,US,Illinois,Tazewell,25338,24964,0,374
+23-12-2021,US,Illinois,Stephenson,8111,7989,0,122
+23-12-2021,US,Illinois,Stark,997,968,0,29
+23-12-2021,US,Illinois,St. Clair,41620,40989,0,631
+23-12-2021,US,Illinois,Shelby,4314,4260,0,54
+23-12-2021,US,Illinois,Scott,856,849,0,7
+23-12-2021,US,Illinois,Schuyler,1259,1245,0,14
+23-12-2021,US,Illinois,Sangamon,30988,30681,0,307
+23-12-2021,US,Illinois,Saline,4871,4797,0,74
+23-12-2021,US,Illinois,Rock Island,23042,22643,0,399
+23-12-2021,US,Illinois,Richland,3415,3349,0,66
+23-12-2021,US,Illinois,Randolph,6082,5975,0,107
+23-12-2021,US,Illinois,Putnam,749,743,0,6
+23-12-2021,US,Illinois,Pulaski,1178,1163,0,15
+23-12-2021,US,Illinois,Pope,681,674,0,7
+23-12-2021,US,Illinois,Pike,3444,3386,0,58
+23-12-2021,US,Illinois,Piatt,2785,2769,0,16
+23-12-2021,US,Illinois,Perry,4771,4690,0,81
+23-12-2021,US,Illinois,Peoria,32051,31650,0,401
+23-12-2021,US,Illinois,Out of IL,10,10,0,0
+23-12-2021,US,Illinois,Ogle,9731,9623,0,108
+23-12-2021,US,Illinois,Moultrie,2871,2834,0,37
+23-12-2021,US,Illinois,Morgan,5879,5776,0,103
+23-12-2021,US,Illinois,Montgomery,5908,5823,0,85
+23-12-2021,US,Illinois,Monroe,6086,5979,0,107
+23-12-2021,US,Illinois,Mercer,2667,2630,0,37
+23-12-2021,US,Illinois,Menard,2101,2086,0,15
+23-12-2021,US,Illinois,McLean,28400,28160,0,240
+23-12-2021,US,Illinois,McHenry,44555,44192,0,363
+23-12-2021,US,Illinois,McDonough,4550,4479,0,71
+23-12-2021,US,Illinois,Massac,2565,2509,0,56
+23-12-2021,US,Illinois,Mason,2595,2542,0,53
+23-12-2021,US,Illinois,Marshall,1804,1781,0,23
+23-12-2021,US,Illinois,Marion,8107,7948,0,159
+23-12-2021,US,Illinois,Madison,46476,45834,0,642
+23-12-2021,US,Illinois,Macoupin,8280,8160,0,120
+23-12-2021,US,Illinois,Macon,18911,18638,0,273
+23-12-2021,US,Illinois,Logan,5931,5854,0,77
+23-12-2021,US,Illinois,Livingston,7089,6975,0,114
+23-12-2021,US,Illinois,Lee,5750,5683,0,67
+23-12-2021,US,Illinois,Lawrence,3800,3762,0,38
+23-12-2021,US,Illinois,Lake,96206,95069,0,1137
+23-12-2021,US,Illinois,LaSalle,18215,17907,0,308
+23-12-2021,US,Illinois,Knox,8486,8305,0,181
+23-12-2021,US,Illinois,Kendall,20271,20146,0,125
+23-12-2021,US,Illinois,Kankakee,21495,21208,0,287
+23-12-2021,US,Illinois,Kane,81467,80526,0,941
+23-12-2021,US,Illinois,Johnson,2653,2620,0,33
+23-12-2021,US,Illinois,Jo Daviess,2829,2797,0,32
+23-12-2021,US,Illinois,Jersey,4160,4103,0,57
+23-12-2021,US,Illinois,Jefferson,7350,7201,0,149
+23-12-2021,US,Illinois,Jasper,1886,1865,0,21
+23-12-2021,US,Illinois,Jackson,8988,8888,0,100
+23-12-2021,US,Illinois,Iroquois,5231,5142,0,89
+23-12-2021,US,Illinois,Henry,8227,8133,0,94
+23-12-2021,US,Illinois,Henderson,871,856,0,15
+23-12-2021,US,Illinois,Hardin,746,730,0,16
+23-12-2021,US,Illinois,Hancock,3308,3272,0,36
+23-12-2021,US,Illinois,Hamilton,1503,1479,0,24
+23-12-2021,US,Illinois,Grundy,9298,9201,0,97
+23-12-2021,US,Illinois,Greene,2474,2434,0,40
+23-12-2021,US,Illinois,Gallatin,897,887,0,10
+23-12-2021,US,Illinois,Fulton,6358,6268,0,90
+23-12-2021,US,Illinois,Franklin,8338,8210,0,128
+23-12-2021,US,Illinois,Ford,2958,2899,0,59
+23-12-2021,US,Illinois,Fayette,5021,4949,0,72
+23-12-2021,US,Illinois,Effingham,7729,7616,0,113
+23-12-2021,US,Illinois,Edwards,1239,1218,0,21
+23-12-2021,US,Illinois,Edgar,3369,3318,0,51
+23-12-2021,US,Illinois,DuPage,132440,131002,0,1438
+23-12-2021,US,Illinois,Douglas,3982,3944,0,38
+23-12-2021,US,Illinois,DeKalb,15058,14904,0,154
+23-12-2021,US,Illinois,De Witt,2821,2789,0,32
+23-12-2021,US,Illinois,Cumberland,2286,2257,0,29
+23-12-2021,US,Illinois,Crawford,3807,3772,0,35
+23-12-2021,US,Illinois,Cook,759614,747784,0,11830
+23-12-2021,US,Illinois,Coles,9441,9298,0,143
+23-12-2021,US,Illinois,Clinton,7976,7869,0,107
+23-12-2021,US,Illinois,Clay,3274,3219,0,55
+23-12-2021,US,Illinois,Clark,3192,3146,0,46
+23-12-2021,US,Illinois,Christian,6515,6430,0,85
+23-12-2021,US,Illinois,Champaign,34446,34226,0,220
+23-12-2021,US,Illinois,Cass,3023,2992,0,31
+23-12-2021,US,Illinois,Carroll,2960,2919,0,41
+23-12-2021,US,Illinois,Calhoun,933,929,0,4
+23-12-2021,US,Illinois,Bureau,5495,5390,0,105
+23-12-2021,US,Illinois,Brown,1196,1183,0,13
+23-12-2021,US,Illinois,Boone,9753,9664,0,89
+23-12-2021,US,Illinois,Bond,2964,2936,0,28
+23-12-2021,US,Illinois,Alexander,861,848,0,13
+23-12-2021,US,Illinois,Adams,15742,15577,0,165
+23-12-2021,US,Idaho,Washington,1943,1896,0,47
+23-12-2021,US,Idaho,Valley,1624,1611,0,13
+23-12-2021,US,Idaho,Unassigned,0,0,0,0
+23-12-2021,US,Idaho,Twin Falls,16884,16640,0,244
+23-12-2021,US,Idaho,Teton,1811,1803,0,8
+23-12-2021,US,Idaho,Shoshone,2206,2140,0,66
+23-12-2021,US,Idaho,Power,1118,1101,0,17
+23-12-2021,US,Idaho,Payette,4325,4253,0,72
+23-12-2021,US,Idaho,Owyhee,1741,1700,0,41
+23-12-2021,US,Idaho,Oneida,600,590,0,10
+23-12-2021,US,Idaho,Nez Perce,6562,6452,0,110
+23-12-2021,US,Idaho,Minidoka,3296,3244,0,52
+23-12-2021,US,Idaho,Madison,9278,9236,0,42
+23-12-2021,US,Idaho,Lincoln,773,759,0,14
+23-12-2021,US,Idaho,Lewis,855,832,0,23
+23-12-2021,US,Idaho,Lemhi,1008,985,0,23
+23-12-2021,US,Idaho,Latah,4851,4810,0,41
+23-12-2021,US,Idaho,Kootenai,31891,31417,0,474
+23-12-2021,US,Idaho,Jerome,4466,4410,0,56
+23-12-2021,US,Idaho,Jefferson,4584,4531,0,53
+23-12-2021,US,Idaho,Idaho,2364,2324,0,40
+23-12-2021,US,Idaho,Gooding,2405,2361,0,44
+23-12-2021,US,Idaho,Gem,2946,2876,0,70
+23-12-2021,US,Idaho,Fremont,1736,1718,0,18
+23-12-2021,US,Idaho,Franklin,1815,1789,0,26
+23-12-2021,US,Idaho,Elmore,4460,4408,0,52
+23-12-2021,US,Idaho,Custer,411,405,0,6
+23-12-2021,US,Idaho,Clearwater,1744,1716,0,28
+23-12-2021,US,Idaho,Clark,92,92,0,0
+23-12-2021,US,Idaho,Cassia,4055,4011,0,44
+23-12-2021,US,Idaho,Caribou,1081,1058,0,23
+23-12-2021,US,Idaho,Canyon,44670,44074,0,596
+23-12-2021,US,Idaho,Camas,109,108,0,1
+23-12-2021,US,Idaho,Butte,388,381,0,7
+23-12-2021,US,Idaho,Boundary,1739,1689,0,50
+23-12-2021,US,Idaho,Bonneville,22214,21969,0,245
+23-12-2021,US,Idaho,Bonner,6693,6551,0,142
+23-12-2021,US,Idaho,Boise,835,824,0,11
+23-12-2021,US,Idaho,Blaine,3314,3287,0,27
+23-12-2021,US,Idaho,Bingham,7368,7236,0,132
+23-12-2021,US,Idaho,Benewah,1718,1688,0,30
+23-12-2021,US,Idaho,Bear Lake,750,735,0,15
+23-12-2021,US,Idaho,Bannock,14573,14360,0,213
+23-12-2021,US,Idaho,Adams,563,549,0,14
+23-12-2021,US,Idaho,Ada,87867,87008,0,859
+23-12-2021,US,Hawaii,Unassigned,0,0,0,0
+23-12-2021,US,Hawaii,Out of HI,3119,3108,0,11
+23-12-2021,US,Hawaii,Maui,10974,10869,0,105
+23-12-2021,US,Hawaii,Kauai,3422,3407,0,15
+23-12-2021,US,Hawaii,Honolulu,67096,66300,0,796
+23-12-2021,US,Hawaii,Hawaii,12154,12004,0,150
+23-12-2021,US,Guam,,19427,19157,0,270
+23-12-2021,US,Georgia,Worth,3141,3045,0,96
+23-12-2021,US,Georgia,Wilkinson,1536,1489,0,47
+23-12-2021,US,Georgia,Wilkes,1608,1569,0,39
+23-12-2021,US,Georgia,Wilcox,1311,1249,0,62
+23-12-2021,US,Georgia,Whitfield,23497,23138,0,359
+23-12-2021,US,Georgia,White,5001,4867,0,134
+23-12-2021,US,Georgia,Wheeler,988,952,0,36
+23-12-2021,US,Georgia,Webster,280,274,0,6
+23-12-2021,US,Georgia,Wayne,5867,5690,0,177
+23-12-2021,US,Georgia,Washington,3263,3139,0,124
+23-12-2021,US,Georgia,Warren,784,758,0,26
+23-12-2021,US,Georgia,Ware,7462,7211,0,251
+23-12-2021,US,Georgia,Walton,15813,15455,0,358
+23-12-2021,US,Georgia,Walker,12182,12009,0,173
+23-12-2021,US,Georgia,Upson,5564,5373,0,191
+23-12-2021,US,Georgia,Union,3716,3585,0,131
+23-12-2021,US,Georgia,Unassigned,3876,3869,0,7
+23-12-2021,US,Georgia,Twiggs,1118,1056,0,62
+23-12-2021,US,Georgia,Turner,1760,1710,0,50
+23-12-2021,US,Georgia,Troup,11312,10985,0,327
+23-12-2021,US,Georgia,Treutlen,1252,1197,0,55
+23-12-2021,US,Georgia,Towns,1843,1756,0,87
+23-12-2021,US,Georgia,Toombs,5520,5343,0,177
+23-12-2021,US,Georgia,Tift,8466,8280,0,186
+23-12-2021,US,Georgia,Thomas,7820,7638,0,182
+23-12-2021,US,Georgia,Terrell,1279,1221,0,58
+23-12-2021,US,Georgia,Telfair,2302,2227,0,75
+23-12-2021,US,Georgia,Taylor,1310,1269,0,41
+23-12-2021,US,Georgia,Tattnall,3880,3764,0,116
+23-12-2021,US,Georgia,Taliaferro,171,168,0,3
+23-12-2021,US,Georgia,Talbot,761,732,0,29
+23-12-2021,US,Georgia,Sumter,4398,4256,0,142
+23-12-2021,US,Georgia,Stewart,1619,1589,0,30
+23-12-2021,US,Georgia,Stephens,4926,4802,0,124
+23-12-2021,US,Georgia,Spalding,10993,10655,0,338
+23-12-2021,US,Georgia,Seminole,1542,1516,0,26
+23-12-2021,US,Georgia,Screven,1822,1760,0,62
+23-12-2021,US,Georgia,Schley,731,723,0,8
+23-12-2021,US,Georgia,Rockdale,12465,12203,0,262
+23-12-2021,US,Georgia,Richmond,36288,35535,0,753
+23-12-2021,US,Georgia,Randolph,1030,986,0,44
+23-12-2021,US,Georgia,Rabun,2706,2630,0,76
+23-12-2021,US,Georgia,Quitman,259,255,0,4
+23-12-2021,US,Georgia,Putnam,3362,3274,0,88
+23-12-2021,US,Georgia,Pulaski,1546,1479,0,67
+23-12-2021,US,Georgia,Polk,8776,8612,0,164
+23-12-2021,US,Georgia,Pike,3974,3901,0,73
+23-12-2021,US,Georgia,Pierce,4372,4266,0,106
+23-12-2021,US,Georgia,Pickens,5871,5747,0,124
+23-12-2021,US,Georgia,Peach,4262,4146,0,116
+23-12-2021,US,Georgia,Paulding,27247,26892,0,355
+23-12-2021,US,Georgia,Out of GA,42591,41446,0,1145
+23-12-2021,US,Georgia,Oglethorpe,2302,2259,0,43
+23-12-2021,US,Georgia,Oconee,6028,5946,0,82
+23-12-2021,US,Georgia,Newton,17590,17219,0,371
+23-12-2021,US,Georgia,Muscogee,25215,24543,0,672
+23-12-2021,US,Georgia,Murray,7890,7740,0,150
+23-12-2021,US,Georgia,Morgan,3373,3321,0,52
+23-12-2021,US,Georgia,Montgomery,1543,1498,0,45
+23-12-2021,US,Georgia,Monroe,4355,4202,0,153
+23-12-2021,US,Georgia,Mitchell,3433,3331,0,102
+23-12-2021,US,Georgia,Miller,1241,1217,0,24
+23-12-2021,US,Georgia,Meriwether,3121,3000,0,121
+23-12-2021,US,Georgia,McIntosh,1724,1691,0,33
+23-12-2021,US,Georgia,McDuffie,3656,3577,0,79
+23-12-2021,US,Georgia,Marion,993,952,0,41
+23-12-2021,US,Georgia,Madison,5122,5040,0,82
+23-12-2021,US,Georgia,Macon,1363,1317,0,46
+23-12-2021,US,Georgia,Lumpkin,5133,5022,0,111
+23-12-2021,US,Georgia,Lowndes,21765,21438,0,327
+23-12-2021,US,Georgia,Long,1799,1770,0,29
+23-12-2021,US,Georgia,Lincoln,1246,1213,0,33
+23-12-2021,US,Georgia,Liberty,7702,7569,0,133
+23-12-2021,US,Georgia,Lee,4890,4807,0,83
+23-12-2021,US,Georgia,Laurens,9367,9109,0,258
+23-12-2021,US,Georgia,Lanier,1500,1483,0,17
+23-12-2021,US,Georgia,Lamar,3548,3448,0,100
+23-12-2021,US,Georgia,Jones,3616,3517,0,99
+23-12-2021,US,Georgia,Johnson,1576,1512,0,64
+23-12-2021,US,Georgia,Jenkins,1191,1129,0,62
+23-12-2021,US,Georgia,Jefferson,2730,2638,0,92
+23-12-2021,US,Georgia,Jeff Davis,2987,2924,0,63
+23-12-2021,US,Georgia,Jasper,2237,2177,0,60
+23-12-2021,US,Georgia,Jackson,15425,15193,0,232
+23-12-2021,US,Georgia,Irwin,1455,1413,0,42
+23-12-2021,US,Georgia,Houston,26078,25657,0,421
+23-12-2021,US,Georgia,Henry,40786,40253,0,533
+23-12-2021,US,Georgia,Heard,1537,1494,0,43
+23-12-2021,US,Georgia,Hart,3637,3563,0,74
+23-12-2021,US,Georgia,Harris,3933,3837,0,96
+23-12-2021,US,Georgia,Haralson,3959,3829,0,130
+23-12-2021,US,Georgia,Hancock,1172,1090,0,82
+23-12-2021,US,Georgia,Hall,40238,39544,0,694
+23-12-2021,US,Georgia,Habersham,7750,7532,0,218
+23-12-2021,US,Georgia,Gwinnett,141935,140369,0,1566
+23-12-2021,US,Georgia,Greene,2820,2746,0,74
+23-12-2021,US,Georgia,Grady,3706,3613,0,93
+23-12-2021,US,Georgia,Gordon,11881,11673,0,208
+23-12-2021,US,Georgia,Glynn,15649,15305,0,344
+23-12-2021,US,Georgia,Glascock,419,398,0,21
+23-12-2021,US,Georgia,Gilmer,4949,4808,0,141
+23-12-2021,US,Georgia,Fulton,144176,142300,0,1876
+23-12-2021,US,Georgia,Franklin,4081,3996,0,85
+23-12-2021,US,Georgia,Forsyth,36290,35989,0,301
+23-12-2021,US,Georgia,Floyd,19215,18808,0,407
+23-12-2021,US,Georgia,Fayette,14454,14205,0,249
+23-12-2021,US,Georgia,Fannin,3977,3861,0,116
+23-12-2021,US,Georgia,Evans,1669,1614,0,55
+23-12-2021,US,Georgia,Emanuel,4488,4345,0,143
+23-12-2021,US,Georgia,Elbert,3421,3328,0,93
+23-12-2021,US,Georgia,Effingham,9071,8896,0,175
+23-12-2021,US,Georgia,Echols,734,723,0,11
+23-12-2021,US,Georgia,Early,1900,1842,0,58
+23-12-2021,US,Georgia,Douglas,23796,23486,0,310
+23-12-2021,US,Georgia,Dougherty,12667,12240,0,427
+23-12-2021,US,Georgia,Dooly,1674,1612,0,62
+23-12-2021,US,Georgia,Dodge,3651,3516,0,135
+23-12-2021,US,Georgia,Decatur,4857,4748,0,109
+23-12-2021,US,Georgia,DeKalb,98477,97075,0,1402
+23-12-2021,US,Georgia,Dawson,4908,4829,0,79
+23-12-2021,US,Georgia,Dade,2326,2304,0,22
+23-12-2021,US,Georgia,Crisp,3228,3109,0,119
+23-12-2021,US,Georgia,Crawford,1166,1120,0,46
+23-12-2021,US,Georgia,Coweta,22546,22149,0,397
+23-12-2021,US,Georgia,Cook,3661,3596,0,65
+23-12-2021,US,Georgia,Columbia,25817,25495,0,322
+23-12-2021,US,Georgia,Colquitt,7637,7434,0,203
+23-12-2021,US,Georgia,Coffee,7979,7734,0,245
+23-12-2021,US,Georgia,Cobb,118088,116633,0,1455
+23-12-2021,US,Georgia,Clinch,1509,1473,0,36
+23-12-2021,US,Georgia,Clayton,42518,41733,0,785
+23-12-2021,US,Georgia,Clay,316,312,0,4
+23-12-2021,US,Georgia,Clarke,20914,20726,0,188
+23-12-2021,US,Georgia,Cherokee,45986,45495,0,491
+23-12-2021,US,Georgia,Chattooga,4799,4690,0,109
+23-12-2021,US,Georgia,Chattahoochee,6259,6238,0,21
+23-12-2021,US,Georgia,Chatham,39780,39048,0,732
+23-12-2021,US,Georgia,Charlton,2287,2230,0,57
+23-12-2021,US,Georgia,Catoosa,10147,10024,0,123
+23-12-2021,US,Georgia,Carroll,17217,16854,0,363
+23-12-2021,US,Georgia,Candler,1575,1485,0,90
+23-12-2021,US,Georgia,Camden,8161,8062,0,99
+23-12-2021,US,Georgia,Calhoun,850,828,0,22
+23-12-2021,US,Georgia,Butts,4896,4772,0,124
+23-12-2021,US,Georgia,Burke,3816,3730,0,86
+23-12-2021,US,Georgia,Bulloch,11372,11149,0,223
+23-12-2021,US,Georgia,Bryan,6429,6352,0,77
+23-12-2021,US,Georgia,Brooks,2454,2380,0,74
+23-12-2021,US,Georgia,Brantley,3161,3072,0,89
+23-12-2021,US,Georgia,Bleckley,2347,2263,0,84
+23-12-2021,US,Georgia,Bibb,26476,25809,0,667
+23-12-2021,US,Georgia,Berrien,3538,3466,0,72
+23-12-2021,US,Georgia,Ben Hill,3253,3142,0,111
+23-12-2021,US,Georgia,Bartow,21598,21228,0,370
+23-12-2021,US,Georgia,Barrow,15513,15310,0,203
+23-12-2021,US,Georgia,Banks,2880,2811,0,69
+23-12-2021,US,Georgia,Baldwin,6856,6657,0,199
+23-12-2021,US,Georgia,Baker,379,365,0,14
+23-12-2021,US,Georgia,Bacon,2686,2622,0,64
+23-12-2021,US,Georgia,Atkinson,1599,1562,0,37
+23-12-2021,US,Georgia,Appling,3552,3444,0,108
+23-12-2021,US,Florida,Washington,4618,4566,0,52
+23-12-2021,US,Florida,Walton,13031,12942,0,89
+23-12-2021,US,Florida,Wakulla,6505,6449,0,56
+23-12-2021,US,Florida,Volusia,78783,77937,0,846
+23-12-2021,US,Florida,Union,3089,3015,0,74
+23-12-2021,US,Florida,Unassigned,52608,27234,0,25374
+23-12-2021,US,Florida,Taylor,4651,4603,0,48
+23-12-2021,US,Florida,Suwannee,9336,9196,0,140
+23-12-2021,US,Florida,Sumter,15030,14746,0,284
+23-12-2021,US,Florida,St. Lucie,48686,48029,0,657
+23-12-2021,US,Florida,St. Johns,42016,41795,0,221
+23-12-2021,US,Florida,Seminole,64337,63821,0,516
+23-12-2021,US,Florida,Sarasota,58328,57484,0,844
+23-12-2021,US,Florida,Santa Rosa,33142,32851,0,291
+23-12-2021,US,Florida,Putnam,12917,12757,0,160
+23-12-2021,US,Florida,Polk,131518,130131,0,1387
+23-12-2021,US,Florida,Pinellas,139237,137566,0,1671
+23-12-2021,US,Florida,Pasco,81220,80418,0,802
+23-12-2021,US,Florida,Palm Beach,234311,231428,0,2883
+23-12-2021,US,Florida,Osceola,74249,73720,0,529
+23-12-2021,US,Florida,Orange,235706,234396,0,1310
+23-12-2021,US,Florida,Okeechobee,7497,7408,0,89
+23-12-2021,US,Florida,Okaloosa,35319,34952,0,367
+23-12-2021,US,Florida,Nassau,15791,15664,0,127
+23-12-2021,US,Florida,Monroe,11444,11392,0,52
+23-12-2021,US,Florida,Miami-Dade,702309,695837,0,6472
+23-12-2021,US,Florida,Martin,20844,20509,0,335
+23-12-2021,US,Florida,Marion,57917,56921,0,996
+23-12-2021,US,Florida,Manatee,66931,66242,0,689
+23-12-2021,US,Florida,Madison,3699,3654,0,45
+23-12-2021,US,Florida,Liberty,1855,1839,0,16
+23-12-2021,US,Florida,Levy,7126,7070,0,56
+23-12-2021,US,Florida,Leon,52445,52113,0,332
+23-12-2021,US,Florida,Lee,129865,128856,0,1009
+23-12-2021,US,Florida,Lake,56596,55933,0,663
+23-12-2021,US,Florida,Lafayette,2230,2204,0,26
+23-12-2021,US,Florida,Jefferson,2533,2505,0,28
+23-12-2021,US,Florida,Jackson,10292,10134,0,158
+23-12-2021,US,Florida,Indian River,22581,22275,0,306
+23-12-2021,US,Florida,Holmes,3919,3870,0,49
+23-12-2021,US,Florida,Hillsborough,249341,247509,0,1832
+23-12-2021,US,Florida,Highlands,16302,15936,0,366
+23-12-2021,US,Florida,Hernando,29084,28602,0,482
+23-12-2021,US,Florida,Hendry,8075,7988,0,87
+23-12-2021,US,Florida,Hardee,6136,6091,0,45
+23-12-2021,US,Florida,Hamilton,2783,2758,0,25
+23-12-2021,US,Florida,Gulf,3014,2969,0,45
+23-12-2021,US,Florida,Glades,1466,1447,0,19
+23-12-2021,US,Florida,Gilchrist,3208,3164,0,44
+23-12-2021,US,Florida,Gadsden,8803,8704,0,99
+23-12-2021,US,Florida,Franklin,2280,2260,0,20
+23-12-2021,US,Florida,Flagler,14877,14763,0,114
+23-12-2021,US,Florida,Escambia,58135,57429,0,706
+23-12-2021,US,Florida,Duval,168360,166877,0,1483
+23-12-2021,US,Florida,Dixie,2983,2959,0,24
+23-12-2021,US,Florida,DeSoto,6997,6900,0,97
+23-12-2021,US,Florida,Columbia,15119,14949,0,170
+23-12-2021,US,Florida,Collier,59523,58972,0,551
+23-12-2021,US,Florida,Clay,34368,34016,0,352
+23-12-2021,US,Florida,Citrus,20938,20475,0,463
+23-12-2021,US,Florida,Charlotte,24121,23684,0,437
+23-12-2021,US,Florida,Calhoun,3022,2977,0,45
+23-12-2021,US,Florida,Broward,370708,367629,0,3079
+23-12-2021,US,Florida,Brevard,83179,82265,0,914
+23-12-2021,US,Florida,Bradford,5376,5318,0,58
+23-12-2021,US,Florida,Bay,32944,32550,0,394
+23-12-2021,US,Florida,Baker,6046,5984,0,62
+23-12-2021,US,Florida,Alachua,40831,40546,0,285
+23-12-2021,US,District of Columbia,District of Columbia,79565,78358,0,1207
+23-12-2021,US,Delaware,Unassigned,580,580,0,0
+23-12-2021,US,Delaware,Sussex,41041,40371,0,670
+23-12-2021,US,Delaware,New Castle,95144,94048,0,1096
+23-12-2021,US,Delaware,Kent,31866,31377,0,489
+23-12-2021,US,Connecticut,Windham,16998,16756,0,242
+23-12-2021,US,Connecticut,Unassigned,1717,1715,0,2
+23-12-2021,US,Connecticut,Tolland,13790,13582,0,208
+23-12-2021,US,Connecticut,New London,34077,33557,0,520
+23-12-2021,US,Connecticut,New Haven,124326,122001,0,2325
+23-12-2021,US,Connecticut,Middlesex,17846,17436,0,410
+23-12-2021,US,Connecticut,Litchfield,21230,20867,0,363
+23-12-2021,US,Connecticut,Hartford,115690,113027,0,2663
+23-12-2021,US,Connecticut,Fairfield,128883,126539,0,2344
+23-12-2021,US,Colorado,Yuma,1456,1435,0,21
+23-12-2021,US,Colorado,Weld,55994,55414,0,580
+23-12-2021,US,Colorado,Washington,766,742,0,24
+23-12-2021,US,Colorado,Unassigned,112,112,0,0
+23-12-2021,US,Colorado,Teller,3490,3440,0,50
+23-12-2021,US,Colorado,Summit,5845,5833,0,12
+23-12-2021,US,Colorado,Sedgwick,364,358,0,6
+23-12-2021,US,Colorado,San Miguel,1373,1366,0,7
+23-12-2021,US,Colorado,San Juan,113,113,0,0
+23-12-2021,US,Colorado,Saguache,835,826,0,9
+23-12-2021,US,Colorado,Routt,3979,3955,0,24
+23-12-2021,US,Colorado,Rio Grande,1940,1900,0,40
+23-12-2021,US,Colorado,Rio Blanco,1268,1257,0,11
+23-12-2021,US,Colorado,Pueblo,30920,30270,0,650
+23-12-2021,US,Colorado,Prowers,2030,1988,0,42
+23-12-2021,US,Colorado,Pitkin,3547,3541,0,6
+23-12-2021,US,Colorado,Phillips,606,591,0,15
+23-12-2021,US,Colorado,Park,1858,1844,0,14
+23-12-2021,US,Colorado,Out of CO,0,0,0,0
+23-12-2021,US,Colorado,Ouray,549,543,0,6
+23-12-2021,US,Colorado,Otero,3321,3206,0,115
+23-12-2021,US,Colorado,Morgan,4177,4054,0,123
+23-12-2021,US,Colorado,Montrose,6955,6817,0,138
+23-12-2021,US,Colorado,Montezuma,4173,4122,0,51
+23-12-2021,US,Colorado,Moffat,2255,2207,0,48
+23-12-2021,US,Colorado,Mineral,150,149,0,1
+23-12-2021,US,Colorado,Mesa,29776,29324,0,452
+23-12-2021,US,Colorado,Logan,5254,5159,0,95
+23-12-2021,US,Colorado,Lincoln,1424,1416,0,8
+23-12-2021,US,Colorado,Las Animas,2333,2303,0,30
+23-12-2021,US,Colorado,Larimer,47955,47559,0,396
+23-12-2021,US,Colorado,Lake,1242,1240,0,2
+23-12-2021,US,Colorado,La Plata,7391,7324,0,67
+23-12-2021,US,Colorado,Kit Carson,1252,1227,0,25
+23-12-2021,US,Colorado,Kiowa,278,274,0,4
+23-12-2021,US,Colorado,Jefferson,77603,76531,0,1072
+23-12-2021,US,Colorado,Jackson,126,126,0,0
+23-12-2021,US,Colorado,Huerfano,909,883,0,26
+23-12-2021,US,Colorado,Hinsdale,69,69,0,0
+23-12-2021,US,Colorado,Gunnison,2084,2071,0,13
+23-12-2021,US,Colorado,Grand,2419,2400,0,19
+23-12-2021,US,Colorado,Gilpin,571,568,0,3
+23-12-2021,US,Colorado,Garfield,9381,9304,0,77
+23-12-2021,US,Colorado,Fremont,10487,10333,0,154
+23-12-2021,US,Colorado,Elbert,3190,3160,0,30
+23-12-2021,US,Colorado,El Paso,120891,119516,0,1375
+23-12-2021,US,Colorado,Eagle,10213,10181,0,32
+23-12-2021,US,Colorado,Douglas,48421,48078,0,343
+23-12-2021,US,Colorado,Dolores,277,272,0,5
+23-12-2021,US,Colorado,Denver,108827,107744,0,1083
+23-12-2021,US,Colorado,Delta,4752,4633,0,119
+23-12-2021,US,Colorado,Custer,488,474,0,14
+23-12-2021,US,Colorado,Crowley,2492,2465,0,27
+23-12-2021,US,Colorado,Costilla,438,425,0,13
+23-12-2021,US,Colorado,Conejos,1179,1135,0,44
+23-12-2021,US,Colorado,Clear Creek,947,940,0,7
+23-12-2021,US,Colorado,Cheyenne,245,237,0,8
+23-12-2021,US,Colorado,Chaffee,2800,2762,0,38
+23-12-2021,US,Colorado,Broomfield,8142,8047,0,95
+23-12-2021,US,Colorado,Boulder,36985,36694,0,291
+23-12-2021,US,Colorado,Bent,1947,1907,0,40
+23-12-2021,US,Colorado,Baca,587,580,0,7
+23-12-2021,US,Colorado,Archuleta,2019,2010,0,9
+23-12-2021,US,Colorado,Arapahoe,95160,94194,0,966
+23-12-2021,US,Colorado,Alamosa,3050,2996,0,54
+23-12-2021,US,Colorado,Adams,89438,88422,0,1016
+23-12-2021,US,California,Yuba,11125,11027,0,98
+23-12-2021,US,California,Yolo,22506,22236,0,270
+23-12-2021,US,California,Ventura,108246,107040,0,1206
+23-12-2021,US,California,Unassigned,441,441,0,0
+23-12-2021,US,California,Tuolumne,8033,7942,0,91
+23-12-2021,US,California,Tulare,88811,87674,0,1137
+23-12-2021,US,California,Trinity,1040,1023,0,17
+23-12-2021,US,California,Tehama,10464,10328,0,136
+23-12-2021,US,California,Sutter,14963,14772,0,191
+23-12-2021,US,California,Stanislaus,93100,91636,0,1464
+23-12-2021,US,California,Sonoma,44990,44574,0,416
+23-12-2021,US,California,Solano,49009,48634,0,375
+23-12-2021,US,California,Siskiyou,4897,4838,0,59
+23-12-2021,US,California,Sierra,225,225,0,0
+23-12-2021,US,California,Shasta,26827,26346,0,481
+23-12-2021,US,California,Santa Cruz,23336,23108,0,228
+23-12-2021,US,California,Santa Clara,158861,156907,0,1954
+23-12-2021,US,California,Santa Barbara,49351,48785,0,566
+23-12-2021,US,California,San Mateo,59506,58871,0,635
+23-12-2021,US,California,San Luis Obispo,32738,32373,0,365
+23-12-2021,US,California,San Joaquin,110575,108705,0,1870
+23-12-2021,US,California,San Francisco,61566,60884,0,682
+23-12-2021,US,California,San Diego,427629,423195,0,4434
+23-12-2021,US,California,San Bernardino,388512,382473,0,6039
+23-12-2021,US,California,San Benito,8193,8111,0,82
+23-12-2021,US,California,Sacramento,174790,172278,0,2512
+23-12-2021,US,California,Riverside,402135,396663,0,5472
+23-12-2021,US,California,Plumas,2048,2036,0,12
+23-12-2021,US,California,Placer,44050,43561,0,489
+23-12-2021,US,California,Out of CA,0,0,0,0
+23-12-2021,US,California,Orange,344103,338239,0,5864
+23-12-2021,US,California,Nevada,10530,10420,0,110
+23-12-2021,US,California,Napa,13957,13850,0,107
+23-12-2021,US,California,Monterey,54569,53930,0,639
+23-12-2021,US,California,Mono,2020,2016,0,4
+23-12-2021,US,California,Modoc,807,801,0,6
+23-12-2021,US,California,Merced,46348,45659,0,689
+23-12-2021,US,California,Mendocino,9013,8908,0,105
+23-12-2021,US,California,Mariposa,1689,1671,0,18
+23-12-2021,US,California,Marin,19759,19510,0,249
+23-12-2021,US,California,Madera,27069,26745,0,324
+23-12-2021,US,California,Los Angeles,1585313,1557801,0,27512
+23-12-2021,US,California,Lassen,8061,8002,0,59
+23-12-2021,US,California,Lake,7196,7080,0,116
+23-12-2021,US,California,Kings,36215,35839,0,376
+23-12-2021,US,California,Kern,161987,160082,0,1905
+23-12-2021,US,California,Inyo,2672,2625,0,47
+23-12-2021,US,California,Imperial,41221,40423,0,798
+23-12-2021,US,California,Humboldt,10848,10726,0,122
+23-12-2021,US,California,Glenn,4660,4621,0,39
+23-12-2021,US,California,Fresno,161048,158699,0,2349
+23-12-2021,US,California,El Dorado,19086,18914,0,172
+23-12-2021,US,California,Del Norte,3853,3810,0,43
+23-12-2021,US,California,Contra Costa,107625,106555,0,1070
+23-12-2021,US,California,Colusa,3361,3340,0,21
+23-12-2021,US,California,Calaveras,4660,4569,0,91
+23-12-2021,US,California,Butte,26207,25877,0,330
+23-12-2021,US,California,Amador,5939,5869,0,70
+23-12-2021,US,California,Alpine,112,112,0,0
+23-12-2021,US,California,Alameda,130692,129154,0,1538
+23-12-2021,US,Arkansas,Yell,4902,4814,0,88
+23-12-2021,US,Arkansas,Woodruff,1170,1146,0,24
+23-12-2021,US,Arkansas,White,14460,14251,0,209
+23-12-2021,US,Arkansas,Washington,46887,46380,0,507
+23-12-2021,US,Arkansas,Van Buren,2433,2389,0,44
+23-12-2021,US,Arkansas,Union,6240,6090,0,150
+23-12-2021,US,Arkansas,Unassigned,6241,6241,0,0
+23-12-2021,US,Arkansas,Stone,2014,1967,0,47
+23-12-2021,US,Arkansas,St. Francis,4986,4914,0,72
+23-12-2021,US,Arkansas,Sharp,3286,3210,0,76
+23-12-2021,US,Arkansas,Sevier,4195,4132,0,63
+23-12-2021,US,Arkansas,Sebastian,23967,23553,0,414
+23-12-2021,US,Arkansas,Searcy,1397,1369,0,28
+23-12-2021,US,Arkansas,Scott,1809,1776,0,33
+23-12-2021,US,Arkansas,Saline,19574,19319,0,255
+23-12-2021,US,Arkansas,Randolph,3645,3580,0,65
+23-12-2021,US,Arkansas,Pulaski,61854,60894,0,960
+23-12-2021,US,Arkansas,Prairie,1328,1298,0,30
+23-12-2021,US,Arkansas,Pope,12672,12510,0,162
+23-12-2021,US,Arkansas,Polk,3051,2928,0,123
+23-12-2021,US,Arkansas,Poinsett,5330,5226,0,104
+23-12-2021,US,Arkansas,Pike,1807,1768,0,39
+23-12-2021,US,Arkansas,Phillips,3325,3246,0,79
+23-12-2021,US,Arkansas,Perry,1648,1624,0,24
+23-12-2021,US,Arkansas,Ouachita,3608,3520,0,88
+23-12-2021,US,Arkansas,Newton,1321,1278,0,43
+23-12-2021,US,Arkansas,Nevada,1448,1406,0,42
+23-12-2021,US,Arkansas,Montgomery,1187,1137,0,50
+23-12-2021,US,Arkansas,Monroe,1228,1202,0,26
+23-12-2021,US,Arkansas,Mississippi,9009,8852,0,157
+23-12-2021,US,Arkansas,Miller,6798,6647,0,151
+23-12-2021,US,Arkansas,Marion,2506,2437,0,69
+23-12-2021,US,Arkansas,Madison,2844,2800,0,44
+23-12-2021,US,Arkansas,Lonoke,12894,12715,0,179
+23-12-2021,US,Arkansas,Logan,3812,3759,0,53
+23-12-2021,US,Arkansas,Little River,2156,2072,0,84
+23-12-2021,US,Arkansas,Lincoln,3815,3757,0,58
+23-12-2021,US,Arkansas,Lee,2242,2188,0,54
+23-12-2021,US,Arkansas,Lawrence,3622,3560,0,62
+23-12-2021,US,Arkansas,Lafayette,882,854,0,28
+23-12-2021,US,Arkansas,Johnson,4826,4765,0,61
+23-12-2021,US,Arkansas,Jefferson,12643,12409,0,234
+23-12-2021,US,Arkansas,Jackson,4692,4645,0,47
+23-12-2021,US,Arkansas,Izard,2828,2771,0,57
+23-12-2021,US,Arkansas,Independence,7195,7024,0,171
+23-12-2021,US,Arkansas,Howard,2623,2584,0,39
+23-12-2021,US,Arkansas,Hot Spring,7959,7846,0,113
+23-12-2021,US,Arkansas,Hempstead,3146,3100,0,46
+23-12-2021,US,Arkansas,Greene,10785,10654,0,131
+23-12-2021,US,Arkansas,Grant,2990,2938,0,52
+23-12-2021,US,Arkansas,Garland,16546,16133,0,413
+23-12-2021,US,Arkansas,Fulton,1992,1916,0,76
+23-12-2021,US,Arkansas,Franklin,2877,2819,0,58
+23-12-2021,US,Arkansas,Faulkner,21231,20996,0,235
+23-12-2021,US,Arkansas,Drew,3022,2966,0,56
+23-12-2021,US,Arkansas,Desha,1990,1955,0,35
+23-12-2021,US,Arkansas,Dallas,1161,1142,0,19
+23-12-2021,US,Arkansas,Cross,3107,3037,0,70
+23-12-2021,US,Arkansas,Crittenden,9267,9081,0,186
+23-12-2021,US,Arkansas,Crawford,11347,11157,0,190
+23-12-2021,US,Arkansas,Craighead,23514,23259,0,255
+23-12-2021,US,Arkansas,Conway,3419,3371,0,48
+23-12-2021,US,Arkansas,Columbia,3485,3410,0,75
+23-12-2021,US,Arkansas,Cleveland,1485,1452,0,33
+23-12-2021,US,Arkansas,Cleburne,4189,4090,0,99
+23-12-2021,US,Arkansas,Clay,2915,2838,0,77
+23-12-2021,US,Arkansas,Clark,3468,3403,0,65
+23-12-2021,US,Arkansas,Chicot,2059,2011,0,48
+23-12-2021,US,Arkansas,Carroll,4534,4454,0,80
+23-12-2021,US,Arkansas,Calhoun,616,608,0,8
+23-12-2021,US,Arkansas,Bradley,2058,2016,0,42
+23-12-2021,US,Arkansas,Boone,6844,6710,0,134
+23-12-2021,US,Arkansas,Benton,45481,44810,0,671
+23-12-2021,US,Arkansas,Baxter,6465,6269,0,196
+23-12-2021,US,Arkansas,Ashley,3304,3251,0,53
+23-12-2021,US,Arkansas,Arkansas,3592,3529,0,63
+23-12-2021,US,Arizona,Yuma,43873,42908,0,965
+23-12-2021,US,Arizona,Yavapai,35647,34718,0,929
+23-12-2021,US,Arizona,Unassigned,0,0,0,0
+23-12-2021,US,Arizona,Santa Cruz,10310,10106,0,204
+23-12-2021,US,Arizona,Pinal,87172,85890,0,1282
+23-12-2021,US,Arizona,Pima,169140,166041,0,3099
+23-12-2021,US,Arizona,Out of AZ,0,0,0,0
+23-12-2021,US,Arizona,Navajo,26430,25695,0,735
+23-12-2021,US,Arizona,Mohave,38229,37078,0,1151
+23-12-2021,US,Arizona,Maricopa,848132,834640,0,13492
+23-12-2021,US,Arizona,La Paz,3585,3480,0,105
+23-12-2021,US,Arizona,Greenlee,1446,1419,0,27
+23-12-2021,US,Arizona,Graham,8912,8759,0,153
+23-12-2021,US,Arizona,Gila,11924,11624,0,300
+23-12-2021,US,Arizona,Coconino,26958,26550,0,408
+23-12-2021,US,Arizona,Cochise,19676,19222,0,454
+23-12-2021,US,Arizona,Apache,15971,15434,0,537
+23-12-2021,US,American Samoa,,10,10,0,0
+23-12-2021,US,Alaska,Yukon-Koyukuk,822,814,0,8
+23-12-2021,US,Alaska,Yakutat,289,286,0,3
+23-12-2021,US,Alaska,Wrangell,227,226,0,1
+23-12-2021,US,Alaska,Valdez-Cordova,0,0,0,0
+23-12-2021,US,Alaska,Unassigned,538,537,0,1
+23-12-2021,US,Alaska,Southeast Fairbanks,1400,1386,0,14
+23-12-2021,US,Alaska,Skagway,94,94,0,0
+23-12-2021,US,Alaska,Sitka,1299,1293,0,6
+23-12-2021,US,Alaska,Prince of Wales-Hyder,640,634,0,6
+23-12-2021,US,Alaska,Petersburg,539,536,0,3
+23-12-2021,US,Alaska,Northwest Arctic,2387,2377,0,10
+23-12-2021,US,Alaska,North Slope,2918,2909,0,9
+23-12-2021,US,Alaska,Nome,2366,2363,0,3
+23-12-2021,US,Alaska,Matanuska-Susitna,24979,24802,0,177
+23-12-2021,US,Alaska,Kusilvak,2410,2401,0,9
+23-12-2021,US,Alaska,Kodiak Island,2734,2724,0,10
+23-12-2021,US,Alaska,Ketchikan Gateway,2317,2302,0,15
+23-12-2021,US,Alaska,Kenai Peninsula,12190,12109,0,81
+23-12-2021,US,Alaska,Juneau,4361,4346,0,15
+23-12-2021,US,Alaska,Haines,247,246,0,1
+23-12-2021,US,Alaska,Fairbanks North Star,17528,17411,0,117
+23-12-2021,US,Alaska,Dillingham,991,981,0,10
+23-12-2021,US,Alaska,Denali,297,296,0,1
+23-12-2021,US,Alaska,Copper River,707,703,0,4
+23-12-2021,US,Alaska,Chugach,1242,1233,0,9
+23-12-2021,US,Alaska,Bristol Bay plus Lake and Peninsula,563,562,0,1
+23-12-2021,US,Alaska,Bristol Bay,0,0,0,0
+23-12-2021,US,Alaska,Bethel,6918,6886,0,32
+23-12-2021,US,Alaska,Anchorage,62890,62465,0,425
+23-12-2021,US,Alaska,Aleutians West,949,947,0,2
+23-12-2021,US,Alaska,Aleutians East,452,449,0,3
+23-12-2021,US,Alabama,Winston,4866,4754,0,112
+23-12-2021,US,Alabama,Wilcox,1803,1765,0,38
+23-12-2021,US,Alabama,Washington,2583,2532,0,51
+23-12-2021,US,Alabama,Walker,12441,12053,0,388
+23-12-2021,US,Alabama,Unassigned,0,0,0,0
+23-12-2021,US,Alabama,Tuscaloosa,36686,36035,0,651
+23-12-2021,US,Alabama,Tallapoosa,7468,7264,0,204
+23-12-2021,US,Alabama,Talladega,14504,14198,0,306
+23-12-2021,US,Alabama,Sumter,1416,1374,0,42
+23-12-2021,US,Alabama,St. Clair,17289,16924,0,365
+23-12-2021,US,Alabama,Shelby,39294,38915,0,379
+23-12-2021,US,Alabama,Russell,7222,7156,0,66
+23-12-2021,US,Alabama,Randolph,3452,3385,0,67
+23-12-2021,US,Alabama,Pike,5206,5095,0,111
+23-12-2021,US,Alabama,Pickens,3389,3298,0,91
+23-12-2021,US,Alabama,Perry,1426,1385,0,41
+23-12-2021,US,Alabama,Out of AL,0,0,0,0
+23-12-2021,US,Alabama,Morgan,23026,22603,0,423
+23-12-2021,US,Alabama,Montgomery,35313,34523,0,790
+23-12-2021,US,Alabama,Monroe,3411,3345,0,66
+23-12-2021,US,Alabama,Mobile,75227,73836,0,1391
+23-12-2021,US,Alabama,Marshall,19153,18832,0,321
+23-12-2021,US,Alabama,Marion,5488,5356,0,132
+23-12-2021,US,Alabama,Marengo,3445,3352,0,93
+23-12-2021,US,Alabama,Madison,54957,54201,0,756
+23-12-2021,US,Alabama,Macon,2513,2445,0,68
+23-12-2021,US,Alabama,Lowndes,1798,1730,0,68
+23-12-2021,US,Alabama,Limestone,16538,16310,0,228
+23-12-2021,US,Alabama,Lee,26060,25791,0,269
+23-12-2021,US,Alabama,Lawrence,4934,4800,0,134
+23-12-2021,US,Alabama,Lauderdale,15366,15050,0,316
+23-12-2021,US,Alabama,Lamar,2572,2515,0,57
+23-12-2021,US,Alabama,Jefferson,118779,116755,0,2024
+23-12-2021,US,Alabama,Jackson,10437,10237,0,200
+23-12-2021,US,Alabama,Houston,18084,17654,0,430
+23-12-2021,US,Alabama,Henry,3269,3203,0,66
+23-12-2021,US,Alabama,Hale,3238,3147,0,91
+23-12-2021,US,Alabama,Greene,1322,1277,0,45
+23-12-2021,US,Alabama,Geneva,4713,4576,0,137
+23-12-2021,US,Alabama,Franklin,6472,6362,0,110
+23-12-2021,US,Alabama,Fayette,3380,3294,0,86
+23-12-2021,US,Alabama,Etowah,20289,19762,0,527
+23-12-2021,US,Alabama,Escambia,7005,6857,0,148
+23-12-2021,US,Alabama,Elmore,16312,16016,0,296
+23-12-2021,US,Alabama,DeKalb,13300,13024,0,276
+23-12-2021,US,Alabama,Dallas,5377,5165,0,212
+23-12-2021,US,Alabama,Dale,9179,8985,0,194
+23-12-2021,US,Alabama,Cullman,16591,16283,0,308
+23-12-2021,US,Alabama,Crenshaw,2649,2570,0,79
+23-12-2021,US,Alabama,Covington,7063,6864,0,199
+23-12-2021,US,Alabama,Coosa,1898,1850,0,48
+23-12-2021,US,Alabama,Conecuh,1949,1887,0,62
+23-12-2021,US,Alabama,Colbert,9516,9303,0,213
+23-12-2021,US,Alabama,Coffee,9552,9357,0,195
+23-12-2021,US,Alabama,Cleburne,2581,2521,0,60
+23-12-2021,US,Alabama,Clay,2567,2498,0,69
+23-12-2021,US,Alabama,Clarke,4878,4791,0,87
+23-12-2021,US,Alabama,Choctaw,968,938,0,30
+23-12-2021,US,Alabama,Chilton,7248,7075,0,173
+23-12-2021,US,Alabama,Cherokee,3285,3220,0,65
+23-12-2021,US,Alabama,Chambers,5899,5752,0,147
+23-12-2021,US,Alabama,Calhoun,22866,22339,0,527
+23-12-2021,US,Alabama,Butler,3498,3396,0,102
+23-12-2021,US,Alabama,Bullock,1553,1507,0,46
+23-12-2021,US,Alabama,Blount,11031,10834,0,197
+23-12-2021,US,Alabama,Bibb,4410,4315,0,95
+23-12-2021,US,Alabama,Barbour,3730,3649,0,81
+23-12-2021,US,Alabama,Baldwin,38690,38097,0,593
+23-12-2021,US,Alabama,Autauga,10746,10586,0,160
+23-12-2021,Croatia,Main territory,,686590,674411,0,12179
+23-12-2021,Congo (Brazzaville),Main territory,,19490,19123,0,367
+23-12-2021,Germany,Other,,19039,19039,0,0
+23-12-2021,Germany,Thuringen,,280388,274669,0,5719
+23-12-2021,Germany,Schleswig-Holstein,,113046,111176,0,1870
+23-12-2021,Germany,Sachsen-Anhalt,,218202,214020,0,4182
+23-12-2021,Germany,Sachsen,,636448,623899,0,12549
+23-12-2021,Germany,Saarland,,72205,70980,0,1225
+23-12-2021,Germany,Rheinland-Pfalz,,272334,267769,0,4565
+23-12-2021,Germany,Nordrhein-Westfalen,,1345364,1325283,0,20081
+23-12-2021,Germany,Niedersachsen,,430577,423814,0,6763
+23-12-2021,Germany,Mecklenburg-Vorpommern,,96441,95000,0,1441
+23-12-2021,Germany,Hessen,,467481,458984,0,8497
+23-12-2021,Germany,Hamburg,,133023,131056,0,1967
+23-12-2021,Germany,Bremen,,45548,44961,0,587
+23-12-2021,Germany,Brandenburg,,233828,229252,0,4576
+23-12-2021,Germany,Berlin,,319441,315453,0,3988
+23-12-2021,Germany,Bavaria,,1302924,1283564,0,19360
+23-12-2021,Germany,Baden-Wurttemberg,,991881,979127,0,12754
+23-12-2021,Serbia,Main territory,,1287202,1274684,0,12518
+23-12-2021,Philippines,Main territory,,2837903,2786922,0,50981
+23-12-2021,Belize,Main territory,,31444,30852,0,592
+23-12-2021,Mali,Main territory,,19758,19106,0,652
+23-12-2021,Albania,Main territory,,206935,203754,0,3181
+23-12-2021,Gambia,Main territory,,10087,9745,0,342
+23-12-2021,Antigua and Barbuda,Main territory,,4216,4098,0,118
+23-12-2021,Grenada,Main territory,,5948,5748,0,200
+23-12-2021,Tajikistan,Main territory,,17493,17368,0,125
+23-12-2021,Somalia,Main territory,,23532,22199,0,1333
+23-12-2021,Poland,Main territory,,4017420,3923975,0,93445
+23-12-2021,Tunisia,Main territory,,722123,696614,0,25509
+23-12-2021,Azerbaijan,Main territory,,613059,604802,0,8257
+23-12-2021,Belarus,Main territory,,689151,683702,0,5449
+23-12-2021,Ireland,Main territory,,680375,674485,0,5890
+23-12-2021,Denmark,Main territory,,673807,670634,0,3173
+23-12-2021,Denmark,Greenland,,2249,2249,0,0
+23-12-2021,Denmark,Faroe Islands,,5039,5026,0,13
+23-12-2021,Armenia,Main territory,,344126,336190,0,7936
+23-12-2021,Uzbekistan,Main territory,,197753,196282,0,1471
+23-12-2021,Italy,Veneto,,594865,582624,0,12241
+23-12-2021,Italy,Valle d'Aosta,,14647,14160,0,487
+23-12-2021,Italy,Umbria,,73403,71904,0,1499
+23-12-2021,Italy,Toscana,,324433,316926,0,7507
+23-12-2021,Italy,Sicilia,,348105,340709,0,7396
+23-12-2021,Italy,Sardegna,,83416,81699,0,1717
+23-12-2021,Italy,Puglia,,290328,283381,0,6947
+23-12-2021,Italy,Piemonte,,439650,427667,0,11983
+23-12-2021,Italy,P.A. Trento,,57303,55890,0,1413
+23-12-2021,Italy,P.A. Bolzano,,97494,96201,0,1293
+23-12-2021,Italy,Molise,,15632,15123,0,509
+23-12-2021,Italy,Marche,,136079,132874,0,3205
+23-12-2021,Italy,Lombardia,,1032211,997352,0,34859
+23-12-2021,Italy,Liguria,,138057,133510,0,4547
+23-12-2021,Italy,Lazio,,467174,457981,0,9193
+23-12-2021,Italy,Friuli Venezia Giulia,,146620,142460,0,4160
+23-12-2021,Italy,Emilia-Romagna,,499123,485041,0,14082
+23-12-2021,Italy,Campania,,526937,518553,0,8384
+23-12-2021,Italy,Calabria,,102965,101398,0,1567
+23-12-2021,Italy,Basilicata,,33628,32998,0,630
+23-12-2021,Italy,Abruzzo,,94984,92358,0,2626
+23-12-2021,Netherlands,Zuid-Holland,,688137,683333,0,4804
+23-12-2021,Netherlands,Zeeland,,62072,61779,0,293
+23-12-2021,Netherlands,Utrecht,,237552,236109,0,1443
+23-12-2021,Netherlands,Other,,14101,14081,0,20
+23-12-2021,Netherlands,Sint Maarten,,4748,4673,0,75
+23-12-2021,Netherlands,Overijssel,,195678,194355,0,1323
+23-12-2021,Netherlands,Noord-Holland,,496693,493642,0,3051
+23-12-2021,Netherlands,Noord-Brabant,,465066,461556,0,3510
+23-12-2021,Netherlands,Limburg,,224171,222146,0,2025
+23-12-2021,Netherlands,Groningen,,72968,72641,0,327
+23-12-2021,Netherlands,Gelderland,,346496,343957,0,2539
+23-12-2021,Netherlands,Friesland,,94118,93546,0,572
+23-12-2021,Netherlands,Flevoland,,69906,69605,0,301
+23-12-2021,Netherlands,Drenthe,,61179,60766,0,413
+23-12-2021,Netherlands,Curacao,,18299,18113,0,186
+23-12-2021,Netherlands,"Bonaire, Sint Eustatius and Saba",,3245,3223,0,22
+23-12-2021,Netherlands,Aruba,,17165,16984,0,181
+23-12-2021,Maldives,Main territory,,94444,94183,0,261
+23-12-2021,Dominican Republic,Main territory,,412685,408457,0,4228
+23-12-2021,Uruguay,Main territory,,406127,399968,0,6159
+23-12-2021,Lebanon,Main territory,,707123,698127,0,8996
+23-12-2021,Sierra Leone,Main territory,,6610,6487,0,123
+23-12-2021,Kenya,Main territory,,274645,269289,0,5356
+23-12-2021,Suriname,Main territory,,51542,50356,0,1186
+23-12-2021,Andorra,Main territory,,21571,21432,0,139
+23-12-2021,Mexico,Zacatecas,,42581,39143,0,3438
+23-12-2021,Mexico,Yucatan,,75583,69870,0,5713
+23-12-2021,Mexico,Veracruz,,124559,109487,0,15072
+23-12-2021,Mexico,Other,,0,0,0,0
+23-12-2021,Mexico,Tlaxcala,,29603,26606,0,2997
+23-12-2021,Mexico,Tamaulipas,,103981,96880,0,7101
+23-12-2021,Mexico,Tabasco,,144061,138320,0,5741
+23-12-2021,Mexico,Sonora,,122132,113099,0,9033
+23-12-2021,Mexico,Sinaloa,,75326,66370,0,8956
+23-12-2021,Mexico,San Luis Potosi,,107057,100260,0,6797
+23-12-2021,Mexico,Quintana Roo,,60184,56084,0,4100
+23-12-2021,Mexico,Queretaro,,99845,94185,0,5660
+23-12-2021,Mexico,Puebla,,126265,110574,0,15691
+23-12-2021,Mexico,Oaxaca,,83859,78214,0,5645
+23-12-2021,Mexico,Nuevo Leon,,208651,194946,0,13705
+23-12-2021,Mexico,Nayarit,,34494,31586,0,2908
+23-12-2021,Mexico,Morelos,,50891,45943,0,4948
+23-12-2021,Mexico,Michoacan,,73827,65563,0,8264
+23-12-2021,Mexico,Main territory,,381659,336880,0,44779
+23-12-2021,Mexico,Jalisco,,165123,147370,0,17753
+23-12-2021,Mexico,Hidalgo,,62994,55094,0,7900
+23-12-2021,Mexico,Guerrero,,77372,71057,0,6315
+23-12-2021,Mexico,Guanajuato,,201306,187989,0,13317
+23-12-2021,Mexico,Durango,,50607,47458,0,3149
+23-12-2021,Mexico,Colima,,33434,31395,0,2039
+23-12-2021,Mexico,Coahuila,,100664,92916,0,7748
+23-12-2021,Mexico,Ciudad de Mexico,,992710,952409,0,40301
+23-12-2021,Mexico,Chihuahua,,78305,69691,0,8614
+23-12-2021,Mexico,Chiapas,,23595,21299,0,2296
+23-12-2021,Mexico,Campeche,,24255,22150,0,2105
+23-12-2021,Mexico,Baja California Sur,,58283,55866,0,2417
+23-12-2021,Mexico,Baja California,,88778,77936,0,10842
+23-12-2021,Mexico,Aguascalientes,,38417,35402,0,3015
+23-12-2021,Indonesia,Main territory,,4261208,4117166,0,144042
+23-12-2021,Malaysia,W.P. Putrajaya,,9213,9191,0,22
+23-12-2021,Malaysia,W.P. Labuan,,10783,10632,0,151
+23-12-2021,Malaysia,W.P. Kuala Lumpur,,209346,206688,0,2658
+23-12-2021,Malaysia,Other,,0,0,0,0
+23-12-2021,Malaysia,Terengganu,,81130,80444,0,686
+23-12-2021,Malaysia,Selangor,,780188,770281,0,9907
+23-12-2021,Malaysia,Sarawak,,252129,250515,0,1614
+23-12-2021,Malaysia,Sabah,,239187,236417,0,2770
+23-12-2021,Malaysia,Pulau Pinang,,159381,157652,0,1729
+23-12-2021,Malaysia,Perlis,,7037,6903,0,134
+23-12-2021,Malaysia,Perak,,127657,126295,0,1362
+23-12-2021,Malaysia,Pahang,,93487,92732,0,755
+23-12-2021,Malaysia,Negeri Sembilan,,112566,111255,0,1311
+23-12-2021,Malaysia,Melaka,,75224,74273,0,951
+23-12-2021,Malaysia,Kelantan,,166027,164797,0,1230
+23-12-2021,Malaysia,Kedah,,166474,164326,0,2148
+23-12-2021,Malaysia,Johor,,241884,238047,0,3837
+23-12-2021,Bolivia,Main territory,,570876,551380,0,19496
+23-12-2021,Monaco,Main territory,,4606,4568,0,38
+23-12-2021,Portugal,Main territory,,1253094,1234254,0,18840
+23-12-2021,Japan,Yamanashi,,5161,5132,0,29
+23-12-2021,Japan,Yamaguchi,,5800,5707,0,93
+23-12-2021,Japan,Yamagata,,3606,3550,0,56
+23-12-2021,Japan,Wakayama,,5303,5241,0,62
+23-12-2021,Japan,Other,,8,8,0,0
+23-12-2021,Japan,Toyama,,4869,4817,0,52
+23-12-2021,Japan,Tottori,,1669,1664,0,5
+23-12-2021,Japan,Tokyo,,382679,379506,0,3173
+23-12-2021,Japan,Tokushima,,3291,3225,0,66
+23-12-2021,Japan,Tochigi,,15535,15418,0,117
+23-12-2021,Japan,Shizuoka,,26881,26672,0,209
+23-12-2021,Japan,Shimane,,1733,1728,0,5
+23-12-2021,Japan,Shiga,,12464,12360,0,104
+23-12-2021,Japan,Saitama,,116003,114944,0,1059
+23-12-2021,Japan,Saga,,5866,5836,0,30
+23-12-2021,Japan,Port Quarantine,,4463,4459,0,4
+23-12-2021,Japan,Osaka,,203459,200395,0,3064
+23-12-2021,Japan,Okinawa,,50424,50026,0,398
+23-12-2021,Japan,Okayama,,15554,15418,0,136
+23-12-2021,Japan,Oita,,8187,8103,0,84
+23-12-2021,Japan,Niigata,,8177,8115,0,62
+23-12-2021,Japan,Nara,,15651,15502,0,149
+23-12-2021,Japan,Nagasaki,,6120,6047,0,73
+23-12-2021,Japan,Nagano,,8917,8820,0,97
+23-12-2021,Japan,Miyazaki,,6139,6098,0,41
+23-12-2021,Japan,Miyagi,,16289,16171,0,118
+23-12-2021,Japan,Mie,,14816,14653,0,163
+23-12-2021,Japan,Kyoto,,36061,35769,0,292
+23-12-2021,Japan,Kumamoto,,14395,14259,0,136
+23-12-2021,Japan,Kochi,,4167,4134,0,33
+23-12-2021,Japan,Kanagawa,,169633,168314,0,1319
+23-12-2021,Japan,Kagoshima,,9118,9052,0,66
+23-12-2021,Japan,Kagawa,,4702,4664,0,38
+23-12-2021,Japan,Iwate,,3487,3434,0,53
+23-12-2021,Japan,Ishikawa,,8008,7877,0,131
+23-12-2021,Japan,Ibaraki,,24477,24257,0,220
+23-12-2021,Japan,Hyogo,,78805,77407,0,1398
+23-12-2021,Japan,Hokkaido,,61335,59861,0,1474
+23-12-2021,Japan,Hiroshima,,22180,21978,0,202
+23-12-2021,Japan,Gunma,,17244,17068,0,176
+23-12-2021,Japan,Gifu,,18935,18716,0,219
+23-12-2021,Japan,Fukushima,,9495,9319,0,176
+23-12-2021,Japan,Fukuoka,,74732,74106,0,626
+23-12-2021,Japan,Fukui,,3115,3077,0,38
+23-12-2021,Japan,Ehime,,5412,5330,0,82
+23-12-2021,Japan,Chiba,,100607,99579,0,1028
+23-12-2021,Japan,Aomori,,5901,5863,0,38
+23-12-2021,Japan,Akita,,1934,1907,0,27
+23-12-2021,Japan,Aichi,,107017,105856,0,1161
+23-12-2021,Thailand,Main territory,,2202001,2180500,0,21501
+23-12-2021,Madagascar,Main territory,,47295,46299,0,996
+23-12-2021,Tonga,Main territory,,1,1,0,0
+23-12-2021,Paraguay,Main territory,,465028,448432,0,16596
+23-12-2021,Cuba,Main territory,,964406,956089,0,8317
+23-12-2021,Saudi Arabia,Main territory,,551749,542881,0,8868
+23-12-2021,West Bank and Gaza,Main territory,,467682,462798,0,4884
+23-12-2021,Bangladesh,Main territory,,1582368,1554314,0,28054
+23-12-2021,Nepal,Main territory,,826664,815083,0,11581
+23-12-2021,Venezuela,Main territory,,442431,437125,0,5306
+23-12-2021,Lesotho,Main territory,,26004,25339,0,665
+23-12-2021,Djibouti,Main territory,,13555,13366,0,189
+23-12-2021,Kyrgyzstan,Main territory,,184356,181568,0,2788
+23-12-2021,Honduras,Main territory,,378685,368262,0,10423
+23-12-2021,Dominica,Main territory,,6520,6476,0,44
+23-12-2021,Chad,Main territory,,5703,5522,0,181
+23-12-2021,UK,Wales,,570288,563753,0,6535
+23-12-2021,UK,Other,,0,0,0,0
+23-12-2021,UK,Turks and Caicos Islands,,3208,3182,0,26
+23-12-2021,UK,Scotland,,824088,814276,0,9812
+23-12-2021,UK,"Saint Helena, Ascension and Tristan da Cunha",,4,4,0,0
+23-12-2021,UK,Northern Ireland,,363895,360936,0,2959
+23-12-2021,UK,Montserrat,,45,44,0,1
+23-12-2021,UK,Isle of Man,,13401,13334,0,67
+23-12-2021,UK,Gibraltar,,8014,7914,0,100
+23-12-2021,UK,Falkland Islands (Malvinas),,83,83,0,0
+23-12-2021,UK,England,,10011650,9883236,0,128414
+23-12-2021,UK,Channel Islands,,23188,23076,0,112
+23-12-2021,UK,Cayman Islands,,8386,8375,0,11
+23-12-2021,UK,British Virgin Islands,,3016,2977,0,39
+23-12-2021,UK,Bermuda,,6014,5908,0,106
+23-12-2021,UK,Anguilla,,1629,1624,0,5
+23-12-2021,Uganda,Main territory,,130888,127614,0,3274
+23-12-2021,Cameroon,Main territory,,108451,106600,0,1851
+23-12-2021,Guinea-Bissau,Main territory,,6458,6309,0,149
+23-12-2021,Tanzania,Main territory,,26483,25749,0,734
+23-12-2021,Ethiopia,Main territory,,386164,379279,0,6885
+23-12-2021,Finland,Main territory,,227169,225665,0,1504
+23-12-2021,Haiti,Main territory,,25945,25180,0,765
+23-12-2021,Palau,Main territory,,8,8,0,0
+23-12-2021,San Marino,Main territory,,7447,7350,0,97
+23-12-2021,Syria,Main territory,,49961,47098,0,2863
+23-12-2021,Austria,Main territory,,1258377,1244782,0,13595
+23-12-2021,Vanuatu,Main territory,,7,6,0,1
+23-12-2021,Slovakia,Main territory,,1342324,1326085,0,16239
+23-12-2021,Nigeria,Main territory,,233353,230362,0,2991
+23-12-2021,Saint Kitts and Nevis,Main territory,,2815,2787,0,28
+23-12-2021,Ukraine,Zhytomyr Oblast,,139486,136282,0,3204
+23-12-2021,Ukraine,Zaporizhia Oblast,,180858,175753,0,5105
+23-12-2021,Ukraine,Zakarpattia Oblast,,86690,84407,0,2283
+23-12-2021,Ukraine,Volyn Oblast,,102685,100537,0,2148
+23-12-2021,Ukraine,Vinnytsia Oblast,,111059,108030,0,3029
+23-12-2021,Ukraine,Ternopil Oblast,,106533,104458,0,2075
+23-12-2021,Ukraine,Sumy Oblast,,130012,127231,0,2781
+23-12-2021,Ukraine,Rivne Oblast,,126577,124346,0,2231
+23-12-2021,Ukraine,Poltava Oblast,,137919,134300,0,3619
+23-12-2021,Ukraine,Odessa Oblast,,237820,232332,0,5488
+23-12-2021,Ukraine,Mykolaiv Oblast,,114511,111280,0,3231
+23-12-2021,Ukraine,Lviv Oblast,,218027,212127,0,5900
+23-12-2021,Ukraine,Luhansk Oblast,,59384,57213,0,2171
+23-12-2021,Ukraine,Kirovohrad Oblast,,32567,31109,0,1458
+23-12-2021,Ukraine,Kiev Oblast,,183400,178812,0,4588
+23-12-2021,Ukraine,Kiev,,325257,317188,0,8069
+23-12-2021,Ukraine,Khmelnytskyi Oblast,,145231,141969,0,3262
+23-12-2021,Ukraine,Kherson Oblast,,78494,75838,0,2656
+23-12-2021,Ukraine,Kharkiv Oblast,,241763,235532,0,6231
+23-12-2021,Ukraine,Ivano-Frankivsk Oblast,,126225,123173,0,3052
+23-12-2021,Ukraine,Donetsk Oblast,,165359,160318,0,5041
+23-12-2021,Ukraine,Dnipropetrovsk Oblast,,240883,232176,0,8707
+23-12-2021,Ukraine,Chernivtsi Oblast,,118647,115671,0,2976
+23-12-2021,Ukraine,Chernihiv Oblast,,93834,91481,0,2353
+23-12-2021,Ukraine,Cherkasy Oblast,,127170,124644,0,2526
+23-12-2021,Liechtenstein,Main territory,,5896,5827,0,69
+23-12-2021,Ghana,Main territory,,134555,133286,0,1269
+23-12-2021,Burkina Faso,Main territory,,17040,16723,0,317
+23-12-2021,Costa Rica,Main territory,,568860,561517,0,7343
+23-12-2021,Estonia,Main territory,,234958,233059,0,1899
+23-12-2021,Georgia,Main territory,,918641,905352,0,13289
+23-12-2021,Trinidad and Tobago,Main territory,,87980,85299,0,2681
+23-12-2021,Czechia,Main territory,,2406989,2371701,0,35288
+23-12-2021,Sri Lanka,Main territory,,582149,567317,0,14832
+23-12-2021,Montenegro,Main territory,,161944,159556,0,2388
+23-12-2021,Romania,Main territory,,1801081,1742618,0,58463
+23-12-2021,Timor-Leste,Main territory,,19833,19711,0,122
+23-12-2021,Kosovo,Main territory,,161298,158309,0,2989
+23-12-2021,Guinea,Main territory,,30938,30549,0,389
+23-12-2021,Liberia,Main territory,,5929,5642,0,287
+23-12-2021,Argentina,Main territory,,5428957,5311978,0,116979
+23-12-2021,Ecuador,Main territory,,538218,504594,0,33624
+23-12-2021,Congo (Kinshasa),Main territory,,70059,68933,0,1126
+23-12-2021,Morocco,Main territory,,954199,939376,0,14823
+23-12-2021,Equatorial Guinea,Main territory,,13623,13448,0,175
+23-12-2021,Iceland,Main territory,,22087,22050,0,37
+23-12-2021,Sudan,Main territory,,46100,42802,0,3298
+23-12-2021,Saint Vincent and the Grenadines,Main territory,,5810,5731,0,79
+23-12-2021,Panama,Main territory,,485512,478106,0,7406
+23-12-2021,Algeria,Main territory,,215723,209510,0,6213
+23-12-2021,Angola,Main territory,,68362,66619,0,1743
+23-12-2021,Colombia,Vichada,,3048,2994,0,54
+23-12-2021,Colombia,Vaupes,,1796,1779,0,17
+23-12-2021,Colombia,Valle del Cauca,,421645,408359,0,13286
+23-12-2021,Colombia,Other,,0,-296,0,296
+23-12-2021,Colombia,Tolima,,108421,104730,0,3691
+23-12-2021,Colombia,Sucre,,59746,58118,0,1628
+23-12-2021,Colombia,Santander,,234422,226913,0,7509
+23-12-2021,Colombia,San Andres y Providencia,,8353,8204,0,149
+23-12-2021,Colombia,Risaralda,,89183,86912,0,2271
+23-12-2021,Colombia,Quindio,,58883,57048,0,1835
+23-12-2021,Colombia,Putumayo,,17746,17036,0,710
+23-12-2021,Colombia,Norte de Santander,,101443,96784,0,4659
+23-12-2021,Colombia,Narino,,90797,87750,0,3047
+23-12-2021,Colombia,Meta,,90714,88414,0,2300
+23-12-2021,Colombia,Magdalena,,101113,97633,0,3480
+23-12-2021,Colombia,La Guajira,,46930,45498,0,1432
+23-12-2021,Colombia,Huila,,89551,86367,0,3184
+23-12-2021,Colombia,Guaviare,,5172,5075,0,97
+23-12-2021,Colombia,Guainia,,2571,2536,0,35
+23-12-2021,Colombia,Cundinamarca,,267143,260287,0,6856
+23-12-2021,Colombia,Cordoba,,104764,101022,0,3742
+23-12-2021,Colombia,Choco,,16569,16165,0,404
+23-12-2021,Colombia,Cesar,,92934,90380,0,2554
+23-12-2021,Colombia,Cauca,,57402,55808,0,1594
+23-12-2021,Colombia,Casanare,,36134,35196,0,938
+23-12-2021,Colombia,Caqueta,,23081,22137,0,944
+23-12-2021,Colombia,Capital District,,1471253,1443564,0,27689
+23-12-2021,Colombia,Caldas,,101574,99283,0,2291
+23-12-2021,Colombia,Boyaca,,106776,104196,0,2580
+23-12-2021,Colombia,Bolivar,,161542,158492,0,3050
+23-12-2021,Colombia,Atlantico,,341887,332148,0,9739
+23-12-2021,Colombia,Arauca,,14434,13952,0,482
+23-12-2021,Colombia,Antioquia,,781141,764302,0,16839
+23-12-2021,Colombia,Amazonas,,7026,6768,0,258
+23-12-2021,Moldova,Main territory,,373752,364177,0,9575
+23-12-2021,Kazakhstan,Main territory,,1068899,1050739,0,18160
+23-12-2021,Mongolia,Main territory,,387875,385824,0,2051
+23-12-2021,Israel,Main territory,,1360912,1352671,0,8241
+23-12-2021,Bhutan,Main territory,,2659,2656,0,3
+23-12-2021,Luxembourg,Main territory,,98440,97533,0,907
+23-12-2021,Botswana,Main territory,,208994,206567,0,2427
+23-12-2021,France,Main territory,,8685716,8565943,0,119773
+23-12-2021,France,Wallis and Futuna,,454,447,0,7
+23-12-2021,France,St Martin,,4075,4019,0,56
+23-12-2021,France,Saint Pierre and Miquelon,,96,96,0,0
+23-12-2021,France,Saint Barthelemy,,1692,1686,0,6
+23-12-2021,France,Reunion,,71795,71394,0,401
+23-12-2021,France,New Caledonia,,12701,12421,0,280
+23-12-2021,France,Mayotte,,21288,21103,0,185
+23-12-2021,France,Martinique,,47337,46568,0,769
+23-12-2021,France,Guadeloupe,,55564,54734,0,830
+23-12-2021,France,French Polynesia,,46376,45740,0,636
+23-12-2021,France,French Guiana,,47012,46675,0,337
+23-12-2021,Burundi,Main territory,,23657,23619,0,38
+23-12-2021,Libya,Main territory,,384005,378370,0,5635
+23-12-2021,South Africa,Main territory,,3374262,3283600,0,90662
+23-12-2021,Norway,Main territory,,367866,366609,0,1257
+23-12-2021,Mauritania,Main territory,,40308,39448,0,860
+23-12-2021,Rwanda,Main territory,,103170,101825,0,1345
+23-12-2021,Kiribati,Main territory,,2,2,0,0
+23-12-2021,Chile,Valparaiso,,137178,133563,0,3615
+23-12-2021,Chile,Other,,46,46,0,0
+23-12-2021,Chile,Tarapaca,,44686,43859,0,827
+23-12-2021,Chile,OHiggins,,72985,71363,0,1622
+23-12-2021,Chile,Nuble,,39272,38598,0,674
+23-12-2021,Chile,Metropolitana,,750129,730236,0,19893
+23-12-2021,Chile,Maule,,109376,107522,0,1854
+23-12-2021,Chile,Magallanes,,30023,29518,0,505
+23-12-2021,Chile,Los Rios,,53315,52600,0,715
+23-12-2021,Chile,Los Lagos,,98594,97103,0,1491
+23-12-2021,Chile,Coquimbo,,54478,53390,0,1088
+23-12-2021,Chile,Biobio,,166298,163480,0,2818
+23-12-2021,Chile,Aysen,,10223,10127,0,96
+23-12-2021,Chile,Atacama,,30595,30218,0,377
+23-12-2021,Chile,Arica y Parinacota,,28994,28448,0,546
+23-12-2021,Chile,Araucania,,103464,101913,0,1551
+23-12-2021,Chile,Antofagasta,,66576,65294,0,1282
+23-12-2021,Slovenia,Main territory,,453093,447565,0,5528
+23-12-2021,Australia,Western Australia,,1136,1127,0,9
+23-12-2021,Australia,Victoria,,153631,152147,0,1484
+23-12-2021,Australia,Tasmania,,288,275,0,13
+23-12-2021,Australia,South Australia,,2229,2225,0,4
+23-12-2021,Australia,Queensland,,2977,2970,0,7
+23-12-2021,Australia,Northern Territory,,393,392,0,1
+23-12-2021,Australia,New South Wales,,118074,117425,0,649
+23-12-2021,Australia,Australian Capital Territory,,2552,2537,0,15
+23-12-2021,Turkey,Main territory,,9249576,9168451,0,81125
+23-12-2021,Benin,Main territory,,24935,24774,0,161
+23-12-2021,Gabon,Main territory,,38039,37753,0,286
+23-12-2021,Cote d'Ivoire,Main territory,,62960,62253,0,707
+23-12-2021,Peru,Other,,7810,7540,0,270
+23-12-2021,Peru,Ucayali,,32274,29214,0,3060
+23-12-2021,Peru,Tumbes,,19479,17890,0,1589
+23-12-2021,Peru,Tacna,,31212,29241,0,1971
+23-12-2021,Peru,San Martin,,49212,46170,0,3042
+23-12-2021,Peru,Puno,,41774,37535,0,4239
+23-12-2021,Peru,Piura,,93823,81603,0,12220
+23-12-2021,Peru,Pasco,,16266,15216,0,1050
+23-12-2021,Peru,Moquegua,,29994,28459,0,1535
+23-12-2021,Peru,Madre de Dios,,14047,13274,0,773
+23-12-2021,Peru,Loreto,,45289,41016,0,4273
+23-12-2021,Peru,Lima,,993426,904158,0,89268
+23-12-2021,Peru,Lambayeque,,64055,55396,0,8659
+23-12-2021,Peru,La Libertad,,92585,82228,0,10357
+23-12-2021,Peru,Junin,,88815,81726,0,7089
+23-12-2021,Peru,Ica,,60871,52282,0,8589
+23-12-2021,Peru,Huanuco,,36585,33871,0,2714
+23-12-2021,Peru,Huancavelica,,16479,15298,0,1181
+23-12-2021,Peru,Cusco,,75428,70602,0,4826
+23-12-2021,Peru,Callao,,103370,93274,0,10096
+23-12-2021,Peru,Cajamarca,,67079,62908,0,4171
+23-12-2021,Peru,Ayacucho,,34948,32793,0,2155
+23-12-2021,Peru,Arequipa,,116938,107193,0,9745
+23-12-2021,Peru,Apurimac,,26688,25163,0,1525
+23-12-2021,Peru,Ancash,,80554,73805,0,6749
+23-12-2021,Peru,Amazonas,,32548,31270,0,1278
+23-12-2021,Senegal,Main territory,,74256,72366,0,1890
+23-12-2021,North Macedonia,Main territory,,222333,214465,0,7868
+23-12-2021,Kuwait,Main territory,,414591,412124,0,2467
+23-12-2021,Eritrea,Main territory,,7829,7757,0,72
+23-12-2021,Cabo Verde,Main territory,,38751,38399,0,352
+23-12-2021,Canada,Yukon,,1661,1647,0,14
+23-12-2021,Canada,Saskatchewan,,82640,81695,0,945
+23-12-2021,Canada,Repatriated Travellers,,13,13,0,0
+23-12-2021,Canada,Quebec,,511094,499436,0,11658
+23-12-2021,Canada,Prince Edward Island,,529,529,0,0
+23-12-2021,Canada,Ontario,,679899,669706,0,10193
+23-12-2021,Canada,Nunavut,,679,675,0,4
+23-12-2021,Canada,Nova Scotia,,13130,13019,0,111
+23-12-2021,Canada,Northwest Territories,,2090,2078,0,12
+23-12-2021,Canada,Newfoundland and Labrador,,2427,2409,0,18
+23-12-2021,Canada,New Brunswick,,11322,11171,0,151
+23-12-2021,Canada,Manitoba,,72834,71465,0,1369
+23-12-2021,Canada,British Columbia,,233217,230807,0,2410
+23-12-2021,Canada,Alberta,,346705,343406,0,3299
+23-12-2021,Mozambique,Main territory,,167307,165346,0,1961
+23-12-2021,Spain,Other,,0,0,0,0
+23-12-2021,Spain,Pais Vasco,,322586,317465,0,5121
+23-12-2021,Spain,Navarra,,105313,104030,0,1283
+23-12-2021,Spain,Murcia,,166144,164347,0,1797
+23-12-2021,Spain,Melilla,,12224,12105,0,119
+23-12-2021,Spain,Madrid,,1012720,996350,0,16370
+23-12-2021,Spain,La Rioja,,46571,45733,0,838
+23-12-2021,Spain,Galicia,,219394,216660,0,2734
+23-12-2021,Spain,Extremadura,,114642,112633,0,2009
+23-12-2021,Spain,Ceuta,,8675,8544,0,131
+23-12-2021,Spain,Catalonia,,1056925,1040835,0,16090
+23-12-2021,Spain,Castilla y Leon,,347201,339677,0,7524
+23-12-2021,Spain,Castilla - La Mancha,,256804,250240,0,6564
+23-12-2021,Spain,Cantabria,,53588,52965,0,623
+23-12-2021,Spain,Canarias,,125949,124839,0,1110
+23-12-2021,Spain,C. Valenciana,,589559,581522,0,8037
+23-12-2021,Spain,Baleares,,119510,118463,0,1047
+23-12-2021,Spain,Asturias,,86008,83872,0,2136
+23-12-2021,Spain,Aragon,,191486,187439,0,4047
+23-12-2021,Spain,Andalusia,,882708,871269,0,11439
+23-12-2021,Greece,Main territory,,1056583,1036385,0,20198
+23-12-2021,Yemen,Main territory,,10105,8124,0,1981
+23-12-2021,Latvia,Main territory,,270158,265669,0,4489
+23-12-2021,Papua New Guinea,Main territory,,36059,35470,0,589
+23-12-2021,Jamaica,Main territory,,92279,89818,0,2461
+23-12-2021,Cyprus,Main territory,,148663,148038,0,625
+23-12-2021,Guatemala,Main territory,,624866,608777,0,16089
+23-12-2021,Eswatini,Main territory,,63440,62171,0,1269
+23-12-2021,Central African Republic,Main territory,,11961,11860,0,101
+23-12-2021,China,Zhejiang,,2002,2001,0,1
+23-12-2021,China,Yunnan,,1793,1791,0,2
+23-12-2021,China,Xinjiang,,981,978,0,3
+23-12-2021,China,Other,,0,0,0,0
+23-12-2021,China,Tibet,,1,1,0,0
+23-12-2021,China,Tianjin,,545,542,0,3
+23-12-2021,China,Sichuan,,1305,1302,0,3
+23-12-2021,China,Shanxi,,265,265,0,0
+23-12-2021,China,Shanghai,,3004,2997,0,7
+23-12-2021,China,Shandong,,1037,1030,0,7
+23-12-2021,China,Shaanxi,,992,989,0,3
+23-12-2021,China,Qinghai,,30,30,0,0
+23-12-2021,China,Ningxia,,122,122,0,0
+23-12-2021,China,Macau,,77,77,0,0
+23-12-2021,China,Liaoning,,793,791,0,2
+23-12-2021,China,Jilin,,589,586,0,3
+23-12-2021,China,Jiangxi,,959,958,0,1
+23-12-2021,China,Jiangsu,,1624,1624,0,0
+23-12-2021,China,Inner Mongolia,,1186,1185,0,1
+23-12-2021,China,Hunan,,1208,1204,0,4
+23-12-2021,China,Hubei,,68316,63804,0,4512
+23-12-2021,China,Hong Kong,,12550,12337,0,213
+23-12-2021,China,Henan,,1640,1618,0,22
+23-12-2021,China,Heilongjiang,,2035,2022,0,13
+23-12-2021,China,Hebei,,1458,1451,0,7
+23-12-2021,China,Hainan,,190,184,0,6
+23-12-2021,China,Guizhou,,159,157,0,2
+23-12-2021,China,Guangxi,,558,556,0,2
+23-12-2021,China,Guangdong,,3413,3405,0,8
+23-12-2021,China,Gansu,,356,354,0,2
+23-12-2021,China,Fujian,,1346,1345,0,1
+23-12-2021,China,Chongqing,,610,604,0,6
+23-12-2021,China,Beijing,,1205,1196,0,9
+23-12-2021,China,Anhui,,1009,1003,0,6
+23-12-2021,Egypt,Main territory,,378843,357333,0,21510
+23-12-2021,Fiji,Main territory,,52706,52009,0,697
+23-12-2021,Hungary,Main territory,,1237330,1199023,0,38307
+23-12-2021,Bahrain,Main territory,,279056,277662,0,1394
+23-12-2021,India,West Bengal,,1628980,1609278,0,19702
+23-12-2021,India,Uttarakhand,,344697,337282,0,7415
+23-12-2021,India,Uttar Pradesh,,1710796,1687881,0,22915
+23-12-2021,India,Other,,0,0,0,0
+23-12-2021,India,Tripura,,84997,84168,0,829
+23-12-2021,India,Telangana,,680251,676233,0,4018
+23-12-2021,India,Tamil Nadu,,2742224,2705517,0,36707
+23-12-2021,India,Sikkim,,32470,32061,0,409
+23-12-2021,India,Rajasthan,,955331,946370,0,8961
+23-12-2021,India,Punjab,,604092,587456,0,16636
+23-12-2021,India,Puducherry,,129374,127494,0,1880
+23-12-2021,India,Odisha,,1053504,1045056,0,8448
+23-12-2021,India,Nagaland,,32174,31472,0,702
+23-12-2021,India,Mizoram,,140254,139719,0,535
+23-12-2021,India,Meghalaya,,84773,83292,0,1481
+23-12-2021,India,Manipur,,125685,123686,0,1999
+23-12-2021,India,Maharashtra,,6653345,6511953,0,141392
+23-12-2021,India,Madhya Pradesh,,793581,783050,0,10531
+23-12-2021,India,Lakshadweep,,10413,10362,0,51
+23-12-2021,India,Ladakh,,22036,21818,0,218
+23-12-2021,India,Kerala,,5228286,5182425,0,45861
+23-12-2021,India,Karnataka,,3003564,2965263,0,38301
+23-12-2021,India,Jharkhand,,349694,344552,0,5142
+23-12-2021,India,Jammu and Kashmir,,340293,335775,0,4518
+23-12-2021,India,Himachal Pradesh,,228469,224598,0,3871
+23-12-2021,India,Haryana,,772372,762310,0,10062
+23-12-2021,India,Gujarat,,828905,818797,0,10108
+23-12-2021,India,Goa,,179898,176380,0,3518
+23-12-2021,India,Delhi,,1442633,1417530,0,25103
+23-12-2021,India,Dadra and Nagar Haveli and Daman and Diu,,10691,10687,0,4
+23-12-2021,India,Chhattisgarh,,1007517,993921,0,13596
+23-12-2021,India,Chandigarh,,65742,64664,0,1078
+23-12-2021,India,Bihar,,726405,714311,0,12094
+23-12-2021,India,Assam,,619932,613779,0,6153
+23-12-2021,India,Arunachal Pradesh,,55328,55048,0,280
+23-12-2021,India,Andhra Pradesh,,2076212,2061726,0,14486
+23-12-2021,India,Andaman and Nicobar Islands,,7708,7579,0,129
+23-12-2021,Sao Tome and Principe,Main territory,,3741,3684,0,57
+23-12-2021,Iran,Main territory,,6179817,6048555,0,131262
+23-12-2021,Jordan,Main territory,,1047953,1035581,0,12372
+23-12-2021,Laos,Main territory,,101865,101577,0,288
+23-12-2021,South Korea,Main territory,,596209,591138,0,5071
+23-12-2021,Holy See,Main territory,,27,27,0,0
+23-12-2021,Brazil,Tocantins,,234113,230186,0,3927
+23-12-2021,Brazil,Sergipe,,278450,272394,0,6056
+23-12-2021,Brazil,Sao Paulo,,4450265,4295197,0,155068
+23-12-2021,Brazil,Santa Catarina,,1238969,1218828,0,20141
+23-12-2021,Brazil,Roraima,,128789,126715,0,2074
+23-12-2021,Brazil,Rondonia,,283645,276933,0,6712
+23-12-2021,Brazil,Rio de Janeiro,,1349642,1280261,0,69381
+23-12-2021,Brazil,Rio Grande do Sul,,1500136,1463737,0,36399
+23-12-2021,Brazil,Rio Grande do Norte,,385634,378076,0,7558
+23-12-2021,Brazil,Piaui,,334168,326904,0,7264
+23-12-2021,Brazil,Pernambuco,,643448,623055,0,20393
+23-12-2021,Brazil,Parana,,1594654,1553780,0,40874
+23-12-2021,Brazil,Paraiba,,462671,453091,0,9580
+23-12-2021,Brazil,Para,,623305,606249,0,17056
+23-12-2021,Brazil,Minas Gerais,,2218264,2161660,0,56604
+23-12-2021,Brazil,Mato Grosso do Sul,,379578,369859,0,9719
+23-12-2021,Brazil,Mato Grosso,,556221,542183,0,14038
+23-12-2021,Brazil,Maranhao,,370066,359705,0,10361
+23-12-2021,Brazil,Goias,,943102,918498,0,24604
+23-12-2021,Brazil,Espirito Santo,,627984,614688,0,13296
+23-12-2021,Brazil,Distrito Federal,,518788,507694,0,11094
+23-12-2021,Brazil,Ceara,,954361,929596,0,24765
+23-12-2021,Brazil,Bahia,,1264804,1237346,0,27458
+23-12-2021,Brazil,Amazonas,,433141,419317,0,13824
+23-12-2021,Brazil,Amapa,,126459,124445,0,2014
+23-12-2021,Brazil,Alagoas,,241930,235548,0,6382
+23-12-2021,Brazil,Acre,,88356,86506,0,1850
+23-12-2021,Samoa,Main territory,,3,3,0,0
+23-12-2021,Micronesia,Main territory,,1,1,0,0
+23-12-2021,United Arab Emirates,Main territory,,746557,744403,0,2154
+23-12-2021,Cambodia,Main territory,,120434,117428,0,3006
+23-12-2021,Zambia,Main territory,,225260,221572,0,3688
+23-12-2021,Malawi,Main territory,,68470,66151,0,2319
+23-12-2021,Bulgaria,Main territory,,732106,701670,0,30436
+23-12-2021,Mauritius,Main territory,,23020,22780,0,240
+23-12-2021,Togo,Main territory,,27405,27159,0,246
+23-12-2021,Zimbabwe,Main territory,,201344,196489,0,4855
+23-12-2021,Saint Lucia,Main territory,,13225,12930,0,295
+23-12-2021,Oman,Main territory,,304984,300871,0,4113
+23-12-2021,Lithuania,Main territory,,507916,500693,0,7223
+23-12-2021,Vietnam,Main territory,,1604712,1574181,0,30531
+23-12-2021,Malta,Main territory,,43806,43333,0,473
+23-12-2021,Namibia,Main territory,,141045,137452,0,3593
+23-12-2021,Marshall Islands,Main territory,,4,4,0,0
+23-12-2021,Nicaragua,Main territory,,17442,17226,0,216
+23-12-2021,Solomon Islands,Main territory,,20,20,0,0
+23-12-2021,Seychelles,Main territory,,24249,24118,0,131
+23-12-2021,Pakistan,Sindh,,480077,472419,0,7658
+23-12-2021,Pakistan,Punjab,,444438,431376,0,13062
+23-12-2021,Pakistan,Khyber Pakhtunkhwa,,181121,175202,0,5919
+23-12-2021,Pakistan,Islamabad,,108392,107428,0,964
+23-12-2021,Pakistan,Gilgit-Baltistan,,10429,10243,0,186
+23-12-2021,Pakistan,Balochistan,,33617,33254,0,363
+23-12-2021,Pakistan,Azad Jammu and Kashmir,,34654,33908,0,746
+23-12-2021,Niger,Main territory,,7242,6969,0,273
+23-12-2021,Russia,Чувашия,,45926,2096,40097,3733
+23-12-2021,Russia,Кемеровская обл.,,82255,6564,74015,1676
+23-12-2021,Russia,Брянская обл.,,94847,2486,89602,2759
+23-12-2021,Russia,Архангельская обл.,,121288,8615,111181,1492
+23-12-2021,Russia,Томская обл.,,60656,13927,46068,661
+23-12-2021,Russia,Воронежская обл.,,191276,42576,142019,6681
+23-12-2021,Russia,Хабаровский край,,121570,12835,107539,1196
+23-12-2021,Russia,Саратовская обл.,,130594,8871,116762,4961
+23-12-2021,Russia,Амурская обл.,,52496,10328,41579,589
+23-12-2021,Russia,Саха (Якутия),,75213,2704,70745,1764
+23-12-2021,Russia,Башкортостан,,119155,6688,108230,4237
+23-12-2021,Russia,Омская обл.,,127270,16033,108151,3086
+23-12-2021,Russia,Псковская обл.,,70051,5431,63406,1214
+23-12-2021,Russia,Новосибирская обл.,,91682,25534,62022,4126
+23-12-2021,Russia,Ленинградская обл.,,98852,14057,81828,2967
+23-12-2021,Russia,Хакасия,,52996,1668,49430,1898
+23-12-2021,Russia,Алтай,,25076,1662,22914,500
+23-12-2021,Russia,Тамбовская обл.,,59481,2028,55809,1644
+23-12-2021,Russia,Краснодарский край,,114779,13422,91773,9584
+23-12-2021,Russia,Астраханская обл.,,79542,6345,70856,2341
+23-12-2021,Russia,Калужская обл.,,63797,2877,59753,1167
+23-12-2021,Russia,Ростовская обл.,,190062,13066,167577,9419
+23-12-2021,Russia,Ингушетия,,28047,1425,26159,463
+23-12-2021,Russia,Севастополь,,52252,1415,49019,1818
+23-12-2021,Russia,Орловская обл.,,69016,7042,60531,1443
+23-12-2021,Russia,Карачаево-Черкессия,,31720,3009,27811,900
+23-12-2021,Russia,Кировская обл.,,77217,10684,65802,731
+23-12-2021,Russia,Ульяновская обл.,,118590,1694,113230,3666
+23-12-2021,Russia,Адыгея,,26586,3975,21899,712
+23-12-2021,Russia,Алтайский край,,115776,15304,94096,6376
+23-12-2021,Russia,Ярославская обл.,,83612,11120,70710,1782
+23-12-2021,Russia,ХМАО – Югра,,94481,4807,87742,1932
+23-12-2021,Russia,Тверская обл.,,96439,8303,85837,2299
+23-12-2021,Russia,Оренбургская обл.,,106739,10631,92723,3385
+23-12-2021,Russia,Чечня,,30386,1000,28481,905
+23-12-2021,Russia,Костромская обл.,,48241,3510,43652,1079
+23-12-2021,Russia,Ненецкий АО,,3456,141,3230,85
+23-12-2021,Russia,Забайкальский край,,94530,10245,82514,1771
+23-12-2021,Russia,Тыва,,31448,2242,28889,317
+23-12-2021,Russia,Курганская обл.,,49294,5454,42867,973
+23-12-2021,Russia,Карелия,,88424,3421,83837,1166
+23-12-2021,Russia,Ставропольский край,,123330,21088,96332,5910
+23-12-2021,Russia,Тульская обл.,,73397,4539,64698,4160
+23-12-2021,Russia,Красноярский край,,168729,7973,152434,8322
+23-12-2021,Russia,Мурманская обл.,,90576,14915,72941,2720
+23-12-2021,Russia,Татарстан,,41963,5241,35327,1395
+23-12-2021,Russia,Новгородская обл.,,64115,5497,57879,739
+23-12-2021,Russia,Рязанская обл.,,60292,2708,55167,2417
+23-12-2021,Russia,Сахалинская обл.,,41109,1328,39274,507
+23-12-2021,Russia,Крым,,125969,4876,116936,4157
+23-12-2021,Russia,Удмуртия,,78426,8368,66856,3202
+23-12-2021,Russia,Ямало-Ненецкий АО,,61252,4734,55578,940
+23-12-2021,Russia,Москва,,2012582,129940,1846440,36202
+23-12-2021,Russia,Пермский край,,156058,12293,136443,7322
+23-12-2021,Russia,Вологодская обл.,,98050,6807,88366,2877
+23-12-2021,Russia,Белгородская обл.,,79916,8578,69643,1695
+23-12-2021,Russia,Нижегородская обл.,,228373,15407,203369,9597
+23-12-2021,Russia,Мордовия,,39745,5307,33443,995
+23-12-2021,Russia,Ивановская обл.,,66606,7054,57137,2415
+23-12-2021,Russia,Коми,,95800,13710,79550,2540
+23-12-2021,Russia,Пензенская обл.,,99612,17191,77874,4547
+23-12-2021,Russia,Тюменская обл.,,87852,11157,73418,3277
+23-12-2021,Russia,Калмыкия,,33877,842,32314,721
+23-12-2021,Russia,Чукотский АО,,2942,235,2675,32
+23-12-2021,Russia,Санкт-Петербург,,837645,29904,780167,27574
+23-12-2021,Russia,Камчатский край,,23529,5080,17945,504
+23-12-2021,Russia,Кабардино-Балкария,,41216,2475,37367,1374
+23-12-2021,Russia,Самарская обл.,,196360,42587,147642,6131
+23-12-2021,Russia,Магаданская обл.,,13501,531,12629,341
+23-12-2021,Russia,Челябинская обл.,,141063,3610,131642,5811
+23-12-2021,Russia,Владимирская обл.,,79263,14471,61892,2900
+23-12-2021,Russia,Еврейская АО,,11372,596,10378,398
+23-12-2021,Russia,Смоленская обл.,,83443,14150,66986,2307
+23-12-2021,Russia,Курская обл.,,80972,7820,71181,1971
+23-12-2021,Russia,Иркутская обл.,,152386,21912,123699,6775
+23-12-2021,Russia,Московская обл.,,630472,45216,573555,11701
+23-12-2021,Russia,Марий Эл,,28916,3194,24805,917
+23-12-2021,Russia,Калининградская обл.,,80691,2375,77108,1208
+23-12-2021,Russia,Дагестан,,64908,2181,59595,3132
+23-12-2021,Russia,Липецкая обл.,,82411,3908,75793,2710
+23-12-2021,Russia,Приморский край,,98542,14523,82511,1508
+23-12-2021,Russia,Бурятия,,74775,3339,69081,2355
+23-12-2021,Russia,Свердловская обл.,,194252,17689,167381,9182
+23-12-2021,Russia,Северная Осетия,,30362,1827,27623,912
+23-12-2021,Russia,Волгоградская обл.,,126882,5802,115707,5373
+23-12-2021,South Sudan,Main territory,,14275,14140,0,135
+23-12-2021,New Zealand,Main territory,,13719,13670,0,49
+23-12-2021,New Zealand,Cook Islands,,2,2,0,0
+23-12-2021,Belgium,West Flanders,,209904,209904,0,0
+23-12-2021,Belgium,Walloon Brabant,,77343,77343,0,0
+23-12-2021,Belgium,Other,,32869,4759,0,28110
+23-12-2021,Belgium,Namur,,97477,97477,0,0
+23-12-2021,Belgium,Luxembourg,,54417,54417,0,0
+23-12-2021,Belgium,Limburg,,134759,134759,0,0
+23-12-2021,Belgium,Liege,,220059,220059,0,0
+23-12-2021,Belgium,Hainaut,,244860,244860,0,0
+23-12-2021,Belgium,Flemish Brabant,,175885,175885,0,0
+23-12-2021,Belgium,East Flanders,,252300,252300,0,0
+23-12-2021,Belgium,Brussels,,237264,237264,0,0
+23-12-2021,Belgium,Antwerp,,293741,293741,0,0
+23-12-2021,El Salvador,Main territory,,121661,117846,0,3815
+23-12-2021,Qatar,Main territory,,247269,246655,0,614
+23-12-2021,Sweden,Vastra Gotaland,,216761,214283,0,2478
+23-12-2021,Sweden,Vastmanland,,36288,35905,0,383
+23-12-2021,Sweden,Vasternorrland,,29833,29345,0,488
+23-12-2021,Sweden,Vasterbotten,,28064,27861,0,203
+23-12-2021,Sweden,Varmland,,24240,24009,0,231
+23-12-2021,Sweden,Uppsala,,47162,46608,0,554
+23-12-2021,Sweden,Stockholm,,308165,303607,0,4558
+23-12-2021,Sweden,Sormland,,29802,29313,0,489
+23-12-2021,Sweden,Skane,,183799,181977,0,1822
+23-12-2021,Sweden,Ostergotland,,47089,46428,0,661
+23-12-2021,Sweden,Orebro,,38357,37999,0,358
+23-12-2021,Sweden,Norrbotten,,29466,29167,0,299
+23-12-2021,Sweden,Kronoberg,,24725,24395,0,330
+23-12-2021,Sweden,Kalmar,,28407,28150,0,257
+23-12-2021,Sweden,Jonkoping,,48242,47673,0,569
+23-12-2021,Sweden,Jamtland Harjedalen,,14136,14007,0,129
+23-12-2021,Sweden,Halland,,46841,46506,0,335
+23-12-2021,Sweden,Gotland,,4868,4814,0,54
+23-12-2021,Sweden,Gavleborg,,40705,40134,0,571
+23-12-2021,Sweden,Dalarna,,31370,31010,0,360
+23-12-2021,Sweden,Blekinge,,14993,14857,0,136
+23-12-2021,Bahamas,Main territory,,23380,22667,0,713
+23-12-2021,Guyana,Main territory,,38998,37956,0,1042
+23-12-2021,Bosnia and Herzegovina,Main territory,,286792,273549,0,13243
+23-12-2021,Switzerland,Main territory,,1227395,1215338,0,12057
+23-12-2021,Iraq,Main territory,,2091834,2067726,0,24108
+23-12-2021,Taiwan,Main territory,,16853,16003,0,850
